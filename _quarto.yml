@@ -31,11 +31,17 @@ website:
       collapse-level: 1
       contents:
         - seconde-maths/index.qmd
-        # Ajoute ici chaque chapitre au fur et à mesure, via nouveau_chapitre.sh
-        # - section: "Nom du chapitre"
-        #   contents:
-        #     - seconde-maths/xxx/index.qmd
-        #     - seconde-maths/xxx/notion1.qmd
+        - section: "Chapitre 1 : Ensembles de nombres"
+          contents:
+            - seconde-maths/ensembles_nombres/index.qmd
+            - seconde-maths/ensembles_nombres/vocabulaire.qmd
+            - seconde-maths/ensembles_nombres/entiers.qmd
+            - seconde-maths/ensembles_nombres/rationnels_decimaux.qmd
+            - seconde-maths/ensembles_nombres/reels_irrationnels.qmd
+            - seconde-maths/ensembles_nombres/fractions.qmd
+            - seconde-maths/ensembles_nombres/puissances.qmd
+            - seconde-maths/ensembles_nombres/notation_scientifique.qmd
+        # Ajoute ici chaque nouveau chapitre, via nouveau_chapitre.sh
 
     - title: "Première"
       logo: image/logo/logo_maths2.png

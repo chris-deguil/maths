@@ -1,0 +1,7 @@
+/.quarto/
+_site/
+.quarto/
+*.deb
+*.msi
+*.pkg
+*.exe
