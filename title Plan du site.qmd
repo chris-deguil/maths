@@ -1,0 +1,41 @@
+---
+title: "Plan du site"
+---
+
+# Plan du site
+
+Bienvenue sur le site de mathématiques.
+
+## Seconde
+
+- [Accueil](seconde-maths/index.qmd)
+
+### Chapitre 1 — Ensembles de nombres
+
+- [Vocabulaire](seconde-maths/ensembles_nombres/vocabulaire.qmd)
+- [Entiers](seconde-maths/ensembles_nombres/entiers.qmd)
+- [Rationnels et décimaux](seconde-maths/ensembles_nombres/rationnels_decimaux.qmd)
+- [Réels et irrationnels](seconde-maths/ensembles_nombres/reels_irrationnels.qmd)
+- [Fractions](seconde-maths/ensembles_nombres/fractions.qmd)
+- [Puissances](seconde-maths/ensembles_nombres/puissances.qmd)
+- [Notation scientifique](seconde-maths/ensembles_nombres/notation_scientifique.qmd)
+
+### Chapitre 2 — Fonctions affines
+
+- [Accueil du chapitre](seconde-maths/fonctions_affines/index.qmd)
+
+### Chapitre 3 — Vecteurs et translation
+
+- [Accueil du chapitre](seconde-maths/vecteurs_translation/index.qmd)
+
+---
+
+## Première
+
+- [Accueil](premiere-maths/index.qmd)
+
+---
+
+## Terminale
+
+- [Accueil](terminale-maths/index.qmd)

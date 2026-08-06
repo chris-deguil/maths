@@ -4,15 +4,25 @@ project:
     - assets/**
 
 website:
-  title: "Site pédagogique"
+  title: "Mathématiques — Christophe Deguil"
+  description: "Cours, activités, exercices et ressources de mathématiques pour le lycée."
+
   site-url: https://chris-deguil.github.io/maths/
   repo-url: https://github.com/chris-deguil/maths
+
+  page-navigation: true
+  bread-crumbs: true
+  search: true
+  back-to-top-navigation: true
+
   page-footer:
-    left: "© 2026 — Cours de Mathématiques"
-    right: |
-      <a href="/">Accueil</a> ·
-      <a href="/index.qmd">Plan du site</a> ·
-      <a href="mailto:christophe.Deguil@ac-versailles.fr">Contact</a>
+    left: "© 2026 — Christophe Deguil"
+    right:
+      - text: "Accueil"
+        href: index.qmd
+      - text: "Contact"
+        href: mailto:christophe.Deguil@ac-versailles.fr
+
   navbar:
     left:
       - text: "Accueil"
@@ -24,13 +34,19 @@ website:
       - text: "Terminale"
         href: terminale-maths/index.qmd
 
+    right:
+      - icon: github
+        href: https://github.com/chris-deguil/maths
+        aria-label: "Dépôt GitHub"
+
   sidebar:
     - title: "Seconde"
-      logo: image/logo/logo_maths2.png
+      logo: assets/images/logo_maths2.png
       style: docked
       collapse-level: 1
       contents:
         - seconde-maths/index.qmd
+
         - section: "Chapitre 1 : Ensembles de nombres"
           contents:
             - seconde-maths/ensembles_nombres/index.qmd
@@ -41,6 +57,7 @@ website:
             - seconde-maths/ensembles_nombres/fractions.qmd
             - seconde-maths/ensembles_nombres/puissances.qmd
             - seconde-maths/ensembles_nombres/notation_scientifique.qmd
+
         - section: "Chapitre 2 : Fonctions affines"
           contents:
             - seconde-maths/fonctions_affines/index.qmd
@@ -53,6 +70,7 @@ website:
             - seconde-maths/fonctions_affines/resolution_equations.qmd
             - seconde-maths/fonctions_affines/fonctions_par_morceaux.qmd
             - seconde-maths/fonctions_affines/synthese.qmd
+
         - section: "Chapitre 3 : Vecteurs — Translation"
           contents:
             - seconde-maths/vecteurs_translation/index.qmd
@@ -67,47 +85,45 @@ website:
             - seconde-maths/vecteurs_translation/vecteurs_colineaires.qmd
             - seconde-maths/vecteurs_translation/alignement_parallelisme.qmd
             - seconde-maths/vecteurs_translation/bilan.qmd
-        # Ajoute ici chaque nouveau chapitre, via nouveau_chapitre.sh
 
     - title: "Première"
-      logo: image/logo/logo_maths2.png
+      logo: assets/images/logo_maths2.png
       style: docked
       collapse-level: 1
       contents:
         - premiere-maths/index.qmd
-        # - section: "Nom du chapitre"
-        #   contents:
-        #     - premiere-maths/xxx/index.qmd
 
     - title: "Terminale"
-      logo: image/logo/logo_maths2.png
+      logo: assets/images/logo_maths2.png
       style: docked
       collapse-level: 1
       contents:
         - terminale-maths/index.qmd
-        # - section: "Nom du chapitre"
-        #   contents:
-        #     - terminale-maths/xxx/index.qmd
 
 format:
   html:
     include-in-header:
       - assets/set-html-class.html
       - assets/mathjax-macros.html
+
     filters:
       - assets/exercise-counter.lua
       - assets/auto-nav.lua
+
     theme:
       light: [cosmo, assets/css/general.scss]
-      dark:  [darkly, assets/css/general.scss]
+      dark: [darkly, assets/css/general.scss]
 
     grid:
       body-width: 1400px
       margin-width: 18rem
       sidebar-width: 16rem
       gutter-width: 1.5rem
+
     toc: true
+    toc-depth: 3
     smooth-scroll: true
+
     mermaid:
       theme: forest
 
