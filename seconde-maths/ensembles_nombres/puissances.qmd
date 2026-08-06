@@ -1,0 +1,140 @@
+---
+title: "Puissances : définitions et règles de calcul"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Puissances entières relatives, exposant littéral"
+order: 6
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Anecdote historique : Puissances — de l'astronomie à l'informatique</span>
+
+**Les astronomes (antiquité — XVII<sup>e</sup> s.).** Archimède, dans *L'Arénaire* ($\approx 250$ av. J.-C.), estime le nombre de grains de sable nécessaires pour remplir l'Univers : il obtient $10^{63}$. Pour cela, il invente un ancêtre de la notation scientifique. Kepler, puis Newton, calculent des distances interplanétaires de l'ordre de $10^{11}$ m : impossible à écrire autrement qu'en puissances de $10$.
+
+**Les physiciens (XIX<sup>e</sup>–XX<sup>e</sup> s.).** La charge de l'électron vaut $e \approx 1{,}6 \times 10^{-19}$ C ; la masse du proton $\approx 1{,}67 \times 10^{-27}$ kg ; la constante d'Avogadro $N_A \approx 6{,}02 \times 10^{23}$ mol$^{-1}$. Sans les puissances, aucune formule de physique ou de chimie ne serait lisible.
+
+**L'informatique (XX<sup>e</sup>–XXI<sup>e</sup> s.).** Un octet contient $8 = 2^3$ bits. Un kilo-octet vaut $2^{10} = 1\,024$ octets, un méga-octet $2^{20} \approx 10^6$ octets, un téra-octet $2^{40} \approx 10^{12}$. La loi de Moore (1965) prévoyait que le nombre de transistors dans un processeur doublerait tous les deux ans : entre $1971$ ($2\,300$ transistors) et $2020$ ($\approx 10^{10}$), le facteur est d'environ $2^{32} \approx 4 \times 10^9$.
+:::
+
+## Définitions et premières propriétés
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Puissance d'un nombre</span>
+
+Soit $a \in \R$ et $n \in \N^*$.
+$$a^n = \underbrace{a \times a \times \dots \times a}_{n \text{ facteurs}}
+\qquad;\qquad
+a^0 = 1 \quad (a \neq 0)
+\qquad;\qquad
+a^{-n} = \frac{1}{a^n} \quad (a \neq 0)$$
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Utiliser un exposant négatif — Calculer </span>
+
+Calculer $2^{-3}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Par définition : $2^{-3} = \dfrac{1}{2^3} = \dfrac{1}{8}$.
+
+</details>
+:::
+
+## Règles de calcul
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Règles de calcul sur les puissances</span>
+
+Soient $a, b \in \R^*$ et $m, n \in \Z$.
+$$a^m \times a^n = a^{m+n} \qquad
+  \dfrac{a^m}{a^n} = a^{m-n} \qquad
+  (a^m)^n = a^{mn} \qquad
+  (ab)^n = a^n\,b^n \qquad
+  \left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$$
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Règles de calcul — exposants numériques — Calculer </span>
+
+Simplifier les expressions suivantes (résultat sans exposant négatif).
+
+1. $2^5 \times 2^{-3}$
+2. $\dfrac{3^7}{3^4}$
+3. $\left(\dfrac{2}{3}\right)^{-2}$
+4. $4^{-3} \times 4^5$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+1. $2^5 \times 2^{-3} = 2^2 = 4$
+2. $\dfrac{3^7}{3^4} = 3^3 = 27$
+3. $\left(\dfrac{2}{3}\right)^{-2} = \left(\dfrac{3}{2}\right)^2 = \dfrac{9}{4}$
+4. $4^{-3} \times 4^5 = 4^2 = 16$
+
+</details>
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Règles de calcul — exposant littéral $n$ — Calculer </span>
+
+Simplifier les expressions suivantes ($a \neq 0$, $n \in \Z$).
+
+1. $a^n \times a^3$
+2. $a^{2n} \times a^{1-n}$
+3. $\dfrac{(a^n)^3}{a^{n+1}}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+1. $a^n \times a^3 = a^{n+3}$
+2. $a^{2n} \times a^{1-n} = a^{n+1}$
+3. $\dfrac{(a^n)^3}{a^{n+1}} = \dfrac{a^{3n}}{a^{n+1}} = a^{2n-1}$
+
+</details>
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Simplifier des expressions avec puissances — Calculer </span>
+
+Calculer ou simplifier les expressions suivantes.
+
+1. $B = \dfrac{(-5)^4 \times 7^2 \times (-2)^{-3}}{(-4)^4 \times (-1)^5 \times 25}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$B =\dfrac{(-5)^4 \times 7^2 \times (-2)^{-3}}{(-4)^4 \times (-1)^5 \times 25}  = \dfrac{5^4 \times 49 \times \left(-\dfrac{1}{8}\right)}{2^8 \times (-1) \times 25}
+      = \dfrac{-5^4 \times 49}{-2^8 \times 5^2 \times 8}
+      = \dfrac{5^2 \times 49}{2^8 \times 2^3}
+      = \dfrac{25 \times 49}{2^{11}}
+      = \dfrac{1225}{2048}$$
+
+</details>
+
+2. $H = \dfrac{9^{n+1} \times 9^n}{3^{2n-1} \times 3^n}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$H = \dfrac{9^{n+1} \times 9^n}{3^{2n-1} \times 3^n}=\dfrac{3^{2n+2} \times 3^{2n}}{3^{2n-1} \times 3^n}
+      = \dfrac{3^{4n+2}}{3^{3n-1}}
+      = 3^{(4n+2)-(3n-1)}
+      = 3^{n+3}$$
+
+</details>
+
+3. $I = \dfrac{(a^2 b^4)^2}{(-a)(-b^2)}$ (avec $a \neq 0$, $b \neq 0$)
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$I = \dfrac{(a^2 b^4)^2}{(-a)(-b^2)} =  \dfrac{a^4 b^8}{ab^2} = a^3 b^6$$
+
+</details>
+:::

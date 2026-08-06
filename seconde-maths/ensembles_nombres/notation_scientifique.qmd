@@ -1,0 +1,82 @@
+---
+title: "Notation scientifique"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Écriture x = ± a × 10^n"
+order: 7
+---
+
+## Définition
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Notation scientifique</span>
+
+Tout réel $x \neq 0$ peut s'écrire de façon unique sous la forme
+$$x =\pm a \times 10^n$$
+où $n \in \Z$ et $a$ un réel dont la partie entière est comprise entre 1 et 9 inclus.
+
+On dit que $x$ est écrit en **notation scientifique**.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+L'écriture en notation scientifique est **unique**. Cette unicité provient de la condition sur $a$, qui détermine à la fois la valeur de $a$ et celle de $n$.
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Passer en notation scientifique — Calculer </span>
+
+Écrire en notation scientifique $0{,}000\,47$ et $2{,}5 \times 10^3 \times 4 \times 10^{-7}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a $0{,}000\,47 = 4{,}7 \times 10^{-4}$
+et $2{,}5 \times 10^3 \times 4 \times 10^{-7}
+         = (2{,}5 \times 4) \times 10^{3+(-7)}
+         = 10 \times 10^{-4}
+         = 1{,}0 \times 10^{-3}$
+
+</details>
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> L'échiquier et la production mondiale de riz — Calculer, Modéliser </span>
+
+Sur un échiquier de $64$ cases, on pose $1$ grain sur la première case, puis on double à chaque case.
+
+1. Combien de grains y a-t-il sur la case $n$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+La case $n$ contient $2^{n-1}$ grains. La dernière case ($n = 64$) contient $2^{63}$ grains.
+
+</details>
+
+2. Exprimer $2^{63}$ en notation scientifique (on admet $2^{10} \approx 1{,}024 \times 10^3$).
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$2^{63} = (2^{10})^6 \times 2^3 \approx (1{,}024)^6 \times 10^{18} \times 8$.
+Or $(1{,}024)^6 \approx 1{,}16$, donc $2^{63} \approx 9{,}2 \times 10^{18}$.
+
+</details>
+
+3. Un grain de riz pèse environ $25 \times 10^{-3}$ grammes. Quelle est la masse totale de riz sur cette case ? La comparer à la production mondiale annuelle $\approx 5 \times 10^{14}$ g.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Masse $\approx 9{,}2 \times 10^{18} \times 2{,}5 \times 10^{-2} = 2{,}3 \times 10^{17}$ g.
+
+Rapport avec la production : $\dfrac{2{,}3 \times 10^{17}}{5 \times 10^{14}} \approx 460$.
+
+La masse de riz sur la $64$<sup>e</sup> case seule représente **460 fois** la production mondiale annuelle !
+
+</details>
+:::

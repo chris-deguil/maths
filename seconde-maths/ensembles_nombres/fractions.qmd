@@ -1,0 +1,141 @@
+---
+title: "Calculs sur les fractions"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Addition, simplification, multiplication de fractions"
+order: 5
+---
+
+## Règles de calcul
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Opérations sur les fractions</span>
+
+Soient $a, c \in \Z$, $b, d \in \N^*$ et $k \in \Z^*$.
+$$\frac{a}{c} +  \frac{b}{c} = \frac{a+b}{c} \qquad ; \qquad
+  \frac{ka}{kb} = \frac{a}{b}
+  \qquad;\qquad
+  \frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd}
+  \qquad;\qquad
+  \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}
+$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+**Addition — cas du même dénominateur.**
+
+Soit $r = \dfrac{a}{b}$ et $s = \dfrac{c}{b}$ avec $b \neq 0$, ainsi par définition : $rb = a$ et $sb = c$.
+
+Donc $a + c = rb + sb = b(r + s)$, ce qui donne $r + s = \dfrac{a+c}{b}$.
+
+**Simplification.**
+
+Soit $r = \dfrac{a}{b}$ avec $b \neq 0$ ainsi par définition de la fraction, $a = b \times r$.
+
+Soit $k$ un entier non nul. Alors $k \times a = (kb) \times r$, donc $r = \dfrac{ka}{kb}$.
+
+Ainsi, multiplier numérateur et dénominateur par un même entier non nul ne change pas la valeur de la fraction.
+
+**Addition — cas général.**
+
+Soient $\dfrac{a}{b}$ et $\dfrac{c}{d}$ avec $b, d \neq 0$.
+
+Ainsi $\dfrac{a}{b} = \dfrac{ad}{bd}$ et $\dfrac{c}{d} = \dfrac{bc}{bd}$.
+
+On déduit alors que
+$$\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad}{bd} + \dfrac{bc}{bd} = \dfrac{ad + bc}{bd}$$
+
+**Multiplication.**
+
+Soit $p = \dfrac{a}{b} \times \dfrac{c}{d}$ avec $b, d \neq 0$ ; par définition, $a = b \times \dfrac{a}{b}$ et $c = d \times \dfrac{c}{d}$.
+
+Donc $a \times c = (b \times d) \times p$, ce qui donne $p = \dfrac{ac}{bd}$.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Pour rendre une fraction **irréductible**, on divise numérateur et dénominateur par leur $\pgcd$. La décomposition en facteurs premiers fournit ce $\pgcd$.
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Calculs sur les fractions — Calculer </span>
+
+Calculer et donner le résultat sous forme irréductible.
+$$
+  A = \frac{5}{6} + \frac{3}{4}
+  \qquad;\qquad
+  B = \frac{7}{12} \times \frac{9}{14}
+  \qquad;\qquad
+  C = \frac{48}{84}
+$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$
+A = \frac{5 \times 4 + 3 \times 6}{24}
+  = \frac{38}{24}
+  = \frac{19}{12}
+$$
+
+$$
+B = \frac{7 \times 9}{12 \times 14}
+  = \frac{3^2 \times 7}{2^2 \times 3 \times 2 \times 7}
+  = \frac{3}{2^3}
+  = \frac{3}{8}
+$$
+
+$$
+C = \frac{48}{84}
+  = \frac{2^4 \times 3}{2^2 \times 3 \times 7}
+  = \frac{2^2}{7}
+  = \frac{4}{7}
+$$
+
+</details>
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Calculer des expressions fractionnaires — Calculer </span>
+
+Calculer les expressions suivantes :
+
+1. $A = \dfrac{4}{5} - \dfrac{2}{5}\left(\dfrac{1}{3} - 3\right)$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef :* on commence par calculer l'expression entre parenthèses en respectant les priorités opératoires.
+
+$\dfrac{1}{3} - 3 = \dfrac{1}{3} - \dfrac{9}{3} = -\dfrac{8}{3}$.
+
+Donc $A = \dfrac{4}{5} - \dfrac{2}{5} \times \left(-\dfrac{8}{3}\right) = \dfrac{4}{5} + \dfrac{16}{15} = \dfrac{12}{15} + \dfrac{16}{15} = \dfrac{28}{15}$.
+
+</details>
+
+2. $B = \dfrac{2}{3} - \dfrac{7}{3} \times \LH{\dfrac{1}{3 - \dfrac{3}{2}}}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$B = \dfrac{2}{3} - \dfrac{7}{3} \times \dfrac{1}{ \dfrac{6}{2} - \dfrac{3}{2}}
+= \dfrac{2}{3} - \dfrac{7}{3} \times \dfrac{1}{ \dfrac{3}{2}}
+= \dfrac{2}{3} - \dfrac{7}{3} \times \dfrac{2}{3}
+        = \dfrac{2}{3} - \dfrac{14}{9}
+        = \dfrac{6}{9} - \dfrac{14}{9}
+        = -\dfrac{8}{9}$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Les puissances permettent de manipuler efficacement les grands nombres rencontrés dans les fractions et en notation scientifique.
+:::

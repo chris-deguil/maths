@@ -5,7 +5,8 @@ listing:
     type: grid
     fields: [title, description]
     sort: "title"
-    contents: []
+    contents:
+      - ensembles_nombres/index.qmd
 ---
 
 
