@@ -1,0 +1,87 @@
+---
+title: "Variations d'une fonction affine"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Signe du coefficient directeur et sens de variation"
+order: 6
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Variations selon le signe de $m$</span>
+
+Soit $f(x)=mx+p$ une fonction affine.
+
+- Si $m>0$ : $f$ est **strictement croissante** sur $\R$.
+- Si $m<0$ : $f$ est **strictement décroissante** sur $\R$.
+- Si $m=0$ : $f$ est **constante** sur $\R$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Soient $x_1$ et $x_2$ deux réels avec $x_1<x_2$. On calcule :
+$$f(x_2)-f(x_1)=(mx_2+p)-(mx_1+p)=m(x_2-x_1)$$
+
+Comme $x_2-x_1>0$ :
+
+- si $m>0$ alors $m(x_2-x_1)>0$, soit $f(x_2)>f(x_1)$ : $f$ est strictement croissante.
+- si $m<0$ alors $m(x_2-x_1)<0$, soit $f(x_2)<f(x_1)$ : $f$ est strictement décroissante.
+- si $m=0$ alors $f(x_2)=f(x_1)$ : $f$ est constante.
+
+</details>
+
+## Représenter les variations
+
+Pour représenter graphiquement les variations d'une fonction affine, on utilise un tableau de variations indiquant le sens de variation.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonction_Affine_signe1.png" style="width: 45%; margin-right:3%">
+  <img src="../../image/seconde/Fonction_Affine_signe2.png" style="width: 45%;">
+</div>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Dresser le tableau de variations — Représenter</span></div>
+
+Pour chaque fonction, dresser le tableau de variations :
+$$f(x)=4x-1 \qquad g(x)=-\frac{1}{3}x+2 \qquad h(x)=7$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f$ : $m=4>0$, donc $f$ est strictement croissante.
+
+$g$ : $m=-\dfrac{1}{3}<0$, donc $g$ est strictement décroissante.
+
+$h$ : $m=0$, donc $h$ est constante.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonction_Affine_signe3.png" style="width: 45%; margin-right:3%">
+  <img src="../../image/seconde/Fonction_Affine_signe4.png" style="width: 45%;">
+</div>
+
+</details>
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Reconnaître $m$ à partir d'un tableau de variations — Raisonner </span>
+
+Une fonction affine est décroissante sur $\R$.
+
+1. Que peut-on dire du signe de $m$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$m<0$.
+
+</details>
+
+2. Donner deux exemples de fonctions affines décroissantes.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Par exemple $f(x)=-x+1$ et $g(x)=-3x-2$.
+
+</details>
+:::

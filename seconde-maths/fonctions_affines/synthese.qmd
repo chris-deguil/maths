@@ -1,0 +1,13 @@
+---
+title: "Synthèse — Carte mentale"
+format:
+  html:
+    toc: false
+    number-sections: false
+description: "Vue d'ensemble du chapitre"
+order: 9
+---
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonction_Affine_carte_mental.png" style="width: 95%;">
+</div>

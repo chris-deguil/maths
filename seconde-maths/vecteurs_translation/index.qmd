@@ -1,0 +1,32 @@
+---
+title: "Chapitre 3 : Vecteurs — Translation"
+description: "Translation, vecteurs égaux, somme, Chasles, produit par un réel, colinéarité"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire :</span>
+
+- Vecteur $\ve{MM'}$ associé à la translation qui transforme $M$ en $M'$, direction, sens et norme.
+- Égalité de deux vecteurs. Notation $\ve{u}$. Vecteur nul.
+- Représentants d'un vecteur.
+- Somme de deux vecteurs en lien avec l'enchaînement des translations. Relation de Chasles.
+- Produit d'un vecteur par un nombre réel. Colinéarité de deux vecteurs.
+- Représentation d'un vecteur comme combinaison linéaire de deux vecteurs non colinéaires.
+- Caractérisation vectorielle du milieu d'un segment.
+
+**Savoir-faire :**
+
+- Représenter la somme de deux vecteurs à partir de représentants de même origine.
+- Caractériser alignement et parallélisme par la colinéarité.
+- Résoudre des problèmes en utilisant la représentation la plus adaptée des vecteurs.
+- Résoudre des problèmes par des méthodes vectorielles ou géométriques.
+:::

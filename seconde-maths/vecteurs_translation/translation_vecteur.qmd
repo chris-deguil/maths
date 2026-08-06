@@ -1,0 +1,64 @@
+---
+title: "Translation et notion de vecteur"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Translation, vecteur nul"
+order: 1
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Translation</span>
+
+Soit $A$ et $B$ deux points du plan.
+
+La **translation qui transforme $A$ en $B$** est la transformation du plan qui, à tout point $C$, associe l'unique point $M$ tel que $[AM]$ et $[BC]$ aient le même milieu.
+
+Le quadrilatère $ABMC$ est alors un **parallélogramme**.
+
+- $M$ est **l'image de $C$ par la translation de vecteur $\ve{AB}$** ;
+- on note $t_{\ve{AB}}(C)=M$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_translation.png" style="width: 70%;">
+</div>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Intuitivement, une translation fait **glisser** tout le plan dans la même direction, du même sens et de la même longueur, sans rotation ni déformation.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+On représente un vecteur à l'aide d'un « segment fléché » allant de son **origine** vers son **extrémité**.
+
+$A$ est l'**origine** du vecteur $\ve{AB}$ et $B$ son **extrémité**. En particulier $t_{\ve{AB}}(A)=B$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteur.png" style="width: 50%;">
+</div>
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Vecteur nul</span>
+
+On appelle **vecteur nul**, noté $\ve{0}$, le vecteur associé à la translation qui laisse invariant tout point du plan. C'est-à-dire que pour tout point $M$ du plan : $t_{\ve{0}}(M)=M$. On note $\ve{MM}=\ve{0}$.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+$\ve{AB} = \ve{0} \Longleftrightarrow A = B$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+$\Rightarrow$ Supposons $\ve{AB} = \ve{0}$. Alors $t_{\ve{AB}} = t_{\ve{0}}$ est la translation qui laisse tout point invariant. En particulier $t_{\ve{AB}}(A) = B$ et $t_{\ve{0}}(A) = A$, donc $B = A$.
+
+$\Leftarrow$ Réciproquement, si $A = B$, alors la translation qui envoie $A$ sur $B$ laisse $A$ fixe, donc c'est la translation de vecteur nul : $\ve{AB} = \ve{0}$.
+
+</details>

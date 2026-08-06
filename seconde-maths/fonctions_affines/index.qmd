@@ -1,0 +1,34 @@
+---
+title: "Chapitre 2 : Fonctions affines"
+description: "Vocabulaire des fonctions, fonctions affines, représentation graphique, variations, équations"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire :</span>
+
+- Pour une fonction affine donnée par $f(x)=mx+p$, interprétation de $m$ comme taux d'accroissement et $p$ comme ordonnée à l'origine.
+- Variations d'une fonction affine selon le signe du coefficient directeur.
+- Ensemble des solutions des équations du type $ax + b = 0$.
+
+**Savoir-faire :**
+
+- Exploiter l'équation $y = f(x)$ d'une courbe : appartenance, calcul de coordonnées.
+- Pour une fonction affine, relier sens de variation et droite représentative.
+- Pour les fonctions affines, résoudre graphiquement ou algébriquement une équation du type $f(x)=k$ ou une inéquation (graphiquement) $f(x) < k$.
+- Donner l'ensemble des solutions d'une équation du premier degré du type $ax = b$, $a + x = b$, $ax + b = cx + d$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Automatismes :</span>
+
+- Reconnaître l'expression d'une fonction linéaire, d'une fonction affine, savoir que leur représentation graphique est une droite.
+:::

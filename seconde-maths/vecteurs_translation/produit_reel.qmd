@@ -1,0 +1,101 @@
+---
+title: "Produit d'un vecteur par un réel"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "λu, distributivité"
+order: 7
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Produit par un réel</span>
+
+Soit $\lambda \in \R$ et $\ve{u}$ un vecteur non nul. Le **produit** $\lambda\ve{u}$ est le vecteur qui a :
+
+- la même **direction** que $\ve{u}$ ;
+- le même **sens** que $\ve{u}$ si $\lambda > 0$, le sens contraire si $\lambda < 0$ ;
+- pour **norme** $|\lambda|\cdot\norm{\ve{u}}$.
+
+Par convention, $0\cdot\ve{u} = \ve{0}$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Récapitulatif selon le signe de $\lambda$ : </span>
+
+| Condition | Sens | Norme |
+|---|---|---|
+| $\lambda > 0$ | même sens que $\ve{u}$ | $\lambda\norm{\ve{u}}$ |
+| $\lambda < 0$ | sens contraire à $\ve{u}$ | $\vert\lambda\vert\norm{\ve{u}}$ |
+| $\lambda = 0$ | vecteur nul | $0$ |
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_colinearite1.png" style="width: 55%;">
+</div>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Distributivité (admis)</span>
+
+Pour tous vecteurs $\ve{u}$, $\ve{v}$ et tous réels $k$, $m$ :
+$$k(\ve{u}+\ve{v}) = k\ve{u}+k\ve{v} \qquad \text{et} \qquad (k+m)\ve{u} = k\ve{u}+m\ve{u}$$
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Simplifier des expressions vectorielles — Calculer</span></div>
+
+Soient $\ve{u}$ et $\ve{v}$ deux vecteurs.
+
+1. On donne $2\ve{u}+3\ve{v}-5\ve{u} = \ve{0}$. Montrer que $\ve{u} = \ve{v}$.
+2. On donne $-3(\ve{u}+2\ve{v}) = 2\ve{v}+\ve{u}$. Que peut-on dire des vecteurs $\ve{u}$ et $\ve{v}$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+1. $(2-5)\ve{u}+3\ve{v} = -3\ve{u}+3\ve{v} = \ve{0}$, donc $3\ve{v} = 3\ve{u}$, soit $\ve{u} = \ve{v}$.
+2. $-3\ve{u}-6\ve{v} = 2\ve{v}+\ve{u}$, donc $-4\ve{u} = 8\ve{v}$, soit $\ve{u} = -2\ve{v}$.
+
+   Les vecteurs $\ve{u}$ et $\ve{v}$ ont **même direction et de sens contraires**, et $\norm{\ve{u}} = 2\norm{\ve{v}}$.
+
+</details>
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Écriture contrainte — Calculer, Raisonner </span>
+
+Soient $A$, $B$, $C$ trois points non alignés, et $M$ un point du plan.
+
+On suppose que
+$$\ve{MA} = 3\ve{MB} - \ve{MC}$$
+
+Exprimer $\ve{AM}$ en fonction de $\ve{AB}$ et $\ve{AC}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a :
+$$\ve{MA} = 3\ve{MB} - \ve{MC}$$
+
+D'après la relation de Chasles :
+$$\ve{MA} = 3(\ve{MA}+\ve{AB}) - (\ve{MA}+\ve{AC})$$
+
+Donc,
+$$\ve{MA} = 3\ve{MA} + 3\ve{AB} - \ve{MA} - \ve{AC} = 2\ve{MA} + 3\ve{AB} - \ve{AC}$$
+
+Ainsi $2\ve{MA} = 2\ve{AB} - \ve{AC}$, d'où :
+$$\ve{AM} = -\ve{AB} + \frac{1}{2}\ve{AC}$$
+
+</details>
+:::
+
+::: {.bloc .sf}
+<div class="bloc-titre">Savoir faire :<span class="sf"> Point méthode — écrire un vecteur dans une base</span></div>
+
+On cherche souvent à exprimer un vecteur $\ve{AM}$ en fonction de $\ve{AB}$ et $\ve{AC}$ sous la forme :
+$$\ve{AM} = \alpha\ve{AB} + \beta\ve{AC}$$
+afin de montrer des relations.
+
+On dit que l'on **décompose** le vecteur $\ve{AM}$ dans la **base $\left(\ve{AB}\,;\,\ve{AC}\right)$**.
+
+En pratique, on cherche à écrire les deux vecteurs dans la même base, puis à montrer que l'un est multiple de l'autre ou à exhiber les coordonnées d'un point.
+:::

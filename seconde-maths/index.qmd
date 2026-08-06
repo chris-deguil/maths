@@ -7,6 +7,8 @@ listing:
     sort: "title"
     contents:
       - ensembles_nombres/index.qmd
+      - fonctions_affines/index.qmd
+      - vecteurs_translation/index.qmd
 ---
 
 

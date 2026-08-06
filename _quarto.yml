@@ -41,6 +41,32 @@ website:
             - seconde-maths/ensembles_nombres/fractions.qmd
             - seconde-maths/ensembles_nombres/puissances.qmd
             - seconde-maths/ensembles_nombres/notation_scientifique.qmd
+        - section: "Chapitre 2 : Fonctions affines"
+          contents:
+            - seconde-maths/fonctions_affines/index.qmd
+            - seconde-maths/fonctions_affines/vocabulaire_fonctions.qmd
+            - seconde-maths/fonctions_affines/definition_fonction_affine.qmd
+            - seconde-maths/fonctions_affines/determiner_expression.qmd
+            - seconde-maths/fonctions_affines/representation_graphique.qmd
+            - seconde-maths/fonctions_affines/appartenance_droite.qmd
+            - seconde-maths/fonctions_affines/variations.qmd
+            - seconde-maths/fonctions_affines/resolution_equations.qmd
+            - seconde-maths/fonctions_affines/fonctions_par_morceaux.qmd
+            - seconde-maths/fonctions_affines/synthese.qmd
+        - section: "Chapitre 3 : Vecteurs — Translation"
+          contents:
+            - seconde-maths/vecteurs_translation/index.qmd
+            - seconde-maths/vecteurs_translation/translation_vecteur.qmd
+            - seconde-maths/vecteurs_translation/vecteurs_egaux.qmd
+            - seconde-maths/vecteurs_translation/somme_vecteurs.qmd
+            - seconde-maths/vecteurs_translation/relation_chasles.qmd
+            - seconde-maths/vecteurs_translation/identite_parallelogramme.qmd
+            - seconde-maths/vecteurs_translation/vecteur_oppose.qmd
+            - seconde-maths/vecteurs_translation/produit_reel.qmd
+            - seconde-maths/vecteurs_translation/milieu_segment.qmd
+            - seconde-maths/vecteurs_translation/vecteurs_colineaires.qmd
+            - seconde-maths/vecteurs_translation/alignement_parallelisme.qmd
+            - seconde-maths/vecteurs_translation/bilan.qmd
         # Ajoute ici chaque nouveau chapitre, via nouveau_chapitre.sh
 
     - title: "Première"

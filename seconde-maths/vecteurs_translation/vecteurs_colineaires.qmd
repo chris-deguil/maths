@@ -1,0 +1,52 @@
+---
+title: "Vecteurs colinéaires"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition, tester la colinéarité"
+order: 9
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Vecteurs colinéaires</span>
+
+Deux vecteurs $\ve{u}$ et $\ve{v}$ sont **colinéaires** s'il existe un réel $k$ tel que $\ve{u} = k\,\ve{v}$ (ou $\ve{v} = k\,\ve{u}$).
+
+En particulier, le vecteur nul $\ve{0}$ est colinéaire à tout vecteur.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Illustration graphique : </span>
+
+$$\ve{v} = 1{,}5\,\ve{u} \qquad \text{et} \qquad \ve{w} = -2{,}3\,\ve{u}$$
+
+Les vecteurs $\ve{u}$, $\ve{v}$ et $\ve{w}$ sont colinéaires.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_colineaire2.png" style="width: 55%;">
+</div>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Deux vecteurs sont colinéaires si et seulement si ils sont de même direction (ou de directions opposées).
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tester la colinéarité — Raisonner</span></div>
+
+On considère deux vecteurs $\ve{u}$ et $\ve{v}$ tels que :
+$$\ve{u} = 2\ve{AB}-\ve{AC} \qquad \text{et} \qquad \ve{v} = \ve{AC}-2\ve{AB}$$
+
+Les vecteurs $\ve{u}$ et $\ve{v}$ sont-ils colinéaires ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$\ve{v} = \ve{AC}-2\ve{AB} = -(2\ve{AB}-\ve{AC}) = -\ve{u}$$
+
+Les vecteurs sont colinéaires.
+
+</details>
+:::

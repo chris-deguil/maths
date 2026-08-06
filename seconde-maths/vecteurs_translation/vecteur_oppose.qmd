@@ -1,0 +1,77 @@
+---
+title: "Vecteur opposé"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition, soustraction de vecteurs"
+order: 6
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Vecteur opposé</span>
+
+On appelle **vecteur opposé** à $\ve{u}$ l'unique vecteur $-\ve{u}$ tel que $\ve{u}+(-\ve{u}) = \ve{0}$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Caractéristiques d'un vecteur opposé : </span>
+
+Deux vecteurs sont opposés si et seulement s'ils ont même norme, même direction, mais des **sens contraires**.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Soit $\ve{u} = \ve{AB}$, alors $-\ve{u} = \ve{BA}$.
+:::
+
+::: {.bloc .sf}
+<div class="bloc-titre">Savoir faire :<span class="sf"> Point méthode — soustraire deux vecteurs</span></div>
+
+Soustraire un vecteur revient à ajouter son opposé :
+$$\ve{u} - \ve{v} = \ve{u} + (-\ve{v})$$
+
+En pratique, pour simplifier $\ve{AC} - \ve{BC}$, on écrit :
+$$\ve{AC} - \ve{BC} = \ve{AC} + \ve{CB} = \ve{AB}$$
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Simplifier une différence de vecteurs — Calculer</span></div>
+
+Simplifier $2\ve{AB}+\ve{BC}-\ve{AC}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$2\ve{AB}+\ve{BC}-\ve{AC} = 2\ve{AB}+\ve{BC}-(\ve{AB}+\ve{BC}) = 2\ve{AB}+\ve{BC}-\ve{AB}-\ve{BC} = \ve{AB}$$
+
+</details>
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Vecteur opposé dans un parallélogramme — Calculer, Raisonner </span>
+
+Soit $ABCD$ un parallélogramme.
+
+1. Montrer que $\ve{AB}$ et $\ve{CD}$ sont des vecteurs opposés.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Dans un parallélogramme $ABCD$, on a $\ve{AB} = \ve{DC}$ par définition.
+
+Or $\ve{DC} = -\ve{CD}$, donc $\ve{AB} = -\ve{CD}$ : les vecteurs $\ve{AB}$ et $\ve{CD}$ sont **opposés** (même norme, même direction, sens contraires).
+
+</details>
+
+2. Simplifier $\ve{AC}+\ve{BD}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : On décompose avec la relation de Chasles*
+
+$\ve{AC}+\ve{BD} = \ve{AB} + \ve{BC} + \ve{BC}+\ve{CD} = \ve{BC}+\ve{BC} +\ve{AB} + \ve{CD} = \ve{BC} + \ve{BC}$
+
+</details>
+:::

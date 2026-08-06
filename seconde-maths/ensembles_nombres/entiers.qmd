@@ -1,0 +1,91 @@
+---
+title: "Entiers naturels et relatifs, multiples et diviseurs"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "N, Z, multiples, diviseurs, parité, notation étoile"
+order: 2
+---
+
+## Entiers naturels et entiers relatifs
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Entiers naturels et entiers relatifs</span>
+
+- L'ensemble des **entiers naturels** est $\N = \{0\,;\,1\,;\,2\,;\,3\,;\ldots\}$.
+- L'ensemble des **entiers relatifs** est $\Z = \{\ldots\,;\,-2\,;\,-1\,;\,0\,;\,1\,;\,2\,;\ldots\}$.
+
+On a $\N \subset \Z$.
+:::
+
+## Multiples, diviseurs, parité
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Multiples, diviseurs, parité</span>
+
+Soient $a \in \Z$ et $b \in \N^*$.
+
+- On dit que $a$ est un **multiple** de $b$, ou que $b$ **divise** $a$, s'il existe un entier $k \in \Z$ tel que $a = k \times b$. On note alors $b \mid a$.
+- Un entier est **pair** s'il est multiple de $2$, **impair** sinon.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+$0$ est multiple de tout entier (car $0 = 0 \times b$). Tout entier $a$ est divisible par $1$ et par lui-même.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Multiples et diviseurs — Calculer, Raisonner</span></div>
+
+1. Donner l'ensemble $\Div(24)$ de tous les diviseurs de $24$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$24 = 1 \times 24 = 2 \times 12 = 3 \times 8 = 4 \times 6$. $\Div(24) = \{1\,;\,2\,;\,3\,;\,4\,;\,6\,;\,8\,;\,12\,;\,24\}$.
+
+</details>
+
+2. $15$ est-il un multiple de $4$ ? de $3$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$15 = 3 \times 5$ donc $15$ est multiple de $3$, mais pas de $4$ (car $15 = 4 \times 3 + 3$).
+
+</details>
+
+3. Montrer que la somme de deux multiples de $3$ est un multiple de $3$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Soient $a = 3k$ et $b = 3m$ deux multiples de $3$ (avec $k, m \in \Z$). Alors $a + b = 3k + 3m = 3(k+m)$ est multiple de $3$. $\blacksquare$
+
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Le carré d'un nombre impair est impair</span>
+
+Pour tout entier $n$, si $n$ est impair alors $n^2$ est impair.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Soit $n$ un entier impair. Il existe $k \in \Z$ tel que $n = 2k+1$.
+
+Alors $n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 2(2k^2+2k) + 1$.
+
+Comme $2k^2+2k \in \Z$, le nombre $n^2$ est de la forme $2m+1$ avec $m = 2k^2+2k$ : $n^2$ est impair.
+
+</details>
+
+## Notation étoile
+
+::: {.bloc .rem}
+<span class="bloc-titre">Notation $E^*$ : </span>
+
+Pour tout ensemble de nombres $E$, on note $E^*$ l'ensemble $E$ privé de $0$. Exemples :
+
+$$\N^* = \{1\,;\,2\,;\,3\,;\ldots\} \qquad \Z^* = \Z \setminus \{0\} \qquad \R^* = \R \setminus \{0\}$$
+:::

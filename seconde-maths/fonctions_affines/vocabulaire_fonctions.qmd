@@ -1,0 +1,87 @@
+---
+title: "Vocabulaire des fonctions"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Fonction, image, antécédent"
+order: 1
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Fonction</span>
+
+Une **fonction** $f$ définie sur un ensemble $D$ associe à tout réel $x \in D$ **un unique** réel noté $f(x)$.
+
+- $D$ s'appelle l'**ensemble de définition** de $f$.
+- $f(x)$ est l'**image** de $x$ par $f$.
+- $x$ est un **antécédent** de $f(x)$ par $f$.
+:::
+
+::: {.bloc .sf}
+<div class="bloc-titre">Savoir faire :<span class="sf"> Image et antécédent — mémo</span></div>
+
+- **Calculer une image :** on connaît $x$, on calcule $f(x)$.
+- **Chercher un antécédent :** on connaît $f(x)$ (le résultat), on cherche $x$. On résout une équation.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Calculer une image et chercher un antécédent — Calculer</span></div>
+
+Soit $f$ la fonction définie sur $\R$ par $f(x)=2x-3$.
+
+1. Calculer $f(4)$.
+2. Déterminer le ou les antécédents de $5$ par $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+1. $f(4)=2\times 4-3=8-3=5$. L'image de $4$ par $f$ est $\mathbf{5}$.
+2. On cherche $x$ tel que $f(x)=5$ : $2x-3=5 \iff 2x=8 \iff x=4$. L'unique antécédent de $5$ par $f$ est $\mathbf{4}$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Un réel peut avoir **plusieurs antécédents**, un seul, ou aucun. Par exemple, pour la fonction $g$ définie par $g(x)=x^2$ :
+
+- $g(2)=4$ et $g(-2)=4$ : le réel $4$ a **deux** antécédents, $2$ et $-2$.
+- Le réel $-1$ n'a **aucun** antécédent (un carré est toujours positif).
+
+Graphiquement, la courbe de $g$ est une parabole : une droite horizontale $y=k$ peut couper cette courbe en $0$, $1$ ou $2$ points selon la valeur de $k$.
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Images et antécédents — Calculer, Raisonner </span>
+
+Soit $h$ la fonction définie sur $\R$ par $h(x)=x^2-1$.
+
+Pour chaque question, préciser s'il s'agit d'un calcul d'image ou d'une recherche d'antécédent.
+
+1. Calculer $h(0)$, $h(3)$ et $h(-3)$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Il s'agit de **calculs d'images**. $h(0)=0-1=-1$ ; $h(3)=9-1=8$ ; $h(-3)=9-1=8$.
+
+</details>
+
+2. Déterminer les antécédents de $3$ par $h$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Il s'agit d'une **recherche d'antécédents**. On résout $x^2-1=3$, soit $x^2=4$, d'où $x=2$ ou $x=-2$. Les antécédents de $3$ sont $\mathbf{2}$ et $\mathbf{-2}$.
+
+</details>
+
+3. Déterminer les antécédents de $-2$ par $h$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Il s'agit d'une **recherche d'antécédents**. On résout $x^2-1=-2$, soit $x^2=-1$. Il n'existe aucun réel dont le carré est négatif : $-2$ n'a **aucun** antécédent par $h$.
+
+</details>
+:::

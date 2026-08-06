@@ -1,0 +1,83 @@
+---
+title: "Relation de Chasles"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "AC = AB + BC, simplifications par télescopage"
+order: 4
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Relation de Chasles</span>
+
+Soient $A$, $B$ et $C$ trois points quelconques du plan. Alors :
+$$\ve{AC} = \ve{AB} + \ve{BC}$$
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_chasles.png" style="width: 45%;">
+</div>
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+$t_{\ve{AB}}(A)=B$ et $t_{\ve{BC}}(B)=C$.
+
+Ainsi $t_{\ve{BC}} \circ t_{\ve{AB}}$ est la translation qui envoie $A$ sur $C$, de vecteur $\ve{AB}+\ve{BC}$. Or c'est aussi la translation de vecteur $\ve{AC}$. Par unicité, $\ve{AC} = \ve{AB} + \ve{BC}$.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+La relation de Chasles correspond à un déplacement en deux étapes : aller de $A$ à $B$, puis de $B$ à $C$, revient à aller directement de $A$ à $C$.
+
+Elle se généralise à tout chemin de points :
+$$\ve{AZ} = \ve{AP_1} + \ve{P_1P_2} + \cdots + \ve{P_{n-1}Z}$$
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Simplifier par la relation de Chasles — Calculer</span></div>
+
+Simplifier les expressions suivantes.
+$$\ve{AB}+\ve{BC}+\ve{CD}+\ve{DA} \quad \text{et} \quad \ve{MA}+\ve{BC}+\ve{AM}$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef :* on enchaîne les vecteurs tête-à-queue en repérant les points qui se télescopent (lettre de fin d'un vecteur = lettre de début du suivant).
+
+1. $\ve{AB}+\ve{BC}+\ve{CD}+\ve{DA} = \ve{AC}+\ve{CA} = \ve{AA} = \ve{0}$.
+2. $\ve{MA}+\ve{AM} = \ve{MM} = \ve{0}$, donc $\ve{MA}+\ve{BC}+\ve{AM} = \ve{BC}$.
+
+</details>
+:::
+
+::: {.bloc .sf}
+<div class="bloc-titre">Savoir faire :<span class="sf"> Point méthode — utiliser la relation de Chasles</span></div>
+
+Pour **simplifier** une somme, on enchaîne les vecteurs tête-à-queue : $\ve{AB}+\ve{BC} = \ve{AC}$ et $\ve{AB}+\ve{BC}+\ve{CA} = \ve{0}$.
+
+Les **télescopages** sont utiles : $\ve{AB}+\ve{BC}+\ve{CD}+\ve{DA} = \ve{AA} = \ve{0}$.
+
+Pour **éclater** un vecteur, on introduit un point intermédiaire $M$ : $\ve{AC} = \ve{AM} + \ve{MC}$.
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Application de Chasles — Raisonner </span>
+
+Peut-on trouver six points $A$, $B$, $C$, $D$, $E$, $F$ deux à deux distincts tels que :
+$$\ve{AC} + \ve{BD} + \ve{CF} + \ve{DA} + \ve{EB} = \ve{0}~?$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef :* On réorganise pour enchaîner les vecteurs tête-à-queue afin de simplifier facilement les sommes vectorielles.
+$$\ve{AC}+\ve{CF}+\ve{BD}+\ve{DA}+\ve{EB} = \ve{AF} + \ve{BA} + \ve{EB} = \ve{AF} + \ve{EA} = \ve{EF}$$
+
+Ainsi $\ve{EF} = \ve{0}$, ce qui impose $E = F$, en contradiction avec l'hypothèse.
+
+On **ne peut donc pas** trouver de tels six points distincts.
+
+</details>
+:::

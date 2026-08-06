@@ -1,0 +1,107 @@
+---
+title: "Alignement et parallélisme"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Caractériser alignement et parallélisme par la colinéarité"
+order: 10
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Idée fondamentale : </span>
+
+Un vecteur permet de traduire des propriétés géométriques (parallélisme, alignement, milieu) en égalités vectorielles.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Caractérisations par la colinéarité (admis)</span>
+
+Soient $A$, $B$, $C$, $D$ des points du plan avec $A\neq B$ et $C\neq D$.
+
+1. $A$, $B$ et $C$ sont **alignés** si et seulement si $\ve{AB}$ et $\ve{AC}$ sont colinéaires.
+2. Les droites $(AB)$ et $(CD)$ sont **parallèles** (ou confondues) si et seulement si $\ve{AB}$ et $\ve{CD}$ sont colinéaires.
+:::
+
+::: {.bloc .sf}
+<div class="bloc-titre">Savoir faire :<span class="sf"> Point méthode — démontrer un alignement ou un parallélisme</span></div>
+
+**Pour montrer que $A$, $B$, $C$ sont alignés :** exprimer $\ve{AB}$ et $\ve{AC}$ dans la même base vectorielle, puis exhiber $k$ tel que $\ve{AB} = k\,\ve{AC}$.
+
+**Pour montrer que $(AB)\parallel(CD)$ :** exprimer $\ve{AB}$ et $\ve{CD}$, puis exhiber $k$ tel que $\ve{AB} = k\,\ve{CD}$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Démontrer un parallélisme — Calculer, Raisonner</span></div>
+
+$ABC$ est un triangle. Les points $I$ et $J$ sont définis par $\ve{AI} = \dfrac{1}{3}\ve{AB}$ et $\ve{AJ} = \dfrac{1}{3}\ve{AC}$.
+
+Exprimer $\ve{IJ}$ en fonction de $\ve{AB}$ et $\ve{AC}$, puis montrer que $(IJ)\parallel(BC)$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : On introduit le point $A$ pour faire apparaître les données de l'énoncé : $\ve{AI}$ par exemple.*
+
+$$\ve{IJ} = \ve{IA}+\ve{AJ} = -\frac{1}{3}\ve{AB}+\frac{1}{3}\ve{AC} = \frac{1}{3}(\ve{AC}-\ve{AB}) = \frac{1}{3}\ve{BC}$$
+
+Ainsi $\ve{IJ} = \dfrac{1}{3}\ve{BC}$ : les vecteurs sont colinéaires, donc $(IJ)\parallel(BC)$.
+
+On remarque aussi que $IJ = \dfrac{1}{3}BC$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Combinaison linéaire et colinéarité : </span>
+
+Exprimer un vecteur sous la forme $\alpha\,\ve{AB}+\beta\,\ve{AC}$ (où $\alpha, \beta \in \R$) s'appelle écrire ce vecteur comme **combinaison linéaire** de $\ve{AB}$ et $\ve{AC}$.
+
+Lorsque $\ve{AB}$ et $\ve{AC}$ ne sont pas colinéaires, cette décomposition est **unique**.
+
+Pour montrer que deux vecteurs $\ve{u}$ et $\ve{v}$ sont colinéaires, on peut décomposer $\ve{u}$ et $\ve{v}$ en fonction de $\ve{AB}$ et $\ve{AC}$, et montrer que les coefficient obtenues sont proportionnelles.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Alignement de trois points — Raisonner, Calculer</span></div>
+
+Soient $A$, $B$, $C$ trois points non alignés. Les points $M$ et $N$ sont définis par :
+$$\ve{AM} = 2\ve{AB} + \ve{AC} \qquad \text{et} \qquad \ve{AN} = 4\ve{AB} + 2\ve{AC}$$
+
+Montrer que $A$, $M$, $N$ sont alignés.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : pour montrer que trois points $A$, $M$, $N$ sont alignés, on montre que les vecteurs $\ve{AM}$ et $\ve{AN}$ sont colinéaires.*
+
+$$\ve{AN} = 4\ve{AB} + 2\ve{AC} = 2(2\ve{AB}+\ve{AC}) = 2\,\ve{AM}$$
+
+Les vecteurs $\ve{AN}$ et $\ve{AM}$ sont colinéaires, donc les droites $(AM)$ et $(AN)$ sont parallèles. Or $A$ appartient aux deux droites, donc les droites sont confondues, donc les points $A$, $M$, $N$ sont **alignés**.
+
+</details>
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Parallélisme par les vecteurs — Calculer, Raisonner </span>
+
+$ABC$ est un triangle. Les points $I$ et $J$ sont définis par $\ve{AI} = \dfrac{1}{3}\ve{AB}$ et $\ve{AJ} = 3\ve{AC}$.
+
+1. Exprimer $\ve{IC}$ et $\ve{BJ}$ en fonction de $\ve{AB}$ et $\ve{AC}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$\ve{IC} = \ve{IA}+\ve{AC} = -\frac{1}{3}\ve{AB}+\ve{AC} \quad \text{et} \quad \ve{BJ} = \ve{BA}+\ve{AJ} = -\ve{AB}+3\ve{AC}$$
+
+</details>
+
+2. Montrer que les droites $(IC)$ et $(BJ)$ sont parallèles.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$\ve{BJ} = -\ve{AB}+3\ve{AC} = 3\!\left(-\frac{1}{3}\ve{AB}+\ve{AC}\right) = 3\,\ve{IC}$$
+
+Les vecteurs $\ve{BJ}$ et $\ve{IC}$ sont colinéaires donc les droites $(IC)$ et $(BJ)$ sont **parallèles**.
+
+</details>
+:::

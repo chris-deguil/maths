@@ -1,0 +1,68 @@
+---
+title: "Vecteurs égaux — représentants"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Égalité de vecteurs, direction, sens, norme, représentants"
+order: 2
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Vecteurs égaux</span>
+
+Soit $A$, $B$, $C$ et $D$ quatre points du plan.
+
+On dit que $\ve{AB}$ et $\ve{CD}$ sont **égaux** lorsque $[AD]$ et $[BC]$ ont le même milieu, c'est-à-dire lorsque $ABDC$ est un parallélogramme. On note alors $\ve{AB} = \ve{CD}$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_egalite_vectorielle.png" style="width: 55%;">
+</div>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Caractéristiques d'un vecteur : </span>
+
+Un vecteur est entièrement caractérisé par les trois données suivantes :
+
+- sa **direction** (celle de la droite support) ;
+- son **sens** (de l'origine vers l'extrémité) ;
+- sa **norme**, notée $\norm{\ve{AB}}$, la longueur $AB$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Soit $\ve{u}$ le vecteur de la translation qui transforme $A$ en $B$ et aussi $C$ en $D$.
+
+- $\ve{AB}$ et $\ve{CD}$ sont deux **représentants** du même vecteur $\ve{u}$ ;
+- $\ve{AB}$ est l'unique représentant de $\ve{u}$ d'origine $A$ ;
+- Deux vecteurs égaux ont même norme, même direction et même sens ;
+- L'emplacement d'un vecteur dans le plan n'a pas d'importance : on peut le déplacer librement, parallèlement à lui-même.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Erreur à éviter : </span>
+
+1. La réciproque de « $\ve{AB} = \ve{CD} \Rightarrow \norm{\ve{AB}} = \norm{\ve{CD}}$ » est **fausse**.
+
+   Dans un carré $ABCD$, on a $\norm{\ve{AB}} = \norm{\ve{BC}}$ pourtant $\ve{AB} \neq \ve{BC}$ car ces deux vecteurs n'ont pas la même direction.
+
+2. Ne pas confondre **même direction** et **même sens**.
+
+   Deux vecteurs peuvent avoir la même direction (portés par des droites parallèles) mais des sens opposés : ils ne sont alors pas égaux.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Reconnaître des vecteurs égaux — Raisonner</span></div>
+
+Dans un parallélogramme $ABCD$, quels couples de vecteurs sont égaux ? Justifier.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$ABCD$ est un parallélogramme si et seulement si $\ve{AB} = \ve{DC}$ et $\ve{AD} = \ve{BC}$, donc les couples de vecteurs égaux sont $(\ve{AB},\ve{DC})$ et $(\ve{AD},\ve{BC})$.
+
+En revanche, $\ve{AB}$ et $\ve{CD}$ ont même direction mais des sens contraires, donc ils ne sont pas égaux.
+
+</details>
+:::

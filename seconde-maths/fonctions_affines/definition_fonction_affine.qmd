@@ -1,0 +1,34 @@
+---
+title: "Fonctions affines : définition"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "f(x) = mx + p, coefficient directeur, ordonnée à l'origine"
+order: 2
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Fonction affine</span>
+
+On appelle **fonction affine** toute fonction définie sur $\R$ pouvant s'écrire sous la forme
+$$f(x)=mx+p$$
+où $m$ et $p$ sont des réels donnés.
+
+$m$ s'appelle le **coefficient directeur** (ou **pente**) de $f$ et $p$ l'**ordonnée à l'origine** de $f$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Identifier les paramètres d'une fonction affine — Reconnaître</span></div>
+
+Pour chacune des fonctions suivantes, donner $m$ et $p$, puis préciser si elle est linéaire ou constante.
+$$f(x)=-2x+7 \qquad g(x)=5x \qquad h(x)=4$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+- $f(x)=-2x+7$ : $m=-2$, $p=7$. Ni linéaire ni constante.
+- $g(x)=5x$ : $m=5$, $p=0$. Fonction **linéaire**.
+- $h(x)=4$ : $m=0$, $p=4$. Fonction **constante**.
+
+</details>
+:::

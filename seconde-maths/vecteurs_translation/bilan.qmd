@@ -1,0 +1,13 @@
+---
+title: "Bilan — Carte mentale"
+format:
+  html:
+    toc: false
+    number-sections: false
+description: "Vue d'ensemble du chapitre"
+order: 11
+---
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_bilan.png" style="width: 95%;">
+</div>

@@ -1,0 +1,61 @@
+---
+title: "Appartenance d'un point à une droite"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Tester si un point appartient à une droite d'équation y = mx + p"
+order: 5
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Appartenance</span>
+
+Un point $M(a\,;\,b)$ appartient à la droite d'équation $y=mx+p$ si et seulement si $b=ma+p$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tester l'appartenance à une droite — Raisonner</span></div>
+
+La droite $(d)$ a pour équation $y=3x-1$.
+
+1. Le point $A(2\,;\,5)$ appartient-il à $(d)$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$3\times 2-1=5$. On obtient bien $5$, donc $A(2\,;\,5)\in(d)$.
+
+</details>
+
+2. Le point $B(2\,;\,4)$ appartient-il à $(d)$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$3\times 2-1=5\neq 4$. L'ordonnée calculée ($5$) est différente de celle de $B$ ($4$), donc $B(2\,;\,4)\notin(d)$.
+
+</details>
+:::
+
+## Exercice
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Tester l'appartenance à une droite — Raisonner </span>
+
+La droite $(d)$ a pour équation $y=2x+3$.
+
+1. Le point $C(1\,;\,5)$ appartient-il à $(d)$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$2\times 1+3=5$. Oui, $C\in(d)$.
+
+</details>
+
+2. Le point $D(-2\,;\,0)$ appartient-il à $(d)$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$2\times(-2)+3=-4+3=-1\neq 0$. Non, $D\notin(d)$.
+
+</details>
+:::
