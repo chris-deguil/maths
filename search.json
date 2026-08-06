@@ -1,0 +1,98 @@
+[
+  {
+    "objectID": "premiere-maths/index.html",
+    "href": "premiere-maths/index.html",
+    "title": "Cours de Première",
+    "section": "",
+    "text": "No matching items",
+    "crumbs": [
+      "Première",
+      "Cours de Première"
+    ]
+  },
+  {
+    "objectID": "terminale-maths/index.html",
+    "href": "terminale-maths/index.html",
+    "title": "Cours de Terminale",
+    "section": "",
+    "text": "No matching items",
+    "crumbs": [
+      "Terminale",
+      "Cours de Terminale"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/index.html",
+    "href": "seconde-maths/index.html",
+    "title": "Cours de Seconde",
+    "section": "",
+    "text": "No matching items",
+    "crumbs": [
+      "Seconde",
+      "Cours de Seconde"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Accueil",
+    "section": "",
+    "text": "Bienvenue sur le site pédagogique\nUtilisez la barre de navigation ci-dessus pour accéder aux sections :\n\nSeconde\nPremière\nTerminale"
+  },
+  {
+    "objectID": "GUIDE.html",
+    "href": "GUIDE.html",
+    "title": "Guide interne — site pédagogique (repartir de zéro, v2)",
+    "section": "",
+    "text": "Ce document explique comment fonctionne le site après la remise à zéro, pour que tu puisses ajouter du contenu sans avoir à redemander l’architecture à chaque fois.\n\n\n_quarto.yml              -&gt; config globale : navbar, sidebar, thème\nindex.qmd                -&gt; page d'accueil\nseconde-maths/            -&gt; niveau Seconde\npremiere-maths/           -&gt; niveau Première\nterminale-maths/          -&gt; niveau Terminale\n  _metadata.yml            -&gt; thème appliqué à tout le niveau\n  index.qmd                 -&gt; page de listing des chapitres du niveau\n  &lt;chapitre&gt;/\n    index.qmd                -&gt; page de listing des notions du chapitre (auto, via \"order\")\n    &lt;notion&gt;.qmd              -&gt; une page de cours (order: N dans le front-matter)\nassets/\n  css/general.scss          -&gt; thème général (navbar, sidebar, cartes)\n  css/maths.css              -&gt; les blocs def/thm/ex/rem/exo/demo\n  css/pyodide-mkdocs.css     -&gt; style de l'éditeur Python intégré\n  js/pyodide-mkdocs.js        -&gt; logique de l'éditeur Python intégré\n  mathjax-macros.html         -&gt; macros LaTeX (\\R, \\N, \\ve{}, \\lim, etc.)\n  exercise-counter.lua        -&gt; numérote automatiquement les \"## Exercice\"\n  auto-nav.lua                -&gt; génère automatiquement le prev/next en bas de page\ncode_python/               -&gt; scripts .py utilisés dans les exercices interactifs\nnouveau_chapitre.sh        -&gt; génère le squelette d'un nouveau chapitre\nmise_a_jour.sh             -&gt; commit + push automatique vers GitHub\nSNT a été entièrement retiré (navbar, sidebar, fichiers, CSS snt.css, filtre macros_logo.lua). Le contenu de l’ancien Première/Terminale a été archivé (voir section 5), pas supprimé définitivement.\n\n\n\n./nouveau_chapitre.sh seconde-maths fonctions \"Généralités sur les fonctions\" \\\n    definition variations tableau_signe exercices\nÇa crée seconde-maths/fonctions/ avec un index.qmd et un .qmd par notion, déjà pré-remplis avec les blocs standards et un order: croissant.\nLe script t’affiche ensuite le morceau de YAML à coller dans _quarto.yml (sidebar) et dans seconde-maths/index.qmd (listing). Cette étape reste manuelle (Quarto ne permet pas de générer la sidebar dynamiquement), mais c’est un copier-coller de 30 secondes.\n\n\n\n::: {.bloc .def}\n&lt;span class=\"bloc-titre\"&gt;Définition : &lt;/span&gt;\n...\n:::\n\n::: {.bloc .thm}\n&lt;span class=\"bloc-titre\"&gt;Propriété : &lt;/span&gt;\n...\n:::\n\n&lt;details class=\"bloc demo\"&gt;&lt;summary&gt;Démonstration : &lt;/summary&gt;\n...\n&lt;/details&gt;\n\n::: {.bloc .ex}\n&lt;div class=\"bloc-titre\"&gt;Exemple :&lt;span class=\"exemp-extra\"&gt; précision optionnelle &lt;/span&gt;&lt;/div&gt;\n...\n&lt;details class=\"bloc cor\"&gt;&lt;summary&gt;Afficher la correction :&lt;/summary&gt;\n...\n&lt;/details&gt;\n:::\n\n::: {.bloc .rem}\n&lt;span class=\"bloc-titre\"&gt;Remarque : &lt;/span&gt;\n...\n:::\nPour un exercice numéroté automatiquement, mets un titre ## Exercice juste avant :\n## Exercice\n\n::: {.bloc .exo}\n&lt;span class=\"exo-num\"&gt;&lt;/span&gt;&lt;span class=\"exo-extra\"&gt; Étude par le quotient &lt;/span&gt;\n\nÉnoncé...\n\n&lt;details class=\"bloc cor\"&gt;&lt;summary&gt;Afficher la correction :&lt;/summary&gt;\nCorrection...\n&lt;/details&gt;\n:::\nLe filtre exercise-counter.lua remplit automatiquement exo-num avec “Exercice N :” (numérotation continue sur la page).\n\n\n\nTant que chaque .qmd d’un chapitre a un champ order: dans son front-matter (ce que fait déjà nouveau_chapitre.sh), le filtre assets/auto-nav.lua ajoute automatiquement les flèches précédent/suivant en bas de page, dans le bon ordre. Tu n’as plus jamais besoin d’écrire &lt;div class=\"nav-pages\"&gt; toi-même.\n\n\n\nSur une page qui a besoin d’un éditeur Python exécutable dans le navigateur (Pyodide), ajoute ceci dans le front-matter de la page :\ninclude-in-header:\n  - text: |\n      &lt;link rel=\"stylesheet\" href=\"../../assets/css/pyodide-mkdocs.css\"&gt;\n      &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css\"&gt;\n      &lt;script src=\"https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.js\"&gt;&lt;/script&gt;\n      &lt;script src=\"https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.js\"&gt;&lt;/script&gt;\n      &lt;script src=\"https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js\"&gt;&lt;/script&gt;\n      &lt;script src=\"../../assets/js/pyodide-mkdocs.js\" defer&gt;&lt;/script&gt;\n(Adapte le nombre de ../ selon la profondeur du fichier.)\n\n\n\nL’ancien contenu de Première et Terminale (avant remise à zéro) est conservé dans le dossier _archive-ancien-programme/ (hors navigation, non publié) pour que tu puisses réutiliser des textes, énoncés ou images en les adaptant au nouveau programme. Tu peux le supprimer définitivement quand tu n’en as plus besoin.\n\n\n\n./mise_a_jour.sh \"Message de commit\"\nUn seul workflow GitHub Actions (quarto-gh-pages.yml) construit et publie le site sur gh-pages à chaque push sur main."
+  },
+  {
+    "objectID": "GUIDE.html#structure-générale",
+    "href": "GUIDE.html#structure-générale",
+    "title": "Guide interne — site pédagogique (repartir de zéro, v2)",
+    "section": "",
+    "text": "_quarto.yml              -&gt; config globale : navbar, sidebar, thème\nindex.qmd                -&gt; page d'accueil\nseconde-maths/            -&gt; niveau Seconde\npremiere-maths/           -&gt; niveau Première\nterminale-maths/          -&gt; niveau Terminale\n  _metadata.yml            -&gt; thème appliqué à tout le niveau\n  index.qmd                 -&gt; page de listing des chapitres du niveau\n  &lt;chapitre&gt;/\n    index.qmd                -&gt; page de listing des notions du chapitre (auto, via \"order\")\n    &lt;notion&gt;.qmd              -&gt; une page de cours (order: N dans le front-matter)\nassets/\n  css/general.scss          -&gt; thème général (navbar, sidebar, cartes)\n  css/maths.css              -&gt; les blocs def/thm/ex/rem/exo/demo\n  css/pyodide-mkdocs.css     -&gt; style de l'éditeur Python intégré\n  js/pyodide-mkdocs.js        -&gt; logique de l'éditeur Python intégré\n  mathjax-macros.html         -&gt; macros LaTeX (\\R, \\N, \\ve{}, \\lim, etc.)\n  exercise-counter.lua        -&gt; numérote automatiquement les \"## Exercice\"\n  auto-nav.lua                -&gt; génère automatiquement le prev/next en bas de page\ncode_python/               -&gt; scripts .py utilisés dans les exercices interactifs\nnouveau_chapitre.sh        -&gt; génère le squelette d'un nouveau chapitre\nmise_a_jour.sh             -&gt; commit + push automatique vers GitHub\nSNT a été entièrement retiré (navbar, sidebar, fichiers, CSS snt.css, filtre macros_logo.lua). Le contenu de l’ancien Première/Terminale a été archivé (voir section 5), pas supprimé définitivement."
+  },
+  {
+    "objectID": "GUIDE.html#ajouter-un-chapitre-méthode-recommandée",
+    "href": "GUIDE.html#ajouter-un-chapitre-méthode-recommandée",
+    "title": "Guide interne — site pédagogique (repartir de zéro, v2)",
+    "section": "",
+    "text": "./nouveau_chapitre.sh seconde-maths fonctions \"Généralités sur les fonctions\" \\\n    definition variations tableau_signe exercices\nÇa crée seconde-maths/fonctions/ avec un index.qmd et un .qmd par notion, déjà pré-remplis avec les blocs standards et un order: croissant.\nLe script t’affiche ensuite le morceau de YAML à coller dans _quarto.yml (sidebar) et dans seconde-maths/index.qmd (listing). Cette étape reste manuelle (Quarto ne permet pas de générer la sidebar dynamiquement), mais c’est un copier-coller de 30 secondes."
+  },
+  {
+    "objectID": "GUIDE.html#les-blocs-de-contenu-rappel",
+    "href": "GUIDE.html#les-blocs-de-contenu-rappel",
+    "title": "Guide interne — site pédagogique (repartir de zéro, v2)",
+    "section": "",
+    "text": "::: {.bloc .def}\n&lt;span class=\"bloc-titre\"&gt;Définition : &lt;/span&gt;\n...\n:::\n\n::: {.bloc .thm}\n&lt;span class=\"bloc-titre\"&gt;Propriété : &lt;/span&gt;\n...\n:::\n\n&lt;details class=\"bloc demo\"&gt;&lt;summary&gt;Démonstration : &lt;/summary&gt;\n...\n&lt;/details&gt;\n\n::: {.bloc .ex}\n&lt;div class=\"bloc-titre\"&gt;Exemple :&lt;span class=\"exemp-extra\"&gt; précision optionnelle &lt;/span&gt;&lt;/div&gt;\n...\n&lt;details class=\"bloc cor\"&gt;&lt;summary&gt;Afficher la correction :&lt;/summary&gt;\n...\n&lt;/details&gt;\n:::\n\n::: {.bloc .rem}\n&lt;span class=\"bloc-titre\"&gt;Remarque : &lt;/span&gt;\n...\n:::\nPour un exercice numéroté automatiquement, mets un titre ## Exercice juste avant :\n## Exercice\n\n::: {.bloc .exo}\n&lt;span class=\"exo-num\"&gt;&lt;/span&gt;&lt;span class=\"exo-extra\"&gt; Étude par le quotient &lt;/span&gt;\n\nÉnoncé...\n\n&lt;details class=\"bloc cor\"&gt;&lt;summary&gt;Afficher la correction :&lt;/summary&gt;\nCorrection...\n&lt;/details&gt;\n:::\nLe filtre exercise-counter.lua remplit automatiquement exo-num avec “Exercice N :” (numérotation continue sur la page)."
+  },
+  {
+    "objectID": "GUIDE.html#navigation-automatique-prev-next",
+    "href": "GUIDE.html#navigation-automatique-prev-next",
+    "title": "Guide interne — site pédagogique (repartir de zéro, v2)",
+    "section": "",
+    "text": "Tant que chaque .qmd d’un chapitre a un champ order: dans son front-matter (ce que fait déjà nouveau_chapitre.sh), le filtre assets/auto-nav.lua ajoute automatiquement les flèches précédent/suivant en bas de page, dans le bon ordre. Tu n’as plus jamais besoin d’écrire &lt;div class=\"nav-pages\"&gt; toi-même."
+  },
+  {
+    "objectID": "GUIDE.html#éditeur-python-interactif",
+    "href": "GUIDE.html#éditeur-python-interactif",
+    "title": "Guide interne — site pédagogique (repartir de zéro, v2)",
+    "section": "",
+    "text": "Sur une page qui a besoin d’un éditeur Python exécutable dans le navigateur (Pyodide), ajoute ceci dans le front-matter de la page :\ninclude-in-header:\n  - text: |\n      &lt;link rel=\"stylesheet\" href=\"../../assets/css/pyodide-mkdocs.css\"&gt;\n      &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css\"&gt;\n      &lt;script src=\"https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.js\"&gt;&lt;/script&gt;\n      &lt;script src=\"https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.js\"&gt;&lt;/script&gt;\n      &lt;script src=\"https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js\"&gt;&lt;/script&gt;\n      &lt;script src=\"../../assets/js/pyodide-mkdocs.js\" defer&gt;&lt;/script&gt;\n(Adapte le nombre de ../ selon la profondeur du fichier.)"
+  },
+  {
+    "objectID": "GUIDE.html#ancien-contenu-archivé",
+    "href": "GUIDE.html#ancien-contenu-archivé",
+    "title": "Guide interne — site pédagogique (repartir de zéro, v2)",
+    "section": "",
+    "text": "L’ancien contenu de Première et Terminale (avant remise à zéro) est conservé dans le dossier _archive-ancien-programme/ (hors navigation, non publié) pour que tu puisses réutiliser des textes, énoncés ou images en les adaptant au nouveau programme. Tu peux le supprimer définitivement quand tu n’en as plus besoin."
+  },
+  {
+    "objectID": "GUIDE.html#mise-en-ligne",
+    "href": "GUIDE.html#mise-en-ligne",
+    "title": "Guide interne — site pédagogique (repartir de zéro, v2)",
+    "section": "",
+    "text": "./mise_a_jour.sh \"Message de commit\"\nUn seul workflow GitHub Actions (quarto-gh-pages.yml) construit et publie le site sur gh-pages à chaque push sur main."
+  }
+]
