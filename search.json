@@ -1,43 +1,31 @@
 [
   {
-    "objectID": "premiere-maths/index.html",
-    "href": "premiere-maths/index.html",
-    "title": "Cours de Première",
+    "objectID": "title Plan du site.html",
+    "href": "title Plan du site.html",
+    "title": "Plan du site",
     "section": "",
-    "text": "No matching items",
-    "crumbs": [
-      "Première",
-      "Cours de Première"
-    ]
+    "text": "Bienvenue sur le site de mathématiques.\n\n\n\nAccueil\n\n\n\n\nVocabulaire\nEntiers\nRationnels et décimaux\nRéels et irrationnels\nFractions\nPuissances\nNotation scientifique\n\n\n\n\n\nAccueil du chapitre\n\n\n\n\n\nAccueil du chapitre\n\n\n\n\n\n\n\nAccueil\n\n\n\n\n\n\nAccueil"
   },
   {
-    "objectID": "terminale-maths/index.html",
-    "href": "terminale-maths/index.html",
-    "title": "Cours de Terminale",
+    "objectID": "title Plan du site.html#seconde",
+    "href": "title Plan du site.html#seconde",
+    "title": "Plan du site",
     "section": "",
-    "text": "No matching items",
-    "crumbs": [
-      "Terminale",
-      "Cours de Terminale"
-    ]
+    "text": "Accueil\n\n\n\n\nVocabulaire\nEntiers\nRationnels et décimaux\nRéels et irrationnels\nFractions\nPuissances\nNotation scientifique\n\n\n\n\n\nAccueil du chapitre\n\n\n\n\n\nAccueil du chapitre"
   },
   {
-    "objectID": "seconde-maths/index.html",
-    "href": "seconde-maths/index.html",
-    "title": "Cours de Seconde",
+    "objectID": "title Plan du site.html#première",
+    "href": "title Plan du site.html#première",
+    "title": "Plan du site",
     "section": "",
-    "text": "No matching items",
-    "crumbs": [
-      "Seconde",
-      "Cours de Seconde"
-    ]
+    "text": "Accueil"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Accueil",
+    "objectID": "title Plan du site.html#terminale",
+    "href": "title Plan du site.html#terminale",
+    "title": "Plan du site",
     "section": "",
-    "text": "Bienvenue sur le site pédagogique\nUtilisez la barre de navigation ci-dessus pour accéder aux sections :\n\nSeconde\nPremière\nTerminale"
+    "text": "Accueil"
   },
   {
     "objectID": "GUIDE.html",
@@ -94,5 +82,621 @@
     "title": "Guide interne — site pédagogique (repartir de zéro, v2)",
     "section": "",
     "text": "./mise_a_jour.sh \"Message de commit\"\nUn seul workflow GitHub Actions (quarto-gh-pages.yml) construit et publie le site sur gh-pages à chaque push sur main."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Accueil",
+    "section": "",
+    "text": "Bienvenue sur le site pédagogique\nUtilisez la barre de navigation ci-dessus pour accéder aux sections :\n\nSeconde\nPremière\nTerminale\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "seconde-maths/fonctions_affines/representation_graphique.html",
+    "href": "seconde-maths/fonctions_affines/representation_graphique.html",
+    "title": "Représentation graphique",
+    "section": "",
+    "text": "Propriété : Représentation d’une fonction affine\nLa courbe représentative d’une fonction affine \\(f(x)=mx+p\\) est une droite non parallèle à l’axe des ordonnées.\n\nElle coupe l’axe des ordonnées au point \\((0\\,;\\,p)\\).\nElle a pour coefficient directeur \\(m\\).\n\nOn dit que la fonction admet pour représentative la droite d’équation \\(y=mx+p\\).\n\n\n\nDémonstration :\n\nOn se place dans un repère orthogonal \\((O\\,;\\,I,\\,J)\\). Soit \\((d)\\) la droite passant par \\(A(x_A\\,;\\,y_A)\\) et \\(B(x_B\\,;\\,y_B)\\) avec \\(x_A \\neq x_B\\). On pose \\[m = \\frac{y_B - y_A}{x_B - x_A} \\quad \\text{et} \\quad p = y_A - mx_A\\]\nSoit \\(M(x\\,;\\,y)\\) un point du plan. On note \\(A'\\), \\(B'\\), \\(M'\\) les projetés orthogonaux respectifs de \\(A\\), \\(B\\), \\(M\\) sur la droite horizontale d’ordonnée \\(y_A\\).\n\n\n\nSens direct. Supposons \\(M \\in (d)\\) avec \\(x \\neq x_A\\).\nLes droites \\((BB')\\) et \\((MM')\\) sont verticales, donc parallèles. D’après le théorème de Thalès dans le triangle \\(AM'M\\), la droite \\((B'B)\\) est parallèle à \\((M'M)\\) et coupe \\([AM']\\) en \\(B'\\) et \\([AM]\\) en \\(B\\), donc : \\[\\frac{AB'}{AM'} = \\frac{BB'}{MM'}\\]\nOr \\(AB' = x_B - x_A\\), \\(AM' = x - x_A\\), \\(BB' = y_B - y_A\\) et \\(MM' = y - y_A\\), d’où : \\[\\frac{x_B - x_A}{x - x_A} = \\frac{y_B - y_A}{y - y_A}\\]\nDonc \\((y - y_A)(x_B - x_A) = (y_B - y_A)(x - x_A)\\), d’où, puisque \\(x_B - x_A \\neq 0\\) : \\[y - y_A = \\frac{y_B - y_A}{x_B - x_A}(x - x_A) = m(x - x_A)\\]\nd’où \\(y = mx + (y_A - mx_A) = mx + p\\). Ainsi tout point de \\((d)\\) vérifie \\(y = mx + p\\).\nRéciproque. Soit \\(M(x_0\\,;\\,y_0)\\) tel que \\(y_0 = mx_0 + p\\).\nSi \\(x_0 = x_A\\) : alors \\(y_0 = mx_A + p = mx_A + y_A - mx_A = y_A\\), donc \\(M = A \\in (d)\\).\nSi \\(x_0 \\neq x_A\\) : notons \\(M^*\\) le point de \\((d)\\) d’abscisse \\(x_0\\). D’après le sens direct, \\(M^*\\) a pour ordonnée \\(mx_0 + p = y_0\\). Donc \\(M^* = M\\), et \\(M \\in (d)\\).\nConclusion : l’ensemble des points du plan vérifiant \\(y = mx + p\\) est exactement la droite \\((d)\\).\n\n\nRemarque : \n\nSi deux points ont la même abscisse (\\(x_1 = x_2\\)), la droite passant par ces points n’est pas la représentation d’une fonction, car un même réel \\(x\\) aurait plusieurs images.\nL’ordonnée à l’origine de \\(f\\) est \\(f(0)=p\\) : c’est l’ordonnée du point d’intersection de la droite avec l’axe des ordonnées.\n\n\n\nInterprétation de la pente : \nLe coefficient directeur \\(m=\\dfrac{a}{b}\\) indique l’inclinaison de la droite par rapport à l’axe des abscisses : quand on avance de \\(b\\) vers la droite, on monte de \\(a\\) (ou descend si \\(a&lt;0\\)).\n\n\n\nSavoir-Faire : Tracer la droite représentative : méthode 1\n\nTracer la droite représentative de la fonction \\(f\\) définie par \\(f(x)=-\\dfrac{2}{3}x+2\\).\n\n\nAfficher la correction :\n\nSoit \\((d)\\) la représentation graphique de \\(f\\).\nOn choisit des valeurs de \\(x\\) multiples de \\(3\\) (dénominateur de \\(m\\)) pour éviter les fractions dans les calculs.\n\n\\(f(3)=-\\dfrac{2}{3} \\times 3 + 2 = 0\\), donc \\(A(3\\,;\\,0)\\) est un point de \\((d)\\).\n\\(f(6)=-\\dfrac{2}{3}\\times 6 +2=-4+2=-2\\), donc \\(B(6\\,;\\,-2)\\) est un point de \\((d)\\).\n\n\n\n\n\n\n\n\nSavoir-Faire : Tracer la droite représentative : méthode 2\n\nTracer la droite représentative de la fonction \\(f\\) définie par \\(f(x)=\\dfrac{4}{3}x - 2\\).\n\n\nAfficher la correction :\n\nLa représentation graphique de \\(f\\) admet \\(-2\\) comme ordonnée à l’origine et admet \\(\\dfrac{4}{3}\\) comme coefficient directeur ainsi\n\n\n\n\n\n\nAntécédent pour les fonctions affines : \nPour une fonction affine \\(f(x)=mx+p\\) avec \\(m\\neq 0\\), tout réel admet un unique antécédent.\n\n\n\nExercice : Tracer une droite et lire un antécédent — Représenter, Calculer\n\nTracer la droite représentative de \\(g(x)=\\dfrac{3}{2}x-1\\). Lire graphiquement un antécédent de \\(3{,}5\\) par \\(g\\), puis le vérifier algébriquement.\n\n\nAfficher la correction :\n\nPoint clef : pour tracer une droite, on place le point d’ordonnée à l’origine \\((0\\,;\\,p)\\), puis on utilise la pente \\(m\\) pour trouver un second point.\nL’ordonnée à l’origine est \\(p=-1\\) et le coefficient directeur est \\(m=\\dfrac{3}{2}\\) : quand on avance de \\(2\\), on monte de \\(3\\).\nLecture graphique : la droite atteint l’ordonnée \\(3{,}5\\) en \\(x=3\\), donc l’antécédent de \\(3{,}5\\) par \\(g\\) est \\(\\mathbf{3}\\).\nVérification : \\(\\dfrac{3}{2}\\times 3-1=\\dfrac{9}{2}-1=\\dfrac{7}{2}=3{,}5\\). Donc \\(g(3)=3{,}5\\), et donc \\(3\\) est bien l’antécédent de \\(3{,}5\\) par \\(g\\).\n\n\n\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 2 : Fonctions affines",
+      "Représentation graphique"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/fonctions_affines/definition_fonction_affine.html",
+    "href": "seconde-maths/fonctions_affines/definition_fonction_affine.html",
+    "title": "Fonctions affines : définition",
+    "section": "",
+    "text": "Définition : Fonction affine\nOn appelle fonction affine toute fonction définie sur \\(\\R\\) pouvant s’écrire sous la forme \\[f(x)=mx+p\\] où \\(m\\) et \\(p\\) sont des réels donnés.\n\\(m\\) s’appelle le coefficient directeur (ou pente) de \\(f\\) et \\(p\\) l’ordonnée à l’origine de \\(f\\).\n\n\n\nSavoir-Faire : Identifier les paramètres d’une fonction affine — Reconnaître\n\nPour chacune des fonctions suivantes, donner \\(m\\) et \\(p\\), puis préciser si elle est linéaire ou constante. \\[f(x)=-2x+7 \\qquad g(x)=5x \\qquad h(x)=4\\]\n\n\nAfficher la correction :\n\n\n\\(f(x)=-2x+7\\) : \\(m=-2\\), \\(p=7\\). Ni linéaire ni constante.\n\\(g(x)=5x\\) : \\(m=5\\), \\(p=0\\). Fonction linéaire.\n\\(h(x)=4\\) : \\(m=0\\), \\(p=4\\). Fonction constante.\n\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 2 : Fonctions affines",
+      "Fonctions affines : définition"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/fonctions_affines/appartenance_droite.html",
+    "href": "seconde-maths/fonctions_affines/appartenance_droite.html",
+    "title": "Appartenance d’un point à une droite",
+    "section": "",
+    "text": "Propriété : Appartenance\nUn point \\(M(a\\,;\\,b)\\) appartient à la droite d’équation \\(y=mx+p\\) si et seulement si \\(b=ma+p\\).\n\n\n\nSavoir-Faire : Tester l’appartenance à une droite — Raisonner\n\nLa droite \\((d)\\) a pour équation \\(y=3x-1\\).\n\nLe point \\(A(2\\,;\\,5)\\) appartient-il à \\((d)\\) ?\n\n\n\nAfficher la correction :\n\n\\(3\\times 2-1=5\\). On obtient bien \\(5\\), donc \\(A(2\\,;\\,5)\\in(d)\\).\n\n\nLe point \\(B(2\\,;\\,4)\\) appartient-il à \\((d)\\) ?\n\n\n\nAfficher la correction :\n\n\\(3\\times 2-1=5\\neq 4\\). L’ordonnée calculée (\\(5\\)) est différente de celle de \\(B\\) (\\(4\\)), donc \\(B(2\\,;\\,4)\\notin(d)\\).\n\n\n\n\nExercice : Tester l’appartenance à une droite — Raisonner\n\nLa droite \\((d)\\) a pour équation \\(y=2x+3\\).\n\nLe point \\(C(1\\,;\\,5)\\) appartient-il à \\((d)\\) ?\n\n\n\nAfficher la correction :\n\n\\(2\\times 1+3=5\\). Oui, \\(C\\in(d)\\).\n\n\nLe point \\(D(-2\\,;\\,0)\\) appartient-il à \\((d)\\) ?\n\n\n\nAfficher la correction :\n\n\\(2\\times(-2)+3=-4+3=-1\\neq 0\\). Non, \\(D\\notin(d)\\).\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 2 : Fonctions affines",
+      "Appartenance d'un point à une droite"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/fonctions_affines/index.html",
+    "href": "seconde-maths/fonctions_affines/index.html",
+    "title": "Chapitre 2 : Fonctions affines",
+    "section": "",
+    "text": "Attendus et savoir-faire :\n\nPour une fonction affine donnée par \\(f(x)=mx+p\\), interprétation de \\(m\\) comme taux d’accroissement et \\(p\\) comme ordonnée à l’origine.\nVariations d’une fonction affine selon le signe du coefficient directeur.\nEnsemble des solutions des équations du type \\(ax + b = 0\\).\n\nSavoir-faire :\n\nExploiter l’équation \\(y = f(x)\\) d’une courbe : appartenance, calcul de coordonnées.\nPour une fonction affine, relier sens de variation et droite représentative.\nPour les fonctions affines, résoudre graphiquement ou algébriquement une équation du type \\(f(x)=k\\) ou une inéquation (graphiquement) \\(f(x) &lt; k\\).\nDonner l’ensemble des solutions d’une équation du premier degré du type \\(ax = b\\), \\(a + x = b\\), \\(ax + b = cx + d\\).\n\n\n\nAutomatismes :\n\nReconnaître l’expression d’une fonction linéaire, d’une fonction affine, savoir que leur représentation graphique est une droite.\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nVocabulaire des fonctions\n\n\nFonction, image, antécédent\n\n\n\n\nFonctions affines : définition\n\n\nf(x) = mx + p, coefficient directeur, ordonnée à l’origine\n\n\n\n\nDéterminer l’expression d’une fonction affine\n\n\nTaux d’accroissement, méthode par deux points\n\n\n\n\nReprésentation graphique\n\n\nDroite d’équation y = mx + p, tracer une fonction affine\n\n\n\n\nAppartenance d’un point à une droite\n\n\nTester si un point appartient à une droite d’équation y = mx + p\n\n\n\n\nVariations d’une fonction affine\n\n\nSigne du coefficient directeur et sens de variation\n\n\n\n\nRésolution d’équations — intersection\n\n\nRésoudre f(x) = k, f(x) = g(x), intersection de deux droites\n\n\n\n\nFonctions affines par morceaux\n\n\nCalculer des images, chercher des antécédents, tracer\n\n\n\n\nSynthèse — Carte mentale\n\n\nVue d’ensemble du chapitre\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 2 : Fonctions affines",
+      "Chapitre 2 : Fonctions affines"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/fonctions_affines/determiner_expression.html",
+    "href": "seconde-maths/fonctions_affines/determiner_expression.html",
+    "title": "Déterminer l’expression d’une fonction affine",
+    "section": "",
+    "text": "Propriété : Accroissements proportionnels\n\\(f\\) est une fonction affine si et seulement si, pour tous réels \\(a\\) et \\(b\\) avec \\(a \\neq b\\), il existe un réel \\(m\\) tel que \\[\\frac{f(b)-f(a)}{b-a} = m\\] Cette constante est appelée taux d’accroissement et est le coefficient directeur de \\(f\\).\n\n\n\nDémonstration :\n\nSoit \\(f\\) une fonction définie sur \\(\\R\\) et \\(a \\in \\R\\).\nOn suppose qu’il existe un réel \\(m\\), tel que pour tout réel \\(x \\neq a\\), \\[\\frac{f(x)-f(a)}{x-a}=m \\iff f(x)-f(a)=m\\times(x-a) \\iff f(x)=mx+f(a)-ma\\]\nCette dernière forme est bien celle d’une fonction affine, avec \\(p=f(a)-ma\\).\n\n\nRemarque : \nUne fonction affine est entièrement déterminée par la donnée de deux points distincts de sa représentation graphique, ou bien par la donnée du coefficient directeur \\(m\\) et d’un point.\n\n\nMéthode — Déterminer \\(f(x)=mx+p\\) : \n\nÉcrire \\(f(x)=mx+p\\).\nCalculer \\(m\\) à partir des deux points \\((x_1\\,;\\,y_1)\\) et \\((x_2\\,;\\,y_2)\\) : \\(m=\\dfrac{y_2-y_1}{x_2-x_1}\\). (Si \\(m\\) est déjà donné, passer à l’étape suivante.)\nRemplacer \\(m\\) dans \\(f(x)=mx+p\\), puis substituer les coordonnées d’un point connu.\nCalculer \\(p\\) en résolvant l’équation obtenue.\nConclure en écrivant l’expression de \\(f\\).\n\n\n\n\nSavoir-Faire : Déterminer une fonction affine par deux points — Calculer\n\nDéterminer la fonction affine \\(f\\) dont la courbe passe par \\(A(1\\,;\\,3)\\) et \\(B(4\\,;\\,-3)\\).\n\n\nAfficher la correction :\n\n\\(f\\) est une fonction affine, donc il existe deux réels \\(m\\) et \\(p\\) tels que \\(f(x)=mx+p\\). \\[m=\\frac{-3-3}{4-1}=\\frac{-6}{3}=-2\\]\nDonc \\(f(x)=-2x+p\\).\nDe plus \\(f(1)=3\\), donc \\(3=-2\\times 1+p\\), d’où \\(p=5\\).\nAinsi \\(f(x)=-2x+5\\).\n\n\n\n\nSavoir-Faire : Déterminer une fonction affine par un point et la pente — Calculer\n\nUne droite a pour coefficient directeur \\(2\\) et passe par \\(A(1\\,;\\,3)\\). Déterminer son équation.\n\n\nAfficher la correction :\n\n\\(f\\) est une fonction affine, donc il existe deux réels \\(m\\) et \\(p\\) tels que \\(f(x)=mx+p\\).\nLe coefficient directeur est \\(2\\) donc \\(f(x)=2x+p\\).\nDe plus \\(f(1)=3\\), donc \\(3=2\\times 1+p\\), d’où \\(p=1\\).\nAinsi \\(f(x)=2x+1\\).\n\n\n\nRemarque : \nLe point \\(B(5\\,;\\,13)\\) appartient aussi à cette droite : cette information est vraie mais inutile — un seul point suffit quand \\(m\\) est déjà connu.\n\n\n\nExercice : Déterminer une fonction affine par deux points — Calculer\n\nDéterminer la fonction affine \\(f\\) dont la courbe passe par \\(A(-1\\,;\\,5)\\) et \\(B(3\\,;\\,-3)\\).\n\n\nAfficher la correction :\n\n\\(f\\) est une fonction affine, donc il existe deux réels \\(m\\) et \\(p\\) tels que \\(f(x)=mx+p\\). \\[m=\\frac{-3-5}{3-(-1)}=\\frac{-8}{4}=-2\\]\nDonc \\(f(x)=-2x+p\\).\nDe plus \\(f(-1)=5\\), donc \\(-2\\times(-1)+p=5\\), d’où \\(p=3\\).\nAinsi \\(f(x)=-2x+3\\).\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 2 : Fonctions affines",
+      "Déterminer l'expression d'une fonction affine"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/vecteurs_egaux.html",
+    "href": "seconde-maths/vecteurs_translation/vecteurs_egaux.html",
+    "title": "Vecteurs égaux — représentants",
+    "section": "",
+    "text": "Définition : Vecteurs égaux\nSoit \\(A\\), \\(B\\), \\(C\\) et \\(D\\) quatre points du plan.\nOn dit que \\(\\ve{AB}\\) et \\(\\ve{CD}\\) sont égaux lorsque \\([AD]\\) et \\([BC]\\) ont le même milieu, c’est-à-dire lorsque \\(ABDC\\) est un parallélogramme. On note alors \\(\\ve{AB} = \\ve{CD}\\).\n\n\n\n\n\nCaractéristiques d’un vecteur : \nUn vecteur est entièrement caractérisé par les trois données suivantes :\n\nsa direction (celle de la droite support) ;\nson sens (de l’origine vers l’extrémité) ;\nsa norme, notée \\(\\norm{\\ve{AB}}\\), la longueur \\(AB\\).\n\n\n\nRemarque : \nSoit \\(\\ve{u}\\) le vecteur de la translation qui transforme \\(A\\) en \\(B\\) et aussi \\(C\\) en \\(D\\).\n\n\\(\\ve{AB}\\) et \\(\\ve{CD}\\) sont deux représentants du même vecteur \\(\\ve{u}\\) ;\n\\(\\ve{AB}\\) est l’unique représentant de \\(\\ve{u}\\) d’origine \\(A\\) ;\nDeux vecteurs égaux ont même norme, même direction et même sens ;\nL’emplacement d’un vecteur dans le plan n’a pas d’importance : on peut le déplacer librement, parallèlement à lui-même.\n\n\n\nErreur à éviter : \n\nLa réciproque de « \\(\\ve{AB} = \\ve{CD} \\Rightarrow \\norm{\\ve{AB}} = \\norm{\\ve{CD}}\\) » est fausse.\nDans un carré \\(ABCD\\), on a \\(\\norm{\\ve{AB}} = \\norm{\\ve{BC}}\\) pourtant \\(\\ve{AB} \\neq \\ve{BC}\\) car ces deux vecteurs n’ont pas la même direction.\nNe pas confondre même direction et même sens.\nDeux vecteurs peuvent avoir la même direction (portés par des droites parallèles) mais des sens opposés : ils ne sont alors pas égaux.\n\n\n\n\nSavoir-Faire : Reconnaître des vecteurs égaux — Raisonner\n\nDans un parallélogramme \\(ABCD\\), quels couples de vecteurs sont égaux ? Justifier.\n\n\nAfficher la correction :\n\n\\(ABCD\\) est un parallélogramme si et seulement si \\(\\ve{AB} = \\ve{DC}\\) et \\(\\ve{AD} = \\ve{BC}\\), donc les couples de vecteurs égaux sont \\((\\ve{AB},\\ve{DC})\\) et \\((\\ve{AD},\\ve{BC})\\).\nEn revanche, \\(\\ve{AB}\\) et \\(\\ve{CD}\\) ont même direction mais des sens contraires, donc ils ne sont pas égaux.\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Vecteurs égaux — représentants"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/relation_chasles.html",
+    "href": "seconde-maths/vecteurs_translation/relation_chasles.html",
+    "title": "Relation de Chasles",
+    "section": "",
+    "text": "Propriété : Relation de Chasles\nSoient \\(A\\), \\(B\\) et \\(C\\) trois points quelconques du plan. Alors : \\[\\ve{AC} = \\ve{AB} + \\ve{BC}\\]\n\n\n\n\n\n\nDémonstration :\n\n\\(t_{\\ve{AB}}(A)=B\\) et \\(t_{\\ve{BC}}(B)=C\\).\nAinsi \\(t_{\\ve{BC}} \\circ t_{\\ve{AB}}\\) est la translation qui envoie \\(A\\) sur \\(C\\), de vecteur \\(\\ve{AB}+\\ve{BC}\\). Or c’est aussi la translation de vecteur \\(\\ve{AC}\\). Par unicité, \\(\\ve{AC} = \\ve{AB} + \\ve{BC}\\).\n\n\nRemarque : \nLa relation de Chasles correspond à un déplacement en deux étapes : aller de \\(A\\) à \\(B\\), puis de \\(B\\) à \\(C\\), revient à aller directement de \\(A\\) à \\(C\\).\nElle se généralise à tout chemin de points : \\[\\ve{AZ} = \\ve{AP_1} + \\ve{P_1P_2} + \\cdots + \\ve{P_{n-1}Z}\\]\n\n\n\nSavoir-Faire : Simplifier par la relation de Chasles — Calculer\n\nSimplifier les expressions suivantes. \\[\\ve{AB}+\\ve{BC}+\\ve{CD}+\\ve{DA} \\quad \\text{et} \\quad \\ve{MA}+\\ve{BC}+\\ve{AM}\\]\n\n\nAfficher la correction :\n\nPoint clef : on enchaîne les vecteurs tête-à-queue en repérant les points qui se télescopent (lettre de fin d’un vecteur = lettre de début du suivant).\n\n\\(\\ve{AB}+\\ve{BC}+\\ve{CD}+\\ve{DA} = \\ve{AC}+\\ve{CA} = \\ve{AA} = \\ve{0}\\).\n\\(\\ve{MA}+\\ve{AM} = \\ve{MM} = \\ve{0}\\), donc \\(\\ve{MA}+\\ve{BC}+\\ve{AM} = \\ve{BC}\\).\n\n\n\n\nPoint méthode — utiliser la relation de Chasles : \nPour simplifier une somme, on enchaîne les vecteurs tête-à-queue : \\(\\ve{AB}+\\ve{BC} = \\ve{AC}\\) et \\(\\ve{AB}+\\ve{BC}+\\ve{CA} = \\ve{0}\\).\nLes télescopages sont utiles : \\(\\ve{AB}+\\ve{BC}+\\ve{CD}+\\ve{DA} = \\ve{AA} = \\ve{0}\\).\nPour éclater un vecteur, on introduit un point intermédiaire \\(M\\) : \\(\\ve{AC} = \\ve{AM} + \\ve{MC}\\).\n\n\n\nExercice : Application de Chasles — Raisonner\n\nPeut-on trouver six points \\(A\\), \\(B\\), \\(C\\), \\(D\\), \\(E\\), \\(F\\) deux à deux distincts tels que : \\[\\ve{AC} + \\ve{BD} + \\ve{CF} + \\ve{DA} + \\ve{EB} = \\ve{0}~?\\]\n\n\nAfficher la correction :\n\nPoint clef : On réorganise pour enchaîner les vecteurs tête-à-queue afin de simplifier facilement les sommes vectorielles. \\[\\ve{AC}+\\ve{CF}+\\ve{BD}+\\ve{DA}+\\ve{EB} = \\ve{AF} + \\ve{BA} + \\ve{EB} = \\ve{AF} + \\ve{EA} = \\ve{EF}\\]\nAinsi \\(\\ve{EF} = \\ve{0}\\), ce qui impose \\(E = F\\), en contradiction avec l’hypothèse.\nOn ne peut donc pas trouver de tels six points distincts.\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Relation de Chasles"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/alignement_parallelisme.html",
+    "href": "seconde-maths/vecteurs_translation/alignement_parallelisme.html",
+    "title": "Alignement et parallélisme",
+    "section": "",
+    "text": "Idée fondamentale : \nUn vecteur permet de traduire des propriétés géométriques (parallélisme, alignement, milieu) en égalités vectorielles.\n\n\nPropriété : Caractérisations par la colinéarité (admis)\nSoient \\(A\\), \\(B\\), \\(C\\), \\(D\\) des points du plan avec \\(A\\neq B\\) et \\(C\\neq D\\).\n\n\\(A\\), \\(B\\) et \\(C\\) sont alignés si et seulement si \\(\\ve{AB}\\) et \\(\\ve{AC}\\) sont colinéaires.\nLes droites \\((AB)\\) et \\((CD)\\) sont parallèles (ou confondues) si et seulement si \\(\\ve{AB}\\) et \\(\\ve{CD}\\) sont colinéaires.\n\n\n\nPoint méthode — démontrer un alignement ou un parallélisme : \nPour montrer que \\(A\\), \\(B\\), \\(C\\) sont alignés : exprimer \\(\\ve{AB}\\) et \\(\\ve{AC}\\) dans la même base vectorielle, puis exhiber \\(k\\) tel que \\(\\ve{AB} = k\\,\\ve{AC}\\).\nPour montrer que \\((AB)\\parallel(CD)\\) : exprimer \\(\\ve{AB}\\) et \\(\\ve{CD}\\), puis exhiber \\(k\\) tel que \\(\\ve{AB} = k\\,\\ve{CD}\\).\n\n\n\nSavoir-Faire : Démontrer un parallélisme — Calculer, Raisonner\n\n\\(ABC\\) est un triangle. Les points \\(I\\) et \\(J\\) sont définis par \\(\\ve{AI} = \\dfrac{1}{3}\\ve{AB}\\) et \\(\\ve{AJ} = \\dfrac{1}{3}\\ve{AC}\\).\nExprimer \\(\\ve{IJ}\\) en fonction de \\(\\ve{AB}\\) et \\(\\ve{AC}\\), puis montrer que \\((IJ)\\parallel(BC)\\).\n\n\nAfficher la correction :\n\nPoint clef : On introduit le point \\(A\\) pour faire apparaître les données de l’énoncé : \\(\\ve{AI}\\) par exemple.\n\\[\\ve{IJ} = \\ve{IA}+\\ve{AJ} = -\\frac{1}{3}\\ve{AB}+\\frac{1}{3}\\ve{AC} = \\frac{1}{3}(\\ve{AC}-\\ve{AB}) = \\frac{1}{3}\\ve{BC}\\]\nAinsi \\(\\ve{IJ} = \\dfrac{1}{3}\\ve{BC}\\) : les vecteurs sont colinéaires, donc \\((IJ)\\parallel(BC)\\).\nOn remarque aussi que \\(IJ = \\dfrac{1}{3}BC\\).\n\n\n\nCombinaison linéaire et colinéarité : \nExprimer un vecteur sous la forme \\(\\alpha\\,\\ve{AB}+\\beta\\,\\ve{AC}\\) (où \\(\\alpha, \\beta \\in \\R\\)) s’appelle écrire ce vecteur comme combinaison linéaire de \\(\\ve{AB}\\) et \\(\\ve{AC}\\).\nLorsque \\(\\ve{AB}\\) et \\(\\ve{AC}\\) ne sont pas colinéaires, cette décomposition est unique.\nPour montrer que deux vecteurs \\(\\ve{u}\\) et \\(\\ve{v}\\) sont colinéaires, on peut décomposer \\(\\ve{u}\\) et \\(\\ve{v}\\) en fonction de \\(\\ve{AB}\\) et \\(\\ve{AC}\\), et montrer que les coefficient obtenues sont proportionnelles.\n\n\n\nSavoir-Faire : Alignement de trois points — Raisonner, Calculer\n\nSoient \\(A\\), \\(B\\), \\(C\\) trois points non alignés. Les points \\(M\\) et \\(N\\) sont définis par : \\[\\ve{AM} = 2\\ve{AB} + \\ve{AC} \\qquad \\text{et} \\qquad \\ve{AN} = 4\\ve{AB} + 2\\ve{AC}\\]\nMontrer que \\(A\\), \\(M\\), \\(N\\) sont alignés.\n\n\nAfficher la correction :\n\nPoint clef : pour montrer que trois points \\(A\\), \\(M\\), \\(N\\) sont alignés, on montre que les vecteurs \\(\\ve{AM}\\) et \\(\\ve{AN}\\) sont colinéaires.\n\\[\\ve{AN} = 4\\ve{AB} + 2\\ve{AC} = 2(2\\ve{AB}+\\ve{AC}) = 2\\,\\ve{AM}\\]\nLes vecteurs \\(\\ve{AN}\\) et \\(\\ve{AM}\\) sont colinéaires, donc les droites \\((AM)\\) et \\((AN)\\) sont parallèles. Or \\(A\\) appartient aux deux droites, donc les droites sont confondues, donc les points \\(A\\), \\(M\\), \\(N\\) sont alignés.\n\n\n\n\nExercice : Parallélisme par les vecteurs — Calculer, Raisonner\n\n\\(ABC\\) est un triangle. Les points \\(I\\) et \\(J\\) sont définis par \\(\\ve{AI} = \\dfrac{1}{3}\\ve{AB}\\) et \\(\\ve{AJ} = 3\\ve{AC}\\).\n\nExprimer \\(\\ve{IC}\\) et \\(\\ve{BJ}\\) en fonction de \\(\\ve{AB}\\) et \\(\\ve{AC}\\).\n\n\n\nAfficher la correction :\n\n\\[\\ve{IC} = \\ve{IA}+\\ve{AC} = -\\frac{1}{3}\\ve{AB}+\\ve{AC} \\quad \\text{et} \\quad \\ve{BJ} = \\ve{BA}+\\ve{AJ} = -\\ve{AB}+3\\ve{AC}\\]\n\n\nMontrer que les droites \\((IC)\\) et \\((BJ)\\) sont parallèles.\n\n\n\nAfficher la correction :\n\n\\[\\ve{BJ} = -\\ve{AB}+3\\ve{AC} = 3\\!\\left(-\\frac{1}{3}\\ve{AB}+\\ve{AC}\\right) = 3\\,\\ve{IC}\\]\nLes vecteurs \\(\\ve{BJ}\\) et \\(\\ve{IC}\\) sont colinéaires donc les droites \\((IC)\\) et \\((BJ)\\) sont parallèles.\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Alignement et parallélisme"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/bilan.html",
+    "href": "seconde-maths/vecteurs_translation/bilan.html",
+    "title": "Bilan — Carte mentale",
+    "section": "",
+    "text": "⬅️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Bilan — Carte mentale"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/index.html",
+    "href": "seconde-maths/vecteurs_translation/index.html",
+    "title": "Chapitre 3 : Vecteurs — Translation",
+    "section": "",
+    "text": "Attendus et savoir-faire :\n\nVecteur \\(\\ve{MM'}\\) associé à la translation qui transforme \\(M\\) en \\(M'\\), direction, sens et norme.\nÉgalité de deux vecteurs. Notation \\(\\ve{u}\\). Vecteur nul.\nReprésentants d’un vecteur.\nSomme de deux vecteurs en lien avec l’enchaînement des translations. Relation de Chasles.\nProduit d’un vecteur par un nombre réel. Colinéarité de deux vecteurs.\nReprésentation d’un vecteur comme combinaison linéaire de deux vecteurs non colinéaires.\nCaractérisation vectorielle du milieu d’un segment.\n\nSavoir-faire :\n\nReprésenter la somme de deux vecteurs à partir de représentants de même origine.\nCaractériser alignement et parallélisme par la colinéarité.\nRésoudre des problèmes en utilisant la représentation la plus adaptée des vecteurs.\nRésoudre des problèmes par des méthodes vectorielles ou géométriques.\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nTranslation et notion de vecteur\n\n\nTranslation, vecteur nul\n\n\n\n\nVecteurs égaux — représentants\n\n\nÉgalité de vecteurs, direction, sens, norme, représentants\n\n\n\n\nSomme de deux vecteurs\n\n\nExistence, unicité, commutativité, associativité\n\n\n\n\nRelation de Chasles\n\n\nAC = AB + BC, simplifications par télescopage\n\n\n\n\nIdentité du parallélogramme\n\n\nAC = AB + AD caractérise un parallélogramme\n\n\n\n\nVecteur opposé\n\n\nDéfinition, soustraction de vecteurs\n\n\n\n\nProduit d’un vecteur par un réel\n\n\nλu, distributivité\n\n\n\n\nMilieu d’un segment et vecteurs\n\n\nCaractérisation vectorielle du milieu\n\n\n\n\nVecteurs colinéaires\n\n\nDéfinition, tester la colinéarité\n\n\n\n\nAlignement et parallélisme\n\n\nCaractériser alignement et parallélisme par la colinéarité\n\n\n\n\nBilan — Carte mentale\n\n\nVue d’ensemble du chapitre\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Chapitre 3 : Vecteurs — Translation"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/somme_vecteurs.html",
+    "href": "seconde-maths/vecteurs_translation/somme_vecteurs.html",
+    "title": "Somme de deux vecteurs",
+    "section": "",
+    "text": "Propriété : Existence et unicité de la somme\nSoient \\(\\ve{u}\\) et \\(\\ve{v}\\) deux vecteurs du plan. Il existe un unique vecteur \\(\\ve{w}\\) tel que \\(\\ve{w} = \\ve{u} + \\ve{v}\\).\n\n\n\n\n\n\nDémonstration :\n\nSoient \\(A\\), \\(B\\), \\(D\\), \\(E\\), \\(C\\), \\(F\\) des points tels que \\(t_{\\ve{u}}(A) = B\\), \\(t_{\\ve{u}}(D) = E\\), \\(t_{\\ve{v}}(B) = C\\) et \\(t_{\\ve{v}}(E) = F\\).\n\\(ABED\\) et \\(BCFE\\) sont des parallélogrammes.\n\n\n\nOn en déduit que \\(ACFD\\) est aussi un parallélogramme. Il existe donc une unique translation de vecteur \\(\\ve{w}\\) telle que \\(t_{\\ve{w}}(A) = C\\) et \\(t_{\\ve{w}}(D) = F\\).\nElle correspond à l’application successive de \\(t_{\\ve{u}}\\) puis \\(t_{\\ve{v}}\\), ce que l’on note \\(\\ve{w} = \\ve{u} + \\ve{v}\\).\n\n\nPropriété : Commutativité et associativité\nPour tous vecteurs \\(\\ve{u}\\), \\(\\ve{v}\\), \\(\\ve{w}\\) :\n\nCommutativité : \\(\\ve{u} + \\ve{v} = \\ve{v} + \\ve{u}\\).\nAssociativité : \\((\\ve{u} + \\ve{v}) + \\ve{w} = \\ve{u} + (\\ve{v} + \\ve{w})\\).\n\n\n\n\nDémonstration :\n\nCommutativité.\nEn plaçant \\(\\ve{u}\\) et \\(\\ve{v}\\) à partir d’un même point, ils définissent un parallélogramme dont la diagonale représente à la fois \\(\\ve{u}+\\ve{v}\\) et \\(\\ve{v}+\\ve{u}\\).\n\n\n\nAssociativité.\nTracer successivement \\(\\ve{u}\\), \\(\\ve{v}\\) puis \\(\\ve{w}\\) bout à bout aboutit au même point final, que l’on regroupe \\((\\ve{u}+\\ve{v})+\\ve{w}\\) ou \\(\\ve{u}+(\\ve{v}+\\ve{w})\\).\n\n\nRemarque : \nCes deux propriétés signifient que l’ordre et le groupement des vecteurs à additionner n’ont pas d’importance.\n\n\n\n⬅️➡️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Somme de deux vecteurs"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/somme_vecteurs.html#existence-et-propriétés",
+    "href": "seconde-maths/vecteurs_translation/somme_vecteurs.html#existence-et-propriétés",
+    "title": "Somme de deux vecteurs",
+    "section": "",
+    "text": "Propriété : Existence et unicité de la somme\nSoient \\(\\ve{u}\\) et \\(\\ve{v}\\) deux vecteurs du plan. Il existe un unique vecteur \\(\\ve{w}\\) tel que \\(\\ve{w} = \\ve{u} + \\ve{v}\\).\n\n\n\n\n\n\nDémonstration :\n\nSoient \\(A\\), \\(B\\), \\(D\\), \\(E\\), \\(C\\), \\(F\\) des points tels que \\(t_{\\ve{u}}(A) = B\\), \\(t_{\\ve{u}}(D) = E\\), \\(t_{\\ve{v}}(B) = C\\) et \\(t_{\\ve{v}}(E) = F\\).\n\\(ABED\\) et \\(BCFE\\) sont des parallélogrammes.\n\n\n\nOn en déduit que \\(ACFD\\) est aussi un parallélogramme. Il existe donc une unique translation de vecteur \\(\\ve{w}\\) telle que \\(t_{\\ve{w}}(A) = C\\) et \\(t_{\\ve{w}}(D) = F\\).\nElle correspond à l’application successive de \\(t_{\\ve{u}}\\) puis \\(t_{\\ve{v}}\\), ce que l’on note \\(\\ve{w} = \\ve{u} + \\ve{v}\\).\n\n\nPropriété : Commutativité et associativité\nPour tous vecteurs \\(\\ve{u}\\), \\(\\ve{v}\\), \\(\\ve{w}\\) :\n\nCommutativité : \\(\\ve{u} + \\ve{v} = \\ve{v} + \\ve{u}\\).\nAssociativité : \\((\\ve{u} + \\ve{v}) + \\ve{w} = \\ve{u} + (\\ve{v} + \\ve{w})\\).\n\n\n\n\nDémonstration :\n\nCommutativité.\nEn plaçant \\(\\ve{u}\\) et \\(\\ve{v}\\) à partir d’un même point, ils définissent un parallélogramme dont la diagonale représente à la fois \\(\\ve{u}+\\ve{v}\\) et \\(\\ve{v}+\\ve{u}\\).\n\n\n\nAssociativité.\nTracer successivement \\(\\ve{u}\\), \\(\\ve{v}\\) puis \\(\\ve{w}\\) bout à bout aboutit au même point final, que l’on regroupe \\((\\ve{u}+\\ve{v})+\\ve{w}\\) ou \\(\\ve{u}+(\\ve{v}+\\ve{w})\\).\n\n\nRemarque : \nCes deux propriétés signifient que l’ordre et le groupement des vecteurs à additionner n’ont pas d’importance.\n\n\n\n⬅️➡️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Somme de deux vecteurs"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/vocabulaire.html",
+    "href": "seconde-maths/ensembles_nombres/vocabulaire.html",
+    "title": "Vocabulaire ensembliste",
+    "section": "",
+    "text": "Définition : Ensemble, élément, appartenance\nUn ensemble est une collection d’objets appelés éléments.\n\nOn note \\(x \\in E\\) pour dire que \\(x\\) est un élément de \\(E\\) (« \\(x\\) appartient à \\(E\\) »).\nOn note \\(x \\notin E\\) pour dire que \\(x\\) n’appartient pas à \\(E\\).\nL’ensemble qui ne contient aucun élément est appelé ensemble vide, noté \\(\\emptyset\\).",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Vocabulaire ensembliste"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/vocabulaire.html#élément-appartenance-ensemble-vide",
+    "href": "seconde-maths/ensembles_nombres/vocabulaire.html#élément-appartenance-ensemble-vide",
+    "title": "Vocabulaire ensembliste",
+    "section": "",
+    "text": "Définition : Ensemble, élément, appartenance\nUn ensemble est une collection d’objets appelés éléments.\n\nOn note \\(x \\in E\\) pour dire que \\(x\\) est un élément de \\(E\\) (« \\(x\\) appartient à \\(E\\) »).\nOn note \\(x \\notin E\\) pour dire que \\(x\\) n’appartient pas à \\(E\\).\nL’ensemble qui ne contient aucun élément est appelé ensemble vide, noté \\(\\emptyset\\).",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Vocabulaire ensembliste"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/vocabulaire.html#inclusion-réunion-intersection",
+    "href": "seconde-maths/ensembles_nombres/vocabulaire.html#inclusion-réunion-intersection",
+    "title": "Vocabulaire ensembliste",
+    "section": "Inclusion, réunion, intersection",
+    "text": "Inclusion, réunion, intersection\n\nDéfinition : Inclusion, réunion, intersection\nSoient \\(A\\) et \\(B\\) deux ensembles.\n\nOn dit que \\(A\\) est inclus dans \\(B\\), noté \\(A \\subset B\\), lorsque tout élément de \\(A\\) appartient à \\(B\\).\nOn appelle intersection de \\(A\\) et \\(B\\), notée \\(A \\cap B\\), l’ensemble des éléments appartenant à la fois à \\(A\\) et à \\(B\\).\nOn appelle réunion de \\(A\\) et \\(B\\), notée \\(A \\cup B\\), l’ensemble des éléments appartenant à \\(A\\) ou à \\(B\\) (ou aux deux).\n\n\n\nRemarque : \nLa notation \\(\\emptyset\\) est due à André Weil (groupe Bourbaki, XXe siècle). Lorsque deux ensembles n’ont aucun élément en commun, leur intersection est l’ensemble vide : \\(A \\cap B = \\emptyset\\).",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Vocabulaire ensembliste"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/vocabulaire.html#visualiser-avec-des-diagrammes-de-venn",
+    "href": "seconde-maths/ensembles_nombres/vocabulaire.html#visualiser-avec-des-diagrammes-de-venn",
+    "title": "Vocabulaire ensembliste",
+    "section": "Visualiser avec des diagrammes de Venn",
+    "text": "Visualiser avec des diagrammes de Venn\n\n\n\n\n\nSavoir-Faire : Appartenance, inclusion, réunion, intersection — Raisonner\n\nOn considère les ensembles \\(A = \\{1\\,;\\,2\\,;\\,3\\,;\\,6\\}\\), \\(B = \\{2\\,;\\,4\\,;\\,6\\,;\\,8\\}\\) et \\(C = \\{2\\,;\\,6\\}\\).\n\nParmi les propositions suivantes, lesquelles sont vraies ? \\(4 \\in A\\) ; \\(3 \\notin B\\) ; \\(6 \\in A\\) ; \\(5 \\in B\\).\n\n\n\nAfficher la correction :\n\n\\(4 \\notin A\\) (fausse) ; \\(3 \\notin B\\) (vraie) ; \\(6 \\in A\\) (vraie) ; \\(5 \\notin B\\) (fausse).\n\n\nMontrer que \\(C \\subset A\\) et que \\(C \\subset B\\).\n\n\n\nAfficher la correction :\n\n\\(C \\subset A\\) car \\(2 \\in A\\) et \\(6 \\in A\\) : tout élément de \\(C\\) appartient à \\(A\\). \\(C \\subset B\\) car \\(2 \\in B\\) et \\(6 \\in B\\) : tout élément de \\(C\\) appartient à \\(B\\).\n\n\n\\(\\{1\\,;\\,3\\} \\subset B\\) ? Justifier.\n\n\n\nAfficher la correction :\n\n\\(\\{1\\,;\\,3\\} \\not\\subset B\\) car \\(1 \\notin B\\).\n\n\nDéterminer \\(A \\cap B\\) et \\(A \\cup B\\).\n\n\n\nAfficher la correction :\n\n\\(A \\cap B = \\{2\\,;\\,6\\}\\) (éléments communs aux deux ensembles). \\(A \\cup B = \\{1\\,;\\,2\\,;\\,3\\,;\\,4\\,;\\,6\\,;\\,8\\}\\) (tous les éléments).\n\n\nPeut-on dire que \\(A \\subset B\\) ? Pourquoi ?\n\n\n\nAfficher la correction :\n\nNon : \\(1 \\in A\\) mais \\(1 \\notin B\\), donc \\(A \\not\\subset B\\).\n\n\n\n\n➡️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Vocabulaire ensembliste"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/puissances.html",
+    "href": "seconde-maths/ensembles_nombres/puissances.html",
+    "title": "Puissances : définitions et règles de calcul",
+    "section": "",
+    "text": "Anecdote historique : Puissances — de l’astronomie à l’informatique\nLes astronomes (antiquité — XVIIe s.). Archimède, dans L’Arénaire (\\(\\approx 250\\) av. J.-C.), estime le nombre de grains de sable nécessaires pour remplir l’Univers : il obtient \\(10^{63}\\). Pour cela, il invente un ancêtre de la notation scientifique. Kepler, puis Newton, calculent des distances interplanétaires de l’ordre de \\(10^{11}\\) m : impossible à écrire autrement qu’en puissances de \\(10\\).\nLes physiciens (XIXe–XXe s.). La charge de l’électron vaut \\(e \\approx 1{,}6 \\times 10^{-19}\\) C ; la masse du proton \\(\\approx 1{,}67 \\times 10^{-27}\\) kg ; la constante d’Avogadro \\(N_A \\approx 6{,}02 \\times 10^{23}\\) mol\\(^{-1}\\). Sans les puissances, aucune formule de physique ou de chimie ne serait lisible.\nL’informatique (XXe–XXIe s.). Un octet contient \\(8 = 2^3\\) bits. Un kilo-octet vaut \\(2^{10} = 1\\,024\\) octets, un méga-octet \\(2^{20} \\approx 10^6\\) octets, un téra-octet \\(2^{40} \\approx 10^{12}\\). La loi de Moore (1965) prévoyait que le nombre de transistors dans un processeur doublerait tous les deux ans : entre \\(1971\\) (\\(2\\,300\\) transistors) et \\(2020\\) (\\(\\approx 10^{10}\\)), le facteur est d’environ \\(2^{32} \\approx 4 \\times 10^9\\).",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Puissances : définitions et règles de calcul"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/puissances.html#définitions-et-premières-propriétés",
+    "href": "seconde-maths/ensembles_nombres/puissances.html#définitions-et-premières-propriétés",
+    "title": "Puissances : définitions et règles de calcul",
+    "section": "Définitions et premières propriétés",
+    "text": "Définitions et premières propriétés\n\nDéfinition : Puissance d’un nombre\nSoit \\(a \\in \\R\\) et \\(n \\in \\N^*\\). \\[a^n = \\underbrace{a \\times a \\times \\dots \\times a}_{n \\text{ facteurs}}\n\\qquad;\\qquad\na^0 = 1 \\quad (a \\neq 0)\n\\qquad;\\qquad\na^{-n} = \\frac{1}{a^n} \\quad (a \\neq 0)\\]\n\n\n\nSavoir-Faire : Utiliser un exposant négatif — Calculer\n\nCalculer \\(2^{-3}\\).\n\n\nAfficher la correction :\n\nPar définition : \\(2^{-3} = \\dfrac{1}{2^3} = \\dfrac{1}{8}\\).",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Puissances : définitions et règles de calcul"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/puissances.html#règles-de-calcul",
+    "href": "seconde-maths/ensembles_nombres/puissances.html#règles-de-calcul",
+    "title": "Puissances : définitions et règles de calcul",
+    "section": "Règles de calcul",
+    "text": "Règles de calcul\n\nPropriété : Règles de calcul sur les puissances\nSoient \\(a, b \\in \\R^*\\) et \\(m, n \\in \\Z\\). \\[a^m \\times a^n = a^{m+n} \\qquad\n  \\dfrac{a^m}{a^n} = a^{m-n} \\qquad\n  (a^m)^n = a^{mn} \\qquad\n  (ab)^n = a^n\\,b^n \\qquad\n  \\left(\\dfrac{a}{b}\\right)^n = \\dfrac{a^n}{b^n}\\]\n\n\n\nSavoir-Faire : Règles de calcul — exposants numériques — Calculer\n\nSimplifier les expressions suivantes (résultat sans exposant négatif).\n\n\\(2^5 \\times 2^{-3}\\)\n\n\n\nAfficher la correction :\n\n\\(2^5 \\times 2^{-3} = 2^2 = 4\\)\n\n\n\\(\\dfrac{3^7}{3^4}\\)\n\n\n\nAfficher la correction :\n\n\\(\\dfrac{3^7}{3^4} = 3^3 = 27\\)\n\n\n\\(\\left(\\dfrac{2}{3}\\right)^{-2}\\)\n\n\n\nAfficher la correction :\n\n\\(\\left(\\dfrac{2}{3}\\right)^{-2} = \\left(\\dfrac{3}{2}\\right)^2 = \\dfrac{9}{4}\\)\n\n\n\\(4^{-3} \\times 4^5\\)\n\n\n\nAfficher la correction :\n\n\\(4^{-3} \\times 4^5 = 4^2 = 16\\)\n\n\n\n\nSavoir-Faire : Règles de calcul — exposant littéral \\(n\\) — Calculer\n\nSimplifier les expressions suivantes (\\(a \\neq 0\\), \\(n \\in \\Z\\)).\n\n\\(a^n \\times a^3\\)\n\n\n\nAfficher la correction :\n\n\\(a^n \\times a^3 = a^{n+3}\\)\n\n\n\\(a^{2n} \\times a^{1-n}\\)\n\n\n\nAfficher la correction :\n\n\\(a^{2n} \\times a^{1-n} = a^{n+1}\\)\n\n\n\\(\\dfrac{(a^n)^3}{a^{n+1}}\\)\n\n\n\nAfficher la correction :\n\n\\(\\dfrac{(a^n)^3}{a^{n+1}} = \\dfrac{a^{3n}}{a^{n+1}} = a^{2n-1}\\)\n\n\n\n\nExercice : Simplifier des expressions avec puissances — Calculer\n\nCalculer ou simplifier les expressions suivantes.\n\n\\(B = \\dfrac{(-5)^4 \\times 7^2 \\times (-2)^{-3}}{(-4)^4 \\times (-1)^5 \\times 25}\\)\n\n\n\nAfficher la correction :\n\n\\[B =\\dfrac{(-5)^4 \\times 7^2 \\times (-2)^{-3}}{(-4)^4 \\times (-1)^5 \\times 25}  = \\dfrac{5^4 \\times 49 \\times \\left(-\\dfrac{1}{8}\\right)}{2^8 \\times (-1) \\times 25}\n      = \\dfrac{-5^4 \\times 49}{-2^8 \\times 5^2 \\times 8}\n      = \\dfrac{5^2 \\times 49}{2^8 \\times 2^3}\n      = \\dfrac{25 \\times 49}{2^{11}}\n      = \\dfrac{1225}{2048}\\]\n\n\n\\(H = \\dfrac{9^{n+1} \\times 9^n}{3^{2n-1} \\times 3^n}\\)\n\n\n\nAfficher la correction :\n\n\\[H = \\dfrac{9^{n+1} \\times 9^n}{3^{2n-1} \\times 3^n}=\\dfrac{3^{2n+2} \\times 3^{2n}}{3^{2n-1} \\times 3^n}\n      = \\dfrac{3^{4n+2}}{3^{3n-1}}\n      = 3^{(4n+2)-(3n-1)}\n      = 3^{n+3}\\]\n\n\n\\(I = \\dfrac{(a^2 b^4)^2}{(-a)(-b^2)}\\) (avec \\(a \\neq 0\\), \\(b \\neq 0\\))\n\n\n\nAfficher la correction :\n\n\\[I = \\dfrac{(a^2 b^4)^2}{(-a)(-b^2)} =  \\dfrac{a^4 b^8}{ab^2} = a^3 b^6\\]\n\n\n\n\n⬅️➡️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Puissances : définitions et règles de calcul"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/reels_irrationnels.html",
+    "href": "seconde-maths/ensembles_nombres/reels_irrationnels.html",
+    "title": "Nombres réels et nombres irrationnels",
+    "section": "",
+    "text": "Anecdote historique : Le « scandale » de \\(\\sqrt{2}\\) — naissance des irrationnels\nLa secte pythagoricienne (Grèce antique, VIe–Ve siècle av. J.-C.) était convaincue que « tout est nombre », entendant par là que tout rapport entre grandeurs géométriques est un rapport de deux entiers.\nLe scandale. Hippase de Métaponte aurait démontré que la diagonale d’un carré de côté \\(1\\), de longueur \\(\\sqrt{2}\\), ne peut s’écrire \\(\\dfrac{p}{q}\\) avec \\(p, q \\in \\N^*\\). La légende veut que ses frères de secte, incapables d’accepter ce résultat, l’aient noyé en mer Égée pour étouffer la découverte.\nLa crise des fondements. Cette découverte inaugure la première « crise des fondements » des mathématiques : si des grandeurs géométriques parfaitement réelles ne correspondent à aucune fraction, que sont vraiment les nombres ? Il faudra attendre Richard Dedekind (1872) et Georg Cantor pour que les réels soient rigoureusement définis — soit plus de 2 400 ans après Hippase.\nAu programme (chapitre suivant) : vous démontrerez que \\(\\sqrt{2} \\notin \\Q\\) par l’absurde, en reprenant l’argument d’Euclide (Éléments, livre X).",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Nombres réels et nombres irrationnels"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/reels_irrationnels.html#ensemble-des-réels",
+    "href": "seconde-maths/ensembles_nombres/reels_irrationnels.html#ensemble-des-réels",
+    "title": "Nombres réels et nombres irrationnels",
+    "section": "Ensemble des réels",
+    "text": "Ensemble des réels\n\nDéfinition : Ensemble des réels, nombres irrationnels\nL’ensemble \\(\\R\\) des nombres réels est l’ensemble de tous les nombres représentables sur la droite graduée.\nUn nombre irrationnel est un réel qui n’est pas rationnel. On note \\(\\R \\setminus \\Q\\) cet ensemble.",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Nombres réels et nombres irrationnels"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/reels_irrationnels.html#hiérarchie-des-ensembles-de-nombres",
+    "href": "seconde-maths/ensembles_nombres/reels_irrationnels.html#hiérarchie-des-ensembles-de-nombres",
+    "title": "Nombres réels et nombres irrationnels",
+    "section": "Hiérarchie des ensembles de nombres",
+    "text": "Hiérarchie des ensembles de nombres\n\n\n\n\\[\\N \\subset \\Z \\subset \\D \\subset \\Q \\subset \\R\\]\n\nIrrationnels et rationnels : \nEn notant \\(\\mathbb{I} = \\R \\setminus \\Q\\) l’ensemble des irrationnels : \\(\\Q \\cap \\mathbb{I} = \\emptyset \\et \\Q \\cup \\mathbb{I} = \\R\\)",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Nombres réels et nombres irrationnels"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/reels_irrationnels.html#comment-classer-un-nombre",
+    "href": "seconde-maths/ensembles_nombres/reels_irrationnels.html#comment-classer-un-nombre",
+    "title": "Nombres réels et nombres irrationnels",
+    "section": "Comment classer un nombre ?",
+    "text": "Comment classer un nombre ?\n\n\n\n\n\nSavoir-Faire : Classer un rationnel dans la hiérarchie des ensembles — Raisonner\n\nDéterminer le plus petit ensemble auquel appartient \\(\\dfrac{7}{40}\\) et \\(\\dfrac{5}{6}\\).\n\n\nAfficher la correction :\n\n\\(\\dfrac{7}{40}= \\dfrac{7}{2^3 \\times 5} \\in \\D\\) (écriture : \\(0{,}175\\)) et \\(\\dfrac{5}{6} = \\dfrac{5}{2 \\times 3} \\notin \\D\\).\n\n\n\n\nExercice : Appartenance et ensembles de nombres — Raisonner\n\nPour chacun des nombres suivants, indiquer le plus petit ensemble auquel il appartient parmi \\(\\N\\), \\(\\Z\\), \\(\\D\\), \\(\\Q\\), \\(\\R \\setminus \\Q\\). \\[\\frac{-14}{2} \\qquad \\frac{5}{6} \\qquad 0{,}125 \\qquad \\sqrt{5} \\qquad \\frac{22}{7} \\qquad 4{,}0\\]\n\n\nAfficher la correction :\n\n\n\n\nNombre\n\\(\\N\\)\n\\(\\Z\\)\n\\(\\D\\)\n\\(\\Q\\)\n\\(\\R\\)\n\n\n\n\n\\(\\dfrac{-14}{2} = -7\\)\n\n✓\n\n\n\n\n\n\\(\\dfrac{5}{6}\\)\n\n\n\n✓\n\n\n\n\\(0{,}125 = \\dfrac{1}{8}\\)\n\n\n✓\n\n\n\n\n\\(\\sqrt{5}\\)\n\n\n\n\n✓\n\n\n\\(\\dfrac{22}{7}\\)\n\n\n\n✓\n\n\n\n\\(4{,}0 = 4\\)\n✓\n\n\n\n\n\n\n\n\n\n\n\n⬅️➡️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Nombres réels et nombres irrationnels"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/index.html",
+    "href": "seconde-maths/ensembles_nombres/index.html",
+    "title": "Chapitre 1 : Ensembles de nombres",
+    "section": "",
+    "text": "Attendus et savoir-faire :\n\nÉlément d’un ensemble, sous-ensemble, ensemble vide, appartenance, inclusion, réunion, intersection, complémentaire ; symboles \\(\\emptyset\\), \\(\\in\\), \\(\\subset\\), \\(\\cap\\), \\(\\cup\\), \\(\\{ ... \\}\\).\nNotations \\(\\Z\\) et \\(\\N\\).\nMultiple, diviseur, nombre pair, nombre impair : \\(a\\) est multiple de \\(b\\) s’il existe un entier \\(k\\) tel que \\(a = kb\\).\nEnsemble \\(\\D\\) des nombres décimaux.\nEnsemble \\(\\Q\\) des nombres rationnels. Nombres irrationnels ; exemples fournis par la géométrie \\(\\sqrt{2}\\) et \\(\\pi\\).\nRègles de calcul sur les puissances entières relatives (dont exposant littéral \\(n\\)).\nEnsemble \\(\\R\\) des nombres réels.\n\nSavoir-faire :\n\nPrésenter les fractions sous forme irréductible.\nModéliser et résoudre des problèmes mobilisant les notions de multiple, de diviseur, de nombre pair, de nombre impair.\nEffectuer des calculs numériques mettant en jeu des puissances, des écritures fractionnaires.\n\n\n\nAutomatismes :\n\nComparer deux nombres directement ou par calcul de leur différence, ou (s’ils sont strictement positifs) de leur quotient.\nEffectuer des opérations et des comparaisons entre des fractions simples.\nEffectuer des opérations sur les puissances.\nEffectuer une application numérique d’une formule (notamment pour les formules utilisées dans les autres disciplines).\nApplication simple du théorème de Thalès.\nEffectuer des conversions d’unités : longueurs, aires, volumes, contenances, durées, vitesses, masses.\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nVocabulaire ensembliste\n\n\nÉlément, appartenance, inclusion, réunion, intersection\n\n\n\n\nEntiers naturels et relatifs, multiples et diviseurs\n\n\nN, Z, multiples, diviseurs, parité, notation étoile\n\n\n\n\nNombres rationnels et nombres décimaux\n\n\nD, Q, critère de décimalité\n\n\n\n\nNombres réels et nombres irrationnels\n\n\nR, hiérarchie des ensembles, arbre de décision\n\n\n\n\nCalculs sur les fractions\n\n\nAddition, simplification, multiplication de fractions\n\n\n\n\nPuissances : définitions et règles de calcul\n\n\nPuissances entières relatives, exposant littéral\n\n\n\n\nNotation scientifique\n\n\nÉcriture x = ± a × 10^n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Chapitre 1 : Ensembles de nombres"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/fractions.html",
+    "href": "seconde-maths/ensembles_nombres/fractions.html",
+    "title": "Calculs sur les fractions",
+    "section": "",
+    "text": "Propriété : Opérations sur les fractions\nSoient \\(a, c \\in \\Z\\), \\(b, d \\in \\N^*\\) et \\(k \\in \\Z^*\\). \\[\\frac{a}{c} +  \\frac{b}{c} = \\frac{a+b}{c} \\qquad ; \\qquad\n  \\frac{ka}{kb} = \\frac{a}{b}\n  \\qquad;\\qquad\n  \\frac{a}{b} + \\frac{c}{d} = \\frac{ad+bc}{bd}\n  \\qquad;\\qquad\n  \\frac{a}{b} \\times \\frac{c}{d} = \\frac{ac}{bd}\n\\]\n\n\n\nDémonstration :\n\nAddition — cas du même dénominateur.\nSoit \\(r = \\dfrac{a}{b}\\) et \\(s = \\dfrac{c}{b}\\) avec \\(b \\neq 0\\), ainsi par définition : \\(rb = a\\) et \\(sb = c\\).\nDonc \\(a + c = rb + sb = b(r + s)\\), ce qui donne \\(r + s = \\dfrac{a+c}{b}\\).\nSimplification.\nSoit \\(r = \\dfrac{a}{b}\\) avec \\(b \\neq 0\\) ainsi par définition de la fraction, \\(a = b \\times r\\).\nSoit \\(k\\) un entier non nul. Alors \\(k \\times a = (kb) \\times r\\), donc \\(r = \\dfrac{ka}{kb}\\).\nAinsi, multiplier numérateur et dénominateur par un même entier non nul ne change pas la valeur de la fraction.\nAddition — cas général.\nSoient \\(\\dfrac{a}{b}\\) et \\(\\dfrac{c}{d}\\) avec \\(b, d \\neq 0\\).\nAinsi \\(\\dfrac{a}{b} = \\dfrac{ad}{bd}\\) et \\(\\dfrac{c}{d} = \\dfrac{bc}{bd}\\).\nOn déduit alors que \\[\\dfrac{a}{b} + \\dfrac{c}{d} = \\dfrac{ad}{bd} + \\dfrac{bc}{bd} = \\dfrac{ad + bc}{bd}\\]\nMultiplication.\nSoit \\(p = \\dfrac{a}{b} \\times \\dfrac{c}{d}\\) avec \\(b, d \\neq 0\\) ; par définition, \\(a = b \\times \\dfrac{a}{b}\\) et \\(c = d \\times \\dfrac{c}{d}\\).\nDonc \\(a \\times c = (b \\times d) \\times p\\), ce qui donne \\(p = \\dfrac{ac}{bd}\\).\n\n\nRemarque : \nPour rendre une fraction irréductible, on divise numérateur et dénominateur par leur \\(\\pgcd\\). La décomposition en facteurs premiers fournit ce \\(\\pgcd\\).\n\n\n\nSavoir-Faire : Calculs sur les fractions — Calculer\n\nCalculer et donner le résultat sous forme irréductible.\n\n\\(A = \\dfrac{5}{6} + \\dfrac{3}{4}\\)\n\n\n\nAfficher la correction :\n\n\\[\nA = \\frac{5 \\times 4 + 3 \\times 6}{24}\n  = \\frac{38}{24}\n  = \\frac{19}{12}\n\\]\n\n\n\\(B = \\dfrac{7}{12} \\times \\dfrac{9}{14}\\)\n\n\n\nAfficher la correction :\n\n\\[\nB = \\frac{7 \\times 9}{12 \\times 14}\n  = \\frac{3^2 \\times 7}{2^2 \\times 3 \\times 2 \\times 7}\n  = \\frac{3}{2^3}\n  = \\frac{3}{8}\n\\]\n\n\n\\(C = \\dfrac{48}{84}\\)\n\n\n\nAfficher la correction :\n\n\\[\nC = \\frac{48}{84}\n  = \\frac{2^4 \\times 3}{2^2 \\times 3 \\times 7}\n  = \\frac{2^2}{7}\n  = \\frac{4}{7}\n\\]\n\n\n\n\nExercice : Calculer des expressions fractionnaires — Calculer\n\nCalculer les expressions suivantes :\n\n\\(A = \\dfrac{4}{5} - \\dfrac{2}{5}\\left(\\dfrac{1}{3} - 3\\right)\\)\n\n\n\nAfficher la correction :\n\nPoint clef : on commence par calculer l’expression entre parenthèses en respectant les priorités opératoires.\n\\(\\dfrac{1}{3} - 3 = \\dfrac{1}{3} - \\dfrac{9}{3} = -\\dfrac{8}{3}\\).\nDonc \\(A = \\dfrac{4}{5} - \\dfrac{2}{5} \\times \\left(-\\dfrac{8}{3}\\right) = \\dfrac{4}{5} + \\dfrac{16}{15} = \\dfrac{12}{15} + \\dfrac{16}{15} = \\dfrac{28}{15}\\).\n\n\n\\(B = \\dfrac{2}{3} - \\dfrac{7}{3} \\times \\LH{\\dfrac{1}{3 - \\dfrac{3}{2}}}\\)\n\n\n\nAfficher la correction :\n\n\\(B = \\dfrac{2}{3} - \\dfrac{7}{3} \\times \\dfrac{1}{ \\dfrac{6}{2} - \\dfrac{3}{2}}\n= \\dfrac{2}{3} - \\dfrac{7}{3} \\times \\dfrac{1}{ \\dfrac{3}{2}}\n= \\dfrac{2}{3} - \\dfrac{7}{3} \\times \\dfrac{2}{3}\n        = \\dfrac{2}{3} - \\dfrac{14}{9}\n        = \\dfrac{6}{9} - \\dfrac{14}{9}\n        = -\\dfrac{8}{9}\\).\n\n\n\nRemarque : \nLes puissances permettent de manipuler efficacement les grands nombres rencontrés dans les fractions et en notation scientifique.\n\n\n\n⬅️➡️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Calculs sur les fractions"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/fractions.html#règles-de-calcul",
+    "href": "seconde-maths/ensembles_nombres/fractions.html#règles-de-calcul",
+    "title": "Calculs sur les fractions",
+    "section": "",
+    "text": "Propriété : Opérations sur les fractions\nSoient \\(a, c \\in \\Z\\), \\(b, d \\in \\N^*\\) et \\(k \\in \\Z^*\\). \\[\\frac{a}{c} +  \\frac{b}{c} = \\frac{a+b}{c} \\qquad ; \\qquad\n  \\frac{ka}{kb} = \\frac{a}{b}\n  \\qquad;\\qquad\n  \\frac{a}{b} + \\frac{c}{d} = \\frac{ad+bc}{bd}\n  \\qquad;\\qquad\n  \\frac{a}{b} \\times \\frac{c}{d} = \\frac{ac}{bd}\n\\]\n\n\n\nDémonstration :\n\nAddition — cas du même dénominateur.\nSoit \\(r = \\dfrac{a}{b}\\) et \\(s = \\dfrac{c}{b}\\) avec \\(b \\neq 0\\), ainsi par définition : \\(rb = a\\) et \\(sb = c\\).\nDonc \\(a + c = rb + sb = b(r + s)\\), ce qui donne \\(r + s = \\dfrac{a+c}{b}\\).\nSimplification.\nSoit \\(r = \\dfrac{a}{b}\\) avec \\(b \\neq 0\\) ainsi par définition de la fraction, \\(a = b \\times r\\).\nSoit \\(k\\) un entier non nul. Alors \\(k \\times a = (kb) \\times r\\), donc \\(r = \\dfrac{ka}{kb}\\).\nAinsi, multiplier numérateur et dénominateur par un même entier non nul ne change pas la valeur de la fraction.\nAddition — cas général.\nSoient \\(\\dfrac{a}{b}\\) et \\(\\dfrac{c}{d}\\) avec \\(b, d \\neq 0\\).\nAinsi \\(\\dfrac{a}{b} = \\dfrac{ad}{bd}\\) et \\(\\dfrac{c}{d} = \\dfrac{bc}{bd}\\).\nOn déduit alors que \\[\\dfrac{a}{b} + \\dfrac{c}{d} = \\dfrac{ad}{bd} + \\dfrac{bc}{bd} = \\dfrac{ad + bc}{bd}\\]\nMultiplication.\nSoit \\(p = \\dfrac{a}{b} \\times \\dfrac{c}{d}\\) avec \\(b, d \\neq 0\\) ; par définition, \\(a = b \\times \\dfrac{a}{b}\\) et \\(c = d \\times \\dfrac{c}{d}\\).\nDonc \\(a \\times c = (b \\times d) \\times p\\), ce qui donne \\(p = \\dfrac{ac}{bd}\\).\n\n\nRemarque : \nPour rendre une fraction irréductible, on divise numérateur et dénominateur par leur \\(\\pgcd\\). La décomposition en facteurs premiers fournit ce \\(\\pgcd\\).\n\n\n\nSavoir-Faire : Calculs sur les fractions — Calculer\n\nCalculer et donner le résultat sous forme irréductible.\n\n\\(A = \\dfrac{5}{6} + \\dfrac{3}{4}\\)\n\n\n\nAfficher la correction :\n\n\\[\nA = \\frac{5 \\times 4 + 3 \\times 6}{24}\n  = \\frac{38}{24}\n  = \\frac{19}{12}\n\\]\n\n\n\\(B = \\dfrac{7}{12} \\times \\dfrac{9}{14}\\)\n\n\n\nAfficher la correction :\n\n\\[\nB = \\frac{7 \\times 9}{12 \\times 14}\n  = \\frac{3^2 \\times 7}{2^2 \\times 3 \\times 2 \\times 7}\n  = \\frac{3}{2^3}\n  = \\frac{3}{8}\n\\]\n\n\n\\(C = \\dfrac{48}{84}\\)\n\n\n\nAfficher la correction :\n\n\\[\nC = \\frac{48}{84}\n  = \\frac{2^4 \\times 3}{2^2 \\times 3 \\times 7}\n  = \\frac{2^2}{7}\n  = \\frac{4}{7}\n\\]\n\n\n\n\nExercice : Calculer des expressions fractionnaires — Calculer\n\nCalculer les expressions suivantes :\n\n\\(A = \\dfrac{4}{5} - \\dfrac{2}{5}\\left(\\dfrac{1}{3} - 3\\right)\\)\n\n\n\nAfficher la correction :\n\nPoint clef : on commence par calculer l’expression entre parenthèses en respectant les priorités opératoires.\n\\(\\dfrac{1}{3} - 3 = \\dfrac{1}{3} - \\dfrac{9}{3} = -\\dfrac{8}{3}\\).\nDonc \\(A = \\dfrac{4}{5} - \\dfrac{2}{5} \\times \\left(-\\dfrac{8}{3}\\right) = \\dfrac{4}{5} + \\dfrac{16}{15} = \\dfrac{12}{15} + \\dfrac{16}{15} = \\dfrac{28}{15}\\).\n\n\n\\(B = \\dfrac{2}{3} - \\dfrac{7}{3} \\times \\LH{\\dfrac{1}{3 - \\dfrac{3}{2}}}\\)\n\n\n\nAfficher la correction :\n\n\\(B = \\dfrac{2}{3} - \\dfrac{7}{3} \\times \\dfrac{1}{ \\dfrac{6}{2} - \\dfrac{3}{2}}\n= \\dfrac{2}{3} - \\dfrac{7}{3} \\times \\dfrac{1}{ \\dfrac{3}{2}}\n= \\dfrac{2}{3} - \\dfrac{7}{3} \\times \\dfrac{2}{3}\n        = \\dfrac{2}{3} - \\dfrac{14}{9}\n        = \\dfrac{6}{9} - \\dfrac{14}{9}\n        = -\\dfrac{8}{9}\\).\n\n\n\nRemarque : \nLes puissances permettent de manipuler efficacement les grands nombres rencontrés dans les fractions et en notation scientifique.\n\n\n\n⬅️➡️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Calculs sur les fractions"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/entiers.html",
+    "href": "seconde-maths/ensembles_nombres/entiers.html",
+    "title": "Entiers naturels et relatifs, multiples et diviseurs",
+    "section": "",
+    "text": "Définition : Entiers naturels et entiers relatifs\n\nL’ensemble des entiers naturels est \\(\\N = \\{0\\,;\\,1\\,;\\,2\\,;\\,3\\,;\\ldots\\}\\).\nL’ensemble des entiers relatifs est \\(\\Z = \\{\\ldots\\,;\\,-2\\,;\\,-1\\,;\\,0\\,;\\,1\\,;\\,2\\,;\\ldots\\}\\).\n\nOn a \\(\\N \\subset \\Z\\).",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Entiers naturels et relatifs, multiples et diviseurs"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/entiers.html#entiers-naturels-et-entiers-relatifs",
+    "href": "seconde-maths/ensembles_nombres/entiers.html#entiers-naturels-et-entiers-relatifs",
+    "title": "Entiers naturels et relatifs, multiples et diviseurs",
+    "section": "",
+    "text": "Définition : Entiers naturels et entiers relatifs\n\nL’ensemble des entiers naturels est \\(\\N = \\{0\\,;\\,1\\,;\\,2\\,;\\,3\\,;\\ldots\\}\\).\nL’ensemble des entiers relatifs est \\(\\Z = \\{\\ldots\\,;\\,-2\\,;\\,-1\\,;\\,0\\,;\\,1\\,;\\,2\\,;\\ldots\\}\\).\n\nOn a \\(\\N \\subset \\Z\\).",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Entiers naturels et relatifs, multiples et diviseurs"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/entiers.html#multiples-diviseurs-parité",
+    "href": "seconde-maths/ensembles_nombres/entiers.html#multiples-diviseurs-parité",
+    "title": "Entiers naturels et relatifs, multiples et diviseurs",
+    "section": "Multiples, diviseurs, parité",
+    "text": "Multiples, diviseurs, parité\n\nDéfinition : Multiples, diviseurs, parité\nSoient \\(a \\in \\Z\\) et \\(b \\in \\N^*\\).\n\nOn dit que \\(a\\) est un multiple de \\(b\\), ou que \\(b\\) divise \\(a\\), s’il existe un entier \\(k \\in \\Z\\) tel que \\(a = k \\times b\\). On note alors \\(b \\mid a\\).\nUn entier est pair s’il est multiple de \\(2\\), impair sinon.\n\n\n\nRemarque : \n\\(0\\) est multiple de tout entier (car \\(0 = 0 \\times b\\)). Tout entier \\(a\\) est divisible par \\(1\\) et par lui-même.\n\n\n\nSavoir-Faire : Multiples et diviseurs — Calculer, Raisonner\n\n\nDonner l’ensemble \\(\\Div(24)\\) de tous les diviseurs de \\(24\\).\n\n\n\nAfficher la correction :\n\n\\(24 = 1 \\times 24 = 2 \\times 12 = 3 \\times 8 = 4 \\times 6\\). \\(\\Div(24) = \\{1\\,;\\,2\\,;\\,3\\,;\\,4\\,;\\,6\\,;\\,8\\,;\\,12\\,;\\,24\\}\\).\n\n\n\\(15\\) est-il un multiple de \\(4\\) ? de \\(3\\) ?\n\n\n\nAfficher la correction :\n\n\\(15 = 3 \\times 5\\) donc \\(15\\) est multiple de \\(3\\), mais pas de \\(4\\) (car \\(15 = 4 \\times 3 + 3\\)).\n\n\nMontrer que la somme de deux multiples de \\(3\\) est un multiple de \\(3\\).\n\n\n\nAfficher la correction :\n\nSoient \\(a = 3k\\) et \\(b = 3m\\) deux multiples de \\(3\\) (avec \\(k, m \\in \\Z\\)). Alors \\(a + b = 3k + 3m = 3(k+m)\\) est multiple de \\(3\\). \\(\\blacksquare\\)\n\n\n\nPropriété : Le carré d’un nombre impair est impair\nPour tout entier \\(n\\), si \\(n\\) est impair alors \\(n^2\\) est impair.\n\n\n\nDémonstration :\n\nSoit \\(n\\) un entier impair. Il existe \\(k \\in \\Z\\) tel que \\(n = 2k+1\\).\nAlors \\(n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 2(2k^2+2k) + 1\\).\nComme \\(2k^2+2k \\in \\Z\\), le nombre \\(n^2\\) est de la forme \\(2m+1\\) avec \\(m = 2k^2+2k\\) : \\(n^2\\) est impair.",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Entiers naturels et relatifs, multiples et diviseurs"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/entiers.html#notation-étoile",
+    "href": "seconde-maths/ensembles_nombres/entiers.html#notation-étoile",
+    "title": "Entiers naturels et relatifs, multiples et diviseurs",
+    "section": "Notation étoile",
+    "text": "Notation étoile\n\nNotation \\(E^*\\) : \nPour tout ensemble de nombres \\(E\\), on note \\(E^*\\) l’ensemble \\(E\\) privé de \\(0\\). Exemples :\n\\[\\N^* = \\{1\\,;\\,2\\,;\\,3\\,;\\ldots\\} \\qquad \\Z^* = \\Z \\setminus \\{0\\} \\qquad \\R^* = \\R \\setminus \\{0\\}\\]\n\n\n\n⬅️➡️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Entiers naturels et relatifs, multiples et diviseurs"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/notation_scientifique.html",
+    "href": "seconde-maths/ensembles_nombres/notation_scientifique.html",
+    "title": "Notation scientifique",
+    "section": "",
+    "text": "Définition : Notation scientifique\nTout réel \\(x \\neq 0\\) peut s’écrire de façon unique sous la forme \\[x =\\pm a \\times 10^n\\] où \\(n \\in \\Z\\) et \\(a\\) un réel dont la partie entière est comprise entre 1 et 9 inclus.\nOn dit que \\(x\\) est écrit en notation scientifique.\n\n\nRemarque : \nL’écriture en notation scientifique est unique. Cette unicité provient de la condition sur \\(a\\), qui détermine à la fois la valeur de \\(a\\) et celle de \\(n\\).\n\n\n\nSavoir-Faire : Passer en notation scientifique — Calculer\n\n\nÉcrire en notation scientifique \\(0{,}000\\,47\\).\n\n\n\nAfficher la correction :\n\n\\(0{,}000\\,47 = 4{,}7 \\times 10^{-4}\\)\n\n\nÉcrire en notation scientifique \\(2{,}5 \\times 10^3 \\times 4 \\times 10^{-7}\\).\n\n\n\nAfficher la correction :\n\n\\(2{,}5 \\times 10^3 \\times 4 \\times 10^{-7}\n         = (2{,}5 \\times 4) \\times 10^{3+(-7)}\n         = 10 \\times 10^{-4}\n         = 1{,}0 \\times 10^{-3}\\)\n\n\n\n\nExercice : L’échiquier et la production mondiale de riz — Calculer, Modéliser\n\nSur un échiquier de \\(64\\) cases, on pose \\(1\\) grain sur la première case, puis on double à chaque case.\n\nCombien de grains y a-t-il sur la case \\(n\\) ?\n\n\n\nAfficher la correction :\n\nLa case \\(n\\) contient \\(2^{n-1}\\) grains. La dernière case (\\(n = 64\\)) contient \\(2^{63}\\) grains.\n\n\nExprimer \\(2^{63}\\) en notation scientifique (on admet \\(2^{10} \\approx 1{,}024 \\times 10^3\\)).\n\n\n\nAfficher la correction :\n\n\\(2^{63} = (2^{10})^6 \\times 2^3 \\approx (1{,}024)^6 \\times 10^{18} \\times 8\\). Or \\((1{,}024)^6 \\approx 1{,}16\\), donc \\(2^{63} \\approx 9{,}2 \\times 10^{18}\\).\n\n\nUn grain de riz pèse environ \\(25 \\times 10^{-3}\\) grammes. Quelle est la masse totale de riz sur cette case ? La comparer à la production mondiale annuelle \\(\\approx 5 \\times 10^{14}\\) g.\n\n\n\nAfficher la correction :\n\nMasse \\(\\approx 9{,}2 \\times 10^{18} \\times 2{,}5 \\times 10^{-2} = 2{,}3 \\times 10^{17}\\) g.\nRapport avec la production : \\(\\dfrac{2{,}3 \\times 10^{17}}{5 \\times 10^{14}} \\approx 460\\).\nLa masse de riz sur la \\(64\\)e case seule représente 460 fois la production mondiale annuelle !\n\n\n\n\n⬅️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Notation scientifique"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/notation_scientifique.html#définition",
+    "href": "seconde-maths/ensembles_nombres/notation_scientifique.html#définition",
+    "title": "Notation scientifique",
+    "section": "",
+    "text": "Définition : Notation scientifique\nTout réel \\(x \\neq 0\\) peut s’écrire de façon unique sous la forme \\[x =\\pm a \\times 10^n\\] où \\(n \\in \\Z\\) et \\(a\\) un réel dont la partie entière est comprise entre 1 et 9 inclus.\nOn dit que \\(x\\) est écrit en notation scientifique.\n\n\nRemarque : \nL’écriture en notation scientifique est unique. Cette unicité provient de la condition sur \\(a\\), qui détermine à la fois la valeur de \\(a\\) et celle de \\(n\\).\n\n\n\nSavoir-Faire : Passer en notation scientifique — Calculer\n\n\nÉcrire en notation scientifique \\(0{,}000\\,47\\).\n\n\n\nAfficher la correction :\n\n\\(0{,}000\\,47 = 4{,}7 \\times 10^{-4}\\)\n\n\nÉcrire en notation scientifique \\(2{,}5 \\times 10^3 \\times 4 \\times 10^{-7}\\).\n\n\n\nAfficher la correction :\n\n\\(2{,}5 \\times 10^3 \\times 4 \\times 10^{-7}\n         = (2{,}5 \\times 4) \\times 10^{3+(-7)}\n         = 10 \\times 10^{-4}\n         = 1{,}0 \\times 10^{-3}\\)\n\n\n\n\nExercice : L’échiquier et la production mondiale de riz — Calculer, Modéliser\n\nSur un échiquier de \\(64\\) cases, on pose \\(1\\) grain sur la première case, puis on double à chaque case.\n\nCombien de grains y a-t-il sur la case \\(n\\) ?\n\n\n\nAfficher la correction :\n\nLa case \\(n\\) contient \\(2^{n-1}\\) grains. La dernière case (\\(n = 64\\)) contient \\(2^{63}\\) grains.\n\n\nExprimer \\(2^{63}\\) en notation scientifique (on admet \\(2^{10} \\approx 1{,}024 \\times 10^3\\)).\n\n\n\nAfficher la correction :\n\n\\(2^{63} = (2^{10})^6 \\times 2^3 \\approx (1{,}024)^6 \\times 10^{18} \\times 8\\). Or \\((1{,}024)^6 \\approx 1{,}16\\), donc \\(2^{63} \\approx 9{,}2 \\times 10^{18}\\).\n\n\nUn grain de riz pèse environ \\(25 \\times 10^{-3}\\) grammes. Quelle est la masse totale de riz sur cette case ? La comparer à la production mondiale annuelle \\(\\approx 5 \\times 10^{14}\\) g.\n\n\n\nAfficher la correction :\n\nMasse \\(\\approx 9{,}2 \\times 10^{18} \\times 2{,}5 \\times 10^{-2} = 2{,}3 \\times 10^{17}\\) g.\nRapport avec la production : \\(\\dfrac{2{,}3 \\times 10^{17}}{5 \\times 10^{14}} \\approx 460\\).\nLa masse de riz sur la \\(64\\)e case seule représente 460 fois la production mondiale annuelle !\n\n\n\n\n⬅️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Notation scientifique"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/rationnels_decimaux.html",
+    "href": "seconde-maths/ensembles_nombres/rationnels_decimaux.html",
+    "title": "Nombres rationnels et nombres décimaux",
+    "section": "",
+    "text": "Définition : Nombre décimal\nUn réel \\(d\\) est un nombre décimal s’il existe \\(a \\in \\Z\\) et \\(n \\in \\N\\) tels que \\(d = \\dfrac{a}{10^n}\\). L’ensemble des nombres décimaux est noté \\(\\D\\).\n\n\n\nSavoir-Faire : Reconnaître un nombre décimal — Raisonner\n\nParmi les nombres suivants, lesquels sont décimaux ? Justifier. \\[0{,}25 \\qquad \\dfrac{1}{3} \\qquad 3{,}14 \\qquad 7\\]\n\n\nAfficher la correction :\n\n\\(0{,}25 = \\dfrac{25}{100} \\in \\D\\) ; \\(\\dfrac{1}{3} \\notin \\D\\) (écriture décimale infinie) ; \\(3{,}14 = \\dfrac{314}{100} \\in \\D\\) ; \\(7 = \\dfrac{7}{10^0} \\in \\D\\).",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Nombres rationnels et nombres décimaux"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/rationnels_decimaux.html#nombres-décimaux",
+    "href": "seconde-maths/ensembles_nombres/rationnels_decimaux.html#nombres-décimaux",
+    "title": "Nombres rationnels et nombres décimaux",
+    "section": "",
+    "text": "Définition : Nombre décimal\nUn réel \\(d\\) est un nombre décimal s’il existe \\(a \\in \\Z\\) et \\(n \\in \\N\\) tels que \\(d = \\dfrac{a}{10^n}\\). L’ensemble des nombres décimaux est noté \\(\\D\\).\n\n\n\nSavoir-Faire : Reconnaître un nombre décimal — Raisonner\n\nParmi les nombres suivants, lesquels sont décimaux ? Justifier. \\[0{,}25 \\qquad \\dfrac{1}{3} \\qquad 3{,}14 \\qquad 7\\]\n\n\nAfficher la correction :\n\n\\(0{,}25 = \\dfrac{25}{100} \\in \\D\\) ; \\(\\dfrac{1}{3} \\notin \\D\\) (écriture décimale infinie) ; \\(3{,}14 = \\dfrac{314}{100} \\in \\D\\) ; \\(7 = \\dfrac{7}{10^0} \\in \\D\\).",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Nombres rationnels et nombres décimaux"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/rationnels_decimaux.html#nombres-rationnels",
+    "href": "seconde-maths/ensembles_nombres/rationnels_decimaux.html#nombres-rationnels",
+    "title": "Nombres rationnels et nombres décimaux",
+    "section": "Nombres rationnels",
+    "text": "Nombres rationnels\n\nDéfinition : Nombre rationnel\nUn nombre rationnel est un nombre qui peut s’écrire sous la forme \\(\\dfrac{a}{b}\\) où \\(a\\) est un entier et \\(b\\) est un entier non nul. On dit que \\(a\\) est le numérateur et que \\(b\\) est le dénominateur.\nL’ensemble des nombres rationnels est noté \\(\\Q\\).\nUne fraction est irréductible lorsque \\(\\pgcd(a, b) = 1\\).\n\n\nRemarque : \nLe nombre \\(0{,}333\\ldots\\) admet bien une écriture décimale, mais sa partie décimale est infinie : on ne peut pas l’écrire exactement avec un nombre fini de chiffres après la virgule.\nAinsi \\(\\dfrac{1}{3} \\notin \\D\\), bien que \\(\\dfrac{1}{3} \\in \\Q\\).\nTout nombre décimal est rationnel (\\(\\D \\subset \\Q\\)), mais la réciproque est fausse.\n\n\nPropriété : Le nombre \\(1/3\\) n’est pas décimal\nLe rationnel \\(\\dfrac{1}{3}\\) n’est pas un nombre décimal.\n\n\n\nDémonstration :\n\nSupposons par l’absurde que \\(\\dfrac{1}{3}\\) soit décimal.\nIl existerait alors \\(a \\in \\Z\\) et \\(n \\in \\N\\) tels que \\(\\dfrac{1}{3} = \\dfrac{a}{10^n}\\), soit \\(a = \\dfrac{10^n}{3}\\).\nOr \\(3\\) ne divise aucune puissance de \\(10\\) (car \\(10^n = 2^n \\times 5^n\\) ne contient pas \\(3\\) dans sa décomposition en facteurs premiers), donc \\(\\dfrac{10^n}{3}\\) n’est pas un entier, ce qui contredit \\(a \\in \\Z\\).\nL’hypothèse est fausse : \\(\\dfrac{1}{3}\\) n’est pas un nombre décimal.",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Nombres rationnels et nombres décimaux"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/ensembles_nombres/rationnels_decimaux.html#critère-de-décimalité-dune-fraction",
+    "href": "seconde-maths/ensembles_nombres/rationnels_decimaux.html#critère-de-décimalité-dune-fraction",
+    "title": "Nombres rationnels et nombres décimaux",
+    "section": "Critère de décimalité d’une fraction",
+    "text": "Critère de décimalité d’une fraction\n\nPropriété : \nSoit \\(\\dfrac{p}{q}\\) une fraction irréductible (\\(\\pgcd(p,q)=1\\)) avec \\(q \\geqslant 1\\). \\[\\frac{p}{q} \\in \\D \\iff q \\text{ n'a que des facteurs premiers } 2 \\text{ et } 5\\] c’est-à-dire \\(q = 2^\\alpha \\times 5^\\beta\\) avec \\(\\alpha, \\beta \\in \\N\\).\n\n\n\nDémonstration :\n\nSens direct (\\(\\Rightarrow\\)).\nSi \\(\\dfrac{p}{q} \\in \\D\\), il existe \\(a \\in \\Z\\) et \\(n \\in \\N\\) tels que \\(\\dfrac{p}{q} = \\dfrac{a}{10^n}\\) donc \\(10^n p = aq\\).\nComme la fraction \\(\\dfrac{p}{q}\\) est irréductible, \\(q\\) divise \\(10^n\\), donc s’écrit avec des puissances de \\(2\\) et de \\(5\\).\nSens réciproque (\\(\\Leftarrow\\)).\nSi \\(q = 2^\\alpha \\times 5^\\beta\\), posons \\(n = \\max(\\alpha, \\beta)\\). Alors \\(2^n \\times 5^n = 10^n\\) est un multiple de \\(q\\) (en multipliant par \\(2^{n-\\alpha} \\times 5^{n-\\beta}\\)). On peut donc écrire \\(\\dfrac{p}{q} = \\dfrac{p \\times 2^{n-\\alpha} \\times 5^{n-\\beta}}{10^n} \\in \\D\\).\n\n\nRemarque : \nCe critère évite les tâtonnements : il suffit de décomposer \\(q\\) en facteurs premiers.\n\n\\(\\dfrac{7}{40}\\) : \\(40 = 2^3 \\times 5 \\Rightarrow \\dfrac{7}{40} \\in \\D\\) (vérification : \\(\\dfrac{7}{40} = \\dfrac{175}{1000} = 0{,}175\\)).\n\\(\\dfrac{5}{12}\\) : \\(12 = 2^2 \\times 3 \\Rightarrow \\dfrac{5}{12} \\notin \\D\\) (le facteur \\(3\\) est incompatible avec un dénominateur puissance de \\(10\\)).\n\n\n\n\n⬅️➡️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 1 : Ensembles de nombres",
+      "Nombres rationnels et nombres décimaux"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/index.html",
+    "href": "seconde-maths/index.html",
+    "title": "Cours de Seconde",
+    "section": "",
+    "text": "Chapitre 1 : Ensembles de nombres\n\n\nVocabulaire ensembliste, N, Z, D, Q, R, fractions et puissances\n\n\n\n\n\n\n\n\n\n\nChapitre 2 : Fonctions affines\n\n\nVocabulaire des fonctions, fonctions affines, représentation graphique, variations, équations\n\n\n\n\n\n\n\n\n\n\nChapitre 3 : Vecteurs — Translation\n\n\nTranslation, vecteurs égaux, somme, Chasles, produit par un réel, colinéarité\n\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Cours de Seconde"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/translation_vecteur.html",
+    "href": "seconde-maths/vecteurs_translation/translation_vecteur.html",
+    "title": "Translation et notion de vecteur",
+    "section": "",
+    "text": "Définition : Translation\nSoit \\(A\\) et \\(B\\) deux points du plan.\nLa translation qui transforme \\(A\\) en \\(B\\) est la transformation du plan qui, à tout point \\(C\\), associe l’unique point \\(M\\) tel que \\([AM]\\) et \\([BC]\\) aient le même milieu.\nLe quadrilatère \\(ABMC\\) est alors un parallélogramme.\n\n\\(M\\) est l’image de \\(C\\) par la translation de vecteur \\(\\ve{AB}\\) ;\non note \\(t_{\\ve{AB}}(C)=M\\).\n\n\n\n\n\n\nRemarque : \nIntuitivement, une translation fait glisser tout le plan dans la même direction, du même sens et de la même longueur, sans rotation ni déformation.\n\n\nRemarque : \nOn représente un vecteur à l’aide d’un « segment fléché » allant de son origine vers son extrémité.\n\\(A\\) est l’origine du vecteur \\(\\ve{AB}\\) et \\(B\\) son extrémité. En particulier \\(t_{\\ve{AB}}(A)=B\\).\n\n\n\n\n\nDéfinition : Vecteur nul\nOn appelle vecteur nul, noté \\(\\ve{0}\\), le vecteur associé à la translation qui laisse invariant tout point du plan. C’est-à-dire que pour tout point \\(M\\) du plan : \\(t_{\\ve{0}}(M)=M\\). On note \\(\\ve{MM}=\\ve{0}\\).\n\n\nPropriété : \n\\(\\ve{AB} = \\ve{0} \\Longleftrightarrow A = B\\)\n\n\n\nDémonstration :\n\n\\(\\Rightarrow\\) Supposons \\(\\ve{AB} = \\ve{0}\\). Alors \\(t_{\\ve{AB}} = t_{\\ve{0}}\\) est la translation qui laisse tout point invariant. En particulier \\(t_{\\ve{AB}}(A) = B\\) et \\(t_{\\ve{0}}(A) = A\\), donc \\(B = A\\).\n\\(\\Leftarrow\\) Réciproquement, si \\(A = B\\), alors la translation qui envoie \\(A\\) sur \\(B\\) laisse \\(A\\) fixe, donc c’est la translation de vecteur nul : \\(\\ve{AB} = \\ve{0}\\).\n\n\n\n➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Translation et notion de vecteur"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/milieu_segment.html",
+    "href": "seconde-maths/vecteurs_translation/milieu_segment.html",
+    "title": "Milieu d’un segment et vecteurs",
+    "section": "",
+    "text": "Propriété : Caractérisation vectorielle du milieu\n\\(I\\) est le milieu de \\([AB]\\) si et seulement si \\(\\ve{AI} = \\ve{IB}\\), ou encore \\(\\ve{AB} = 2\\,\\ve{AI}\\).\n\n\n\nDémonstration :\n\nPar Chasles, \\(\\ve{AB} = \\ve{AI}+\\ve{IB}\\). Si \\(I\\) est le milieu, \\(\\ve{AI} = \\ve{IB}\\), donc \\(\\ve{AB} = 2\\,\\ve{AI}\\).\nRéciproquement, si \\(\\ve{AB} = 2\\,\\ve{AI}\\), alors \\(\\ve{AI}+\\ve{IB} = 2\\,\\ve{AI}\\), d’où \\(\\ve{IB} = \\ve{AI}\\), soit \\(I\\) milieu de \\([AB]\\).\n\n\nPropriété : Propriété vectorielle du milieu\n\\(I\\) est le milieu de \\([AB]\\) si et seulement si, pour tout point \\(M\\) du plan : \\[\\ve{MI} = \\frac{1}{2}(\\ve{MA}+\\ve{MB})\\]\n\n\n\n\n\n\nDémonstration :\n\n\\[\\ve{MA}+\\ve{MB} = (\\ve{MI}+\\ve{IA})+(\\ve{MI}+\\ve{IB}) = 2\\,\\ve{MI}+\\ve{IA}+\\ve{IB}\\]\nOr \\(I\\) milieu de \\([AB]\\) implique \\(\\ve{IA}+\\ve{IB} = \\ve{0}\\).\nDonc \\(\\ve{MA}+\\ve{MB} = 2\\,\\ve{MI}\\), soit \\[\\ve{MI} = \\frac{1}{2}(\\ve{MA}+\\ve{MB})\\]\n\n\n\nSavoir-Faire : Milieu et relation de Chasles — Calculer, Raisonner\n\nSoient \\(A\\), \\(B\\), \\(C\\) trois points, et \\(I\\), \\(J\\) les milieux respectifs de \\([AB]\\) et \\([BC]\\).\nExprimer \\(\\ve{IJ}\\) en fonction de \\(\\ve{AC}\\), puis en déduire que \\((IJ)\\parallel(AC)\\) et que \\(IJ = \\dfrac{1}{2}AC\\).\n\n\nAfficher la correction :\n\nPoint clef : \\(I\\) est le milieu de \\([AB]\\) donc on fait apparaître le vecteur \\(\\ve{BI}\\) pour utiliser la relation vectorielle sur le milieu.\n\\[\\ve{IJ} = \\ve{IB}+\\ve{BJ} = \\frac{1}{2}\\ve{AB}+\\frac{1}{2}\\ve{BC} = \\frac{1}{2}(\\ve{AB}+\\ve{BC}) = \\frac{1}{2}\\ve{AC}\\]\nAinsi \\(\\ve{IJ} = \\dfrac{1}{2}\\ve{AC}\\) : on en déduit que \\((IJ)\\parallel(AC)\\) et \\(IJ = \\dfrac{1}{2}AC\\).\nC’est le théorème des milieux.\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Milieu d'un segment et vecteurs"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/vecteur_oppose.html",
+    "href": "seconde-maths/vecteurs_translation/vecteur_oppose.html",
+    "title": "Vecteur opposé",
+    "section": "",
+    "text": "Définition : Vecteur opposé\nOn appelle vecteur opposé à \\(\\ve{u}\\) l’unique vecteur \\(-\\ve{u}\\) tel que \\(\\ve{u}+(-\\ve{u}) = \\ve{0}\\).\n\n\nCaractéristiques d’un vecteur opposé : \nDeux vecteurs sont opposés si et seulement s’ils ont même norme, même direction, mais des sens contraires.\n\n\nRemarque : \nSoit \\(\\ve{u} = \\ve{AB}\\), alors \\(-\\ve{u} = \\ve{BA}\\).\n\n\nPoint méthode — soustraire deux vecteurs : \nSoustraire un vecteur revient à ajouter son opposé : \\[\\ve{u} - \\ve{v} = \\ve{u} + (-\\ve{v})\\]\nEn pratique, pour simplifier \\(\\ve{AC} - \\ve{BC}\\), on écrit : \\[\\ve{AC} - \\ve{BC} = \\ve{AC} + \\ve{CB} = \\ve{AB}\\]\n\n\n\nSavoir-Faire : Simplifier une différence de vecteurs — Calculer\n\nSimplifier \\(2\\ve{AB}+\\ve{BC}-\\ve{AC}\\).\n\n\nAfficher la correction :\n\n\\[2\\ve{AB}+\\ve{BC}-\\ve{AC} = 2\\ve{AB}+\\ve{BC}-(\\ve{AB}+\\ve{BC}) = 2\\ve{AB}+\\ve{BC}-\\ve{AB}-\\ve{BC} = \\ve{AB}\\]\n\n\n\n\nExercice : Vecteur opposé dans un parallélogramme — Calculer, Raisonner\n\nSoit \\(ABCD\\) un parallélogramme.\n\nMontrer que \\(\\ve{AB}\\) et \\(\\ve{CD}\\) sont des vecteurs opposés.\n\n\n\nAfficher la correction :\n\nDans un parallélogramme \\(ABCD\\), on a \\(\\ve{AB} = \\ve{DC}\\) par définition.\nOr \\(\\ve{DC} = -\\ve{CD}\\), donc \\(\\ve{AB} = -\\ve{CD}\\) : les vecteurs \\(\\ve{AB}\\) et \\(\\ve{CD}\\) sont opposés (même norme, même direction, sens contraires).\n\n\nSimplifier \\(\\ve{AC}+\\ve{BD}\\).\n\n\n\nAfficher la correction :\n\nPoint clef : On décompose avec la relation de Chasles\n\\(\\ve{AC}+\\ve{BD} = \\ve{AB} + \\ve{BC} + \\ve{BC}+\\ve{CD} = \\ve{BC}+\\ve{BC} +\\ve{AB} + \\ve{CD} = \\ve{BC} + \\ve{BC}\\)\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Vecteur opposé"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/identite_parallelogramme.html",
+    "href": "seconde-maths/vecteurs_translation/identite_parallelogramme.html",
+    "title": "Identité du parallélogramme",
+    "section": "",
+    "text": "Propriété : Identité du parallélogramme\nSoient \\(A\\), \\(B\\), \\(D\\) trois points non alignés. Le point \\(C\\) est défini par \\(\\ve{AC} = \\ve{AB} + \\ve{AD}\\).\nAlors \\(ABCD\\) est un parallélogramme.\n\n\n\n\n\n\nDémonstration :\n\nSoit \\(ABCD\\) un parallélogramme, alors \\(\\ve{AB} = \\ve{DC}\\).\nAinsi \\(\\ve{DC} = \\ve{DA}+\\ve{AC}\\), donc \\(\\ve{AB} = \\ve{DA}+\\ve{AC}\\),\nDonc \\(\\ve{AC} = \\ve{AB}-\\ve{DA} = \\ve{AB}+\\ve{AD}\\).\nRéciproquement, soit \\(\\ve{AC} = \\ve{AB}+\\ve{AD}\\), ainsi, puisque \\(\\ve{DA}+\\ve{AD} = \\ve{0}\\), \\[\\ve{DC} = \\ve{DA}+\\ve{AC} = \\ve{DA}+\\ve{AB}+\\ve{AD} = \\ve{AB}\\]\nDonc \\(ABCD\\) est un parallélogramme.\n\n\n\nSavoir-Faire : Reconnaître un parallélogramme — Raisonner\n\nLes points \\(O\\), \\(A\\), \\(B\\), \\(C\\), \\(E\\), \\(F\\) vérifient \\(\\ve{OE} = \\ve{OA}+\\ve{OB}\\) et \\(\\ve{OF} = \\ve{OB}+\\ve{OC}\\).\nMontrer que \\(AEFC\\) est un parallélogramme.\n\n\nAfficher la correction :\n\n\\(\\ve{OE} = \\ve{OA}+\\ve{OB}\\) signifie que \\(OAEB\\) est un parallélogramme (identité du parallélogramme), donc \\(\\ve{AE} = \\ve{OB}\\).\n\\(\\ve{OF} = \\ve{OB}+\\ve{OC}\\) signifie que \\(OBFC\\) est un parallélogramme, donc \\(\\ve{CF} = \\ve{OB}\\).\nAinsi \\(\\ve{AE} = \\ve{CF}\\), d’où \\(AEFC\\) est un parallélogramme.\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Identité du parallélogramme"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/vecteurs_colineaires.html",
+    "href": "seconde-maths/vecteurs_translation/vecteurs_colineaires.html",
+    "title": "Vecteurs colinéaires",
+    "section": "",
+    "text": "Définition : Vecteurs colinéaires\nDeux vecteurs \\(\\ve{u}\\) et \\(\\ve{v}\\) sont colinéaires s’il existe un réel \\(k\\) tel que \\(\\ve{u} = k\\,\\ve{v}\\) (ou \\(\\ve{v} = k\\,\\ve{u}\\)).\nEn particulier, le vecteur nul \\(\\ve{0}\\) est colinéaire à tout vecteur.\n\n\nIllustration graphique : \n\\[\\ve{v} = 1{,}5\\,\\ve{u} \\qquad \\text{et} \\qquad \\ve{w} = -2{,}3\\,\\ve{u}\\]\nLes vecteurs \\(\\ve{u}\\), \\(\\ve{v}\\) et \\(\\ve{w}\\) sont colinéaires.\n\n\n\n\n\nRemarque : \nDeux vecteurs sont colinéaires si et seulement si ils sont de même direction (ou de directions opposées).\n\n\n\nSavoir-Faire : Tester la colinéarité — Raisonner\n\nOn considère deux vecteurs \\(\\ve{u}\\) et \\(\\ve{v}\\) tels que : \\[\\ve{u} = 2\\ve{AB}-\\ve{AC} \\qquad \\text{et} \\qquad \\ve{v} = \\ve{AC}-2\\ve{AB}\\]\nLes vecteurs \\(\\ve{u}\\) et \\(\\ve{v}\\) sont-ils colinéaires ?\n\n\nAfficher la correction :\n\n\\[\\ve{v} = \\ve{AC}-2\\ve{AB} = -(2\\ve{AB}-\\ve{AC}) = -\\ve{u}\\]\nLes vecteurs sont colinéaires.\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Vecteurs colinéaires"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/vecteurs_translation/produit_reel.html",
+    "href": "seconde-maths/vecteurs_translation/produit_reel.html",
+    "title": "Produit d’un vecteur par un réel",
+    "section": "",
+    "text": "Définition : Produit par un réel\nSoit \\(\\lambda \\in \\R\\) et \\(\\ve{u}\\) un vecteur non nul. Le produit \\(\\lambda\\ve{u}\\) est le vecteur qui a :\n\nla même direction que \\(\\ve{u}\\) ;\nle même sens que \\(\\ve{u}\\) si \\(\\lambda &gt; 0\\), le sens contraire si \\(\\lambda &lt; 0\\) ;\npour norme \\(|\\lambda|\\cdot\\norm{\\ve{u}}\\).\n\nPar convention, \\(0\\cdot\\ve{u} = \\ve{0}\\).\n\n\nRécapitulatif selon le signe de \\(\\lambda\\) : \n\n\n\n\n\n\n\n\nCondition\nSens\nNorme\n\n\n\n\n\\(\\lambda &gt; 0\\)\nmême sens que \\(\\ve{u}\\)\n\\(\\lambda\\norm{\\ve{u}}\\)\n\n\n\\(\\lambda &lt; 0\\)\nsens contraire à \\(\\ve{u}\\)\n\\(\\vert\\lambda\\vert\\norm{\\ve{u}}\\)\n\n\n\\(\\lambda = 0\\)\nvecteur nul\n\\(0\\)\n\n\n\n\n\n\n\n\nPropriété : Distributivité (admis)\nPour tous vecteurs \\(\\ve{u}\\), \\(\\ve{v}\\) et tous réels \\(k\\), \\(m\\) : \\[k(\\ve{u}+\\ve{v}) = k\\ve{u}+k\\ve{v} \\qquad \\text{et} \\qquad (k+m)\\ve{u} = k\\ve{u}+m\\ve{u}\\]\n\n\n\nSavoir-Faire : Simplifier des expressions vectorielles — Calculer\n\nSoient \\(\\ve{u}\\) et \\(\\ve{v}\\) deux vecteurs.\n\nOn donne \\(2\\ve{u}+3\\ve{v}-5\\ve{u} = \\ve{0}\\). Montrer que \\(\\ve{u} = \\ve{v}\\).\nOn donne \\(-3(\\ve{u}+2\\ve{v}) = 2\\ve{v}+\\ve{u}\\). Que peut-on dire des vecteurs \\(\\ve{u}\\) et \\(\\ve{v}\\) ?\n\n\n\nAfficher la correction :\n\n\n\\((2-5)\\ve{u}+3\\ve{v} = -3\\ve{u}+3\\ve{v} = \\ve{0}\\), donc \\(3\\ve{v} = 3\\ve{u}\\), soit \\(\\ve{u} = \\ve{v}\\).\n\\(-3\\ve{u}-6\\ve{v} = 2\\ve{v}+\\ve{u}\\), donc \\(-4\\ve{u} = 8\\ve{v}\\), soit \\(\\ve{u} = -2\\ve{v}\\).\nLes vecteurs \\(\\ve{u}\\) et \\(\\ve{v}\\) ont même direction et de sens contraires, et \\(\\norm{\\ve{u}} = 2\\norm{\\ve{v}}\\).\n\n\n\n\n\nExercice : Écriture contrainte — Calculer, Raisonner\n\nSoient \\(A\\), \\(B\\), \\(C\\) trois points non alignés, et \\(M\\) un point du plan.\nOn suppose que \\[\\ve{MA} = 3\\ve{MB} - \\ve{MC}\\]\nExprimer \\(\\ve{AM}\\) en fonction de \\(\\ve{AB}\\) et \\(\\ve{AC}\\).\n\n\nAfficher la correction :\n\nOn a : \\[\\ve{MA} = 3\\ve{MB} - \\ve{MC}\\]\nD’après la relation de Chasles : \\[\\ve{MA} = 3(\\ve{MA}+\\ve{AB}) - (\\ve{MA}+\\ve{AC})\\]\nDonc, \\[\\ve{MA} = 3\\ve{MA} + 3\\ve{AB} - \\ve{MA} - \\ve{AC} = 2\\ve{MA} + 3\\ve{AB} - \\ve{AC}\\]\nAinsi \\(2\\ve{MA} = 2\\ve{AB} - \\ve{AC}\\), d’où : \\[\\ve{AM} = -\\ve{AB} + \\frac{1}{2}\\ve{AC}\\]\n\n\n\nPoint méthode — écrire un vecteur dans une base : \nOn cherche souvent à exprimer un vecteur \\(\\ve{AM}\\) en fonction de \\(\\ve{AB}\\) et \\(\\ve{AC}\\) sous la forme : \\[\\ve{AM} = \\alpha\\ve{AB} + \\beta\\ve{AC}\\] afin de montrer des relations.\nOn dit que l’on décompose le vecteur \\(\\ve{AM}\\) dans la base \\(\\left(\\ve{AB}\\,;\\,\\ve{AC}\\right)\\).\nEn pratique, on cherche à écrire les deux vecteurs dans la même base, puis à montrer que l’un est multiple de l’autre ou à exhiber les coordonnées d’un point.\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 3 : Vecteurs — Translation",
+      "Produit d'un vecteur par un réel"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/fonctions_affines/vocabulaire_fonctions.html",
+    "href": "seconde-maths/fonctions_affines/vocabulaire_fonctions.html",
+    "title": "Vocabulaire des fonctions",
+    "section": "",
+    "text": "Définition : Fonction\nUne fonction \\(f\\) définie sur un ensemble \\(D\\) associe à tout réel \\(x \\in D\\) un unique réel noté \\(f(x)\\).\n\n\\(D\\) s’appelle l’ensemble de définition de \\(f\\).\n\\(f(x)\\) est l’image de \\(x\\) par \\(f\\).\n\\(x\\) est un antécédent de \\(f(x)\\) par \\(f\\).\n\n\n\nImage et antécédent — mémo : \n\nCalculer une image : on connaît \\(x\\), on calcule \\(f(x)\\).\nChercher un antécédent : on connaît \\(f(x)\\) (le résultat), on cherche \\(x\\). On résout une équation.\n\n\n\n\nSavoir-Faire : Calculer une image et chercher un antécédent — Calculer\n\nSoit \\(f\\) la fonction définie sur \\(\\R\\) par \\(f(x)=2x-3\\).\n\nCalculer \\(f(4)\\).\nDéterminer le ou les antécédents de \\(5\\) par \\(f\\).\n\n\n\nAfficher la correction :\n\n\n\\(f(4)=2\\times 4-3=8-3=5\\). L’image de \\(4\\) par \\(f\\) est \\(\\mathbf{5}\\).\nOn cherche \\(x\\) tel que \\(f(x)=5\\) : \\(2x-3=5 \\iff 2x=8 \\iff x=4\\). L’unique antécédent de \\(5\\) par \\(f\\) est \\(\\mathbf{4}\\).\n\n\n\n\nRemarque : \nUn réel peut avoir plusieurs antécédents, un seul, ou aucun. Par exemple, pour la fonction \\(g\\) définie par \\(g(x)=x^2\\) :\n\n\\(g(2)=4\\) et \\(g(-2)=4\\) : le réel \\(4\\) a deux antécédents, \\(2\\) et \\(-2\\).\nLe réel \\(-1\\) n’a aucun antécédent (un carré est toujours positif).\n\nGraphiquement, la courbe de \\(g\\) est une parabole : une droite horizontale \\(y=k\\) peut couper cette courbe en \\(0\\), \\(1\\) ou \\(2\\) points selon la valeur de \\(k\\).\n\n\n\nExercice : Images et antécédents — Calculer, Raisonner\n\nSoit \\(h\\) la fonction définie sur \\(\\R\\) par \\(h(x)=x^2-1\\).\nPour chaque question, préciser s’il s’agit d’un calcul d’image ou d’une recherche d’antécédent.\n\nCalculer \\(h(0)\\), \\(h(3)\\) et \\(h(-3)\\).\n\n\n\nAfficher la correction :\n\nIl s’agit de calculs d’images. \\(h(0)=0-1=-1\\) ; \\(h(3)=9-1=8\\) ; \\(h(-3)=9-1=8\\).\n\n\nDéterminer les antécédents de \\(3\\) par \\(h\\).\n\n\n\nAfficher la correction :\n\nIl s’agit d’une recherche d’antécédents. On résout \\(x^2-1=3\\), soit \\(x^2=4\\), d’où \\(x=2\\) ou \\(x=-2\\). Les antécédents de \\(3\\) sont \\(\\mathbf{2}\\) et \\(\\mathbf{-2}\\).\n\n\nDéterminer les antécédents de \\(-2\\) par \\(h\\).\n\n\n\nAfficher la correction :\n\nIl s’agit d’une recherche d’antécédents. On résout \\(x^2-1=-2\\), soit \\(x^2=-1\\). Il n’existe aucun réel dont le carré est négatif : \\(-2\\) n’a aucun antécédent par \\(h\\).\n\n\n\n\n➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 2 : Fonctions affines",
+      "Vocabulaire des fonctions"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/fonctions_affines/resolution_equations.html",
+    "href": "seconde-maths/fonctions_affines/resolution_equations.html",
+    "title": "Résolution d’équations — intersection",
+    "section": "",
+    "text": "Savoir-Faire : Résoudre \\(f(x)=k\\) algébriquement — Calculer\n\nRésoudre \\(3x-1=5\\).\n\n\nAfficher la correction :\n\nPour tout réel \\(x\\), \\(3x-1=5 \\iff 3x=6 \\iff x=2\\).\nL’équation a pour solution \\(S= \\{2\\}\\).\n\n\n\n\nSavoir-Faire : Résoudre \\(f(x)=g(x)\\) algébriquement — Calculer\n\nRésoudre \\(-2x+7=3x-3\\).\n\n\nAfficher la correction :\n\nPour tout réel \\(x\\), \\[-2x+7=3x-3 \\iff -2x-3x=-3-7 \\iff -5x=-10 \\iff x=2\\]\nL’équation a pour unique solution \\(S= \\{2\\}\\).\n\n\n\nLien avec l’intersection de droites : \nRésoudre \\(f(x)=g(x)\\), c’est trouver la valeur de \\(x\\) pour laquelle les représentations graphiques de \\(f\\) et \\(g\\) se coupent.\nGraphiquement : le point d’intersection des droites \\(y=f(x)\\) et \\(y=g(x)\\) a pour abscisse la solution de \\(f(x)=g(x)\\).\n\n\n\nSavoir-Faire : Résolution graphique — Représenter, Calculer\n\nRésoudre graphiquement \\(-x+4=2x-2\\).\n\n\nAfficher la correction :\n\nPoint clef : on réécrit l’équation sous la forme \\(f(x)=g(x)\\) avec \\(f(x)=-x+4\\) et \\(g(x)=2x-2\\), puis on cherche l’abscisse du point d’intersection des deux droites.\nOn trace les droites \\(y=-x+4\\) et \\(y=2x-2\\).\nLes deux droites se coupent au point \\((2\\,;\\,2)\\), ainsi \\(S=\\{2\\}\\).\n\n\n\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 2 : Fonctions affines",
+      "Résolution d'équations — intersection"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/fonctions_affines/fonctions_par_morceaux.html",
+    "href": "seconde-maths/fonctions_affines/fonctions_par_morceaux.html",
+    "title": "Fonctions affines par morceaux",
+    "section": "",
+    "text": "Définition : Fonction affine par morceaux\nUne fonction affine par morceaux est une fonction qui est affine sur chacun des morceaux où elle est définie.\n\n\n\nSavoir-Faire : Calculer des images — Calculer\n\nSoit \\(f\\) définie par \\[f(x) = \\begin{cases} 2x+1 & \\text{si } x &lt; 2 \\\\ -x+7 & \\text{si } x \\geq 2 \\end{cases}\\]\nCalculer \\(f(0)\\), \\(f(2)\\), \\(f(5)\\).\n\n\nAfficher la correction :\n\nPoint clef : on identifie d’abord l’intervalle auquel appartient la valeur, puis on applique l’expression correspondante.\n\n\\(0&lt;2\\) : \\(f(0)=2\\times 0+1=1\\).\n\\(2\\geq 2\\) : \\(f(2)=-2+7=5\\).\n\\(5\\geq 2\\) : \\(f(5)=-5+7=2\\).\n\n\n\n\n\nSavoir-Faire : Chercher les antécédents — Calculer, Raisonner\n\nAvec la même fonction \\(f\\), chercher les antécédents de \\(3\\).\n\n\nAfficher la correction :\n\nPoint clef : pour une fonction définie par morceaux, on résout l’équation séparément sur chaque intervalle de définition, puis on vérifie que la solution trouvée appartient bien à cet intervalle.\n\nPour tout \\(x &lt;2\\), \\(2x+1=3 \\iff 2x=2 \\iff x=1\\). Or \\(1&lt;2\\), donc \\(x=1\\) est un antécédent.\nPour tout \\(x\\geq 2\\), \\(-x+7=3 \\iff -x=-4 \\iff x=4\\). Or \\(4\\geq 2\\). Donc \\(x=4\\) est un antécédent.\n\n\\(3\\) a deux antécédents : \\(1\\) et \\(4\\).\n\n\n\nMéthode — Tracer une fonction affine par morceaux : \n\nPour chaque morceau, identifier l’expression affine et la condition sur \\(x\\).\nCalculer deux points par morceau en choisissant des valeurs de \\(x\\) dans le domaine correspondant.\nÀ la valeur de jonction, placer un point fermé \\(\\bullet\\) si la valeur est incluse (\\(\\leq\\) ou \\(\\geq\\)), et un point ouvert \\(\\circ\\) si elle est exclue (\\(&lt;\\) ou \\(&gt;\\)).\nTracer chaque morceau de droite séparément.\n\n\n\n\nSavoir-Faire : Tracer une fonction affine par morceaux\n\nTracer la représentation graphique de \\(f\\) définie par \\[f(x) = \\begin{cases} 2x+1 & \\text{si } x &lt; 2 \\\\ -x+7 & \\text{si } x \\geq 2 \\end{cases}\\]\n\n\nAfficher la correction :\n\nMorceau 1 (\\(x&lt;2\\)) : deux points — \\(f(0)=1\\) et \\(f(1)=3\\). Point ouvert en \\(x=2\\) car \\(x&lt;2\\).\nMorceau 2 (\\(x\\geq 2\\)) : deux points — \\(f(2)=5\\) et \\(f(4)=3\\). Point fermé en \\(x=2\\) car \\(x\\geq 2\\).\n\n\n\n\n\n\n\nExercice : Calculer avec une fonction définie par morceaux — Calculer, Raisonner\n\nSoit \\(g\\) définie par \\[g(x) = \\begin{cases} 3x-2 & \\text{si } x \\leq 1 \\\\ -2x+6 & \\text{si } x &gt; 1 \\end{cases}\\]\n\nCalculer \\(g(-1)\\) et \\(g(3)\\).\n\n\n\nAfficher la correction :\n\n\\(-1\\leq 1\\) donc \\(g(-1)=3\\times(-1)-2=-5\\) et \\(3&gt;1\\) donc \\(g(3)=-2\\times 3+6=0\\).\n\n\nChercher les antécédents de \\(1\\) par \\(g\\).\n\n\n\nAfficher la correction :\n\n\nPour tout \\(x\\leq 1\\), \\(3x-2=1 \\iff 3x=3 \\iff x=1\\). Or \\(1\\leq 1\\) donc \\(1\\) est un antécédent de \\(1\\) par \\(g\\).\nPour tout \\(x&gt;1\\), \\(-2x+6=1 \\iff -2x=-5 \\iff x=\\dfrac{5}{2}\\). Or \\(\\dfrac{5}{2}&gt;1\\), donc \\(\\dfrac{5}{2}\\) est un antécédent de \\(1\\) par \\(g\\).\n\nLes antécédents de \\(1\\) sont \\(\\mathbf{1}\\) et \\(\\mathbf{\\dfrac{5}{2}}\\).\n\n\nChercher les antécédents de \\(4\\) par \\(g\\).\n\n\n\nAfficher la correction :\n\n\nPour tout \\(x\\leq 1\\), \\(3x=6 \\iff x=2\\). Or \\(2\\leq 1\\) est faux, donc \\(x=2\\) n’est pas un antécédent.\nPour tout \\(x&gt;1\\), on résout \\(-2x+6=4\\). \\(-2x=-2 \\iff x=1\\). Or \\(1&gt;1\\) est faux, donc \\(x=1\\) n’est pas un antécédent.\n\n\\(4\\) n’a aucun antécédent.\n\n\nTracer la représentation graphique de la fonction \\(g\\), et retrouver les résultats des questions précédentes.\n\n\n\nAfficher la correction :\n\nMorceau 1 (\\(x\\leq 1\\)) : \\(g(0)=-2\\) et \\(g(1)=1\\). Point fermé en \\(x=1\\).\nMorceau 2 (\\(x&gt;1\\)) : \\(g(2)=2\\) et \\(g(4)=-2\\). Point ouvert en \\(x=1\\).\n\n\n\nOn retrouve graphiquement :\n\n\\(g(-1)=-5\\), \\(g(1)=1\\), \\(g(3)=0\\).\nLa droite horizontale \\(y=1\\) coupe la courbe en \\(x=1\\) et \\(x=\\dfrac{5}{2}\\) : ce sont bien les deux antécédents de \\(1\\).\nLa droite horizontale \\(y=4\\) ne coupe pas la courbe : \\(4\\) n’a aucun antécédent.\n\n\n\n\n\n⬅️➡️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 2 : Fonctions affines",
+      "Fonctions affines par morceaux"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/fonctions_affines/synthese.html",
+    "href": "seconde-maths/fonctions_affines/synthese.html",
+    "title": "Synthèse — Carte mentale",
+    "section": "",
+    "text": "⬅️\n\n Back to top",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 2 : Fonctions affines",
+      "Synthèse — Carte mentale"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/fonctions_affines/variations.html",
+    "href": "seconde-maths/fonctions_affines/variations.html",
+    "title": "Variations d’une fonction affine",
+    "section": "",
+    "text": "Propriété : Variations selon le signe de \\(m\\)\nSoit \\(f(x)=mx+p\\) une fonction affine.\n\nSi \\(m&gt;0\\) : \\(f\\) est strictement croissante sur \\(\\R\\).\nSi \\(m&lt;0\\) : \\(f\\) est strictement décroissante sur \\(\\R\\).\nSi \\(m=0\\) : \\(f\\) est constante sur \\(\\R\\).",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 2 : Fonctions affines",
+      "Variations d'une fonction affine"
+    ]
+  },
+  {
+    "objectID": "seconde-maths/fonctions_affines/variations.html#représenter-les-variations",
+    "href": "seconde-maths/fonctions_affines/variations.html#représenter-les-variations",
+    "title": "Variations d’une fonction affine",
+    "section": "Représenter les variations",
+    "text": "Représenter les variations\nPour représenter graphiquement les variations d’une fonction affine, on utilise un tableau de variations indiquant le sens de variation.\n\n \n\n\n\nSavoir-Faire : Dresser le tableau de variations — Représenter\n\nPour chaque fonction, dresser le tableau de variations : \\[f(x)=4x-1 \\qquad g(x)=-\\frac{1}{3}x+2 \\qquad h(x)=7\\]\n\n\nAfficher la correction :\n\n\\(f\\) : \\(m=4&gt;0\\), donc \\(f\\) est strictement croissante.\n\\(g\\) : \\(m=-\\dfrac{1}{3}&lt;0\\), donc \\(g\\) est strictement décroissante.\n\\(h\\) : \\(m=0\\), donc \\(h\\) est constante.\n\n \n\n\n\n\n\nExercice : Reconnaître \\(m\\) à partir d’un tableau de variations — Raisonner\n\nUne fonction affine est décroissante sur \\(\\R\\).\n\nQue peut-on dire du signe de \\(m\\) ?\n\n\n\nAfficher la correction :\n\n\\(m&lt;0\\).\n\n\nDonner deux exemples de fonctions affines décroissantes.\n\n\n\nAfficher la correction :\n\nPar exemple \\(f(x)=-x+1\\) et \\(g(x)=-3x-2\\).\n\n\n\n\n⬅️➡️",
+    "crumbs": [
+      "Seconde",
+      "Chapitre 2 : Fonctions affines",
+      "Variations d'une fonction affine"
+    ]
+  },
+  {
+    "objectID": "terminale-maths/index.html",
+    "href": "terminale-maths/index.html",
+    "title": "Cours de Terminale",
+    "section": "",
+    "text": "No matching items\n\n Back to top",
+    "crumbs": [
+      "Terminale",
+      "Cours de Terminale"
+    ]
+  },
+  {
+    "objectID": "premiere-maths/index.html",
+    "href": "premiere-maths/index.html",
+    "title": "Cours de Première",
+    "section": "",
+    "text": "No matching items\n\n Back to top",
+    "crumbs": [
+      "Première",
+      "Cours de Première"
+    ]
   }
 ]

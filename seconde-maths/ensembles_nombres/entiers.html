@@ -8,7 +8,7 @@
 
 <meta name="description" content="N, Z, multiples, diviseurs, parité, notation étoile">
 
-<title>Entiers naturels et relatifs, multiples et diviseurs – Site pédagogique</title>
+<title>Entiers naturels et relatifs, multiples et diviseurs – Mathématiques — Christophe Deguil</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../seconde-maths/ensembles_nombres/rationnels_decimaux.html" rel="next">
+<link href="../../seconde-maths/ensembles_nombres/vocabulaire.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -103,8 +105,9 @@ window.MathJax = {
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
       D: "\\mathbb{D}",
-      Div: "\\Div",
       epsilon: "\\varepsilon",
+      pgcd: "\\operatorname{pgcd}",
+      Div: "\\operatorname{Div}",
 
       // --- Mises en forme / utilitaires ---
       rem: "\\mathbf{Remarque\\ :\\ }",
@@ -131,7 +134,6 @@ window.MathJax = {
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
       bar: ["\\overline {#1}",1],
-
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -187,7 +189,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Site pédagogique</span>
+    <span class="navbar-title">Mathématiques — Christophe Deguil</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -213,6 +215,13 @@ window.Quarto = {
 <span class="menu-text">Terminale</span></a>
   </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/chris-deguil/maths"> <i class="bi bi-github" role="img" aria-label="Dépôt GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -236,7 +245,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../assets/images/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
     <div class="sidebar-menu-container"> 
@@ -302,6 +311,160 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/notation_scientifique.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Notation scientifique</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 2 : Fonctions affines</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/fonctions_affines/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 2 : Fonctions affines</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/fonctions_affines/vocabulaire_fonctions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vocabulaire des fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/fonctions_affines/definition_fonction_affine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonctions affines : définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/fonctions_affines/determiner_expression.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Déterminer l’expression d’une fonction affine</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/fonctions_affines/representation_graphique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Représentation graphique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/fonctions_affines/appartenance_droite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appartenance d’un point à une droite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/fonctions_affines/variations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variations d’une fonction affine</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/fonctions_affines/resolution_equations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Résolution d’équations — intersection</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/fonctions_affines/fonctions_par_morceaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonctions affines par morceaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/fonctions_affines/synthese.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Synthèse — Carte mentale</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 3 : Vecteurs — Translation</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 3 : Vecteurs — Translation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/translation_vecteur.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Translation et notion de vecteur</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/vecteurs_egaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vecteurs égaux — représentants</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/somme_vecteurs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Somme de deux vecteurs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/relation_chasles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Relation de Chasles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/identite_parallelogramme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Identité du parallélogramme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/vecteur_oppose.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vecteur opposé</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/produit_reel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Produit d’un vecteur par un réel</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/milieu_segment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milieu d’un segment et vecteurs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/vecteurs_colineaires.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vecteurs colinéaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/alignement_parallelisme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Alignement et parallélisme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/vecteurs_translation/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bilan — Carte mentale</span></a>
   </div>
 </li>
       </ul>
@@ -374,9 +537,9 @@ window.Quarto = {
 <p><span class="bloc-titre">Remarque : </span></p>
 <p><span class="math inline">\(0\)</span> est multiple de tout entier (car <span class="math inline">\(0 = 0 \times b\)</span>). Tout entier <span class="math inline">\(a\)</span> est divisible par <span class="math inline">\(1\)</span> et par lui-même.</p>
 </div>
-<div class="bloc ex">
+<div class="bloc sfc">
 <div class="bloc-titre">
-Exercice :<span class="exemp-extra"> Multiples et diviseurs — Calculer, Raisonner</span>
+Savoir-Faire :<span class="exemp-extra"> Multiples et diviseurs — Calculer, Raisonner</span>
 </div>
 <ol type="1">
 <li>Donner l’ensemble <span class="math inline">\(\Div(24)\)</span> de tous les diviseurs de <span class="math inline">\(24\)</span>.</li>
@@ -431,7 +594,7 @@ Démonstration :
 <div class="nav-pages"><a class="prev" href="vocabulaire.html" title="Vocabulaire ensembliste">⬅️</a><a class="next" href="rationnels_decimaux.html" title="Nombres rationnels et nombres décimaux">➡️</a></div>
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -996,18 +1159,41 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../seconde-maths/ensembles_nombres/vocabulaire.html" class="pagination-link" aria-label="Vocabulaire ensembliste">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Vocabulaire ensembliste</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../seconde-maths/ensembles_nombres/rationnels_decimaux.html" class="pagination-link" aria-label="Nombres rationnels et nombres décimaux">
+        <span class="nav-page-text">Nombres rationnels et nombres décimaux</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 — Cours de Mathématiques</p>
+<p>© 2026 — Christophe Deguil</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="../../">Accueil</a> · <a href="../../index.html">Plan du site</a> · <a href="mailto:christophe.Deguil@ac-versailles.fr">Contact</a></p>
-</div>
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+<p>Accueil</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:christophe.Deguil@ac-versailles.fr">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
   </div>
 </footer>
 
