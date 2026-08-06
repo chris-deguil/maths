@@ -24,8 +24,6 @@ ensure_ignore "*.pkg"
 ensure_ignore "*.exe"
 
 # 2) Retirer de l'index tout fichier déjà suivi qui ne doit pas l'être
-#    (ex: _site/* et *.deb si jamais ils ont été ajoutés)
-#    -> sans supprimer tes fichiers locaux
 mapfile -d '' TRACKED_BAD < <(git ls-files -z -- '_site/*' '.quarto/*' '*.deb' '*.msi' '*.pkg' '*.exe' || true)
 if (( ${#TRACKED_BAD[@]} )); then
   git rm -r --cached --quiet -- "${TRACKED_BAD[@]}"
@@ -35,9 +33,7 @@ fi
 # 3) Garde-fou: refuser de committer des fichiers > 95 Mo
 check_large_staged() {
   local too_big=0
-  # Lister ce qui est prêt à être committé après 'git add'
   while IFS= read -r -d '' path; do
-    # Ignorer les suppressions
     if [[ -f "$path" ]]; then
       size_bytes=$(wc -c < "$path")
       if (( size_bytes > 95*1024*1024 )); then
@@ -49,24 +45,23 @@ check_large_staged() {
   return $too_big
 }
 
-# 4) Ajouter et committer
+# 4) Ajouter et committer le code source
 git add -A
 
-# Empêcher l'ajout d'un gros fichier par erreur
 if ! check_large_staged; then
   echo "Astuce: ajoute ces gros fichiers à .gitignore ou déplace-les hors du dépôt."
   exit 1
 fi
 
-# Rien à committer ?
 if git diff --cached --quiet; then
-  echo "Rien à committer (aucune modification indexée)."
-  exit 0
+  echo "Aucune modification détectée dans les fichiers sources."
+else
+  git commit -m "$MSG"
+  git push
+  echo "✅ Modifications du code source envoyées sur main."
 fi
 
-# Commit
-git commit -m "$MSG"
-
-# 5) Push
-git push
-echo "✅ Modifications envoyées. La publication automatique va se lancer sur GitHub."
+# 5) Compilation et publication automatique du site
+echo "🚀 Publication du site avec Quarto..."
+quarto publish gh-pages --no-prompt
+echo "✅ Publication terminée."

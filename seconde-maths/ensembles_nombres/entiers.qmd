@@ -36,10 +36,8 @@ Soient $a \in \Z$ et $b \in \N^*$.
 $0$ est multiple de tout entier (car $0 = 0 \times b$). Tout entier $a$ est divisible par $1$ et par lui-même.
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Multiples et diviseurs — Calculer, Raisonner </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Multiples et diviseurs — Calculer, Raisonner</span></div>
 
 1. Donner l'ensemble $\Div(24)$ de tous les diviseurs de $24$.
 

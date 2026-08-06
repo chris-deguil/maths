@@ -31,10 +31,8 @@ a^0 = 1 \quad (a \neq 0)
 a^{-n} = \frac{1}{a^n} \quad (a \neq 0)$$
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Utiliser un exposant négatif — Calculer </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Utiliser un exposant négatif — Calculer</span></div>
 
 Calculer $2^{-3}$.
 
@@ -58,10 +56,8 @@ $$a^m \times a^n = a^{m+n} \qquad
   \left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$$
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Règles de calcul — exposants numériques — Calculer </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Règles de calcul — exposants numériques — Calculer</span></div>
 
 Simplifier les expressions suivantes (résultat sans exposant négatif).
 
@@ -98,10 +94,8 @@ $4^{-3} \times 4^5 = 4^2 = 16$
 </details>
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Règles de calcul — exposant littéral $n$ — Calculer </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Règles de calcul — exposant littéral $n$ — Calculer</span></div>
 
 Simplifier les expressions suivantes ($a \neq 0$, $n \in \Z$).
 
