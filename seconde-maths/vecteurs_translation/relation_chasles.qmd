@@ -36,8 +36,8 @@ Elle se généralise à tout chemin de points :
 $$\ve{AZ} = \ve{AP_1} + \ve{P_1P_2} + \cdots + \ve{P_{n-1}Z}$$
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Simplifier par la relation de Chasles — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Simplifier par la relation de Chasles — Calculer</span></div>
 
 Simplifier les expressions suivantes.
 $$\ve{AB}+\ve{BC}+\ve{CD}+\ve{DA} \quad \text{et} \quad \ve{MA}+\ve{BC}+\ve{AM}$$
@@ -52,8 +52,8 @@ $$\ve{AB}+\ve{BC}+\ve{CD}+\ve{DA} \quad \text{et} \quad \ve{MA}+\ve{BC}+\ve{AM}$
 </details>
 :::
 
-::: {.bloc .sf}
-<div class="bloc-titre">Savoir faire :<span class="sf"> Point méthode — utiliser la relation de Chasles</span></div>
+::: {.bloc .rem}
+<span class="bloc-titre">Point méthode — utiliser la relation de Chasles : </span>
 
 Pour **simplifier** une somme, on enchaîne les vecteurs tête-à-queue : $\ve{AB}+\ve{BC} = \ve{AC}$ et $\ve{AB}+\ve{BC}+\ve{CA} = \ve{0}$.
 
@@ -62,10 +62,8 @@ Les **télescopages** sont utiles : $\ve{AB}+\ve{BC}+\ve{CD}+\ve{DA} = \ve{AA} =
 Pour **éclater** un vecteur, on introduit un point intermédiaire $M$ : $\ve{AC} = \ve{AM} + \ve{MC}$.
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Application de Chasles — Raisonner </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Application de Chasles — Raisonner</span></div>
 
 Peut-on trouver six points $A$, $B$, $C$, $D$, $E$, $F$ deux à deux distincts tels que :
 $$\ve{AC} + \ve{BD} + \ve{CF} + \ve{DA} + \ve{EB} = \ve{0}~?$$

@@ -33,8 +33,8 @@ Cette dernière forme est bien celle d'une fonction affine, avec $p=f(a)-ma$.
 Une fonction affine est entièrement déterminée par la donnée de deux points distincts de sa représentation graphique, ou bien par la donnée du coefficient directeur $m$ et d'un point.
 :::
 
-::: {.bloc .sf}
-<div class="bloc-titre">Savoir faire :<span class="sf"> Méthode — Déterminer $f(x)=mx+p$</span></div>
+::: {.bloc .rem}
+<span class="bloc-titre">Méthode — Déterminer $f(x)=mx+p$ : </span>
 
 1. **Écrire** $f(x)=mx+p$.
 2. **Calculer $m$** à partir des deux points $(x_1\,;\,y_1)$ et $(x_2\,;\,y_2)$ : $m=\dfrac{y_2-y_1}{x_2-x_1}$. (Si $m$ est déjà donné, passer à l'étape suivante.)
@@ -43,8 +43,8 @@ Une fonction affine est entièrement déterminée par la donnée de deux points 
 5. **Conclure** en écrivant l'expression de $f$.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Déterminer une fonction affine par deux points — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Déterminer une fonction affine par deux points — Calculer</span></div>
 
 Déterminer la fonction affine $f$ dont la courbe passe par $A(1\,;\,3)$ et $B(4\,;\,-3)$.
 
@@ -62,8 +62,8 @@ Ainsi $f(x)=-2x+5$.
 </details>
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Déterminer une fonction affine par un point et la pente — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Déterminer une fonction affine par un point et la pente — Calculer</span></div>
 
 Une droite a pour coefficient directeur $2$ et passe par $A(1\,;\,3)$. Déterminer son équation.
 
@@ -86,10 +86,8 @@ Ainsi $f(x)=2x+1$.
 Le point $B(5\,;\,13)$ appartient aussi à cette droite : cette information est vraie mais **inutile** — un seul point suffit quand $m$ est déjà connu.
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Déterminer une fonction affine par deux points — Calculer </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Déterminer une fonction affine par deux points — Calculer</span></div>
 
 Déterminer la fonction affine $f$ dont la courbe passe par $A(-1\,;\,5)$ et $B(3\,;\,-3)$.
 

@@ -41,8 +41,8 @@ Pour tous vecteurs $\ve{u}$, $\ve{v}$ et tous réels $k$, $m$ :
 $$k(\ve{u}+\ve{v}) = k\ve{u}+k\ve{v} \qquad \text{et} \qquad (k+m)\ve{u} = k\ve{u}+m\ve{u}$$
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Simplifier des expressions vectorielles — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Simplifier des expressions vectorielles — Calculer</span></div>
 
 Soient $\ve{u}$ et $\ve{v}$ deux vecteurs.
 
@@ -59,10 +59,8 @@ Soient $\ve{u}$ et $\ve{v}$ deux vecteurs.
 </details>
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Écriture contrainte — Calculer, Raisonner </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Écriture contrainte — Calculer, Raisonner</span></div>
 
 Soient $A$, $B$, $C$ trois points non alignés, et $M$ un point du plan.
 
@@ -88,8 +86,8 @@ $$\ve{AM} = -\ve{AB} + \frac{1}{2}\ve{AC}$$
 </details>
 :::
 
-::: {.bloc .sf}
-<div class="bloc-titre">Savoir faire :<span class="sf"> Point méthode — écrire un vecteur dans une base</span></div>
+::: {.bloc .rem}
+<span class="bloc-titre">Point méthode — écrire un vecteur dans une base : </span>
 
 On cherche souvent à exprimer un vecteur $\ve{AM}$ en fonction de $\ve{AB}$ et $\ve{AC}$ sous la forme :
 $$\ve{AM} = \alpha\ve{AB} + \beta\ve{AC}$$

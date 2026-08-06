@@ -62,8 +62,8 @@ Donc $a \times c = (b \times d) \times p$, ce qui donne $p = \dfrac{ac}{bd}$.
 Pour rendre une fraction **irréductible**, on divise numérateur et dénominateur par leur $\pgcd$. La décomposition en facteurs premiers fournit ce $\pgcd$.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Calculs sur les fractions — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculs sur les fractions — Calculer</span></div>
 
 Calculer et donner le résultat sous forme irréductible.
 
@@ -106,10 +106,8 @@ $$
 </details>
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Calculer des expressions fractionnaires — Calculer </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Calculer des expressions fractionnaires — Calculer</span></div>
 
 Calculer les expressions suivantes :
 

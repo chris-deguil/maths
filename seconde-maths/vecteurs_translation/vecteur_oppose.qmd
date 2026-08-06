@@ -26,8 +26,8 @@ Deux vecteurs sont opposés si et seulement s'ils ont même norme, même directi
 Soit $\ve{u} = \ve{AB}$, alors $-\ve{u} = \ve{BA}$.
 :::
 
-::: {.bloc .sf}
-<div class="bloc-titre">Savoir faire :<span class="sf"> Point méthode — soustraire deux vecteurs</span></div>
+::: {.bloc .rem}
+<span class="bloc-titre">Point méthode — soustraire deux vecteurs : </span>
 
 Soustraire un vecteur revient à ajouter son opposé :
 $$\ve{u} - \ve{v} = \ve{u} + (-\ve{v})$$
@@ -36,8 +36,8 @@ En pratique, pour simplifier $\ve{AC} - \ve{BC}$, on écrit :
 $$\ve{AC} - \ve{BC} = \ve{AC} + \ve{CB} = \ve{AB}$$
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Simplifier une différence de vecteurs — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Simplifier une différence de vecteurs — Calculer</span></div>
 
 Simplifier $2\ve{AB}+\ve{BC}-\ve{AC}$.
 
@@ -48,10 +48,8 @@ $$2\ve{AB}+\ve{BC}-\ve{AC} = 2\ve{AB}+\ve{BC}-(\ve{AB}+\ve{BC}) = 2\ve{AB}+\ve{B
 </details>
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Vecteur opposé dans un parallélogramme — Calculer, Raisonner </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Vecteur opposé dans un parallélogramme — Calculer, Raisonner</span></div>
 
 Soit $ABCD$ un parallélogramme.
 

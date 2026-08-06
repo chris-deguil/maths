@@ -40,8 +40,8 @@ Pour représenter graphiquement les variations d'une fonction affine, on utilise
   <img src="../../image/seconde/Fonction_Affine_signe2.png" style="width: 45%;">
 </div>
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Dresser le tableau de variations — Représenter</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Dresser le tableau de variations — Représenter</span></div>
 
 Pour chaque fonction, dresser le tableau de variations :
 $$f(x)=4x-1 \qquad g(x)=-\frac{1}{3}x+2 \qquad h(x)=7$$
@@ -62,10 +62,8 @@ $h$ : $m=0$, donc $h$ est constante.
 </details>
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Reconnaître $m$ à partir d'un tableau de variations — Raisonner </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Reconnaître $m$ à partir d'un tableau de variations — Raisonner</span></div>
 
 Une fonction affine est décroissante sur $\R$.
 

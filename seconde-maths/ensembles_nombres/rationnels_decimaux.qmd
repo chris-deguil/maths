@@ -17,8 +17,8 @@ Un réel $d$ est un **nombre décimal** s'il existe $a \in \Z$ et $n \in \N$ tel
 L'ensemble des nombres décimaux est noté $\D$.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Reconnaître un nombre décimal — Raisonner</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Reconnaître un nombre décimal — Raisonner</span></div>
 
 Parmi les nombres suivants, lesquels sont décimaux ? Justifier.
 $$0{,}25 \qquad \dfrac{1}{3} \qquad 3{,}14 \qquad 7$$

@@ -45,8 +45,8 @@ Lorsque deux ensembles n'ont aucun élément en commun, leur intersection est l'
   <img src="../../image/seconde/Nombres_Ensembles_diagramme_venn_operation.png" style="width: 90%;">
 </div>
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Appartenance, inclusion, réunion, intersection — Raisonner</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Appartenance, inclusion, réunion, intersection — Raisonner</span></div>
 
 On considère les ensembles $A = \{1\,;\,2\,;\,3\,;\,6\}$, $B = \{2\,;\,4\,;\,6\,;\,8\}$ et $C = \{2\,;\,6\}$.
 

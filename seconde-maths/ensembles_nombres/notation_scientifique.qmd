@@ -26,8 +26,8 @@ On dit que $x$ est écrit en **notation scientifique**.
 L'écriture en notation scientifique est **unique**. Cette unicité provient de la condition sur $a$, qui détermine à la fois la valeur de $a$ et celle de $n$.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Passer en notation scientifique — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Passer en notation scientifique — Calculer</span></div>
 
 1. Écrire en notation scientifique $0{,}000\,47$.
 
@@ -49,10 +49,8 @@ $2{,}5 \times 10^3 \times 4 \times 10^{-7}
 </details>
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> L'échiquier et la production mondiale de riz — Calculer, Modéliser </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> L'échiquier et la production mondiale de riz — Calculer, Modéliser</span></div>
 
 Sur un échiquier de $64$ cases, on pose $1$ grain sur la première case, puis on double à chaque case.
 

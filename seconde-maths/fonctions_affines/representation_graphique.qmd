@@ -66,8 +66,8 @@ d'où $y = mx + (y_A - mx_A) = mx + p$. Ainsi tout point de $(d)$ vérifie $y = 
 Le coefficient directeur $m=\dfrac{a}{b}$ indique l'inclinaison de la droite par rapport à l'axe des abscisses : quand on **avance de $b$** vers la droite, on **monte de $a$** (ou descend si $a<0$).
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tracer la droite représentative : méthode 1</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Tracer la droite représentative : méthode 1</span></div>
 
 Tracer la droite représentative de la fonction $f$ définie par $f(x)=-\dfrac{2}{3}x+2$.
 
@@ -87,8 +87,8 @@ On choisit des valeurs de $x$ multiples de $3$ (dénominateur de $m$) pour évit
 </details>
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tracer la droite représentative : méthode 2</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Tracer la droite représentative : méthode 2</span></div>
 
 Tracer la droite représentative de la fonction $f$ définie par $f(x)=\dfrac{4}{3}x - 2$.
 
@@ -109,10 +109,8 @@ La représentation graphique de $f$ admet $-2$ comme ordonnée à l'origine et a
 Pour une fonction affine $f(x)=mx+p$ avec $m\neq 0$, tout réel admet **un unique antécédent**.
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Tracer une droite et lire un antécédent — Représenter, Calculer </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tracer une droite et lire un antécédent — Représenter, Calculer</span></div>
 
 Tracer la droite représentative de $g(x)=\dfrac{3}{2}x-1$. Lire graphiquement un antécédent de $3{,}5$ par $g$, puis le vérifier algébriquement.
 

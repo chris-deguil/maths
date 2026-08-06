@@ -14,8 +14,8 @@ order: 5
 Un point $M(a\,;\,b)$ appartient à la droite d'équation $y=mx+p$ si et seulement si $b=ma+p$.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tester l'appartenance à une droite — Raisonner</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Tester l'appartenance à une droite — Raisonner</span></div>
 
 La droite $(d)$ a pour équation $y=3x-1$.
 
@@ -36,10 +36,8 @@ $3\times 2-1=5\neq 4$. L'ordonnée calculée ($5$) est différente de celle de $
 </details>
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Tester l'appartenance à une droite — Raisonner </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tester l'appartenance à une droite — Raisonner</span></div>
 
 La droite $(d)$ a pour équation $y=2x+3$.
 

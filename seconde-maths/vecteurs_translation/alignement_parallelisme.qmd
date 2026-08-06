@@ -23,16 +23,16 @@ Soient $A$, $B$, $C$, $D$ des points du plan avec $A\neq B$ et $C\neq D$.
 2. Les droites $(AB)$ et $(CD)$ sont **parallèles** (ou confondues) si et seulement si $\ve{AB}$ et $\ve{CD}$ sont colinéaires.
 :::
 
-::: {.bloc .sf}
-<div class="bloc-titre">Savoir faire :<span class="sf"> Point méthode — démontrer un alignement ou un parallélisme</span></div>
+::: {.bloc .rem}
+<span class="bloc-titre">Point méthode — démontrer un alignement ou un parallélisme : </span>
 
 **Pour montrer que $A$, $B$, $C$ sont alignés :** exprimer $\ve{AB}$ et $\ve{AC}$ dans la même base vectorielle, puis exhiber $k$ tel que $\ve{AB} = k\,\ve{AC}$.
 
 **Pour montrer que $(AB)\parallel(CD)$ :** exprimer $\ve{AB}$ et $\ve{CD}$, puis exhiber $k$ tel que $\ve{AB} = k\,\ve{CD}$.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Démontrer un parallélisme — Calculer, Raisonner</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Démontrer un parallélisme — Calculer, Raisonner</span></div>
 
 $ABC$ est un triangle. Les points $I$ et $J$ sont définis par $\ve{AI} = \dfrac{1}{3}\ve{AB}$ et $\ve{AJ} = \dfrac{1}{3}\ve{AC}$.
 
@@ -61,8 +61,8 @@ Lorsque $\ve{AB}$ et $\ve{AC}$ ne sont pas colinéaires, cette décomposition es
 Pour montrer que deux vecteurs $\ve{u}$ et $\ve{v}$ sont colinéaires, on peut décomposer $\ve{u}$ et $\ve{v}$ en fonction de $\ve{AB}$ et $\ve{AC}$, et montrer que les coefficient obtenues sont proportionnelles.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Alignement de trois points — Raisonner, Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Alignement de trois points — Raisonner, Calculer</span></div>
 
 Soient $A$, $B$, $C$ trois points non alignés. Les points $M$ et $N$ sont définis par :
 $$\ve{AM} = 2\ve{AB} + \ve{AC} \qquad \text{et} \qquad \ve{AN} = 4\ve{AB} + 2\ve{AC}$$
@@ -80,10 +80,8 @@ Les vecteurs $\ve{AN}$ et $\ve{AM}$ sont colinéaires, donc les droites $(AM)$ e
 </details>
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Parallélisme par les vecteurs — Calculer, Raisonner </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Parallélisme par les vecteurs — Calculer, Raisonner</span></div>
 
 $ABC$ est un triangle. Les points $I$ et $J$ sont définis par $\ve{AI} = \dfrac{1}{3}\ve{AB}$ et $\ve{AJ} = 3\ve{AC}$.
 

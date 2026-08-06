@@ -14,8 +14,8 @@ order: 8
 Une **fonction affine par morceaux** est une fonction qui est affine sur chacun des morceaux où elle est définie.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Calculer des images — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer des images — Calculer</span></div>
 
 Soit $f$ définie par
 $$f(x) = \begin{cases} 2x+1 & \text{si } x < 2 \\ -x+7 & \text{si } x \geq 2 \end{cases}$$
@@ -33,8 +33,8 @@ Calculer $f(0)$, $f(2)$, $f(5)$.
 </details>
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Chercher les antécédents — Calculer, Raisonner</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Chercher les antécédents — Calculer, Raisonner</span></div>
 
 Avec la même fonction $f$, chercher les antécédents de $3$.
 
@@ -50,8 +50,8 @@ $3$ a **deux antécédents** : $1$ et $4$.
 </details>
 :::
 
-::: {.bloc .sf}
-<div class="bloc-titre">Savoir faire :<span class="sf"> Méthode — Tracer une fonction affine par morceaux</span></div>
+::: {.bloc .rem}
+<span class="bloc-titre">Méthode — Tracer une fonction affine par morceaux : </span>
 
 1. Pour chaque morceau, identifier l'expression affine et la condition sur $x$.
 2. Calculer deux points par morceau en choisissant des valeurs de $x$ dans le domaine correspondant.
@@ -59,8 +59,8 @@ $3$ a **deux antécédents** : $1$ et $4$.
 4. Tracer chaque morceau de droite séparément.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tracer une fonction affine par morceaux</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Tracer une fonction affine par morceaux</span></div>
 
 Tracer la représentation graphique de $f$ définie par
 $$f(x) = \begin{cases} 2x+1 & \text{si } x < 2 \\ -x+7 & \text{si } x \geq 2 \end{cases}$$
@@ -78,10 +78,8 @@ $$f(x) = \begin{cases} 2x+1 & \text{si } x < 2 \\ -x+7 & \text{si } x \geq 2 \en
 </details>
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Calculer avec une fonction définie par morceaux — Calculer, Raisonner </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Calculer avec une fonction définie par morceaux — Calculer, Raisonner</span></div>
 
 Soit $g$ définie par
 $$g(x) = \begin{cases} 3x-2 & \text{si } x \leq 1 \\ -2x+6 & \text{si } x > 1 \end{cases}$$

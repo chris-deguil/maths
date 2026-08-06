@@ -31,8 +31,8 @@ a^0 = 1 \quad (a \neq 0)
 a^{-n} = \frac{1}{a^n} \quad (a \neq 0)$$
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Utiliser un exposant négatif — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Utiliser un exposant négatif — Calculer</span></div>
 
 Calculer $2^{-3}$.
 
@@ -56,8 +56,8 @@ $$a^m \times a^n = a^{m+n} \qquad
   \left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$$
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Règles de calcul — exposants numériques — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Règles de calcul — exposants numériques — Calculer</span></div>
 
 Simplifier les expressions suivantes (résultat sans exposant négatif).
 
@@ -94,8 +94,8 @@ $4^{-3} \times 4^5 = 4^2 = 16$
 </details>
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Règles de calcul — exposant littéral $n$ — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Règles de calcul — exposant littéral $n$ — Calculer</span></div>
 
 Simplifier les expressions suivantes ($a \neq 0$, $n \in \Z$).
 
@@ -124,10 +124,8 @@ $\dfrac{(a^n)^3}{a^{n+1}} = \dfrac{a^{3n}}{a^{n+1}} = a^{2n-1}$
 </details>
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Simplifier des expressions avec puissances — Calculer </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Simplifier des expressions avec puissances — Calculer</span></div>
 
 Calculer ou simplifier les expressions suivantes.
 

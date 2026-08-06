@@ -44,8 +44,8 @@ $$\ve{MI} = \frac{1}{2}(\ve{MA}+\ve{MB})$$
 
 </details>
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Milieu et relation de Chasles — Calculer, Raisonner</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Milieu et relation de Chasles — Calculer, Raisonner</span></div>
 
 Soient $A$, $B$, $C$ trois points, et $I$, $J$ les milieux respectifs de $[AB]$ et $[BC]$.
 

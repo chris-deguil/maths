@@ -18,15 +18,15 @@ Une **fonction** $f$ définie sur un ensemble $D$ associe à tout réel $x \in D
 - $x$ est un **antécédent** de $f(x)$ par $f$.
 :::
 
-::: {.bloc .sf}
-<div class="bloc-titre">Savoir faire :<span class="sf"> Image et antécédent — mémo</span></div>
+::: {.bloc .rem}
+<span class="bloc-titre">Image et antécédent — mémo : </span>
 
 - **Calculer une image :** on connaît $x$, on calcule $f(x)$.
 - **Chercher un antécédent :** on connaît $f(x)$ (le résultat), on cherche $x$. On résout une équation.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Calculer une image et chercher un antécédent — Calculer</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer une image et chercher un antécédent — Calculer</span></div>
 
 Soit $f$ la fonction définie sur $\R$ par $f(x)=2x-3$.
 
@@ -52,10 +52,8 @@ Un réel peut avoir **plusieurs antécédents**, un seul, ou aucun. Par exemple,
 Graphiquement, la courbe de $g$ est une parabole : une droite horizontale $y=k$ peut couper cette courbe en $0$, $1$ ou $2$ points selon la valeur de $k$.
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Images et antécédents — Calculer, Raisonner </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Images et antécédents — Calculer, Raisonner</span></div>
 
 Soit $h$ la fonction définie sur $\R$ par $h(x)=x^2-1$.
 

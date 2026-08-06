@@ -34,8 +34,8 @@ Les vecteurs $\ve{u}$, $\ve{v}$ et $\ve{w}$ sont colinéaires.
 Deux vecteurs sont colinéaires si et seulement si ils sont de même direction (ou de directions opposées).
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tester la colinéarité — Raisonner</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Tester la colinéarité — Raisonner</span></div>
 
 On considère deux vecteurs $\ve{u}$ et $\ve{v}$ tels que :
 $$\ve{u} = 2\ve{AB}-\ve{AC} \qquad \text{et} \qquad \ve{v} = \ve{AC}-2\ve{AB}$$

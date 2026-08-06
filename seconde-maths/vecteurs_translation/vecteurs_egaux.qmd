@@ -53,8 +53,8 @@ Soit $\ve{u}$ le vecteur de la translation qui transforme $A$ en $B$ et aussi $C
    Deux vecteurs peuvent avoir la même direction (portés par des droites parallèles) mais des sens opposés : ils ne sont alors pas égaux.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Reconnaître des vecteurs égaux — Raisonner</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Reconnaître des vecteurs égaux — Raisonner</span></div>
 
 Dans un parallélogramme $ABCD$, quels couples de vecteurs sont égaux ? Justifier.
 

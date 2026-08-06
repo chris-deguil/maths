@@ -50,8 +50,8 @@ En notant $\mathbb{I} = \R \setminus \Q$ l'ensemble des irrationnels : $\Q \cap 
   <img src="../../image/seconde/Nombres_Ensembles_arbre_decision.png" style="width: 90%;">
 </div>
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Classer un rationnel dans la hiérarchie des ensembles — Raisonner</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Classer un rationnel dans la hiérarchie des ensembles — Raisonner</span></div>
 
 Déterminer le plus petit ensemble auquel appartient $\dfrac{7}{40}$ et $\dfrac{5}{6}$.
 
@@ -62,10 +62,8 @@ $\dfrac{7}{40}= \dfrac{7}{2^3 \times 5} \in \D$ (écriture : $0{,}175$) et $\dfr
 </details>
 :::
 
-## Exercice
-
-::: {.bloc .exo}
-<span class="exo-num"></span><span class="exo-extra"> Appartenance et ensembles de nombres — Raisonner </span>
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Appartenance et ensembles de nombres — Raisonner</span></div>
 
 Pour chacun des nombres suivants, indiquer le plus petit ensemble auquel il appartient parmi $\N$, $\Z$, $\D$, $\Q$, $\R \setminus \Q$.
 $$\frac{-14}{2} \qquad \frac{5}{6} \qquad 0{,}125 \qquad \sqrt{5} \qquad \frac{22}{7} \qquad 4{,}0$$

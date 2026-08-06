@@ -18,8 +18,8 @@ où $m$ et $p$ sont des réels donnés.
 $m$ s'appelle le **coefficient directeur** (ou **pente**) de $f$ et $p$ l'**ordonnée à l'origine** de $f$.
 :::
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Identifier les paramètres d'une fonction affine — Reconnaître</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Identifier les paramètres d'une fonction affine — Reconnaître</span></div>
 
 Pour chacune des fonctions suivantes, donner $m$ et $p$, puis préciser si elle est linéaire ou constante.
 $$f(x)=-2x+7 \qquad g(x)=5x \qquad h(x)=4$$

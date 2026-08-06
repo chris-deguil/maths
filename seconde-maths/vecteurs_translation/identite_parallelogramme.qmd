@@ -35,8 +35,8 @@ Donc $ABCD$ est un parallélogramme.
 
 </details>
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Reconnaître un parallélogramme — Raisonner</span></div>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Reconnaître un parallélogramme — Raisonner</span></div>
 
 Les points $O$, $A$, $B$, $C$, $E$, $F$ vérifient $\ve{OE} = \ve{OA}+\ve{OB}$ et $\ve{OF} = \ve{OB}+\ve{OC}$.
 
