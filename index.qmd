@@ -1,0 +1,12 @@
+---
+title: "Accueil"
+page-layout: article
+---
+
+# Bienvenue sur le site pédagogique
+
+Utilisez la barre de navigation ci-dessus pour accéder aux sections :
+
+- [Seconde](seconde-maths/index.qmd)
+- [Première](premiere-maths/index.qmd)
+- [Terminale](terminale-maths/index.qmd)

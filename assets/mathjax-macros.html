@@ -1,0 +1,57 @@
+<script>
+window.MathJax = {
+  tex: {
+    // Charge le package optionnel "enclose" (tu l'avais déjà ; je conserve)
+    packages: {'[+]': ['enclose']},
+
+    // === Macros ===
+    macros: {
+      // --- Constantes / ensembles ---
+      dd: "\\mathrm{d}",
+      e: "\\mathrm{e}",
+      R: "\\mathbb{R}",
+      Z: "\\mathbb{Z}",
+      N: "\\mathbb{N}",
+      Q: "\\mathbb{Q}",
+      C: "\\mathbb{C}",
+      F: "\\mathbb{F}",
+      epsilon: "\\varepsilon",
+
+      // --- Mises en forme / utilitaires ---
+      rem: "\\mathbf{Remarque\\ :\\ }",
+      gras: ["\\mathbf{#1}", 1],
+      LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
+      et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
+      llr: "\\Longleftrightarrow",
+      base: ["#1_{\\mathrm{#2}}", 2],
+      abs: ["\\left\\lvert #1 \\right\\rvert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      ve: ["\\overrightarrow{#1}", 1],
+      vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
+
+      OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
+      Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
+      Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
+      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
+      vE: "\\overrightarrow{\\mathscr{E}}",
+      E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
+
+
+      // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
+      // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
+      lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
+
+      // (Optionnel) Pour forcer aussi limsup/liminf :
+      // limsup: ["\\mathop{\\operatorname{lim\\,sup}}\\limits", 0],
+      // liminf: ["\\mathop{\\operatorname{lim\\,inf}}\\limits", 0],
+    }
+  }
+};
+</script>
