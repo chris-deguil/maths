@@ -66,16 +66,34 @@ $$a^m \times a^n = a^{m+n} \qquad
 Simplifier les expressions suivantes (résultat sans exposant négatif).
 
 1. $2^5 \times 2^{-3}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$2^5 \times 2^{-3} = 2^2 = 4$
+
+</details>
+
 2. $\dfrac{3^7}{3^4}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$\dfrac{3^7}{3^4} = 3^3 = 27$
+
+</details>
+
 3. $\left(\dfrac{2}{3}\right)^{-2}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$\left(\dfrac{2}{3}\right)^{-2} = \left(\dfrac{3}{2}\right)^2 = \dfrac{9}{4}$
+
+</details>
+
 4. $4^{-3} \times 4^5$
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-1. $2^5 \times 2^{-3} = 2^2 = 4$
-2. $\dfrac{3^7}{3^4} = 3^3 = 27$
-3. $\left(\dfrac{2}{3}\right)^{-2} = \left(\dfrac{3}{2}\right)^2 = \dfrac{9}{4}$
-4. $4^{-3} \times 4^5 = 4^2 = 16$
+$4^{-3} \times 4^5 = 4^2 = 16$
 
 </details>
 :::
@@ -88,14 +106,26 @@ Simplifier les expressions suivantes (résultat sans exposant négatif).
 Simplifier les expressions suivantes ($a \neq 0$, $n \in \Z$).
 
 1. $a^n \times a^3$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$a^n \times a^3 = a^{n+3}$
+
+</details>
+
 2. $a^{2n} \times a^{1-n}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$a^{2n} \times a^{1-n} = a^{n+1}$
+
+</details>
+
 3. $\dfrac{(a^n)^3}{a^{n+1}}$
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-1. $a^n \times a^3 = a^{n+3}$
-2. $a^{2n} \times a^{1-n} = a^{n+1}$
-3. $\dfrac{(a^n)^3}{a^{n+1}} = \dfrac{a^{3n}}{a^{n+1}} = a^{2n-1}$
+$\dfrac{(a^n)^3}{a^{n+1}} = \dfrac{a^{3n}}{a^{n+1}} = a^{2n-1}$
 
 </details>
 :::

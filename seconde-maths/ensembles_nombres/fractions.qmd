@@ -68,13 +68,8 @@ Pour rendre une fraction **irréductible**, on divise numérateur et dénominate
 <span class="exo-num"></span><span class="exo-extra"> Calculs sur les fractions — Calculer </span>
 
 Calculer et donner le résultat sous forme irréductible.
-$$
-  A = \frac{5}{6} + \frac{3}{4}
-  \qquad;\qquad
-  B = \frac{7}{12} \times \frac{9}{14}
-  \qquad;\qquad
-  C = \frac{48}{84}
-$$
+
+1. $A = \dfrac{5}{6} + \dfrac{3}{4}$
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
@@ -84,12 +79,24 @@ A = \frac{5 \times 4 + 3 \times 6}{24}
   = \frac{19}{12}
 $$
 
+</details>
+
+2. $B = \dfrac{7}{12} \times \dfrac{9}{14}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
 $$
 B = \frac{7 \times 9}{12 \times 14}
   = \frac{3^2 \times 7}{2^2 \times 3 \times 2 \times 7}
   = \frac{3}{2^3}
   = \frac{3}{8}
 $$
+
+</details>
+
+3. $C = \dfrac{48}{84}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
 
 $$
 C = \frac{48}{84}

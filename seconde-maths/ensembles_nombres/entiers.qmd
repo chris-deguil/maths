@@ -42,14 +42,26 @@ $0$ est multiple de tout entier (car $0 = 0 \times b$). Tout entier $a$ est divi
 <span class="exo-num"></span><span class="exo-extra"> Multiples et diviseurs — Calculer, Raisonner </span>
 
 1. Donner l'ensemble $\Div(24)$ de tous les diviseurs de $24$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$24 = 1 \times 24 = 2 \times 12 = 3 \times 8 = 4 \times 6$. $\Div(24) = \{1\,;\,2\,;\,3\,;\,4\,;\,6\,;\,8\,;\,12\,;\,24\}$.
+
+</details>
+
 2. $15$ est-il un multiple de $4$ ? de $3$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$15 = 3 \times 5$ donc $15$ est multiple de $3$, mais pas de $4$ (car $15 = 4 \times 3 + 3$).
+
+</details>
+
 3. Montrer que la somme de deux multiples de $3$ est un multiple de $3$.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-1. $24 = 1 \times 24 = 2 \times 12 = 3 \times 8 = 4 \times 6$. $\Div(24) = \{1\,;\,2\,;\,3\,;\,4\,;\,6\,;\,8\,;\,12\,;\,24\}$.
-2. $15 = 3 \times 5$ donc $15$ est multiple de $3$, mais pas de $4$ (car $15 = 4 \times 3 + 3$).
-3. Soient $a = 3k$ et $b = 3m$ deux multiples de $3$ (avec $k, m \in \Z$). Alors $a + b = 3k + 3m = 3(k+m)$ est multiple de $3$. $\blacksquare$
+Soient $a = 3k$ et $b = 3m$ deux multiples de $3$ (avec $k, m \in \Z$). Alors $a + b = 3k + 3m = 3(k+m)$ est multiple de $3$. $\blacksquare$
 
 </details>
 :::

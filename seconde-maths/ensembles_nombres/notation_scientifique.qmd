@@ -31,12 +31,19 @@ L'écriture en notation scientifique est **unique**. Cette unicité provient de 
 ::: {.bloc .exo}
 <span class="exo-num"></span><span class="exo-extra"> Passer en notation scientifique — Calculer </span>
 
-Écrire en notation scientifique $0{,}000\,47$ et $2{,}5 \times 10^3 \times 4 \times 10^{-7}$
+1. Écrire en notation scientifique $0{,}000\,47$.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-On a $0{,}000\,47 = 4{,}7 \times 10^{-4}$
-et $2{,}5 \times 10^3 \times 4 \times 10^{-7}
+$0{,}000\,47 = 4{,}7 \times 10^{-4}$
+
+</details>
+
+2. Écrire en notation scientifique $2{,}5 \times 10^3 \times 4 \times 10^{-7}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$2{,}5 \times 10^3 \times 4 \times 10^{-7}
          = (2{,}5 \times 4) \times 10^{3+(-7)}
          = 10 \times 10^{-4}
          = 1{,}0 \times 10^{-3}$
