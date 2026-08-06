@@ -102,6 +102,7 @@ window.MathJax = {
       Q: "\\mathbb{Q}",
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
+      D: "\\mathbb{D}",
       epsilon: "\\varepsilon",
 
       // --- Mises en forme / utilitaires ---
@@ -129,6 +130,7 @@ window.MathJax = {
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
       bar: ["\\overline {#1}",1],
+      Div: ["\\Div{#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -221,7 +223,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/puissances.html">Puissances : définitions et règles de calcul</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/puissances.html">Puissances : définitions et règles de calcul</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -254,11 +256,8 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/ensembles_nombres/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/ensembles_nombres/index.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/vocabulaire.html" class="sidebar-item-text sidebar-link">
@@ -272,17 +271,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/ensembles_nombres/rationnels_decimaux.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nombres rationnels et nombres décimaux</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/ensembles_nombres/rationnels_decimaux.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/ensembles_nombres/reels_irrationnels.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nombres réels et nombres irrationnels</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/ensembles_nombres/reels_irrationnels.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/fractions.html" class="sidebar-item-text sidebar-link">
@@ -325,7 +318,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/puissances.html">Puissances : définitions et règles de calcul</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/puissances.html">Puissances : définitions et règles de calcul</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Puissances : définitions et règles de calcul</h1>
 </div>
@@ -397,20 +390,39 @@ Afficher la correction :
 <p>Simplifier les expressions suivantes (résultat sans exposant négatif).</p>
 <ol type="1">
 <li><span class="math inline">\(2^5 \times 2^{-3}\)</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(2^5 \times 2^{-3} = 2^2 = 4\)</span></p>
+</details>
+<ol start="2" type="1">
 <li><span class="math inline">\(\dfrac{3^7}{3^4}\)</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(\dfrac{3^7}{3^4} = 3^3 = 27\)</span></p>
+</details>
+<ol start="3" type="1">
 <li><span class="math inline">\(\left(\dfrac{2}{3}\right)^{-2}\)</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(\left(\dfrac{2}{3}\right)^{-2} = \left(\dfrac{3}{2}\right)^2 = \dfrac{9}{4}\)</span></p>
+</details>
+<ol start="4" type="1">
 <li><span class="math inline">\(4^{-3} \times 4^5\)</span></li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<ol type="1">
-<li><span class="math inline">\(2^5 \times 2^{-3} = 2^2 = 4\)</span></li>
-<li><span class="math inline">\(\dfrac{3^7}{3^4} = 3^3 = 27\)</span></li>
-<li><span class="math inline">\(\left(\dfrac{2}{3}\right)^{-2} = \left(\dfrac{3}{2}\right)^2 = \dfrac{9}{4}\)</span></li>
-<li><span class="math inline">\(4^{-3} \times 4^5 = 4^2 = 16\)</span></li>
-</ol>
+<p><span class="math inline">\(4^{-3} \times 4^5 = 4^2 = 16\)</span></p>
 </details>
 </div>
 </section>
@@ -421,18 +433,30 @@ Afficher la correction :
 <p>Simplifier les expressions suivantes (<span class="math inline">\(a \neq 0\)</span>, <span class="math inline">\(n \in \Z\)</span>).</p>
 <ol type="1">
 <li><span class="math inline">\(a^n \times a^3\)</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(a^n \times a^3 = a^{n+3}\)</span></p>
+</details>
+<ol start="2" type="1">
 <li><span class="math inline">\(a^{2n} \times a^{1-n}\)</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(a^{2n} \times a^{1-n} = a^{n+1}\)</span></p>
+</details>
+<ol start="3" type="1">
 <li><span class="math inline">\(\dfrac{(a^n)^3}{a^{n+1}}\)</span></li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<ol type="1">
-<li><span class="math inline">\(a^n \times a^3 = a^{n+3}\)</span></li>
-<li><span class="math inline">\(a^{2n} \times a^{1-n} = a^{n+1}\)</span></li>
-<li><span class="math inline">\(\dfrac{(a^n)^3}{a^{n+1}} = \dfrac{a^{3n}}{a^{n+1}} = a^{2n-1}\)</span></li>
-</ol>
+<p><span class="math inline">\(\dfrac{(a^n)^3}{a^{n+1}} = \dfrac{a^{3n}}{a^{n+1}} = a^{2n-1}\)</span></p>
 </details>
 </div>
 </section>
@@ -478,6 +502,7 @@ Afficher la correction :
 </div>
 
 
+<div class="nav-pages"><a class="prev" href="fractions.html" title="Calculs sur les fractions">⬅️</a><a class="next" href="notation_scientifique.html" title="Notation scientifique">➡️</a></div>
 </section>
 
 </main> <!-- /main -->

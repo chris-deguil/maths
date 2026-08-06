@@ -102,6 +102,7 @@ window.MathJax = {
       Q: "\\mathbb{Q}",
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
+      D: "\\mathbb{D}",
       epsilon: "\\varepsilon",
 
       // --- Mises en forme / utilitaires ---
@@ -129,6 +130,7 @@ window.MathJax = {
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
       bar: ["\\overline {#1}",1],
+      Div: ["\\Div{#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -221,7 +223,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/entiers.html">Entiers naturels et relatifs, multiples et diviseurs</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/entiers.html">Entiers naturels et relatifs, multiples et diviseurs</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -254,11 +256,8 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/ensembles_nombres/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/ensembles_nombres/index.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/vocabulaire.html" class="sidebar-item-text sidebar-link">
@@ -272,17 +271,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/ensembles_nombres/rationnels_decimaux.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nombres rationnels et nombres décimaux</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/ensembles_nombres/rationnels_decimaux.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/ensembles_nombres/reels_irrationnels.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nombres réels et nombres irrationnels</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/ensembles_nombres/reels_irrationnels.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/fractions.html" class="sidebar-item-text sidebar-link">
@@ -323,7 +316,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/entiers.html">Entiers naturels et relatifs, multiples et diviseurs</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/entiers.html">Entiers naturels et relatifs, multiples et diviseurs</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Entiers naturels et relatifs, multiples et diviseurs</h1>
 </div>
@@ -379,18 +372,30 @@ window.Quarto = {
 <p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Multiples et diviseurs — Calculer, Raisonner </span></p>
 <ol type="1">
 <li>Donner l’ensemble <span class="math inline">\(\Div(24)\)</span> de tous les diviseurs de <span class="math inline">\(24\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(24 = 1 \times 24 = 2 \times 12 = 3 \times 8 = 4 \times 6\)</span>. <span class="math inline">\(\Div(24) = \{1\,;\,2\,;\,3\,;\,4\,;\,6\,;\,8\,;\,12\,;\,24\}\)</span>.</p>
+</details>
+<ol start="2" type="1">
 <li><span class="math inline">\(15\)</span> est-il un multiple de <span class="math inline">\(4\)</span> ? de <span class="math inline">\(3\)</span> ?</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(15 = 3 \times 5\)</span> donc <span class="math inline">\(15\)</span> est multiple de <span class="math inline">\(3\)</span>, mais pas de <span class="math inline">\(4\)</span> (car <span class="math inline">\(15 = 4 \times 3 + 3\)</span>).</p>
+</details>
+<ol start="3" type="1">
 <li>Montrer que la somme de deux multiples de <span class="math inline">\(3\)</span> est un multiple de <span class="math inline">\(3\)</span>.</li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<ol type="1">
-<li><span class="math inline">\(24 = 1 \times 24 = 2 \times 12 = 3 \times 8 = 4 \times 6\)</span>. <span class="math inline">\(\Div(24) = \{1\,;\,2\,;\,3\,;\,4\,;\,6\,;\,8\,;\,12\,;\,24\}\)</span>.</li>
-<li><span class="math inline">\(15 = 3 \times 5\)</span> donc <span class="math inline">\(15\)</span> est multiple de <span class="math inline">\(3\)</span>, mais pas de <span class="math inline">\(4\)</span> (car <span class="math inline">\(15 = 4 \times 3 + 3\)</span>).</li>
-<li>Soient <span class="math inline">\(a = 3k\)</span> et <span class="math inline">\(b = 3m\)</span> deux multiples de <span class="math inline">\(3\)</span> (avec <span class="math inline">\(k, m \in \Z\)</span>). Alors <span class="math inline">\(a + b = 3k + 3m = 3(k+m)\)</span> est multiple de <span class="math inline">\(3\)</span>. <span class="math inline">\(\blacksquare\)</span></li>
-</ol>
+<p>Soient <span class="math inline">\(a = 3k\)</span> et <span class="math inline">\(b = 3m\)</span> deux multiples de <span class="math inline">\(3\)</span> (avec <span class="math inline">\(k, m \in \Z\)</span>). Alors <span class="math inline">\(a + b = 3k + 3m = 3(k+m)\)</span> est multiple de <span class="math inline">\(3\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
 </details>
 </div>
 <div class="bloc thm">
@@ -415,6 +420,7 @@ Démonstration :
 </div>
 
 
+<div class="nav-pages"><a class="prev" href="vocabulaire.html" title="Vocabulaire ensembliste">⬅️</a><a class="next" href="fractions.html" title="Calculs sur les fractions">➡️</a></div>
 </section>
 
 </main> <!-- /main -->

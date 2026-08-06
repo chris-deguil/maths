@@ -9,20 +9,6 @@
   },
   {
     "listing": "/seconde-maths/index.html",
-    "items": [
-      "/seconde-maths/ensembles_nombres/index.html"
-    ]
-  },
-  {
-    "listing": "/seconde-maths/ensembles_nombres/index.html",
-    "items": [
-      "/seconde-maths/ensembles_nombres/vocabulaire.html",
-      "/seconde-maths/ensembles_nombres/entiers.html",
-      "/seconde-maths/ensembles_nombres/rationnels_decimaux.html",
-      "/seconde-maths/ensembles_nombres/reels_irrationnels.html",
-      "/seconde-maths/ensembles_nombres/fractions.html",
-      "/seconde-maths/ensembles_nombres/puissances.html",
-      "/seconde-maths/ensembles_nombres/notation_scientifique.html"
-    ]
+    "items": []
   }
 ]

@@ -102,6 +102,7 @@ window.MathJax = {
       Q: "\\mathbb{Q}",
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
+      D: "\\mathbb{D}",
       epsilon: "\\varepsilon",
 
       // --- Mises en forme / utilitaires ---
@@ -129,6 +130,7 @@ window.MathJax = {
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
       bar: ["\\overline {#1}",1],
+      Div: ["\\Div{#1}",1],
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -221,7 +223,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/fractions.html">Calculs sur les fractions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/fractions.html">Calculs sur les fractions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -254,11 +256,8 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/ensembles_nombres/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/ensembles_nombres/index.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/vocabulaire.html" class="sidebar-item-text sidebar-link">
@@ -272,17 +271,11 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/ensembles_nombres/rationnels_decimaux.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nombres rationnels et nombres décimaux</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/ensembles_nombres/rationnels_decimaux.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/ensembles_nombres/reels_irrationnels.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nombres réels et nombres irrationnels</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/ensembles_nombres/reels_irrationnels.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/fractions.html" class="sidebar-item-text sidebar-link active">
@@ -322,7 +315,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/fractions.html">Calculs sur les fractions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/fractions.html">Calculs sur les fractions</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Calculs sur les fractions</h1>
 </div>
@@ -386,13 +379,10 @@ Démonstration :
 <h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
 <div class="bloc exo">
 <p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Calculs sur les fractions — Calculer </span></p>
-<p>Calculer et donner le résultat sous forme irréductible. <span class="math display">\[
-  A = \frac{5}{6} + \frac{3}{4}
-  \qquad;\qquad
-  B = \frac{7}{12} \times \frac{9}{14}
-  \qquad;\qquad
-  C = \frac{48}{84}
-\]</span></p>
+<p>Calculer et donner le résultat sous forme irréductible.</p>
+<ol type="1">
+<li><span class="math inline">\(A = \dfrac{5}{6} + \dfrac{3}{4}\)</span></li>
+</ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
@@ -402,12 +392,28 @@ A = \frac{5 \times 4 + 3 \times 6}{24}
   = \frac{38}{24}
   = \frac{19}{12}
 \]</span></p>
+</details>
+<ol start="2" type="1">
+<li><span class="math inline">\(B = \dfrac{7}{12} \times \dfrac{9}{14}\)</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
 <p><span class="math display">\[
 B = \frac{7 \times 9}{12 \times 14}
   = \frac{3^2 \times 7}{2^2 \times 3 \times 2 \times 7}
   = \frac{3}{2^3}
   = \frac{3}{8}
 \]</span></p>
+</details>
+<ol start="3" type="1">
+<li><span class="math inline">\(C = \dfrac{48}{84}\)</span></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
 <p><span class="math display">\[
 C = \frac{48}{84}
   = \frac{2^4 \times 3}{2^2 \times 3 \times 7}
@@ -454,6 +460,7 @@ Afficher la correction :
 </div>
 
 
+<div class="nav-pages"><a class="prev" href="entiers.html" title="Entiers naturels et relatifs, multiples et diviseurs">⬅️</a><a class="next" href="puissances.html" title="Puissances : définitions et règles de calcul">➡️</a></div>
 </section>
 
 </main> <!-- /main -->
