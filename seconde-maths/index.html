@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -100,6 +100,21 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const path = window.location.pathname;
+
+    if (path.includes("/seconde-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+    if (path.includes("/premiere-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+    if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+  });
+</script>
 <script>
 window.MathJax = {
   tex: {
@@ -259,6 +274,65 @@ window.Quarto = {
  <span class="menu-text">Cours de Seconde</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seconde-maths/ensembles_nombres/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seconde-maths/ensembles_nombres/vocabulaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vocabulaire ensembliste</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seconde-maths/ensembles_nombres/entiers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Entiers naturels et relatifs, multiples et diviseurs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seconde-maths/ensembles_nombres/rationnels_decimaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres rationnels et nombres décimaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seconde-maths/ensembles_nombres/reels_irrationnels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres réels et nombres irrationnels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seconde-maths/ensembles_nombres/fractions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calculs sur les fractions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seconde-maths/ensembles_nombres/puissances.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Puissances : définitions et règles de calcul</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../seconde-maths/ensembles_nombres/notation_scientifique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notation scientifique</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -295,7 +369,20 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-Chapitre">
 <div class="list grid quarto-listing-cols-3">
-
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1786017230000" data-listing-reading-time-sort="1" data-listing-word-count-sort="200">
+<a href="../seconde-maths/ensembles_nombres/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Chapitre 1 : Ensembles de nombres
+</h5>
+<div class="card-text listing-description">
+Vocabulaire ensembliste, N, Z, D, Q, R, fractions et puissances
+</div>
+</div>
+</div>
+</a>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Écriture x = ± a × 10^n">
 
-<title>guide – Site pédagogique</title>
+<title>Notation scientifique – Site pédagogique</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,61 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -176,17 +143,47 @@ window.MathJax = {
 };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../assets/css/maths.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed maths-theme">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Site pédagogique</span>
     </a>
   </div>
@@ -197,19 +194,19 @@ window.MathJax = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./seconde-maths/index.html"> 
+    <a class="nav-link" href="../../seconde-maths/index.html"> 
 <span class="menu-text">Seconde</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./premiere-maths/index.html"> 
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
 <span class="menu-text">Première</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./terminale-maths/index.html"> 
+    <a class="nav-link" href="../../terminale-maths/index.html"> 
 <span class="menu-text">Terminale</span></a>
   </li>  
 </ul>
@@ -219,140 +216,201 @@ window.MathJax = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/notation_scientifique.html">Notation scientifique</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours de Seconde</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/vocabulaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vocabulaire ensembliste</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/entiers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Entiers naturels et relatifs, multiples et diviseurs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/rationnels_decimaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres rationnels et nombres décimaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/reels_irrationnels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres réels et nombres irrationnels</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/fractions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Calculs sur les fractions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/puissances.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Puissances : définitions et règles de calcul</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/notation_scientifique.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Notation scientifique</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#guide-interne-site-pédagogique-repartir-de-zéro-v2" id="toc-guide-interne-site-pédagogique-repartir-de-zéro-v2" class="nav-link active" data-scroll-target="#guide-interne-site-pédagogique-repartir-de-zéro-v2">Guide interne — site pédagogique (repartir de zéro, v2)</a>
-  <ul class="collapse">
-  <li><a href="#structure-générale" id="toc-structure-générale" class="nav-link" data-scroll-target="#structure-générale">1. Structure générale</a></li>
-  <li><a href="#ajouter-un-chapitre-méthode-recommandée" id="toc-ajouter-un-chapitre-méthode-recommandée" class="nav-link" data-scroll-target="#ajouter-un-chapitre-méthode-recommandée">2. Ajouter un chapitre — méthode recommandée</a></li>
-  <li><a href="#les-blocs-de-contenu-rappel" id="toc-les-blocs-de-contenu-rappel" class="nav-link" data-scroll-target="#les-blocs-de-contenu-rappel">3. Les blocs de contenu (rappel)</a></li>
-  <li><a href="#navigation-automatique-prev-next" id="toc-navigation-automatique-prev-next" class="nav-link" data-scroll-target="#navigation-automatique-prev-next">4. Navigation automatique (prev / next)</a></li>
-  <li><a href="#éditeur-python-interactif" id="toc-éditeur-python-interactif" class="nav-link" data-scroll-target="#éditeur-python-interactif">5. Éditeur Python interactif</a></li>
-  <li><a href="#ancien-contenu-archivé" id="toc-ancien-contenu-archivé" class="nav-link" data-scroll-target="#ancien-contenu-archivé">6. Ancien contenu archivé</a></li>
-  <li><a href="#mise-en-ligne" id="toc-mise-en-ligne" class="nav-link" data-scroll-target="#mise-en-ligne">7. Mise en ligne</a></li>
-  </ul></li>
+  <li><a href="#définition" id="toc-définition" class="nav-link active" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice">Exercice 1</a></li>
+  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link" data-scroll-target="#exercice-1">Exercice 2</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/notation_scientifique.html">Notation scientifique</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Notation scientifique</h1>
+</div>
+
+<div>
+  <div class="description">
+    Écriture x = ± a × 10^n
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
 
-<section id="guide-interne-site-pédagogique-repartir-de-zéro-v2" class="level1">
-<h1>Guide interne — site pédagogique (repartir de zéro, v2)</h1>
-<p>Ce document explique comment fonctionne le site après la remise à zéro, pour que tu puisses ajouter du contenu sans avoir à redemander l’architecture à chaque fois.</p>
-<section id="structure-générale" class="level2">
-<h2 class="anchored" data-anchor-id="structure-générale">1. Structure générale</h2>
-<pre><code>_quarto.yml              -&gt; config globale : navbar, sidebar, thème
-index.qmd                -&gt; page d'accueil
-seconde-maths/            -&gt; niveau Seconde
-premiere-maths/           -&gt; niveau Première
-terminale-maths/          -&gt; niveau Terminale
-  _metadata.yml            -&gt; thème appliqué à tout le niveau
-  index.qmd                 -&gt; page de listing des chapitres du niveau
-  &lt;chapitre&gt;/
-    index.qmd                -&gt; page de listing des notions du chapitre (auto, via "order")
-    &lt;notion&gt;.qmd              -&gt; une page de cours (order: N dans le front-matter)
-assets/
-  css/general.scss          -&gt; thème général (navbar, sidebar, cartes)
-  css/maths.css              -&gt; les blocs def/thm/ex/rem/exo/demo
-  css/pyodide-mkdocs.css     -&gt; style de l'éditeur Python intégré
-  js/pyodide-mkdocs.js        -&gt; logique de l'éditeur Python intégré
-  mathjax-macros.html         -&gt; macros LaTeX (\R, \N, \ve{}, \lim, etc.)
-  exercise-counter.lua        -&gt; numérote automatiquement les "## Exercice"
-  auto-nav.lua                -&gt; génère automatiquement le prev/next en bas de page
-code_python/               -&gt; scripts .py utilisés dans les exercices interactifs
-nouveau_chapitre.sh        -&gt; génère le squelette d'un nouveau chapitre
-mise_a_jour.sh             -&gt; commit + push automatique vers GitHub</code></pre>
-<p>SNT a été entièrement retiré (navbar, sidebar, fichiers, CSS <code>snt.css</code>, filtre <code>macros_logo.lua</code>). Le contenu de l’ancien Première/Terminale a été archivé (voir section 5), pas supprimé définitivement.</p>
-</section>
-<section id="ajouter-un-chapitre-méthode-recommandée" class="level2">
-<h2 class="anchored" data-anchor-id="ajouter-un-chapitre-méthode-recommandée">2. Ajouter un chapitre — méthode recommandée</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./nouveau_chapitre.sh</span> seconde-maths fonctions <span class="st">"Généralités sur les fonctions"</span> <span class="dt">\</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    definition variations tableau_signe exercices</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Ça crée <code>seconde-maths/fonctions/</code> avec un <code>index.qmd</code> et un <code>.qmd</code> par notion, déjà pré-remplis avec les blocs standards et un <code>order:</code> croissant.</p>
-<p>Le script t’affiche ensuite le morceau de YAML à coller dans <code>_quarto.yml</code> (sidebar) et dans <code>seconde-maths/index.qmd</code> (listing). Cette étape reste manuelle (Quarto ne permet pas de générer la sidebar dynamiquement), mais c’est un copier-coller de 30 secondes.</p>
-</section>
-<section id="les-blocs-de-contenu-rappel" class="level2">
-<h2 class="anchored" data-anchor-id="les-blocs-de-contenu-rappel">3. Les blocs de contenu (rappel)</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {.bloc .def}</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>&lt;span class="bloc-titre"&gt;Définition : &lt;/span&gt;</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>::: {.bloc .thm}</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>&lt;span class="bloc-titre"&gt;Propriété : &lt;/span&gt;</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>&lt;details class="bloc demo"&gt;&lt;summary&gt;Démonstration : &lt;/summary&gt;</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>&lt;/details&gt;</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>::: {.bloc .ex}</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>&lt;div class="bloc-titre"&gt;Exemple :&lt;span class="exemp-extra"&gt; précision optionnelle &lt;/span&gt;&lt;/div&gt;</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>&lt;details class="bloc cor"&gt;&lt;summary&gt;Afficher la correction :&lt;/summary&gt;</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>&lt;/details&gt;</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>::: {.bloc .rem}</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>&lt;span class="bloc-titre"&gt;Remarque : &lt;/span&gt;</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Pour un exercice numéroté automatiquement, mets un titre <code>## Exercice</code> juste avant :</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercice</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>::: {.bloc .exo}</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>&lt;span class="exo-num"&gt;&lt;/span&gt;&lt;span class="exo-extra"&gt; Étude par le quotient &lt;/span&gt;</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>Énoncé...</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>&lt;details class="bloc cor"&gt;&lt;summary&gt;Afficher la correction :&lt;/summary&gt;</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>Correction...</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>&lt;/details&gt;</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Le filtre <code>exercise-counter.lua</code> remplit automatiquement <code>exo-num</code> avec “Exercice N :” (numérotation continue sur la page).</p>
-</section>
-<section id="navigation-automatique-prev-next" class="level2">
-<h2 class="anchored" data-anchor-id="navigation-automatique-prev-next">4. Navigation automatique (prev / next)</h2>
-<p>Tant que chaque <code>.qmd</code> d’un chapitre a un champ <code>order:</code> dans son front-matter (ce que fait déjà <code>nouveau_chapitre.sh</code>), le filtre <code>assets/auto-nav.lua</code> ajoute automatiquement les flèches précédent/suivant en bas de page, dans le bon ordre. <strong>Tu n’as plus jamais besoin d’écrire <code>&lt;div class="nav-pages"&gt;</code> toi-même.</strong></p>
-</section>
-<section id="éditeur-python-interactif" class="level2">
-<h2 class="anchored" data-anchor-id="éditeur-python-interactif">5. Éditeur Python interactif</h2>
-<p>Sur une page qui a besoin d’un éditeur Python exécutable dans le navigateur (Pyodide), ajoute ceci dans le front-matter de la page :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">include-in-header</span><span class="kw">:</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">  - </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="ch">|</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>      &lt;link rel="stylesheet" href="../../assets/css/pyodide-mkdocs.css"&gt;</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css"&gt;</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>      &lt;script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.js"&gt;&lt;/script&gt;</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>      &lt;script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.js"&gt;&lt;/script&gt;</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>      &lt;script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"&gt;&lt;/script&gt;</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      &lt;script src="../../assets/js/pyodide-mkdocs.js" defer&gt;&lt;/script&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>(Adapte le nombre de <code>../</code> selon la profondeur du fichier.)</p>
-</section>
-<section id="ancien-contenu-archivé" class="level2">
-<h2 class="anchored" data-anchor-id="ancien-contenu-archivé">6. Ancien contenu archivé</h2>
-<p>L’ancien contenu de Première et Terminale (avant remise à zéro) est conservé dans le dossier <code>_archive-ancien-programme/</code> (hors navigation, non publié) pour que tu puisses réutiliser des textes, énoncés ou images en les adaptant au nouveau programme. Tu peux le supprimer définitivement quand tu n’en as plus besoin.</p>
-</section>
-<section id="mise-en-ligne" class="level2">
-<h2 class="anchored" data-anchor-id="mise-en-ligne">7. Mise en ligne</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./mise_a_jour.sh</span> <span class="st">"Message de commit"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Un seul workflow GitHub Actions (<code>quarto-gh-pages.yml</code>) construit et publie le site sur <code>gh-pages</code> à chaque push sur <code>main</code>.</p>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="définition" class="level2">
+<h2 class="anchored" data-anchor-id="définition">Définition</h2>
+<div class="bloc def">
+<p><span class="bloc-titre">Définition : Notation scientifique</span></p>
+<p>Tout réel <span class="math inline">\(x \neq 0\)</span> peut s’écrire de façon unique sous la forme <span class="math display">\[x =\pm a \times 10^n\]</span> où <span class="math inline">\(n \in \Z\)</span> et <span class="math inline">\(a\)</span> un réel dont la partie entière est comprise entre 1 et 9 inclus.</p>
+<p>On dit que <span class="math inline">\(x\)</span> est écrit en <strong>notation scientifique</strong>.</p>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>L’écriture en notation scientifique est <strong>unique</strong>. Cette unicité provient de la condition sur <span class="math inline">\(a\)</span>, qui détermine à la fois la valeur de <span class="math inline">\(a\)</span> et celle de <span class="math inline">\(n\)</span>.</p>
+</div>
 </section>
+<section id="exercice" class="level2">
+<h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Passer en notation scientifique — Calculer </span></p>
+<p>Écrire en notation scientifique <span class="math inline">\(0{,}000\,47\)</span> et <span class="math inline">\(2{,}5 \times 10^3 \times 4 \times 10^{-7}\)</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>On a <span class="math inline">\(0{,}000\,47 = 4{,}7 \times 10^{-4}\)</span> et <span class="math inline">\(2{,}5 \times 10^3 \times 4 \times 10^{-7}
+         = (2{,}5 \times 4) \times 10^{3+(-7)}
+         = 10 \times 10^{-4}
+         = 1{,}0 \times 10^{-3}\)</span></p>
+</details>
+</div>
+</section>
+<section id="exercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1">Exercice 2</h2>
+<div class="bloc exo">
+<p><span class="exo-num"><strong>Exercice 2 : </strong></span><span class="exo-extra"> L’échiquier et la production mondiale de riz — Calculer, Modéliser </span></p>
+<p>Sur un échiquier de <span class="math inline">\(64\)</span> cases, on pose <span class="math inline">\(1\)</span> grain sur la première case, puis on double à chaque case.</p>
+<ol type="1">
+<li>Combien de grains y a-t-il sur la case <span class="math inline">\(n\)</span> ?</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>La case <span class="math inline">\(n\)</span> contient <span class="math inline">\(2^{n-1}\)</span> grains. La dernière case (<span class="math inline">\(n = 64\)</span>) contient <span class="math inline">\(2^{63}\)</span> grains.</p>
+</details>
+<ol start="2" type="1">
+<li>Exprimer <span class="math inline">\(2^{63}\)</span> en notation scientifique (on admet <span class="math inline">\(2^{10} \approx 1{,}024 \times 10^3\)</span>).</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(2^{63} = (2^{10})^6 \times 2^3 \approx (1{,}024)^6 \times 10^{18} \times 8\)</span>. Or <span class="math inline">\((1{,}024)^6 \approx 1{,}16\)</span>, donc <span class="math inline">\(2^{63} \approx 9{,}2 \times 10^{18}\)</span>.</p>
+</details>
+<ol start="3" type="1">
+<li>Un grain de riz pèse environ <span class="math inline">\(25 \times 10^{-3}\)</span> grammes. Quelle est la masse totale de riz sur cette case ? La comparer à la production mondiale annuelle <span class="math inline">\(\approx 5 \times 10^{14}\)</span> g.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Masse <span class="math inline">\(\approx 9{,}2 \times 10^{18} \times 2{,}5 \times 10^{-2} = 2{,}3 \times 10^{17}\)</span> g.</p>
+<p>Rapport avec la production : <span class="math inline">\(\dfrac{2{,}3 \times 10^{17}}{5 \times 10^{14}} \approx 460\)</span>.</p>
+<p>La masse de riz sur la <span class="math inline">\(64\)</span><sup>e</sup> case seule représente <strong>460 fois</strong> la production mondiale annuelle !</p>
+</details>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -930,7 +988,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p><a href="./">Accueil</a> · <a href="./index.html">Plan du site</a> · <a href="mailto:christophe.Deguil@ac-versailles.fr">Contact</a></p>
+<p><a href="../../">Accueil</a> · <a href="../../index.html">Plan du site</a> · <a href="mailto:christophe.Deguil@ac-versailles.fr">Contact</a></p>
 </div>
   </div>
 </footer>
@@ -938,5 +996,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
