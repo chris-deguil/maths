@@ -9,19 +9,15 @@
 -- réordonnes ou insères une page, la navigation se met à jour toute seule au
 -- prochain "quarto render".
 --
--- Fonctionnement :
---   1) Au premier passage (Meta), on lit le dossier du fichier courant, on liste
---      tous les .qmd du même dossier (hors index.qmd), on les trie par leur champ
---      "order" (front-matter YAML), et on trouve la position du fichier courant.
---   2) On insère en fin de document un <div class="nav-pages"> avec les liens
---      vers les fichiers .html précédent / suivant (mêmes noms de base que les .qmd).
---
--- Prérequis : chaque .qmd d'un chapitre doit avoir un champ "order: N" dans son
--- front-matter (comme c'est déjà le cas dans le chapitre suite1 existant).
+-- Fonctionnement (important) :
+--   Quarto ne passe PAS le chemin du .qmd d'origine à Pandoc : il génère un
+--   fichier .md temporaire (ex: /tmp/quarto-session.../quarto-inputXXXX.md).
+--   PANDOC_STATE.input_files est donc inutilisable ici. En revanche, Quarto
+--   expose le vrai dossier du document via la variable d'environnement
+--   QUARTO_DOCUMENT_PATH. On identifie ensuite LE document courant, parmi tous
+--   les .qmd de ce dossier, grâce à son propre champ "order" (déjà lu dans le
+--   meta du document par Pandoc) plutôt que par son nom de fichier.
 
-local function trim(s) return (s:gsub("^%s+", ""):gsub("%s+$", "")) end
-
--- Lit le champ "order:" et le "title:" dans le front-matter YAML d'un fichier .qmd
 local function read_front_matter(path)
   local f = io.open(path, "r")
   if not f then return nil end
@@ -58,28 +54,27 @@ local function list_chapter_files(dir)
   return files
 end
 
-local input_path = nil
+local chapter_dir = nil
+local current_order = nil
 
 function Meta(meta)
-  -- PANDOC_STATE.input_files donne le chemin du fichier .qmd en cours de traitement
-  if PANDOC_STATE and PANDOC_STATE.input_files and PANDOC_STATE.input_files[1] then
-    input_path = PANDOC_STATE.input_files[1]
+  chapter_dir = os.getenv("QUARTO_DOCUMENT_PATH")
+  if meta and meta.order ~= nil then
+    local ok, s = pcall(pandoc.utils.stringify, meta.order)
+    if ok then current_order = tonumber(s) end
   end
   return meta
 end
 
 function Pandoc(doc)
-  if not input_path then return doc end
+  if not chapter_dir or not current_order then return doc end
 
-  local dir = input_path:match("^(.*)/[^/]+$") or "."
-  local current_name = input_path:match("([^/]+)$")
-
-  local files = list_chapter_files(dir)
+  local files = list_chapter_files(chapter_dir)
   if #files < 2 then return doc end
 
   local current_index = nil
   for i, f in ipairs(files) do
-    if f.name == current_name then
+    if f.order == current_order then
       current_index = i
       break
     end
