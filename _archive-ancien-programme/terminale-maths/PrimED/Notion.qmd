@@ -1,0 +1,166 @@
+---
+title: "Notions de primitive"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition d'une primtitive"
+order: 1
+---
+
+## Notion de primitive
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Soit $f$ une fonction définie sur un intervalle $I$.
+On appelle primitive de $f$ sur $I$, toute fonction définie et dérivable sur $I$ telle que $F'=f$.
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+* La fonction $\ln$ est une primitive de la fonction inverse.
+* La primitive d'une fonction, quand elle existe, n'est pas unique.
+On considère la fonction $f:x \longmapsto 2x$.
+Cette fonction est définie sur $\mathbb{R}$ (elle y est même continue).
+    * La fonction $F_1 : x \longmapsto x^2$ est une primitive sur $\mathbb{R}$ de la fonction $f$.
+    * La fonction $F_2 : x \longmapsto x^2-5$ est une primitive sur $\mathbb{R}$ de la fonction $f$.
+* Certaines fonctions n'admettent pas de primitives, comme la fonction partie entière.
+* Certaines fonctions admettent des primitives, mais elles ne peuvent pas s'écrire explicitement à l'aide des fonctions usuelles.
+Par exemple la fonction $f:x \longmapsto \e^{-x^2}$.
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admise) : </span>
+
+Soit $f$ une fonction dérivable sur un intervalle $I$.
+$$f'(x)=0, \, \forall x \in I \Longrightarrow f \text{ est constante sur } I$$
+
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* Ce lemme semble trivial, mais il demande un travail important. Pour une des démonstrations : [Lien vers ressource](http://web.espe-guadeloupe.fr/wp-content/uploads/2015/10/8_Delcroix-et-Silvy-2009.pdf)
+* La proposition devient fausse si $I$ est une union d'intervalles.
+$$f(x)= \left\{\begin{array}{lll} 1&\text{si}&x>0\\ -1&\text{si}&x< 0 \end{array} \right.$$
+La fonction $f$ est bien de dérivée nulle sur $\mathbb{R}^*$, mais elle n'y est pas constante, ce qui nous oblige à nous restreindre à des intervalles pour l'étude des primitives.
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $f$ une fonction définie sur un intervalle $I$ et admettant sur $I$ une primitive $F$. Alors :
+1. Les primitives de $f$ sur $I$ sont de la forme $F+k$ où $k \in \mathbb{R}$.
+2. Pour tout $x_0 \in I$ et tout $y_0 \in \mathbb{R}$, il existe une seule primitive $G$ sur $I$ telle que :
+$$\forall x \in I, \, G'(x) = f(x) \qquad \text{et} \qquad G(x_0) = y_0$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Soit $F$ une primitive de $f$.
+1. Soit la fonction $G$ définie par $G(x) = F(x) + k$.
+Alors $G$ est dérivable sur $I$ et $G'(x) = F'(x) = f(x)$.
+Donc $G$ est une primitive de $f$.
+On considère maintenant $F$ et $G$ deux primitives de $f$, alors sur $I$, $G'=f$ et $F'=f$.
+Donc $G'=F'$.
+On en déduit que $G'-F' = 0$ et donc d'après le lemme précédent la fonction $G-F$ est une fonction constante.
+2. Soient $x_0 \in I$ et $y_0 \in \mathbb{R}$ tels que $G(x_0)=y_0$.
+$$G(x_0)=y_0 \Longleftrightarrow F(x_0)+k=y_0 \Longleftrightarrow k= y_0-F(x_0)$$
+La fonction $G$ est donc unique et définie sur $I$ par $G(x)=F(x)+y_0-F(x_0)$.
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Soit $f:x \longmapsto \ln x$.
+1. Soit $F(x)=x \ln x - x$ définie sur $\mathbb{R}_+^*$. Vérifier que $F$ est une primitive de $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$F$ est une différence et un produit de fonctions dérivables sur $\mathbb{R}_+^*$, elle y est donc dérivable.
+Pour tout $x \in \mathbb{R}_+^*$, $F'(x) = 1 \cdot \ln x + x \cdot \dfrac{1}{x} - 1 = \ln x = f(x)$.
+Donc $F$ est une primitive de $f$.
+
+</details>
+
+2. En déduire la primitive de $f$ s'annulant en $\e$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Les primitives de $f$ sont donc de la forme $F+k$, où $k \in \mathbb{R}$.
+La primitive de $f$ s'annulant en $\e$ est la fonction $G$ définie par $G=F+k$ et vérifiant $G(\e)=0$.
+$G(\e)=0 \Longleftrightarrow F(\e)+k = 0 \Longleftrightarrow \e \ln(\e)- \e + k = 0 \Longleftrightarrow k = 0$.
+Ainsi la fonction cherchée n'est autre que la fonction $F$.
+
+</details>
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admise) : Théorème fondamental (forme simplifiée) </span>
+
+Toute fonction continue sur un intervalle $I$ admet des primitives sur cet intervalle.
+
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+1. La continuité est une condition suffisante mais non nécessaire pour qu’une fonction admette des primitives. Il existe des fonctions non continues qui admettent des primitives, mais cela dépasse le cadre du programme.
+2. Ce théorème est un théorème d’existence ; il ne donne pas l’expression des primitives d’une fonction continue.
+3. La réciproque de ce théorème est fausse. En effet, la fonction racine carrée est continue sur $\mathbb{R}_+^*$, mais sa dérivée n'y est pas continue.
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Soit $F$ la fonction définie sur $\mathbb{R}$ par $$F(x)= \left\{\begin{array}{l} x^2 \cos\left(\dfrac{1}{x} \right), \, \text{ si }x \neq 0\\ 0, \, \text{ pour }x=0 \end{array} \right.$$
+1. Étudier la continuité de $F$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+La fonction $F$ est continue sur $]-\infty\,;\, 0[$ et sur $]0 \, ; \, + \infty[$ comme produit et composée de fonctions qui y sont continues.
+De plus, pour tout $x \neq 0$, $-x^2 \leqslant F(x) \leqslant x^2$.
+Par passage à la limite lorsque $x \to 0$, on déduit du théorème d'encadrement que $\lim_{x \to 0} F(x)=0= F(0)$.
+Ainsi $F$ est continue sur $\mathbb{R}$.
+
+</details>
+
+2. Étudier la continuité de $f$, dérivée de $F$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout $x\in \mathbb{R}^*$, $$f(x)= 2x \cos\left(\dfrac{1}{x} \right) + \sin\left(\dfrac{1}{x} \right)$$
+* Pour tout $x \neq 0$, $\phi(x)= \dfrac{F(x) - F(0)}{x} = x \cos\left(\dfrac{1}{x} \right)$.
+Ainsi $-|x| \leqslant \phi(x) \leqslant |x|$, de même que précédemment, on déduit que $\lim_{x \to 0} \phi(x) = 0$.
+Ainsi $f(0)=0$.
+* On considère $x_n = \dfrac{1}{2n \pi + \dfrac{\pi}{2}}$, alors $f(x_n) = \dfrac{2}{2n \pi + \dfrac{\pi}{2}} \cos \left(2n\pi + \dfrac{\pi}{2} \right) + \sin \left(2n\pi + \dfrac{\pi}{2} \right) = 1$.
+Ainsi $\lim_{n \to +\infty} x_n = 0$, donc par continuité de $f$, si elle existait en $0$, on devrait avoir $\lim_{n \to +\infty} f(x_n) = f(0) = 0$. Or ici la limite est $1$.
+On en déduit que la fonction $f$ n'est pas continue en $0$.
+
+</details>
+
+3. Que peut-on conclure ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Ainsi $f$ est une fonction définie sur $\mathbb{R}$, non continue sur $\mathbb{R}$, et admettant une primitive sur $\mathbb{R}$.
+
+</details>
+
+:::
+
+
+
+
+<div class="nav-pages">
+  <a class="next" href="Usuelles.html">➡️</a>
+</div>

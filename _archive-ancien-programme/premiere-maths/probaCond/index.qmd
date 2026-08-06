@@ -1,0 +1,29 @@
+---
+title: "Chapitre 4 : Probabilité conditionnelle"
+description: "Probabilité conditionnelle - Indépendance - Répétition d'épreuves"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+## Attendus et savoir-faire
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire :</span>
+
+- Construire un arbre pondéré ou un tableau en lien avec une situation donnée. Passer du registre de la langue naturelle au registre symbolique et inversement.
+- Utiliser un arbre pondéré ou un tableau pour calculer une probabilité.
+- Calculer des probabilités conditionnelles lorsque les événements sont présentés sous forme de tableau croisé d’effectifs (tirage au sort avec équiprobabilité d’un individu dans une population).
+- Dans des cas simples, calculer une probabilité à l’aide de la formule des probabilités totales.
+- Distinguer en situation \(P(B\mid A)\) et \(P(A\mid B)\), par exemple dans des situations de type « faux positifs ».
+- Représenter une répétition de deux épreuves indépendantes par un arbre ou un tableau.
+:::
+

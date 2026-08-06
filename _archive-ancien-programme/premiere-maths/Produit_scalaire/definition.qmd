@@ -1,0 +1,107 @@
+---
+title: "Définition du produit sclaire"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition trigonométrique"
+order: 1
+---
+
+___
+
+
+::: {.bloc .def}
+<div class="bloc-titre">Définition</div>
+
+Soient $\ve{u}$ et $\ve{v}$ deux vecteurs du plan. On appelle produit scalaire de $\ve{u}$ et $\ve{v}$ le nombre noté $\ve{u}.\ve{v}$, on lit u scalaire v, égal à : 
+
+* $0$ si l'un des vecteurs $\ve{u}$ ou $\ve{v}$ est nul.
+* $\|\ve{u} \| \|\ve{v} \| \times \cos( \theta)$ où $\theta$ est l'angle formé par les droites support des vecteurs $\ve{u}$ et $\ve{v}$
+
+<div style="text-align: center;">
+  <img src="../../image/maths/ProduitScalaire_definition1.png" style="width: 15%;">
+</div>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple</div>
+
+En physique :
+
+* On appelle le travail d'une force l'énergie produite par cette force lors d'un déplacement rectiligne de $A$ vers $B$. Il est donné par $\ve{F}.\ve{AB}$
+* On appelle puissance instantanée développée par une force $\ve{F}$ appliquée à un point de vitesse $\ve{v}$ : $\ve{F}.\ve{v}$
+
+Un ouvrier tire une caisse de masse $m = 50$ kg sur un sol horizontal. Il exerce une force constante $\vec{F}$ de norme $100$ N, inclinée d'un angle de $\theta = 60^\circ$ par rapport à l'horizontale.
+On suppose que le déplacement est de $d = 10$ m et qu'il est réalisé en $\Delta t = 20$ s.
+
+<div style="text-align: center;">
+  <img src="../../image/maths/ProduitScalaire_physique.png" style="width: 49%;">
+</div>
+
+
+
+1. Calculer le travail effectué par la force $\vec{F}$ pendant le déplacement.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Le travail est donné par
+$$W = \vec{F} \cdot \vec{d} = \|\vec{F}\| \cdot \|\vec{d}\| \cdot \cos(\theta) = 100 \times 10 \times 0,5 = 500\text{ J}$$
+</details>
+
+2. En déduire la puissance moyenne développée par cette force.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+La puissance moyenne est :
+$$P = \dfrac{W}{\Delta t} = \dfrac{500}{20} = 25\text{ W}$$
+</details>
+
+3. Vérifier la puissance instantanée à l'aide de la formule $P = \vec{F} \cdot \vec{v}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$$P = \vec{F} \cdot \vec{v} = \|\vec{F}\| \cdot \|\vec{v}\| \cdot \cos(\theta)$$
+La vitesse vaut :
+$$v = \dfrac{d}{\Delta t} = \dfrac{10}{20} = 0,5\text{ m.s}^{-1}$$
+Ainsi 
+$$P = 100 \times 0,5 \times 0,5 = 25\text{ W}$$
+</details>
+:::
+
+::: {.bloc .rem}
+<div class="bloc-titre">Remarque</div>
+
+Lorsque le mouvement est rectiligne uniforme, puissance instantanée et puissance moyenne sont égales.
+:::
+
+
+::: {.bloc .rem}
+<div class="bloc-titre">Remarque</div>
+
+Soient $A$, $B$, $C$, $A'$, $B'$ et $C'$ six points de l'espace tels que $\ve{u}=\ve{AB}=\ve{A'B'}$, $\ve{v}=\ve{AC}=\ve{A'C'}$, alors
+$$\ve{u}.\ve{v} = AB \times AC \times \cos\left(\widehat{BAC} \right) \qquad \et \qquad \ve{u}.\ve{v} = A'B' \times A'C' \times \cos\left(\widehat{B'A'C'} \right)$$
+
+La valeur du produit scalaire ne dépend pas du choix des points $A$, $B$ et $C$ pour représenter les vecteurs $\ve{u}$ et $\ve{v}$.
+:::
+
+::: {.bloc .thm}
+<div class="bloc-titre">Théorème</div>
+
+Soient $\ve{u}$ et $\ve{v}$ deux vecteurs non nuls, alors 
+
+1. $\ve{u}.\ve{v} = \|\ve{u}\|\times \|\ve{v}\|$ si et seulement si $\ve{u}$ et $\ve{v}$ sont colinéaires de même sens.
+2. $\ve{u}.\ve{v} = -\|\ve{u}\|\times \|\ve{v}\|$ si et seulement si $\ve{u}$ et $\ve{v}$ sont colinéaires de sens contraire.
+
+:::
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+1. $\ve{u}$ et $\ve{v}$ sont de même sens $\Longleftrightarrow \ve{u}.\ve{v} = \norm{\ve{u}} \times \norm{\ve{v}} \times \cos 0 \Longleftrightarrow \ve{u}.\ve{v} = \norm{\ve{u}} \times \norm{\ve{v}}$.
+2. $\ve{u}$ et $\ve{v}$ sont de sens contraire $\Longleftrightarrow \ve{u}.\ve{v} = \norm{\ve{u}} \times \norm{\ve{v}} \times \cos \pi \Longleftrightarrow \ve{u}.\ve{v} = -\norm{\ve{u}} \times \norm{\ve{v}}$.
+ </details>
+
+
+
+<div class="nav-pages">
+  <a class="next" href="orthogonalite.html">➡️</a>
+</div>

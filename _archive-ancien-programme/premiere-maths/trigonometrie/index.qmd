@@ -1,0 +1,27 @@
+---
+title: "Chapitre 5 : Trigonométrie - Fonctions trigonométriques"
+description: "Enrouement de la droite - Mesure en radian - Fonctions trigonométriques - Résolution d'équations"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+## Attendus et savoir-faire
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire :</span>
+
+- Placer un point sur le cercle trigonométrique.
+- Lier la représentation graphique des fonctions cosinus et sinus et le cercle trigonométrique.
+- Traduire graphiquement la parité et la périodicité des fonctions trigonométriques
+- Par lecture du cercle trigonométrique, déterminer, pour des valeurs remarquables de $x$, les cosinus et sinus d'angles associés à $x$
+:::
+

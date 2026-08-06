@@ -1,0 +1,205 @@
+---
+title: "Définitions du produit scalaire"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition trigonométrique et par le projeté orthogonale"
+order: 1
+---
+
+
+## Définition trigonométrique
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Soient $\vec{u}$ et $\vec{v}$ deux vecteurs de l'espace. Le produit scalaire de $\vec{u}$ et $\vec{v}$ dans l'espace est le nombre noté $\vec{u} \cdot \vec{v}$ qui est égal au produit scalaire des vecteurs $\vec{u}$ et $\vec{v}$ vus comme des vecteurs d'un même plan, c'est-à-dire : 
+\begin{itemize}
+\item[\textbullet] $0$ si l'un des vecteurs $\vec{u}$ ou $\vec{v}$ est nul ;
+\item[\textbullet] $\lVert \vec{u} \rVert \times \lVert \vec{v} \rVert \times \cos(\theta)$ où $\theta$ est l'angle formé par les vecteurs $\vec{u}$ et $\vec{v}$.
+\end{itemize}
+
+:::
+
+:::{.block}
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap8_Espace_II_def_trig.png" style="width: 30%;">
+</div>
+
+:::
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+En physique, on appelle « travail d'une force » l'énergie produite par cette force lors d'un déplacement rectiligne de $A$ vers $B$. Il est déterminé par $\ve{F} \cdot \ve{AB}$.
+
+On considère une charrette de 500 kg que l'on tire sur du plat suivant un angle de $60^\circ$ avec une force $F$ de 10 N sur une distance de 5 m. Déterminer, en joules, le travail de cette force.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a $W = \norm{F} \times \norm{AB} \times \cos(60^\circ) = 10 \times 5 \times 0{,}5 = 25$.
+Ainsi, le travail est de 25 J.
+
+</details>
+
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Soient $A$, $B$, $C$, $A'$, $B'$ et $C'$ six points de l'espace tels que $\ve{u}=\ve{AB}=\ve{A'B'}$ et $\ve{v}=\ve{AC}=\ve{A'C'}$, alors :
+$$\ve{u} \cdot \ve{v} = AB \times AC \times \cos\left(\widehat{BAC} \right) \quad \text{et} \quad \ve{u} \cdot \ve{v} = A'B' \times A'C' \times \cos\left(\widehat{B'A'C'} \right)$$
+
+On dit alors que le produit scalaire est indépendant du choix des points.
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soient $\ve{u}$ et $\ve{v}$ deux vecteurs non nuls de l'espace, alors :
+\begin{enumerate}
+\item $\ve{u} \cdot \ve{v} = \norm{u} \times \norm{v}$ si et seulement si $\ve{u}$ et $\ve{v}$ sont colinéaires et de même sens ;
+\item $\ve{u} \cdot \ve{v} = -\norm{u} \times \norm{v}$ si et seulement si $\ve{u}$ et $\ve{v}$ sont colinéaires et de sens contraire.
+\end{enumerate}
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+C'est immédiat en appliquant la définition.
+On démontre le second cas :
+$\ve{u} \cdot \ve{v} = -\norm{u} \times \norm{v} \Longleftrightarrow \norm{u} \times \norm{v} \cos(\theta) = -\norm{u} \times \norm{v} \Longleftrightarrow \cos(\theta) = -1$.
+On en déduit alors que $\theta = 180^\circ$, donc que les vecteurs sont colinéaires et de sens contraire.
+
+</details>
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Le produit scalaire du vecteur $\ve{u}$ par lui-même, noté $\ve{u}^2$, est appelé carré scalaire.
+On a $\ve{u}^2 = \norm{u}^2$.
+
+:::
+
+
+
+## Définition par projeté orthogonal
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Propriété caractéristique</span>
+
+Soient $\ve{u}$ et $\ve{v}$ deux vecteurs non nuls de l'espace, et $A$, $B$ et $C$ trois points de l'espace tels que $\ve{u}=\ve{AB}$ et $\ve{v} = \ve{AC}$.
+On note $H$ le projeté orthogonal de $C$ sur la droite $(AB)$.
+$$\ve{u} \cdot \ve{v} = \ve{AB} \cdot \ve{AC} = \begin{cases} AB \times AH & \text{si } \ve{AB} \text{ et } \ve{AH} \text{ sont de même sens} \\ -AB \times AH & \text{si } \ve{AB} \text{ et } \ve{AH} \text{ sont de sens contraire} \end{cases}$$
+
+:::
+
+
+::: {.bloc}
+::: {.columns}
+
+::: {.column width="50%"}
+Cas où $\ve{AH}$ et $\ve{AB}$ sont de même sens.
+
+<div style="text-align:center;">
+  <img src="../../image/maths_term/Chap8_Espace_II_autre_def1.png" style="width:50%;">
+</div>
+:::
+
+::: {.column width="50%"}
+Cas où $\ve{AH}$ et $\ve{AB}$ de sens contraire.
+
+<div style="text-align:center;">
+  <img src="../../image/maths_term/Chap8_Espace_II_autre_def 2.png" style="width:60%;">
+</div>
+:::
+
+:::
+:::
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On procède par disjonction des cas :
+
+1. On suppose que $H \neq A$. On a donc le triangle $AHC$ rectangle en $H$ et, par trigonométrie dans un triangle rectangle, on a $AH = AC \cos(\widehat{HAC})$.
+    a. On suppose que $H \in [AB)$. Ainsi $\widehat{HAC} = \widehat{BAC}$.
+    Donc :
+    $$
+    \begin{aligned} 
+    \ve{AB} \cdot \ve{AC} &= AB \times AC \times \cos(\widehat{BAC}) \\
+    &= AB \times AC \times \cos(\widehat{CAH}) \\ 
+    &= AB \times AH \\
+    &= \ve{AB} \cdot \ve{AH}
+    \end{align*}
+    b. On suppose que $H \notin [AB)$, alors $\widehat{HAC} = 180^\circ - \widehat{BAC}$.
+    Donc :
+    \begin{align*}
+    \ve{AB} \cdot \ve{AC} &= AB \times AC \times \cos(\widehat{BAC}) \\
+    &= AB \times AC \times \cos(180^\circ - \widehat{CAH})\\
+    &= -AB \times AC \cos(\widehat{HAC})\\
+    &= -AB \times AH \\
+    &= \ve{AB} \cdot \ve{AH}
+    \end{aligned}$$
+2. Si $H = A$, alors $\widehat{BAC}$ est un angle droit, donc le produit scalaire :
+$$\ve{AB} \cdot \ve{AC} = 0 = \ve{AB} \cdot \ve{AH}$$
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère $ABC$ un triangle rectangle en $A$ tel que $AB=5$ et $AC=7$. Déterminer $\ve{CA} \cdot \ve{CB}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$ABC$ est rectangle en $A$, donc $A$ est le projeté orthogonal de $B$ sur $(AC)$.
+On en déduit alors que : 
+$$\ve{CA} \cdot \ve{CB} = \ve{CA} \cdot \ve{CA} = CA^2 = 49$$
+
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Soit $ABC$ un triangle rectangle en $C$. On note $H$ le projeté orthogonal de $C$ sur $[AB]$.
+Démontrons que $AB \times AH = AC^2$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a $AB \times AH = \ve{AB} \cdot \ve{AH} = \ve{AB} \cdot \ve{AC} = \ve{AC} \cdot \ve{AC} = AC^2$.
+
+</details>
+
+:::
+
+
+Soit $ABC$ un triangle tel que $BC = CA = 4$ et $\widehat{ABC} = \frac{\pi}{6}$. Déterminons la mesure de $AB$.
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Dans un triangle isocèle, la médiatrice et la hauteur issues du sommet principal sont confondues.
+Donc le milieu $H$ de $[AB]$ est le projeté orthogonal de $C$ sur $(AB)$.
+On a :
+$$\ve{BA} \cdot \ve{BH} = \ve{BA} \cdot \ve{BC} = \norm{BA} \times \norm{BC} \times \cos\left(\widehat{ABC}\right)$$
+Or $H \in [AB]$, donc $\ve{BH}$ et $\ve{BA}$ sont de même sens. Ainsi :
+$$\ve{BA} \cdot \ve{BH} = BA \times BH$$
+On en déduit :
+$$BA \times BH = BA \times 4 \times \frac{\sqrt{3}}{2}$$ 
+D'où $BH = 2\sqrt{3}$. Comme $H$ est le milieu de $[AB]$, on a $BA = 4\sqrt{3}$.
+
+</details>
+
+:::
+
+
+<div class="nav-pages">
+  <a class="next" href="def_norme_propriete.html">➡️</a>
+</div>

@@ -1,0 +1,257 @@
+---
+title: "Etude complète de suites récuirrentes"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Limites des suites géométriques"
+order: 10
+---
+
+
+
+_______________
+
+
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Cas 1 </span></div>
+
+La suite $(u_n)$ est définie par $u_0=2$ et pour tout $n \in \mathbb{N}$ par $$u_{n+1} = \frac{1+3u_n}{3+u_n}$$
+On considère la fonction $f$ définie sur $[0\,;\,+ \infty[$ par $$f(x)=\frac{1+3x}{3+x}$$
+On admet que cette fonction est croissante sur $[0\,;\,+\infty[$.
+
+1. Montrer par récurrence que pour tout $n \in \mathbb{N}$, $1 \leqslant u_n$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout $n \in \mathbb{N}$, soit $P_n : u_n \geqslant 1$.
+
+* **Initialisation :**  
+  On a $u_0=2$ donc $u_0 \geqslant 1$.  
+  Ainsi $P_0$ est vraie.
+
+* **Hérédité :**    
+  On suppose que pour un certain rang $n$ arbitrairement fixé, $P_n$ est vraie.  
+  
+  C'est-à-dire que $1 \leqslant u_n$.  
+  $$1 \leqslant u_n \underset{f \nearrow}{\Longrightarrow} f(1) \leqslant f(u_n) \Longrightarrow 1 \leqslant u_{n+1}$$
+  
+  Ainsi $(P_n \Longrightarrow P_{n+1})$ est vraie. Or $P_n$ est vraie, on en déduit que $P_{n+1}$ est vraie.
+
+* **Conclusion :**  
+  On a $P_0$ vraie et $P_n$ est héréditaire pour tout $n$.
+  
+  On en déduit que $P_n$ est vraie pour tout $n \in \mathbb{N}$.
+
+</details>
+
+2. a. Montrer que, pour tout $n \in \mathbb{N}$, $u_{n+1}-u_n = \frac{(1-u_n)(1+u_n)}{3+u_n}$.
+   
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+
+    Pour tout $n \in \mathbb{N}$, 
+    $$u_{n+1} - u_n = \frac{1+3u_n}{3+u_n} - u_n = \frac{1+3u_n -3u_n -u_n^2}{3+u_n} = \frac{1-u_n^2}{3+u_n} = \frac{(1-u_n)(1+u_n)}{3+u_n}$$
+
+    </details>
+
+    b. En déduire le sens de variation de la suite $(u_n)$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+
+    Pour tout $n \in \mathbb{N}$, on a $u_n \geqslant 1$.
+    On en déduit que $$1-u_n \leqslant 0 \quad \text{ et } \quad 1+u_n > 0\quad \text{ et }\quad 3+u_n >0$$
+    On en déduit, d'après la règle des signes, que $$\frac{(1-u_n)(1+u_n)}{3+u_n} \leqslant 0$$
+    Donc que $$u_{n+1} \leqslant u_n$$
+    Ainsi la suite $(u_n)$ est décroissante.
+
+    </details>
+
+3. a. Montrer que la suite $(u_n)$ converge vers un réel que l'on note $l$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+
+    La suite $(u_n)$ est décroissante et minorée ; donc, d'après le théorème de convergence monotone, elle converge vers un réel que l'on note $l$.
+
+    </details>
+
+   b. Déterminer la limite de la suite $(u_n)$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+
+    La suite $(u_n)$ converge vers $l$ donc $$\lim_{n \to + \infty} u_n = l \quad \text{ et } \quad \lim_{n \to + \infty} u_{n+1} =l$$
+    De plus 
+    $$\lim_{n \to + \infty} u_{n+1} = \lim_{n \to + \infty} \frac{1+3u_n}{3+u_n}=\frac{1+3l}{3+l}$$
+
+    On en déduit, par unicité de la limite, que $$l= \frac{1+3l}{3+l} \iff l(3+l) = 1+3l \iff l^2-1 =0$$
+
+    On en déduit donc que $l=1$ ou $l=-1$.
+
+    Or la suite est minorée par $1$, ainsi pour tout $n \in \mathbb{N}$, $u_n \geqslant 1$.
+
+    D'où $$\lim_{n \to + \infty} u_n \geqslant 1$$
+
+    Ainsi $l=1$.
+
+    </details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Étude d'une fonction auxiliaire </span></div>
+
+**Partie A**
+
+On considère la fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \frac{3}{4} x^2 - 2x + 3$.
+
+1. Dresser le tableau de variations de $f$ sur $\mathbb{R}$, en justifiant.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f$ est une fonction polynôme du second degré dont le coefficient dominant $\frac{3}{4}$ est positif.  
+Sa représentation graphique est une parabole orientée vers le haut, dont l'axe de symétrie a pour équation $x= \frac{-(-2)}{2 \times 3/4} = \frac{4}{3}$.
+
+Tableau de variations :
+$x$ | $-\infty$ | $4/3$ | $+\infty$
+---|---|---|---
+$f(x)$ | $+\infty$ | $\searrow 5/3 \nearrow$ | $+\infty$
+
+</details>
+
+2. Démontrer que pour tout $x$ réel, $x \leqslant f(x)$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, $$x \leqslant f(x) \iff \frac{3}{4} x^2 -2x+3-x \geqslant 0 \iff \frac{3}{4}x^2 -3x+3 \geqslant 0$$
+Soit le polynôme $\frac{3}{4}x^2-3x+3$. $\Delta= (-3)^2 - 4 \times \frac{3}{4} \times 3 = 0$.
+Ainsi, le polynôme n'admet qu'une seule racine réelle double $x_0 = \frac{-(-3)}{2 \times 3/4} = 2$.
+De plus, il est du signe de son coefficient dominant $\frac{3}{4} > 0$.
+Ainsi pour tout réel $x$, $f(x) - x \geqslant 0$.
+
+</details>
+
+**Partie B**
+
+On considère la suite $(u_n)$ de terme initial $u_0$ telle que $u_{n+1} = f(u_n)$.
+
+1. Justifier que la suite $(u_n)$ est croissante, quelle que soit la valeur de $u_0$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+D'après la partie précédente, on a pour tout réel $x$, $f(x) \geqslant x$.
+On en déduit alors que pour tout $n$, $f(u_n) \geqslant u_n$, donc $u_{n+1} \geqslant u_n$.
+D'où la suite $(u_n)$ est croissante.
+
+</details>
+
+2. Étude du cas : $4/3 \leqslant u_0 \leqslant 2$.
+  a. Démontrer par récurrence que, pour tout entier naturel $n$,
+  $$\dfrac43 \leqslant u_{n} \leqslant 2$$
+
+  <details class="bloc cor"><summary>Afficher la correction :</summary>
+  La fonction $f$ est croissante sur $[4/3 ; +\infty[$, donc sur $[4/3 ; 2]$.
+
+  Soit $P_n : 4/3 \leqslant u_n \leqslant 2$.
+  - **Initialisation :**   
+    On a $$ \frac43 \leqslant u_0 \leqslant 2$$
+    Donc $P_0$ est vraie.
+
+  - **Hérédité :**  
+    On suppose que pour un entier $n$ arbitrairement fixé, $P_n$ est vraie.
+
+    C'est-à-dire que $\frac43 \leqslant u_n \leqslant 2$.
+
+    Montrons alors que $P_{n+1}$ est vraie.
+
+    $$\frac43 \leqslant u_n \leqslant 2 \underset{f \nearrow \text{ pour } x \geqslant \frac43}{\Longrightarrow} f\left(\frac43\right) \leqslant f(u_n) \leqslant f(2) \Longrightarrow \frac43 \leqslant u_{n+1} \leqslant 2$$
+
+    Ainsi $(P_n \Longrightarrow P_{n+1} )$ est vraie. 
+    
+    Or $P_n$ est vraie, on en déduit que $P_{n+1}$ est vraie.
+  - **Conclusion :**   
+    On a $P_0$ vraie et pour tout $n \in \N$, $P_n$ est héréditaire.
+    
+    On déduit du raisonnement par récurrence que $P_n$ est vraie pour tout entier $n$.
+  </details>
+
+
+  b. émontrer  que la suite $\left(u_n\right)$ est convergente.
+
+  <details class="bloc cor"><summary>Afficher la correction :</summary>
+  La suite est croissante et majorée par 2, donc d'après le théorème de convergence monotone, elle est convergente.
+  </details>
+  
+  c. Déterminer la limite de la suite $\left(u_n\right)$. 
+
+  <details class="bloc cor"><summary>Afficher la correction :</summary>
+  D'après la question précédente, la suite $(u_n)$ converge. Soit $l$ la limite de cette suite.
+
+  Alors $$\lim_{n \to + \infty} u_n = l \quad \text{ et } \quad \lim_{n \to + \infty} u_{n+1} = l$$
+
+  On a alors par opération, 
+
+  $$\lim_{n \to + \infty} u_{n+1} = \lim_{n \to + \infty}  \frac34 u_n^2-2u_n +3 = \frac34l^2-2l+3$$
+
+  On déduit de l'unicité de la limite que $$l=\frac34 l^2-2l+3$$
+    
+  C'est-à-dire que $$\frac34l^2-3l+3 = 0$$
+
+  Cette équation admet, d'après la question $A.2$ une unique solution $l=2$.
+
+  On déduit donc que la suite $(u_n)$ converge vers $2$.
+  </details>
+
+3. Etude du cas particulier : $u_0 = 3$.
+
+On admet que dans ce cas la suite $\left(u_n\right)$ tend vers $+\infty$.
+
+Recopier et compléter la fonction \og \texttt{seuil} \fg{} suivante écrite en Python, afin qu'elle renvoie la plus petite valeur de $n$ telle que $u_n$ soit supérieur ou égal à 100.
+  <details class="bloc cor"><summary>Afficher la correction :</summary>
+
+    ```python
+    def seuil():
+        u = 3
+        n = 0
+        while u <= 100:
+            u = 3/4*u**2 - 2*u + 3
+            n = n + 1
+        return n
+    ```
+
+  </details>
+
+4. Etude du cas : $u_0 > 2$.
+
+A l'aide d'un raisonnement par l'absurde, montrer que $\left(u_n\right)$ n'est pas convergente.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Soit $u_0 >2$.
+
+On suppose que la suite $(u_n)$ converge.
+
+Donc, il existe un réel $l$ tel que $$\lim_{n \to + \infty} u_n =l$$
+
+De la stricte croissante de la suite 
+
+$(u_n)$ on déduit que  pour tout $n \in \N$, $$2 < u_n < l$$
+
+De même que dans la question $2.c$, on a (unicité de la limite) $$f(l)= l$$
+
+Cette équation qui admet comme unique solution $l=2$.
+
+Ainsi $$2 < 2$$
+
+Ce qui est impossible, donc pour $u_0 >2$, la suite $(u_n)$ ne peut pas converger.
+Donc elle diverge.
+</details>
+
+
+
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="suite_geometrique.html">⬅️</a>
+</div>

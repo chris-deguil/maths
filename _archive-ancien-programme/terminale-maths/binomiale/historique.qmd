@@ -1,0 +1,11 @@
+---
+title: "Historique sur la loi binomiale"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Bernoulli - Binomiale"
+order: 1
+---
+
+

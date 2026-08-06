@@ -1,0 +1,244 @@
+/*-- scss:uses --*/
+/*-- scss:rules --*/
+
+
+body {
+  background-color: rgb(253, 250, 245) !important;
+}
+
+/* Laisser les wrappers transparents pour voir le fond */
+body.maths-theme .page-columns,
+body.maths-theme main.content,
+body.maths-theme .content {
+  background: transparent !important;
+}
+
+
+
+
+.bloc-titre {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1em; 
+  margin-bottom: .4rem;
+  color: var(--tone);
+  border-bottom: 1px solid var(--tone); 
+}
+
+
+.bloc {
+  --tone: #64748b;
+  --bg: rgba(100,116,139,.08);
+  --bd: color-mix(in srgb, var(--tone) 35%, transparent);
+  --title: var(--tone);
+  display: block;
+  margin: .9rem 0;
+  padding: .8rem 1rem;
+  border: 1px solid var(--bd);
+  border-left-width: .55rem;
+  border-radius: .55rem;
+  background: var(--bg);
+}
+
+
+.bloc.def {--tone: #f97316;--bg: rgba(249,115,22,.08);}
+.bloc.thm {--tone: #16a34a;--bg: rgba(22,163,74,.08);}
+.bloc.ex {--tone: #2563eb;--bg: rgba(37,99,235,.08);}
+
+
+@media (prefers-color-scheme: dark) {
+  .bloc {
+    --bd: color-mix(in srgb, var(--tone) 45%, transparent);
+    --bg: color-mix(in srgb, var(--tone) 16%, transparent);
+  }
+}
+
+
+.bloc.demo {
+  --tone: #f97316; 
+  --bg: rgba(249,115,22,.08);
+  border-left-width: .4rem; 
+  padding: 0; 
+}
+
+.bloc.thm .bloc-titre::before {
+  content: "📐";
+  margin-right: 0.45rem;
+}
+
+.bloc.def .bloc-titre::before {
+  content: "📝"; 
+  margin-right: 0.45rem;
+}
+
+
+.bloc.ex .bloc-titre::before {
+  content: "";
+  display: inline-block;
+  width: 1.2em;                
+  height: 1.2em;              
+  margin-right: 0.45rem;      
+  background: url("../image/fav_cerveau2.png") no-repeat center / contain;
+  vertical-align: middle;    
+}
+
+
+.bloc.rem {
+  --tone: #7e57c2; 
+  --bg: rgba(126, 87, 194, 0.03); 
+}
+
+.bloc.rem .bloc-titre::before {
+  content: "💬"; 
+  margin-right: 0.45rem;
+}
+
+
+
+
+
+.exemp-extra {
+  display: inline;
+  font-weight: normal !important;
+  color: #4b5563;                 
+  font-size: 0.9em;              
+  margin-left: 0.5rem;           
+}
+
+
+.bloc.ex .exemp-extra {
+  font-style: normal;
+}
+
+
+
+details.bloc.demo {
+  --tone: #cc0000;
+  border: 2px solid var(--tone);
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background-color: #fff0f0;
+}
+
+
+details.bloc.demo > summary {
+  font-weight: normal;   
+  font-size: 0.95em;      
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: var(--tone);
+}
+
+
+details.bloc.demo > summary::before {
+  content: "🔎";
+  margin-right: 0.5em;
+  transition: transform 0.2s;
+}
+
+
+details.bloc.demo[open] > summary::before {
+  transform: rotate(45deg);
+}
+
+
+details.correction {
+  border: 2px solid #007acc;
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background-color: #f0f8ff;
+}
+
+details.correction summary {
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+details.correction summary::before {
+  content: "➕";
+  margin-right: 0.5em;
+  transition: transform 0.2s;
+}
+
+details.correction[open] summary::before {
+  content: "➖";
+}
+
+details.correction > *:not(summary) {
+  margin-top: 0.5em;
+}
+
+
+
+.bloc p { margin: .35rem 0; line-height: 1.35; }
+.bloc .math.display { margin: .45rem 0 !important; }
+.bloc .math.display + .math.display { margin-top: .25rem !important; }
+
+
+
+
+
+/* Variante Exercice — même système que def/thm/ex */
+.bloc.exo {
+  --tone: #004080;                 /* bleu exos */
+  --bg: rgba(0, 64, 128, 0.06);    /* fond léger */
+  --bd: rgba(0, 64, 128, 0.35);    /* bord mélange ~35% */
+  /* --title: var(--tone);  // optionnel, déjà défini par .bloc */
+}
+
+/* (facultatif) icône devant le titre d'exo */
+.bloc.exo .bloc-titre::before {
+  content: "🧩";
+  margin-right: 0.45rem;
+}
+
+.bloc.exo .exo-num {
+  font-weight: 700;
+  display: inline;      /* sur la même ligne que .exo-extra */
+  margin: 0 .25rem 0 0; /* petit espace avant le texte optionnel */
+}
+
+
+h2:has(+ .bloc.exo) {
+  display: none;
+}
+
+.exo-extra {
+  font-weight: normal;   /* tu peux styliser comme tu veux */
+  margin-left: 0.2em;    /* petit espace avant le texte */
+}
+
+.bloc.exo .exo-extra { display: inline; }
+
+
+
+.nav-pages {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.nav-pages a {
+  font-size: 3em;       /* taille des flèches */
+  text-decoration: none;
+  color: inherit;
+  position: absolute;
+  top: 0;
+}
+
+.nav-pages a.prev {
+  left: 0;              /* collée à gauche */
+}
+
+.nav-pages a.next {
+  right: 0;             /* collée à droite */
+}

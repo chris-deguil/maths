@@ -1,0 +1,27 @@
+---
+title: "Chapitre 2 : Suites numériques : Généralités"
+description: "Suite numérique - Suite Recursive - variation - limite - Algorithme"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+- Dans le cadre de l’étude d’une suite, utiliser le registre de la langue naturelle, le registre algébrique, le registre graphique, et passer de l’un à l’autre.  
+- Proposer, modéliser une situation permettant de générer une suite de nombres. Déterminer une relation explicite ou une relation de récurrence pour une suite définie par un motif géométrique, par une question de dénombrement.  
+- Calculer des termes d’une suite définie explicitement, par récurrence ou par un algorithme.  
+- Pour une suite arithmétique ou géométrique, calculer le terme général, la somme de termes consécutifs, déterminer le sens de variation.  
+- Modéliser un phénomène discret à croissance linéaire par une suite arithmétique, un phénomène discret à croissance exponentielle par une suite géométrique.  
+:::

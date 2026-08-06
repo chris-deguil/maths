@@ -1,0 +1,158 @@
+---
+title: "Suite géométriques : définition"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Défintion suite géométriques, forme recursicve et explicite"
+order: 4
+---
+
+___
+
+## Définition
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+Une suite est dite géométrique lorsque la variation relative de deux termes consécutifs quelconques est constante. Cette constante est appelée raison de la suite.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+La définition de la suite géométrique implique que, pour tout entier naturel $n$, $u_n \neq 0$ car il faut pouvoir effectuer le quotient des termes consécutifs. En effet, si un des termes de la suite est nul, alors la suite géométrique est constante, égale à $0$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+Par exemple, on considère $u=\{2~;~6~;~18~;~54~;~162~;~486~;~1458~;~..\}$  
+
+Cette suite est en progression géométrique, le quotient de deux termes consécutifs est constant, égal à $3$. Il s'agit donc du début d'une suite géométrique de raison $3$ et de premier terme $2$.
+:::
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">En économie : </span><br> 
+On retrouve cette notion de variation relative lorsque l'on a un prêt à intérêt composé, c'est-à-dire que les intérêts se cumulent au capital de départ et sont alors aussi soumis aux intérêts l'année suivante.
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Une suite est géométrique si et seulement s'il existe deux réels $a$ et $q$, $a\neq 0$, tels que pour tout $n \in \mathbb{N}$
+$$u_{n+1} = q \times u_n \quad \text{et} \quad u_0 = a$$
+$q$ est appelé la raison de la suite.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Soit $(u_n)$ une suite géométrique, ainsi pour tout $n \in \mathbb{N}$, $u_n \neq 0$, et soit $q$ la valeur constante de la variation relative, ainsi pour tout $n \in \mathbb{N}$, $\dfrac{u_{n+1}}{u_n} = q$, ce qui permet de conclure.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+Dire si les suites suivantes sont géométrique et préciser la raison.
+
+* La suite $(u_n)_{n \in \mathbb{N}}$ définie par $u_{n +1} = -2 u_n$  
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    $(u_n)$ est une suite géométrique de raison $-2$.
+    </details>
+
+* La suite $(v_n)_{n \in \mathbb{N}}$ définie par $v_{n +1} = 2 v_n + 5$ et $v_0=1$  
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    On a $v_0 = 1$, $v_1 = 2 v_0 + 5 = 7$ et $v_2 = 2v_1+5 = 19$.  
+    Ainsi $\dfrac{v_2}{v_1} \neq \dfrac{v_1}{v_0}$. Donc $(v_n)$ n'est pas une suite géométrique.
+    </details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+
+1. Pour montrer qu'une suite n'est pas géométrique il suffit de montrer que le quotient de deux termes consécutifs n'est pas constant.
+2. Pour calculer un terme de la suite il faut calculer les termes précédents.
+3. Le processus de construction de la suite nécessite de connaître le premier terme (c'est un processus itératif).
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+Montrer que la suite $(u_n)$ définie par $u_n=2 \times (-5)^n$ est géométrique.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+En effet, pour tout $n \in \mathbb{N}$,  
+$$u_{n+1} =2 \times (-5)^{n+1} = (-5) \times \left(2 \times (-5)^n \right)=-5 u_n$$
+Ainsi $(u_n)$ est une suite géométrique de raison $-5$ et de premier terme $u_0 =2$.
+</details>
+:::
+
+## Forme générale
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Une suite $(u_n)_{n \in \mathbb{N}}$ est géométrique si et seulement s'il existe deux réels $u_0$ et $q$ tels que 
+$$u_n = q^n \times u_0$$
+
+$u_0$ est le premier terme et $q$ est la raison.
+:::
+
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+On procède comme pour les suites arithmétiques. On considère les suites $(v_n)$ et $(u_n)$ définies sur $\mathbb{N}$ par $v_{n+1}=q v_n$ et $v_0=a$, et $u_n=a \times q^n$. Clairement $u_0=v_0$.  
+De plus $u_{n+1}= a\times q^{n+1} = q \times a q^n = q\,u_n$.  
+Ainsi les suites $(u_n)$ et $(v_n)$ ont leur premier terme égaux et vérifient la même relation de récurrence du premier ordre, les suites sont donc égales.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> Avec une suite auxiliaire </span></div>
+La suite $(v_n)_{n \in \mathbb{N}}$ définie par $v_{n +1} = 2 v_n + 5$ et $v_0=1$. On considère la suite $(u_n)$ définie par $u_n= v_n+5$.
+
+1. Montrer que $(u_n)$ est une suite géométrique.
+   
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout $n \in \mathbb{N}$, $u_{n+1} = v_{n+1} + 5 = 2v_n +5 +5 = 2(v_n +5) = 2 u_n$.  
+Ainsi la suite $(u_n)$ est une suite géométrique de raison 2.
+</details>
+
+2. En déduire l'expression de $u_n$ puis de $v_n$ en fonction de $n$.
+   
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a pour tout $n$, $u_n=v_n+5$. Donc $u_0=v_0+5 = 6$.  
+Ainsi pour tout entier $n$, $u_n = 6 \times 2^n$.  
+De plus $v_n=u_n-5$, donc $v_n=6 \times 2^n - 5$.
+</details>
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+
+Soit $(u_n)_{n \in \mathbb{N}}$ une suite géométrique de raison $q$, alors pour tout entier $m, p \in \mathbb{N}$, 
+$$u_m = u_p \times q^{m - p}$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On applique la relation précédente aux termes d'indice $m$ et $p$.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+
+Déterminons la raison de la suite géométrique $(u_n)_{n \in \mathbb{N}}$, sachant que $u_3 = \dfrac{27}{2}$ et $u_{5} = 108$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a alors $\dfrac{u_5}{u_3} = 108 \times \dfrac{2}{27} = 8$.  
+Or $\dfrac{u_5}{u_3} = \dfrac{u_3 \times q^2}{u_3} = q^2$.  
+
+Donc $q^2 = 8$, d'où $q = 2 \sqrt{2}$ ou $q=-2\sqrt{2}$.  
+
+On ne peut donc pas répondre à la question sans une précision supplémentaire sur la suite.
+</details>
+:::
+
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="sa_bilan.html">⬅️</a>
+  <a class="next" href="sg_variation_somme.html">➡️</a>
+</div>

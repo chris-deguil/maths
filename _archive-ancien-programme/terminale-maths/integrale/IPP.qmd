@@ -1,0 +1,241 @@
+---
+title: "Intégration par parties"
+description: "Calcul d'intégrale par IPP, détermination de primitive."
+format:
+  html:
+    toc: true
+    number-sections: false
+order: 5
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span>
+
+Soit $f$ et $g$ deux fonctions dérivables sur $[a\, ; \, b]$, de dérivées continues alors 
+
+$$
+\int_a^b  f(x)  g'(x) \dd x  = [f(x)g(x)]_a - \int_a^b f'(x) g(x) \dd x
+$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On a $(fg)'=f'g +g'f$, donc $fg' = (fg)' - f'g$.<br>
+Ainsi en intégrant et par linéarité , on  a la relation donnée, avec $\int_a^b (fg)' = [fg]_a^b$
+
+</details>
+
+
+\vspace{.5cm}
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+- Avant l'utilisation de l'intégration par partie, il est nécessaire de vérifier que les fonctions considéré sont dérivables et de dérivées continues sur l'intervalle considérée.
+- On considère 
+
+$$
+H(x) = \int_a^x u(t)v'(t) \dd t  = \left[u(t)v(t)\right]_a^x - \int_a^x u'(t) v(t) \dd t
+$$
+
+la fonction $H$ est alors une primitive de $(uv')$. On utilise alors une ingétration par partie quand $(u'v)$ est plus facile à intégrer que $(uv')$.
+
+:::
+
+
+\vspace{.5cm}
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   Calcul d'une intégrale 1</span></div>
+
+Déterminer la valeur de $\int_0^1 x \e^x \dd x$.<br>
+
+En posant 
+
+| $u(x)=x$ | $u'(x)=1$ |
+|----------|-----------|
+| $v'(x)= \e^x$ | $v(x)= \e^x$ |
+
+Les fonctions $u,v,u',v'$ sont continues, on  a, par intégration par partie (I.P.P)
+
+$$
+\int_0^1 x \e^x \dd x  = [x \e^x]_0^1 - \int_0^1 \e^x \dd x  = [x \e^x]_0^1 - [\e^x]_0^1 = (\e - 0) - (e-1) = 1
+$$
+
+:::
+
+
+\vspace{.5cm}
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   Calcul d'une intégrale 2</span></div>
+
+On pose $I=\int_0^\pi \e^x \cos(x) \dd x $ et $J=\int_0^\pi \e^x \sin(x) \dd x$<br>
+
+En posant 
+
+| $u(x)=\sin x$ | $u'(x)=\cos x$ |
+|---------------|----------------|
+| $v'(x)= \e^x$ | $v(x)= \e^x$ |
+
+On a, par intégration par partie
+
+$$
+I= [\e^x \sin x ]_0^\pi -\int_0^\pi \e^x \cos x  = - J
+$$
+
+De plus<br>
+
+En posant 
+
+| $u(x)=\cos x$ | $u'(x)=\sin x$ |
+|---------------|----------------|
+| $v'(x)= \e^x$ | $v(x)= \e^x$ |
+
+Les fonctions $u,v,u',v'$ sont continues, on a, par intégration par partie
+
+$$
+J=[\e^x \cos x]_0^\pi - \int_0^\pi \e^x \sin x \dd  x  = - \e^\pi + 1 - I
+$$
+
+On obtient alors $J= - \e^\pi - 1 - J$, <br>
+
+Donc 
+
+$$
+J= \frac{-\e^\pi -1}{2} \qquad et \qquad I=\frac{\e^\pi + 1}{2}
+$$
+
+:::
+
+
+\vspace{.5cm}
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   Déterminer une primitive</span></div>
+
+On cherche à déterminer la primitive de $\ln$ qui s'annule en $1$.<br>
+Soit $F(t)= \int_1^t \ln x \dd x $.<br>
+
+En posant 
+
+<div style="text-align:center;">
+
+<table style="border-collapse:collapse; margin:auto;">
+<tr>
+<td style="border:1px solid black; padding:6px;">$u(x)=\ln x$</td>
+<td style="border:1px solid black; padding:6px;">$u'(x)=\frac{1}{x}$</td>
+</tr>
+<tr>
+<td style="border:1px solid black; padding:6px;">$v'(x)= 1$</td>
+<td style="border:1px solid black; padding:6px;">$v(x)= x$</td>
+</tr>
+</table>
+
+</div>
+
+Les fonctions $u,v,u',v'$ sont continues, on a, par intégration par partie (I.P.P)
+
+$$
+\int_0^t \ln x  \dd x  = [x \ln x]_0^t - \int_0^t \frac{1}{x}  \times x \dd x  = [x \ln x]_0^t - [1]_0^t = t \ln t - t
+$$
+
+:::
+
+
+\vspace{.5cm}
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   Lemme de Riemann-Lebesgue</span></div>
+
+On considère $f$ une fonction continue et croissante sur $[a \, ; \, b]$, dérivable  de dérivée continue sur $[a \, ; \, b]$.<br>
+*La croissance est inutile mais elle simplifie le raisonnement.*<br>
+
+Montrons que 
+
+$$
+\lim_{n \to + \infty} \int_a^b f(x) \sin(n x) \dd x = 0
+$$
+
+En posant 
+
+<div style="text-align:center;">
+
+<table style="border-collapse:collapse; margin:auto;">
+<tr>
+<td style="border:1px solid black; padding:6px;">$u(x)= f(x)$</td>
+<td style="border:1px solid black; padding:6px;">$u'(x)= f'(x)$</td>
+</tr>
+<tr>
+<td style="border:1px solid black; padding:6px;">$v'(x)= \sin(n x)$</td>
+<td style="border:1px solid black; padding:6px;">$v(x)= -\frac{1}{n} \cos( n x)$</td>
+</tr>
+</table>
+
+</div>
+
+Les fonctions $u,v,u',v'$ sont continues, on a, par intégration par partie 
+
+$$
+\begin{aligned}
+\int_a^b f(x) \sin(n x) \dd x   &
+= \left[-\frac{1}{n} \cos( n x) f(x) \right]_a^b 
+- \int_a^b -\frac{1}{n} \cos( n x) f'(t) \dd t\\
+& 
+= \frac{f(a) \cos (na)- f(b) \cos (nb)}{n} + \frac{1}{n} \int_a^b f'(x) \cos (n x ) \dd x
+\end{aligned}
+$$
+
+or 
+
+$$
+- \frac{f(a)}{n} \leqslant \frac{f(a) \cos ( n a)}{n}  \leqslant \frac{f(a)}{n}
+\qquad et \qquad
+- \frac{f(b)}{n} \leqslant \frac{f(b) \cos ( n b)}{n}  \leqslant \frac{f(b)}{n}
+$$
+
+Par encadrement, ces deux suites convergent vers $0$.<br>
+
+De plus, pour tout $n \in \N^*$, $t \in [a\,;\,b]$,
+
+$$
+-1 \leqslant \cos (nt) \leqslant 1
+$$
+
+D'où, puisque $f$ est croissante, donc $f'$ positive, on a  pour tout $n \in \N^*$, $t \in [a\,;\,b]$,
+
+$$
+-f'(x) \leqslant \cos (nt)f'(x) \leqslant f'(x)
+$$
+
+Donc en passant aux intégrales 
+
+$$
+ \int_a^b -f'(x) \dd x \leqslant \int_a^b f'(x) \cos (nx ) \dd x \leqslant \int_a^b  f'(x) \dd x
+$$
+
+Soit 
+
+$$
+f(a) - f(b) \leqslant \int_a^b f'(x) \cos (nx ) \dd x  \leqslant f(b)- f(a)
+$$
+
+D'où 
+
+$$
+\frac{1}{n} (f(a) - f(b) ) \leqslant \frac{1}{n} \int_a^b f'(x) \cos (nx ) \dd x \leqslant \frac{1}{n}(  f(b)- f(a))
+$$
+
+Par encadrement, ces deux suites convergent vers $0$.<br>
+D'où le résultat.
+
+:::

@@ -1,0 +1,28 @@
+---
+title: "Chapitre 1 : Le second degré"
+description: "Forme canonique, racines, signe, parabole."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+- Étudier le signe d’une fonction polynôme du second degré donnée sous forme factorisée.
+- Déterminer les fonctions polynômes du second degré s’annulant en deux nombres réels distincts.
+- Factoriser une fonction polynôme du second degré, en diversifiant les stratégies : racine évidente, détection des racines par leur somme et leur produit, identité remarquable, application des formules générales. 
+- Choisir une forme adaptée (développée réduite, canonique, factorisée) d’une fonction polynôme du second degré dans le cadre de la résolution d’un problème (équation, inéquation, optimisation, variations).
+- Déterminer l’axe de symétrie et le sommet d’une parabole d’équation $y=ax^2+bx+c$
+:::
+

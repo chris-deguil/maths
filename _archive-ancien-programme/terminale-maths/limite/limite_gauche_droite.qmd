@@ -1,0 +1,93 @@
+---
+title: "limite à gauche, limite à droite"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "déterminer la limite à gauche et à droite, existence de la limite "
+order: 7
+---
+
+::: {.rem}
+Certaines fonctions n'ont pas le même comportement suivant que $x$ tend vers $a$ par valeurs supérieures ou par valeurs inférieures à $a$. On introduit alors la notion, plus subtile, de limite à gauche et limite à droite.
+
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+On dit que $f(x)$ tend vers $l$ quand $x$ tend vers $a$ par valeurs supérieures (resp. par valeurs inférieures) si la restriction de $f$ à $]a\, ; \, +\infty[$ (resp. $]-\infty \, ; a [$) tend vers $l$ quand $x$ tend vers $a$.
+
+On note alors $$\lim_{x \to a^+} f(x)= l \quad  \left( \text{resp. } \lim_{x \to a^-} f(x) \right)$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+On peut évidemment donner une définition quantifiée pour la limite par valeurs supérieures :
+$$\forall \epsilon >0, \, \exists \delta >0,\, \forall x \in I, (0 \leqslant x - a \leqslant \delta \Rightarrow |f(x)-l| \leqslant \epsilon)$$
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">    </span></div>
+
+Soit $f$ définie sur $\mathbb{R}$ par 
+$$f(x)=\begin{cases}
+x-1 \, ,\text{ si } x \geqslant 0\\
+x+1 \, ,\text{ sinon} 
+\end{cases}$$
+Déterminer la limite à droite et la limite à gauche.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Alors $$\lim_{x \to 0^+} f(x) = -1 \quad \text{ et } \quad \lim_{x \to 0^-} f(x) = 1$$
+On observe que la limite à droite et la limite à gauche ne sont pas les mêmes.
+</details>
+:::
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admis) : </span>
+
+Soit $I$ un intervalle et $a \in I$. Soit $f$ une fonction.
+
+* Si $f$ est définie sur $I$ sauf en $a$, alors $f$ possède une limite en $a$ si et seulement si $f$ possède une limite à droite et une limite à gauche, et si elles sont égales.
+* Si $f$ est définie sur $I$, alors $f$ possède une limite en $a$ si et seulement si $f$ possède une limite à droite et une limite à gauche, et si elles sont égales à $f(a)$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">    </span></div>
+
+Soit $f$ définie sur $\mathbb{R}$ par 
+$$f(x)=\begin{cases}
+x^2-2x\, , \text{ si } x < 0\\
+x+1\, , \text{ si } x > 0\\
+1\, , \text{ si } x=0
+\end{cases}$$
+La fonction admet-elle une limite en $1$ ?
+
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a $\lim_{x \to 0^-} f(x)=0$, $\lim_{x \to 0^+} f(x) = 1$ et $f(0)=1$.  
+D'après la propriété, $f$ n'admet donc pas de limite en $0$.
+</details>
+
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+On considère la fonction partie entière $:x \longmapsto E(x)$, dont on donne la représentation graphique.
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap4_Limite_figure12.png" style="width: 45%;">
+</div>
+On peut conclure que la fonction partie entière n'admet aucune limite en $x \in \Z$. 
+
+Elle admet cependant des limites à gauche et à droite en tout point de $\Z$.
+
+:::
+
+
+<div class="nav-pages">
+ <a class="prev" href="limite_en_a_propriete.html">⬅️</a>
+  <a class="next" href="limite_infinie_en_a.html">➡️</a>
+</div>

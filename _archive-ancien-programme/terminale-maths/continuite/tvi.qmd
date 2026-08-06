@@ -1,0 +1,101 @@
+---
+title: "Théorème des valeurs intermédiaires"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "TVI, résolution d'équations"
+order: 3
+---
+
+
+_____
+En général, $f([a\,;\,b]) \neq [f(a)\,;\, f(b)]$. Par contre, on a :
+$$[f(a)\,;\, f(b)] \subset f([a\,;\,b])$$
+$f([a\,;\,b])$ désigne l'image de l'intervalle $[a\,;\, b]$ par la fonction $f$.
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* Si une fonction est continue, alors elle ne peut pas changer de signe sans s'annuler.
+* On peut, à l'aide du théorème, justifier l'existence d'au moins une solution pour une fonction continue de signe non constant, sans pour autant en donner sa valeur ni le nombre de solutions.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère la fonction $f$ définie par $f(x)=(x-1)\e^{-x}+1$.
+
+Montrer que la fonction $f$ admet au moins une racine.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+* On a $\lim_{x \to -\infty} (x-1) = - \infty$ et $\lim_{x \to -\infty} \e^{-x} = +\infty$. Par produit des limites, $\lim_{x \to - \infty} f(x) = -\infty$.
+* Pour tout réel $x$, $f(x) = x\e^{-x} - \e^{-x} +1$. Or $\lim_{x \to + \infty} \e^{-x} = 0$ et $\lim_{x \to + \infty} x \e^{-x} = 0$. Par produit et somme de limites, on déduit que $\lim_{x \to +\infty} f(x) = 1$.
+
+La fonction $f$ est continue sur $\mathbb{R}$ et $0 \in \left]\lim_{x \to-\infty} f(x) \, ; \, \lim_{x \to +\infty} f(x) \right[$.
+
+On déduit du théorème des valeurs intermédiaires l'existence d'au moins un $\alpha \in \mathbb{R}$, tel que $f(\alpha)=0$.
+</details>
+:::
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Soit $f$ une fonction continue strictement croissante sur $I$, alors : 
+
+* Si $f$ est strictement positive, $f(x) = 0$ n'admet aucune solution ;
+* Si $f$ change de signe, alors il existe $x, x' \in I$ tel que $f(x) < 0 < f(x')$.
+* 
+Supposons qu'il existe au moins deux valeurs annulant $f$ que l'on note $\alpha$ et $\beta$, alors on a $\alpha < \beta$ et $f(\alpha) = f(\beta)$, ce qui contredit la stricte croissance de $f$.
+
+Donc $f$ admet une seule racine. On déduit que si la fonction est strictement monotone, alors $f$ admet au plus une racine.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Montrer que $f(x)=0$ (fonction précédente) admet exactement une racine.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f$ est dérivable sur $\mathbb{R}$ comme produit et somme de fonctions dérivables. Pour tout $x \in \mathbb{R}$ :
+$$f'(x)= \e^{-x} - (x-1)\e^{-x} = (2-x)\e^{-x}$$
+ Or la fonction exponentielle étant à valeurs strictement positives, on déduit que $f'(x)$ est du signe de $2-x$.\\
+
+Ainsi $f'(x)$ est positive sur $]-\infty\,; \, 2[$ et donc la fonction est croissante sur cet intervalle et $f'(x)$ est négative sur $[2 \, ; \,+\infty[$ et donc décroissante sur cet intervalle.\\
+
+Ainsi la fonction $f$ admet un maximum en $2$ qui vaut $f(2) = \e^{-2} >0$.\\
+
+On déduit de la question précédente que $f$ admet au moins un zéro sur $]-\infty \, ; \, 2]$ et comme $f$ est strictement croissante sur cet intervalle, elle y admet au plus un zéro, soit un unique zéro sur l'intervalle $]-\infty \,; \, 2]$.\\
+
+Sur $[2 \, ; \, +\infty[$, la fonction $f$ est strictement décroissante avec $\lim_{x \to + \infty} f(x) = 1$, ainsi pour tout réel $x$, $f(x) > 1$, donc $f(x)=0$ n'admet aucune solution sur $[2\, ;\, +\infty[$.\\
+
+Ainsi $f(x)=0$ admet une unique solution sur $\R$. 
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : (Théorème de la bijection) </span>
+
+Si $f$ est une fonction continue et strictement monotone sur un intervalle $I$, alors pour tout réel $k$ appartenant à $f(I)$, l'équation $f(x)=k$ admet une unique solution dans $I$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Soient $I$ un intervalle et $f$ une fonction continue, alors $I$ et $f(I)$ ne sont pas forcément de même nature.
+
+Par exemple, la fonction $f(x)= \dfrac{2}{x^2+1}$ définie sur $]-\infty\,;\, +\infty[$ est à valeurs dans $]0\,;\,2]$. 
+
+
+Cependant, si $I$ est un intervalle fermé borné, alors $f(I)$ est un intervalle fermé borné : $f([a;b]) = [\min f ; \max f]$.
+:::
+
+
+<div class="nav-pages">
+ <a class="prev" href="operation.html">⬅️</a>
+  <a class="next" href="tvi_python.html">➡️</a>
+</div>

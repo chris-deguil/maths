@@ -1,0 +1,127 @@
+---
+title: "Exercices Bilans"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: " "
+order: 5
+---
+
+___
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> (Bilan 1 : Extrait de devoir) </span></div>
+
+On considère un carré $ABCD$ de côté $a$. On note $I$ et $J$ les milieux respectifs de $[AD]$ et $[DC]$.
+
+1.  a. Démontrer que $BI=\dfrac{\sqrt{5}}{2} a$. On admettra que $BI=BJ$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    $ABCD$ carré et $I$ milieu de $[AD]$, donc $AI=\dfrac{a}{2}$. Ainsi $IAB$ rectangle en $A$ et d'après le théorème de Pythagore $$BI^2=AI^2+AB^2= \left(\dfrac{a}{2} \right)^2 + a^2 = \dfrac{5}{4}a^2$$ 
+    or $BI>0$, 
+
+    donc $BI=\dfrac{\sqrt{5}}{2} a$.
+    </details>
+
+
+
+    b. En déduire l'expression de $\ve{BI}.\ve{BJ}$ en fonction de l'angle $\widehat{IBJ}$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    D'après le théorème d'Al-Kashi $$\ve{BI}.\ve{BJ} =BI \times BJ \times \cos(\widehat{IBJ}) = \dfrac{5}{4}a^2 \cos(\widehat{IBJ})$$
+    </details>
+
+2. Démontrer que $\ve{BI}.\ve{BJ}=a^2$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a 
+$$\ve{BI} = \ve{BA}+\ve{AI} = -\ve{AB} + \dfrac{1}{2}\ve{AD}$ et $\ve{BJ} = \ve{BC} + \ve{CJ} = \ve{BC} + \dfrac{1}{2} \ve{CD}$$  
+
+Ainsi 
+$$\ve{BI}.\ve{BJ} =\left(-\ve{AB} + \dfrac{1}{2}\ve{AD}\right).\left(\ve{BC} + \dfrac{1}{2} \ve{CD}\right) = -\ve{AB}.\ve{BC} - \dfrac{1}{2}\ve{AB}.\ve{CD} + \dfrac{1}{2}\ve{AD}.\ve{BC} + \dfrac{1}{4}\ve{CD}.\ve{AD}$$ 
+
+Or $ABCD$ carré, donc 
+$$\ve{AD}.\ve{DC}=0$, $\ve{AB}.\ve{BC} =0 \et \ve{CD} =-\ve{AB}$ et $\ve{BC}=\ve{AD}$$ 
+
+On déduit alors que 
+$$\ve{BI}.\ve{BJ} = \dfrac{1}{2} \ve{AB}^2+ \dfrac{1}{4}\ve {AD}^2 = a^2$$
+</details>
+
+3. En déduire au degré près, la valeur de $\widehat{IBJ}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Des questions précédentes, on déduit que $$a^2=\dfrac{5}{4}a^2 \cos (\widehat{IBJ})$$  
+Donc $$\widehat{IBJ}= \arccos \left(\dfrac{4}{5}\right) \approx 37^\circ$$
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> (Bilan 2 : Extrait DST) </span></div>
+
+1. On considère $\ve{u}$ et $\ve{v}$ deux vecteurs orthogonaux tels que $\norm{\ve{u}}=5$ et $\norm{\ve{v}}= \sqrt{2}$.  
+Calculer les nombres suivants : $$a=(3\ve{u} + 5 \ve{v})^2 \quad ; \quad b= (2 \ve{u} +3\ve{v})(2\ve{u}-3 \ve{v}) \quad ; \quad c=\norm{\ve{u}+\ve{v}}^2+\norm{\ve{u}-\ve{v}}^2$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a $\ve{u} .\ve{v} =0$ puisque $\ve{u}$ et $\ve{v}$ orthogonaux.
+
+* $a=(3 \ve{u} + 5 \ve{v})^2=9 \ve{u}^2 + 25 \ve{v}^2 +30 \ve{u}.\ve{v} = 9(25)+25(2) = 225+50 = 275$
+* $b= (2 \ve{u} +3\ve{v})(2\ve{u}-3 \ve{v}) = 4 \ve{u}^2-9\ve{v}^2 = 4(25)-9(2) = 100-18=82$
+* $c= \norm{\ve{u}+\ve{v}}^2+ \norm{\ve{u}-\ve{v}}^2 = 2\ve{u}^2+2\ve{v}^2 = 2(25)+2(2) = 54$
+</details>
+
+2. On considère $\ve{u}$ et $\ve{v}$ deux vecteurs tels que $\norm{\ve{u}}=1$ ; $\norm{\ve{v}}=3$ et $\ve{u}.\ve{v} = 1$. On pose $\ve{w} = \ve{u} + k \ve{v}$ avec $k \in \mathbb{R}$.
+
+    a. Déterminer toutes les valeurs de $k$ telles que $\ve{w}$ soit orthogonal à $\ve{u}$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    $\ve{w}$ et $\ve{u}$ orthogonaux si et seulement si $\ve{w}.\ve{u} = 0 \Longleftrightarrow (\ve{u} + k \ve{v}).\ve{u} = 0$.  
+    Or $(\ve{u} + k \ve{v}).\ve{u} = \ve{u}^2+k\ve{v}.\ve{u} =1 +k$.  
+    Donc les vecteurs sont orthogonaux si et seulement si $k=-1$.
+    </details>
+
+    b. Déterminer toutes les valeurs de $k$ telles que $\ve{w}$ soit de norme $1$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    $\norm{\ve{w}}= 1 \Longleftrightarrow \norm{\ve{u} + k\ve{v}}^2=1 \Longleftrightarrow \ve{u}^2+2k \ve{u}.\ve{v} + k^2 \ve{v}^2 = 1 \Longleftrightarrow 1+2k+9k^2=1 \Longleftrightarrow 9k^2+2k=0$.  
+    $k(9k+2)=0$ donc $k=0$ ou $k=-\dfrac{2}{9}$.  
+    *(Note : le texte original mentionnait $\Delta < 0$ pour $9k^2+2k+1=0$, ici l'équation se simplifie par soustraction du 1).*
+    </details>
+
+    c.  Démontrer que $(\ve{u} \ ;\,\ve{v})$ est une base vectorielle.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    On a $\ve{u}.\ve{v} =1$. 
+
+    Si $\ve{u}$ et $\ve{v}$ sont colinéaires, alors comme le produit scalaire est positif, ils sont de même sens et $$\ve{u}.\ve{v} = \norm{\ve{u}} \times \norm{\ve{v}} = 1 \times 3 = 3 \neq 1$$
+
+    On déduit alors que $\ve{u}$ et $\ve{v}$ ne sont pas colinéaires et donc $(\ve{u} \, ; \,\ve{v})$ est une base vectorielle.
+    </details>
+    
+    d. Déterminer $k$ pour que $\ve{v} + \ve{w}$ soit colinéaire à $2\ve{u}+ \ve{v}$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    On se place dans la base vectorielle $(\ve{u} \, ; \, \ve{v})$. 
+
+    $\ve{v} + \ve{w} = \ve{v} + (\ve{u} + k\ve{v}) = \ve{u} + (k+1)\ve{v}$ donc ses coordonnées sont $(1 \, ; \,k+1)$.  
+
+    De même $2\ve{u}+ \ve{v}$ a pour coordonnées $(2 \, ; \, 1)$.  
+
+    Ces deux vecteurs sont colinéaires si et seulement si $1 \times 1 - (k+1) \times 2 = 0$. 
+
+    C'est-à-dire $1 - 2k - 2 = 0 \Longleftrightarrow -2k = 1 \Longleftrightarrow k = -\dfrac{1}{2}$.
+
+    Ainsi $k=-1$ pour que les vecteurs soient colinéaires.
+    </details>
+
+:::
+
+
+
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="Transformations.html">⬅️</a>
+</div>

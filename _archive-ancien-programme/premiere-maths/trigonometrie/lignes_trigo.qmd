@@ -1,0 +1,80 @@
+---
+title: "Lignes trigonométriques "
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définir le cosinus et le sinus d'un angle - propriétés élémentaires"
+order: 4
+---
+
+### Lignes trigonométriques d'angles associés
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span><br>
+<div style="text-align:center;">
+  <img src="../../image/maths/ligne_trigo.png" alt="" width=70%/>
+</div>
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+1. Déterminer les valeurs exactes du sinus et du cosinus de $-\frac{\pi}{5}$, $\frac{4\pi}{5}$ et $\frac{3\pi}{10}$.  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+  
+$$
+  \begin{array}{l|l}
+  \LH{\cos\left(-\frac{\pi}{5}\right) = \cos \frac{\pi}{5} = \tfrac{1 + \sqrt{5}}{4}} &
+  \sin\left(-\frac{\pi}{5}\right) = - \sin \frac{\pi}{5} = - \tfrac{\sqrt{10-2\sqrt{5}}}{4}\\
+  \LH{\cos\frac{4\pi}{5} = \cos \left(\pi-\tfrac{\pi}{5}\right) = - \cos \tfrac{\pi}{5} = - \tfrac{1 + \sqrt{5}}{4}} &
+  \sin\frac{4\pi}{5} = \sin \left(\pi-\tfrac{\pi}{5}\right) = \sin \tfrac{\pi}{5} = \tfrac{\sqrt{10-2\sqrt{5}}}{4}\\
+  \LH{\cos\frac{3\pi}{10} = \cos \left(\tfrac{\pi}{2}-\tfrac{\pi}{5}\right) = \sin \tfrac{\pi}{5} = \frac{\sqrt{10-2\sqrt{5}}}{4}} &
+  \sin\frac{3\pi}{10} = \sin \left(\tfrac{\pi}{2}-\tfrac{\pi}{5}\right) = \cos \tfrac{\pi}{5} = \tfrac{1 + \sqrt{5}}{4}
+  \end{array}
+  $$
+
+</details>
+
+1. Montrer que $\cos \tfrac{7 \pi}{3} - \sin\tfrac{17\pi}{6} = 0$.<br>
+<details class="bloc cor"><summary>Afficher la correction</summary>
+  On a :
+$$
+  \sin\frac{17\pi}{6} = \sin\left(\frac{7\pi}{3} + \frac{\pi}{2}\right) = \cos\frac{7 \pi}{3}.
+$$
+  Ainsi :
+$$ 
+  \cos \frac{7 \pi}{3} - \sin\frac{17\pi}{6} = 0.
+$$
+
+</details>
+
+1. Montrer que  $\sin^2\!\left(\tfrac{8\pi}{5}\right) + \sin^2\!\left(-\tfrac{11\pi}{10} \right)= 1$.<br>
+<details class="bloc cor"><summary>Afficher la correction</summary>
+Pour cela, il faut montrer que :
+$$
+\sin\left(-\frac{11\pi}{10}\right) = \cos\frac{8 \pi}{5}.
+$$
+En effet :
+$$
+\sin\left(-\frac{11\pi}{10}\right) 
+= \sin\left(\frac{5\pi}{10} - \frac{16\pi}{10}\right) 
+= \sin\left(\frac{\pi}{2} - \frac{16\pi}{10}\right) 
+= \cos\frac{8 \pi}{5}.
+$$
+Or, pour tout réel $\alpha$ :
+$$
+\cos^2 \alpha + \sin^2 \alpha = 1.
+$$
+Ainsi :
+$$
+\sin^2\left(\frac{8\pi}{5}\right) + \sin^2 \left(-\frac{11\pi}{10} \right) = 1.
+$$ 
+:::
+
+
+<div class="nav-pages">
+  <a class="prev" href="fct_trigo.html">⬅️</a>
+  <a class="next" href="equation.html">➡️</a>
+</div>

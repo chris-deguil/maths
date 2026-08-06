@@ -1,0 +1,105 @@
+---
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Bernoulli - Binomiale"
+order: 6
+---
+___
+
+### Cas particuliers
+
+::: {.bloc}
+On suppose par la suite que $X$ suit la loi binomiale $\mathcal{B}(n~;~p)$.
+
+* $P(X = 0)$ étant la probabilité qu'il n'y ait aucun succès, c'est donc la probabilité de n'avoir que des échecs. Comme à chaque étape, on a le choix entre deux issues, on a donc toujours choisi le « chemin » menant au $\bar{S}$. Il n'y a alors qu'un seul chemin possible, on a alors :
+  $$P(X = 0) = (1-p)^n$$
+  Le même raisonnement donne :
+  $$P(X = n) = p^n$$
+
+* La probabilité de chacun des chemins n'ayant qu'un seul succès est $p(1-p)^{n-1}$.  
+  Il suffit alors de « compter » le nombre de chemins n'ayant qu'un seul succès. Cela revient alors à choisir à quelle place parmi les $n$ se trouve le succès. On a alors $n$ possibilités, et donc $n$ chemins possibles.  
+  Ainsi :
+  $$P(X = 1) = n p(1-p)^{n-1} \quad \text{et} \quad P(X=n-1) = n (1-p)p^{n-1}$$
+
+
+
+Dans les autres cas, cela se complique très rapidement, car il faut compter le nombre de chemins.  
+Chacune des issues réalisant deux succès a comme probabilité $p^2(1-p)^{n-2}$.  
+Ainsi, déterminer $P(X = 2)$ revient à déterminer le nombre de chemins réalisant exactement deux succès, c'est-à-dire à déterminer le nombre de façons de choisir deux positions « succès » parmi les $n$ places dans le mot. On montre facilement que ce nombre est $\dfrac{n(n-1)}{2}$.
+
+:::
+
+
+## Coefficient binomial
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+On considère deux entiers naturels $n$ et $k$ où $0 \leqslant k \leqslant n$. On note $\binom{n}{k}$ et on lit « $k$ parmi $n$ », le nombre de chemins qui réalisent exactement $k$ succès dans un arbre à $n$ niveaux, associé à un schéma de Bernoulli.  
+Ces nombres sont appelés **coefficients binomiaux**.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+D'après les résultats précédents, on a :
+$$\binom{n}{0} = 1 \qquad \binom{n}{1} = n \qquad \binom{n}{n-1} = n \qquad \binom{n}{n} = 1$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* Une autre façon de voir ce coefficient binomial est de savoir combien de sous-ensembles à $k$ éléments exactement peut-on faire à partir d'un ensemble à $n$ éléments.
+* On peut aussi le voir comme le nombre de mots de $n$ lettres constitués de $S$ et $\bar{S}$ ayant exactement $k$ lettres $S$.
+:::
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (Symétrie) : </span>
+
+Pour tout entier naturel $n$ et tout entier $k$ tel que $0 \leqslant k \leqslant n$ :
+$$\binom{n}{k} = \binom{n}{n-k}$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Dans un arbre à $n$ niveaux, choisir les emplacements de $k$ succès revient exactement au même que de choisir les emplacements des $n-k$ échecs restants. Le nombre de chemins est donc identique.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">  </span></div>
+
+Calculer $\binom{10}{9}$ sans calculatrice.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+D'après la propriété de symétrie : $\binom{10}{9} = \binom{10}{10-9} = \binom{10}{1}{.}$
+Or, on sait que $\binom{n}{1} = n$, donc $\binom{10}{9} = 10$.
+</details>
+
+:::
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $n \in \N^*$.
+$$\sum_{k=0}^n \binom{n}{k} = 2^n$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+$\binom{n}{k}$ est le nombre de mots ayant exactement $k$ succès dans la répétition de $n$ épreuves à deux issues (succès et échec).  
+Alors la somme correspond à toutes les possibilités : nombre de chemins menant à $0$ succès, un succès, deux succès, ..., $n$ succès.  
+Il s'agit donc du nombre de chemins possibles dans un arbre à $n$ niveaux, c'est-à-dire $2^n$.
+</details>
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="binomiale1.html">⬅️</a>
+  <a class="next" href="binomiale3.html">➡️</a>
+</div>

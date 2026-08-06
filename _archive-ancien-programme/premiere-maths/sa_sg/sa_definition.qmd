@@ -1,0 +1,128 @@
+---
+title: "Suite arithmétiques : Définition"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Expression d'une suite arithmétique, forme récursive et forme explicite"
+order: 1
+---
+
+___
+
+## Définition - Propriété
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+Une suite est dite arithmétique lorsque la variation absolue de deux termes consécutifs quelconques est constante. Cette constante est appelée raison de la suite.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+Par exemple, on considère $u=\{1 \, ; \,5\, ; \,9\, ; \,13\, ; \,17\, ; \,21\, ; \, 25\, ; \, \dots \}$  
+Cette suite est en progression arithmétique, la différence de deux termes consécutifs est constante, égale à $4$. Il s'agit des premiers termes d'une suite arithmétique.
+:::
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre"> En économie: </span>
+En économie, on retrouve cette notion de variation absolue lorsque l'on a un prêt à intérêt simple. La capitalisation ne concerne que le montant placé initialement.
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+Une suite est arithmétique si et seulement s'il existe deux réels $a$ et $r$ tels que pour tout $n \in \mathbb{N}$ 
+$$u_{n+1} = u_n + r \quad \text{et} \quad  u_0 = a$$
+Le nombre $r$ est appelé la raison de la suite.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Soit $(u_n)$ une suite arithmétique, alors la variation absolue de deux termes consécutifs est constante, soit $r$ cette constante.  
+Ainsi, $\forall n \in \mathbb{N}, \, u_{n+1} - u_n = r$, ce qui donne le résultat.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+Dans chacun des cas suivants, dire si la suite est arithmétique :
+
+1. La suite $(u_n)_{n \in \mathbb{N}}$ définie par $u_{n +1} = u_n + 5$ et $u_1 = 7$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$(u_n)$ est une suite arithmétique de raison $5$ et de premier terme $u_0 = 2$.  
+On peut alors déterminer $u_1 = u_0+5 = 7$ et $u_2 = u_1 + 5 = 12$.
+</details>
+
+2. La suite $(v_n)_{n \in \mathbb{N}}$ définie par $v_{n +1} = 2 v_n + 5$ et $v_0 = 2$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a $v_1 = 9$ et $v_2=23$, et $v_2-v_1 \neq v_1-v_0$.  
+Donc $(v_n)$ n'est pas une suite arithmétique.
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+
+1. Pour montrer qu'une suite n'est pas arithmétique il suffit de montrer que la différence de deux termes consécutifs n'est pas constante.
+2. Pour calculer un terme de la suite il faut calculer tous les termes précédents. Chaque terme est obtenu à partir du précédent en ajoutant la raison.
+3. Pour itérer le processus de construction de la suite il nous faut le premier terme (en fait un terme quelconque de la suite est suffisant comme le prouve la propriété suivante).
+:::
+
+## Forme générale
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Une suite $(u_n)_{n \in \mathbb{N}}$ est arithmétique si et seulement s'il existe deux réels $u_0$ et $r$ tels que :
+$$ \forall n \in \mathbb{N}, \; u_n = u_0 + n \times r$$
+Où $u_0$ est le premier terme et $r$ est la raison.
+:::
+
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Soit $(u_n)_{n \in \mathbb{N}}$ une suite arithmétique de premier terme $u_0$ et de raison $r$, et $(v_n)$ la suite définie pour tout entier $n \in \mathbb{N}$ par $v_n=u_0+nr$.  
+Il est immédiat que $u_0=v_0$.  
+De plus pour tout entier $n$, $v_{n+1} - v_n= u_0+(n+1)r - (u_0+nr)=r$.  
+Ainsi $(v_n)$ est la suite arithmétique de raison $r$ et de premier terme $u_0$. Il s'agit donc de la suite $(u_n)$.
+</details>
+
+On peut généraliser cette propriété pour deux indices $m$ et $p$ entiers quelconques :
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Soit $(u_n)_{n \in \mathbb{N}}$ une suite arithmétique de raison $r$, alors pour tout entier $m, p \in \mathbb{N}$, 
+$$u_m = u_p + r(m - p)$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Il suffit d'appliquer la propriété précédente avec $m$ et $p$ et de faire la différence des expressions.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+Déterminons la raison de la suite arithmétique $(u_n)_{n \in \mathbb{N}}$, sachant que $u_7 = 25$ et $u_{15} = 253$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$(u_n)$ étant une suite arithmétique, alors $u_7 - u_{15} = r(7 - 15)$ donc $25 - 253 = -8r$.  
+D'où $r = \dfrac{57}{2}$.
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+Déterminons le 25^ème^ terme de la suite arithmétique $(u_n)$, sachant que $u_{12} = 12$ et de raison $0,5$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$u_{24} = u_{12} + 0,5 \times (24-12)$  
+Donc $u_{24}= 12 + 0,5 \times 12 = 18$.  
+Le 25^ème^ de la suite est donc $18$.
+</details>
+:::
+
+
+<div class="nav-pages">
+  <a class="next" href="sa_variation_somme.html">➡️</a>
+</div>

@@ -1,0 +1,261 @@
+---
+title: "Dérivation et concavité"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Dérivée, taux d'accroissement, étude d ela convexité"
+order: 2
+---
+
+
+
+
+
+
+
+
+
+## Définition par projeté orthogonal
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Propriété caractéristique</span>
+
+Soient $\ve{u}$ et $\ve{v}$ deux vecteurs non nuls de l'espace, et $A$, $B$ et $C$ trois points de l'espace tels que $\ve{u}=\ve{AB}$ et $\ve{v} = \ve{AC}$.
+On note $H$ le projeté orthogonal de $C$ sur la droite $(AB)$.
+$$\ve{u} \cdot \ve{v} = \ve{AB} \cdot \ve{AC} = \begin{cases} AB \times AH & \text{si } \ve{AB} \text{ et } \ve{AH} \text{ sont de même sens} \\ -AB \times AH & \text{si } \ve{AB} \text{ et } \ve{AH} \text{ sont de sens contraire} \end{cases}$$
+
+:::
+
+
+::: {.bloc}
+::: {.columns}
+
+::: {.column width="50%"}
+Cas où $\ve{AH}$ et $\ve{AB}$ sont de même sens.
+
+<div style="text-align:center;">
+  <img src="../../image/maths_term/Chap8_Espace_II_autre_def1.png" style="width:50%;">
+</div>
+:::
+
+::: {.column width="50%"}
+Cas où $\ve{AH}$ et $\ve{AB}$ de sens contraire.
+
+<div style="text-align:center;">
+  <img src="../../image/maths_term/Chap8_Espace_II_autre_def 2.png" style="width:60%;">
+</div>
+:::
+
+:::
+:::
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On procède par disjonction des cas :
+
+1. On suppose que $H \neq A$. On a donc le triangle $AHC$ rectangle en $H$ et, par trigonométrie dans un triangle rectangle, on a $AH = AC \cos(\widehat{HAC})$.
+    a. On suppose que $H \in [AB)$. Ainsi $\widehat{HAC} = \widehat{BAC}$.
+    Donc :
+    \begin{align*} 
+    \ve{AB} \cdot \ve{AC} &= AB \times AC \times \cos(\widehat{BAC}) \\
+    &= AB \times AC \times \cos(\widehat{CAH}) \\ 
+    &= AB \times AH \\
+    &= \ve{AB} \cdot \ve{AH}
+    \end{align*}
+    b. On suppose que $H \notin [AB)$, alors $\widehat{HAC} = 180^\circ - \widehat{BAC}$.
+    Donc :
+    \begin{align*}
+    \ve{AB} \cdot \ve{AC} &= AB \times AC \times \cos(\widehat{BAC}) \\
+    &= AB \times AC \times \cos(180^\circ - \widehat{CAH})\\
+    &= -AB \times AC \cos(\widehat{HAC})\\
+    &= -AB \times AH \\
+    &= \ve{AB} \cdot \ve{AH}
+    \end{align*}
+2. Si $H = A$, alors $\widehat{BAC}$ est un angle droit, donc le produit scalaire :
+$$\ve{AB} \cdot \ve{AC} = 0 = \ve{AB} \cdot \ve{AH}$$
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère $ABC$ un triangle rectangle en $A$ tel que $AB=5$ et $AC=7$. Déterminer $\ve{CA} \cdot \ve{CB}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$ABC$ est rectangle en $A$, donc $A$ est le projeté orthogonal de $B$ sur $(AC)$.
+On en déduit alors que : 
+$$\ve{CA} \cdot \ve{CB} = \ve{CA} \cdot \ve{CA} = CA^2 = 49$$
+
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Soit $ABC$ un triangle rectangle en $C$. On note $H$ le projeté orthogonal de $C$ sur $[AB]$.
+Démontrons que $AB \times AH = AC^2$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a $AB \times AH = \ve{AB} \cdot \ve{AH} = \ve{AB} \cdot \ve{AC} = \ve{AC} \cdot \ve{AC} = AC^2$.
+
+</details>
+
+:::
+
+
+Soit $ABC$ un triangle tel que $BC = CA = 4$ et $\widehat{ABC} = \frac{\pi}{6}$. Déterminons la mesure de $AB$.
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Dans un triangle isocèle, la médiatrice et la hauteur issues du sommet principal sont confondues.
+Donc le milieu $H$ de $[AB]$ est le projeté orthogonal de $C$ sur $(AB)$.
+On a :
+$$\ve{BA} \cdot \ve{BH} = \ve{BA} \cdot \ve{BC} = \norm{BA} \times \norm{BC} \times \cos\left(\widehat{ABC}\right)$$
+Or $H \in [AB]$, donc $\ve{BH}$ et $\ve{BA}$ sont de même sens. Ainsi :
+$$\ve{BA} \cdot \ve{BH} = BA \times BH$$
+On en déduit :
+$$BA \times BH = BA \times 4 \times \frac{\sqrt{3}}{2}$$ 
+D'où $BH = 2\sqrt{3}$. Comme $H$ est le milieu de $[AB]$, on a $BA = 4\sqrt{3}$.
+
+</details>
+
+:::
+
+## Définition par les normes
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Propriété caractéristique</span>
+
+Soient $\ve{u}$ et $\ve{v}$ deux vecteurs, alors :
+$$\ve{u} \cdot \ve{v} = \frac{1}{2} \left(\norm{u+v}^2 - \norm{u}^2 - \norm{v}^2 \right) \qquad \text{et} \qquad \ve{u} \cdot \ve{v} = \frac{1}{2} \left( \norm{u}^2 + \norm{v}^2 - \norm{u-v}^2 \right)$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+L'égalité est immédiate si l'un des vecteurs est nul.
+On suppose alors $\ve{u}$ et $\ve{v}$ non nuls et on munit le plan d'un repère orthonormé $(O; \vec{\imath}, \vec{\jmath})$ où $\vec{\imath} = \frac{1}{\norm{u}}\ve{u}$.
+On considère $A$ et $B$ tels que $\ve{u}=\ve{OA}$ et $\ve{v}=\ve{OB}$. On note $\theta$ la mesure de l'angle $\widehat{AOB}$.
+On a $\ve{OA} \left(\norm{u}\,;\,0 \right)$ et $\ve{OB} \left(\norm{v} \cos \theta\,;\, \norm{v} \sin \theta\right)$.
+On en déduit alors :
+
+$$\begin{aligned}
+\norm{u+v}^2 &= \left(\norm{u} + \norm{v} \cos \theta \right)^2 + (\norm{v} \sin \theta)^2\\
+& = \norm{u}^2 + 2 \norm{u} \norm{v} \cos \theta + \norm{v}^2 (\cos^2 \theta + \sin^2 \theta)\\
+& = \norm{u}^2 + 2 \ve{u} \cdot \ve{v} + \norm{v}^2 
+\end{aligned}$$
+
+On en déduit la relation cherchée.
+
+</details>
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* Ces formes sont appelées **identités de polarisation**.
+* On en déduit alors, par sommation, la propriété immédiate suivante :
+
+$$\ve{u} \cdot \ve{v} = \frac{1}{4} \left(\norm{u+v}^2 - \norm{u-v}^2 \right)$$
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Mesure d'un angle </span></div>
+
+On donne $AB = 9$, $BC = 10$ et $AC = 8$. Déterminons $\widehat{BAC}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+D'une part :
+$$\ve{AB} \cdot \ve{AC} = AB \times AC \times \cos(\widehat{BAC}) = 72 \cos(\widehat{BAC})$$
+D'autre part :
+$$\ve{AB} \cdot \ve{AC} = \frac{1}{2} \left(\norm{AB}^2 + \norm{AC}^2 - \norm{AB - AC}^2 \right)$$
+Donc :
+$$\ve{AB} \cdot \ve{AC} = \frac{1}{2} \left(AB^2 + AC^2 - BC^2 \right) = \frac{1}{2} \left(81+64-100 \right) = \frac{45}{2}$$
+Ainsi :
+$$72 \cos(\widehat{BAC}) = \frac{45}{2} \implies \cos(\widehat{BAC}) = \frac{45}{144}$$
+On en déduit que :
+$$\widehat{BAC} \approx 1{,}25 \text{ rad} \approx 71{,}8^\circ$$
+
+</details>
+
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+On peut généraliser l'utilisation de ces deux formules en une seule, permettant de lier la mesure d'un angle et les mesures des trois côtés d'un triangle.
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Théorème d'Al-Kashi</span>
+
+Soit $ABC$ un triangle, alors :
+$$BC^2 = AB^2 + AC^2 - 2AB \times AC \times \cos(\widehat{BAC})$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Soit $ABC$ un triangle quelconque.
+
+$$\begin{aligned}
+BC^2 &= \norm{BC}^2 \\
+&= (\ve{BA} + \ve{AC})^2 \\
+&= \ve{BA}^2 + \ve{AC}^2 + 2 \ve{BA} \cdot \ve{AC} \\
+&= AB^2 + AC^2 - 2 \ve{AB} \cdot \ve{AC} \\
+&= AB^2 + AC^2 - 2AB \times AC \times \cos(\widehat{BAC})
+\end{aligned}$$
+
+</details>
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Soit $ABC$ un triangle tel que $AB=AC=2$ et $BC=2\sqrt{3}$. Déterminons l'angle $\widehat{BCA}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+D'après le théorème d'Al-Kashi :
+$$AB^2 = BC^2 + AC^2 - 2BC \times AC \times \cos\left(\widehat{BCA}\right)$$
+Donc :
+$$\cos\left(\widehat{BCA}\right) = \dfrac{AB^2 - BC^2 - AC^2}{-2 \times BC \times AC} = \dfrac{4 - 12 - 4}{-2 \times 2\sqrt{3} \times 2} = \dfrac{-12}{-8\sqrt{3}} = \dfrac{3}{2\sqrt{3}} = \dfrac{\sqrt{3}}{2}$$
+On en déduit que :
+$$\widehat{BCA} = \arccos\left(\dfrac{\sqrt{3}}{2}\right) = 30^\circ \text{ (ou } \frac{\pi}{6} \text{ rad)}$$
+
+</details>
+
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* Il s'agit d'une généralisation du théorème de Pythagore.
+* La relation d'Al-Kashi met en relation l'ensemble des éléments d'un triangle.
+
+:::
+
+
+
+
+
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="propriete.html">⬅️</a>
+  <a class="next" href="composition.html">➡️</a>
+</div>

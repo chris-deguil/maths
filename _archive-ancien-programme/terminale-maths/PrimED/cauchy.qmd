@@ -1,0 +1,128 @@
+---
+title: "Résolution du problème de Cauchy"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Equation différentielle sous conditions initiales"
+order: 8
+---
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admise) : </span>
+
+On considère une fonction $f$ continue sur $I$.
+Soit $x_0 \in I$ et $y_0 \in \mathbb{R}$. Il existe une unique fonction $F$ vérifiant 
+$$\left\{\begin{array}{l} F'(x) = f(x) \\ F(x_0) = y_0 \end{array} \right.$$
+C'est-à-dire qu'il existe une unique primitive de $f$ qui prend en $x_0$ la valeur $y_0$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Soit $f$ définie sur $]0~;~+\infty[$ par $f(x) = \sqrt{x}$. Déterminer la primitive de $f$ s'annulant en $4$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+* On considère la fonction auxiliaire $H : x \longmapsto x \sqrt{x}$.
+  $H$ étant le produit de fonctions dérivables sur $]0~;~+\infty[$, on a :
+  $$H'(x) = \sqrt{x} + \dfrac{x}{2\sqrt{x}} = \sqrt{x} + \dfrac{\sqrt{x}}{2} = \dfrac{3}{2} \sqrt{x}$$
+* Pour tout $x \in ]0~;~+\infty[$, $H'(x) = \dfrac{3}{2} f(x)$.
+  On en déduit que les primitives de $f$ sont les fonctions $F : x \longmapsto \dfrac{2}{3} x\sqrt{x} + K$, avec $K \in \mathbb{R}$.
+* D'après l'énoncé, on cherche $F(4) = 0$, donc :
+  $$\dfrac{2}{3} \times 4\sqrt{4} + K = 0 \iff \dfrac{16}{3} + K = 0 \iff K = -\dfrac{16}{3}$$
+* La primitive de $f$ s'annulant en $4$ est $F : x \longmapsto \dfrac{2}{3} x \sqrt{x} - \dfrac{16}{3}$.
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Loi de refroidissement de Newton </span></div>
+
+Un objet sort d'un four à une température de $200$°C. Il est placé dans une pièce dont la température ambiante est constante et égale à $20$°C.
+D'après la loi de Newton, la température $\theta(t)$ de l'objet (en degrés Celsius) à l'instant $t$ (en minutes) vérifie l'équation différentielle :
+$$(E) : \theta'(t) + 0,1\theta(t) = 2$$
+
+1. Résoudre $(E)$
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+L'équation est de la forme $y' + ay = b$ avec $a=0,1$ et $b=2$. La solution constante est $g = \dfrac{b}{a} = 20$.
+On a $$S = \{\theta(t) = K\e^{-0,1t} + 20, \, K \in \mathbb{R}\}$$
+</details>
+
+2. Interpréter la valeur $20$.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a $$\lim_{t \to + \infty} \theta(t) = \lim_{t \to + \infty} K\e^{-0,1t} + 20 = 20$$
+Ainsi cette valeur correspond à la température ambiante vers laquelle l'objet tend.
+</details>
+
+3. Déterminer l'expression de $\theta(t)$ sachant que $\theta(0) = 200$. Au bout de combien de temps la température de l'objet sera-t-elle de $50$°C ?
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a $\theta(t) = K\e^{-0,1t} + 20$. Avec la condition initiale :
+$$K\e^0 + 20 = 200 \iff K = 180$$
+D'où $$\theta(t) = 180\e^{-0,1t} + 20$$
+Pour $\theta(t) = 50$ :
+$$180\e^{-0,1t} + 20 = 50 \iff 180\e^{-0,1t} = 30 \iff \e^{-0,1t} = \dfrac{1}{6}$$
+$$\iff_{\ln \nearrow} -0,1t = \ln\left(\dfrac{1}{6}\right) \iff -0,1t = -\ln 6 \iff t = \dfrac{\ln 6}{0,1} = 10\ln 6$$
+Ainsi $$t \approx 17,9 \text{ min}$$
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Modélisation et Résolution d'un freinage </span></div>
+
+Un prototype de train de masse $m = 1\,000$ kg se déplace sur une voie rectiligne. À l'instant $t=0$, sa vitesse est $v_0 = 50$ m/s et le conducteur active un freinage progressif.
+Le train est soumis à :
+
+* Une force de frottement de l'air : $F_a = -500v(t)$.
+* Une force de freinage mécanique : $F_f(t) = 10\,000 - 1\,000t$.
+
+1. En utilisant la deuxième loi de Newton, montrer que la vitesse $v$ vérifie l'équation différentielle : $(E) : v'(t) + 0,5v(t) = 10 - t$
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+D'après la deuxième loi de Newton : $m \cdot v'(t) = F_f(t) + F_a(t)$.
+$$1\,000 v'(t) = 10\,000 - 1\,000t - 500v(t)$$
+En divisant tous les termes par $1\,000$, on obtient :
+$$v'(t) = 10 - t - 0,5v(t) \iff v'(t) + 0,5v(t) = 10 - t$$
+On retrouve bien l'équation $(E)$.
+</details>
+
+2. Déterminer une solution particulière $g$ de $(E)$ sous la forme $g(t) = at + b$.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+En posant $g(t) = at+b$, on a $g'(t) = a$. L'équation devient $a + 0,5(at+b) = 10-t$.
+Par identification : $0,5a = -1 \implies a = -2$ et $a + 0,5b = 10 \implies b = 24$.
+Donc $g(t) = -2t + 24$.
+</details>
+
+3. Montrer que $v$ est solution de $(E)$ si et seulement si $h = v - g$ est solution de $(E_0) : y' + 0,5y = 0$.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Soit $h = v - g$, soit $v = h + g$.
+$$v \text{ solution de }(E) \iff (h+g)' + 0,5(h+g) = 10-t \iff h' + 0,5h + \underbrace{g' + 0,5g}_{10-t} = 10-t \iff h' + 0,5h = 0$$
+C'est-à-dire que $h$ est solution de $(E_0)$.
+</details>
+
+1. Déterminer l'expression de $v(t)$ en tenant compte de la vitesse initiale $v(0) = 50$.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Les solutions de $(E_0)$ sont $h(t) = K\e^{-0,5t}$.
+D'où $v(t) = K\e^{-0,5t} - 2t + 24$.
+Avec $v(0) = 50$ : $K + 24 = 50 \implies K = 26$.
+La solution est $$v(t) = 26\e^{-0,5t} - 2t + 24$$
+</details>
+
+1. Calculer $\lim_{t \to +\infty} v(t)$.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$\lim_{t \to +\infty} 26\e^{-0,5t} = 0$ et $\lim_{t \to +\infty} -2t + 24 = -\infty$.
+Par somme, $\lim_{t \to +\infty} v(t) = -\infty$.
+</details>
+
+1. Interpréter physiquement la validité de cette limite pour le freinage du train.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Mathématiquement, la vitesse devient infiniment négative. Physiquement, cela est impossible. L'équation n'est plus valide dès que $v(t) = 0$. Le train s'arrête, et les forces de frottement statiques le maintiennent immobile. Le modèle ne décrit que la phase de mouvement.
+</details>
+:::
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="EquaDiff_2.html">⬅️</a>
+</div>

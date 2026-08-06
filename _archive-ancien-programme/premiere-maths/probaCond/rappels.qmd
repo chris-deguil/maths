@@ -1,0 +1,238 @@
+---
+title: "Rappels"
+description: "Probabilité, événement, loi de probabilité"
+format:
+  html:
+    toc: true
+    number-sections: false
+order: 1
+---
+
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Expérience aléatoire</span>
+On appelle expérience aléatoire toute expérience qui, renouvelée dans les mêmes conditions, ne donne pas à chaque essai les mêmes résultats. 
+
+* Les résultats possibles de cette expérience aléatoire sont appelés les **issues**. 
+* L'ensemble des issues (ou événements élémentaires) est appelé **univers** de l'expérience aléatoire. On le note généralement $\Omega$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : Événements</span>
+
+* Toute partie de $\Omega$ est appelée événement. 
+* L'événement $\varnothing$ est appelé l'événement impossible et $\Omega$ est appelé l'événement certain. 
+* Un événement est composé d'issues élémentaires.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra">Lancer de dé à 12 faces</span></div>
+On considère un lancer de dé équilibré à 12 faces. On considère $A$ l'événement "le résultat est pair" et $B$ l'événement "le résultat est un multiple de $3$".
+
+* $\Omega= \{1\,;\,2\,;\,3\,;\,4\,;\,5\,;\,6\,;\,7\,;\,8\,;\,9\,;\,10\,;\,11\,;\,12\}$
+* $A =\{2\,;\,4\,;\,6\,;\,8\,;\,10\,;\,12\}$
+* $B = \{3\,;\,6\,;\,9\,;\,12\}$
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+Si $A$ et $B$ sont deux événements :
+
+* L'événement " $A$ ou $B$ ", noté $A \cup B$, est réalisé si $A$ est réalisé **ou** $B$ est réalisé.
+* L'événement " $A$ et $B$ ", noté $A \cap B$, est réalisé si $A$ est réalisé **et** $B$ est réalisé. 
+* L'événement contraire de $A$ est le complémentaire de $A$ dans $\Omega$, noté $\overline{A}$.
+* $A$ et $B$ sont dits incompatibles si $A \cap B = \varnothing$.
+:::
+
+
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra">Union et intersection</span></div>
+Dans l'exemple précédent : 
+
+* $A \cup B = \{2\,;\,3\,;\,4\,;\,6\,;\,8\,;\,9\,;\,10\,;\,12\}$
+* $A \cap B = \{6\,;\,12\}$
+* $A \cap B \neq \varnothing$, donc les événements $A$ et $B$ ne sont pas incompatibles.
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Ensemble des parties</span>
+Soit $\Omega$ l'univers d'une expérience aléatoire. 
+On appelle **ensemble des parties de $\Omega$**, et on note $\mathcal{P}(\Omega)$, l'ensemble dont les éléments sont tous les événements possibles (sous-ensembles) de $\Omega$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra">Dénombrement des parties (dé à 4 faces)</span></div>
+On considère le lancer d'un dé à 4 faces. $\Omega = \{1\,;\,2\,;\,3\,;\,4\}$.
+L'ensemble des parties de $\Omega$ contient :
+
+* L'événement impossible : $\varnothing$ (1)
+* Les événements élémentaires : $\{1\}$, $\{2\}$, $\{3\}$, $\{4\}$ (4)
+* Les événements à 2 issues : $\{1;2\}, \{1;3\}, \{1;4\}, \{2;3\}, \{2;4\}, \{3;4\}$ (6)
+* Les événements à 3 issues : $\{1;2;3\}, \{1;2;4\}, \{1;3;4\}, \{2;3;4\}$ (4)
+* L'événement certain : $\Omega$ (1)
+
+Total : $1 + 4 + 6 + 4 + 1 = 16$ événements, soit $2^4 = 16$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : Cardinal de $\mathcal{P}(\Omega)$</span>
+Si l'univers $\Omega$ possède $n$ issues, alors l'ensemble $\mathcal{P}(\Omega)$ possède $2^n$ éléments.
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Système complet d'événements</span>
+Une famille d'événements $(A_1, A_2, \dots, A_n)$ est un système complet d'événements (ou une **partition** de $\Omega$) si :
+
+* Ils sont deux à deux incompatibles : pour tout $i \neq j$, $A_i \cap A_j = \varnothing$.
+* Leur réunion est l'univers certain : $A_1 \cup A_2 \cup \dots \cup A_n = \Omega$.
+* Chaque événement a une probabilité non nulle : $P(A_i) \neq 0$.
+:::
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra">Partition d'un dé à 6 faces</span></div>
+
+* $A = \{1 \,;\, 2\}$ (inférieur ou égal à 2)
+* $B = \{3 \,;\, 5\}$ (impair > 2)
+* $C = \{4 \,;\, 6\}$ (pair > 2)
+$A, B$ et $C$ sont disjoints deux à deux et leur réunion est $\Omega$. Ils forment un système complet d'événements.
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Probabilité</span>
+
+On appelle probabilité sur l'univers $\Omega$ toute application $P : \mathcal{P}(\Omega) \to [0,1]$ vérifiant :
+
+1. $P(\Omega)=1$
+2. Pour tout couple de parties disjointes $A$ et $B$, $P(A \cup B)=P(A)+P(B)$.
+
+Le couple $(\Omega \,;\, P)$ est appelé espace probabilisé fini.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra">Modélisation d'un lancer de dé</span></div>
+
+On considère le lancer d'un dé à 6 faces équilibré. L'univers est $\Omega = \{1, 2, 3, 4, 5, 6\}$.
+
+1. Vérification de $P(\Omega) = 1$
+Comme le dé est équilibré, chaque face a une probabilité de $\dfrac{1}{6}$.
+$$P(\Omega) = P(\{1, 2, 3, 4, 5, 6\}) = \dfrac{1}{6} + \dfrac{1}{6} + \dfrac{1}{6} + \dfrac{1}{6} + \dfrac{1}{6} + \dfrac{1}{6} = 1$$
+
+2.  Soient deux événements disjoints (incompatibles) :
+    * $A$ : "Obtenir un 1", soit $A = \{1\}$. On a $P(A) = \dfrac{1}{6}$.
+    * $B$ : "Obtenir un chiffre pair", soit $B = \{2, 4, 6\}$. On a $P(B) = \dfrac{3}{6}$.
+
+    Puisque $A \cap B = \varnothing$, l'événement $A \cup B = \{1, 2, 4, 6\}$ a pour probabilité :
+    $$P(A \cup B) = \dfrac{4}{6}$$
+    On constate bien que $P(A) + P(B) = \dfrac{1}{6} + \dfrac{3}{6} = \dfrac{4}{6}$.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriétés des probabilités (admises) : </span>
+
+* $P(\varnothing)=0$
+* Pour tout $A \in \mathcal{P}(\Omega)$, $P(\overline{A}) = 1 - P(A)$
+* Si $A \subset B$, alors $P(A) \le P(B)$
+* $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+* Pour des événements $A_i$ deux à deux incompatibles : $P(A_1 \cup \cdots \cup A_p) = \sum_{i=1}^{p} P(A_i)$
+:::
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra">Calculs de probabilités et propriétés</span></div>
+
+On considère le lancer d'un dé équilibré à 6 faces. On note $\Omega = \{1; 2; 3; 4; 5; 6\}$.
+
+1. Evénement contraire : Soit $A$ l'événement "obtenir un multiple de 3". Déterminer $P(\overline{A})$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    On a $A = \{3 \,;\, 6\}$, d'où $P(A) = \dfrac{2}{6} = \dfrac{1}{3}$.
+
+    D'après la propriété du complémentaire :
+    $$P(\overline{A}) = 1 - P(A) = 1 - \dfrac{1}{3} = \dfrac{2}{3}$$
+    </details>
+
+
+
+2. Inclusion : Soit $B$ l'événement "ne pas obtenir un 5". Vérifier que $P(A) \le P(B)$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    On a $A = \{3 \,;\, 6\}$ et $B = \{1 \,;\, 2 \,;\, 3 \,;\, 4 \,;\, 6\}$. 
+
+    Tous les éléments de $A$ sont inclus dans $B$ ($3 \in B$ et $6 \in B$), on a donc bien l'inclusion $A \subset B$.
+
+    On calcule les probabilités : $P(A) = \dfrac{2}{6}$ et $P(B) = \dfrac{5}{6}$.
+
+    On vérifie bien que $P(A) \le P(B)$ car $\dfrac{2}{6} \le \dfrac{5}{6}$.
+    </details>
+
+3. Soit $C = \{1 \,;\, 2 \,;\, 3\}$ et $D = \{2 \,;\, 4 \,;\, 6\}$. Déterminer $P(C \cap D)$ en utilisant la formule de l'union.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    On sait que $P(C \cup D) = P(C) + P(D) - P(C \cap D)$. 
+
+   Donc     $$P(C \cap D) = P(C) + P(D) - P(C \cup D)$$
+
+    Or, $C \cup D = \{1 \,;\, 2 \,;\, 3 \,;\, 4 \,;\, 6\}$, donc $P(C \cup D) = \dfrac{5}{6}$. 
+
+    De plus, $P(C) = \dfrac{3}{6}$ et $P(D) = \dfrac{3}{6}$.
+
+    Ainsi :
+    $$P(C \cap D) = \dfrac{3}{6} + \dfrac{3}{6} - \dfrac{5}{6} = \dfrac{1}{6}$$
+    </details>
+
+
+:::
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+Soit $P$ une probabilité sur $\Omega$. Pour tout $A \subset \Omega$ :
+$$P(A) = \sum_{\omega \in A} P(\{\omega\})$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : Loi uniforme</span>
+On appelle loi uniforme (ou équiprobabilité) la probabilité définie par :
+$$P(A) = \dfrac{\text{card}(A)}{\text{card}(\Omega)}$$
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra">Dé truqué (Loi non uniforme)</span></div>
+
+On considère un dé à 6 faces truqué de telle sorte que la probabilité d'obtenir une face est proportionnelle au numéro de la face. Les probabilités des issues sont :
+
+| Issue $\omega$ | 1 | 2 | 3 | 4 | 5 | 6 |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| $P(\{\omega\})$ | $\dfrac{1}{21}$ | $\dfrac{2}{21}$ | $\dfrac{3}{21}$ | $\dfrac{4}{21}$ | $\dfrac{5}{21}$ | $\dfrac{6}{21}$ |
+
+Soit $A$ l'événement : "obtenir un résultat pair". On a $A = \{2, 4, 6\}$.
+
+D'après la propriété, la probabilité de $A$ est la somme des probabilités des issues qui le composent :
+$$P(A) = P(\{2\}) + P(\{4\}) + P(\{6\})$$
+$$P(A) = \dfrac{2}{21} + \dfrac{4}{21} + \dfrac{6}{21} = \dfrac{12}{21} = \dfrac{4}{7}$$
+
+
+
+L'espace $(\Omega, P)$ est bien un espace probabilisé, mais la loi n'est pas uniforme.
+:::
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+On appelle probabilité uniforme sur $\Omega$ la probabilité définie par, pour tout $A \subset \Omega$,
+$$
+P(A) = \dfrac{\operatorname{card}(A)}{\operatorname{card}(\Omega)}
+$$
+
+:::
+
+
+
+<div class="nav-pages">
+  <a class="next" href="definition.html">➡️</a>
+</div>

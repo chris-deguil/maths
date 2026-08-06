@@ -1,0 +1,162 @@
+---
+title: "Bilan : Équation et représentation graphique"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Lien entre les différentes parties du cours : Courbes - Discriminant - Signe"
+order: 6
+---
+
+## Bilan : Représentation graphique et équation
+
+On considère $f$ une fonction polynôme de degré 2.  
+À partir de la forme canonique, et suivant le signe de son coefficient dominant et de $\Delta$, on obtient ces cas de figure.
+
+<div style="text-align: center;">
+![](../../image/maths/SecDegre_bilan1.png){width=70%}
+</div>
+<div style="text-align: center;">
+![](../../image/maths/SecDegre_bilan2.png){width=70%}
+</div>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : **(Bilan : extrait de devoir)**</span>  
+
+Soient $f(x) = 2x^2 - 5x + 3$ et $g(x) = -\left(x - \tfrac{3}{4}\right)^2 - 4$.
+
+1. a. Résoudre l’inéquation $f(x) \ge 0$
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   $1$ est une racine évidente : en effet $2 \times (1)^2 - 5 \times 1 + 3 = 0$.  
+   La fonction étant du second degré et admettant une racine, elle en admet une autre éventuellement identique.  
+   Soit $x_2$ cette seconde racine. Comme $\dfrac{3}{2}$ est somme des racines divisée par 2, on obtient que les racines de $f$ sont $1$ et $\dfrac{3}{2}$.  
+
+   Le polynôme est du signe de son coefficient dominant $2>0$ à l'extérieur des racines et du signe contraire à l'intérieur.  
+
+   On déduit donc que $f(x) \geqslant 0$ pour $x \in \left]-\infty \, ; \, 1 \right] \cup \left[ \tfrac{3}{2} \, ; \, +\infty \right[$.
+   </details>
+
+   b. Interpréter graphiquement ce résultat  
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   La représentation graphique de la fonction $f$ est au-dessus de l'axe des abscisses sur $\left]-\infty \, ; \, 1 \right]$ et sur $\left[\tfrac{3}{2} \, ; \, +\infty \right[$.
+   </details>
+
+2. a. Déterminer la forme canonique de $f$
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   Pour tout réel $x$,  
+
+   $$
+   \begin{aligned}
+   f(x) &= 2x^2 - 5x + 3 \\
+   &= 2 \left(x^2 - \tfrac{5}{2}x \right) + 3 \\
+   &= 2\left[\left(x - \tfrac{5}{4} \right)^2 - \tfrac{25}{16} \right] + 3 \\
+   &= 2 \left(x - \tfrac{5}{4} \right)^2 - \tfrac{25}{8} + 3 \\
+   &= 2 \left(x - \tfrac{5}{4} \right)^2 - \tfrac{1}{8}
+   \end{aligned}
+   $$
+   </details>
+
+   b. Établir le tableau de variations de $f$
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   La fonction $f$ est une fonction polynôme du second degré de coefficient dominant $2>0$, ainsi sa représentation graphique est une parabole orientée vers le haut.  
+   On déduit de la forme canonique que cette représentation graphique admet la droite d'équation $x=\tfrac{5}{4}$ comme axe de symétrie.
+
+   <div style="text-align: center;">
+![](../../image/maths/Second_degre_variation1.png){width=40%}
+</div> 
+   </details>
+
+   c. Donner le minimum de $f$
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   On déduit du tableau des variations que la fonction $f$ admet un minimum en $x=\tfrac{5}{4}$ qui vaut $-\tfrac{1}{8}$.
+   </details>
+
+1. La fonction $g$ admet-elle un extremum ?
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   Réponse 1 :  
+   Pour tout $x \in \mathbb{R}$, $-\left(x-\tfrac{3}{4} \right)^2 \leqslant 0$, donc $g(x) \leqslant -4$.  
+   Or $g\!\left(\tfrac{3}{4} \right) = -4$.  
+   On déduit donc que pour tout réel $x$, $g(x) \leqslant g \!\left(\tfrac{3}{4} \right)$.  
+   Donc $g$ admet un maximum en $\tfrac{3}{4}$ et il vaut $-4$.
+   </details>
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   Réponse 2 :  
+   $g(x)$ est déjà sous forme canonique. C’est une fonction polynôme de degré $2$, dont le coefficient dominant est négatif et dont l'axe de symétrie a pour équation $x=\tfrac{3}{4}$.  
+   On déduit que $g$ est croissante sur $\left]-\infty \, ;\, \tfrac{3}{4} \right]$ et décroissante sur $\left[\tfrac{3}{4} \, ; \, +\infty \right[$.  
+   Ainsi $g$ admet un maximum en $\tfrac{3}{4}$ qui vaut $g\!\left(\tfrac{3}{4}\right) = -4$.
+   </details>
+
+2. Position relative des graphes de $f$ et $g$
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   On a pour tout réel $x$,  
+
+   $$g(x) \leqslant g\!\left(\tfrac{3}{4}\right) < f \!\left(\tfrac{5}{4} \right) \leqslant f(x).$$  
+
+   Ainsi $g(x) < f(x)$.  
+   On déduit que la représentation graphique de $g$ est située sous celle de $f$.
+   </details>
+:::
+
+
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : **(Bilan : Extrait Devoir 2015)**</span>  
+
+Soit $f$ la fonction définie sur $\mathbb{R}$ par : $$f(x)=3x^{2}+12x+4$$
+
+1. Déterminer la forme canonique de la fonction $f$.
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   Pour tout $x \in \R$, $$f(x)= 3x^2+12x+4 =3(x^2+4x)+4 = 3\left((x+2)^2-4\right) + 4 = 3(x+2)^2 - 8$$
+   </details>
+2. Quelles sont les coordonnées du sommet de la parabole $\mathcal{C}_f$ représentant $f$ ?
+
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   On déduit de la question précédente que les coordonnées du sommet sont $(-2\,;\, -8)$
+   </details>
+3. Déterminer le tableau de variation de la fonction $f$.
+   
+   <details class="bloc cor"><summary>Afficher la correction</summary>
+   $f$ est une fonction polynôme du second degré de coefficient dominant $3>0$. Sa représentation graphique est une parabole orientée vers le haut. Elle admet pour axe de symétrie la droite d'équation $x= -2$.
+
+   Ainsi 
+
+   <div style="text-align: center;">
+   ![](../../image/maths/Second_degre_variation2.png){width=40%}
+</div> 
+   </details>
+
+1. On admet que ce polynôme admet deux racines $x_1$ et $x_2$.
+   a. Déterminer un réel $a\neq 5$ tel que $f(a)= f(5)$
+
+      <details class="bloc cor"><summary>Afficher la correction</summary>
+   Ainsi $f(5)= f(-2+7)= f(-2-7) = f(-9)$.\\
+   Ainsi $a=-9$
+
+      </details>
+   
+   b. Sans calculer les racines, montrer que $\frac{x_1+x_2}{x_1x_2}=-3$
+      <details class="bloc cor"><summary>Afficher la correction</summary>
+   Soit $x_1$ et $x_2$ les racines , alors, en notant $S$ et $P$ respectivement la somme et le produit des racines, on a 
+  $$\frac{x_1+x_2}{x_1x_2} = \frac{S}{P} = \dfrac{\dfrac{-12}{3}}{\dfrac{4}{3}} =\frac{-12}{4} = -3$$
+
+      </details>
+   
+:::
+
+
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="parabole.html">⬅️</a>
+</div>

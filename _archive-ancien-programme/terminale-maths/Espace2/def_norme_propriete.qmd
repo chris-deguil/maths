@@ -1,0 +1,288 @@
+---
+title: "Définition par les norme et propriétés"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition et propriétés du produit scalaire"
+order: 2
+---
+
+
+
+## Définition par les normes
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Propriété caractéristique</span>
+
+Soient $\ve{u}$ et $\ve{v}$ deux vecteurs, alors :
+$$\ve{u} \cdot \ve{v} = \frac{1}{2} \left(\norm{u+v}^2 - \norm{u}^2 - \norm{v}^2 \right) \qquad \text{et} \qquad \ve{u} \cdot \ve{v} = \frac{1}{2} \left( \norm{u}^2 + \norm{v}^2 - \norm{u-v}^2 \right)$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+L'égalité est immédiate si l'un des vecteurs est nul.
+On suppose alors $\ve{u}$ et $\ve{v}$ non nuls et on munit le plan d'un repère orthonormé $(O; \vec{\imath}, \vec{\jmath})$ où $\vec{\imath} = \frac{1}{\norm{u}}\ve{u}$.
+On considère $A$ et $B$ tels que $\ve{u}=\ve{OA}$ et $\ve{v}=\ve{OB}$. On note $\theta$ la mesure de l'angle $\widehat{AOB}$.
+On a $\ve{OA} \left(\norm{u}\,;\,0 \right)$ et $\ve{OB} \left(\norm{v} \cos \theta\,;\, \norm{v} \sin \theta\right)$.
+On en déduit alors :
+
+$$\begin{aligned}
+\norm{u+v}^2 &= \left(\norm{u} + \norm{v} \cos \theta \right)^2 + (\norm{v} \sin \theta)^2\\
+& = \norm{u}^2 + 2 \norm{u} \norm{v} \cos \theta + \norm{v}^2 (\cos^2 \theta + \sin^2 \theta)\\
+& = \norm{u}^2 + 2 \ve{u} \cdot \ve{v} + \norm{v}^2 
+\end{aligned}$$
+
+On en déduit la relation cherchée.
+
+</details>
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* Ces formes sont appelées **identités de polarisation**.
+* On en déduit alors, par sommation, la propriété immédiate suivante :
+
+$$\ve{u} \cdot \ve{v} = \frac{1}{4} \left(\norm{u+v}^2 - \norm{u-v}^2 \right)$$
+
+:::
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Démontrer que dans un rectangle les diagonales ont même longueur.
+
+
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Soit $\ve{u}$ et $\ve{v}$ les vecteurs associés aux côtés du rectangle, alors $\ve{u} \cdot \ve{v}= 0$.
+On déduit de la troisième identité de polarisation que :
+$$\dfrac{1}{4} \left(\norm{\ve{u}+\ve{v}}^2 - \norm{\ve{u}-\ve{v}}^2 \right) = 0$$
+Or $\norm{\ve{u} + \ve{v}}$ et $\norm{\ve{u} - \ve{v}}$ sont les longueurs des diagonales de ce rectangle.
+Donc :
+$$\norm{\ve{u} + \ve{v}} = \norm{\ve{u} - \ve{v}}$$
+Un rectangle a donc ses diagonales de même longueur.
+
+</details>
+
+:::
+
+
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Mesure d'un angle </span></div>
+
+On donne $AB = 9$, $BC = 10$ et $AC = 8$. Déterminons $\widehat{BAC}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+D'une part :
+$$\ve{AB} \cdot \ve{AC} = AB \times AC \times \cos(\widehat{BAC}) = 72 \cos(\widehat{BAC})$$
+D'autre part :
+$$\ve{AB} \cdot \ve{AC} = \frac{1}{2} \left(\norm{AB}^2 + \norm{AC}^2 - \norm{AB - AC}^2 \right)$$
+Donc :
+$$\ve{AB} \cdot \ve{AC} = \frac{1}{2} \left(AB^2 + AC^2 - BC^2 \right) = \frac{1}{2} \left(81+64-100 \right) = \frac{45}{2}$$
+Ainsi :
+$$72 \cos(\widehat{BAC}) = \frac{45}{2} \implies \cos(\widehat{BAC}) = \frac{45}{144}$$
+On en déduit que :
+$$\widehat{BAC} \approx 1{,}25 \text{ rad} \approx 71{,}8^\circ$$
+
+</details>
+
+:::
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+On peut généraliser l'utilisation de ces définitions, pour obtenir une nouvelle formule.
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Théorème d'Al-Kashi</span>
+
+Soit $ABC$ un triangle, alors :
+$$BC^2 = AB^2 + AC^2 - 2AB \times AC \times \cos(\widehat{BAC})$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Soit $ABC$ un triangle quelconque.
+
+$$\begin{aligned}
+BC^2 &= \norm{BC}^2 \\
+&= (\ve{BA} + \ve{AC})^2 \\
+&= \ve{BA}^2 + \ve{AC}^2 + 2 \ve{BA} \cdot \ve{AC} \\
+&= AB^2 + AC^2 - 2 \ve{AB} \cdot \ve{AC} \\
+&= AB^2 + AC^2 - 2AB \times AC \times \cos(\widehat{BAC})
+\end{aligned}$$
+
+</details>
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Soit $ABC$ un triangle tel que $AB=AC=2$ et $BC=2\sqrt{3}$. Déterminons l'angle $\widehat{BCA}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+D'après le théorème d'Al-Kashi :
+$$AB^2 = BC^2 + AC^2 - 2BC \times AC \times \cos\left(\widehat{BCA}\right)$$
+Donc :
+$$\cos\left(\widehat{BCA}\right) = \dfrac{AB^2 - BC^2 - AC^2}{-2 \times BC \times AC} = \dfrac{4 - 12 - 4}{-2 \times 2\sqrt{3} \times 2} = \dfrac{-12}{-8\sqrt{3}} = \dfrac{3}{2\sqrt{3}} = \dfrac{\sqrt{3}}{2}$$
+On en déduit que :
+$$\widehat{BCA} = \arccos\left(\dfrac{\sqrt{3}}{2}\right) = 30^\circ \text{ (ou } \frac{\pi}{6} \text{ rad)}$$
+
+</details>
+
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* Il s'agit d'une généralisation du théorème de Pythagore.
+* La relation d'Al-Kashi met en relation l'ensemble des éléments d'un triangle.
+
+:::
+
+
+
+## Propriétés du produit scalaire
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admis) : </span>
+
+Soient $\ve{u}$, $\ve{v}$ et $\ve{w}$ trois vecteurs du plan, et $k$ un réel.
+Alors :
+
+* Le produit scalaire est dit symétrique : $\ve{u} \cdot \ve{v} = \ve{v} \cdot \ve{u}$
+* Le produit scalaire est dit bilinéaire : $(k \cdot \ve{u}) \cdot \ve{v} = \ve{u} \cdot (k \cdot \ve{v})$
+* Le produit scalaire est distributif : $\ve{u} \cdot (\ve{v} + \ve{w}) = \ve{u} \cdot \ve{v} + \ve{u} \cdot \ve{w}$
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Relation d'Euler </span></div>
+
+Soient $A$, $B$, $C$ et $D$ quatre points quelconques de l'espace. Démontrons que :
+$\ve{AB} \cdot \ve{CD} + \ve{AC} \cdot \ve{DB} + \ve{AD} \cdot \ve{BC} = 0$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$ \begin{aligned}
+\ve{AB} \cdot \ve{CD} + \ve{AC} \cdot \ve{DB} + \ve{AD} \cdot \ve{BC} 
+&= \ve{AB} \cdot \ve{CD} + (\ve{AB} + \ve{BC}) \cdot \ve{DB} + (\ve{AB} + \ve{BD}) \cdot \ve{BC} \\
+&= \ve{AB} \cdot \ve{CD} + \ve{AB} \cdot \ve{DB} + \ve{BC} \cdot \ve{DB} + \ve{AB} \cdot \ve{BC} + \ve{BD} \cdot \ve{BC}\\
+&= \ve{AB} \cdot \ve{CD} + \ve{AB} \cdot \ve{DB} + \ve{BC} \cdot \ve{DB} + \ve{AB} \cdot \ve{BC} - \ve{BC} \cdot \ve{DB}\\
+&= \ve{AB} \cdot \ve{CD} + \ve{AB} \cdot \ve{DB} + \ve{AB} \cdot \ve{BC}\\
+&= \ve{AB} \cdot (\ve{CD} + \ve{DB} + \ve{BC}) \\
+&= \ve{AB} \cdot \ve{CB} + \ve{AB} \cdot \ve{BC} \\
+&= 0
+\end{aligned} $$
+
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Soient $A$, $B$, $C$ et $D$ quatre points du plan, avec $A$ et $B$ distincts. On note $C'$ le projeté orthogonal de $C$ sur $(AB)$ et $D'$ celui de $D$ sur $(AB)$.
+Démontrer que $\ve{AB} \cdot \ve{CD} = \ve{AB} \cdot \ve{C'D'}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a :
+$$\ve{AB} \cdot \ve{CD} = \ve{AB} \cdot (\ve{CC'} + \ve{C'D'} + \ve{D'D}) = \underbrace{\ve{AB} \cdot \ve{CC'}}_{=0} + \ve{AB} \cdot \ve{C'D'} + \underbrace{\ve{AB} \cdot \ve{D'D}}_{=0} = \ve{AB} \cdot \ve{C'D'}$$
+
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère un rectangle $ABCD$ tel que $AB = a$ et $AD = b$. On note $H$ et $E$ les projetés orthogonaux respectifs de $B$ et $D$ sur $(AC)$.
+Déterminer $\ve{AC} \cdot \ve{DB}$ en fonction de $a$ et $b$, puis exprimer $HE$ en fonction de $a$ et $b$.
+
+
+
+<div style="text-align: center;">
+  <img src="../../image/maths_term/ProduitScalaire_ProjectionExercice.png" style="width: 49%;">
+</div>
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+
+
+On a :
+$$ \begin{aligned}
+\ve{AC} \cdot \ve{DB} &= (\ve{AB} + \ve{BC}) \cdot (\ve{DA} + \ve{AB}) \\
+&= \ve{AB} \cdot \ve{DA} + \ve{AB} \cdot \ve{AB} + \ve{BC} \cdot \ve{DA} + \ve{BC} \cdot \ve{AB} \\
+&= 0 + AB^2 - BC \times DA + 0 \\
+&= a^2 - b^2
+\end{aligned} $$
+
+D'autre part, comme $H$ et $E$ sont les projetés de $B$ et $D$ sur $(AC)$, on a $\ve{AC} \cdot \ve{DB} = \ve{AC} \cdot \ve{HE}$.
+Ainsi, $a^2 - b^2 = AC \times HE$ (en supposant $a > b$ pour le sens des vecteurs).
+On en déduit :
+$$a^2 - b^2 = \sqrt{a^2 + b^2} \times HE \implies HE = \dfrac{a^2 - b^2}{\sqrt{a^2 + b^2}}$$
+
+</details>
+
+:::
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Identités remarquables</span>
+
+Soient $\ve{u}$ et $\ve{v}$ deux vecteurs du plan. Alors :
+
+$$ \begin{aligned}
+(\ve{u} + \ve{v})^2 &= \ve{u}^2 + \ve{v}^2 + 2 \ve{u} \cdot \ve{v} \\
+(\ve{u} - \ve{v})^2 &= \ve{u}^2 + \ve{v}^2 - 2 \ve{u} \cdot \ve{v} \\
+(\ve{u} + \ve{v}) \cdot (\ve{u} - \ve{v}) &= \ve{u}^2 - \ve{v}^2
+\end{aligned} $$
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Démontrons le théorème de Pythagore (et sa réciproque) :
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+
+
+On a :
+$\ve{AB}^2 = (\ve{AC} + \ve{CB})^2 = \ve{AC}^2 + \ve{CB}^2 + 2 \ve{AC} \cdot \ve{CB}$.
+Ainsi :
+$\ve{AC} \cdot \ve{CB} = 0 \Longleftrightarrow AB^2 = AC^2 + CB^2$.
+
+</details>
+
+:::
+
+
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="ps_espace.html">⬅️</a>
+  <a class="next" href="orthogonalite.html">➡️</a>
+</div>

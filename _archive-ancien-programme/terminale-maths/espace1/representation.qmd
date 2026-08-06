@@ -1,0 +1,238 @@
+---
+title: "Représentations paramétriques"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Représentations paramétriques de droites, de plans - Intersection"
+order: 8
+---
+
+----
+
+
+
+## Représentation paramétrique d'une droite
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span>
+
+Soient $A(x_A,y_A,z_A)$ un point de l'espace et $\ve{u} \begin{pmatrix} a \\ b \\ c \end{pmatrix}$ un vecteur non nul de l'espace. 
+
+Si l'on considère la droite $\mathscr{D}$ passant par $A$ et de vecteur directeur $\ve{u}$, alors :
+$$M(x,y,z) \in \mathscr{D} \Leftrightarrow \exists t \in \mathbb{R}, \ \ve{AM}=t \ve{u} \Leftrightarrow \exists t \in \mathbb{R}, \begin{cases}
+x &=x_A+at \\
+y &=y_A+bt \\
+z &= z_A+ct
+\end{cases}$$
+Ce système est appelé **représentation paramétrique** de la droite $\mathscr{D}$.
+:::
+
+
+
+<details class="bloc demo">
+<summary>Démonstration : </summary>
+
+Soit $\ve{u} \begin{pmatrix} a\\b\\c \end{pmatrix}$ un vecteur directeur de $\mathscr{D}$, et $A (x_A, y_A, z_A) \in \mathscr{D}$.  
+Pour tout $M(x,y,z) \in \mathscr{D}, \, \exists t \in \mathbb{R}, \, \ve{AM} = t \ve{u}$.  
+Ainsi :
+$$ \begin{pmatrix} x-x_A\\y-y_A\\z-z_A \end{pmatrix} = t \begin{pmatrix} a\\b\\c \end{pmatrix}$$
+On en déduit alors les relations données.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarques : </span>
+
+* Une droite admet une infinité de représentations paramétriques (choix du point, du vecteur directeur...) :
+  $\begin{cases} x &=3-2t \\ y &=-1+t \\ z &= t \end{cases}$ , $\begin{cases} x &=-5-2t \\ y &=3+t \\ z &=-4 + t \end{cases}$ et $\begin{cases} x &=3+4t \\ y &=-1-2t \\ z &= -2t \end{cases}$  
+  sont des représentations paramétriques d'une même droite.
+* Pour une représentation paramétrique donnée, pour chaque valeur de $t$, on détermine un point de la droite et réciproquement.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple 1 : Appartenance d'un point</div>
+
+On considère $A(-1;-1;1)$ un point de l'espace et $\mathscr{D}$ une droite dont une équation paramétrique est :
+$$ \begin{cases} x&=2t-1 \\ y&=-3t+2 \\ z&=t \end{cases} \quad (t \in \mathbb{R})$$
+Le point $A$ appartient-il à $\mathscr{D}$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$M \in \mathscr{D}$ si et seulement s'il existe $t$ tel que :
+$$\begin{cases} -1=2t-1 \\ -1=-3t+2 \\ 1=t \end{cases}$$
+La dernière équation donne $t=1$ et la première donne $t=0$, ce qui est impossible. On en déduit donc que $A \notin \mathscr{D}$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple 2 : Intersection de droites dans un cube</div>
+
+On considère un cube $ABCDEFGH$ d'arête de longueur 1. On se place dans le repère orthonormal $(A \, ; \, \ve{AB} \, ; \, \ve{AD} \, ; \, \ve{AE})$.  
+On considère les points $I\left(1 \, ; \dfrac{1}{3} \, ; \, 0\right)$, $J\left(0 \, ; \dfrac{2}{3} \, ; \, 1\right)$, $K\left(\dfrac{3}{4} \, ; \, 0 \, ; \, 1\right)$ et $L(a \, ; \, 1 \, ; \, 0)$ avec $a \in [0 \, ; \, 1]$.
+
+1. Déterminer une représentation paramétrique de la droite $(IJ)$.
+  
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a $\ve{IJ} \begin{pmatrix}
+0-1\\\frac{2}{3} - \frac{1}{3}\\1-0
+\end{pmatrix}=\begin{pmatrix}-1\\\frac{1}{3}\\1\end{pmatrix}$.\\
+D'où on déduit que 
+$$(IJ) : \left\{\begin{array}{lll}
+x&=1-t&\\
+y&=\frac{1}{3} + \frac{1}{3}t& \quad t \in \R\\
+z&=t& 
+\end{array} \right.$$
+</details>
+
+2. Démontrer qu'une équation paramétrique de $(KL)$ est :
+   $\begin{cases} x&=\dfrac{3}{4}+t'\left(a-\dfrac{3}{4}\right) \\ y&=t' \\ z&=1 - t' \end{cases}, \quad t' \in \mathbb{R}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Cette droite passe par le point $\left(\frac{3}{4}~;~0~;~1\right)$ donc $K$ est un point de la droite.\\
+De plus elle admet $\begin{pmatrix}
+a-\frac{3}{4}\\1\\-1
+\end{pmatrix}$  comme vecteur directeur, qui est le vecteur $\ve{KL}$.
+
+Ainsi il s'agit bien d'une représentation paramétrique de la droite $(KL)$.
+</details>
+
+3. Démontrer que les droites $(IJ)$ et $(KL)$ sont sécantes si, et seulement si, $a=\dfrac{1}{4}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Les droites $(IJ)$ et $(KL)$ sont sécantes si et seulement si 
+
+$$\exists t,t' \in \R, \, 
+\begin{cases}
+\dfrac{3}{4}+t'\left(a-\dfrac{3}{4}\right)&=1-t\\
+t'&= \dfrac{1}{3} + \dfrac{1}{3}t     \\
+1-t'&= t   
+\end{cases}$$
+On a 
+$$\begin{cases}
+t'=\dfrac{1}{3} + \dfrac{1}{3}t     \\
+t=1-t'  
+\end{cases}
+\Longleftrightarrow 
+\begin{cases}
+t=1-t'\\
+3t' = 1+(1-t')
+\end{cases}
+\Longleftrightarrow 
+\begin{cases}
+t'=\dfrac{1}{2}\\
+t=\dfrac{1}{2}
+\end{cases}$$
+
+Ainsi pour que les droites soient sécantes il faut et il suffit que 
+
+$$\dfrac{3}{4}+\dfrac{1}{2} \left(a-\dfrac{3}{4}\right)=\dfrac{1}{2}$$
+
+C'est-à-dire que $a=\dfrac{1}{4}$.
+
+</details>
+
+
+:::
+
+___________
+
+## Représentation paramétrique d'un plan
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span>
+
+Soit $A(x_A \, ; \, y_A \, ; \, z_A)$ un point de l'espace, et $\ve{u}(a\, ; \,b\, ; \,c)$ et $\ve{v}(a'\, ; \,b'\, ; \,c')$ deux vecteurs de l'espace avec $\ve{u}$ et $\ve{v}$ non colinéaires.  
+On considère $\mathscr{P}$ le plan passant par $A$ et dirigé par les vecteurs $\ve{u}$ et $\ve{v}$, alors :
+$$M \in \mathscr{P} \Leftrightarrow \begin{cases}
+x=x_A+at+a's \\
+y=y_A+bt+b's \\
+z=z_A+ct+c's
+\end{cases} \quad t,s \in \mathbb{R}$$
+Ce système est appelé **représentation paramétrique** du plan.
+:::
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple : Intersection d'une droite et d'un plan</div>
+
+On considère le plan $\mathscr{P}$ dont une représentation paramétrique est :
+$$\mathscr{(P)} : \begin{cases} x=5-2t+3s \\ y=-1-t \\ z=2-t-s \end{cases} \quad t,s \in \mathbb{R}$$
+et la droite $\mathscr{D}$ dont une représentation paramétrique est :
+$$\mathscr{D} : \begin{cases} x=1+2k \\ y=5-k \\ z=k \end{cases} \quad k \in \mathbb{R}$$
+Déterminons les coordonnées du point d'intersection du plan et de la droite, s'il existe.
+
+
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$M \in \mathscr{D} \cap \mathscr{P} \Longleftrightarrow \exists k,s,t \in \mathbb{R}$ tels que :
+$$\begin{cases} 1+2k=5-2t+3s \\ 5-k=-1-t \\ k=2-t-s \end{cases}$$
+$\Longleftrightarrow \begin{cases} k=2-t-s \\ 1+2(2-t-s)=5-2t+3s \\ 5-(2-t-s)=-1-t \end{cases}$ (Substitution de $k$ dans les deux premières lignes)  
+$\Longleftrightarrow \begin{cases} k=2-t-s \\ 5-2t-2s=5-2t+3s \\ 3+t+s=-1-t \end{cases}$  
+$\Longleftrightarrow \begin{cases} k=2-t-s \\ s=0 \\ 4+2t+s=0 \end{cases}$  
+$\Longleftrightarrow \begin{cases} k=4 \\ s=0 \\ t=-2 \end{cases}$
+
+En remplaçant $k=4$ dans le système de la droite $\mathscr{D}$ :
+$$\begin{cases} x = 1 + 2(4) = 9 \\ y = 5 - 4 = 1 \\ z = 4 \end{cases}$$
+Ainsi, le point $M(9 \, ; \, 1 \, ; \, 4)$ est le point d'intersection de la droite et du plan.
+
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice de synthèse : Positions relatives et paramètre</div>
+
+Soit le plan $\mathscr{P}$ passant par $A(1\,;\,2\,;\,1)$ et de vecteurs directeurs $\ve{u}\begin{pmatrix} 1\\1\\0 \end{pmatrix}$ et $\ve{v}\begin{pmatrix} 0\\1\\1 \end{pmatrix}$.  
+Soit la droite $\mathscr{D}_m$ (où $m \in \mathbb{R}$) définie par :
+$$\mathscr{D}_m : \begin{cases} x = 2 + mt \\ y = 1 - t \\ z = t \end{cases} \quad t \in \mathbb{R}$$
+
+1. Déterminer une représentation paramétrique du plan $\mathscr{P}$.
+  
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Le plan $\mathscr{P}$ passant par $A(1\,;\,2\,;\,1)$ et dirigé par $\ve{u}$ et $\ve{v}$ admet pour représentation paramétrique :
+   $$\mathscr{P} : \begin{cases} x = 1 + s \\ y = 2 + s + k \\ z = 1 + k \end{cases} \quad s, k \in \mathbb{R}$$
+</details>
+
+
+1. Déterminer la valeur de $m$ telle que $\mathscr{P} // \mathscr{D}_m$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+La droite $\mathscr{D}_m$ est de vecteur directeur $\ve{w}\begin{pmatrix} m \\ -1 \\ 1 \end{pmatrix}$.  
+   $\mathscr{D}_m // \mathscr{P}$ si et seulement si $\ve{w}$ est une combinaison linéaire de $\ve{u}$ et $\ve{v}$.  
+   On cherche donc $s, k \in \mathbb{R}$ tels que $\ve{w} = s\ve{u} + k\ve{v}$ :
+   $$\begin{cases} m = s \\ -1 = s + k \\ 1 = k \end{cases} \iff \begin{cases} k = 1 \\ s = -2 \\ m = -2 \end{cases}$$
+   Ainsi, $\mathscr{P} // \mathscr{D}_m$ si et seulement si $m = -2$.
+</details>
+
+3. Pour $m \neq -2$, déterminer les coordonnées du point d'intersection de $\mathscr{P}$ et $\mathscr{D}_m$ en fonction de $m$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Soit $M(x\,;\, y\,;\, z)$ le point d'intersection. Ses coordonnées vérifient le système :
+   $$\begin{cases} 2 + mt = 1 + s \\ 1 - t = 2 + s + k \\ t = 1 + k \end{cases} \iff \begin{cases} s = 1 + mt \\ k = t - 1 \\ 1 - t = 2 + (1 + mt) + (t - 1) \end{cases}$$
+   L'équation sur $t$ devient :
+   $$1 - t = 2 + mt + t \iff 1 - 2 = mt + 2t \iff -1 = t(m + 2)$$
+   Comme $m \neq -2$, on a : $t = \dfrac{-1}{m+2}$.  
+   On calcule alors les coordonnées de $M$ en injectant $t$ dans la représentation de $\mathscr{D}_m$ :
+   
+   * $x = 2 + m\left(\dfrac{-1}{m+2}\right) = \dfrac{2(m+2) - m}{m+2} = \dfrac{m+4}{m+2}$
+   * $y = 1 - \left(\dfrac{-1}{m+2}\right) = \dfrac{m+2+1}{m+2} = \dfrac{m+3}{m+2}$
+   * $z = \dfrac{-1}{m+2}$
+
+   Le point d'intersection est $M\left( \dfrac{m+4}{m+2} \, ; \, \dfrac{m+3}{m+2} \, ; \, \dfrac{-1}{m+2} \right)$.
+
+</details>
+
+
+
+
+</details>
+:::
+
+
+<div class="nav-pages">
+  <a class="prev" href="parallele.html">⬅️</a>
+</div>

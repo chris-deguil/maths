@@ -1,0 +1,110 @@
+---
+title: "Algorithme : Somme et Seuil"
+format:
+  html:
+    toc: true
+    embed-resources: false
+include-in-header:
+  - text: |
+      <link rel="stylesheet" href="../../assets/css/pyodide-mkdocs.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css">
+      <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.js"></script>
+      <script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+      <script src="../../assets/js/pyodide-mkdocs.js" defer></script>
+description: "Déterminer la somme des éléments d'une liste - Recherche de seuil"
+order: 7
+---
+
+## Somme des termes
+
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><span class="exo-extra"> Extrait évaluation 2025 </span>
+On considère la suite $(u_n)$ définie par $u_0=\frac12$ et pour tout $n \in \N$, $$u_{n+1} = \frac{2u_n}{1+u_n}$$
+
+1. Calculer, sous forme irréductible, $u_1$ et $u_2$.
+   
+   *On fera apparaître toutes les étapes nécessaires.*
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$u_1 = \dfrac{2 \times u_0}{1+ u_0} = \dfrac{2 \times \dfrac{1}{2}}{1+ \dfrac{1}{2}} = \dfrac{1}{\dfrac32}= \dfrac23 \et 
+u_2 =\dfrac{2 \times u_1}{1+ u_1} = \dfrac{2 \times \dfrac{2}{3}}{1+ \dfrac{2}{3}} = \dfrac{\dfrac43}{\dfrac53}= \dfrac45$. 
+</details>
+
+1. Ecrire une fonction \pythoninline{liste_suite} qui renvoie la liste des $n$ premiers terme de la suite $(u_n)$.
+   
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+~~~python
+def liste_suite(n):
+	u = 1/2
+	L= [u]
+	for i in range(1,n):
+		u=2*u/(1+u)
+		L.append(u)
+	return L
+~~~
+</details>
+
+3. On considère la suite $(v_n)$ définie pour tout $n \in \N$, par  
+   $$v_n= \frac{2^n}{1+2^n}$$
+   a.  Montrer que la suite $(v_n)$ vérifie la même relation de récurrence que la suite $(u_n)$.
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+        Pour tout $n \in \N$, 
+        $$\dfrac{2v_n}{1+v_n}=\dfrac{2 \times \dfrac{2^n}{1+2^n}}{1 + \dfrac{2^n}{1+2^n}}= 
+        \dfrac{\dfrac{2^{n+1}}{1+2^n}}{\dfrac{1+2^n + 2^n}{1+2^n}}= \dfrac{2^{n+1}}{1+2^{n+1} }=v_{n+1}
+        $$
+    </details>
+
+
+    b. En déduire $u_n$ en fonction de $n$.
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+        $(v_n)$ et $(u_n)$ suivent la même relation de récurrence, et $u_0=v_0$.
+
+        On déduit donc que pour tout $n$, $u_n=v_n$.
+
+        Donc $$v_n=\frac{2^n}{1+2^n}$$
+    </details>
+
+4. a. Démontrer que la suite $(u_n)$ est croissante.
+   
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    Pour tout $n \in \N$, on a $u_n >0$.
+
+    De plus 
+    $$\frac{u_{n+1}}{u_n} = \dfrac{2^{n+1}}{1+2^{n+1}} \times \dfrac{2^n+1}{2^n} = \dfrac{2 \times (2^n+1)}{2^{n+1} +1})=
+    \dfrac{2^{n+1}+2}{2^{n+1} +1} >1
+    $$
+
+    Donc 
+    $$u_{n+1} > u_n
+    $$
+
+    D'où la suite $(u_n)$ est croissante.
+    </details>
+
+    b. A l'aide de la calculatrice, conjecturer la limite de la suite $(u_n)$. 
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    On  le tableau des valeurs suivant :
+    | $k$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+    | $u_k$ | 0,500 | 0,667 | 0,800 | 0,889 | 0,941 | 0,970 | 0,985 | 0,992 | 0,996 | 0,998 | 0,999 |
+
+
+    On conjecture que $$\lim_{n \to + \infty} u_n =1$$
+
+    </details>
+:::
+
+
+
+
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="alrotihme.html">⬅️</a>
+</div>

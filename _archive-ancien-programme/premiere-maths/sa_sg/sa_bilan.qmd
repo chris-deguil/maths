@@ -1,0 +1,66 @@
+---
+title: "Exercice bilan"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: " "
+order: 3
+---
+
+___
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+
+On considère la suite $(u_n)$ définie par $u_0 = 1$ et, pour tout entier naturel $n$,
+$$u_{n+1} = \dfrac{u_n}{1 + 2u_n}.$$
+
+1. Calculer $u_1$, $u_2$ et $u_3$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a
+$$u_1=\dfrac{u_0}{1+2u_0}=\dfrac{1}{1+2}=\dfrac{1}{3}.$$
+Puis
+$$u_2=\dfrac{u_1}{1+2u_1}=\dfrac{\dfrac{1}{3}}{1+2\cdot\dfrac{1}{3}} =\dfrac{\dfrac{1}{3}}{1+\dfrac{2}{3}} =\dfrac{\dfrac{1}{3}}{\dfrac{5}{3}} =\dfrac{1}{5}.$$
+Enfin
+$$u_3=\dfrac{u_2}{1+2u_2}=\dfrac{\dfrac{1}{5}}{1+2\cdot\dfrac{1}{5}} =\dfrac{\dfrac{1}{5}}{1+\dfrac{2}{5}} =\dfrac{\dfrac{1}{5}}{\dfrac{7}{5}} =\dfrac{1}{7}.$$
+Ainsi, $u_1=\dfrac{1}{3}$, $u_2=\dfrac{1}{5}$, $u_3=\dfrac{1}{7}$.
+</details>
+
+2. On admet que, pour tout entier naturel $n$, $u_n \neq 0$. On définit la suite $(v_n)$, pour tout entier naturel $n$, par $v_n = \dfrac{1}{u_n}$.
+
+    a. Calculer $v_0$, $v_1$ et $v_2$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$$v_0=\dfrac{1}{u_0}=1,\qquad v_1=\dfrac{1}{u_1}=3,\qquad v_2=\dfrac{1}{u_2}=5.$$
+</details>
+
+    b. Démontrer que la suite $(v_n)$ est arithmétique.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout $n\in\mathbb{N}$, $u_{n+1}=\dfrac{u_n}{1+2u_n}$.  
+
+Comme $u_{n+1}\neq 0$, on peut inverser et obtenir :
+$$v_{n+1} = \dfrac{1}{u_{n+1}}=\dfrac{1+2u_n}{u_n}=\dfrac{1}{u_n}+2.$$
+Donc $v_{n+1}=v_n+2$.  
+
+Ainsi, la suite $(v_n)$ est arithmétique de raison $2$.
+</details>
+
+    c. En déduire l'expression de $v_n$ en fonction de $n$ pour tout entier naturel $n$, puis celle de $u_n$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Comme $(v_n)$ est arithmétique de premier terme $v_0=1$ et de raison $2$, on a, pour tout $n\in\mathbb{N}$ :
+$$v_n=v_0+2n=1+2n.$$
+
+Donc, pour tout $n\in\mathbb{N}$ :
+$$u_n=\dfrac{1}{v_n}=\dfrac{1}{1+2n}.$$
+</details>
+:::
+
+
+<div class="nav-pages">
+  <a class="prev" href="sa_variation_somme.html">⬅️</a>
+  <a class="next" href="sg_definition.html">➡️</a>
+</div>

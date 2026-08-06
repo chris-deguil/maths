@@ -1,0 +1,36 @@
+---
+title: "Chapitre 1 : La récurrence, application à l'étude de suites, limite d'une suite."
+description: "Raisonnement pa récurrence, étudier les variations et la limite d'une suite"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+-  Composée de deux fonctions, notation v ○ u. Relation (v ○ u)’ = (v’ ○ u) × u’ pour la
+dérivée de la composée de deux fonctions dérivables
+- Calculer la dérivée d’une fonction donnée par une formule simple mettant en jeu
+opérations algébriques et composition.
+-  Calculer la fonction dérivée, déterminer les limites et étudier les variations d'une
+fonction construite simplement à partir des fonctions de référence.
+-  Démontrer des inégalités en utilisant la convexité d’une fonction.
+-  Esquisser l’allure de la courbe représentative d’une fonction ƒ à partir de la donnée
+de tableaux de variations de ƒ, de ƒ’ ou de ƒ’’.
+-  Lire sur une représentation graphique de ƒ, de ƒ’ ou de ƒ’’ les intervalles où ƒ est
+convexe, concave, et les points d’inflexion. Dans le cadre de la résolution de
+problème, étudier et utiliser la convexité d’une fonction.
+:::
+
+

@@ -1,0 +1,40 @@
+---
+title: "Historique"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Bref historique géométrie repérée, géométrie dans l'espace"
+order: 1
+---
+
+----
+
+
+
+
+
+::: {.bloc .rem}
+L’étude de l’espace remonte à l’Antiquité, où les Grecs ont jeté les bases de la géométrie. Dans ses *Éléments* (vers 300 av. J.-C.), Euclide développe une géométrie plane rigoureuse et décrit aussi quelques notions de géométrie dans l’espace, notamment les cinq polyèdres réguliers (aujourd’hui appelés polyèdres de Platon). Ces travaux restent toutefois purement géométriques, sans formalisme algébrique ni coordonnées.  
+:::
+
+::: {.bloc .rem}
+Au XVII\ieme{} siècle, René Descartes fonde la géométrie analytique (*Discours de la méthode*, 1637). Grâce aux coordonnées cartésiennes, il devient possible de représenter points, droites et plans par des équations. Ce formalisme, d’abord pensé pour le plan, s’étend rapidement à l’espace tridimensionnel, ouvrant la voie à une description algébrique des objets spatiaux.  
+:::
+
+::: {.bloc .rem}
+Au XVIII\ieme{} siècle, Leonhard Euler et d’autres mathématiciens exploitent ce cadre pour l’astronomie et la mécanique. La représentation des trajectoires de planètes et des forces en interaction exige des outils nouveaux, amorçant l’usage explicite de grandeurs vectorielles pour décrire directions et intensités.  
+:::
+
+::: {.bloc .rem}
+Au XIX\ieme{} siècle, Hermann Grassmann, William Rowan Hamilton et Josiah Gibbs posent les bases du calcul vectoriel. Les notions de vecteur, de produit scalaire et vectoriel, de colinéarité et de coplanarité deviennent centrales pour la géométrie analytique de l’espace. Dans le même temps, la formalisation des équations paramétriques des droites et des plans permet une approche plus souple et plus unifiée des problèmes spatiaux.  
+:::
+
+::: {.bloc .rem}
+Aujourd’hui, la géométrie de l’espace appuyée sur le calcul vectoriel est un outil fondamental non seulement en mathématiques, mais aussi en physique, en ingénierie et en informatique graphique, où la description des positions et des mouvements dans l’espace repose largement sur les vecteurs.  
+:::
+
+
+<div class="nav-pages">
+  <a class="next" href="vecteur_espace.html">➡️</a>
+</div>

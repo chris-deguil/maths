@@ -1,0 +1,177 @@
+---
+title: "Prorpiétés algébrique"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Produit et puissance, simplification d'expression, résolution d'inéquations et d'équation"
+order: 4
+---
+
+# Propriétés algébriques du logarithme népérien
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+Pour tout $a, b \in \R_+^*$,
+$$\ln(ab) = \ln a + \ln b$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Soient $a$ et $b$ deux réels strictement positifs, alors $\ln a$ et $\ln b$ existent.  
+Ainsi $\e^{\ln a + \ln b} = \e^{\ln a} \e^{\ln b} = ab$.  
+Or $ab = \e^{\ln(ab)}$.  
+Donc, puisque la fonction exponentielle est strictement croissante, $\ln(ab) = \ln a + \ln b$.
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+Ainsi le logarithme d'un produit est égal à la somme des logarithmes. On dit que la fonction $\ln$ transforme un produit en une somme.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+1. Écrire sous la forme d'un seul logarithme népérien $A = \ln(2) + 2 \ln(3) + \ln(5)$.  
+   
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$A = \ln(2) + \ln(3^2) + \ln(5) = \ln(2 \times 9 \times 5) = \ln(90)$.
+</details>
+
+2. Peut-on affirmer que pour tout réel $x$ on a $\ln[(3-x)(5-x)] = \ln(3-x) + \ln(5-x)$ ?  
+ 
+  <details class="bloc cor"><summary>Afficher la correction :</summary>
+  Faux. 
+
+  En effet, par exemple pour $x=7$, le produit $(3-x)(5-x)$ est positif, donc le membre de droite est définie mais les expressions $\ln(3-x)$ et $\ln(5-x)$ ne sont pas définies puisque les quantités $3-x$ et $7-x$ elles sont négatives.
+  </details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+Déterminer $\lim_{x \to -\infty} \ln \left(1+\dfrac{2}{\e^x} \right)+x$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$\forall x \in \R, \,\ln \left(1+\dfrac{2}{\e^x} \right)+x = \ln \left(1+\dfrac{2}{\e^x} \right)+ \ln(\e^x) = \ln \left(\e^x \left(1+\dfrac{2}{\e^x}\right)\right) = \ln \left(\e^x+2\right)$.  
+Or $\lim_{x \to -\infty} \e^x = 0$, donc $\lim_{x \to -\infty} (\e^x+2) = 2$.  
+La fonction $\ln$ étant continue sur $\R_+^*$, on en déduit par composition que :
+$$\lim_{x \to -\infty} \ln \left(1+\dfrac{2}{\e^x} \right)+x = \ln(2)$$
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+Résoudre l'équation $(E) : \ln(2x+10) + \ln(3-x) = \ln(x^2-16)$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+begin{itemize}[label=\textbullet]
+
+\item[\textbullet] $\ln(2x+10)$ est défini si et seulement si $2x+ 10 > 0$ si et seulement si $x > -5$.
+
+\item[\textbullet] $\ln(3-x)$ est défini si et seulement si $3-x> 0$ si et seulement si $3 > x$
+
+\item[\textbullet] $\ln(x^2-16)$ est défini si et seulement si $x^2-16 > 0$.
+
+
+$P:x \longmapsto x^2-16$ est un polynôme du second degré, donc du signe de son coefficient dominant $1$ à l'extérieur des racines évidentes $-4$ et $4$ et du signe contraire à l'intérieur.
+
+
+Donc si et seulement si $x\in ]-\infty~;~-4[ \cup ]4~;~+\infty[$.\end{itemize} 
+
+Or, pour tout $x \in D_E$ :
+$$\begin{aligned}
+
+\ln(2x+10) + \ln(3-x) = \ln(x^2-16) &\Longleftrightarrow \ln((2x+10)(3-x)) = \ln(x^2-16)\\
+
+&\underset{\ln \nearrow}{\Longleftrightarrow} (2x+10)(3-x) = x^2-16\\
+
+&\Longleftrightarrow-4x-2x^2+30=x^2-16\\
+
+&\Longleftrightarrow3x^2+4x-46 = 0
+
+\end{aligned}
+$$ 
+
+ Cette dernière équation est une équation du second degré de discriminant $$\Delta = 4^2-4\times3\times (-46) = 568$$
+
+Étant positif, l'équation admet deux solutions réelles
+
+
+
+$$
+x_{1,2}=\frac{-4\pm\sqrt{568}}{6}=\frac{-2\pm\sqrt{142}}{3}
+$$
+
+soit $x_1 \approx -4{,}64$ et $x_2 \approx 3{,}30$.
+
+
+Or $x_2 \notin ]-5~;~-4[$.
+
+Donc l'équation admet une unique solution $x_1$.
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+Pour tout $a, b \in \R_+^*$ et $n \in \Z$ :
+$$\ln\left(\dfrac{1}{a}\right) = -\ln a \quad ; \quad \ln \left(\dfrac{a}{b}\right)=\ln a - \ln b \quad ; \quad \ln\left(a^n\right) = n \ln a \quad ; \quad \ln \sqrt{a} = \dfrac{1}{2} \ln{a}$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+* $0 = \ln 1 = \ln \left(a \times \dfrac{1}{a} \right) = \ln a + \ln \dfrac{1}{a} \Longrightarrow \ln \dfrac{1}{a} = -\ln a$.
+* $\ln \dfrac{a}{b} = \ln \left(a \times \dfrac{1}{b}\right) = \ln a + \ln \dfrac{1}{b} = \ln a - \ln b$.
+* Se démontre par récurrence pour $n \in \mathbb{N}$, puis s'étend à $\mathbb{Z}$.
+* $\ln a = \ln\left((\sqrt{a})^2\right) = 2 \ln \sqrt{a} \Longrightarrow \ln \sqrt{a} = \dfrac{1}{2} \ln a$.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+Résoudre $2 \ln x = 3$.  
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout $x \in \R_+^*$, $2\ln x = 3 \Longleftrightarrow \ln x = \dfrac{3}{2} \Longleftrightarrow x = \e^{3/2} = \sqrt{\e^3}$.
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+Le prix d'un article diminue en moyenne de $5\,\%$ par an. Dans combien de temps son prix sera-t-il le quart du prix de départ ?  
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On cherche $n$ tel que $0,95^n < 0,25$.  
+
+$\ln(0,95^n) < \ln 0,25 \Longleftrightarrow n \ln 0,95 < \ln 0,25 \Longleftrightarrow n > \dfrac{\ln 0,25}{\ln 0,95}$ (car $\ln 0,95 < 0$).  
+$n \approx 27,03$. Il faut donc 28 ans.
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+Une autre démonstration de $\lim_{x \to +\infty} \dfrac{\ln(x)}{x^n} = 0$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Soit $n$ un entier naturel non nul.
+$$\begin{aligned}
+\forall x > 1, \, \ln(x) \leqslant x &\Longrightarrow 0 \leqslant \ln( \sqrt{x}) \leqslant \sqrt{x}\\
+&\Longrightarrow 0 \leqslant \dfrac{1}{2} \ln(x) \leqslant x^{1/2}\\
+&\Longrightarrow 0 \leqslant x^{-n} \ln(x) \leqslant 2 x^{-n} x^{1/2}\\
+&\Longrightarrow 0 \leqslant \dfrac{\ln(x)}{x^n} \leqslant \dfrac{2}{x^{n-0,5}}
+\end{aligned}
+$$
+
+Or, comme $n \geqslant 1$, $n - 0,5 > 0$, donc :
+$$\lim_{x \to +\infty} \dfrac{1}{x^{n-0,5}} = 0$$
+Ainsi, par le théorème d'encadrement :
+$$\lim_{x \to +\infty} \dfrac{\ln(x)}{x^n} = 0$$
+</details>
+:::
+
+
+<div class="nav-pages">
+ <a class="prev" href="variation_limite.htmll">⬅️</a>
+  <a class="next" href="derivation.html">➡️</a>
+</div>

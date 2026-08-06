@@ -1,0 +1,77 @@
+---
+title: "Primitives usuelles"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Formule des primitives des fonctions de références"
+order: 2
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+On considère $a,k \in \mathbb{R}$, $n\in \mathbb{N}^*$ et $\lambda \in \mathbb{R}^*$.
+
+| Fonction $f$ | Une primitive $F$ | Intervalle de validité |
+| :--- | :--- | :--- |
+| $a$ | $ax$ | $\mathbb{R}$ |
+| $x^n$ | $\dfrac{1}{n+1} x^{n+1}$ | $\mathbb{R}$ |
+| $\dfrac{1}{x}$ | $\ln x$ | $\mathbb{R}_+^*$ |
+| $\dfrac{1}{x^n}$ ($n \ge 2$) | $-\dfrac{1}{n-1} \dfrac{1}{x^{n-1}}$ | $]-\infty\,;\,0[$ ou $]0\, ;\, + \infty[$ |
+| $\dfrac{1}{\sqrt{x}}$ | $2\sqrt{x}$ | $]0~;~+\infty[$ |
+| $\e^{\lambda x}$ | $\dfrac{1}{\lambda}\e^{\lambda x}$ | $\mathbb{R}$ |
+| $\ln x$ | $x \ln x - x$ | $\mathbb{R}_+^*$ |
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+* Une primitive de $f_1(x)= 3$ est $F_1(x)=3x-1$.
+* Une primitive de $f_2(x) = x^5$ est $F_2(x) = \dfrac{1}{6} x^6 +1$.
+* Une primitive de $f_3(x)= -\dfrac{2}{x^3}$ est $F_3(x) = \dfrac{1}{x^2}$.
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère la fonction $f$ définie sur $\mathbb{R}$ par $$f(x) = \left\{\begin{array}{lll} x^2&\text{si}&x<0\\ \e^x-1&\text{si}&x\geqslant 0 \end{array}\right.$$
+1. Démontrer que $f$ admet une primitive.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+La fonction carré est continue sur $\mathbb{R}_-^*$ et la fonction exponentielle est continue sur $\mathbb{R}_+$.
+De plus $\lim_{x \to 0^-} x^2= 0$ et $\lim_{x \to 0^+} \e^x-1 = 0$.
+Ainsi $\lim_{x \to 0^-} f(x) = \lim_{x \to 0^+} f(x) = 0$.
+On en déduit que la fonction $f$ est continue en $0$ et vérifie $f(0)=0$.
+Ainsi $f$ est continue sur $\mathbb{R}$, donc elle admet une primitive sur $\mathbb{R}$.
+
+</details>
+
+2. Déterminer la primitive de $f$ s'annulant en $0$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+* Primitive sur $\mathbb{R}_-^*$ : Une primitive de la fonction $x \longmapsto x^2$ est la fonction $F_1$ définie par $F_1(x)=\dfrac{1}{3}x^3 + k_1$.
+* Primitive sur $\mathbb{R}_+$ : Une primitive de la fonction $x \longmapsto \e^x-1$ est la fonction $F_2$ définie par $F_2(x)=\e^x-x + k_2$.
+
+$F$ étant dérivable, elle est alors continue, notamment en $0$, d'où :
+$\lim_{x \to 0^-} F_1(x)= k_1$ et $\lim_{x \to 0^+} F_2(x)= 1 + k_2$.
+Ainsi $k_1=1+k_2$.
+De plus $F(0)= 0$, on en déduit donc que $k_1=0$ et $k_2=-1$.
+Ainsi la fonction $F$ est définie par $$F(x) = \left\{\begin{array}{lll} \dfrac{1}{3} x^3&\text{si}&x<0\\ \e^x-x-1&\text{si}&x\geqslant 0 \end{array}\right.$$
+
+</details>
+
+:::
+
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="Notion.html">⬅️</a>
+  <a class="next" href="Operations.html">➡️</a>
+</div>

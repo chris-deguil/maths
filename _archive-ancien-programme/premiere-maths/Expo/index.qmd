@@ -1,0 +1,30 @@
+---
+title: "Chapitre 9 : Fonction exponetielle"
+description: "Fonction expônentielle, étude de la fonction"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+- Définition de la fonction exponentielle, comme unique fonction dérivable sur $\R$ vérifiant $f'=f$, et $f(0)=1$ : L’existence et l’unicité sont admises.  Notation $exp(x)$.
+- Pour tous réels $x$ et $y$, $exp(x+y)=exp(x)exp(y)$ et $exp(x)exp(−x)=1$
+- Nombre $\e$. Notation $\e^x$
+- Pour tout réel $a$, la suite $\e^{na}$ est une suite géométrique.
+- Signe, sens de variation et courbe représentative de la fonction exponentielle.
+- Transformer une expression en utilisant les propriétés algébriques de la fonction exponentielle.
+- Pour une valeur numérique strictement positive de $k$, représenter graphiquement les fonctions $t\longmapsto \e^{kx}$
+- Modéliser une situation par une croissance, une décroissance  exponentielle (par exemple évolution d’un capital à taux fixe, décroissance radioactive).
+:::

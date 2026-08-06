@@ -1,0 +1,93 @@
+---
+title: "Généralités sur les équations différentielles"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Vocabualaire, notion d'équations différentielles"
+order: 5
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+On appelle équation différentielle d'ordre $1$ une équation de la forme $$\phi'(t) = F(t, \phi(t))$$
+Où $F$ est une fonction à deux variables.
+
+Une solution $\phi$ de cette équation est une fonction dérivable et de dérivée continue vérifiant $$\forall t \in I, \, \phi'(t) = F(t, \phi(t))$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Une équation différentielle est une égalité entre fonctions faisant intervenir une fonction et/ou certaines de ses dérivées sur un intervalle $I$. 
+
+Dans une telle équation, l’inconnue est une fonction en général notée $y$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Dans chacun des cas suivants, déterminer la fonction $F$ et vérifier que la fonction $\phi$ est solution.
+
+1. $y'-\dfrac{2}{t} y = t^2$ et $\varphi(t)=t^3+ K t^2$, $K \in \mathbb{R}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+C'est une équation différentielle du premier ordre. 
+La variable est $t$ et la fonction est $y$. 
+On a $F(t,y) = \dfrac{2}{t}y +t^2$. 
+
+Vérification : $\varphi'(t) - \dfrac{2}{t} \varphi(t) = 3t^2+2Kt - \dfrac{2}{t}(t^3+Kt^2) = 3t^2 +2Kt -2t^2-2Kt = t^2$.
+</details>
+
+2. $y'=1-y^2$ et $\varphi(t)= \dfrac{K \e^{2t} - 1}{K \e^{2t} + 1}$, $K \in \mathbb{R}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+C'est une équation différentielle du premier ordre.
+On a $F(t,y) = 1-y^2$.
+
+De plus  
+* Calcul de la dérivée : $$\varphi'(t) = \dfrac{4K\e^{2t}}{(K \e^{2t} + 1)^2}$$
+* Calcul du second membre : $$1-\varphi(t)^2 = \dfrac{(K \e^{2t} + 1)^2 - (K \e^{2t} - 1)^2}{(K \e^{2t} + 1)^2} = \dfrac{4K\e^{2t}}{(K \e^{2t} + 1)^2}$$
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Dans les deux cas, $K$ est déterminé par les conditions initiales.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère l'équation différentielle $y''+y'-2y=f$, où $f:x \longmapsto \dfrac{(3x-1) \e^x}{x^2}$.
+
+Montrer que la fonction $g$ définie sur $\mathbb{R}_+^*$ par $g:x \longmapsto (\ln x) \e^x$ est une solution.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$g$ est le produit de fonctions dérivables sur $\mathbb{R}_+^*$ donc elle y est dérivable.
+Pour tout $x \in \mathbb{R}_+^*$, $$g'(x) = \dfrac{\e^x}{x} + (\ln x)\e^x = \dfrac{\e^x}{x} + g(x)$$
+De même $g'$ est dérivable sur $\mathbb{R}_+^*$, et pour tout $x \in \mathbb{R}_+^*$, 
+$$g''(x)= -\dfrac{\e^x}{x^2} + \dfrac{\e^x}{x} + g'(x)= -\dfrac{\e^x}{x^2} + \dfrac{\e^x}{x} + \dfrac{\e^x}{x} + g(x)$$
+Ainsi, pour tout $x \in \mathbb{R}_+^*$, 
+$$g''(x)+g'(x)-2g(x) = -\dfrac{\e^x}{x^2} + \dfrac{\e^x}{x} + \dfrac{\e^x}{x} + g(x) + \dfrac{\e^x}{x} + g(x) - 2 g(x) 
+= -\dfrac{\e^x}{x^2} + \dfrac{3\e^x}{x} = \dfrac{(3x-1) \e^x}{x^2}$$
+Ainsi $g$ est bien une solution.
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+L'écriture est abusive, car $y''+y'-2y$ est une fonction alors que $\dfrac{(3x-1) \e^x}{x^2}$ est un nombre.
+:::
+
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="Intro_ED.html">⬅️</a>
+  <a class="next" href="EquaDiff.html">➡️</a>
+</div>

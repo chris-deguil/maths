@@ -1,0 +1,124 @@
+---
+title: "Notion de limite"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Conjecturer graphiquement la limite d'une suite - Déterminer la limite dans des cas simples"
+order: 5
+---
+
+
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition :</span>  
+On dit qu'une suite numérique $(u_n)$ admet une limite réelle $l$ si tous les termes de la suite $(u_n)$ sont aussi proches que l'on veut de $l$ à partir d'un certain rang.
+
+On dit alors que la suite $(u_n)$ converge vers $l$.
+:::
+
+## Interprétation graphique
+
+<div style="text-align: center;">
+![](../../image/maths/Suite_numerique_suite_convergence.png){width=55%}
+</div>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+Soit $u_n$ la suite définie par $u_n = \dfrac{4n+1}{n+2}$ pour tout $n \in \mathbb{N}$.  
+On détermine quelques valeurs de $u_n$ :
+
+| $n$     | 0   | 1     | 2     | …   | 12  | 13     | …   | 68  | 69       |
+|---------|-----|-------|-------|-----|-----|--------|-----|-----|----------|
+| $u_n$   | 0.5 | 1.66… | 2.25  | …   | 3.5 | 3.5625 | …   | 3.9 | 3.901…  |
+
+La suite $(u_n)$ semble converger vers 4 (résultat admis).
+
+- L'intervalle ouvert $]3{,}5 \,; \,4{,}5[$ contient 4.  
+  De plus, il semble contenir tous les termes de la suite $(u_n)$ à partir d'un rang donné.  
+  Ici, pour tout entier $n \geqslant 13$, on a : $3{,}5 < u_n < 4{,}5$.
+
+- De même, l'intervalle ouvert $]3{,}9 \,; \,4{,}1[$ contient 4, et il contient tous les termes de la suite à partir d'un certain rang.  
+  $$u_n \in ] 3{,}9 \,; \,4{,}1 [.$$
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+Déterminer le rang à partir duquel tous les termes de la suite sont dans $]3{,}9\,;\,4{,}1[$ pour la suite ci-dessus.
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+
+Déterminons $p$ tel que pour tout $n \geqslant p$, $3{,}9 < u_n < 4{,}1$.  
+Pour tout $n \in \mathbb{N}$,  
+
+$$
+\begin{aligned}
+3,9 \leqslant u_n \leqslant 4,1 
+&\Longleftrightarrow 3,9 \leqslant \dfrac{4n+1}{n+2} \leqslant 4,1 \\
+&\underset{n+2 >0}{\Longleftrightarrow } 3,9(n+2)  \leqslant 4n+1 \leqslant 4,1(n+2)  \\
+&\Longleftrightarrow -0,1n \leqslant -6,8 \;\; \text{et} \;\; -0,1n \leqslant 7,2 \\
+&\underset{-0,1<0}{\Longleftrightarrow} n\geqslant 68 \;\; \text{et} \;\; n \geqslant -72.
+\end{aligned}
+$$
+
+On déduit que l'affirmation est vraie à partir du rang $68$.  
+On peut montrer que pour tout $\epsilon$ suffisamment petit, on trouve un rang $p$, tel que pour tout $n \geqslant p$,  
+$$u_n \in ]4-\epsilon \,;\, 4+ \epsilon[.$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+On considère la suite $(u_n)$ définie par $u_n= 1 -\tfrac{1}{3n^2}$.  
+
+L'utilisation de la calculatrice permet de conjecturer que la suite converge vers 1.  
+
+Montrons alors que pour tout $k \in \mathbb{N}$, il existe un $n$ vérifiant $1-u_n < 10^{-k}$.
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+
+Pour tout entier $n$, $1-u_n = \frac{1}{3n^2}$.\\
+Pour tout entier $k$, 
+$$
+\frac{1}{3n^2} <10^{-k} 
+\Longleftrightarrow 3n^2 > 10^k 
+\Longleftrightarrow n^2> \frac{10^k}{3} 
+\Longleftrightarrow n>\sqrt{\frac{10^k}{3}}.
+$$
+Il suffit de prendre le premier entier strictement supérieur à $\sqrt{\frac{10^k}{3}}$.\\
+On a ainsi montré ce qui était demandé, et donc on peut conclure que la suite $(u_n)$ converge vers $1$.
+
+</details>
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition :</span>  
+On dit qu'une suite numérique est divergente lorsqu'elle ne converge pas.
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+Montrons que la suite $u_n = n^2$ diverge.  
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour cela, il suffit de montrer que pour tout $A \in \mathbb{R}^+$, il existe un $n$ vérifiant $u_n> A$.  
+
+$$n^2 > A \Longleftrightarrow n >  \sqrt{A}$$  
+
+Il suffit de prendre le premier entier directement supérieur à $\sqrt{A}$.  
+On déduit alors que la suite $(u_n)$ ne converge pas : elle diverge vers $+\infty$.
+</details>
+
+:::
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="variations.html">⬅️</a>
+  <a class="next" href="algorithme.html">➡️</a>
+</div>

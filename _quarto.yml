@@ -1,0 +1,83 @@
+project:
+  type: website
+  resources:
+    - assets/**
+
+website:
+  title: "Site pédagogique"
+  site-url: https://chris-deguil.github.io/maths/
+  repo-url: https://github.com/chris-deguil/maths
+  page-footer:
+    left: "© 2026 — Cours de Mathématiques"
+    right: |
+      <a href="/">Accueil</a> ·
+      <a href="/index.qmd">Plan du site</a> ·
+      <a href="mailto:christophe.Deguil@ac-versailles.fr">Contact</a>
+  navbar:
+    left:
+      - text: "Accueil"
+        href: index.qmd
+      - text: "Seconde"
+        href: seconde-maths/index.qmd
+      - text: "Première"
+        href: premiere-maths/index.qmd
+      - text: "Terminale"
+        href: terminale-maths/index.qmd
+
+  sidebar:
+    - title: "Seconde"
+      logo: image/logo/logo_maths2.png
+      style: docked
+      collapse-level: 1
+      contents:
+        - seconde-maths/index.qmd
+        # Ajoute ici chaque chapitre au fur et à mesure, via nouveau_chapitre.sh
+        # - section: "Nom du chapitre"
+        #   contents:
+        #     - seconde-maths/xxx/index.qmd
+        #     - seconde-maths/xxx/notion1.qmd
+
+    - title: "Première"
+      logo: image/logo/logo_maths2.png
+      style: docked
+      collapse-level: 1
+      contents:
+        - premiere-maths/index.qmd
+        # - section: "Nom du chapitre"
+        #   contents:
+        #     - premiere-maths/xxx/index.qmd
+
+    - title: "Terminale"
+      logo: image/logo/logo_maths2.png
+      style: docked
+      collapse-level: 1
+      contents:
+        - terminale-maths/index.qmd
+        # - section: "Nom du chapitre"
+        #   contents:
+        #     - terminale-maths/xxx/index.qmd
+
+format:
+  html:
+    include-in-header:
+      - assets/set-html-class.html
+      - assets/mathjax-macros.html
+    filters:
+      - assets/exercise-counter.lua
+      - assets/auto-nav.lua
+    theme:
+      light: [cosmo, assets/css/general.scss]
+      dark:  [darkly, assets/css/general.scss]
+
+    grid:
+      body-width: 1400px
+      margin-width: 18rem
+      sidebar-width: 16rem
+      gutter-width: 1.5rem
+    toc: true
+    smooth-scroll: true
+    mermaid:
+      theme: forest
+
+execute:
+  freeze: auto

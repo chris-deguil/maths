@@ -1,0 +1,82 @@
+---
+title: "Raisonnement par l'absurde"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Raisonnement par l'absurde"
+order: 6
+---
+
+
+----
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Raisonnement par l'absurde </span>
+
+On considère deux propositions $A$ et $B$. On veut démontrer que si $A$ est vraie alors $B$ l'est aussi, c'est-à-dire que $(A \Longrightarrow B)$ est vraie.
+
+Le raisonnement par l'absurde consiste alors à supposer que $A$ est vraie (ce sont nos hypothèses) et que $B$ est fausse. On aboutit alors à une contradiction, ce qui entraîne que $B$ doit nécessairement être vraie (d'après la table de vérité de l'implication).
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+En effet, si « $A$ et non $B$ » est une proposition fausse, alors sa négation « non $A$ ou $B$ » est vraie, ce qui est la définition même de $A \Longrightarrow B$.
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Non-décimalité de 1/3 </span></div>
+
+Démontrons que $\frac{1}{3}$ n'est pas un décimal.
+
+On suppose par l'absurde que $\frac{1}{3}$ est un décimal. Par définition, il existe $a \in \Z$ et $n \in \N$ tels que :
+$$\frac{1}{3} = \frac{a}{10^n}$$
+Donc $3a = 10^n$. En particulier, $3$ est alors un diviseur de $10^n$, donc de $10$ (puisque si un nombre premier divise une puissance, il divise la base).  
+Or $3$ ne divise pas $10$, contradiction.  
+Ainsi l'hypothèse « $\frac{1}{3}$ est un décimal » est fausse, donc $\frac{1}{3}$ n'est pas un décimal.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Tangente et rayon </span></div>
+
+Démontrons que, étant donné un cercle $\mathscr{C}$ de centre $O$ et $d$ une tangente en un point $A$ du cercle, alors $d \perp (OA)$.
+
+$(d)$ étant la tangente au cercle, elle admet donc $A$ comme unique point d'intersection avec ce dernier. Supposons par l'absurde que cette droite ne soit pas perpendiculaire à $(OA)$.
+
+On note $H$ le projeté orthogonal de $O$ sur $(d)$. Par hypothèse, les points $H$ et $A$ sont distincts.
+
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap0_Logique_logique_tangente_cercle.png" style="width: 49%;">
+</div>
+
+Soit $B$ le symétrique de $A$ par rapport à $H$, on a alors $OA = OB$ (propriété de la médiatrice), autrement dit $B$ est un point du cercle. Le point $B$ appartient également à $(d)$ (puisque $(OH) \perp (d)$).  
+Ainsi $(d)$ a deux points d'intersection distincts avec le cercle, ce qui est absurde puisqu'on a, comme hypothèse de départ, un seul point d'intersection.  
+L'hypothèse supplémentaire que l'on a émise est fausse. Donc $(d)$ est perpendiculaire au rayon $(OA)$.
+:::
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Unicité de l'écriture $a+b\sqrt{2}$ </span></div>
+
+Démontrons que pour tout $x \in \mathbb{Q}[\sqrt{2}]$, il existe un unique couple $(a,b) \in \mathbb{Q}^2$ tel que $x = a + b\sqrt{2}$.
+
+Supposons par l'absurde qu'il existe deux couples $(a,b)$ et $(a',b')$ distincts de rationnels tels que :
+$$a + b\sqrt{2} = a' + b'\sqrt{2}$$
+Alors $a - a' = (b' - b)\sqrt{2}$.
+
+* Si $b' - b \neq 0$, alors $\sqrt{2} = \frac{a - a'}{b' - b}$.
+    Or $a, a', b, b'$ sont des rationnels, donc $\frac{a - a'}{b' - b}$ est un rationnel.
+    On aboutit à une contradiction car $\sqrt{2} \notin \mathbb{Q}$.
+* Si $b' - b = 0$, alors $b = b'$. L'égalité de départ devient alors $a = a'$.
+    Le couple $(a,b)$ est donc identique au couple $(a',b')$, ce qui contredit l'hypothèse de départ.
+
+Ainsi, le couple $(a,b)$ est unique.
+:::
+
+<iframe src="https://www.yout-ube.com/watch?v=-R58StXNi0c" title=" cassou math prepar raisonnement" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+<div class="nav-pages">
+  <a class="prev" href="disjonctions.html">⬅️</a>
+  <a class="next" href="AnalyseSynthese.html">➡️</a>
+</div>

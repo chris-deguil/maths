@@ -1,0 +1,36 @@
+---
+title: "Chapitre 0 : Logique et raisonnements"
+description: "Quantificateur - différents types de raisonnement"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+-  reconnaître ce qu’est une proposition mathématique, à utiliser des variables pour
+écrire des propositions mathématiques ;
+-  lire et écrire des propositions contenant les connecteurs « et », « ou » ;
+-  formuler la négation de propositions simples, pouvant contenir un ou deux
+quantificateurs ;
+-  mobiliser un contre-exemple pour montrer qu'une proposition est fausse ;
+-  formuler une implication, une équivalence logique, et à les mobiliser dans un
+raisonnement simple ;
+-  formuler la réciproque d’une implication, ou sa contraposée ;
+-  lire et écrire des propositions contenant une quantification universelle ou existentielle
+(les symboles ∀ et ∃ ne sont pas exigibles) ;
+-  raisonner par disjonctions des cas, par l’absurde, par contraposée ;
+-  raisonner par équivalence, utiliser une propriété caractéristique ;
+-  distinguer condition nécessaire et condition suffisante ;
+:::

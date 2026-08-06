@@ -1,0 +1,27 @@
+---
+title: "Chapitre 2 : Gnéralités sur les fonctions"
+description: "parité - composée de deux fonctions - convexité"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+- Établir la convergence d’une suite, ou sa divergence vers + ∞ ou – ∞.
+- Raisonner par récurrence pour établir une propriété d’une suite.
+- Étudier des phénomènes d’évolution modélisables par une suite.
+- Démontrer une propriété par récurrence.
+:::
+

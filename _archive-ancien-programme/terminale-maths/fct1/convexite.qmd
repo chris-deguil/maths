@@ -1,0 +1,128 @@
+---
+title: "Notion de convexité"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "fonction convexe, fonction concave - Courbe et position des cordes"
+order: 4
+---
+
+----
+
+
+
+## Définition
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Soit $f$ une fonction définie sur un intervalle $I$ de $\mathbb{R}$.  
+On dit que $f$ est **convexe** sur $I$ lorsque : 
+$$\forall x_1, x_2 \in I, \, \forall \lambda \in [0 \, ; \, 1], \, f(\lambda x_1 + (1-\lambda) x_2) \leqslant \lambda f(x_1) + (1- \lambda) f(x_2)$$ 
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Puisque $\lambda \in [0\, ; \, 1]$, alors pour tout $x_1,x_2 \in I$, $x=\lambda x_1 + (1-\lambda)x_2 \in I$.  
+Cela correspond à choisir un point $M(x)$ sur un segment $[M_1M_2]$ où $M_1(x_1)$ et $M_2(x_2)$.
+:::
+
+Cette définition est un peu abstraite, on peut lui donner un sens graphique simple. Commençons par donner un sens à $\forall x_1, x_2 \in I, \, \forall \lambda \in [0 \, ; \, 1]$ :
+
+* $\lambda x_1 + (1-\lambda)x_2$ signifie prendre un point de l'intervalle $I$.
+* $\lambda f(x_1) + (1- \lambda) f(x_2)$ signifie prendre un point de l'intervalle $[f(x_1) \, ;\, f(x_2)]$.  
+Il s'agit du point de la droite $(M_1M_2)$ dont l'abscisse est $x=\lambda x_1 + (1-\lambda)x_2$.
+
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap2_GeneralitesFonctions_convexite_carre.png" style="width: 49%;" margin-right="5%">
+</div>
+
+
+
+Ainsi, la fonction $f$ est convexe si et seulement si, pour tout couple $(M_1 \, ; \, M_2)$ de points de la représentation graphique de $f$, tout point $M$ de $\mathscr{C}_f$ d'abscisse comprise entre ceux de $M_1$ et $M_2$, est en dessous du segment $[M_1M_2]$.
+:::
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Montrons que la fonction carré est convexe sur $\mathbb{R}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout $x,y\in\mathbb{R}$ et $t\in[0,1]$ :
+$$
+\begin{aligned}
+t\,x^2+(1-t)\,y^2 - \left(tx+(1-t)y\right)^2 
+&= t\,x^2+(1-t)\,y^2 - \big(t^2 x^2 + 2t(1-t)xy + (1-t)^2 y^2\big)\\
+&= \big(t-t^2\big)x^2 + \big((1-t)-(1-t)^2\big)y^2 - 2t(1-t)xy\\
+&= t(1-t)\,x^2 + t(1-t)\,y^2 - 2t(1-t)xy\\
+&= t(1-t)\,\left(x^2 - 2xy + y^2\right)\\
+&= t(1-t)\,\left(x-y\right)^2 \;\ge\; 0.
+\end{aligned}
+$$
+Ainsi,
+$$\left(tx+(1-t)y\right)^2 \le t\,x^2+(1-t)\,y^2,$$
+c'est-à-dire
+$$f\left(tx+(1-t)y\right) \le t\,f(x) + (1-t)\,f(y).$$
+</details>
+:::
+
+On peut retenir, comme définition, que :
+
+::: {.rem}
+Une fonction $f$ est convexe si et seulement si la représentation de la fonction $f$ est en dessous de chacune de ses cordes.
+:::
+
+
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+On dit qu'une fonction $f$ est **concave** sur un intervalle $I$ de $\mathbb{R}$ lorsque $-f$ est convexe sur cet intervalle $I$.
+:::
+
+
+
+::: {.rem}
+Ainsi :
+
+
+Une fonction $f$ est concave si et seulement si la courbe est au-dessus de chacune de ses cordes.
+:::
+
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+On considère la fonction $f$ dont on donne la représentation graphique ci-dessous sur $[-2 \, ; \, 3,5]$.<br>
+Le point d'abscisse $1$ joue un rôle particulier : il y a un changement de convexité (tout comme un extremum local où l'on observe un changement de variation de la fonction.)
+
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap2_GeneralitesFonctions_convexite_fig_exemple.png" style="width: 25%;" margin-right="5%">
+</div>
+
+
+
+On peut déterminer graphiquement que la fonction $f$ est concave sur $[-2 \, ; 1]$ et convexe sur $[1 \, ; \, 3,5]$.
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+Soient $f$ une fonction définie sur un intervalle $I$ et $\mathscr{C}_f$ sa représentation graphique. On appelle **point d'inflexion** de $\mathscr{C}_f$ tout point de $\mathscr{C}_f$ où $f$ change de convexité.
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+Dans l'exemple précédent, le point d'abscisse $1$ est un point d'inflexion de la représentation graphique de la fonction.
+
+:::
+
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="comp_derivation.html">⬅️</a>
+  <a class="next" href="convexite_derivee.html">➡️</a>
+</div>

@@ -1,0 +1,39 @@
+---
+title: "Histoire de la logique"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Bref historique sur la logique mathématiques "
+order: 1
+---
+
+::: {.bloc .rem}
+La logique mathématique, en tant que domaine d'étude formel des principes de la déduction mathématique, remonte à l'Antiquité grecque avec des penseurs comme Aristote (384-322 av. J.-C.), qui développe le syllogisme et pose les bases du raisonnement déductif. Dans ses *Premiers Analytiques*, il établit les règles de l'inférence logique et introduit la notion de démonstration rigoureuse, distinguant les prémisses des conclusions et formalisant les structures argumentatives.  
+Euclide, dans ses *Éléments* (vers -300 av. J.-C.), illustre parfaitement cette approche en structurant la géométrie selon un système axiomatique rigoureux : à partir de définitions, d'axiomes (ou postulats) et de notions communes, il démontre par déduction logique un ensemble de propositions géométriques. Cette méthode axiomatico-déductive devient le modèle de la démonstration mathématique pour les siècles suivants.  
+:::
+
+::: {.bloc .rem}
+Au Moyen Âge, les mathématiciens arabes comme Al-Kindi (vers 800-873) et Al-Khwarizmi (vers 780-850) enrichissent l'arsenal des techniques démonstrative, notamment en algèbre. Parallèlement, les scolastiques européens, influencés par la redécouverte d'Aristote, développent la logique formelle et les techniques de *disputatio* (question problématique : arguments pour et arguments contre) qui affinent l'art de la démonstration.  
+:::
+
+::: {.bloc .rem}
+La Renaissance et l'époque classique voient naître de nouvelles méthodes de raisonnement. René Descartes (1596-1650), dans son *Discours de la méthode* (1637), prône l'analyse et la synthèse comme outils fondamentaux de la découverte mathématique. Il développe également la méthode du doute méthodique, qui influence profondément l'approche de la démonstration par l'absurde. Cette dernière, bien que présente chez Euclide, trouve avec Descartes et ses successeurs une formulation plus systématique : on suppose la négation de ce que l'on veut démontrer et on en déduit une contradiction logique.  
+Pierre de Fermat (1601-1665) popularise quant à lui la méthode de la *descente infinie*, technique particulièrement efficace en théorie des nombres. Cette approche consiste à montrer que l'existence d'une solution à un problème donné implique l'existence d'une solution "plus petite", ce qui conduit à une régression infinie impossible.  
+:::
+
+::: {.bloc .rem}
+La logique mathématique prend véritablement naissance avec George Boole (1815-1864) au milieu du XIXe siècle, qui dans son *Investigation of the Laws of Thought* (1854) développe une algèbre de la logique, établissant un pont entre les opérations logiques et les opérations algébriques. Gottlob Frege (1848-1925) révolutionne ensuite le domaine avec son *Begriffsschrift* (1879), où il introduit le calcul des prédicats et formalise rigoureusement les notions de quantificateur et de variable liée.  
+Cette formalisation culmine dans les travaux de Bertrand Russell (1872-1970) et Alfred North Whitehead (1861-1947), qui œuvrent sur les fondements de la logique mathématique dans leur ouvrage monumental *Principia Mathematica*, publié entre 1910 et 1913. Leur ambition est de réduire l'ensemble des mathématiques à la logique formelle, projet qui, bien qu'inachevé, transforme radicalement la compréhension des fondements mathématiques.  
+C'est à cette époque qu'apparaît la théorie des ensembles sous l'impulsion de Georg Cantor (1845-1918) et Richard Dedekind (1831-1916), ce dernier proposant une construction rigoureuse de la droite des réels par la méthode des coupures. David Hilbert (1862-1943) contribue également à cette révolution fondationnelle avec son programme de formalisation complète des mathématiques, exposé dans ses *Grundlagen der Geometrie* (1899) et lors de son célèbre congrès de Paris en 1900.  
+:::
+
+::: {.bloc .rem}
+L'ensemble de ces développements permet de fonder rigoureusement les mathématiques et établit définitivement le rôle central de la logique formelle dans la pratique mathématique. Les différentes formes de raisonnement — déduction directe, démonstration par l'absurde, raisonnement par contraposition, ou encore raisonnement par disjonction de cas — trouvent alors leur formalisation logique précise et leur justification théorique.
+:::
+
+
+
+<div class="nav-pages">
+  <a class="next" href="proposition.html">➡️</a>
+</div>

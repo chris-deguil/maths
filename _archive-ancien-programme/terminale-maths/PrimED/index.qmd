@@ -1,0 +1,30 @@
+---
+title: "Chapitre 9 : Equations différentielles et Primitives"
+description: "Primitives d'une fonction continue, Equations différentielles du 1ère ordre"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+- Équation différentielle y ′=f. Notion de primitive d’une fonction continue sur un intervalle.
+- Deux primitives d’une même fonction continue sur un intervalle diffèrent d’une constante.
+- Deux primitives d’une même fonction continue sur un intervalle diffèrent d’une constante.
+- Primitives des fonctions de référence : $x \longmapst x^n$ pour $n \in \Z$, $x \longmapst \frac{1}{\sqrt{x}}$, exponentielle, sinus, cosinus.
+- Équation différentielle $y'=ay$$, où a est un nombre réel ; allure des courbes. Équation différentielle $y'=ay+b$$
+- Calculer une primitive en utilisant les primitives de référence et les fonctions de la forme $(v \circ u) \times u'$
+- Pour une équation différentielle $y'ay+b, \,  (a \neq 0)$ : déterminer une solution particulière constante ; utiliser cette solution pour déterminer toutes les solutions
+- Pour une équation différentielle $y'=ay+f$ : à partir de la donnée d’une solution particulière, déterminer toutes les solutions. 
+:::

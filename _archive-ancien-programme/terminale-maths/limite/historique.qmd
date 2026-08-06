@@ -1,0 +1,61 @@
+---
+title: "Historique de la notion de limite"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "nEvolution de la notion de limite"
+order: 1
+---
+
+
+
+
+------
+
+::: {.bloc .rem}
+La Préhistoire de la Limite : La Méthode d'Exhaustion (Antiquité)
+
+L'idée d'une approche progressive remonte à l'Antiquité grecque. \textbf{Eudoxe de Cnide} et \textbf{Archimède} (III\textsuperscript{e} siècle av. J.-C.) utilisent la \textbf{Méthode d'Exhaustion} pour calculer des aires et des volumes. 
+Cette technique consiste à encadrer une figure par une suite de figures polygonales dont les aires \og se rapprochent \fg{} de l'aire réelle, préfigurant intuitivement le concept de \textbf{convergence}.
+:::
+
+
+::: {.bloc .rem}
+L'Ère du Calcul Infinitésimal (XVII\textsuperscript{e} Siècle)
+
+Avec \textbf{Isaac Newton} (1643-1727) et \textbf{Gottfried Wilhelm Leibniz} (1646-1716), la limite est implicite. Ils manipulent des \textbf{quantités infinitésimales} (infiniment petites) pour établir les règles du calcul différentiel et intégral. La dérivée, par exemple, est le résultat d'un rapport de quantités tendant vers zéro. 
+La rigueur mathématique est absente, menant aux critiques de l'évêque \textbf{George Berkeley} qui dénonce les inconsistances logiques des infinitésimaux.
+:::
+
+::: {.bloc .rem}
+Les Premières Tentatives de Formalisation (XVIII\textsuperscript{e} Siècle)
+
+\textbf{Jean le Rond d'Alembert} (1717-1783) est un pionnier, suggérant vers 1754 que la \textbf{limite} devrait être le concept fondamental du calcul, la définissant comme la quantité dont une variable s'approche \og plus près qu'aucune quantité donnée \fg{}. 
+\textbf{Joseph-Louis Lagrange} (1736-1813) tente sans succès de fonder l'analyse uniquement sur les développements en série de Taylor, évitant ainsi la notion de limite.
+:::
+
+::: {.bloc .rem}
+L'Avènement de la Rigueur : La Définition $\boldsymbol{\epsilon-\delta}$ (XIX\textsuperscript{e} Siècle)
+
+- \textbf{Augustin Louis Cauchy} (1789-1857) donne, dans son \textit{Cours d'Analyse} (1821), la première définition claire de la limite en termes de \textbf{quantités variables} qui deviennent \textbf{arbitrairement petites}, sans utiliser encore la notation standard $\epsilon-\delta$.
+-\textbf{Karl Weierstrass} (1815-1897) (s'appuyant aussi sur les travaux de \textbf{Bernard Bolzano}), établit la définition rigoureuse moderne, connue sous le nom de définition $\boldsymbol{\epsilon-\delta}$ :
+    
+    \begin{quotation}
+        La limite de $f(x)$ quand $x$ tend vers $a$ est $L$ si, pour tout $\boldsymbol{\epsilon > 0}$, il existe un $\boldsymbol{\delta > 0}$ tel que :
+        $$ \text{si } 0 < |x - a| < \delta \text{, alors } |f(x) - L| < \epsilon $$
+    \end{quotation}
+
+    Cette formalisation ancre le calcul sur des bases logiques solides, résolvant les paradoxes anciens.
+:::
+
+::: {.bloc .rem}
+La Place dans l'Analyse Moderne (XX\textsuperscript{e} Siècle)
+
+Au XX\textsuperscript{e} siècle, le concept de limite est généralisé en \textbf{topologie} et en \textbf{analyse fonctionnelle}. Elle est étendue aux \textbf{espaces métriques} puis aux \textbf{espaces topologiques} en utilisant la notion de \textbf{voisinage}. La limite devient l'outil central de l'analyse, permettant de définir la continuité, la dérivation, l'intégration, et la convergence dans les structures mathématiques les plus abstraites.
+:::
+
+<div class="nav-pages">
+  <!--<a class="prev" href="application.html">⬅️</a>-->
+  <a class="next" href="limite_infini_infinie.html">➡️</a>
+</div>

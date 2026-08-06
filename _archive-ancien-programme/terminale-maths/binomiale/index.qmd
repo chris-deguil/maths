@@ -1,0 +1,37 @@
+---
+title: "Chapitre 5 : Loi binomiale"
+description: "Expériences indépendantes, Schéma de Bernoulli et Loi Binomiale"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+- Modèle de la succession d’épreuves indépendantes : la probabilité d’une issue
+$(x_1,\dots,x_n)$ est égale au produit des probabilités des composantes $x_i$. Représentation
+par un produit cartésien, par un arbre.
+- Épreuve de Bernoulli, loi de Bernoulli.
+- Schéma de Bernoulli : répétition de n épreuves de Bernoulli indépendantes.
+- Loi binomiale : loi du nombre de succès. Expression à l’aide des coefficients binomiaux
+- Calculer une probabilité en utilisant l’indépendance, des probabilités
+conditionnelles, la formule des probabilités totales.
+- Utiliser l’expression de la loi binomiale pour résoudre un problème de seuil, de
+comparaison, d’optimisation relatif à des probabilités de nombre de succès.
+- Dans le cadre d’une résolution de problème modélisé par une variable binomiale $X$,
+calculer numériquement une probabilité du type $P(X = k)$, $P(X ⩽ k)$, $P(k ⩽ X ⩽ k’ )$, en
+s’aidant au besoin d’un algorithme ; chercher un intervalle $I$ pour lequel la probabilité
+$P(X \in I)$ est inférieure à une valeur donnée $\alpha$, ou supérieure à $1 - \alpha$.
+:::
+

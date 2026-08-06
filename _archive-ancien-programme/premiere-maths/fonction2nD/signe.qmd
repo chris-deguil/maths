@@ -1,0 +1,304 @@
+---
+title: "Factorisation et signe d'une fonction du second degré"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Factoriser et Signe d'une expression du second degré - Inéquations"
+order: 4
+---
+
+
+## Factorisation du trinôme
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème :</span>  
+Soit $f$ une fonction polynôme de degré 2 définie sur $\R$ par $f(x) = ax^2 + bx + c$.
+
+1. Si $\Delta > 0$, alors $f(x) = a(x - x_1)(x - x_2)$, où $x_1$ et $x_2$ sont les racines de $f(x)=0$.  
+2. Si $\Delta = 0$, alors $f(x)= a (x - x_0)^2$, où $x_0$ est la racine double de $f(x)=0$.  
+3. Si $\Delta < 0$, alors $f(x)$ ne se factorise pas (en fonction polynôme du premier degré, c’est-à-dire en produit de deux fonctions affines).  
+
+Un polynôme que l’on ne peut pas factoriser est dit **irréductible**.
+:::
+
+<details class="bloc demo"><summary>Démonstration :</summary>  
+On considère la forme canonique $f(x)=a\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a}$.\\
+
+
+1. Si $\Delta >0$,
+$$ f(x)= a\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a} = a\left(\left(x- \frac{-b}{2a}\right)^2 - \frac{\Delta}{4a^2}\right) = a(x-x_1)(x-x_2)$$
+
+Donc $$f(x)=a(x-x_1)(x-x_2)$$
+
+2. Pour $\Delta=0$, $\beta=0$ donc pour tout réel $x$, $f(x)=a\left(x- \frac{-b}{2a}\right)^2$.
+3. Si $\Delta <0$, alors $\frac{\Delta}{4a^2}<0$.\\
+Ainsi $f(x)$ étant somme de deux quantités positives, il n'est pas factorisable.
+Donc $f(x)$ n'admet pas de forme factorisée.
+</details>
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+1. Factoriser $-3x^2+5x+4$.  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>  
+$\Delta=5^2-4 \times (-3) \times 4 = 73 >0$.  
+
+Ainsi le polynôme admet deux racines réelles distinctes :  
+$$x_1=\frac{-5-\sqrt{73}}{-6}, \quad x_2=\frac{-5+\sqrt{73}}{-6}$$  
+
+On déduit que pour tout réel $x$,  
+$$-3x^2+5x+4=-3(x-x_1)(x-x_2)$$  
+</details>  
+
+2. Factoriser $x^2+(\sqrt{3}-2\sqrt{2})x+2\sqrt{6}$.  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>  
+$\Delta=(\sqrt{3}-2\sqrt{2})^2-4 \times 1 \times 2\sqrt{6} = 3 -4\sqrt{6}+8 -8\sqrt{6} = -12\sqrt{6}+11 <0$.  
+
+Le discriminant étant négatif, le polynôme n’est pas factorisable.  
+</details>  
+
+3. Soit $P(x) = a^2(b-x) + b^2(x-a)+x^2(a-b)$. Factoriser $P(x)$.  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>  
+On remarque que $P(a)=a^2(b-a)+b^2(a-a)+a^2(a-b)=0$ et de même $P(b)=0$.  
+
+On a trouvé deux racines de $P$ distinctes, ce sont donc les deux racines de $P$.  
+
+En développant et réorganisant l’expression de $P$, on obtient :  
+$$P(x) = (a-b)x^2 + (b^2-a^2)x + ab(a-b)$$  
+
+Ainsi, le coefficient dominant étant $a-b$, on peut factoriser :  
+$$P(x)=(a-b)(x-a)(x-b)$$  
+</details>
+:::
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque :</span>  
+Dans $\R$, tout polynôme se factorise en produit de polynômes du second degré et du premier degré.
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+Soit $P(x)=2x^3-x-1$. Donner une forme factorisée de $P(x)$.  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>  
+$1$ est une racine évidente de $P$. En effet $P(1) = 2-1-1=0$.  
+
+Donc il existe trois réels $a,b,c$ tels que pour tout réel $x$,  
+$$P(x)=(x-1)(ax^2+bx+c)$$  
+
+Or pour tout réel $x$,  
+$$(x-1)(ax^2+bx+c) = ax^3+(b-a)x^2 + (c-b)x - c$$  
+
+Donc  
+$$2x^3-x-1= ax^3 + (b-a)x^2 + (c-b)x - c$$  
+
+Ces polynômes étant égaux, alors les coefficients des mêmes monômes sont deux à deux égaux :  
+$$\left\{\begin{array}{l} a=2\\ b-a=0\\ c-b = -1\\ -c=-1 \end{array}\right.$$  
+
+Ainsi $a=2, b=2$ et $c=-1$.  
+
+Donc  
+$$P(x)=(x-1)(2x^2+2x+1)$$  
+
+Or $2x^2+2x+1$ admet comme discriminant $\Delta = 2^2-4 \times 2 \times 1 = -4 <0$.  
+
+Donc ce trinôme du second degré n’est pas factorisable.  
+
+On déduit qu’une forme factorisée de $P$ est :  
+$$P(x)=(x-1)(2x^2+2x+1)$$  
+</details>
+:::
+
+
+## Signe d'un polynôme de degré 2
+
+Soit $P$ une fonction polynôme de degré 2, tel que $P(x) = ax^2 + bx + c$ et on suppose qu’il admet deux racines $x_1$ et $x_2$ distinctes.  
+On a alors, pour tout réel $x$,  
+$$P(x) = a (x - x_1)(x - x_2)$$
+
+En considérant $a>0$ et $x_1 < x_2$, on a donc le tableau de signes suivant :  
+
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_tableau_signe1.png){width=50%}
+</div>
+
+On obtient le tableau de signes de $P(x)$ suivant le signe de $a$.  
+<div style="text-align: center;">
+<img src="../../image/maths/Second_degre_tableau_signe2.png" style="width:40%; margin-right:3%;" />
+<img src="../../image/maths/Second_degre_tableau_signe3.png" style="width:40%;" />
+</div>
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème :</span>  
+
+Soit $f$ une fonction polynôme de degré $2$ dont $a$ est le coefficient dominant et $\Delta$ son discriminant.
+
+- Si $\Delta > 0$ :  
+  $f$ est du signe de son coefficient dominant sauf entre les racines où il est du signe contraire.  
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_tableau_signe4.png){width=50%}
+</div>
+
+- Si $\Delta = 0$ :  
+  $f$ est du signe de son coefficient dominant :  
+
+<div style="text-align: center;">
+<img src="../../image/maths/Second_degre_tableau_signe5.png" style="width:40%; margin-right:5%;" />
+</div>
+
+- Si $\Delta < 0$ :  
+  $f$ est du signe de son coefficient dominant :  
+
+
+<div style="text-align: center;">
+<img src="../../image/maths/Second_degre_tableau_signe6.png" style="width:20%;" />
+</div>
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Soit $P$ un polynôme du second degré et $\Delta$ son discriminant.
+
+- Si $\Delta < 0$, alors $P$ n’a pas de racines et ne change donc pas de signe : $P(x)$ est soit strictement positif, soit strictement négatif pour tout $x \in \mathbb{R}$. Pour voir qu’il s’agit bien du signe de $a$, repartons de la forme canonique de $P$ :  
+$$P(x) = a(x-\alpha)^2 + \beta.$$
+
+  - Supposons $a>0$ et regardons pour quels $x \in \mathbb{R}$ l’inégalité $P(x)>0$ est vraie. En réutilisant les calculs de la démonstration du théorème sur les racines d’un polynôme, on déduit que  
+  $$P(x) > 0 \Longleftrightarrow a(x-\alpha)^2 > -\beta \Longleftrightarrow 4a^2(x-\alpha)^2 > \Delta.$$  
+  Cette dernière inégalité est vraie pour tout $x \in \mathbb{R}$ puisque $\Delta < 0$ et $4a^2(x-\alpha)^2 \ge 0$. Donc $P(x) > 0$ pour tout $x \in \mathbb{R}$, autrement dit $P$ est du signe de $a$.  
+
+  - Le cas $a<0$ se traite de façon identique en considérant $P(x)<0$.
+
+- Si $\Delta = 0$, alors $P(x) = a(x-x_0)^2$. Comme $(x-x_0)^2 \ge 0$ pour tout $x \in \mathbb{R}$, on en déduit que $P(x)$ est du signe de $a$ pour tout $x \in \mathbb{R} \setminus \{x_0\}$ et s’annule en $x_0$.
+
+- Si $\Delta > 0$, alors $P(x) = a(x-x_1)(x-x_2)$, et l’étude est faite ci-dessus.
+
+</details>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+Soit $f$ définie par $f(x) = 3x^2 + 2x - 1$, une fonction polynôme du second degré.  
+$$\Delta = 2^2 - 4 \times 3 \times (-1) = 4 + 12 = 16$$  
+Donc $\Delta > 0$. Ainsi $f(x)$ admet deux racines réelles distinctes.  
+$$x_1 = \frac{-2 + 4}{6} = \frac{1}{3} \quad \text{et} \quad x_2 = \frac{-2 - 4}{6} = -1$$  
+Puisque $3 > 0$, on déduit que $f(x)$ est positive à l'extérieur des racines et négative à l'intérieur.
+
+- $f(x) > 0$ si et seulement si $x \in \left]- \infty\, ; \, -1 \right[ \cup \left] \frac{1}{3}\, ; \, +\infty \right[$  
+- $f(x)<0$ si et seulement si $x \in \left]-1\, ; \, \frac{1}{3} \right[$  
+- $f(x)= 0$ si et seulement si $x \in \left\{-1 \, ; \, \frac{1}{3} \right\}$
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+Soit $A(x) = \frac{3x^2 - 7x + 4}{x^2 - 3}$ une expression rationnelle. Déterminons le signe de $A(x)$.  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+
+On pose pour tout réel $x$,  
+$$N(x) = 3x^2 - 7x + 4$$  
+Il admet pour discriminant  
+$$\Delta = (-7)^2 - 4 \times 3 \times 4 = 49 - 48 = 1$$  
+Donc $N(x)$ admet deux racines réelles distinctes :  
+$$x_1 = \frac{7 + 1 }{6} = \frac{4}{3}, \quad x_2=\frac{7-1}{6} = 1$$  
+$$A(x) = \frac{3(x - x_1)(x - x_2)}{(x - \sqrt{3})(x + \sqrt{3})}$$  
+
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_tableau_signe7.png){width=40%}
+</div>  
+
+- $A(x) > 0$ pour tout $x \in \left]- \infty~;~ -\sqrt{3} \right[ \cup \left]1~;~\frac{4}{3}\right[ \cup \left]\sqrt{3}~;~ + \infty \right[$  
+- $A(x) < 0$ pour $x \in \left]-\sqrt{3}\,;\,1 \right[ \cup \left]\frac{4}{3}\,;\, \sqrt{3} \right[$  
+- $A(x)= 0$ pour $x \in \left\{1\,;\, \frac{4}{3}\right\}$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+On considère les fonctions $f$ et $g$ définies par  
+$$f(x)=\frac{4-2x}{x+1}, \quad g(x)=\frac{1}{2}x-2$$
+
+1. Montrer que pour tout réel $x \neq -1$,  
+$$f(x)-g(x)= \frac{-x^2-x+12}{2x+2}$$
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+Pour tout réel $x \neq -1$ :  
+$$f(x)-g(x)= \frac{4-2x}{x+1}- \frac{1}{2}x+2 = \frac{8-4x - (x-4)(x+1)}{2(x+1)} = \frac{8-4x-x^2-x+4x+4}{2x+2} = \frac{-x^2-x+12}{2x+2}$$
+</details>
+
+2. Établir le tableau de signes de $f(x)-g(x)$.  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+
+Soit $-x^2-x+12$.  
+$\Delta=(-1)^2-4 \times (-1) \times (12) = 49 >0$.  
+Donc le polynôme admet deux racines réelles distinctes :  
+$$x_1=\frac{-(-1)+ \sqrt{49}}{2 \times (-1)} = -4 \quad \text{et} \quad x_2 = 3$$  
+
+Le polynôme est du signe de son coefficient dominant $-1 < 0$ à l'extérieur des racines et du signe contraire à l'intérieur.  
+
+On déduit le tableau de signes suivant :  
+
+<div style="text-align: center;">
+![](../../image/maths/Second_degre_tableau_signe8.png){width=40%}
+</div> 
+
+</details>
+
+3. En déduire la position relative de $\mathscr{C}_f$ et $\mathscr{C}_g$.  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+D'après le tableau de signes précédent on déduit que :
+
+- $f(x) > g(x)$ pour $x \in ]- \infty\,;\, -4[ \cup ]-1 \, ; \, 3[$.  
+Donc $\mathscr{C}_f$ est au-dessus de $\mathscr{C}_g$ sur ces deux intervalles.  
+- $f(x) < g(x)$ pour $x \in ]-4 \, ; \, -1[ \cup ]3 \, ; \, + \infty[$.  
+Donc $\mathscr{C}_f$ est en dessous de $\mathscr{C}_g$ sur ces deux intervalles.  
+- $f(x)= g(x)$ pour $x \in \{-4\, ; \, 3\}$, donc les représentations graphiques des fonctions $f$ et $g$ se coupent en $x=-4$ et $x=3$.
+</details>
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple :</span>  
+
+Une équation avec paramètre. Soient $m \in \mathbb{R}$ et  
+$$h_m(x)=mx^2+4x-5$$
+
+1. Exprimer $\Delta_m$ en fonction de $m$.  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+$$\Delta_m = 4^2 - 4 \cdot m \cdot (-5) = 16 + 20m$$
+</details>
+
+2. Quelle condition sur $\Delta_m$ pour que $h_m(x)$ soit toujours de même signe ?  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+Le discriminant doit être négatif pour que la fonction soit de signe constant.
+</details>
+
+3. Existe-t-il des $m$ pour lesquels $h_m(x) > 0$ pour tout réel $x$ ?  
+
+<details class="bloc cor"><summary>Afficher la correction</summary>
+$h_m(x) >0$ pour tout réel $x$ si et seulement si son coefficient dominant est positif et son discriminant strictement négatif.  
+Donc $$m >0 \quad \et \quad 16+20m <0$$  
+C'est-à-dire $$m>0 \quad \et \quad m <\frac{-5}{4}$$  
+Ce qui est impossible.
+</details>
+:::
+
+<div class="nav-pages">
+  <a class="prev" href="racine.html">⬅️</a>
+  <a class="next" href="coefficient.html">➡️</a>
+</div>
+
+

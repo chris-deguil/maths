@@ -1,0 +1,156 @@
+---
+title: "Proposition mathématique"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Connecteurs logiques - Négation"
+order: 2
+---
+
+
+### Propositions mathématiques
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+Une proposition mathématique est un énoncé, ayant un sens mathématique, qui est soit vrai, soit faux (principe du tiers exclu).
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+- Tout nombre premier est impair.  
+  C'est une proposition mathématique. Elle est fausse, car $2$ est pair et c'est un nombre premier.
+- Le carré d'un réel est un nombre positif ou nul.  
+  C'est une proposition mathématique. Elle est vraie.
+- Le cercle est l'ensemble des points du plan situés à égale distance d'un point donné appelé centre du cercle.  
+  Ceci n'est pas une proposition mathématique : il s'agit d'une définition.
+- « $3$ implique $f(4)=2$ » ou « $2(5x+3)$ »  
+  Ces phrases ne sont pas des propositions : la première n'a pas de sens mathématique, la deuxième est seulement une expression algébrique.
+:::
+
+### Les connecteurs logiques
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+Une table de vérité est une table mathématique utilisée en logique classique pour représenter de manière sémantique des expressions logiques (booléennes) et calculer la valeur de la fonction logique relativement à chacun des arguments logiques.
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Soient $P$, $Q$ deux propositions et $f$ une fonction logique dépendant de $P$ et $Q$.  
+Déterminer la table de vérité de $f$, c'est déterminer la valeur de vérité de $f(P,Q)$ suivant les valeurs de vérité de $P$ et $Q$.  
+Pour deux arguments, il y a donc 4 valeurs à déterminer : chaque argument ne peut prendre que deux valeurs (traditionnellement : $0$ et $1$, ou V et F).
+
+| $P$ | $Q$ | $f(P,Q)$ |
+|:---:|:---:|:---------:|
+| F   | F   | V |
+| F   | V   | V |
+| V   | F   | F |
+| V   | V   | V |
+:::
+
+#### Le ET
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+Soient $P$ et $Q$ deux propositions.  
+La proposition « $P$ ET $Q$ » est vraie lorsque $P$ et $Q$ sont toutes les deux vraies, et fausse dans les autres cas.
+:::
+
+Table de vérité :
+
+| $P$ | $Q$ | $P$ et $Q$ |
+|:---:|:---:|:-----------:|
+| F   | F   | F |
+| F   | V   | F |
+| V   | F   | F |
+| V   | V   | V |
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+- La proposition « $3$ est impair et $7$ est premier » est vraie.  
+- La proposition « le carré d'un nombre est positif et tout nombre est positif » est fausse.
+:::
+
+#### Le OU
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+Soient $P$ et $Q$ deux propositions.  
+La proposition « $P$ OU $Q$ » est vraie lorsque l'une des deux, au moins, est vraie, et fausse si les deux sont fausses.
+:::
+
+Table de vérité :
+
+| $P$ | $Q$ | $P$ ou $Q$ |
+|:---:|:---:|:-----------:|
+| F   | F   | F |
+| F   | V   | V |
+| V   | F   | V |
+| V   | V   | V |
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+- La proposition « $3$ est impair OU $7$ est premier » est vraie.  
+- La proposition « $2\pi$ est irrationnel OU tout nombre est positif » est vraie.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+Il faut différencier le OU en français et le OU en mathématiques.
+
+- Le OU en français est dit exclusif : en général, on laisse un choix entre deux ou plusieurs possibilités sans que l'on puisse en choisir plusieurs (entrée+plat OU plat+dessert).
+- Le OU en mathématiques est non exclusif, ce qui signifie 
+:::
+
+
+
+### Négation d'une proposition
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : Principe du tiers exclu</span><br>
+Toute proposition est soit vraie, soit fausse.  
+La négation d'une proposition $P$ est une proposition notée non $P$ (ou $\neg P$ ou $\bar{P}$) qui est vraie si $P$ est fausse et fausse si $P$ est vraie.
+:::
+
+Table de vérité  :
+
+| $P$ | non $P$ |
+|:---:|:-------:|
+| F   | V       |
+| V   | F       |
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+- La négation de $x>3$ est $x \leqslant 3$.  
+- La négation de : « Il a fait beau tous les jours » est « Il y a au moins un jour où il n'a pas fait beau ».
+:::
+
+La proposition suivante permet de déterminer la négation de phrases mathématiques comportant des connecteurs logiques.
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Lois de Morgan</span><br>
+Soient $P$ et $Q$ deux propositions, alors :
+
+- non($P$ ou $Q$) $\Longleftrightarrow$ non $P$ et non $Q$.
+- non($P$ et $Q$) $\Longleftrightarrow$ non $P$ ou non $Q$.
+:::
+
+<details class="bloc demo"><summary>Démonstration :</summary>
+Il suffit de faire la démonstration de la première propriété (avec les tables de vérité) et d'appliquer le principe non(non $P$)$=P$ pour démontrer la deuxième.
+</details>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+- La négation de $x=3$ ou $x<3$ est $x\neq 3$ et $x \geqslant 3$. 
+  
+  C'est-à-dire que la négation de $x \leqslant 3$ est $x>3$.  
+- La négation de « le triangle est rectangle et isocèle » est « le triangle n'est pas rectangle ou n'est pas isocèle ».
+:::
+
+
+<div class="nav-pages">
+  <a class="prev" href="historique.html">⬅️</a>
+  <a class="next" href="quantificateurs.html">➡️</a>
+</div>

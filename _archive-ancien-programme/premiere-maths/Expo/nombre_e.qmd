@@ -1,0 +1,126 @@
+---
+title: "Nombre d'Euler"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Nombre d'Euler, écriture de la fonction exponentielle"
+order: 3
+---
+
+___
+
+
+## Nombre $\e$ et notation $\e^x$
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+L'image de $1$ par la fonction exponentielle est le nombre $\exp(1)$ que l'on note $e$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+
+* Irrationalité : Ce nombre est un irrationnel (Euler 1737) : il ne peut s'écrire sous la forme du quotient de deux entiers. 
+* Transcendance : Il est de plus transcendant : il n'est racine d'aucun polynôme à coefficients entiers.
+* Valeur approchée : Le nombre $e$ vaut environ $2,718281828459...$  
+  Euler, à qui l'on doit le nom du nombre, a démontré en 1748 que :
+  $$e = 1+\dfrac11+ \dfrac1{1\times 2} + \dfrac1{1\times 2\times 3} + \dfrac1{1\times 2\times 3 \times 4} + \cdots$$
+:::
+
+Pour tout entier relatif $n$, on déduit de la propriété $\exp(nx) = \exp(x)^n$ que :
+$$\exp(n) = \exp(n \times 1) = \exp(1)^n = e^n$$
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span><br>
+Pour tout réel $x$, $$\exp(x) = e^x$$
+:::
+
+::: {.bloc .rem}
+En reprenant les propriétés algébriques, on a désormais la notation puissance :
+$$\e^{x+y} = e^x \times e^y \quad ; \quad e^{-x} = \dfrac{1}{e^x} \quad ; \quad e^{\alpha x} = (e^x)^\alpha \quad ; \quad e^{x-y} = \dfrac{e^x}{e^y}$$
+:::
+
+Il s'agit d'un prolongement des puissances entières avec des conditions particulières.
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> </span></div>
+
+1. Simplifier les expressions suivantes :
+   * $A = e^{3x+5}\times e^{2-3x}$
+   * $B = \dfrac{e^{2x+7}}{e^{x+4}}$
+   * $C = (1 + e^x)(1 - e^{-x}) + (1 - e^x)e^{-x}$
+   * $D = e^{4x}\times(e^{-2x}+e^{-6x})-(e^x+e^{-x})^2$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+* $A = e^{(3x+5)+(2-3x)} = e^7$
+* $B = e^{(2x+7)-(x+4)} = e^{x+3}$
+* $C = 1 - e^{-x} + e^x - e^x e^{-x} + e^{-x} - e^x e^{-x} = 1 + e^x - 1 - 1 = e^x - 1$ *(Note: correction du calcul original)*
+* $D = e^{2x} + e^{-2x} - (e^{2x} + 2 + e^{-2x}) = -2$
+
+</details>
+
+2. Démontrer l'égalité suivante : $\dfrac{e^{2x}-1}{e^x+1} = e^x \dfrac{1-e^{-2x}}{1+e^{-x}}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout réel $x$ :
+$$\dfrac{e^{2x}-1}{e^x+1} = \dfrac{e^{2x}(1- e^{-2x})}{e^x(1+ e^{-x})} = e^x \dfrac{1-e^{-2x}}{1+e^{-x}}$$
+
+</details>
+:::
+
+## La fonction exponentielle dans la littérature : Le théorème du perroquet
+
+> *Extrait du "Théorème du Perroquet" de Denis Guedj*
+>
+> Suppose qu'il y a un an tu aies amassé un beau pécule qui nous permettra de payer notre voyage pour Manaus. Soit $P$, ce pécule. Tu l'as placé en attendant. Coup de bol, ton banquier t'a proposé un taux d'intérêt mirobolant : $100 \%$ ! Ne rigole pas, ça s'est vu. Pas avec les pauvres, mais avec les riches. Rêve ! Calcule ! Au bout d'un an, tu aurais eu $P + P = 2P$. Tu aurais doublé ton pécule.
+>
+> Si au lieu de toucher les intérêts à la fin de l'année, tu les avais touchés tous les six mois et que tu les aies replacés, au bout d'un an ça t'aurait fait $P(1 + 1/2)^2$. Calcule ! Tu aurais plus que doublé ton pécule tu aurais $2,25P$. Si au lieu de toucher les intérêts tous les six mois, tu les avais touchés tous les trimestres et que tu les aies replacés, au bout de l'année, ça t'aurait fait $P(1 + 1/4)^4$. Calcule ! Tu aurais gagné encore plus : $2,441P$. Si tu les avais touchés tous les mois et que tu les aies replacés, ça t'aurait fait $P(1 + 1/12)^{12}$. Calcule ! $2,613P$. Encore plus ! Puis, tous les jours : $P(1 + 1/365 )^{365}$. Encore plus toutes les secondes, encore plus. Et puis, tous les riens du tout, "en continu".
+>
+> Tu n'en peux plus, tu t'envoles, tu planes, tu te dis que c'est Byzance, que ton pécule pécule, qu'il va quadrupler, décupler, centupler, millionupler, milliardupler, [ ... ] Tes intérêts composés, ils ont beau se décomposer, eh bien, à l'arrivée, tu n'a même pas le triple de ton pécule, ni même $2,9$ fois plus, ni même $2,8$ fois plus, ni même $2,75$ fois plus, ni même $2,72$ fois plus... Tu as seulement $2,718281828$ ! ... Mon pauvre John, après toute cette richesse, te voilà seulement $e$ fois moins pauvre qu'au départ !
+
+
+
+## Exponentielle et suite géométrique
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span><br>
+Soit $a \in \mathbb{R}$, et pour tout $n \in \mathbb{N}$, $u_n=e^{na}$.  
+La suite $(u_n)$ est une suite géométrique de raison $e^a$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Pour tout réel $a$ non nul et tout entier $n$, on a :
+$$e^{na} = (e^a)^n$$
+donc $(u_n)$ est une suite géométrique de raison $e^a$ et de premier terme $1$.
+</details>
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Autre rédaction :
+$$u_{n+1} = e^{(n+1)a} = e^a \times e^{na} = e^a u_n$$
+Donc $(u_n)$ est une suite géométrique de raison $e^a$ et de premier terme $u_0=e^0 = 1$.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> </span></div>
+L'évolution de la population au Royaume-Uni, en million d'habitants, entre le 1^er^ janvier 2004 et le 1^er^ janvier 2018, peut être modélisée par la fonction $f$ définie par :
+$$f(x)=56,77 \times e^{0,0074x}$$
+sur $[0\, ; \, 14]$, où $x$ désigne le nombre d'années écoulées depuis le 1^er^ janvier 2004.  
+Démontrer que le taux d'évolution annuel est constant.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout $x \in [0\, ; \, 14]$, puisque la suite $(e^{0,0074n})$ est une suite géométrique, on a :
+$$\dfrac{f(x+1)}{f(x)} = \dfrac{56,77 e^{0,0074(x+1)}}{56,77e^{0,0074x}} = \dfrac{e^{0,0074(x+1)}}{e^{0,0074x}}= e^{0,0074} \approx 1,0074$$
+C'est-à-dire une évolution annuelle de $0,74\%$.
+
+</details>
+:::
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="fct_exp.html">⬅️</a>
+  <a class="next" href="prop_exp.html">➡️</a>
+</div>

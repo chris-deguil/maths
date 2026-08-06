@@ -1,0 +1,183 @@
+---
+title: "Position relative"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Position relative : plans - droites"
+order: 4
+---
+
+
+### Positions relatives de deux droites
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span>
+
+Soient $d_1$ et $d_2$ deux droites de l'espace, alors les droites sont :
+
+* **coplanaires** (elles appartiennent à un même plan) si et seulement si : 
+    * elles sont **sécantes** : elles admettent un point d'intersection ;
+    * elles sont **parallèles**.
+* **non coplanaires**
+  
+:::
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Deux droites non coplanaires ne sont ni parallèles, ni sécantes. On dit parfois qu'elles sont « gauches ».
+:::
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">**Illustration graphique :** </span><br>
+
+- Droites coplanaires sécantes : un point d'intersection
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap3_Espace_1_figure4.png" style="width: 25%;">
+</div>
+
+- Droites coplanaires parallèles : aucun ou une infinité de points d'intersection
+  <div style="text-align: center;">
+  <img src="../../image/maths_term/Chap3_Espace_1_figure5.png" style="width: 25%;">
+</div>
+
+- Droites non coplanaires : aucun point d'intersection
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap3_Espace_1_figure6.png" style="width: 25%;">
+</div>
+
+:::
+
+---
+
+### Positions relatives d'une droite et d'un plan
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span>
+
+Soit $d$ une droite de l'espace et $\mathscr{P}$ un plan de l'espace, alors $d$ et $\mathscr{P}$ sont :
+
+* **sécants** si et seulement s'ils ont un unique point d'intersection. On note alors $M=d \cap \mathscr{P}$.
+* **inclus** l'un dans l'autre (une infinité de points communs) : $d \subset \mathscr{P}$ donc $d \cap \mathscr{P} = d$.
+* **strictement parallèles** : $d \cap \mathscr{P} = \emptyset$.
+:::
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Dans les deux derniers cas, on dit que la droite $d$ est **parallèle** au plan $\mathscr{P}$.
+:::
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">**Illustration graphique :** </span><br>
+
+- Droite et plan sécants : un point d'intersection
+  <div style="text-align: center;">
+  <img src="../../image/maths_term/Chap3_Espace_1_figure7.png" style="width: 25%;">
+</div>
+
+- Droite et plan parallèles : droite incluse dans le plan
+  <div style="text-align: center;">
+  <img src="../../image/maths_term/Chap3_Espace_1_figure8.png" style="width: 25%;">
+</div>
+
+- Droite et plan parallèles : aucun point d'intersection
+  <div style="text-align: center;">
+  <img src="../../image/maths_term/Chap3_Espace_1_figure9.png" style="width: 25%;">
+</div>
+
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Soit $ABCD$ un tétraèdre, $I$ le milieu de $[AB]$ et $J$ le point vérifiant $\ve{AJ} = \frac{3}{4} \ve{AD}$.  
+Déterminons l'intersection de $(IJ)$ avec $(BCD)$.  
+On a $\frac{AI}{AB} \neq \frac{AJ}{AD}$, on déduit de la contraposée de la droite des milieux (ou de Thalès) que les droites $(IJ)$ et $(BD)$ ne sont pas parallèles.
+
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap3_Espace_1_figure10.png" style="width: 25%;">
+</div>
+Elles sont donc sécantes en un point noté $K$. De plus 
+$$(BD) \subset (BCD) \quad \text{et} \quad K \in (BD) \Rightarrow K \in (BCD)$$
+Ainsi $K  \in (IJ)\cap (BCD)$.  
+Or $I \not \in (BCD)$ donc $(IJ) \not\subset (BCD)$  
+Donc $K= (IJ) \cap (BCD)$, et il est le point d'intersection cherché.
+
+:::
+
+---
+
+### Positions relatives de deux plans
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span>
+
+Soient $\mathscr{P}_1$ et $\mathscr{P}_2$ deux plans de l'espace, alors ils sont :
+
+* **Strictement parallèles** si et seulement s'ils n'ont aucun point en commun : $\mathscr{P}_1 \cap \mathscr{P}_2 = \emptyset$.
+* **Confondus** : $\mathscr{P}_2 \subset \mathscr{P}_1$ et $\mathscr{P}_1 \subset \mathscr{P}_2$, c'est-à-dire $\mathscr{P}_1 = \mathscr{P}_2$.
+* **Sécants** : l'intersection est une droite $d$. On note alors $\mathscr{P}_1 \cap \mathscr{P}_2 = d$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Illustration graphique : </span><br>
+
+- Plans sécants : une droite d'intersection
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap3_Espace_1_figure11.png" style="width: 25%;">
+</div>
+
+- Plans strictement parallèles : aucun point d'intersection
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap3_Espace_1_figure12.png" style="width: 25%;">
+</div>
+
+- Plans confondus : un plan d'intersection
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap3_Espace_1_figure13.png" style="width: 25%;">
+</div>
+
+:::
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :</div>
+
+Soit $ABCDEFGH$ un cube. Soit $Q$ le milieu de $[BC]$. Déterminons l'intersection de $(DCG)$ et $(AQF)$.
+
+
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Les droites $(AQ)$ et $(DC)$ étant coplanaires et non parallèles, elles sont sécantes. Soit $I$ leur point d'intersection.  
+Les droites $(FQ)$ et $(CG)$ sont coplanaires et non parallèles, donc elles sont sécantes. Soit $J$ ce point d'intersection.
+
+Ainsi :
+$$\left. \begin{array}{l}
+I = (AQ) \cap (DC)\\
+J = (FQ) \cap (GC)
+\end{array} \right\} \text{ Donc } \left. \begin{array}{l}
+I \in (AQF) \cap (DCG)\\
+J \in (FQA) \cap (DCG)
+\end{array} \right\}$$
+
+
+<div style="text-align: center;">
+  <img src="../../image/maths_term/Chap3_Espace_1_figure14.png" style="width: 25%;">
+</div>
+
+Les plans $(AQF)$ et $(DCG)$ n'étant pas confondus et ayant des points d'intersections sont sécants suivant une droite, donc l'intersection de ces deux plans est la droite $(IJ)$.
+</details>
+:::
+
+
+<div class="nav-pages">
+  <a class="prev" href="droite_plan.html">⬅️</a>
+  <a class="next" href="parallele.html">➡️</a>
+</div>

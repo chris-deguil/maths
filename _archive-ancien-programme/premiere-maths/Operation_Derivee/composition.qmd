@@ -1,0 +1,165 @@
+---
+title: "Composition : g(ax+b)"
+description: "Intervalle image - composée de deux fonctions - dérivée de la composée"
+format:
+  html:
+    toc: true
+    number-sections: false
+order: 3
+---
+
+
+-----
+
+
+### Dérivée de $g(ax+b)$
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+On appelle \emph{intervalle image} de $I$ par $f$ l'ensemble noté $f(I)$ défini par
+$$f(I) = \left\{\,f(x)\; ;\; x \in I \right\}$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+
+- $f(I)$ est l'ensemble de toutes les images $f(x)$ lorsque $x$ parcourt $I$.
+- L'image d'un intervalle n'est pas toujours un intervalle.
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Soit $f$ définie sur $I=[-3 \, ; \, 4]$ par $f(x)=x^2+2$. Déterminer $f(I)$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+La fonction $f$ est une fonction polynôme du second degré dont le coefficient dominant $1 >0$, ainsi sa représentation graphique est une parabole orientée vers le haut, admettant pour axe de symétrie la droite d'équation $x= 0$.
+
+D'où 
+
+- $f$ décroissante sur [-3 \,;\, 0]$ et à valeur dans $[2\,;\, 11]$
+- $f$ croissante sur $[0\,;\, 4]$ et à valeur dans $[2\, ;\, 18]$
+
+Alors, pour tout $x \in [-3\, ; \, 4]$, on a $f(x) \in [2\, ; \, 18]$.
+
+Ainsi $f(I)= [2\, ; \, 18]$.
+</details>
+:::
+
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+Soient $f$ une fonction définie sur un intervalle $I$ et $g$ une fonction définie sur un intervalle $J$. 
+Si l'image de $I$ par $f$ est incluse dans $J$ ($f(I) \subset J$), on appelle fonction composée de $f$ par $g$ la fonction notée $g \circ f$ définie sur $I$ par :
+$$(g \circ f)(x) = g\big(f(x)\big)$$
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+On considère les fonctions :
+
+- $g$ définie sur $\R^*$ par $g(x) = \dfrac{1}{x}$ ;
+-  $f$ définie sur $\R$ par $f(x)=3x^2+1$ et à valeurs dans $[1\,;\, +\infty[\subset \R^*$.
+
+Déterminer $g \circ f$ et $f \circ g$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+- Pour tout $x \in \R$, $3x^2+1 >0$, d'où $f(\R) \subset  \R^*$.
+  
+  Ainsi $g \circ f$ est bien définie sur $\R$.
+
+  Pour tout $x \in \R$, 
+  $$(g \circ f)(x) = \frac{1}{3x^2+1}$$
+
+-  Pour tout $x \in \R^*$, $\frac{1}{x} \in \R$, d'où $g(\R^*) \subset  \R$.
+    
+  Ainsi $f \circ g$ est bien définie sur $\R^*$.
+
+  Pour tout $x \in \R$, 
+  $$(h \circ g)(x) = \frac{3}{x^2} + 1$$
+
+</details>
+
+:::
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span><br>
+Soit $f$ une fonction définie et dérivable sur $I$ et à valeurs dans $J$, et $g$ une fonction définie et dérivable sur $J$.<br>
+Alors la fonction $h$ définie par $$h(x)=g(f(x))$$
+est dérivable sur $I$, et pour tout réel $x \in I$, 
+
+$$
+h'(x)= f'(x)\times g'\big(f(x)\big).
+$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+Dans le cadre du programme de première, on se borne aux fonctions $f$ affines, c'est-à-dire les fonctions
+
+$$
+f:x \longmapsto ax+b,
+$$
+
+où $a$ et $b$ sont des réels (respectivement le coefficient dominant et le terme constant de la fonction affine $f$).<br>
+Ainsi, pour une fonction $g$ dérivable, en posant $h=g(ax+b)$, on a 
+$$
+h'(x) =a\, g'(ax+b).
+$$
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra">Dérivée d'une fonction composée</span></div>
+
+Déterminer la fonction dérivée de la fonction $f$ définie sur $I = \left] -2,5 \,;\, +\infty \right[$ par :
+$$f(x) = \sqrt{2x+5}$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On reconnaît une forme $v \circ u$ (ou $\sqrt{u}$).
+
+* Soit $u(x) = 2x+5$.  
+
+  $u$ est une fonction affine dérivable sur $I$ et, pour tout $x \in I$, $u'(x) = 2$.
+  Pour tout $x \in I$, $2x+5 > 0$, donc $u(I) \subset \mathbb{R}_+^*$.
+
+* $v$ est dérivable sur $\mathbb{R}_+^*$ et, pour tout $x > 0$, $v'(x) = \dfrac{1}{2\sqrt{x}}$.
+
+Par composition, $f$ est dérivable sur $I$ et on utilise la formule $( \sqrt{u} )' = \dfrac{u'}{2\sqrt{u}}$.
+
+Ainsi, pour tout $x \in I$ :
+$$f'(x) = 2 \times \frac{1}{2\sqrt{2x+5}}$$
+D'où :
+$$f'(x) = \frac{1}{\sqrt{2x+5}}$$
+</details>
+
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Soit $f:x \longmapsto 1+x$ et $g:x \longmapsto x^n$.<br>
+Alors la fonction $h$ définie sur $\R$ par $$h(x)=(g \circ f)(x)=(1+x)^n$$ est dérivable sur $\R$.<br>
+On a $f'(x)=1$ et $g'(x)=n x^{\,n-1}$.<br>
+Pour tout réel $x$, on a 
+
+$$h'(x) = (g'\circ f)(x)\cdot f'(x)= n(1+x)^{n-1}.$$
+
+:::
+
+::: {.bloc .rem}
+**Application à l'économie**<br>
+On considère $t$ le taux d'intérêt composé annuel d'un certain placement. On décide de placer une somme $S$ sur une période de $n$ années. Au bout de $n$ années, on dispose alors de $(1+t)^n S$.<br>
+Peut-on trouver un calcul simple lorsque $t$ est petit ?<br>
+On rappelle que l'approximation affine de $f$ en $a$ est donnée par $$f(a+h) \approx f(a)+h\,f'(a).$$<br>
+On considère l'approximation affine de $(1+t)^n$. <br>
+Pour de petites valeurs de $t$, on a $$(1+t)^n \approx 1^n + t \times \big(n \, 1^{\,n-1}\big)=1+n\,t.$$<br>
+On déduit qu'après $n$ années, le montant disponible est alors environ $S(1+nt)$, où $t$ est le taux d'évolution.
+:::
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="operations.html">⬅️</a>
+  <a class="next" href="applications.html">➡️</a>
+</div>

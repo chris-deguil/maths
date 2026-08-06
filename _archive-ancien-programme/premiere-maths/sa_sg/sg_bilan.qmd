@@ -1,0 +1,176 @@
+---
+title: "Exercices bilan"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: " "
+order: 6
+---
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> (Extrait de DST) </span></div>
+Pierre place le 2 janvier 2022, 1040 euros, sur un compte rémunéré à un taux d'intérêt composé de $2\%$.  
+Le 2 janvier de chaque année, il place sur ce compte 1040 euros.
+
+1. Déterminer le montant disponible sur le compte le 2 janvier 2023 et le 2 janvier 2024.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+* En 2023 : $1{,}02 \times 1040+1040=2100{,}8$. 
+* En 2024 : $1{,}02 \times 2100{,}8+1040=3182{,}816$.
+</details>
+
+
+
+2. On note $u_n$ le montant disponible sur le compte de Pierre le 2 janvier $2022+n$. Exprimer $u_{n+1}$ en fonction de $u_n$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Soit $u_n$ le montant disponible sur le compte de Pierre le 2 janvier 2022+n. Le taux d'intérêt étant de $2\%$, l'année suivante il disposera de $1{,}02\,u_n$ auxquels s'ajoute le dépôt de $1040$ euros, soit $u_{n+1} = 1{,}02\,u_n +1040$.
+</details>
+
+3. a. La suite $(u_n)$ est-elle arithmétique ?
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    $u_1-u_0 = 2100{,}8-1040=1060{,}8$  
+    $u_2-u_1=3182{,}816-2100{,}8=1082{,}016$.  
+    Ainsi $u_2-u_1 \neq u_1-u_0$ donc la suite $(u_n)$ n'est pas arithmétique.
+    </details>
+
+   b. La suite $(u_n)$ est-elle géométrique ?
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    $\dfrac{u_1}{u_0} \approx 2{,}020$ et $\dfrac{u_2}{u_1} \approx 1{,}515$.  
+    Ainsi $\dfrac{u_2}{u_1} \neq \dfrac{u_1}{u_0}$ donc la suite $(u_n)$ n'est pas géométrique.
+    </details>
+
+4. Écrire un script python, permettant de déterminer la somme disponible le 2 janvier 2052.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On commence en 2022, donc en 2052, il y a $30$ années (on calcule $u_{30}$).
+
+```python
+def montant_2052():
+    u = 1040  # correspond à u_0 (2 janvier 2022)
+    for i in range(30):
+        u = 1.02*u + 1040
+    return u
+```
+</details>
+
+5. On considère la suite, définie pour tout $n \in \mathbb{N}$, par $v_n=u_n+52000$
+
+    a. Démontrer que la suite $(v_n)$ est géométrique.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    Pour tout $n \in \mathbb{N}$, 
+    $$\begin{aligned}
+    v_{n+1} &= u_{n+1}+52000\\
+    &=1{,}02\, u_n +1040 +52000\\
+    &=1{,}02\, u_n + 53040\\
+    &=1{,}02\,(u_n+52000)\\
+    &=1{,}02\, v_n
+    \end{aligned}$$
+    Ainsi $(v_n)$ est une suite géométrique de raison $1{,}02$ et de premier terme $v_0=u_0+52000 = 53040$.
+    </details>
+
+    b. Exprimer en fonction de $n$, $v_n$ puis $u_n$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    On déduit de la question précédente, que pour tout $n \in \mathbb{N}$, $$v_n=53040 \times 1{,}02^{n}$$
+    Pour tout $n \in \mathbb{N}$, $v_n=u_n+52000$, donc $u_n =v_n-52000 = 53040 \times 1{,}02^{n}-52000$.
+    </details>
+
+6. Déterminer la somme dont disposera Pierre en 2052.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+La somme dont disposera Pierre en $2052$ est
+$$u_{30} = 53040\times 1{,}02^{30} -52000 \approx 44100\ \text{euros}.$$
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> (Extrait évaluation 2024) </span></div>
+
+On considère la suite $(u_n)$ définie par $u_0=5$ et pour tout $n \in \mathbb{N}$, $u_{n+1} = \dfrac{1}{3} u_n + 1$
+
+1. a. Calculer $u_1$ et $u_2$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    $u_1 = \dfrac{1}3 u_0 +1 = \dfrac{5}3+1=\dfrac{8}3$  
+    $u_2=\dfrac{1}3 u_1 + 1 = \dfrac{1}{3} \times \dfrac{8}{3} + 1 = \dfrac{17}{9}$
+    </details>
+
+   b. La suite $(u_n)$ est-elle arithmétique ? géométrique ?
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    D'une part $u_2-u_1 = \dfrac{17}9-\dfrac{8}3 = -\dfrac{7}9$ et $u_1-u_0 = \dfrac{8}3 - 5 = \dfrac{-7}3$.  
+    Or $\dfrac{-7}{9} \neq \dfrac{-7}{3}$. Donc la suite $(u_n)$ n'est pas arithmétique.  
+    D'autre part $\dfrac{u_2}{u_1}= \dfrac{17}{9} \times \dfrac{3}{8} = \dfrac{17}{24}$ et $\dfrac{u_1}{u_0} = \dfrac{8}{3} \times \dfrac{1}{5} = \dfrac{8}{15}$.  
+    Or $\dfrac{8}{15} \neq \dfrac{17}{24}$. Donc la suite $(u_n)$ n'est pas géométrique.
+    </details>
+
+    c. Compléter le programme suivant pour qu'il calcule la somme des $n$ premiers termes de la suite $(u_n)$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    ```python
+    def somme(n):
+        s = 0
+        u = 5
+        for i in range(n):
+            s = s+u
+            u = 1/3*u+1
+        return s
+    ```
+    </details>
+
+2. On considère la suite $(v_n)$ définie pour tout $n \in \mathbb{N}$ par $v_n = u_n - \dfrac{3}{2}$.
+
+    a. Montrer que la suite $(v_n)$ est une suite géométrique de raison $\dfrac{1}{3}$ dont on précisera le premier terme.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    Pour tout $n \in \mathbb{N}$, 
+    $$v_{n+1} = u_{n+1} - \dfrac{3}2 = \dfrac{1}3u_n+1 - \dfrac{3}2 = \dfrac{1}3 u_n - \dfrac{1}2 = \dfrac{1}3 \left(u_n - \dfrac{3}2\right) = \dfrac{1}3 v_n$$
+    Ainsi la suite $(v_n)$ est une suite géométrique de raison $\dfrac{1}{3}$ et de premier terme $v_0 = u_0- \dfrac{3}{2} = 5 - \dfrac{3}{2} = \dfrac{7}{2}$.
+    </details>
+
+
+
+    b. Exprimer $v_n$ puis $u_n$ en fonction de $n$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    On déduit de la question précédente, que pour tout $n \in \mathbb{N}$, $v_n = \dfrac{7}{2} \times \left(\dfrac{1}{3} \right)^n$.  
+    Or pour tout $n \in \mathbb{N}$, $v_n = u_n - \dfrac{3}{2}$, donc :
+    $$u_n = v_n + \dfrac{3}{2} = \dfrac{7}{2} \times \left(\dfrac{1}{3} \right)^n + \dfrac{3}{2}$$
+    </details>
+
+    c. Déterminer la monotonie de la suite $(u_n)$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    Comme $0 < \dfrac{1}{3} < 1$ et $v_0 > 0$, la suite $(v_n)$ est décroissante.  
+    Puisque $u_n = v_n + \dfrac{3}{2}$, la suite $(u_n)$ a les mêmes variations que $(v_n)$, elle est donc décroissante.
+    </details>
+
+    d. Déterminer la limite de la suite $(u_n)$.
+
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    On a $0 < \dfrac{1}{3} < 1$, donc $\lim_{n \to +\infty} \left(\dfrac{1}{3}\right)^n = 0$, d'où $\lim_{n \to +\infty} v_n = 0$.  
+    On déduit alors que la suite $(u_n)$ a pour limite $\dfrac{3}{2}$.
+    </details>
+
+3. On admet que $u_n = \dfrac{7}{2} \times \left(\dfrac{1}{3}\right)^n + \dfrac{3}{2}$. 
+ 
+Exprimer, en fonction de $n$, $S_n = u_0+u_1+ \dots +u_n$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout $n \in \mathbb{N}$ :
+$$S_n = u_0+u_1+ \dots + u_n = \left(v_0 + \dfrac{3}{2}\right) + \left(v_1 + \dfrac{3}{2}\right) + \dots + \left(v_n + \dfrac{3}{2}\right)$$
+$$S_n = \underbrace{(v_0+v_1+\dots + v_n)}_{Q_n} + \underbrace{\dfrac{3}{2} + \dots + \dfrac{3}{2}}_{(n+1) \text{ fois}}$$
+$Q_n$ est la somme des $n+1$ premiers termes d'une suite géométrique de raison $\dfrac{1}{3}$ :
+$$Q_n = v_0 \times \dfrac{1 - \left(\dfrac{1}{3}\right)^{n+1}}{1 - \dfrac{1}{3}} = \dfrac{7}{2} \times \dfrac{1 - \left(\dfrac{1}{3}\right)^{n+1}}{\dfrac{2}{3}} = \dfrac{21}{4} \left(1 - \left(\dfrac{1}{3}\right)^{n+1}\right)$$
+On déduit donc :
+$$S_n = \dfrac{21}{4} \left(1 - \left(\dfrac{1}{3}\right)^{n+1}\right) + \dfrac{3}{2}(n+1)$$
+</details>
+
+:::

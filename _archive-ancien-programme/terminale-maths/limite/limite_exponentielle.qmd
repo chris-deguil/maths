@@ -1,0 +1,151 @@
+---
+title: "Fonction exponentielle"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Limite de exponentielle et croissabnces comparées"
+order: 11
+---
+
+
+### Limite de fonction exponentielle
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+$$\lim_{x \to +\infty} \e^x = +\infty \quad \quad \lim_{x \to -\infty} \e^{x} = 0^+ \quad \quad \lim_{x \to 0} \dfrac{\e^x -1}{x} = 1$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+La fonction exponentielle est convexe, donc sa représentation graphique est au-dessus de chacune de ses tangentes. En particulier, elle est au-dessus de sa tangente en $0$.
+
+Ainsi, pour tout $x \in \R$, $\exp(x)\geqslant x+1$.
+
+Donc $$\lim_{x \to +\infty} \e^x = +\infty$$
+
+Pour tout réel $x$, $\e^{-x} = \dfrac{1}{\e^x}$.
+
+Ainsi $\lim_{x \to +\infty} \e^{-x} = 0$, donc (par composition) $\lim_{x \to -\infty} \e^x = 0$.
+
+Il reste à démontrer $\lim_{x \to +\infty} \dfrac{\e^x}{x^n}$ (exercice ci-dessous).
+
+Enfin, la dernière limite correspond au taux d'accroissement en $0$ de la fonction exponentielle, donc elle est égale à $\exp'(0) = 1$.
+</details>
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+Déterminer $\lim_{x\to+\infty} x \left(1-\e^{\dfrac{1}{x}} \right).$
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout $x \neq 0$,
+$$x \left(1-\e^{\dfrac{1}{x}}\right) = -\,\dfrac{\e^{\dfrac{1}{x}}-1}{\dfrac{1}{x}}.$$
+Or 
+
+$$\lim_{x \to +\infty} \dfrac{1}{x} = 0 \et\lim_{x \to 0} \dfrac{\e^x -1}{x} = 1.$$
+
+Par composition,  
+$$\lim_{x \to +\infty} - \dfrac{\e^{\dfrac{1}{x}} - 1}{\dfrac{1}{x}} = -1.$$
+Ainsi 
+$$\lim_{x \to +\infty} x \left(1- \e^{\dfrac{1}{x}}\right) = -1.$$
+</details>
+
+
+:::
+
+
+
+
+
+
+### Croissances comparées
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admis) : </span><br>
+On considère $n \in \N$, alors : 
+$$\lim_{x \to +\infty} \dfrac{\e^x}{x^n} = + \infty \qquad \qquad \qquad \qquad \qquad \qquad\lim_{x \to -\infty} x^n \e^x = 0^-.$$
+
+
+:::
+
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+Démonstration de $\lim_{x \to +\infty} \dfrac{\e^x}{x^n} = + \infty$
+
+1. Démontrer que $\e^x \geqslant \dfrac{x^2}{2}$ sur un intervalle de la forme $[A \, ; \, +\infty[$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Soit $f:x \longmapsto \e^x-\dfrac{x^2}{2}$. La fonction $f$ est deux fois dérivable et, pour tout réel $x$, on a successivement $f'(x) = \e^x-x$ et $f''(x) = \e^x -1$.
+
+On déduit alors que $f''$ est négative et donc $f'$ décroissante sur $]-\infty \, ; \, 0]$, et que $f''$ est positive et donc $f'$ croissante sur $[0\, ; \, +\infty[$.
+
+Ainsi $f'$ admet un minimum en $0$ et $f'(0)=1$. D'où $f'$ est positive sur $\R$ et donc $f$ croissante sur $\R$.
+
+Or $f(0) = 1 > 0$, on déduit que pour $x\geqslant 0$, $f(x) \geqslant 0$ et donc $$\dfrac{\e^x}{x} \geqslant \dfrac{x}{2}.$$
+Du théorème de comparaison, on déduit que $$\lim_{x \to +\infty} \dfrac{\e^x}{x} = +\infty.$$
+</details>
+
+2. En déduire que $\lim_{x \to +\infty} \dfrac{\e^x}{x^n} = + \infty$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a, pour tout $x \neq 0$,
+$$\dfrac{\e^x}{x^n} = \left(\dfrac{1}{n} \times \dfrac{\exp \left( \dfrac{x}{n} \right)}{\dfrac{x}{n}} \right)^n.$$
+
+On a $\lim_{x \to +\infty} \dfrac{x}{n} = +\infty$ et $\lim_{y \to +\infty} \dfrac{\e^y}{y} = + \infty$.
+
+Par composition des limites, on déduit que 
+$$\lim_{x \to + \infty} \dfrac{\exp \left( \dfrac{x}{n} \right)}{\dfrac{x}{n}}= +\infty$$
+
+Or $\lim_{x \to +\infty} x^n = +\infty$, 
+
+on déduit du théorème de composition des limites que $$\lim_{x \to +\infty} \dfrac{\e^x}{x^n} = +\infty$$
+</details>
+
+3. ... et que $\lim_{x \to -\infty} x^n \e^x = 0^-$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+En posant $x=-x$ (changement de variable), on a $$\e^x x^n = (-1)^n \dfrac{x^n}{\e^x}.$$
+Par inversion de la formule précédente, on déduit que $$\lim_{x \to -\infty} x^n \e^x = 0.$$
+</details>
+
+:::
+
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+Déterminons $\lim_{x \to + \infty} \dfrac{\e^x+x}{\e^x-x^2}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout $x \in \R$ tel que $\e^x \neq x^2$, on a 
+$$
+\dfrac{\e^x+x}{\e^x-x^2} = \dfrac{1+\dfrac{x}{\e^x}}{1-\dfrac{x^2}{\e^x}}.$$
+Or, pour tout $n \in \N$, $\lim_{x \to +\infty} \dfrac{\e^x}{x^n} = + \infty$, donc $\lim_{x \to + \infty} \dfrac{x^n}{\e^x} = 0$.
+
+On déduit alors, par quotient, que $$\lim_{x \to +\infty} \dfrac{1+\dfrac{x}{\e^x}}{1-\dfrac{x^2}{\e^x}}= 1.$$
+Donc $$\lim_{x \to + \infty} \dfrac{\e^x+x}{\e^x-x^2}=1.$$
+</details>
+
+:::
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+On dit que la fonction exponentielle l’emporte sur les fonctions polynomiales.
+:::
+
+
+
+
+
+
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="theoreme_comparaison.html">⬅️</a>
+  <!--<a class="next" href="limite_exponentielle.html">➡️</a>-->
+</div>

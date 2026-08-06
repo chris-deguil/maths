@@ -1,0 +1,32 @@
+---
+title: "Chapitre 7 : Logarithme Népérien."
+description: "Fonction Ln, composition et limite"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+
+- Fonction logarithme népérien, notée ln, construite comme réciproque de la fonction exponentielle.
+- Propriétés algébriques du logarithme.
+- Fonction dérivée du logarithme, variations.
+- Limites en 0 et en  $+ \infty$ , courbe représentative. Lien entre les courbes représentatives des fonctions logarithme népérien et exponentielle.
+- Croissance comparée du logarithme népérien et de $x \longmapsto x^n$ en ⁰$ et $+ \infty$
+-  Utiliser l’équation fonctionnelle de l’exponentielle ou du logarithme pour transformer une écriture, résoudre une équation, une inéquation.
+- Dans le cadre d’une résolution de problème, utiliser les propriétés des fonctions exponentielle et logarithme.
+
+:::
+

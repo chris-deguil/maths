@@ -1,0 +1,30 @@
+---
+title: "Historique"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "historique"
+order: 1
+---
+
+
+::: {.bloc .rem}
+Le calcul intégral trouve ses origines dans l’Antiquité grecque, notamment avec la méthode d’exhaustion développée par Eudoxe et utilisée par Archimède pour déterminer des aires et des volumes. Archimède parvient ainsi à calculer l’aire du disque ou le volume de la sphère en approchant les figures par des polygones ou des solides dont l’aire est connue.
+:::
+
+::: {.bloc .rem}
+Au XVIIᵉ siècle, le problème du calcul des aires sous une courbe et celui de la détermination des tangentes conduisent à la naissance du calcul infinitésimal. Isaac Newton et Gottfried Wilhelm Leibniz développent indépendamment les fondements du calcul différentiel et intégral. Leibniz introduit la notation $\int$, inspirée d’un S allongé pour signifier « somme », ainsi que l’écriture $\int_a^b f(x)\,\dd x$.
+:::
+
+::: {.bloc .rem}
+Le lien fondamental entre dérivation et intégration est établi par le théorème fondamental du calcul intégral : si $F$ est une primitive d’une fonction continue $f$ sur $[a,b]$, alors
+$$
+\int_a^b f(x)\,\dd x = F(b) - F(a).
+$$
+Cette relation donne à l’intégrale un outil de calcul efficace.
+:::
+
+::: {.bloc .rem}
+Au XIXᵉ siècle, Augustin-Louis Cauchy puis Bernhard Riemann donnent une définition rigoureuse de l’intégrale à l’aide de sommes approchées, appelées aujourd’hui sommes de Riemann. Plus tard, Henri Lebesgue généralise encore cette notion en définissant l’intégrale à partir d’une approche fondée sur la mesure, permettant d’intégrer des fonctions plus générales.
+:::

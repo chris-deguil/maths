@@ -1,0 +1,131 @@
+---
+title: "Contraposée et Disjonction des cas"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "contraposée - Disjonction des cas"
+order: 5
+---
+
+
+
+### Raisonnement par contraposée
+
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span><br>
+
+On appelle contraposée de la proposition $$P \Longrightarrow Q$$
+La proposition $$\text{non}(Q) \Longrightarrow \text{non}(P).$$
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+1. La contraposée de :  
+   
+« Si un triangle est rectangle alors la somme des carrés des longueurs des cathètes est égale au carré de la longueur de l'hypoténuse »  
+
+est :  
+
+« Si la somme des carrés des longueurs des deux plus petits côtés n'est pas égale au carré de la longueur du plus grand côté alors le triangle n'est pas rectangle. »
+
+2. La contraposée de $(n^2 \text{ pair } \Longrightarrow n \text{ pair })$ est (puisque la négation de « être pair » est « être impair ») :
+$$(n \text{ impair } \Longrightarrow n^2 \text{ impair }).$$
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+
+Une proposition et sa contraposée ont la même valeur de vérité : elles sont équivalentes.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Il suffit de remarquer que $\text{non}(Q) \Longrightarrow \text{non}(P)$ équivaut à $\text{non}(\text{non}(Q)) \text{ ou } \text{non}(P)$, c'est-à-dire $Q \text{ ou } \text{non}(P)$ (ou encore $\text{non}(P) \text{ ou } Q$).
+
+</details>
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Méthode : </span><br>
+
+Pour démontrer une propriété, on peut démontrer sa contraposée.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Démontrons que si $n^2$ est pair, alors $n$ est pair.  
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On peut alors démontrer que si $n$ est impair (puisqu'on suppose la négation de « pair ») alors $n^2$ est impair.  
+Soit $n$ un entier impair, alors il existe $k \in \N$ tel que $n=2k+1$.  
+On a alors $n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1=2k'+1$ avec $k'\in \N$.  
+Donc $n^2$ est impair et la contraposée est vraie, donc la propriété aussi.
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Démontrons que $x^3=2 \Longrightarrow x<2$.  
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+La contraposée est $x \geqslant 2 \Longrightarrow x^3 \neq 2$.  
+Soit $x \geqslant 2$, alors la fonction cube étant strictement croissante, on a $x^3 \geqslant 2^3 = 8$.  
+Or $8 > 2$, donc $x^3 \neq 2$.  
+Ainsi la contraposée étant vraie, la propriété l'est aussi.
+</details>
+
+:::
+
+
+
+
+
+
+### Raisonnement par disjonction des cas
+
+::: {.bloc .rem}
+<span class="bloc-titre">Raisonnement par disjonction des cas : </span><br>
+
+- Lorsqu'une propriété dépend de la valeur de $x$, on peut être amené à étudier différents cas en séparant suivant les différentes valeurs de $x$. On appelle ce type de raisonnement un raisonnement par disjonction des cas.
+
+-  Dans un raisonnement par disjonction des cas, un cas ne peut pas se retrouver dans différentes études !
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Divisibilité par 3 </span></div>
+
+Montrer que $N=n(n+1)(n+2)$ est un multiple de $3$ pour toute valeur de $n \in \N$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Tout nombre entier $n$ s'écrit sous l'une des formes suivantes $n=3k$, ou $n=3k+1$ ou $n=3k+2$, où $k \in \N$. (Il suffit de regarder les restes possibles dans la division euclidienne par $3$.)
+
+* Soit $n=3k$,  
+  alors $N=3k(3k+1)(3k+2)=3N'$ où $N'=k(3k+1)(3k+2)$.  
+  Donc $N$ est un multiple de $3$.
+* Soit $n=3k+1$, 
+  
+  alors $N=(3k+1)(3k+2)(3k+3)=3(3k+1)(3k+2)(k+1)=3N''$ où $N''=(3k+1)(3k+2)(k+1)$.  
+  
+  Donc $N$ est un multiple de $3$.
+* Soit $n=3k+2$, 
+  
+  alors $N=(3k+2)(3k+3)(3k+4)=3(3k+2)(k+1)(3k+4)=3N'''$ où $N'''=(3k+2)(k+1)(3k+4)$.  
+  
+  Donc $N$ est un multiple de $3$.
+</details>
+:::
+
+
+<div class="nav-pages">
+  <a class="prev" href="deduction_contreExemple.html">⬅️</a>
+  <a class="next" href="absurde.html">➡️</a>
+</div>

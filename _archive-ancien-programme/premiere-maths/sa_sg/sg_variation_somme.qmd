@@ -1,0 +1,133 @@
+---
+title: "Suite géométriques : définition"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Variation d'une suite géométrique, somme des termes consécutifs"
+order: 5
+---
+
+## Variation d'une suite géométrique
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Soit $q$ un réel non nul. On considère la suite $(q^n)_{n \in \mathbb{N}}$.
+
+1. Si $q > 1$, alors la suite $(q^n)_{n \in \mathbb{N}}$ est croissante.
+2. Si $0 < q < 1$, alors la suite $(q^n)_{n \in \mathbb{N}}$ est décroissante.
+3. Si $q < 0$, alors la suite $(q^n)_{n \in \mathbb{N}}$ n'est pas monotone.
+:::
+
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Pour tout $n \in \mathbb{N}$, $q^n - q^{n-1} = q^{n-1} ( q -1)$
+
+1. Si $q > 1$, alors $q^{n-1} > 0$ et $q-1 > 0$ donc $q^n - q^{n-1} > 0$ et donc la suite est croissante.
+2. Si $0 < q < 1$, alors $q^{n-1} > 0$ et $q-1 < 0$ donc $q^n - q^{n-1} < 0$ et donc la suite est décroissante.
+3. Si $q < 0$, alors $q^n$ et $q^{n-1}$ sont de signes contraires, et la suite prend alternativement des valeurs positives et des valeurs négatives. La suite n'est donc pas monotone.
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+On déduit de cette propriété les variations d'une suite géométrique de raison $q$ et de premier terme $a$. Les variations dépendent alors du signe de $a$.
+
+Ainsi pour $q = 3$
+
+- Si $u_0= -2$, alors pour tout $n \in \N$, $u_n=-2 \times 3^n$.
+  
+  On a $q>1$ et $u_0<0$, donc la suite $(u_n)$ est décroissante.
+
+- Si $u_0= 2$, alors pour tout $n \in \N$, $u_n=2 \times 3^n$.
+  
+  On a $q>1$ et $u_0<0$, donc la suite $(u_n)$ est croissante.
+
+:::
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+
+En reprenant l'exemple précédent :
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+* Si on précise dans l'énoncé que la suite est croissante (ou monotone), alors $q= 2 \sqrt{2}$.
+* Si on précise dans l'énoncé que la suite n'est pas monotone, alors $q < 0$, et donc $q= -2\sqrt{2}$.
+</details>
+:::
+
+## Somme des termes d'une suite géométrique
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+
+Soit $(u_n)_{n \in \mathbb{N}}$ une suite géométrique de raison $q \neq 1$.  
+
+Alors la somme des $n+1$ premiers termes de la suite est donnée par :
+$$\sum_{k=0}^{n} u_k = u_0 + u_1 + u_2+ \dots + u_{n} = u_0 \times \dfrac{1 - q^{n+1}}{1-q}$$
+:::
+
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Soit $(u_n)_{n \in \mathbb{N}}$ une suite géométrique de raison $q \neq 1$.  
+
+On note $$S_n = u_0 + u_1 + u_2+ \dots + u_{n-2} + u_{n-1} + u_n$$  
+
+Alors $$qS_n = qu_0 + qu_1 + qu_2+ \dots + qu_{n-1} + qu_n$$  
+Ainsi :
+
+$$\begin{aligned}
+S_n - qS_n &= u_0 + u_1 + u_2+ \dots + u_{n-2} + u_{n-1} + u_n \\
+&\qquad - (u_1 + u_2+ \dots + u_{n-2} + u_{n-1} + u_n + u_{n+1})\\ 
+&= u_0 - u_{n+1} = u_0 - u_0 \times q^{n+1} 
+\end{aligned}
+$$
+
+D'où $$S_n(1-q)= u_0 (1 - q^{n+1})$$
+Ce qui conclut la démonstration en divisant de part et d'autre par $1-q$
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+Déterminer la somme suivante : $S= \dfrac{1}{2} + \dfrac{1}{6} + \dfrac{1}{18}+ \dfrac{1}{54}+ \dots + \dfrac{1}{118098}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a $$S= \dfrac{1}{2} + \dfrac{1}{2}\times\dfrac{1}{3} + \dfrac{1}{2}\times\dfrac{1}{3^2} + \dfrac{1}{2} \times \dfrac{1}{3^3} +\dots +\dfrac{1}{2}\times \dfrac{1}{3^{10}}$$  
+
+Ainsi $S$ est la somme des $11$ premiers termes d'une suite géométrique de raison $\dfrac{1}{3}$ et de premier terme $\dfrac{1}{2}$. 
+
+On en déduit que :
+$$S= \dfrac{1}{2} \times \dfrac{1-\left(\dfrac{1}{3}\right)^{11}}{1-\dfrac{1}{3}} = \dfrac{3}{4}\left(1 - \dfrac{1}{3^{11}} \right).$$
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+Soit $(u_n)_{n \in \mathbb{N}}$ une suite géométrique croissante telle que $u_4 = 3$ et $u_{6} = 9$.  
+Déterminons la somme des $25$ premiers termes de la suite, puis la somme des termes de $u_{0}$ à $u_{25}$.
+
+* Déterminons la raison de la suite ainsi que le premier terme $u_0$.
+  
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    $\dfrac{u_6}{u_4} = \dfrac{u_0 \times q^6}{u_0 \times q^4} = q^2$.  
+    Donc $q^2 = 3$, d'où, puisque la suite est croissante, $q = \sqrt{3}$.  
+    On a $u_4 = u_0 \times (\sqrt{3})^4$, donc $u_0 = \dfrac{3}{9} = \dfrac{1}{3}$.
+    </details>
+
+* Déterminons la somme des $25$ premiers termes.
+  
+    <details class="bloc cor"><summary>Afficher la correction :</summary>
+    On a la somme des $26$ premiers termes d'une suite géométrique (de $u_0$ à $u_{25}$).
+    $$\sum_{k=0}^{25} u_k = \dfrac{1}{3} \times \dfrac{1 - \sqrt{3}^{26}}{1 - \sqrt{3}}$$
+    </details>
+:::
+
+
+<div class="nav-pages">
+  <a class="prev" href="sg_definition.html">⬅️</a>
+  <a class="next" href="sg_bilan.html">➡️</a>
+</div>

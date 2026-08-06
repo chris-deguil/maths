@@ -1,0 +1,52 @@
+
+/* assets/pyodide-mkdocs.scss */
+/* Style inspiré du thème Pyodide-MkDocs (look Material, boutons pill) */
+:root{
+  --pmk-blue: #1f6feb;
+  --pmk-blue-dark:#0d419d;
+  --pmk-border:#bcd3ff;
+}
+.exo-wrap{max-width:920px;margin:1rem auto;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.45}
+.editor-shell{border:2px solid var(--pmk-border);border-radius:12px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.04);overflow:hidden;background:#fff}
+.bar-top{display:flex;justify-content:flex-end;padding:8px 12px;color:#4b5563;font-weight:600;background:linear-gradient(#f9fbff,#f1f5ff);border-bottom:1px solid #dbe7ff}
+.bar-top .cell-num{font-family:ui-monospace,Consolas,monospace}
+textarea#code{width:100%;height:280px;font-family:ui-monospace,Consolas,monospace;font-size:15px;border:none;outline:none;padding:6px 8px;box-sizing:border-box}
+.CodeMirror{height:280px;font-size:15px}
+.output{border-top:1px solid #e4edff;min-height:120px;max-height:220px;overflow:auto;padding:10px 12px;background:#fff}
+.status{display:flex;justify-content:flex-end;gap:8px;align-items:center;padding:8px 12px;color:#374151;background:#fff;border-top:1px solid #e4edff}
+.status .quota{font-weight:600}
+
+.toolbar{display:flex;gap:12px;align-items:center;justify-content:flex-start;padding:10px;background:#f6f8ff;border-top:1px solid #e4edff;border-radius:0 0 12px 12px}
+
+.btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #1f6feb;
+  border: 1px solid #0d419d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(0,0,0,.08), inset 0 0 0 1px rgba(255,255,255,.15);
+  transition: transform .05s ease, box-shadow .15s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,.12), inset 0 0 0 1px rgba(255,255,255,.25);
+}
+
+.btn:active { transform: translateY(1px); }
+
+.btn[disabled] { opacity:.55; cursor:not-allowed; }
+
+#run      { background: url("../image/play.png") no-repeat center/60% #1f6feb; }
+#check    { background: url("../image/check.png") no-repeat center/60% #1f6feb; }
+#download { background: url("../image/dowload.png") no-repeat center/60% #1f6feb; }
+#reset    { background: url("../image/restart.png") no-repeat center/60% #1f6feb; }
+#clear    { background: url("../image/charger.png") no-repeat center/60% #1f6feb; }
+#save     { background: url("../image/sauvegarder.png") no-repeat center/60% #1f6feb; }
+
+
+.btn svg{width:18px;height:18px;display:block;fill:#fff}
+pre{margin:0;white-space:pre-wrap}

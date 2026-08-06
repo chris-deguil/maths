@@ -1,0 +1,148 @@
+---
+title: "Complément de dérivation"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Dérivée de la composée - dérivée n-ième"
+order: 3
+---
+
+----
+
+
+## Dérivée de la composée
+:::{.bloc .rem}
+<span class="bloc-titre">Développement limité à l'ordre 1 </span><br>
+
+On considère $f$ une fonction définie sur $I$ à valeurs dans $\R$, $a \in I$ et $f$ dérivable en $a$.  
+Soit la fonction définie par :
+$$
+\epsilon(x) = \left\{
+\begin{array}{ll}
+\frac{f(x)-f(a)}{x-a} - f'(a) & \text{si } x \neq a \\
+0 & \text{si } x = a
+\end{array}
+\right.
+$$
+
+Pour tout $x \in I$,
+$$
+f(x) = f(a) + (x-a)f'(a) + (x-a) \epsilon(x).
+$$
+Cette quantité est appelée le développement limité à l'ordre 1 de $f$ en $a$.
+
+De plus, $$\lim_{x \to a} \epsilon(x) = \lim_{x \to a} \left(\frac{f(x)-f(a)}{x-a} - f'(a)\right) = 0$$
+:::
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* La "première partie" du développement limité à l'ordre 1 correspond à l'expression de l'équation de la tangente au point d'abscisse $a$.
+* On peut définir des développements limités à l'ordre $n$. Il s'agit alors d'approximer localement une fonction par un polynôme de degré $n$.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $f$ une fonction dérivable sur $I$ et $g$ une fonction dérivable sur $J$ telles que $f(I) \subset J$.  
+Alors la fonction $g \circ f$ est dérivable sur $I$ et $$\forall x \in I, \, (g \circ f)'(x) = f'(x) \times (g' \circ f)(x)$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Puisque $g$ est dérivable en $f(a)$, on peut écrire le développement limité de $g$ en $f(a)$ :
+$$g(y) = g(f(a)) + (y - f(a))g'(f(a)) + (y - f(a))\epsilon(y),$$
+où $\lim_{y \to f(a)} \epsilon(y) = 0$.  
+En remplaçant $y$ par $f(x)$, on obtient pour tout $x \in I$ :
+$$g(f(x)) = g(f(a)) + (f(x) - f(a))g'(f(a)) + (f(x) - f(a))\epsilon(f(x)).$$
+Pour tout $x \in I \backslash \{a\}$, on a :
+$$\dfrac{(g \circ f)(x) - (g \circ f)(a)}{x-a} = \underbrace{\dfrac{f(x) - f(a)}{x-a}}_{\rightarrow f'(a)} g'(f(a)) + \underbrace{\dfrac{f(x) - f(a)}{x-a}}_{\rightarrow f'(a)} \epsilon(f(x)).$$
+En passant à la limite quand $x \to a$, on obtient :
+$$\lim_{x \to a} \dfrac{(g \circ f)(x) - (g \circ f)(a)}{x-a} = f'(a) \times g'(f(a)).$$
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère la fonction $h$ définie sur $\mathbb{R}$ par $h(x)= e^{3x^2-5x+1}$.  
+On a $h= g \circ f$ avec $g:x \longmapsto \exp(x)$ et $f:x \longmapsto 3x^2-5x+1$.
+
+* La fonction $\exp$ est dérivable sur $\mathbb{R}$. Pour tout réel $x$, $g'(x)=e^x$.
+* $f$ étant une fonction polynôme, elle est dérivable sur $\mathbb{R}$. Pour tout $x \in \mathbb{R}$, $f'(x)= 6x-5$.
+
+On déduit que $h = g \circ f$ est dérivable sur $\mathbb{R}$.  
+Pour tout $x \in \mathbb{R}$, $$ h'(x) = f'(x) \times (g' \circ f)(x) = (6x-5) e^{3x^2-5x+1}$$
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $u$ une fonction dérivable sur $I$, alors :
+
+* $(e^{u})' = u' e^u$
+* Si $u > 0$ sur $I$, alors $(\sqrt{u})' = \dfrac{u'}{2 \sqrt{u}}$
+* Pour tout $n \in \mathbb{Z}^*$, si $u \neq 0$ sur $I$, alors $(u^n)' = n u' u^{n-1}$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Pour démontrer ces résultats, on utilise la règle de dérivation des fonctions composées.
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère la fonction $h$ définie par $h(x) = \dfrac{2}{1+e^{2x+1}}$.  
+On a $h = g \circ f$ avec $g : x \longmapsto \dfrac{2}{x}$ et $f : x \longmapsto 1+e^{2x+1}$.
+
+* La fonction $f$ est dérivable sur $\mathbb{R}$, à valeurs dans $\mathbb{R}_+^*$. De plus, pour tout $x \in \mathbb{R}$, $f'(x) = 2 e^{2x+1}$.
+* La fonction $g$ est dérivable sur $\mathbb{R}_+^*$ et pour tout $x \in \mathbb{R}_+^*$, $g'(x) = -\dfrac{2}{x^2}$.
+
+On en déduit que $h = g \circ f$ est dérivable sur $\mathbb{R}$ et pour tout réel $x$,
+$$h'(x) = f'(x) (g' \circ f)(x) = -\dfrac{4 e^{2x+1}}{(1+e^{2x+1})^2}.$$
+:::
+
+
+## Dérivées sucecssives
+:::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Soient $n$ un entier naturel non nul et $f$ une fonction définie sur $I$.  
+On définit les dérivées successives de la fonction $f$ par récurrence, en convenant de noter
+$$f^{(0)} = f \quad \text{et} \quad f^{(n)} = \left( f^{(n-1)} \right)'.$$
+
+* On appelle alors dérivée $n$-ième de $f$ en $a$ le nombre $f^{(n)}(a)$.
+* On appelle fonction dérivée $n$-ième de $f$ la fonction $: x \longmapsto f^{(n)}(x)$.
+* On dit que la fonction $f$ est $n$ fois dérivable sur $I$ lorsque pour tout $k \in \llbracket 0 \,;\, n \rrbracket$, la fonction $f^{(k)}$ est définie sur $I$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* En utilisant les notations de la définition, on a $f' = f^{(1)}$.
+* La dérivée $2$-ième de $f$ est appelée dérivée seconde. On la note généralement $f''$.
+* La dérivée $3$-ième de $f$ est généralement notée $f'''$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère la fonction $f$ définie sur $\mathbb{R}$ par $f(x)=\dfrac{1}{1+x^2}$.  
+$f$ est dérivable sur $\mathbb{R}$ comme fonction rationnelle définie sur $\mathbb{R}$.  
+Pour tout $x \in \mathbb{R}$, $f'(x)= - \dfrac{2x}{(1+x^2)^2}$.  
+$f'$ est une fonction rationnelle, elle est donc dérivable sur $\mathbb{R}$.  
+Pour tout $x \in \mathbb{R}$, 
+$$f''(x)=(f')'(x)=-\dfrac{2(1+x^2)^2 - 2x \times 2(1+x^2) \times 2x}{(1+x^2)^4} = -\dfrac{2(1+x^2) - 8x^2}{(1+x^2)^3}= \dfrac{6x^2-2}{(1+x^2)^3}$$
+L'utilisation d'un logiciel de calcul formel peut nous donner directement la dérivée troisième :
+$$f^{(3)}(x) = \dfrac{24x(1-x^2)}{(1+x^2)^4}$$
+:::
+
+
+<div class="nav-pages">
+  <a class="prev" href="composee.html">⬅️</a>
+  <a class="next" href="convexite.html">➡️</a>
+</div>

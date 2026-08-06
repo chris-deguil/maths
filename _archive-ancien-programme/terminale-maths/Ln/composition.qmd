@@ -1,0 +1,93 @@
+---
+title: "Composition"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Ln f, exercice bilan"
+order: 6
+---
+
+
+## Dérivée de $\ln(|u|)$
+
+## Dérivée de $\ln(|u|)$
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+Soit $f$ une fonction définie et dérivable sur un intervalle $I$ ne s'annulant pas sur $I$.  
+Alors la fonction $g : x \longmapsto \ln(|f(x)|)$ est définie et dérivable sur $I$ et :
+$$\forall x \in I, \, g'(x) = \dfrac{f'(x)}{f(x)}$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+$f$ ne s'annulant pas sur $I$ et $|f| > 0$ sur $I$, alors $\ln \circ |f|$ est parfaitement définie sur $I$.  
+
+* Si $f < 0$, alors $g = \ln \circ (-f)$. Puisque la fonction $-f$ est dérivable et strictement positive, $g$ est dérivable et :
+$$g' = -f' \times \dfrac{1}{-f} = \dfrac{f'(x)}{f(x)}$$
+* On obtient le même résultat avec $f > 0$.
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+La fonction $f$ est de signe constant sur $I$. On en déduit que $f$ et $g$ ont les mêmes variations si $f$ est positive sur $I$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+Déterminer l'ensemble de définition et l'expression de la fonction dérivée de la fonction $f$ définie par $f(x)= \ln(\ln(x))$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$D_f = \{x \in \R, \, \ln(x) > 0\} = \{x \in \R, \, x > 1\} = ]1 \, ; \, +\infty[$.  
+La fonction $f$ est dérivable sur $D_f$ comme composée de fonctions dérivables.  
+$\forall x \in D_f$ :
+$$f'(x) = \dfrac{1}{x} \times \dfrac{1}{\ln(x)} = \dfrac{1}{x \ln(x)}$$
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple (Bac S, Polynésie 2008) :<span class="exemp-extra">   </span></div>
+On considère la fonction $f$ définie sur $\R$ par $f(x) = \ln(\e^x + 2\e^{-x})$.
+
+1. Montrer que, pour tout réel $x,~ f(x) = x + \ln(1 + 2\e^{-2x})$.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout $x \in \R$, $f(x) = \ln[\e^x(1 + 2\e^{-2x})] = \ln(\e^x) + \ln(1 + 2\e^{-2x}) = x + \ln(1 + 2\e^{-2x})$.
+</details>
+
+On admet que, pour tout réel $x, \, f(x) = -x + \ln(2 + \e^{2x})$.
+
+2. Calculer $\lim_{x \to +\infty} f(x)$ et montrer que la droite $(d) : y=x$ est asymptote.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout réel $x$, $f(x) - x = \ln(1 + 2\e^{-2x})$.  
+Or $\lim_{x \to +\infty} (1 + 2\e^{-2x}) = 1$, donc par continuité de $\ln$, $\lim_{x \to +\infty} \ln(1 + 2\e^{-2x}) = 0$.  
+La droite $(d) : y = x$ est une asymptote oblique à $(\mathcal{C}_f)$ au voisinage de $+\infty$.
+</details>
+
+3. Étudier la position relative de $(\mathcal{C}_f)$ et de $(d)$.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout réel $x$, $1+2\e^{-2x} > 1$. Par croissance de la fonction $\ln$, on en déduit que :
+$$\ln(1+2\e^{-2x}) > 0$$
+Donc $f(x)-x > 0$. Ainsi, $(\mathcal{C}_f)$ est au-dessus de $(d)$ sur $\R$.
+</details>
+
+4. Étudier les variations de la fonction $f$.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$f$ est dérivable sur $\R$ par composition. Pour tout $x \in \R$ :
+$$f'(x) = \dfrac{\e^x - 2\e^{-x}}{\e^x + 2\e^{-x}}$$
+Le dénominateur est strictement positif. $f'(x)$ est du signe de $\e^x - 2\e^{-x} = \e^{-x}(\e^{2x}-2)$.  
+$\e^{2x}-2 \geqslant 0 \Longleftrightarrow 2x \geqslant \ln 2 \Longleftrightarrow x \geqslant \dfrac{\ln 2}{2}$.  
+* $f$ est décroissante sur $]-\infty \, ; \, \frac{\ln 2}{2}]$.
+* $f$ est croissante sur $[\frac{\ln 2}{2} \, ; \, +\infty[$.
+</details>
+
+5. Montrer que le minimum de $f$ est égal à $\dfrac{3}{2}\ln 2$.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Le minimum est atteint en $x = \dfrac{1}{2}\ln 2$.  
+$f\left(\dfrac{\ln 2}{2}\right) = -\dfrac{\ln 2}{2} + \ln(2 + \e^{2 \times \frac{\ln 2}{2}}) = -\dfrac{1}{2}\ln 2 + \ln(4) = -\dfrac{1}{2}\ln 2 + 2\ln 2 = \dfrac{3}{2}\ln 2$.
+</details>
+:::
+
+
+<div class="nav-pages">
+ <a class="prev" href="derivation.html">⬅️</a>
+</div>

@@ -1,0 +1,72 @@
+---
+title: "Epreuve de Bernoulli"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "expérience à deux issues"
+order: 2
+---
+
+## Epreuve de Bernoulli
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+On appelle **épreuve de Bernoulli** toute épreuve aléatoire qui possède deux issues appelées succès et échec.
+
+On dit alors qu'une variable aléatoire suit une **loi de Bernoulli de paramètre $p$** si elle prend la valeur $1$ en cas de succès avec la probabilité $p$, et $0$ sinon avec la probabilité $1-p$.
+:::
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère le lancer d'un dé à $6$ faces, et on s'intéresse à la réalisation d'un $5$. Ce jeu constitue une épreuve de Bernoulli (soit on obtient le $5$, soit on obtient un autre nombre).
+
+Si on considère la variable aléatoire $X$ qui prend $1$ comme valeur si on obtient le $5$, et $0$ sinon, alors $X$ suit une loi de Bernoulli de paramètre $\dfrac{1}{6}$.
+
+Dans ce cas, on a $P(X = 1) = \dfrac{1}{6}$ et $P(X = 0) = \dfrac{5}{6}$.
+:::
+::: {.bloc}
+~~~~python
+import random
+def Bernoulli(p):   #0 <= p <=1
+	if random.random()<p:
+		return 1
+	else :
+		return 0
+
+>>> Bernoulli(0.3), Bernoulli(0.3), Bernoulli(0.3)
+1,0,0 # On a donc eu succès - Echec - Echec
+~~~~
+
+- La bibliothèque ``random est une bibliothèque permettant de \og simuler \fg.
+- On répète trois fois la même expérience. La première donne un succès, les deux suivantes des échecs
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $X$ une variable aléatoire qui suit la loi de Bernoulli de paramètre $p$. Alors $E(X)=p$ et $Var(X)=p(1-p)$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On a :
+$$E(X)= P(X=0)\times 0 + P(X=1) \times 1 = P(X=1)=p$$
+
+On a :
+$$\begin{align*}
+Var(X) &= P(X=0)(0-E(X))^2 + P(X=1)(1-E(X))^2 \\
+&= (1-p)p^2 + p(1-p)^2 \\
+&= p(1-p)(p + 1 - p) \\
+&= p(1-p)
+\end{align*}$$
+</details>
+
+
+<div class="nav-pages">
+ <a class="prev" href="epreuve_independante.html">⬅️</a>
+  <a class="next" href="bernoulli2.html">➡️</a>
+</div>

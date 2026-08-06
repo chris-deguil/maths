@@ -1,0 +1,149 @@
+---
+title: "Loi binomiale"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Bernoulli - Binomiale"
+order: 5
+---
+
+
+
+_____
+
+
+### Définition
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+On appelle loi binomiale de paramètres $n$ et $p$, la loi de la variable aléatoire $X$ qui donne le nombre de succès dans la répétition de $n$ épreuves de Bernoulli de paramètre $p$.  
+On dit alors que $X$ suit la loi binomiale de paramètres $n$ et $p$. On note alors $X \hookrightarrow \mathcal{B}(n~;~p)$.
+:::
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Dans l'exemple étudié précédemment, si on considère la variable aléatoire $X$ qui compte le nombre de $5$ obtenus pour le lancer de $3$ dés, alors $X$ suit la loi binomiale de paramètres $3$ et $\dfrac{1}{6}$.  
+On peut aussi noter $X \hookrightarrow \mathcal{B}\left(3 \, ; \,\dfrac{1}{6} \right)$.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> D'après Bac, Pondichéry 2016 </span></div>
+
+Un institut effectue $n$ sondages pour connaître, dans une population donnée, la proportion de personnes favorables à un projet d'aménagement du territoire. Pour cela, on interroge un échantillon aléatoire de personnes de cette population, et l'on pose la même question à chaque personne.  
+L'institut de sondage interroge $700$ personnes. On note $X$ la variable aléatoire correspondant au nombre de personnes interrogées qui acceptent de répondre. On admet que la personne interrogée accepte de répondre avec une probabilité de $\dfrac{3}{5}$.
+
+Quelle est la loi de la variable aléatoire $X$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On répète $700$ fois de façon indépendante une même expérience aléatoire à deux issues, dont le succès est « la personne accepte de répondre au sondage » dont la probabilité est $\dfrac{3}{5}$.  
+Ainsi la variable aléatoire $X$ comptant le nombre de succès dans ce schéma de Bernoulli suit la loi binomiale de paramètres $\left(700 \, ; \, \dfrac{3}{5}\right)$.
+</details>
+
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Le nombre de personnes dans la population est suffisamment important pour que le tirage successif des personnes soit assimilable à un tirage avec remise.  
+Les épreuves sont donc identiques.
+:::
+
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admise) : </span><br>
+Soit $X \hookrightarrow \mathcal{B}(n\, ; \, p)$. Alors :
+$$E(x)=np \qquad  \text{et}  \qquad V(X) =np(1-p) $$
+
+:::
+
+
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span>
+Un QCM comporte 20 questions. Pour chaque question, quatre réponses sont proposées dont une seule est juste. Chaque question juste rapporte un point et il n'y a pas de pénalité pour une réponse fausse. Un candidat répond au hasard à toutes les questions.
+
+1. Justifier la loi suivi par la variable alétoire $X£ comptant le nombre de nsuccés.
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On considère alors l'expérience répondre juste à une question. La probabilité du succès est de $0,25$, et on répète $20$ fois de façons indépendantes et identiques cette expérience. Alors la variable aléatoire $X$ qui compte le nombre de succès suit la loi binomiale $\mathcal{B}(20~;~0,25)$.
+</details>
+
+2. Le nombre de points que peut espérer le candidat correspond au nombre de réponses justes.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+ Ce nombre est alors $E(X) = 20 \times 0,25 = 5$.
+</details>
+   
+   
+
+2. On souhaite maintenant qu'un candidat n'ayant pas travaillé, et répondant au hasard à toute les questions ne puisse espérer que $2$ points. Cherchons alors la pénalité à appliquer pour chaque mauvaise réponse.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Soit $1 \times E(X) + p \times (20-E(X)) = 2$. On montre alors que $p=0,2$.
+Il faut donc pénaliser de $0,2$ point par mauvaise réponse.
+</details>
+  
+
+
+3. Les résultats n'étant pas satisfaisant. On décide que chaque bonne réponse rapporte $1,25$ points et on ajoute $2$ au résultat final. Quel note peut espérer un élève qui répond au hasard ?
+4. 
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Soit $Y$ la note de l'élève, alors $Y=1,25X+2$.
+Ainsi, par linéarité de l'espérance,  $E(Y)=E(1,25X+2) =1,25E(X)+2 = 8,25$.
+
+</details>
+
+:::
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Retrouver les paramètres </span></div>
+
+On considère une variable aléatoire $X$ suivant une loi binomiale $\mathcal{B}(n\, ;\, p)$.  
+On donne $E(X) = 2$ et $P(X=0) = 0,0625$.
+
+1. Exprimer $p$ en fonction de $n$ à l'aide de l'espérance.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On sait que $E(X) = n \times p = 2$, donc $p = \dfrac{2}{n}$.
+</details>
+
+2. En utilisant la valeur de $P(X=0)$, déterminer la valeur du paramètre $n$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On n'a aucun succès, donc de l'indépendance des répétitions, $P(X=0) = (1-p)^n$. 
+
+On cherche donc $n$ tel que $\left(1 - \dfrac{2}{n}\right)^n = 0,0625$.
+
+À l'aide de la calculatrice, on cherche la valeur entière de $n$ :
+
+* Pour $n = 3$, on a $\left(1 - \dfrac{2}{3}\right)^{3} = \left(\dfrac{1}{3}\right)^{3} \approx 0,037$ (trop petit).
+* Pour **$n = 4$**, on a $\left(1 - \dfrac{2}{4}\right)^{4} = 0,5^{4} = 0,0625$.
+
+La valeur de $n$ est donc **$4$**.
+</details>
+
+3. Déduire la valeur de $p$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On calcule $p = \dfrac{2}{n} = \dfrac{2}{4} = 0,5$.
+La variable $X$ suit la loi $\mathcal{B}(4 \, ; \, 0,5)$.
+</details>
+
+:::
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="bernoulli2.html">⬅️</a>
+  <a class="next" href="biomiale2.html">➡️</a>
+</div>

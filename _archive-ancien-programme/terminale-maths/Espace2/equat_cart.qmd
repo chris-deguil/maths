@@ -1,0 +1,315 @@
+---
+title: "Vecteur normal, et Equation cartesienne de plan"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Dérivée, taux d'accroissement, étude d ela convexité"
+order: 5
+---
+
+
+## Vecteur normal
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Soit $\mathscr{P}$ un plan. On dit que le vecteur $\ve{n}$ est normal au plan $\mathscr{P}$ lorsqu'il est orthogonal à deux vecteurs non colinéaires de $\mathscr{P}$.
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $A$ un point de l'espace et $\ve{n}$ un vecteur.
+Il existe un unique plan passant par $A$ ayant $\ve{n}$ comme vecteur normal. Le plan $\mathscr{P}$ est alors l'ensemble des points $M$ tels que $\ve{AM} \cdot \ve{n} = 0$.
+
+:::
+
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On suppose qu'il existe deux plans. Les plans étant différents, ils ne sont pas confondus et contiennent $A$ et sont tous deux orthogonaux à $\ve{n}$. Or deux plans orthogonaux à une même droite sont parallèles entre eux. Ce qui est impossible.
+
+De plus soit $M \in \mathscr{P}$ alors $\ve{AM} \cdot \ve{n} = 0$.
+On suppose maintenant que $\ve{AM} \cdot \ve{n}=0$ et $M \notin \mathscr{P}$. Soit alors $M'$ le projeté orthogonal de $M$ sur $\mathscr{P}$. Alors $\ve{AM} \cdot \ve{n} = 0 \Longrightarrow \underbrace{\ve{AM'} \cdot \ve{n}}_{=0, \, M' \in \mathscr{P}} + \ve{MM'} \cdot \ve{n} = 0 \Longrightarrow \ve{MM'} \cdot \ve{n} = 0$.
+Or $\ve{MM'}$ et $\ve{n}$ sont colinéaires (car orthogonaux à $\mathscr{P}$), donc $\ve{MM'}= 0$ donc $M=M'$.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+L'orthogonalité des vecteurs $\ve{n}$ et $\ve{AM}$ caractérise le plan.
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère les points $A(3;5;-3)$ et $B(5;-3;1)$.
+
+1. Montrer que l'ensemble des points de l'espace équidistants de $A$ et $B$ est le plan passant par $I$ et orthogonal à $[AB]$.
+*Ce plan est appelé **plan médiateur***.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Soit $I$ le milieu de $[AB]$, ainsi $\ve{AI} + \ve{IB} = \ve{0}$.
+$$ \begin{aligned}
+AM=BM & \Longleftrightarrow AM^2=BM^2 \\
+&\Longleftrightarrow AM^2-BM^2=0 \\
+&\Longleftrightarrow (\ve{AM} + \ve{BM}) \cdot (\ve{AM} - \ve{BM})=0\\
+&\Longleftrightarrow (\ve{AI} +\ve{IM} + \ve{BI}+\ve{IM}) \cdot \ve{AB}=0\\
+&\Longleftrightarrow 2\ve{IM} \cdot \ve{AB}=0
+\end{aligned} $$
+Ainsi le plan cherché est bien le plan orthogonal à $(AB)$ et passant par le point $I$.
+
+</details>
+
+2. Déterminer une relation entre $x$, $y$ et $z$ de ce plan.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a $I(4;1;-1)$ et soit $M(x;y;z) \in \mathscr{P}_{[AB]}$.
+Donc $\ve{IM} (x-4;y-1;z+1)$ et $\ve{AB}(2;-8;4)$.
+Ainsi :
+$$2(x-4)-8(y-1)+4(z+1) = 0$$
+D'où, après simplification :
+$$x -4y +2z +2=0$$
+
+</details>
+
+:::
+
+
+__________________________________
+
+## Équation cartésienne de plan
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+1. Soit $\mathscr{P}$ un plan, alors il existe quatre réels $a$, $b$, $c$ et $d$ tels que $(a \, ; \,b \, ; \,c)\neq (0 \, ; \,0 \, ; \,0)$ et 
+$$\mathscr{P} = \{M(x \, ; \,y \, ; \,z), \, ax+by+cz+d=0\}.$$
+Cette équation est appelée équation cartésienne du plan $\mathscr{P}$.
+2. Soient $a, b, c$ et $d$ quatre réels tels que $(a \, ; \,b \, ; \,c)\neq (0 \, ; \,0 \, ; \,0)$.
+Alors l'ensemble des points $M$ vérifiant $$ax+by+cz+d=0$$
+est un plan dont $\ve{n} \begin{pmatrix} a\\b\\c \end{pmatrix}$ est un vecteur normal.
+
+:::
+
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Soit $A(x_A,y_A,z_A)$ un point et $\ve{n}(a \, ; \,b \, ; \,c)$.
+
+1. Soit $\mathscr{P}$ passant par $A$ de vecteur normal $\ve{n}$. Alors $M(x \, ; \,y \, ; \,z) \in \mathscr{P} \Longleftrightarrow \ve{n} \cdot \ve{AM} = 0 \Longleftrightarrow ax+by+cz+d=0$ avec $d=-(ax_A+by_A+cz_A)$. 
+2. Soit $\mathscr{E}=\{M(x,y,z), \, ax+by+cz+d=0\}$ où $(a,b,c) \neq (0,0,0)$.
+On peut supposer $a \neq 0$ et ainsi $\mathscr{E}$ est non vide car contient $(-d/a \, ; \, 0 \, ; \, 0)$.
+
+Soit $M(x \, ; \,y \, ; \,z)$ vérifiant l’équation, alors 
+$$\left\{\begin {array}{ll}
+ax + by + cz + d = 0 & (L_1)\\
+ax_A + by_A + cz_A + d =0 & (L_2)
+\end{array}\right.$$
+Ainsi $L_2-L_1$ donne : $a(x - x_A) + b(y - y_A) + c(z - z_A) = 0$. 
+
+Donc $\ve{AM} \cdot \ve{n} = 0$.
+
+Cela montre que l’ensemble des points $M$ est un plan de vecteur normal $\ve{n}$.
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Soient $B(1;5;3)$ et $\ve{n} \begin{pmatrix} 1\\1\\2 \end{pmatrix}$.
+
+1. Déterminer une équation cartésienne du plan de vecteur normal $\ve{n}$ et passant par $B$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$\ve{n}$ étant un vecteur normal à $\mathscr{P}$, alors le plan a une équation de la forme $$x+y+2z+d=0.$$
+Or $B \in \mathscr{P}$, donc ses coordonnées vérifient l'équation cartésienne du plan, ainsi $$1 +5+2 \times 3 + d=0,$$
+d'où $d= -12$.
+On en déduit que $$\mathscr{P}: x+y+2z-12=0.$$
+
+</details>
+
+2. Le point $A(0 ;0 ;2 )$ appartient-il à ce plan ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a $0+0+2\times 2 - 12 = -8 \neq 0$.
+Les coordonnées de $A$ ne vérifiant pas l'équation du plan, alors $A$ n'appartient pas au plan.
+
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère la droite $d$ et le plan $\mathscr{P}$ dont les équations sont données :
+$$d:\left\{\begin{array}{l}x=3-2t\\
+y=t\\
+z=-1+t\end{array}\right. , \, t \in \mathbb{R} \qquad \qquad \text{et} \qquad \qquad \mathscr{P} : 2x-3y+z=0.$$
+Déterminer les coordonnées du point d'intersection, s’il existe, entre $d$ et $\mathscr{P}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Soit $M \in d \cap \mathscr{P}$, si et seulement s'il existe $t \in \mathbb{R}$ tel que $$2(3-2t)-3t+(-1+t)=0.$$
+$2(3-2t)-3t+(-1+t)=0 \Longleftrightarrow 6-4t -3t -1+t = 0 \Longleftrightarrow t=\dfrac{5}{6}$.
+On en déduit donc que l'intersection existe, et que l'intersection $A$ a pour coordonnées $$\left(\dfrac{4}{3} \, ; \, \dfrac{5}{6} \, ; \, -\dfrac{1}{6}\right).$$
+
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère la droite $d$ dont une équation paramétrique est 
+$$\left\{\begin{array}{l}
+x=-1+2t\\
+y=1-t\\
+z=3t\end{array} \right. \, , t \in \mathbb{R}.$$
+Déterminer l'équation cartésienne d'un plan contenant la droite $d$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$\ve{u}(2;-1;3)$ est un vecteur directeur de $d$.
+Soit $\ve{n}(3;0;-2)$, ce vecteur est normal au vecteur $\ve{u}$.
+Ainsi une équation cartésienne d'un plan dont $\ve{n}$ est un vecteur normal est $$3x-2z+d=0.$$
+De plus $A(-1;1;0)\in d$, il doit donc appartenir au plan cherché.
+Ainsi $3\times (-1)-2\times 0+d=0$, d'où $d=3$.
+On en déduit de ce qui précède qu'un des plans contenant la droite $d$ a pour équation cartésienne $$3x-2z+3=0.$$
+
+</details>
+
+:::
+
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Soient $\mathscr{P}$ un plan de vecteur normal $\ve{n_1}$ et $\mathscr{Q}$ un plan de vecteur normal $\ve{n_2}$.
+Les plans sont dits perpendiculaires lorsque les vecteurs normaux sont orthogonaux.
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admise) : </span>
+
+Soient deux plans $\mathscr{P}$ et $\mathscr{Q}$ et $d$ une droite.
+
+1. $\mathscr{P}$ et $\mathscr{Q}$ sont parallèles si et seulement si un vecteur normal de $\mathscr{P}$ est colinéaire à un vecteur normal de $\mathscr{Q}$.
+2. La droite $d$ est parallèle au plan $\mathscr{P}$ si et seulement si un vecteur directeur de $d$ est orthogonal à un vecteur normal de $\mathscr{P}$.
+3. $d$ est perpendiculaire à $\mathscr{P}$ si et seulement si un vecteur directeur de $d$ est colinéaire à un vecteur normal de $\mathscr{P}$.
+
+:::
+
+
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère les plans $\mathscr{P} : 3x+2y-z+5=0$ et $\mathscr{Q} : -x+2y+z+1=0$.
+Soit $d:\left\{\begin{array}{l}x=3-3t\\ y=-2t\\ z=-1+t\end{array}\right. , \, t \in \mathbb{R}$
+
+1. La droite $d$ est-elle orthogonale à $\mathscr{P}$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Un vecteur directeur de $d$ est $\begin{pmatrix} -3\\-2\\1 \end{pmatrix}$ et un vecteur normal à $\mathscr{P}$ est $\begin{pmatrix} 3\\2\\-1 \end{pmatrix}$.
+Ces deux vecteurs sont clairement colinéaires (ils sont opposés), donc $d$ est perpendiculaire à $\mathscr{P}$.
+
+</details>
+
+2. Les deux plans sont-ils perpendiculaires ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Les deux plans ont respectivement $\ve{u} \begin{pmatrix} 3\\2\\-1 \end{pmatrix}$ et $\ve{v} \begin{pmatrix} -1\\2\\1 \end{pmatrix}$ comme vecteurs normaux.
+Or $\ve{u} \cdot \ve{v} = 3\times (-1)+ 2 \times 2 - 1 \times 1 = 0$.
+On en déduit que $\ve{u}$ et $\ve{v}$ sont orthogonaux, donc que les plans sont perpendiculaires.
+
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère les plans $\mathscr{P}_1 : 4x-y+3z+1=0$ et $\mathscr{P}_2:2x-2y+z+2=0$.
+
+1. Les plans sont-ils parallèles ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$\ve{u}(4;-1;3)$ et $\ve{v}(2;-2;1)$ sont des vecteurs normaux à $\mathscr{P}_1$ et $\mathscr{P}_2$ respectivement.
+Ces vecteurs ne sont clairement pas colinéaires, donc les plans ne sont pas parallèles.
+
+</details>
+
+2. Déterminer une équation paramétrique de l'intersection de ces deux plans.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a 
+$$ \begin{aligned}
+\left\{\begin{array}{l}
+4x-y+3z+1=0\\
+2x-2y+z+2=0
+\end{array}\right. 
+&\Longleftrightarrow  \left\{
+\begin{array}{ll}
+4x-y+3z+1=0& (L_1)\\
+4x-4y+2z+4=0& (L_2)
+\end{array}\right.\\
+&\Longleftrightarrow \left\{
+\begin{array}{ll}
+4x-y+3z+1=0& (L_1)\\
+3y-z+3=0& (L_2' \leftarrow L_1-L_2)
+\end{array}\right. \\
+&\Longleftrightarrow \left\{
+\begin{array}{l}
+x = \tfrac{1}{4} y - \tfrac{3}{4} z - \tfrac{1}{4}\\
+y=\tfrac{1}{3}z-1\\
+z=t
+\end{array}\right.
+\end{aligned} $$
+En remplaçant $z$ par $t$, on obtient 
+$$\left\{\begin{array}{l}
+x= -\tfrac{1}{2} - \tfrac{2}{3} t\\
+y=-1+\tfrac{1}{3}t\\
+z=t
+\end{array} \right. , t \in \mathbb{R}.$$
+Ainsi en prenant $3t$ à la place de $t$, une équation paramétrique de la droite d'intersection est 
+$$\left\{\begin{array}{l}
+x= -\tfrac{1}{2} - 2t\\
+y=-1+t\\
+z=3t
+\end{array} \right. , t \in \mathbb{R}.$$
+
+</details>
+
+:::
+
+
+
+
+
+
+
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="ps_repere.html">⬅️</a>
+  <a class="next" href="distance.html">➡️</a>
+</div>

@@ -1,0 +1,32 @@
+---
+title: "Chapitre 3 : Espace 1"
+description: "Forme canonique, racines, signe, parabole."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+- Représenter des combinaisons linéaires de vecteurs donnés.
+- Exploiter une figure pour exprimer un vecteur comme combinaison linéaire de
+vecteurs.
+- Décrire la position relative de deux droites, d’une droite et d’un plan, de deux plans.
+- Lire sur une figure si deux vecteurs d’un plan, trois vecteurs de l’espace, forment une
+base.
+- Lire sur une figure la décomposition d'un vecteur dans une base.
+- Étudier géométriquement des problèmes simples de configurations dans l’espace
+(alignement, colinéarité, parallélisme, coplanarité)
+:::
+

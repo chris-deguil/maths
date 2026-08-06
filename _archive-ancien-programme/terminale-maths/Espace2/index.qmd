@@ -1,0 +1,38 @@
+---
+title: "Chapitre 8  : Vecteur normal, Orthogonalité dans l'espace, Equations cartésiennes de plans"
+description: "Vecteur normal, orthogonalité de deux droites, d'une droite et d'un plan, equation cartésienne, distance et projection orthogonale.."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+
+- Produit scalaire de deux vecteurs de l’espace. Bilinéarité, symétrie.
+- Orthogonalité de deux vecteurs. Caractérisation par le produit scalaire.
+-  Base orthonormée, repère orthonormé
+-  Coordonnées d’un vecteur dans une base orthonormée. Expressions du produit scalaire et de la norme. Expression de la  distance entre deux points
+-  Développement de $\norm{\ve{u} \pm \ve{v}}^2$, formules de polarisation.
+- Orthogonalité de deux droites, d’un plan et d’une droite.
+- Vecteur normal à un plan. Étant donnés un point A et un vecteur non nul $\ve{n}$, plan passant par A et normal à $\ve{n}$.
+- Équation cartésienne d’un plan.
+- Projeté orthogonal d’un point sur une droite, sur un plan.
+- Utiliser le produit scalaire pour démontrer une orthogonalité, pour calculer un angle, une longueur dans l’espace
+- Utiliser la projection orthogonale pour déterminer la distance d’un point à une droite ou la distance d'un point à un plan.
+- Résoudre des problèmes impliquant des grandeurs et mesures : longueur, angle, aire, volume.
+- Étudier des problèmes de configuration dans l’espace : orthogonalité de deux droites, d’une droite et d’un plan ; lieux géométriques simples, par exemple plan médiateur de deux points.
+
+
+:::

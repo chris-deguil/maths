@@ -1,0 +1,94 @@
+---
+title: "Suites arithmétiques : Variations et Sommes"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Variation d'une suite arithmétique, somme des termes consécutifs"
+order: 2
+---
+
+___
+
+## Variation d'une suite arithmétique
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Soit $(u_n)_{n \in \mathbb{N}}$ une suite arithmétique de raison $r$. 
+
+1. Si $r > 0$, alors la suite $(u_n)_{n \in \mathbb{N}}$ est croissante.
+2. Si $r < 0$, alors la suite $(u_n)_{n \in \mathbb{N}}$ est décroissante.
+3. Si $r = 0$, alors la suite $(u_n)_{n \in \mathbb{N}}$ est constante.
+:::
+
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Soit $(u_n)_{n \in \mathbb{N}}$ une suite arithmétique de raison $r$.  
+Pour tout $n \in \mathbb{N}$, $u_{n+1} - u_n = u_n + r - u_n = r$
+
+1. Si $r > 0$, alors $u_{n+1} - u_n > 0$ et donc la suite est croissante.
+2. Si $r < 0$, alors $u_{n+1} - u_n < 0$ et donc la suite est décroissante.
+3. Si $r = 0$, alors $u_{n+1} - u_n = 0$ et donc la suite est constante.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> </span></div>
+Soit $(u_n)$ la suite définie pour tout entier naturel $n$, par $u_{n} = 3n-2$.  
+$(u_n)$ est une suite arithmétique de raison $3$. Elle est donc croissante.
+:::
+
+## Somme des termes d'une suite arithmétique
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+La somme des $n+1$ premiers entiers est donnée par 
+$$\sum_{k=0}^{n} k = 1+2+3+ \dots + n = \dfrac{(n + 1)n}{2}$$
+:::
+
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Pour tout entier naturel $n$,  
+$\sum_{k=0}^n (k+1)^2 = \sum_{k=0}^n (k^2 + 2k + 1 ) = \sum_{k=0}^n k^2 + 2\sum_{k=0}^n k + \sum_{k=0}^n 1 = \sum_{k=0}^n k^2 + 2\sum_{k=0}^n k + (n+1)$  
+Ainsi :
+$$\sum_{k=0}^n (k+1)^2- \sum_{k=0}^n k^2 = 2\sum_{k=0}^n k + (n+1)$$
+Donc :
+$$(n+1)^2 - (n+1) = 2\sum_{k=0}^n k$$
+On déduit, après factorisation dans le premier membre de l'égalité, que :
+$$\sum_{k=0}^n k = \dfrac{n(n+1)}{2}$$
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+On déduit de cette propriété la somme des $n+1$ premiers termes d'une suite arithmétique :
+$$\sum_{k=0}^{n} u_k = u_0 + u_1 + u_2+ \dots + u_n = \dfrac{(n + 1)(u_0 + u_n)}{2} = \dfrac{(n+1)(2u_0+nr)}{2}$$
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple <span class="exemp-extra"> Saut en parachute </span></div>
+Lors d'un saut en parachute, en supposant que les effets de l'air sont négligeables, un parachutiste parcourt chaque seconde $9{,}8$ m de plus que la seconde précédente (cela est dû à la force de gravitation).  
+
+Dans la première seconde, le parachutiste parcourt $5$ m.  
+
+Déterminons la distance parcourue pendant les $10$ premières secondes.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Notons $u_{n}$ la distance parcourue pendant la $n$-ième seconde, ainsi $u_1=5$.  
+
+D'après l'énoncé, pour tout $n \in \mathbb{N}$, $u_{n+1} = u_n+9{,}8$.  
+
+La suite $(u_n)$ est donc une suite arithmétique de raison $9{,}8$ et de premier terme $u_1 = 5$.  
+
+Ainsi pour tout entier $n$, $u_n = u_1 + 9{,}8(n-1) = 9{,}8 n -4{,}8$.  
+$$D_{10} = u_1 + \dots + u_{10} = \dfrac{10 (u_1 + u _{10})}{2} = \dfrac{10(5 + 93{,}2)}{2} = 491$$
+Ainsi, sur les $10$ premières secondes, le parachutiste aura parcouru $491$ m.
+</details>
+:::
+
+
+<div class="nav-pages">
+  <a class="prev" href="sa_definition.html">⬅️</a>
+  <a class="next" href="sa_bilan.html">➡️</a>
+</div>

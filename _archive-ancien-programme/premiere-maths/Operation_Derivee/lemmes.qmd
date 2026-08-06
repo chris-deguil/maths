@@ -1,0 +1,63 @@
+---
+title: "Des lemmes"
+description: "Opérations sur les limites "
+format:
+  html:
+    toc: true
+    number-sections: false
+order: 1
+---
+
+
+-----
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Soient $f$ et $g$ définies sur un intervalle $I$ sauf peut-être en un réel $a \in I$. On suppose que $f$ et $g$ admettent chacune une limite finie en $a$.
+
+Alors :
+
+
+1. La fonction $s : x \in I \setminus \{a\} \mapsto f(x) + g(x)$ admet une limite finie en $a$ et
+$
+\lim_{x \to a} s(x) = \lim_{x \to a} f(x) + \lim_{x \to a} g(x).
+$
+
+2. La fonction $p : x \in I \setminus \{a\} \mapsto f(x) \times g(x)$ admet une limite finie en $a$ et
+$
+\lim_{x \to a} p(x) = \lim_{x \to a} f(x) \times \lim_{x \to a} g(x).
+$
+
+3. Si $g(x) \neq 0$ pour tout $x$ dans $I$ et si $\lim_{x \to a} g(x) \neq 0$, alors la fonction
+$
+q : x \in I \setminus \{a\} \mapsto \frac{f(x)}{g(x)}
+$
+admet une limite finie en $a$ et
+$$
+\lim_{x \to a} q(x) = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)}.
+$$
+
+:::
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Soit $f$ une fonction définie sur $I$ et dérivable en $a   \in I$.\\
+Alors 
+$$\lim_{h \to 0 } f(a+h)= f(a)$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Pour tout $hh \neq 0$ et $a+h \in I$, $$f(a+h)- f(a) =\frac{f(a+h)-f(a)}{h} \times h$$
+Or $$\lim_{h \to 0} \frac{f(a+h)-f(a)}{h}= f'(a)$$
+Donc $$\lim_{h \to 0} \frac{f(a+h)-f(a)}{h} \times h = 0 $$
+Ainsi 
+$$\lim_{h \to 0} f(a+h) = f(a) $$
+
+</details>
+
+
+<div class="nav-pages">
+  <a class="next" href="operations.html">➡️</a>
+</div>

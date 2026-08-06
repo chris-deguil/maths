@@ -1,0 +1,96 @@
+---
+title: "Droites et plan de l'espace : définition"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition vectorielle des droites et plans"
+order: 4
+---
+
+----
+
+
+## Droites de l'espace
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span>
+
+Soient $A$ et $B$ deux points distincts.  
+La droite $(AB)$ est l'ensemble des points $M$ de $\E$ tels que $\ve{AB}$ et $\ve{AM}$ soient colinéaires.  
+Ainsi : $$(AB)=\left\{M\in\E \, | \, \ve{AM}=k\ve{AB}, \, k\in\mathbb{R}\right\}$$
+:::
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* Le vecteur $\ve{AB}$ est appelé vecteur directeur, et par définition vectorielle d'une droite, il n'est pas unique.  
+Tout vecteur colinéaire au vecteur $\ve{AB}$ est aussi vecteur directeur de la droite.
+* Une droite est définie par la donnée d'un point et d'un vecteur directeur.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :</div>
+
+$ABC$ est un triangle, et $E, F, G$ trois points vérifiant :
+$$\ve{AE}=\dfrac{1}{4}\ve{AC} \quad ; \quad \ve{FA}=\dfrac{3}{4}\ve{BA} \quad ; \quad \ve{BC}=8\ve{GB}$$
+Démontrer que les points $E, F, G$ sont alignés.
+
+
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a : 
+$$\ve{EF}=\ve{EA}+\ve{AF}=-\dfrac{1}{4}\ve{AC}-\dfrac{3}{4}\ve{BA}$$
+De plus, $8\ve{GB}=\ve{BC}$, donc :
+$$\ve{GB}=\dfrac{1}{8}\ve{BC} = \dfrac{1}{8}(\ve{BA} + \ve{AC})$$
+Ainsi :
+$$\ve{GE} = \ve{GB} + \ve{BE} = \dfrac{1}{8}(\ve{BA} + \ve{AC}) + \ve{BA} + \dfrac{1}{4}\ve{AC} = \left(\dfrac{1}{8} + 1\right)\ve{BA} + \left(\dfrac{1}{8} + \dfrac{1}{4}\right)\ve{AC} = \dfrac{9}{8}\ve{BA} + \dfrac{3}{8}\ve{AC}$$
+On remarque alors que : 
+$$\ve{GE} = -\dfrac{3}{2} \left( -\dfrac{3}{4}\ve{BA} - \dfrac{1}{4}\ve{AC} \right) = -\dfrac{3}{2}\ve{EF} = \dfrac{3}{2}\ve{FE}$$
+Ainsi, par propriété, $F\in(GE)$.  
+Donc les points sont alignés.
+
+</details>
+
+:::
+
+---
+
+## Plans de l'espace
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span>
+
+Soient $A$, $B$ et $C$ trois points de $\E$ non alignés. Soient $\ve{u}$ et $\ve{v}$ deux vecteurs non colinéaires.  
+Le plan $(ABC)$ est l'ensemble des points $M$ de l'espace tels que $\ve{AM}$ soit une combinaison linéaire des vecteurs $\ve{AB}$ et $\ve{AC}$.  
+Ainsi : $$(ABC)=\left\{M\in\E \, | \, \ve{AM}=\lambda\ve{AB}+\mu\ve{AC}, \, (\lambda,\mu)\in\mathbb{R}^2\right\}$$
+:::
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* Dans la définition précédente, $\lambda$ et $\mu$ sont les coordonnées du point $M$ dans le repère $\left(A \, ; \, \ve{AB},\ve{AC}\right)$ où $\left(\ve{AB},\ve{AC}\right)$ forme une base du plan $(ABC)$ et $A$ est l'origine de ce repère.
+* La définition du plan $(ABC)$ est indépendante du choix de $A$ comme origine du repère.  
+En effet :  
+$\ve{AM}=\lambda\ve{AB}+\mu\ve{AC} \Longleftrightarrow \ve{BM}=(1-\lambda)\ve{BA}+\mu\ve{BC}$.  
+Par contre, en changeant l'origine du repère, les coefficients, et donc les coordonnées, changent.
+* Un plan est défini par un point de ce plan et deux vecteurs non colinéaires qui forment alors une base de ce plan (ce sont des vecteurs directeurs du plan).
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :</div>
+
+On considère $ABCDEFGH$ un cube et $I$ le point d'intersection des diagonales, alors :
+$$\ve{AI}=\dfrac{1}{2}\ve{AG}=\dfrac{1}{2}\ve{AC}+\dfrac{1}{2}\ve{AE}$$
+Donc $I\left(\dfrac{1}{2} \, ; \, \dfrac{1}{2}\right)$ dans le repère $\left(A \, ; \, \ve{AC},\ve{AE}\right)$.
+:::
+
+<div class="nav-pages">
+  <a class="prev" href="repere_espace.html">⬅️</a>
+  <a class="next" href="position.html">➡️</a>
+</div>

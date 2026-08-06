@@ -1,0 +1,131 @@
+---
+title: "Fonction exponentielle : définition et propriétés algébriques"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définiton de l'exponentielle, propriétés algébriques de la fonction"
+order: 2
+---
+
+___
+
+
+## Fonction exponentielle
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span><br>
+
+Il existe une unique fonction $f$ dérivable sur $\mathbb{R}$ telle que $f' = f$ et $f(0) = 1$.  
+Cette fonction est appelée **fonction exponentielle** et est notée $\exp$.  
+Ainsi, pour tout réel $x$ :  
+$$\exp'(x)=\exp(x) \quad \text{et} \quad \exp(0)=1$$
+:::
+
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+On admet qu'il existe une telle fonction. On montre l'unicité, l'existence est admise.
+
+1. On montre qu'une telle fonction ne s'annule pas sur $\mathbb{R}$.
+ 
+   Soit $\Phi$ la fonction définie sur $\mathbb{R}$ par $\Phi(x) = f(x) \times f(-x)$.  
+
+   Par produit (et composée), $\Phi$ est dérivable sur $\mathbb{R}$. La dérivée de $x \mapsto f(-x)$ est $x \mapsto -f'(-x)$. 
+
+   D'après la formule de dérivée d'un produit $(uv)'=u'v+uv'$, pour tout $x \in \mathbb{R}$ :  
+   $$\Phi'(x)=f'(x)f(-x)-f(x)f'(-x)$$  
+
+   Or, $f'=f$, ce qui donne $$\Phi'(x)=f(x)f(-x)-f(x)f(-x)=0$$
+
+   Comme $\Phi'(x)=0$ sur l'intervalle $\mathbb{R}$, la fonction $\Phi$ est constante. 
+   
+   Or, $f(0) = 1$, donc $\Phi(0) = f(0)^2 = 1$.  
+
+   $\Phi$ est la fonction constante égale à $1$. 
+   
+   Par suite, pour tout $x \in \mathbb{R}$, $$f(x)f(-x) = 1$$ 
+
+   La fonction $f$ ne s'annule donc pas sur $\mathbb{R}$.
+
+2. Démonstration de l'unicité. Considérons une autre fonction $g$ définie et dérivable sur $\mathbb{R}$, telle que $g'=g$ et $g(0) = 1$.  
+   
+   Alors $g$ ne s'annule pas sur $\mathbb{R}$.  
+
+   Par quotient de fonctions dérivables, la fonction $\dfrac{f}{g}$ est dérivable sur $\mathbb{R}$ et pour tout $x \in \mathbb{R}$ :  
+   $$\left(\dfrac{f}{g}\right)'(x) = \dfrac{f'(x)g(x)-g'(x)f(x)}{[g(x)]^2} = \dfrac{f(x)g(x)-g(x)f(x)}{[g(x)]^2} = 0$$  
+
+   On en déduit que la fonction $\dfrac{f}{g}$ est constante sur $\mathbb{R}$. Or, $\left(\dfrac{f}{g}\right)(0) = \dfrac{f(0)}{g(0)}= 1$.  
+
+   Donc $\dfrac{f}{g}$ est la fonction constante égale à $1$. Pour tout $x \in \mathbb{R}$, $f(x) = g(x)$.
+
+Il existe donc bien une unique fonction $f$ dérivable sur $\mathbb{R}$ telle que $f'=f$ et $f(0) = 1$.
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+Avec la méthode d'Euler, on a construit point à point les images des réels par la fonction exponentielle. On a pu ainsi conjecturer son existence et construire sa représentation graphique.
+
+:::
+
+## Propriétés : Calcul algébrique
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span><br>
+Pour tous réels $x$ et $y$ et tout $\alpha \in \mathbb{R}$ on a :
+
+| | |
+|---|---|
+| $\exp(x+y) = \exp(x) \times \exp(y)$ | $\exp(-x) = \dfrac{1}{\exp(x)}$ |
+| $\exp(x-y) = \dfrac{\exp(x)}{\exp(y)}$ | $\exp(\alpha x) = \left(\exp(x)\right)^\alpha$ |
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+1. Soit $y \in \mathbb{R}$. Comme l'exponentielle ne s'annule pas, la fonction $f(x)=\dfrac{\exp(x+y)}{\exp(x)}$ est bien définie sur $\mathbb{R}$.  
+   Elle est dérivable, et pour tout réel $x$ :  
+   $$f'(x)=\dfrac{\exp'(x+y)\exp(x)-\exp'(x)\exp(x+y)}{\left[\exp(x)\right]^2} = \dfrac{\exp(x+y)\exp(x)-\exp(x)\exp(x+y)}{\left[\exp(x)\right]^2} = 0$$  
+   La fonction $f$ est donc constante. Ainsi pour tout $x \in \mathbb{R}$, $f(x)=f(0)=\exp(y)$.  
+   Autrement dit, $\exp(y)=\dfrac{\exp(x+y)}{\exp(x)}$, donc $\exp(x+y)=\exp(x)\times\exp(y)$.
+
+2. Pour tout réel $x$, $1=\exp(0) = \exp(x-x) = \exp(x) \times \exp(-x)$. Donc $\exp(-x) = \dfrac{1}{\exp(x)}$.
+
+3. Pour tout $x,y \in \mathbb{R}$, $\exp(x-y) = \exp(x) \times \exp(-y) = \dfrac{\exp(x)}{\exp(y)}$.
+
+4. Propriété admise.
+</details>
+
+::: {.bloc .exo}
+<span class="exo-num">Exercice : </span><span class="exo-extra"> Étude par le quotient </span>
+Simplifier les expressions suivantes :
+
+1. Développer $A=(\exp(x)+\exp(-x))^2+(3\exp(x)-\exp(-x))^2$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$$
+\begin{aligned}
+A &= (\exp(x)+\exp(-x))^2+(3\exp(x)-\exp(-x))^2 \\
+&= \bigl(\exp(2x)+2+\exp(-2x)\bigr) + \bigl(9\exp(2x)-6+\exp(-2x)\bigr) \\
+&= 10\exp(2x) + 2\exp(-2x) - 4
+\end{aligned}
+$$
+
+</details>
+
+2. Simplifier $B=\dfrac{\exp(3x+1) \times \exp(-x)}{\exp(-2x) \times (\exp(-3x+1))^2}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$$
+B = \dfrac{\exp(3x+1 -x)}{\exp(-2x + 2(-3x+1))} = \exp\bigl(2x+1 -(-8x+2)\bigr) = \exp(10x-1)
+$$
+
+</details>
+:::
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="intro.html">⬅️</a>
+  <a class="next" href="nombre_e.html">➡️</a>
+</div>

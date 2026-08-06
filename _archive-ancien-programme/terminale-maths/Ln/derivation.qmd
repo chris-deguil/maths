@@ -1,0 +1,119 @@
+---
+title: "Dérivation et concavité"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Dérivée, taux d'accroissement, étude d ela convexité"
+order: 5
+---
+
+## Dérivation
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+La fonction $\ln$ est continue et dérivable sur $]0 \, ; \, +\infty[$, et pour tout réel strictement positif :
+$$\ln' x = \dfrac{1}{x}$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+On admet que la fonction $\ln$ est dérivable sur son ensemble de définition, ce qui entraîne donc la continuité de la fonction.  
+Soit $f : x \longmapsto \e^{\ln(x)}$.  
+La fonction $f$ est dérivable comme composée de fonctions dérivables et :
+$$\forall x \in \R_+^*, \, \left(\e^{\ln x}\right)' = \ln' x \times \e^{\ln x}$$
+Or $\forall x \in \R_+^*, \, \e^{\ln x} = x$, donc $f(x)=x$ et elle admet alors pour dérivée $1$.  
+On a donc $x \ln' x = 1$.  
+On en déduit que $\ln' x = \dfrac{1}{x}$.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+On considère la fonction $f$ définie sur $]0 \, ; \, +\infty[$ par $f(x) = x \ln x$.  
+Étudier les variations de $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$f$ est le produit de fonctions dérivables sur $]0 \, ; \, +\infty[$, elle y est donc dérivable.  
+$$\forall x \in ]0 \, ; \, +\infty[, \, f'(x) = \ln(x) + x \times \dfrac{1}{x} = 1 + \ln(x)$$
+Or :
+$$1 + \ln x \leqslant 0 \Longleftrightarrow \ln x \leqslant -1 \Longleftrightarrow x \leqslant \e^{-1}$$
+On en déduit que $f'(x)$ est négatif sur $]0 \, ; \, \e^{-1}]$ et positif sur $[\e^{-1} \, ; \, +\infty[$.  
+Le signe de la dérivée donnant les variations de la fonction, on en déduit que la fonction $f$ est décroissante sur $]0 \, ; \, \e^{-1}]$ et croissante sur $[\e^{-1} \, ; \, +\infty[$.
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+$$\lim_{h \to 0} \dfrac{\ln(1+h)}{h} = 1 \qquad ; \qquad \lim_{x \to 1} \dfrac{\ln{x}}{x-1} = 1$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Il s'agit du nombre dérivé de la fonction $\ln$ en $1$.
+</details>
+
+::: {.bloc .ex}
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On a pour tout $n \in \N$, 
+$$\left(1+ \dfrac{1}{n}\right)^n = \e^{n \ln\left(1 + \dfrac{1}{n}\right)}$$
+
+D'une part,
+$$\left. \begin{array}{l} \lim_{x \to 0^+} \dfrac{\ln(1+x)}{x} = 1 \\ \lim_{n \to +\infty} \dfrac{1}{n} = 0^+ \end{array} \right\} \text{par composition, } \lim_{n \to +\infty} n \ln\left(1 + \dfrac{1}{n}\right) = 1$$
+
+Ainsi par continuité de la fonction $\exp$ en $1$
+$$\lim_{n \to +\infty} \e^{n \ln\left(1 + \dfrac{1}{n}\right)} = \e$$
+</details>
+
+:::
+
+________________
+
+## Convexité de la fonction
+
+## Convexité de la fonction
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+La fonction $\ln$ est concave sur $]0 \, ; \, +\infty[$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+On a, pour tout $x > 0$, $\ln'(x) = \dfrac{1}{x}$.  
+Or la fonction inverse est décroissante sur $]0 \, ; \, +\infty[$.  
+On en déduit que la fonction logarithme népérien est concave sur $]0 \, ; \, +\infty[$.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+Résoudre $\ln x \geqslant x^2$ en utilisant $f : x \longmapsto x^2$ et $g : x \longmapsto \ln x$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+* La fonction carré est dérivable sur $\R$, et pour tout $x \in \R$, $f'(x) = 2x$.  
+Ainsi, au point d'abscisse $0,5$, la fonction carré admet comme tangente $T : y = f'(0,5)(x-0,5) + f(0,5)$.  
+D'où $T : y = x - 0,25$.  
+Or la fonction carré est convexe sur $\R$, elle est donc au-dessus de chacune de ses tangentes.  
+En particulier, pour tout réel $x$, $x^2 \geqslant x - 0,25$.
+
+* La fonction $\ln$ est dérivable sur $]0 \, ; \, +\infty[$, et pour tout $x \in ]0 \, ; \, +\infty[$, $g'(x) = \dfrac{1}{x}$.  
+Ainsi, au point d'abscisse $1$, la fonction $\ln$ admet comme tangente $T' : y = g'(1)(x-1) + g(1)$.  
+D'où $T' : y = x - 1$.  
+Or la fonction $\ln$ est concave sur $]0 \, ; \, +\infty[$, elle est donc en dessous de chacune de ses tangentes.  
+En particulier, pour tout réel $x$, $\ln x \leqslant x - 1$.
+
+
+
+Les droites $T$ et $T'$ ont le même coefficient directeur, elles sont donc parallèles ($T // T'$).  
+L'ordonnée à l'origine de $T$ étant plus grande que celle de $T'$, on en déduit que :
+$$\forall x \in ]0 \, ; \, +\infty[, \quad \ln x \leqslant x - 1 < x - 0,25 \leqslant x^2$$
+L'inéquation $\ln x \geqslant x^2$ n'admet donc aucune solution.
+</details>
+:::
+
+
+
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="propriete.html">⬅️</a>
+  <a class="next" href="composition.html">➡️</a>
+</div>

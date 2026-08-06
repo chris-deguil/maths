@@ -1,0 +1,59 @@
+---
+title: "Chapitre 9 : Calcul Intégral"
+description: "Aire sous la courbe - Calcul intégral"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+## Contenus
+
+- Définition de l’intégrale d'une fonction continue positive définie sur un segment $[a,b]$, comme aire sous la courbe représentative de $f$.  
+  Notation : $\int_a^b f(x)\,\dd x$.
+
+- Théorème : si $f$ est une fonction continue positive sur $[a,b]$, alors la fonction $F_a$ définie sur $[a,b]$ par  
+  $$F_a(x)=\int_a^x f(t)\,\dd t$$  
+  est la primitive de $f$ qui s'annule en $a$.
+  - Exercices
+  - Sens de variation d'une fonction définie par une intégrale
+
+- Sous les hypothèses du théorème, relation  
+  $$\int_a^b f(x)\,\dd x = F(b)-F(a)$$  
+  où $F$ est une primitive quelconque de $f$.  
+  Notation : $[F(x)]_a^b$.
+
+- Théorème : toute fonction continue sur un intervalle admet des primitives.
+- Définition par les primitives de $\int_a^b f(x)\,\dd x$ lorsque $f$ est une fonction continue de signe quelconque sur un intervalle contenant $a$ et $b$.
+- Linéarité, positivité et intégration des inégalités. Relation de Chasles :  
+  $$\int_a^c f(x)\,\dd x = \int_a^b f(x)\,\dd x + \int_b^c f(x)\,\dd x.$$
+- Valeur moyenne d’une fonction :  
+  $$\frac{1}{b-a}\int_a^b f(x)\,\dd x.$$
+  - Exercices
+  - Calculer une valeur moyenne d'une fonction
+- Intégration par parties :  
+  $$\int_a^b u(x)v'(x)\,\dd x = \left[u(x)v(x)\right]_a^b - \int_a^b u'(x)v(x)\,\dd x.$$
+- Estimer graphiquement ou encadrer une intégrale $\int_a^b f(x)\,\dd x$, une valeur moyenne.
+- Calculer une intégrale à l’aide d’une primitive.
+- Calculer une intégrale à l’aide d’une intégration par parties.
+- Majorer (minorer) une intégrale $\int_a^b f(x)\,\dd x$ à partir d'une majoration (minoration) d'une fonction par une autre fonction.
+- Calculer l’aire entre deux courbes :  
+- Étudier une suite d’intégrales $(I_n)$ vérifiant éventuellement une relation de récurrence.
+- Interpréter une intégrale $\int_a^b f(x)\,\dd x$ ou une valeur moyenne dans un contexte issu d’une autre discipline
+- Étudier une suite d’intégrales, vérifiant éventuellement une relation de récurrence.
+- Interpréter une intégrale, une valeur moyenne dans un contexte issu d’une autre discipline.
+
+
+:::

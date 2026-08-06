@@ -1,0 +1,30 @@
+---
+title: "Chapitre 7 : Produit Scalaire dans le plan"
+description: "Définition - orthogonalité - caractérisation géométriqueS"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+- Produit scalaire à partir de la projection orthogonale et de la formule avec le cosinus. Caractérisation de l’orthogonalité. 
+- Bilinéarité, symétrie. En base orthonormée, expression du produit scalaire et de la norme, critère d’orthogonalité. 
+- Développement de $\norm{\ve{u} + \ve{v}}^2$, Formule d'Al_Kashi
+- Transformation de $\ve{MA}.\ve{MB}$, lignes de niveaux
+- Équation de cercle.
+- Utiliser le produit scalaire pour démontrer une orthogonalité, pour calculer un angle, une longueur dans le plan ou dans l’espace.
+- En vue de la résolution d’un problème, calculer le produit scalaire de deux vecteurs en choisissant une méthode adaptée (en utilisant la projection orthogonale, à l’aide des coordonnées, à l’aide des normes et d’un angle, à l’aide de normes).
+- Utiliser le produit scalaire pour résoudre un problème géométrique.
+:::

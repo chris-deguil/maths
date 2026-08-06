@@ -1,0 +1,151 @@
+---
+title: "Algorithme : Somme et Seuil"
+format:
+  html:
+    toc: true
+    embed-resources: false
+include-in-header:
+  - text: |
+      <link rel="stylesheet" href="../../assets/css/pyodide-mkdocs.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css">
+      <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.js"></script>
+      <script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+      <script src="../../assets/js/pyodide-mkdocs.js" defer></script>
+description: "Déterminer la somme des éléments d'une liste - Recherche de seuil"
+order: 6
+---
+
+## Somme des termes
+
+::: {.bloc .ex}
+Soit $u_n$ la suite définie par :
+
+$$
+\begin{cases}
+u_0 = 3, \\
+u_{n+1} = u_n - n + 2 \quad \text{pour tout } n \in \mathbb{N}.
+\end{cases}
+$$
+
+Si nous exécutions cet algorithme à la main, pour la somme des 7 premiers termes, nous écririons :
+
+| $n$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|-----|---|---|---|---|---|---|---|
+| $u$ | 3 | 5 | 6 | 6 | 5 | 3 | 0 |
+| $S$ | 3 | 8 | 14 | 20 | 25 | 28 | 28 |
+
+Le programme en Python donne :
+:::
+
+~~~python
+def somme(n):
+    n = 0
+    u = 3
+    S = u
+    for i in range(1, n+1):
+        u = u - i + 2
+        S = S + u
+    return S
+~~~
+
+~~~{=html}
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo1">
+    <div class="bar-top"><span class="cell-num">Somme des termes</span></div>
+    <textarea id="code">def somme(n):
+def somme(n):
+    n = 0
+    u = 3
+    S = u
+    for i in range(1, n+1):
+        u = u - i + 2
+        S = S + u
+    return S
+
+print(somme(6))</textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled></button>
+      <button class="btn" id="check" disabled></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
+</div>
+~~~
+
+---
+
+## Problème de seuil
+
+On considère une suite $u_n$.  
+
+Un problème de seuil consiste à rechercher un rang particulier vérifiant une certaine condition sur les valeurs de $u_n$.
+
+::: {.bloc .ex}
+Nous considérons la suite $u_n$ définie dans la partie précédente.  
+
+Les termes de $u_n$ semblent décroître de plus en plus rapidement à partir de $n = 3$.  
+
+On se demande si la suite $u_n$ peut atteindre une valeur aussi basse que souhaitée.
+
+Étant donné que le nombre d'étapes requises est inconnu à l'avance, on utilise forcément une boucle conditionnelle.  
+
+Dans le cas présent, nous recherchons le plus petit entier $n \in \mathbb{N}$ tel que $u_n \leq -750$.
+
+Si nous exécutions cet algorithme à la main, nous écririons :
+
+| $n$ | 0 | 1 | 2 | … | 40 | 41 | 42 |
+|-----|---|---|----|----|-----|-----|-----|
+| $u$ | 3 | 5 | 6  | …  | -697 | -735 | -774 |
+
+La valeur recherchée et affichée serait bien 42. En Python, cet algorithme s'écrit :
+:::
+
+~~~python
+def seuil_u(seuil):
+    n = 0
+    u = 3
+    while u > seuil:
+        u = u - n + 2
+        n = n + 1
+    print(u, n)
+~~~
+
+~~~{=html}
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo2">
+    <div class="bar-top"><span class="cell-num">Recherche de seuil</span></div>
+    <textarea id="code">def seuil_u(seuil):
+def seuil_u(seuil):
+    n = 0
+    u = 3
+    while u > seuil:
+        u = u - n + 2
+        n = n + 1
+    print(u, n)
+
+seuil_u(-750
+</textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled></button>
+      <button class="btn" id="check" disabled></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
+</div>
+~~~
+
+
+
+<div class="nav-pages">
+  <a class="prev" href="limites.html">⬅️</a>
+   <a class="next" href="bilan.html">➡️</a>
+</div>

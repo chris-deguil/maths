@@ -1,0 +1,29 @@
+---
+title: "Chapitre 4 : Limites d'une fonction."
+description: "Déterminer les limties d'une fonction, comparaison"
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd" 
+  exclude:
+    - path: index.qmd
+---
+
+
+
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et Savoir-faire :</span>  
+
+-  Déterminer dans des cas simples la limite d’une suite ou d’une fonction en un point, en ±∞, en utilisant les limites usuelles (opérations sur les limites)
+-  Utiliser les croissances comparées, 
+-  Utiliser des majorations, minorations ou encadrements, la factorisation du terme prépondérant dans une somme.
+- Faire le lien entre l’existence d’une asymptote parallèle à un axe et celle de la limite correspondante.
+
+:::
+
+

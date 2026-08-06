@@ -1,0 +1,150 @@
+---
+title: "Opérations sur les primitives"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Linéarité et composition"
+order: 3
+---
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+On considère deux fonctions $f$ et $g$ définies sur $I$ y admettant des primitives, $k$ un réel quelconque.
+On note $F$ et $G$ des primitives respectives de $f$ et $g$. Alors :
+* Une primitive de $kf$ est $kF$.
+* Une primitive de $f+g$ est $F+G$.
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+On considère la fonction $f$ définie sur $I= \mathbb{R}_+^*$ par $f(x) = \dfrac{1}{2} x^2 + \dfrac{2}{\sqrt{x}}$.
+$f$ est continue sur $I$ comme somme de fonctions continues sur $I$, elle y admet donc des primitives.
+Les primitives de $f$ sont les fonctions $F : x \longmapsto \dfrac{1}{6}{x^3} + 4 \sqrt{x} +k$, $k \in \mathbb{R}$.
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $I$ un intervalle et $g$ une fonction définie et dérivable sur $I$. Soit $f$ une fonction définie sur $g(I)$.
+Pour tout $x \in I$, on considère $u(x)=g'(x) \cdot (f \circ g)(x)$.
+Alors si $F$ est une primitive de $f$, une primitive de $u$ est $F \circ g$.
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Immédiat. Il suffit de dériver $F \circ g$.
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+1. Soit $f$ définie sur $\mathbb{R}$ par $f(x)=(2x-1) (x^2-x+3)^2$. Déterminer les primitives de $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On pose $u(x)=x^2-x+3$ ainsi $u'(x)=2x-1$.
+Ainsi $f=u' \cdot v \circ u$, où $v:x \longmapsto x^2$.
+Une primitive de $v$ est $V$ définie par $V(x)= \dfrac{1}{3} x^3$.
+On en déduit qu'une primitive $F$ de $f$ est définie par $F(x)=(V\circ u )(x)= \dfrac{1}{3}(x^2-x+3)^3$.
+
+</details>
+
+2. Soit $f$ définie sur $\mathbb{R}$ par $f(x) = (6x+3)\e^{x^2+x-3}$. Déterminer les primitives de $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On pose, pour tout $x \in \mathbb{R}$, $u(x) = x^2+x-3$, alors $u'(x) = 2x+1$.
+Ainsi $f=3u'\e^u$, donc $f$ admet comme primitive $3\e^u$.
+Ainsi les primitives de $f$ sont les fonctions $F_k$ définies par $F_k(x) = 3\e^{x^2+x-3} + k, \quad k \in \mathbb{R}$.
+
+</details>
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+On considère $f$ une fonction définie sur un intervalle $I$ et y admettant des primitives.
+
+* $u' u^n$ admet $\dfrac{1}{n+1} u^{n+1}$ comme primitive ;
+* $u'\e^u$ admet $\e^u$ comme primitive ;
+* Si $u >0$, $\dfrac{u'}{\sqrt{u}}$ admet $2\sqrt{u}$ comme primitive.
+* Si $u$ ne s'annule pas sur $I$ :
+    * $\dfrac{u'}{u^2}$ admet $-\dfrac{1}{u}$ comme primitive ;
+    * $\dfrac{u'}{u}$ admet $\ln(|u|)$ comme primitive.
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+Dans chacun des cas, déterminer une primitive de la fonction $f$.
+1. Soit $f$ la fonction définie sur $]1 ; 3[$ par $f(x)=\dfrac{x-2}{x^2-4x+3}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On pose $u(x)=x^2-4x+3$, ainsi $u'(x)=2x-4 = 2(x-2)$.
+Ainsi $f=\dfrac{1}{2} \dfrac{u'}{u}$, donc $F=\dfrac{1}{2} \ln(|u|)$.
+Or pour tout réel $x \in ]1 ; 3[$, $u(x) = (x-1)(x-3) < 0$.
+On en déduit ainsi que les primitives de $f$ sont $F(x)= \dfrac{1}{2} \ln(-x^2+4x-3) + k$, $k \in \mathbb{R}$.
+
+</details>
+
+2. Soit $f$ définie sur $I=\mathbb{R}_-^*$ par $f(x) = \dfrac{\e^{\frac{1}{x^2}}}{x^3}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+En posant $u(x)=\dfrac{1}{x^2}$, on a $u'(x)=-\dfrac{2}{x^3}$.
+Ainsi $f=-\dfrac{1}{2} u' \e^{u}$.
+Une primitive de $f$ est alors $F$ définie par $F(x) = -\dfrac{1}{2} \exp\left(\dfrac{1}{x^2} \right)$.
+
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Cas des fonctions rationnelles </span></div>
+
+Soit $f$ définie sur $I=]2 \, ; \, + \infty[$ par $f(x)= \dfrac{1+x^2}{(x-2)^2}$.
+1. Déterminer les réels $a,b$ et $c$ tels que $f(x)=a+ \dfrac{b}{x-2} + \dfrac{c}{(x-2)^2}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Par identification ou décomposition : on trouve $a=1, b=4$ et $c=5$.
+En effet : $1 + \dfrac{4}{x-2} + \dfrac{5}{(x-2)^2} = \dfrac{(x-2)^2 + 4(x-2) + 5}{(x-2)^2} = \dfrac{x^2-4x+4+4x-8+5}{(x-2)^2} = \dfrac{x^2+1}{(x-2)^2}$.
+
+</details>
+
+2. Déterminer une primitive de $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a pour tout $x \in I$, $f(x)=1+\dfrac{4}{x-2} + \dfrac{5}{(x-2)^2}$.
+Chacun des termes de la somme étant continu sur $I$, on en déduit directement que :
+$F(x) = x + 4\ln(x-2) - \dfrac{5}{x-2}$.
+
+</details>
+
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Il n'existe pas de formule pour déterminer, de façon générale, les primitives de $f \times g$ ou de $\dfrac{f}{g}$.
+
+:::
+
+
+
+<div class="nav-pages">
+ <a class="prev" href="Usuelles.html">⬅️</a>
+  <a class="next" href="Intro_ED.html">➡️</a>
+</div>
