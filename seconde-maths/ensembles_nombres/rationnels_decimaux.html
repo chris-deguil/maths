@@ -102,6 +102,8 @@ window.MathJax = {
       Q: "\\mathbb{Q}",
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
+      D: "\\mathbb{D}",
+      Div: "\\Div",
       epsilon: "\\varepsilon",
 
       // --- Mises en forme / utilitaires ---
@@ -129,6 +131,7 @@ window.MathJax = {
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
       bar: ["\\overline {#1}",1],
+
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -314,7 +317,6 @@ window.Quarto = {
    
   <ul>
   <li><a href="#nombres-décimaux" id="toc-nombres-décimaux" class="nav-link active" data-scroll-target="#nombres-décimaux">Nombres décimaux</a></li>
-  <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice">Exercice 1</a></li>
   <li><a href="#nombres-rationnels" id="toc-nombres-rationnels" class="nav-link" data-scroll-target="#nombres-rationnels">Nombres rationnels</a></li>
   <li><a href="#critère-de-décimalité-dune-fraction" id="toc-critère-de-décimalité-dune-fraction" class="nav-link" data-scroll-target="#critère-de-décimalité-dune-fraction">Critère de décimalité d’une fraction</a></li>
   </ul>
@@ -353,11 +355,10 @@ window.Quarto = {
 <p><span class="bloc-titre">Définition : Nombre décimal</span></p>
 <p>Un réel <span class="math inline">\(d\)</span> est un <strong>nombre décimal</strong> s’il existe <span class="math inline">\(a \in \Z\)</span> et <span class="math inline">\(n \in \N\)</span> tels que <span class="math inline">\(d = \dfrac{a}{10^n}\)</span>. L’ensemble des nombres décimaux est noté <span class="math inline">\(\D\)</span>.</p>
 </div>
-</section>
-<section id="exercice" class="level2">
-<h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
-<div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Reconnaître un nombre décimal — Raisonner </span></p>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Reconnaître un nombre décimal — Raisonner</span>
+</div>
 <p>Parmi les nombres suivants, lesquels sont décimaux ? Justifier. <span class="math display">\[0{,}25 \qquad \dfrac{1}{3} \qquad 3{,}14 \qquad 7\]</span></p>
 <details class="bloc cor">
 <summary>
@@ -421,6 +422,7 @@ Démonstration :
 </div>
 
 
+<div class="nav-pages"><a class="prev" href="entiers.html" title="Entiers naturels et relatifs, multiples et diviseurs">⬅️</a><a class="next" href="reels_irrationnels.html" title="Nombres réels et nombres irrationnels">➡️</a></div>
 </section>
 
 </main> <!-- /main -->

@@ -103,6 +103,7 @@ window.MathJax = {
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
       D: "\\mathbb{D}",
+      Div: "\\Div",
       epsilon: "\\varepsilon",
 
       // --- Mises en forme / utilitaires ---
@@ -130,7 +131,7 @@ window.MathJax = {
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
       bar: ["\\overline {#1}",1],
-      Div: ["\\Div{#1}",1],
+
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -223,7 +224,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/fractions.html">Calculs sur les fractions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/fractions.html">Calculs sur les fractions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -256,8 +257,11 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/vocabulaire.html" class="sidebar-item-text sidebar-link">
@@ -271,11 +275,17 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/rationnels_decimaux.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/rationnels_decimaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres rationnels et nombres décimaux</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/reels_irrationnels.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/reels_irrationnels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres réels et nombres irrationnels</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/fractions.html" class="sidebar-item-text sidebar-link active">
@@ -308,14 +318,13 @@ window.Quarto = {
   <ul>
   <li><a href="#règles-de-calcul" id="toc-règles-de-calcul" class="nav-link active" data-scroll-target="#règles-de-calcul">Règles de calcul</a></li>
   <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice">Exercice 1</a></li>
-  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link" data-scroll-target="#exercice-1">Exercice 2</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/fractions.html">Calculs sur les fractions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/fractions.html">Calculs sur les fractions</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Calculs sur les fractions</h1>
 </div>
@@ -374,11 +383,10 @@ Démonstration :
 <p><span class="bloc-titre">Remarque : </span></p>
 <p>Pour rendre une fraction <strong>irréductible</strong>, on divise numérateur et dénominateur par leur <span class="math inline">\(\pgcd\)</span>. La décomposition en facteurs premiers fournit ce <span class="math inline">\(\pgcd\)</span>.</p>
 </div>
-</section>
-<section id="exercice" class="level2">
-<h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
-<div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Calculs sur les fractions — Calculer </span></p>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Calculs sur les fractions — Calculer</span>
+</div>
 <p>Calculer et donner le résultat sous forme irréductible.</p>
 <ol type="1">
 <li><span class="math inline">\(A = \dfrac{5}{6} + \dfrac{3}{4}\)</span></li>
@@ -423,10 +431,10 @@ C = \frac{48}{84}
 </details>
 </div>
 </section>
-<section id="exercice-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-1">Exercice 2</h2>
+<section id="exercice" class="level2">
+<h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
 <div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 2 : </strong></span><span class="exo-extra"> Calculer des expressions fractionnaires — Calculer </span></p>
+<p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Calculer des expressions fractionnaires — Calculer </span></p>
 <p>Calculer les expressions suivantes :</p>
 <ol type="1">
 <li><span class="math inline">\(A = \dfrac{4}{5} - \dfrac{2}{5}\left(\dfrac{1}{3} - 3\right)\)</span></li>
@@ -460,7 +468,7 @@ Afficher la correction :
 </div>
 
 
-<div class="nav-pages"><a class="prev" href="entiers.html" title="Entiers naturels et relatifs, multiples et diviseurs">⬅️</a><a class="next" href="puissances.html" title="Puissances : définitions et règles de calcul">➡️</a></div>
+<div class="nav-pages"><a class="prev" href="reels_irrationnels.html" title="Nombres réels et nombres irrationnels">⬅️</a><a class="next" href="puissances.html" title="Puissances : définitions et règles de calcul">➡️</a></div>
 </section>
 
 </main> <!-- /main -->

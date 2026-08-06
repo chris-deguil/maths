@@ -103,6 +103,7 @@ window.MathJax = {
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
       D: "\\mathbb{D}",
+      Div: "\\Div",
       epsilon: "\\varepsilon",
 
       // --- Mises en forme / utilitaires ---
@@ -130,7 +131,7 @@ window.MathJax = {
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
       bar: ["\\overline {#1}",1],
-      Div: ["\\Div{#1}",1],
+
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -223,7 +224,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/puissances.html">Puissances : définitions et règles de calcul</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/puissances.html">Puissances : définitions et règles de calcul</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -256,8 +257,11 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/vocabulaire.html" class="sidebar-item-text sidebar-link">
@@ -271,11 +275,17 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/rationnels_decimaux.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/rationnels_decimaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres rationnels et nombres décimaux</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/reels_irrationnels.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/reels_irrationnels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres réels et nombres irrationnels</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/fractions.html" class="sidebar-item-text sidebar-link">
@@ -307,18 +317,15 @@ window.Quarto = {
    
   <ul>
   <li><a href="#définitions-et-premières-propriétés" id="toc-définitions-et-premières-propriétés" class="nav-link active" data-scroll-target="#définitions-et-premières-propriétés">Définitions et premières propriétés</a></li>
-  <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice">Exercice 1</a></li>
   <li><a href="#règles-de-calcul" id="toc-règles-de-calcul" class="nav-link" data-scroll-target="#règles-de-calcul">Règles de calcul</a></li>
-  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link" data-scroll-target="#exercice-1">Exercice 2</a></li>
-  <li><a href="#exercice-2" id="toc-exercice-2" class="nav-link" data-scroll-target="#exercice-2">Exercice 3</a></li>
-  <li><a href="#exercice-3" id="toc-exercice-3" class="nav-link" data-scroll-target="#exercice-3">Exercice 4</a></li>
+  <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice">Exercice 1</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/puissances.html">Puissances : définitions et règles de calcul</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/puissances.html">Puissances : définitions et règles de calcul</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Puissances : définitions et règles de calcul</h1>
 </div>
@@ -358,11 +365,10 @@ a^0 = 1 \quad (a \neq 0)
 \qquad;\qquad
 a^{-n} = \frac{1}{a^n} \quad (a \neq 0)\]</span></p>
 </div>
-</section>
-<section id="exercice" class="level2">
-<h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
-<div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Utiliser un exposant négatif — Calculer </span></p>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Utiliser un exposant négatif — Calculer</span>
+</div>
 <p>Calculer <span class="math inline">\(2^{-3}\)</span>.</p>
 <details class="bloc cor">
 <summary>
@@ -382,11 +388,10 @@ Afficher la correction :
   (ab)^n = a^n\,b^n \qquad
   \left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}\]</span></p>
 </div>
-</section>
-<section id="exercice-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-1">Exercice 2</h2>
-<div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 2 : </strong></span><span class="exo-extra"> Règles de calcul — exposants numériques — Calculer </span></p>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Règles de calcul — exposants numériques — Calculer</span>
+</div>
 <p>Simplifier les expressions suivantes (résultat sans exposant négatif).</p>
 <ol type="1">
 <li><span class="math inline">\(2^5 \times 2^{-3}\)</span></li>
@@ -425,11 +430,10 @@ Afficher la correction :
 <p><span class="math inline">\(4^{-3} \times 4^5 = 4^2 = 16\)</span></p>
 </details>
 </div>
-</section>
-<section id="exercice-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-2">Exercice 3</h2>
-<div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 3 : </strong></span><span class="exo-extra"> Règles de calcul — exposant littéral <span class="math inline">\(n\)</span> — Calculer </span></p>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Règles de calcul — exposant littéral <span class="math inline">\(n\)</span> — Calculer</span>
+</div>
 <p>Simplifier les expressions suivantes (<span class="math inline">\(a \neq 0\)</span>, <span class="math inline">\(n \in \Z\)</span>).</p>
 <ol type="1">
 <li><span class="math inline">\(a^n \times a^3\)</span></li>
@@ -460,10 +464,10 @@ Afficher la correction :
 </details>
 </div>
 </section>
-<section id="exercice-3" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-3">Exercice 4</h2>
+<section id="exercice" class="level2">
+<h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
 <div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 4 : </strong></span><span class="exo-extra"> Simplifier des expressions avec puissances — Calculer </span></p>
+<p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Simplifier des expressions avec puissances — Calculer </span></p>
 <p>Calculer ou simplifier les expressions suivantes.</p>
 <ol type="1">
 <li><span class="math inline">\(B = \dfrac{(-5)^4 \times 7^2 \times (-2)^{-3}}{(-4)^4 \times (-1)^5 \times 25}\)</span></li>

@@ -103,6 +103,7 @@ window.MathJax = {
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
       D: "\\mathbb{D}",
+      Div: "\\Div",
       epsilon: "\\varepsilon",
 
       // --- Mises en forme / utilitaires ---
@@ -130,7 +131,7 @@ window.MathJax = {
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
       bar: ["\\overline {#1}",1],
-      Div: ["\\Div{#1}",1],
+
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -223,7 +224,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/entiers.html">Entiers naturels et relatifs, multiples et diviseurs</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/entiers.html">Entiers naturels et relatifs, multiples et diviseurs</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -256,8 +257,11 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/vocabulaire.html" class="sidebar-item-text sidebar-link">
@@ -271,11 +275,17 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/rationnels_decimaux.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/rationnels_decimaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres rationnels et nombres décimaux</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/reels_irrationnels.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/reels_irrationnels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres réels et nombres irrationnels</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/fractions.html" class="sidebar-item-text sidebar-link">
@@ -308,7 +318,6 @@ window.Quarto = {
   <ul>
   <li><a href="#entiers-naturels-et-entiers-relatifs" id="toc-entiers-naturels-et-entiers-relatifs" class="nav-link active" data-scroll-target="#entiers-naturels-et-entiers-relatifs">Entiers naturels et entiers relatifs</a></li>
   <li><a href="#multiples-diviseurs-parité" id="toc-multiples-diviseurs-parité" class="nav-link" data-scroll-target="#multiples-diviseurs-parité">Multiples, diviseurs, parité</a></li>
-  <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice">Exercice 1</a></li>
   <li><a href="#notation-étoile" id="toc-notation-étoile" class="nav-link" data-scroll-target="#notation-étoile">Notation étoile</a></li>
   </ul>
 </nav>
@@ -316,7 +325,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/entiers.html">Entiers naturels et relatifs, multiples et diviseurs</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/entiers.html">Entiers naturels et relatifs, multiples et diviseurs</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Entiers naturels et relatifs, multiples et diviseurs</h1>
 </div>
@@ -365,11 +374,10 @@ window.Quarto = {
 <p><span class="bloc-titre">Remarque : </span></p>
 <p><span class="math inline">\(0\)</span> est multiple de tout entier (car <span class="math inline">\(0 = 0 \times b\)</span>). Tout entier <span class="math inline">\(a\)</span> est divisible par <span class="math inline">\(1\)</span> et par lui-même.</p>
 </div>
-</section>
-<section id="exercice" class="level2">
-<h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
-<div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Multiples et diviseurs — Calculer, Raisonner </span></p>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Multiples et diviseurs — Calculer, Raisonner</span>
+</div>
 <ol type="1">
 <li>Donner l’ensemble <span class="math inline">\(\Div(24)\)</span> de tous les diviseurs de <span class="math inline">\(24\)</span>.</li>
 </ol>
@@ -420,7 +428,7 @@ Démonstration :
 </div>
 
 
-<div class="nav-pages"><a class="prev" href="vocabulaire.html" title="Vocabulaire ensembliste">⬅️</a><a class="next" href="fractions.html" title="Calculs sur les fractions">➡️</a></div>
+<div class="nav-pages"><a class="prev" href="vocabulaire.html" title="Vocabulaire ensembliste">⬅️</a><a class="next" href="rationnels_decimaux.html" title="Nombres rationnels et nombres décimaux">➡️</a></div>
 </section>
 
 </main> <!-- /main -->

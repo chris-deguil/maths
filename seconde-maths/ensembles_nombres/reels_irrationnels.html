@@ -102,6 +102,8 @@ window.MathJax = {
       Q: "\\mathbb{Q}",
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
+      D: "\\mathbb{D}",
+      Div: "\\Div",
       epsilon: "\\varepsilon",
 
       // --- Mises en forme / utilitaires ---
@@ -129,6 +131,7 @@ window.MathJax = {
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
       bar: ["\\overline {#1}",1],
+
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -317,7 +320,6 @@ window.Quarto = {
   <li><a href="#hiérarchie-des-ensembles-de-nombres" id="toc-hiérarchie-des-ensembles-de-nombres" class="nav-link" data-scroll-target="#hiérarchie-des-ensembles-de-nombres">Hiérarchie des ensembles de nombres</a></li>
   <li><a href="#comment-classer-un-nombre" id="toc-comment-classer-un-nombre" class="nav-link" data-scroll-target="#comment-classer-un-nombre">Comment classer un nombre ?</a></li>
   <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice">Exercice 1</a></li>
-  <li><a href="#exercice-1" id="toc-exercice-1" class="nav-link" data-scroll-target="#exercice-1">Exercice 2</a></li>
   </ul>
 </nav>
     </div>
@@ -379,11 +381,10 @@ window.Quarto = {
 <div style="text-align: center;">
 <p><img src="../../image/seconde/Nombres_Ensembles_arbre_decision.png" style="width: 90%;"></p>
 </div>
-</section>
-<section id="exercice" class="level2">
-<h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
-<div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Classer un rationnel dans la hiérarchie des ensembles — Raisonner </span></p>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Classer un rationnel dans la hiérarchie des ensembles — Raisonner</span>
+</div>
 <p>Déterminer le plus petit ensemble auquel appartient <span class="math inline">\(\dfrac{7}{40}\)</span> et <span class="math inline">\(\dfrac{5}{6}\)</span>.</p>
 <details class="bloc cor">
 <summary>
@@ -393,10 +394,10 @@ Afficher la correction :
 </details>
 </div>
 </section>
-<section id="exercice-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercice-1">Exercice 2</h2>
+<section id="exercice" class="level2">
+<h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
 <div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 2 : </strong></span><span class="exo-extra"> Appartenance et ensembles de nombres — Raisonner </span></p>
+<p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Appartenance et ensembles de nombres — Raisonner </span></p>
 <p>Pour chacun des nombres suivants, indiquer le plus petit ensemble auquel il appartient parmi <span class="math inline">\(\N\)</span>, <span class="math inline">\(\Z\)</span>, <span class="math inline">\(\D\)</span>, <span class="math inline">\(\Q\)</span>, <span class="math inline">\(\R \setminus \Q\)</span>. <span class="math display">\[\frac{-14}{2} \qquad \frac{5}{6} \qquad 0{,}125 \qquad \sqrt{5} \qquad \frac{22}{7} \qquad 4{,}0\]</span></p>
 <details class="bloc cor">
 <summary>
@@ -468,6 +469,7 @@ Afficher la correction :
 </div>
 
 
+<div class="nav-pages"><a class="prev" href="rationnels_decimaux.html" title="Nombres rationnels et nombres décimaux">⬅️</a><a class="next" href="fractions.html" title="Calculs sur les fractions">➡️</a></div>
 </section>
 
 </main> <!-- /main -->

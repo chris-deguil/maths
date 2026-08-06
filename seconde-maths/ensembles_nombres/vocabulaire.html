@@ -103,6 +103,7 @@ window.MathJax = {
       C: "\\mathbb{C}",
       F: "\\mathbb{F}",
       D: "\\mathbb{D}",
+      Div: "\\Div",
       epsilon: "\\varepsilon",
 
       // --- Mises en forme / utilitaires ---
@@ -130,7 +131,7 @@ window.MathJax = {
       vE: "\\overrightarrow{\\mathscr{E}}",
       E: "\\mathscr{E}",
       bar: ["\\overline {#1}",1],
-      Div: ["\\Div{#1}",1],
+
 
 
       // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
@@ -223,7 +224,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/vocabulaire.html">Vocabulaire ensembliste</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/vocabulaire.html">Vocabulaire ensembliste</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -256,8 +257,11 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/vocabulaire.html" class="sidebar-item-text sidebar-link active">
@@ -271,11 +275,17 @@ window.Quarto = {
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/rationnels_decimaux.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/rationnels_decimaux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres rationnels et nombres décimaux</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/ensembles_nombres/reels_irrationnels.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/ensembles_nombres/reels_irrationnels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombres réels et nombres irrationnels</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/fractions.html" class="sidebar-item-text sidebar-link">
@@ -309,14 +319,13 @@ window.Quarto = {
   <li><a href="#élément-appartenance-ensemble-vide" id="toc-élément-appartenance-ensemble-vide" class="nav-link active" data-scroll-target="#élément-appartenance-ensemble-vide">Élément, appartenance, ensemble vide</a></li>
   <li><a href="#inclusion-réunion-intersection" id="toc-inclusion-réunion-intersection" class="nav-link" data-scroll-target="#inclusion-réunion-intersection">Inclusion, réunion, intersection</a></li>
   <li><a href="#visualiser-avec-des-diagrammes-de-venn" id="toc-visualiser-avec-des-diagrammes-de-venn" class="nav-link" data-scroll-target="#visualiser-avec-des-diagrammes-de-venn">Visualiser avec des diagrammes de Venn</a></li>
-  <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice">Exercice 1</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapitre 1 : Ensembles de nombres</li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/vocabulaire.html">Vocabulaire ensembliste</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/index.html">Chapitre 1 : Ensembles de nombres</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/ensembles_nombres/vocabulaire.html">Vocabulaire ensembliste</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Vocabulaire ensembliste</h1>
 </div>
@@ -373,11 +382,10 @@ window.Quarto = {
 <div style="text-align: center;">
 <p><img src="../../image/seconde/Nombres_Ensembles_diagramme_venn_operation.png" style="width: 90%;"></p>
 </div>
-</section>
-<section id="exercice" class="level2">
-<h2 class="anchored" data-anchor-id="exercice">Exercice 1</h2>
-<div class="bloc exo">
-<p><span class="exo-num"><strong>Exercice 1 : </strong></span><span class="exo-extra"> Appartenance, inclusion, réunion, intersection — Raisonner </span></p>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Appartenance, inclusion, réunion, intersection — Raisonner</span>
+</div>
 <p>On considère les ensembles <span class="math inline">\(A = \{1\,;\,2\,;\,3\,;\,6\}\)</span>, <span class="math inline">\(B = \{2\,;\,4\,;\,6\,;\,8\}\)</span> et <span class="math inline">\(C = \{2\,;\,6\}\)</span>.</p>
 <ol type="1">
 <li>Parmi les propositions suivantes, lesquelles sont vraies ? <span class="math inline">\(4 \in A\)</span> ; <span class="math inline">\(3 \notin B\)</span> ; <span class="math inline">\(6 \in A\)</span> ; <span class="math inline">\(5 \in B\)</span>.</li>
