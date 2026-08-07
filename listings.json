@@ -4,7 +4,6 @@
     "items": [
       "/seconde-maths/fonctions_affines/vocabulaire_fonctions.html",
       "/seconde-maths/fonctions_affines/definition_fonction_affine.html",
-      "/seconde-maths/fonctions_affines/determiner_expression.html",
       "/seconde-maths/fonctions_affines/representation_graphique.html",
       "/seconde-maths/fonctions_affines/appartenance_droite.html",
       "/seconde-maths/fonctions_affines/variations.html",
@@ -14,18 +13,41 @@
     ]
   },
   {
+    "listing": "/seconde-maths/racines_carrees/index.html",
+    "items": [
+      "/seconde-maths/racines_carrees/definition.html",
+      "/seconde-maths/racines_carrees/calculer_racines.html",
+      "/seconde-maths/racines_carrees/rationalisation.html",
+      "/seconde-maths/racines_carrees/comparer_racines.html",
+      "/seconde-maths/racines_carrees/racine2_irrationnel.html",
+      "/seconde-maths/racines_carrees/pythagore.html",
+      "/seconde-maths/racines_carrees/thales.html",
+      "/seconde-maths/racines_carrees/valeurs_remarquables.html",
+      "/seconde-maths/racines_carrees/combinaison_pythagore_thales.html"
+    ]
+  },
+  {
+    "listing": "/seconde-maths/intervalles_inegalites/index.html",
+    "items": [
+      "/seconde-maths/intervalles_inegalites/inegalite_encadrement.html",
+      "/seconde-maths/intervalles_inegalites/notion_intervalle.html",
+      "/seconde-maths/intervalles_inegalites/operations_intervalles.html",
+      "/seconde-maths/intervalles_inegalites/ordre_comparaison.html",
+      "/seconde-maths/intervalles_inegalites/resolution_inequations.html",
+      "/seconde-maths/intervalles_inegalites/valeur_absolue_distance.html",
+      "/seconde-maths/intervalles_inegalites/valeur_absolue_intervalles.html"
+    ]
+  },
+  {
     "listing": "/seconde-maths/vecteurs_translation/index.html",
     "items": [
       "/seconde-maths/vecteurs_translation/translation_vecteur.html",
-      "/seconde-maths/vecteurs_translation/vecteurs_egaux.html",
       "/seconde-maths/vecteurs_translation/somme_vecteurs.html",
       "/seconde-maths/vecteurs_translation/relation_chasles.html",
       "/seconde-maths/vecteurs_translation/identite_parallelogramme.html",
       "/seconde-maths/vecteurs_translation/vecteur_oppose.html",
       "/seconde-maths/vecteurs_translation/produit_reel.html",
-      "/seconde-maths/vecteurs_translation/milieu_segment.html",
       "/seconde-maths/vecteurs_translation/vecteurs_colineaires.html",
-      "/seconde-maths/vecteurs_translation/alignement_parallelisme.html",
       "/seconde-maths/vecteurs_translation/bilan.html"
     ]
   },
@@ -42,11 +64,25 @@
     ]
   },
   {
+    "listing": "/seconde-maths/geometrie_repere/index.html",
+    "items": [
+      "/seconde-maths/geometrie_repere/coordonnees_vecteur.html",
+      "/seconde-maths/geometrie_repere/somme_produit_vecteurs.html",
+      "/seconde-maths/geometrie_repere/vecteur_ab_norme.html",
+      "/seconde-maths/geometrie_repere/milieu_segment.html",
+      "/seconde-maths/geometrie_repere/colinearite_determinant.html",
+      "/seconde-maths/geometrie_repere/aire_parallelogramme.html",
+      "/seconde-maths/geometrie_repere/bilan.html"
+    ]
+  },
+  {
     "listing": "/seconde-maths/index.html",
     "items": [
       "/seconde-maths/ensembles_nombres/index.html",
       "/seconde-maths/fonctions_affines/index.html",
-      "/seconde-maths/vecteurs_translation/index.html"
+      "/seconde-maths/vecteurs_translation/index.html",
+      "/seconde-maths/geometrie_repere/index.html",
+      "/seconde-maths/intervalles_inegalites/index.html"
     ]
   },
   {

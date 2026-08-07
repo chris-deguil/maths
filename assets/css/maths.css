@@ -1,7 +1,6 @@
 /*-- scss:uses --*/
 /*-- scss:rules --*/
 
-
 body {
   background-color: rgb(253, 250, 245) !important;
 }
@@ -14,15 +13,13 @@ body.maths-theme .content {
 }
 
 
-
-
 .bloc-titre {
   display: block;
   font-weight: 700;
-  font-size: 1.1em; 
+  font-size: 1.1em;
   margin-bottom: .4rem;
   color: var(--tone);
-  border-bottom: 1px solid var(--tone); 
+  border-bottom: 1px solid var(--tone);
 }
 
 
@@ -41,9 +38,9 @@ body.maths-theme .content {
 }
 
 
-.bloc.def {--tone: #f97316;--bg: rgba(249,115,22,.08);}
-.bloc.thm {--tone: #16a34a;--bg: rgba(22,163,74,.08);}
-.bloc.ex {--tone: #2563eb;--bg: rgba(37,99,235,.08);}
+.bloc.def {--tone: #f97316; --bg: rgba(249,115,22,.08);}
+.bloc.thm {--tone: #16a34a; --bg: rgba(22,163,74,.08);}
+.bloc.ex  {--tone: #2563eb; --bg: rgba(37,99,235,.08);}
 
 
 @media (prefers-color-scheme: dark) {
@@ -55,10 +52,10 @@ body.maths-theme .content {
 
 
 .bloc.demo {
-  --tone: #f97316; 
+  --tone: #f97316;
   --bg: rgba(249,115,22,.08);
-  border-left-width: .4rem; 
-  padding: 0; 
+  border-left-width: .4rem;
+  padding: 0;
 }
 
 .bloc.thm .bloc-titre::before {
@@ -67,49 +64,71 @@ body.maths-theme .content {
 }
 
 .bloc.def .bloc-titre::before {
-  content: "📝"; 
+  content: "📝";
   margin-right: 0.45rem;
 }
-
 
 .bloc.ex .bloc-titre::before {
   content: "";
   display: inline-block;
-  width: 1.2em;                
-  height: 1.2em;              
-  margin-right: 0.45rem;      
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.45rem;
   background: url("../image/fav_cerveau2.png") no-repeat center / contain;
-  vertical-align: middle;    
+  vertical-align: middle;
 }
 
 
 .bloc.rem {
-  --tone: #7e57c2; 
-  --bg: rgba(126, 87, 194, 0.03); 
+  --tone: #7e57c2;
+  --bg: rgba(126, 87, 194, 0.08);
 }
 
 .bloc.rem .bloc-titre::before {
-  content: "💬"; 
+  content: "💬";
   margin-right: 0.45rem;
 }
 
 
+/* ─── Boîte à retenir (ex-\boite LaTeX) ─────────────────────────────
+   Fond explicitement coloré (--bg/--bd) : ne pas se contenter de
+   --tone seul, sinon la classe hérite du gris neutre de .bloc et le
+   fond ne correspond pas à la couleur de la bordure/du titre. ─── */
+.bloc.info {
+  --tone: #475569;                  /* gris ardoise */
+  --bg: rgba(71, 85, 105, 0.08);
+  --bd: rgba(71, 85, 105, 0.35);
+}
+.bloc.info .bloc-titre::before {
+  content: "🔑";
+  margin-right: 0.45rem;
+}
 
+
+/* ─── Anecdote historique (ex-\histoire LaTeX) ─────────────────────
+   Même remarque : fond propre, pas de --bg hérité. ─── */
+.bloc.hist {
+  --tone: #b45309;                  /* ambre */
+  --bg: rgba(180, 83, 9, 0.08);
+  --bd: rgba(180, 83, 9, 0.35);
+}
+.bloc.hist .bloc-titre::before {
+  content: "📜";
+  margin-right: 0.45rem;
+}
 
 
 .exemp-extra {
   display: inline;
   font-weight: normal !important;
-  color: #4b5563;                 
-  font-size: 0.9em;              
-  margin-left: 0.5rem;           
+  color: #4b5563;
+  font-size: 0.9em;
+  margin-left: 0.5rem;
 }
-
 
 .bloc.ex .exemp-extra {
   font-style: normal;
 }
-
 
 
 details.bloc.demo {
@@ -121,10 +140,9 @@ details.bloc.demo {
   background-color: #fff0f0;
 }
 
-
 details.bloc.demo > summary {
-  font-weight: normal;   
-  font-size: 0.95em;      
+  font-weight: normal;
+  font-size: 0.95em;
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -134,13 +152,11 @@ details.bloc.demo > summary {
   color: var(--tone);
 }
 
-
 details.bloc.demo > summary::before {
   content: "🔎";
   margin-right: 0.5em;
   transition: transform 0.2s;
 }
-
 
 details.bloc.demo[open] > summary::before {
   transform: rotate(45deg);
@@ -178,24 +194,47 @@ details.correction > *:not(summary) {
 }
 
 
-
 .bloc p { margin: .35rem 0; line-height: 1.35; }
 .bloc .math.display { margin: .45rem 0 !important; }
 .bloc .math.display + .math.display { margin-top: .25rem !important; }
 
 
+/* Tableaux : quadrillage complet (lignes ET colonnes) */
+table {
+  border-collapse: collapse;
+  margin: 0.9rem 0;
+}
 
+table th,
+table td {
+  border: 1px solid rgba(100, 116, 139, 0.35);
+  padding: 0.4rem 0.75rem;
+}
+
+table thead th {
+  background: rgba(100, 116, 139, 0.08);
+  font-weight: 700;
+  border-bottom: 2px solid rgba(100, 116, 139, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  table th,
+  table td {
+    border-color: rgba(148, 163, 184, 0.4);
+  }
+  table thead th {
+    background: rgba(148, 163, 184, 0.12);
+  }
+}
 
 
 /* Variante Exercice — même système que def/thm/ex */
 .bloc.exo {
-  --tone: #004080;                 /* bleu exos */
-  --bg: rgba(0, 64, 128, 0.06);    /* fond léger */
-  --bd: rgba(0, 64, 128, 0.35);    /* bord mélange ~35% */
-  /* --title: var(--tone);  // optionnel, déjà défini par .bloc */
+  --tone: #004080;                  /* bleu exos */
+  --bg: rgba(0, 64, 128, 0.06);
+  --bd: rgba(0, 64, 128, 0.35);
 }
 
-/* (facultatif) icône devant le titre d'exo */
 .bloc.exo .bloc-titre::before {
   content: "🧩";
   margin-right: 0.45rem;
@@ -203,43 +242,34 @@ details.correction > *:not(summary) {
 
 .bloc.exo .exo-num {
   font-weight: 700;
-  display: inline;      /* sur la même ligne que .exo-extra */
-  margin: 0 .25rem 0 0; /* petit espace avant le texte optionnel */
+  display: inline;
+  margin: 0 .25rem 0 0;
 }
-
 
 h2:has(+ .bloc.exo) {
   display: none;
 }
 
 .exo-extra {
-  font-weight: normal;   /* tu peux styliser comme tu veux */
-  margin-left: 0.2em;    /* petit espace avant le texte */
+  font-weight: normal;
+  margin-left: 0.2em;
 }
 
 .bloc.exo .exo-extra { display: inline; }
 
 
-/* Variante Savoir-faire — même système que def/thm/ex/exo */
-.bloc.sf {
-  --tone: #0d9488;                 /* turquoise, distinct de tout le reste */
+/* Variante Savoir-faire (ex-\sfc / \sfc2 LaTeX — traités à l'identique,
+   même classe, même libellé, jamais numéroté) */
+.bloc.sfc {
+  --tone: #0d9488;                  /* turquoise */
   --bg: rgba(13, 148, 136, 0.08);
   --bd: rgba(13, 148, 136, 0.35);
 }
 
-.bloc.sf .bloc-titre::before {
+.bloc.sfc .bloc-titre::before {
   content: "🛠️";
   margin-right: 0.45rem;
 }
-
-.sf {
-  display: inline;
-  font-weight: normal !important;
-  color: #4b5563;
-  font-size: 0.9em;
-  margin-left: 0.5rem;
-}
-
 
 
 .nav-pages {
@@ -249,7 +279,7 @@ h2:has(+ .bloc.exo) {
 }
 
 .nav-pages a {
-  font-size: 3em;       /* taille des flèches */
+  font-size: 3em;
   text-decoration: none;
   color: inherit;
   position: absolute;
@@ -257,9 +287,13 @@ h2:has(+ .bloc.exo) {
 }
 
 .nav-pages a.prev {
-  left: 0;              /* collée à gauche */
+  left: 0;
 }
 
 .nav-pages a.next {
-  right: 0;             /* collée à droite */
+  right: 0;
+}
+
+div[style*="text-align: center"] img {
+  zoom: 0.8;
 }
