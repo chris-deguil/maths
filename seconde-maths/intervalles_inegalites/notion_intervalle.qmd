@@ -25,7 +25,7 @@ On représente graphiquement l'ensemble des réels par une droite graduée,
 orientée de gauche à droite.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Intervalles_Inegalites_droite_des_reels.png" style="width: 55%;">
+  <img src="../../image/seconde/Intervalles_Inegalites_droite des reels.png" style="width: 55%;">
 </div>
 
 L'idée essentielle est que la droite réelle est **continue** :
@@ -175,8 +175,6 @@ solutions des inégalités suivantes, puis représenter chacune sur
 une droite graduée.
 
 1. $-2 \leqslant x < 5$
-2. $x > 3$
-3. $x \leqslant -1$
 
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
@@ -187,11 +185,25 @@ $-2 \leqslant x < 5 \Longleftrightarrow x \in [-2\,;\,5[$.
   <img src="../../image/seconde/Intervalles_Inegalites_intervalle10.png" style="width: 40%;">
 </div>
 
+</details>
+
+2. $x > 3$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
 $x > 3 \Longleftrightarrow x \in ]3\,;\,+\infty[$.
 
 <div style="text-align: center;">
   <img src="../../image/seconde/Intervalles_Inegalites_intervalle11.png" style="width: 40%;">
 </div>
+
+</details>
+
+3. $x \leqslant -1$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
 
 $x \leqslant -1 \Longleftrightarrow x \in ]-\infty\,;\,-1]$.
 

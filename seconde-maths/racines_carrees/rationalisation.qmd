@@ -53,7 +53,7 @@ $$\dfrac{6}{\sqrt{3}} \et \dfrac{10}{4 - \sqrt{5}}$$
    = \dfrac{6\sqrt{3}}{3}
    = 2\sqrt{3}$
 
-2. On multiplie par le conjugué $4 + \sqrt{5}$ :
+2. ***Point clef :** On  multiplie par le conjugué $4 + \sqrt{5}$* 
    $$\dfrac{10}{4 - \sqrt{5}}
    = \dfrac{10(4 + \sqrt{5})}{(4 - \sqrt{5})(4 + \sqrt{5})}
    = \dfrac{10(4 + \sqrt{5})}{16 - 5}
@@ -71,8 +71,8 @@ $$\dfrac{6}{\sqrt{3}} \et \dfrac{10}{4 - \sqrt{5}}$$
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
-*Point clef :* on commence par
-simplifier $\sqrt{20}$, puis on factorise au numérateur.
+***Point clef :** on commence par
+simplifier $\sqrt{20}$, puis on factorise au numérateur.*
 
 $$\dfrac{\sqrt{5} + \sqrt{20}}{\sqrt{5}}
 = \dfrac{\sqrt{5} + \sqrt{4 \times 5}}{\sqrt{5}}
@@ -87,8 +87,8 @@ $$\dfrac{\sqrt{5} + \sqrt{20}}{\sqrt{5}}
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
-*Point clef :* on commence par simplifier
-chaque radical séparément, puis on factorise.
+***Point clef :** on commence par simplifier
+chaque radical séparément, puis on factorise.*
 
 $$\dfrac{\sqrt{12} \times \sqrt{27}}{5\sqrt{3} + \sqrt{75}}
 = \dfrac{\sqrt{4 \times 3} \times \sqrt{9 \times 3}}{5\sqrt{3} + \sqrt{25 \times 3}}
@@ -111,8 +111,8 @@ $$\dfrac{\sqrt{12} \times \sqrt{27}}{5\sqrt{3} + \sqrt{75}}
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
-*Point clef :* on multiplie
-par le conjugué
+***Point clef :** on multiplie
+par le conjugué*
 
 Pour tout entier $n$, 
 $$\dfrac{1}{\sqrt{n+1} + \sqrt{n}}
@@ -135,9 +135,9 @@ $$S = \dfrac{1}{\sqrt{2}+\sqrt{1}}
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
-*Point clef :* d'après la question
+***Point clef :** d'après la question
 précédente, chaque terme se simplifie — c'est une somme
-télescopique.
+télescopique.*
 
 D'après la question précédente, pour tout entier
 $n \geqslant 0$ :

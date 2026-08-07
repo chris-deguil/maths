@@ -104,7 +104,6 @@ website:
             - seconde-maths/racines_carrees/comparer_racines.qmd
             - seconde-maths/racines_carrees/racine2_irrationnel.qmd
             - seconde-maths/racines_carrees/pythagore.qmd
-            - seconde-maths/racines_carrees/thales.qmd
             - seconde-maths/racines_carrees/valeurs_remarquables.qmd
             - seconde-maths/racines_carrees/combinaison_pythagore_thales.qmd
 

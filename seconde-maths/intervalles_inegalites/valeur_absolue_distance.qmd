@@ -39,7 +39,7 @@ Ainsi, en considérant, sur la droite graduée $A(-3)$, $B(2{,}5)$, on a
 $d(A,0) = \abs{-3} = 3$, $d(B,0) = \abs{2{,}5} = 2{,}5$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Intervalles_Inegalites_distance_zero1.png" style="width: 45%;">
+  <img src="../../image/seconde/Intervalles_Inegalites_distance_zero1.png" style="width: 25%;">
 </div>
 :::
 
@@ -47,7 +47,7 @@ $d(A,0) = \abs{-3} = 3$, $d(B,0) = \abs{2{,}5} = 2{,}5$.
 <span class="bloc-titre">Propriété : Équation avec valeur absolue</span>
 
 Pour tous réels $x$, $y$, 
-$$\abs{x} = \abs{y} \ssi x = y \ou x = -y$$
+$$\abs{x} = \abs{y} \iff x = y \ou x = -y$$
 :::
 
 <details class="bloc demo">
@@ -70,7 +70,7 @@ Résoudre dans $\R$.
 <summary>Afficher la correction :</summary>
 
 Pour tout réel $x$, 
-$$\abs{x-3} = 5 \ssi x-3 = 5 \ou x-3 = -5 \ssi x = 8 \ou x = -2$$
+$$\abs{x-3} = 5 \iff x-3 = 5 \ou x-3 = -5 \iff x = 8 \ou x = -2$$
 Donc $S = \left\{-2\,;\,8\right\}$.
 
 </details>
@@ -81,7 +81,7 @@ Donc $S = \left\{-2\,;\,8\right\}$.
 <summary>Afficher la correction :</summary>
 
 Pour tout réel $x$, 
-$$\abs{2-3x} = 4 \ssi 2-3x = 4 \ou 2-3x = -4 \ssi x = -\dfrac{2}{3} \ou x = 2$$
+$$\abs{2-3x} = 4 \iff 2-3x = 4 \ou 2-3x = -4 \iff x = -\dfrac{2}{3} \ou x = 2$$
 Donc $S = \left\{-\dfrac{2}{3}\,;\,2\right\}$.
 
 </details>
@@ -96,11 +96,11 @@ Résoudre dans $\R$ : $\abs{3 - 5x} = \abs{x + 3}$.
 <summary>Afficher la correction :</summary>
 
 Pour tout réel $x$, 
-$$\abs{3-5x} = \abs{x+3} \ssi 3-5x = x+3 \ou 3-5x = -(x+3)$$
+$$\abs{3-5x} = \abs{x+3} \iff 3-5x = x+3 \ou 3-5x = -(x+3)$$
 
-- D'une part, $3-5x = x+3 \ssi -6x = 0 \ssi x = 0$
+- D'une part, $3-5x = x+3 \iff -6x = 0 \iff x = 0$
 - D'autre part, 
-  $3-5x = -x-3 \ssi -4x = -6 \ssi x = \dfrac{3}{2}$
+  $3-5x = -x-3 \iff -4x = -6 \iff x = \dfrac{3}{2}$
 
 Donc $S = \left\{0\,;\,\dfrac{3}{2}\right\}$.
 

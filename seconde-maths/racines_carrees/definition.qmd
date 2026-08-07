@@ -69,10 +69,10 @@ $$a^2 = b^2 \Longleftrightarrow a = b \;\text{ ou }\; a = -b$$
 
 <details class="bloc demo">
 <summary>Démonstration :</summary>
-
-$a^2 = b^2 \Longleftrightarrow a^2 - b^2 = 0
+Pour tous les réels $a$ et $b$
+$$a^2 = b^2 \Longleftrightarrow a^2 - b^2 = 0
 \Longleftrightarrow (a-b)(a+b) = 0
-\Longleftrightarrow a = b$ ou $a = -b$.
+\Longleftrightarrow a = b \text{ ou }a = -b$$
 
 </details>
 
@@ -91,9 +91,9 @@ et si $a < 0$ alors $\sqrt{a^2} = -a$.
 Par définition, $\sqrt{a^2}$ est le réel positif dont
 le carré vaut $a^2$.
 
-- Si $a \geqslant 0$ : $a \geqslant 0$ et $a^2 = a^2$,
+- Si $a \geqslant 0$ alors $a \geqslant 0$ et $a^2 = a^2$,
   donc $\sqrt{a^2} = a = \abs{a}$.
-- Si $a < 0$ : $-a > 0$ et $(-a)^2 = a^2$,
+- Si $a < 0$ alors $-a > 0$ et $(-a)^2 = a^2$,
   donc $\sqrt{a^2} = -a = \abs{a}$.
 
 D'où le résultat dans les deux cas.
@@ -120,14 +120,16 @@ Simplifier $\sqrt{(2x+1)^2}$ selon le signe de $x$.
 Pour tout réel $x$, 
 $\sqrt{(2x+1)^2} = \abs{2x+1}$ 
 
-or 
+Or, pour tout réel $x$,  
 $$2x + 1 \geqslant 0 \Leftrightarrow x \geqslant -\dfrac{1}{2}$$
 
-Si $x \geqslant -\dfrac{1}{2}$, alors $2x + 1 \geqslant 0$
-donc $\sqrt{(2x+1)^2} = 2x + 1$.
+- Si $x \geqslant -\dfrac{1}{2}$, alors $2x + 1 \geqslant 0$
+  
+  donc $\sqrt{(2x+1)^2} = 2x + 1$.
 
-Si $x < -\dfrac{1}{2}$, alors $2x + 1 < 0$
-donc $\sqrt{(2x+1)^2} = -(2x+1) = -2x - 1$.
+- Si $x < -\dfrac{1}{2}$, alors $2x + 1 < 0$
+  
+  donc $\sqrt{(2x+1)^2} = -(2x+1) = -2x - 1$.
 
 </details>
 :::

@@ -14,9 +14,9 @@ order: 7
 <span class="bloc-titre">Propriété : Intervalle centré en $0$</span>
 
 Soit $r > 0$. Pour tout réel $x$ :
-$$\abs{x} \leqslant r \ssi x \in [-r\,;\,r]
+$$\abs{x} \leqslant r \iff x \in [-r\,;\,r]
 \qquad\text{et}\qquad
-\abs{x} < r \ssi x \in ]-r\,;\,r[$$
+\abs{x} < r \iff x \in ]-r\,;\,r[$$
 :::
 
 <details class="bloc demo">
@@ -30,14 +30,14 @@ $\abs{x} < r$ signifie que $x$ est à distance $< r$ de $0$, soit $-r < x < r$.
 <span class="bloc-titre">Propriété : Intervalle centré en $a$</span>
 
 Soient $a \in \R$ et $r > 0$. Pour tout réel $x$ :
-$$\abs{x - a} \leqslant r \ssi x \in [a-r\,;\,a+r]$$
+$$\abs{x - a} \leqslant r \iff x \in [a-r\,;\,a+r]$$
 :::
 
 <details class="bloc demo">
 <summary>Démonstration :</summary>
 
 Pour tout réel $x$ :
-$x \in [a-r\,;\,a+r] \ssi -r \leqslant x-a \leqslant r \ssi \abs{x-a} \leqslant r$.
+$x \in [a-r\,;\,a+r] \iff -r \leqslant x-a \leqslant r \iff \abs{x-a} \leqslant r$.
 
 </details>
 
@@ -129,7 +129,7 @@ Donner l'arrondi de $\pi \approx 3{,}14159\ldots$ à $10^{-2}$ près, par excès
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
-*Point clef :* Il suffit « d'augmenter » de 1, le dernier chiffre.
+***Point clef :** Il suffit « d'augmenter » de 1, le dernier chiffre.*
 
 L'arrondi de $\pi$ à $10^{-2}$ près par excès est  $3{,}15$.
 
@@ -156,9 +156,9 @@ Résoudre $\abs{2x-1} < \dfrac{5}{2}$.
 
 Pour tout réel $x$, 
 $$\abs{2x-1} < \frac{5}{2}
-\ssi -\frac{5}{2} < 2x-1 < \frac{5}{2}
-\ssi -\frac{3}{2} < 2x < \frac{7}{2}
-\ssi -\frac{3}{4} < x < \frac{7}{4}$$
+\iff -\frac{5}{2} < 2x-1 < \frac{5}{2}
+\iff -\frac{3}{2} < 2x < \frac{7}{2}
+\iff -\frac{3}{4} < x < \frac{7}{4}$$
 
 $S = \left]-\dfrac{3}{4}\,;\,\dfrac{7}{4}\right[$.
 

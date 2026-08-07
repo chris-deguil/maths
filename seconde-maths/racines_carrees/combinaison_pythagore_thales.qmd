@@ -1,58 +1,15 @@
 ---
-title: "Combinaison de Pythagore et Thalès"
+title: "Bilan"
 format:
   html:
     toc: true
     number-sections: false
-description: "Un exercice combinant Pythagore et Thalès, et le bilan des règles de calcul sur les racines carrées."
+description: " "
 order: 9
 ---
 
-::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Pythagore et Thalès combinés — Calculer </span></div>
 
-Dans un triangle $ABC$ rectangle en $A$,
-on donne $AB = 4$ et $BC = 2\sqrt{5}$.
-Le point $D$ est le pied de la hauteur issue de $A$
-dans le triangle $ABC$ (c'est-à-dire $D \in [BC]$
-tel que $AD \perp BC$).
 
-1. Calculer $AC$ en valeur exacte.
-
-<details class="bloc cor">
-<summary>Afficher la correction :</summary>
-
-Par le théorème de Pythagore dans le triangle $ABC$
-rectangle en $A$ :
-$$BC^2 = AB^2 + AC^2
-\Longrightarrow AC^2 = BC^2 - AB^2
-= (2\sqrt{5})^2 - 4^2
-= 20 - 16 = 4$$
-Donc $AC = 2$.
-
-</details>
-
-2. Calculer $BD$ en valeur exacte.
-
-<details class="bloc cor">
-<summary>Afficher la correction :</summary>
-
-*Point clef :* les triangles
-$ABD$ et $ABC$ sont rectangles et partagent l'angle $\hat{B}$,
-donc $\dfrac{BD}{AB} = \dfrac{AB}{BC}$.
-
-Dans les triangles $ABD$ et $ABC$, tous deux rectangles
-(en $D$ et en $A$ respectivement) et partageant l'angle $\hat{B}$ :
-$$\dfrac{BD}{AB} = \dfrac{AB}{BC}
-\Longrightarrow BD = \dfrac{AB^2}{BC}
-= \dfrac{16}{2\sqrt{5}}
-= \dfrac{8}{\sqrt{5}}
-= \dfrac{8\sqrt{5}}{5}$$
-
-</details>
-:::
-
-## Bilan
 
 ::: {.bloc .info}
 <span class="bloc-titre">À retenir : Règles de calcul sur les racines carrées</span>
