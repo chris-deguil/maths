@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../seconde-maths/racines_carrees/thales.html" rel="next">
+<link href="../../seconde-maths/racines_carrees/valeurs_remarquables.html" rel="next">
 <link href="../../seconde-maths/racines_carrees/racine2_irrationnel.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -557,12 +557,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/thales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Théorème de Thalès</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/racines_carrees/valeurs_remarquables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Valeurs remarquables de cosinus, sinus et tangente</span></a>
   </div>
@@ -570,7 +564,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/racines_carrees/combinaison_pythagore_thales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Combinaison de Pythagore et Thalès</span></a>
+ <span class="menu-text">Bilan</span></a>
   </div>
 </li>
       </ul>
@@ -639,8 +633,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#théorème-de-pythagore" id="toc-théorème-de-pythagore" class="nav-link active" data-scroll-target="#théorème-de-pythagore">Théorème de Pythagore</a></li>
+  <li><a href="#théorème-de-thalès" id="toc-théorème-de-thalès" class="nav-link" data-scroll-target="#théorème-de-thalès">Théorème de Thalès</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -670,6 +671,8 @@ window.Quarto = {
 
 
 <p>Les racines carrées apparaissent naturellement en géométrie dès que l’on applique le théorème de Pythagore ou le théorème de Thalès pour calculer des longueurs exactes.</p>
+<section id="théorème-de-pythagore" class="level2">
+<h2 class="anchored" data-anchor-id="théorème-de-pythagore">Théorème de Pythagore</h2>
 <div class="bloc info">
 <p><span class="bloc-titre">À retenir : Rappel — Théorème de Pythagore</span></p>
 <p>Dans un triangle <span class="math inline">\(ABC\)</span> rectangle en <span class="math inline">\(C\)</span> : <span class="math display">\[AB^2 = AC^2 + BC^2\]</span> Autrement dit, <span class="math inline">\(AB = \sqrt{AC^2 + BC^2}\)</span>.</p>
@@ -724,9 +727,89 @@ Afficher la correction :
 = 30 - 18 = 12\]</span> Donc <span class="math inline">\(BC = \sqrt{12} = \sqrt{4 \times 3} = 2\sqrt{3}\)</span>.</p>
 </details>
 </div>
+</section>
+<section id="théorème-de-thalès" class="level2">
+<h2 class="anchored" data-anchor-id="théorème-de-thalès">Théorème de Thalès</h2>
+<div class="bloc info">
+<p><span class="bloc-titre">À retenir : Rappel — Théorème de Thalès</span></p>
+<p>Si dans un triangle <span class="math inline">\(ABC\)</span>, les droites <span class="math inline">\((DE)\)</span> et <span class="math inline">\((BC)\)</span> sont parallèles, avec <span class="math inline">\(D \in [AB]\)</span> et <span class="math inline">\(E \in [AC]\)</span>, alors : <span class="math display">\[\dfrac{AD}{AB} = \dfrac{AE}{AC} = \dfrac{DE}{BC}\]</span></p>
+</div>
+<div class="bloc sfc">
+<div class="bloc-titre">
+Savoir - faire :<span class="exemp-extra"> Calculer une longueur par Thalès — Calculer </span>
+</div>
+<p>Dans un triangle <span class="math inline">\(ABC\)</span>, les droites <span class="math inline">\((DE)\)</span> et <span class="math inline">\((BC)\)</span> sont parallèles, avec <span class="math inline">\(D \in [AB]\)</span> et <span class="math inline">\(E \in [AC]\)</span>. On donne <span class="math inline">\(AD = \sqrt{3}\)</span>, <span class="math inline">\(AB = 3\sqrt{3}\)</span> et <span class="math inline">\(BC = 6\)</span>. Calculer <span class="math inline">\(DE\)</span> en valeur exacte.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>On a <span class="math inline">\((DE)\)</span> et <span class="math inline">\((BC)\)</span> sont parallèles et <span class="math inline">\((BD)\)</span> et <span class="math inline">\((CE)\)</span> sécantes en <span class="math inline">\(A\)</span>.</p>
+<p>Donc d’après le théorème de Thalès,</p>
+<p><span class="math display">\[\dfrac{DE}{BC} = \dfrac{AD}{AB} = \frac{AE}{AC}\]</span> Ainsi <span class="math display">\[DE = \frac{AD}{AB} \times BC = \dfrac{\sqrt{3}}{3\sqrt{3}} \times 6 = 2\]</span></p>
+</details>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Thalès — longueurs exactes — Calculer </span>
+</div>
+<p>Dans un triangle <span class="math inline">\(ABC\)</span>, les droites <span class="math inline">\((DE)\)</span> et <span class="math inline">\((BC)\)</span> sont parallèles, avec <span class="math inline">\(D \in [AB]\)</span> et <span class="math inline">\(E \in [AC]\)</span>. On donne <span class="math inline">\(DE = \sqrt{3}\)</span>, <span class="math inline">\(DB = \sqrt{3}\)</span> et <span class="math inline">\(BC = 3\)</span>. Calculer <span class="math inline">\(AB\)</span> en valeur exacte et simplifiée.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><em>Point clef :</em> on pose <span class="math inline">\(AD = x\)</span>, puis on exprime <span class="math inline">\(AB = x + DB\)</span> et on résout.</p>
+<p>On a <span class="math inline">\((DE) \parallel (BC)\)</span>, et les droites <span class="math inline">\((AB)\)</span> et <span class="math inline">\((AC)\)</span> sont sécantes en <span class="math inline">\(A\)</span>, avec <span class="math inline">\(D \in [AB]\)</span> et <span class="math inline">\(E \in [AC]\)</span>.</p>
+<p><span class="math display">\[\dfrac{DE}{BC} = \dfrac{AD}{AB} = \dfrac{AE}{AC}\]</span></p>
+<p>On pose <span class="math inline">\(AD = x\)</span>. Comme <span class="math inline">\(D \in [AB]\)</span>, on a <span class="math inline">\(AB = AD + DB = x + \sqrt{3}\)</span>, donc</p>
+<p><span class="math display">\[\dfrac{\sqrt{3}}{3} = \dfrac{x}{x + \sqrt{3}} \iff
+3x = \sqrt{3}(x + \sqrt{3}) = \sqrt{3}\,x + 3 \iff x(3 - \sqrt{3}) = 3\]</span> D’où</p>
+<p><span class="math display">\[x = \dfrac{3}{3 - \sqrt{3}}
+= \dfrac{3(3 + \sqrt{3})}{(3-\sqrt{3})(3+\sqrt{3})}
+= \dfrac{3(3+\sqrt{3})}{9 - 3}
+= \dfrac{3(3+\sqrt{3})}{6}
+= \dfrac{3+\sqrt{3}}{2}\]</span></p>
+<p>Donc <span class="math display">\[AB = AD + DB = \dfrac{3+\sqrt{3}}{2} + \sqrt{3}
+= \dfrac{3+\sqrt{3}+2\sqrt{3}}{2}
+= \dfrac{3+3\sqrt{3}}{2}
+= \dfrac{3(1+\sqrt{3})}{2}\]</span></p>
+</details>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Pythagore et Thalès combinés — Calculer </span>
+</div>
+<p>Dans un triangle <span class="math inline">\(ABC\)</span> rectangle en <span class="math inline">\(A\)</span>, on donne <span class="math inline">\(AB = 4\)</span> et <span class="math inline">\(BC = 2\sqrt{5}\)</span>. Le point <span class="math inline">\(D\)</span> est le pied de la hauteur issue de <span class="math inline">\(A\)</span> dans le triangle <span class="math inline">\(ABC\)</span> (c’est-à-dire <span class="math inline">\(D \in [BC]\)</span> tel que <span class="math inline">\(AD \perp BC\)</span>).</p>
+<ol type="1">
+<li>Calculer <span class="math inline">\(AC\)</span> en valeur exacte.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Par le théorème de Pythagore dans le triangle <span class="math inline">\(ABC\)</span> rectangle en <span class="math inline">\(A\)</span> : <span class="math display">\[BC^2 = AB^2 + AC^2
+\Longrightarrow AC^2 = BC^2 - AB^2
+= (2\sqrt{5})^2 - 4^2
+= 20 - 16 = 4\]</span> Donc <span class="math inline">\(AC = 2\)</span>.</p>
+</details>
+<ol start="2" type="1">
+<li>Calculer <span class="math inline">\(BD\)</span> en valeur exacte.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><em>Point clef :</em> les triangles <span class="math inline">\(ABD\)</span> et <span class="math inline">\(ABC\)</span> sont rectangles et partagent l’angle <span class="math inline">\(\hat{B}\)</span>, donc <span class="math inline">\(\dfrac{BD}{AB} = \dfrac{AB}{BC}\)</span>.</p>
+<p>Dans les triangles <span class="math inline">\(ABD\)</span> et <span class="math inline">\(ABC\)</span>, tous deux rectangles (en <span class="math inline">\(D\)</span> et en <span class="math inline">\(A\)</span> respectivement) et partageant l’angle <span class="math inline">\(\hat{B}\)</span> : <span class="math display">\[\dfrac{BD}{AB} = \dfrac{AB}{BC}
+\Longrightarrow BD = \dfrac{AB^2}{BC}
+= \dfrac{16}{2\sqrt{5}}
+= \dfrac{8}{\sqrt{5}}
+= \dfrac{8\sqrt{5}}{5}\]</span></p>
+</details>
+</div>
 
 
-<div class="nav-pages"><a class="prev" href="racine2_irrationnel.html" title="Le nombre √2 est irrationnel"></a><a class="next" href="thales.html" title="Théorème de Thalès"></a></div>
+<div class="nav-pages"><a class="prev" href="racine2_irrationnel.html" title="Le nombre √2 est irrationnel"></a><a class="next" href="valeurs_remarquables.html" title="Valeurs remarquables de cosinus, sinus et tangente"></a></div>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1300,8 +1383,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../seconde-maths/racines_carrees/thales.html" class="pagination-link" aria-label="Théorème de Thalès">
-        <span class="nav-page-text">Théorème de Thalès</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../seconde-maths/racines_carrees/valeurs_remarquables.html" class="pagination-link" aria-label="Valeurs remarquables de cosinus, sinus et tangente">
+        <span class="nav-page-text">Valeurs remarquables de cosinus, sinus et tangente</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

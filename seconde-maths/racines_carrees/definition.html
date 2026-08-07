@@ -557,12 +557,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/thales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Théorème de Thalès</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/racines_carrees/valeurs_remarquables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Valeurs remarquables de cosinus, sinus et tangente</span></a>
   </div>
@@ -570,7 +564,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/racines_carrees/combinaison_pythagore_thales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Combinaison de Pythagore et Thalès</span></a>
+ <span class="menu-text">Bilan</span></a>
   </div>
 </li>
       </ul>
@@ -729,9 +723,9 @@ Afficher la correction :
 <summary>
 Démonstration :
 </summary>
-<p><span class="math inline">\(a^2 = b^2 \Longleftrightarrow a^2 - b^2 = 0
+<p>Pour tous les réels <span class="math inline">\(a\)</span> et <span class="math inline">\(b\)</span> <span class="math display">\[a^2 = b^2 \Longleftrightarrow a^2 - b^2 = 0
 \Longleftrightarrow (a-b)(a+b) = 0
-\Longleftrightarrow a = b\)</span> ou <span class="math inline">\(a = -b\)</span>.</p>
+\Longleftrightarrow a = b \text{ ou }a = -b\]</span></p>
 </details>
 <div class="bloc thm">
 <p><span class="bloc-titre">Propriété : Racine carrée et valeur absolue</span></p>
@@ -743,8 +737,8 @@ Démonstration :
 </summary>
 <p>Par définition, <span class="math inline">\(\sqrt{a^2}\)</span> est le réel positif dont le carré vaut <span class="math inline">\(a^2\)</span>.</p>
 <ul>
-<li>Si <span class="math inline">\(a \geqslant 0\)</span> : <span class="math inline">\(a \geqslant 0\)</span> et <span class="math inline">\(a^2 = a^2\)</span>, donc <span class="math inline">\(\sqrt{a^2} = a = \abs{a}\)</span>.</li>
-<li>Si <span class="math inline">\(a &lt; 0\)</span> : <span class="math inline">\(-a &gt; 0\)</span> et <span class="math inline">\((-a)^2 = a^2\)</span>, donc <span class="math inline">\(\sqrt{a^2} = -a = \abs{a}\)</span>.</li>
+<li>Si <span class="math inline">\(a \geqslant 0\)</span> alors <span class="math inline">\(a \geqslant 0\)</span> et <span class="math inline">\(a^2 = a^2\)</span>, donc <span class="math inline">\(\sqrt{a^2} = a = \abs{a}\)</span>.</li>
+<li>Si <span class="math inline">\(a &lt; 0\)</span> alors <span class="math inline">\(-a &gt; 0\)</span> et <span class="math inline">\((-a)^2 = a^2\)</span>, donc <span class="math inline">\(\sqrt{a^2} = -a = \abs{a}\)</span>.</li>
 </ul>
 <p>D’où le résultat dans les deux cas.</p>
 </details>
@@ -763,9 +757,14 @@ Exercice :<span class="exemp-extra"> Simplifier <span class="math inline">\(\sqr
 Afficher la correction :
 </summary>
 <p>Pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(\sqrt{(2x+1)^2} = \abs{2x+1}\)</span></p>
-<p>or <span class="math display">\[2x + 1 \geqslant 0 \Leftrightarrow x \geqslant -\dfrac{1}{2}\]</span></p>
-<p>Si <span class="math inline">\(x \geqslant -\dfrac{1}{2}\)</span>, alors <span class="math inline">\(2x + 1 \geqslant 0\)</span> donc <span class="math inline">\(\sqrt{(2x+1)^2} = 2x + 1\)</span>.</p>
-<p>Si <span class="math inline">\(x &lt; -\dfrac{1}{2}\)</span>, alors <span class="math inline">\(2x + 1 &lt; 0\)</span> donc <span class="math inline">\(\sqrt{(2x+1)^2} = -(2x+1) = -2x - 1\)</span>.</p>
+<p>Or, pour tout réel <span class="math inline">\(x\)</span>,<br>
+<span class="math display">\[2x + 1 \geqslant 0 \Leftrightarrow x \geqslant -\dfrac{1}{2}\]</span></p>
+<ul>
+<li><p>Si <span class="math inline">\(x \geqslant -\dfrac{1}{2}\)</span>, alors <span class="math inline">\(2x + 1 \geqslant 0\)</span></p>
+<p>donc <span class="math inline">\(\sqrt{(2x+1)^2} = 2x + 1\)</span>.</p></li>
+<li><p>Si <span class="math inline">\(x &lt; -\dfrac{1}{2}\)</span>, alors <span class="math inline">\(2x + 1 &lt; 0\)</span></p>
+<p>donc <span class="math inline">\(\sqrt{(2x+1)^2} = -(2x+1) = -2x - 1\)</span>.</p></li>
+</ul>
 </details>
 </div>
 

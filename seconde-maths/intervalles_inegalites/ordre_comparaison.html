@@ -557,12 +557,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/thales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Théorème de Thalès</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/racines_carrees/valeurs_remarquables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Valeurs remarquables de cosinus, sinus et tangente</span></a>
   </div>
@@ -570,7 +564,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/racines_carrees/combinaison_pythagore_thales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Combinaison de Pythagore et Thalès</span></a>
+ <span class="menu-text">Bilan</span></a>
   </div>
 </li>
       </ul>
@@ -715,8 +709,13 @@ Démonstration :
 </details>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque : Erreur classique</span></p>
-<p>Multiplier ou diviser par un réel <strong>négatif</strong> inverse le sens de l’inégalité. Par exemple : <span class="math inline">\(-2x &lt; 6 \Longrightarrow x &gt; -3\)</span> (et non <span class="math inline">\(x &lt; -3\)</span>).</p>
-<p>On peut aussi <strong>additionner</strong> deux inégalités de même sens : si <span class="math inline">\(a \leqslant b\)</span> et <span class="math inline">\(c \leqslant d\)</span>, alors <span class="math inline">\(a+c \leqslant b+d\)</span>.</p>
+<ul>
+<li><p>Multiplier ou diviser par un réel <strong>négatif</strong> inverse le sens de l’inégalité.</p>
+<p>Par exemple : <span class="math inline">\(-2x &lt; 6 \Longrightarrow x &gt; -3\)</span> (et non <span class="math inline">\(x &lt; -3\)</span>).</p></li>
+<li><p>On peut <strong>additionner</strong> deux inégalités de même sens :</p>
+<p>si <span class="math inline">\(a \leqslant b\)</span> et <span class="math inline">\(c \leqslant d\)</span>, alors <span class="math inline">\(a+c \leqslant b+d\)</span>.</p></li>
+<li><p>On ne peut pas additionner deux inégalités qui n’ont pas le même sens.</p></li>
+</ul>
 </div>
 <div class="bloc sfc">
 <div class="bloc-titre">
@@ -779,6 +778,21 @@ Afficher la correction :
 <p>Donc <span class="math inline">\(-11 \leqslant b-3a \leqslant 1\)</span>.</p>
 </details>
 </div>
+<div class="bloc sfc">
+<div class="bloc-titre">
+Savoir - faire :<span class="exemp-extra"> Intersection de trois intervalles — Calculer </span>
+</div>
+<p>Déterminer <span class="math inline">\(I \cap J \cap K\)</span> où <span class="math inline">\(I = ]-3\,;\,5]\)</span>, <span class="math inline">\(J = [1\,;\,7[\)</span> et <span class="math inline">\(K = ]2\,;\,+\infty[\)</span> en utilisant les inégalités.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Un réel <span class="math inline">\(x\)</span> appartient à <span class="math inline">\(I \cap J\)</span> ssi <span class="math inline">\(-3 &lt; x \leqslant 5\)</span> et <span class="math inline">\(1 \leqslant x &lt; 7\)</span>, soit <span class="math inline">\(1 \leqslant x \leqslant 5\)</span>.</p>
+<p>Donc <span class="math inline">\(I \cap J = [1\,;\,5]\)</span>.</p>
+<p>Un réel <span class="math inline">\(x\)</span> appartient à <span class="math inline">\([1\,;\,5] \cap K\)</span> ssi <span class="math inline">\(1 \leqslant x \leqslant 5\)</span> et <span class="math inline">\(x &gt; 2\)</span>, soit <span class="math inline">\(2 &lt; x \leqslant 5\)</span>.</p>
+<p>Donc <span class="math inline">\(I \cap J \cap K = ]2\,;\,5]\)</span>.</p>
+</details>
+</div>
 </section>
 <section id="comparaison-de-deux-quantités" class="level2">
 <h2 class="anchored" data-anchor-id="comparaison-de-deux-quantités">Comparaison de deux quantités</h2>
@@ -802,7 +816,7 @@ Afficher la correction :
 </div>
 <div class="bloc thm">
 <p><span class="bloc-titre">Propriété : Comparaison par rapport</span></p>
-<p>Si <span class="math inline">\(a &gt; 0\)</span> et <span class="math inline">\(b &gt; 0\)</span> : <span class="math display">\[a &lt; b \ssi \frac{a}{b} &lt; 1\]</span></p>
+<p>Si <span class="math inline">\(a &gt; 0\)</span> et <span class="math inline">\(b &gt; 0\)</span> : <span class="math display">\[a &lt; b \iff \frac{a}{b} &lt; 1\]</span></p>
 </div>
 <details class="bloc demo">
 <summary>
@@ -848,21 +862,6 @@ Afficher la correction :
 <p>Les deux termes sont positifs. On calcule le rapport : <span class="math inline">\(\dfrac{15/23}{11/17} = \dfrac{15 \times 17}{23 \times 11} = \dfrac{255}{253} &gt; 1\)</span>, donc <span class="math inline">\(\dfrac{15}{23} &gt; \dfrac{11}{17}\)</span>.</p>
 </details>
 </div>
-<div class="bloc sfc">
-<div class="bloc-titre">
-Savoir - faire :<span class="exemp-extra"> Intersection de trois intervalles — Calculer </span>
-</div>
-<p>Déterminer <span class="math inline">\(I \cap J \cap K\)</span> où <span class="math inline">\(I = ]-3\,;\,5]\)</span>, <span class="math inline">\(J = [1\,;\,7[\)</span> et <span class="math inline">\(K = ]2\,;\,+\infty[\)</span>.</p>
-<details class="bloc cor">
-<summary>
-Afficher la correction :
-</summary>
-<p>Un réel <span class="math inline">\(x\)</span> appartient à <span class="math inline">\(I \cap J\)</span> ssi <span class="math inline">\(-3 &lt; x \leqslant 5\)</span> et <span class="math inline">\(1 \leqslant x &lt; 7\)</span>, soit <span class="math inline">\(1 \leqslant x \leqslant 5\)</span>.</p>
-<p>Donc <span class="math inline">\(I \cap J = [1\,;\,5]\)</span>.</p>
-<p>Un réel <span class="math inline">\(x\)</span> appartient à <span class="math inline">\([1\,;\,5] \cap K\)</span> ssi <span class="math inline">\(1 \leqslant x \leqslant 5\)</span> et <span class="math inline">\(x &gt; 2\)</span>, soit <span class="math inline">\(2 &lt; x \leqslant 5\)</span>.</p>
-<p>Donc <span class="math inline">\(I \cap J \cap K = ]2\,;\,5]\)</span>.</p>
-</details>
-</div>
 <div class="bloc ex">
 <div class="bloc-titre">
 Exercice :<span class="exemp-extra"> Comparer deux expressions paramétriques — Raisonner </span>
@@ -875,9 +874,9 @@ Afficher la correction :
 <p>Pour tout <span class="math inline">\(x &gt; 1\)</span> : <span class="math display">\[\frac{x+3}{x-1} - 2 = \frac{x+3 - 2(x-1)}{x-1} = \frac{5-x}{x-1}\]</span></p>
 <p>Comme <span class="math inline">\(x - 1 &gt; 0\)</span>, le signe dépend de <span class="math inline">\(5 - x\)</span>.</p>
 <ul>
-<li>Si <span class="math inline">\(1 &lt; x &lt; 5\)</span> : <span class="math inline">\(5-x &gt; 0\)</span> donc <span class="math inline">\(\dfrac{x+3}{x-1} &gt; 2\)</span>.</li>
-<li>Si <span class="math inline">\(x = 5\)</span> : <span class="math inline">\(5-x = 0\)</span> donc <span class="math inline">\(\dfrac{x+3}{x-1} = 2\)</span>.</li>
-<li>Si <span class="math inline">\(x &gt; 5\)</span> : <span class="math inline">\(5-x &lt; 0\)</span> donc <span class="math inline">\(\dfrac{x+3}{x-1} &lt; 2\)</span>.</li>
+<li>Si <span class="math inline">\(1 &lt; x &lt; 5\)</span> alors <span class="math inline">\(5-x &gt; 0\)</span> donc <span class="math inline">\(\dfrac{x+3}{x-1} &gt; 2\)</span>.</li>
+<li>Si <span class="math inline">\(x = 5\)</span> alors <span class="math inline">\(5-x = 0\)</span> donc <span class="math inline">\(\dfrac{x+3}{x-1} = 2\)</span>.</li>
+<li>Si <span class="math inline">\(x &gt; 5\)</span> alors <span class="math inline">\(5-x &lt; 0\)</span> donc <span class="math inline">\(\dfrac{x+3}{x-1} &lt; 2\)</span>.</li>
 </ul>
 </details>
 </div>
