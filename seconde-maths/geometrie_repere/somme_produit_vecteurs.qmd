@@ -1,0 +1,87 @@
+---
+title: "Somme de deux vecteurs et produit par un réel"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Calculer les coordonnées d'une somme de vecteurs et d'un produit d'un vecteur par un réel."
+order: 2
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Opérations sur les coordonnées</span>
+
+Soit $\ve{u}\vecol{x}{y}$, $\ve{v}\vecol{x'}{y'}$ et $k \in \R$.
+$$\ve{u} + \ve{v} = \vecol{x + x'}{y + y'},
+  \qquad
+  k\,\ve{u} = \vecol{kx}{ky}$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+On a $\ve{u} + \ve{v} = (x\,\ve{i} + y\,\ve{j}) + (x'\,\ve{i} + y'\,\ve{j})
+= (x+x')\,\ve{i} + (y+y')\,\ve{j}$.
+De même, $k\,\ve{u} = k(x\,\ve{i} + y\,\ve{j}) = kx\,\ve{i} + ky\,\ve{j}$.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Calculer une combinaison de vecteurs — Calculer </span></div>
+
+Soit $\ve{u}\vecol{2}{-1}$ et $\ve{v}\vecol{-3}{4}$. Calculer $\ve{u} + \ve{v}$ et $3\,\ve{u} - 2\,\ve{v}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$\ve{u} + \ve{v} = \vecol{2 + (-3)}{-1 + 4} = \vecol{-1}{3} \et 
+3\,\ve{u} - 2\,\ve{v} = \vecol{6}{-3} + \vecol{6}{-8} = \vecol{12}{-11}$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Retour du drone — Modéliser et Calculer </span></div>
+
+Un drone effectue trois déplacements successifs depuis une base $O$ :
+$3$ km vers l'est et $1$ km vers le nord, puis $1$ km vers l'ouest et $4$ km vers le nord,
+puis $2$ km vers l'est et $2$ km vers le sud.
+
+1. Modéliser la situation
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$\ve{u_1}\vecol{3}{1},\quad \ve{u_2}\vecol{-1}{4},\quad \ve{u_3}\vecol{2}{-2}$$
+
+</details>
+
+2. Calculer les coordonnées du vecteur total $\ve{u} = \ve{u_1} + \ve{u_2} + \ve{u_3}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$\ve{u} = \vecol{3+(-1)+2}{1+4+(-2)} = \vecol{4}{3}$$
+
+</details>
+
+3. En déduire les coordonnées du point $M$ représentant la position finale du drone.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\ve{OM} = \ve{u}$, donc $M(4\,;\,3)$.
+
+</details>
+
+4. Quel déplacement doit effectuer le drone pour revenir à sa base ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Le drone doit effectuer le déplacement de vecteur $\ve{MO}$.
+$$\ve{MO} \vecol{-4}{-3}$$
+Le drone doit donc se déplacer de $4$ km vers l'ouest et de $3$ km vers le sud.
+
+</details>
+:::

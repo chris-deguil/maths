@@ -1,0 +1,271 @@
+---
+title: "Ordre et comparaison de deux quantités"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Transitivité, règles opératoires sur les inégalités, et comparaison par différence ou par rapport."
+order: 4
+---
+
+## Ordre sur $\R$ — Propriétés
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Transitivité</span>
+
+Pour tous réels $a$, $b$, $c$ :
+$$a \leqslant b \et b \leqslant c \Longrightarrow a \leqslant c$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Si $a \leqslant b$ et $b \leqslant c$, alors $b - a \geqslant 0$ et $c - b \geqslant 0$.
+Ainsi $$c - a = (c-b)+(b-a) \geqslant 0$$ donc $a \leqslant c$.
+
+</details>
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Règles opératoires sur les inégalités</span>
+
+Soient $a$, $b$, $c$ des réels avec $a \leqslant b$.
+
+1. **Addition :** $a + c \leqslant b + c$.
+   *(le sens est conservé)*
+2. **Multiplication par $c > 0$ :** $ac \leqslant bc$.
+   *(le sens est conservé)*
+3. **Multiplication par $c < 0$ :** $ac \geqslant bc$.
+   *(le sens s'inverse)*
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soit $a \leqslant b$, donc $b-a \geqslant 0$.
+
+1. $(b+c)-(a+c) = b-a \geqslant 0$.
+2. Pour tout réel $c$ :
+$$bc - ac = (b-a)c$$
+   - Si $c > 0$, alors $(b-a)c \geqslant 0$, donc $bc - ac \geqslant 0$,
+
+     Ainsi $ac \leqslant bc$.
+
+   - Si $c < 0$, alors $(b-a)c \leqslant 0$, donc $bc - ac \leqslant 0$,
+
+     Ainsi $bc \leqslant ac$, soit $ac \geqslant bc$.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : Erreur classique</span>
+
+Multiplier ou diviser par un réel **négatif** inverse le sens de l'inégalité.
+Par exemple : $-2x < 6 \Longrightarrow x > -3$ (et non $x < -3$).
+
+On peut aussi **additionner** deux inégalités de même sens :
+si $a \leqslant b$ et $c \leqslant d$, alors $a+c \leqslant b+d$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Déduire des encadrements — Calculer et Raisonner </span></div>
+
+Sachant que $1 < T \leqslant 4$ et $-3 \leqslant R \leqslant -2$, encadrer :
+
+1. $T + 5$
+2. $-3R$
+3. $T + 3R$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+1. On ne change pas le sens d'une inégalité en ajoutant ou en retranchant une même quantité de part et d'autre de l'inégalité.
+
+   Donc $6 < T + 5 \leqslant 9$.
+
+2. $-3 < 0$, or en multipliant de part et d'autre d'une inégalité par une même quantité négative, on inverse le sens de l'inégalité.
+
+   Donc $6 \leqslant -3R < 9$.
+
+3. $3 > 0$, or en multipliant de part et d'autre de l'encadrement de $R$ par une même quantité positive, on ne change pas le sens de l'inégalité.
+
+   Donc $-9 \leqslant 3R \leqslant -6$.
+
+   On additionne membre à membre les encadrements de $T$ et de $3R$ :
+
+   Ainsi $-8 < T + 3R \leqslant -2$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+On peut ajouter des inégalités entre elle, en additionnant membre à membre.
+
+Mais on ne peut pas soustraire des inégalités entre elles : pour soustraire une quantité, on encadre son opposé puis on additionne membre à membre.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Encadrements par opérations — Calculer et Raisonner </span></div>
+
+Soit $1 \leqslant a \leqslant 3$ et $-2 \leqslant b \leqslant 4$.
+
+1. Encadrer $-2a + 1$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$-2 < 0$, or en multipliant de part et d'autre d'une inégalité
+par une même quantité négative, on inverse le sens de l'inégalité.
+
+Donc $-6 \leqslant -2a \leqslant -2$.
+
+On ne change pas le sens d'une inégalité en ajoutant ou en retranchant
+une même quantité de part et d'autre de l'inégalité.
+
+Donc $-5 \leqslant -2a+1 \leqslant -1$.
+
+</details>
+
+2. Encadrer $b - 3a$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$-3 < 0$, or en multipliant de part et d'autre d'une inégalité
+par une même quantité négative, on inverse le sens de l'inégalité.
+
+Donc $-9 \leqslant -3a \leqslant -3$.
+
+On additionne les deux encadrements $-2 \leqslant b \leqslant 4$
+et $-9 \leqslant -3a \leqslant -3$ membre à membre.
+
+Donc $-11 \leqslant b-3a \leqslant 1$.
+
+</details>
+:::
+
+## Comparaison de deux quantités
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode</span>
+
+Pour comparer A et B, on peut calculer B - A et on étudier son signe. Cette méthode fonctionne toujours,
+quels que soient les signes.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Comparer par différence — Raisonner </span></div>
+
+Comparer, pour $x > -1$, les nombres $\dfrac{2x+3}{x+1}$ et $2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout $x >-1$,
+$$\frac{2x+3}{x+1} - 2 = \frac{2x+3}{x+1} - \frac{2(x+1)}{x+1} = \frac{2x+3-2(x+1)}{x+1} = \frac{1}{x+1}$$
+
+Or $1 > 0$ et $x+1 > 0$ pour $x > -1$.
+
+Donc $\dfrac{1}{x+1} > 0$, ce qui signifie que $\dfrac{2x+3}{x+1} > 2$.
+
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Comparaison par rapport</span>
+
+Si $a > 0$ et $b > 0$ :
+$$a < b \ssi \frac{a}{b} < 1$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Dans $a < b$ on multiplie par $\frac{1}{b} >0$, donc l'ordre est conservé ainsi $\dfrac{a}{b} < 1$ et réciproquement en multipliant par $b >0$.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Comparer par rapport — Calculer </span></div>
+
+Comparer $\dfrac{5}{8}$ et $\dfrac{7}{11}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Les deux quantités sont strictement positives ; on calcule le rapport :
+$$\frac{\dfrac{5}{8}}{\dfrac{7}{11}}
+= \frac{5}{8} \times \frac{11}{7}
+= \frac{55}{56}< 1$$
+
+Comme le rapport est inférieur à $1$, on conclut $\dfrac{5}{8} < \dfrac{7}{11}$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Comparaison — Raisonner </span></div>
+
+1. Pour $x > 0$, comparer $x + \dfrac{1}{x}$ et $2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$ non nul, $$x + \dfrac{1}{x} - 2 = \dfrac{x^2-2x+1}{x} = \dfrac{(x-1)^2}{x} \geqslant 0$$
+Donc $x + \dfrac{1}{x} \geqslant 2$, avec égalité ssi $x = 1$.
+
+</details>
+
+2. Comparer $\dfrac{15}{23}$ et $\dfrac{11}{17}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Les deux termes sont positifs. On calcule le rapport :
+$\dfrac{15/23}{11/17} = \dfrac{15 \times 17}{23 \times 11} = \dfrac{255}{253} > 1$,
+donc $\dfrac{15}{23} > \dfrac{11}{17}$.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Intersection de trois intervalles — Calculer </span></div>
+
+Déterminer $I \cap J \cap K$ où $I = ]-3\,;\,5]$, $J = [1\,;\,7[$ et $K = ]2\,;\,+\infty[$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Un réel $x$ appartient à $I \cap J$ ssi $-3 < x \leqslant 5$ et $1 \leqslant x < 7$,
+soit $1 \leqslant x \leqslant 5$.
+
+Donc $I \cap J = [1\,;\,5]$.
+
+Un réel $x$ appartient à $[1\,;\,5] \cap K$ ssi $1 \leqslant x \leqslant 5$ et $x > 2$,
+soit $2 < x \leqslant 5$.
+
+Donc $I \cap J \cap K = ]2\,;\,5]$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Comparer deux expressions paramétriques — Raisonner </span></div>
+
+Pour $x > 1$, comparer $\dfrac{x+3}{x-1}$ et $2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout $x > 1$ :
+$$\frac{x+3}{x-1} - 2 = \frac{x+3 - 2(x-1)}{x-1} = \frac{5-x}{x-1}$$
+
+Comme $x - 1 > 0$, le signe dépend de $5 - x$.
+
+- Si $1 < x < 5$ : $5-x > 0$ donc $\dfrac{x+3}{x-1} > 2$.
+- Si $x = 5$ : $5-x = 0$ donc $\dfrac{x+3}{x-1} = 2$.
+- Si $x > 5$ : $5-x < 0$ donc $\dfrac{x+3}{x-1} < 2$.
+
+</details>
+:::

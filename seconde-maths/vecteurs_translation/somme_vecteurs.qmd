@@ -16,7 +16,7 @@ order: 3
 Soient $\ve{u}$ et $\ve{v}$ deux vecteurs du plan. Il existe un unique vecteur $\ve{w}$ tel que $\ve{w} = \ve{u} + \ve{v}$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Vecteurs_Translation_unicite.png" style="width: 55%;">
+  <img src="../../image/seconde/Vecteurs_Translation_unicite.png" style="width: 25%;">
 </div>
 :::
 
@@ -27,7 +27,7 @@ Soient $A$, $B$, $D$, $E$, $C$, $F$ des points tels que $t_{\ve{u}}(A) = B$, $t_
 $ABED$ et $BCFE$ sont des parallélogrammes.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Vecteurs_Translation_figure_demo1.png" style="width: 55%;">
+  <img src="../../image/seconde/Vecteurs_Translation_figure_demo1.png" style="width: 20%;">
 </div>
 
 On en déduit que $ACFD$ est aussi un parallélogramme. Il existe donc une unique translation de vecteur $\ve{w}$ telle que $t_{\ve{w}}(A) = C$ et $t_{\ve{w}}(D) = F$.
@@ -52,7 +52,7 @@ Pour tous vecteurs $\ve{u}$, $\ve{v}$, $\ve{w}$ :
 En plaçant $\ve{u}$ et $\ve{v}$ à partir d'un même point, ils définissent un parallélogramme dont la diagonale représente à la fois $\ve{u}+\ve{v}$ et $\ve{v}+\ve{u}$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Vecteurs_Translation_figure_demo2.png" style="width: 55%;">
+  <img src="../../image/seconde/Vecteurs_Translation_figure_demo2.png" style="width: 35%;">
 </div>
 
 **Associativité.**

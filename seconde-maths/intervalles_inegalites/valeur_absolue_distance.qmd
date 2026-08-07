@@ -1,0 +1,170 @@
+---
+title: "Valeur absolue et distance"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Valeur absolue, distance à zéro et distance entre deux réels."
+order: 6
+---
+
+## Distance à $0$
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Valeur absolue</span>
+
+Soit $x \in \R$. On appelle **valeur absolue** de $x$ le réel noté $\abs{x}$ défini par :
+$$\abs{x} = \begin{cases} x & \text{si } x \geqslant 0 \\ -x & \text{si } x < 0 \end{cases}$$
+Ce nombre est aussi appelé **distance de $x$ à $0$**.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Calculer une valeur absolue — Calculer </span></div>
+
+Calculer $\abs{-3}$, $\abs{0}$, $\abs{1}$ et $\abs{2{,}5}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\abs{-3} = 3$ ; $\abs{0} = 0$ ; $\abs{1} = 1$ ; $\abs{2{,}5} = 2{,}5$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Ainsi, en considérant, sur la droite graduée $A(-3)$, $B(2{,}5)$, on a
+
+$d(A,0) = \abs{-3} = 3$, $d(B,0) = \abs{2{,}5} = 2{,}5$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_distance_zero1.png" style="width: 45%;">
+</div>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Équation avec valeur absolue</span>
+
+Pour tous réels $x$, $y$, 
+$$\abs{x} = \abs{y} \ssi x = y \ou x = -y$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+$d(x,0) = d(y,0)$ signifie que $x$ et $y$ sont à la même distance de $0$.
+Il y a exactement deux points à distance $\abs{x}$ de $0$ : $\abs{x}$ et $-\abs{x}$,
+d'où $x = y$ ou $x = -y$.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Résoudre une équation avec valeur absolue — Calculer </span></div>
+
+Résoudre dans $\R$.
+
+1. $\abs{x - 3} = 5$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, 
+$$\abs{x-3} = 5 \ssi x-3 = 5 \ou x-3 = -5 \ssi x = 8 \ou x = -2$$
+Donc $S = \left\{-2\,;\,8\right\}$.
+
+</details>
+
+2. $\abs{2 - 3x} = 4$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, 
+$$\abs{2-3x} = 4 \ssi 2-3x = 4 \ou 2-3x = -4 \ssi x = -\dfrac{2}{3} \ou x = 2$$
+Donc $S = \left\{-\dfrac{2}{3}\,;\,2\right\}$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Équation avec valeur absolue — Calculer </span></div>
+
+Résoudre dans $\R$ : $\abs{3 - 5x} = \abs{x + 3}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, 
+$$\abs{3-5x} = \abs{x+3} \ssi 3-5x = x+3 \ou 3-5x = -(x+3)$$
+
+- D'une part, $3-5x = x+3 \ssi -6x = 0 \ssi x = 0$
+- D'autre part, 
+  $3-5x = -x-3 \ssi -4x = -6 \ssi x = \dfrac{3}{2}$
+
+Donc $S = \left\{0\,;\,\dfrac{3}{2}\right\}$.
+
+</details>
+:::
+
+## Distance entre deux réels
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Distance entre deux réels</span>
+
+Soient $x, y \in \R$. Le nombre $d(x,y) = \abs{x-y} = \abs{y-x}$ est la
+**distance entre $x$ et $y$**.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Si $x \leqslant y$, alors $x - y \leqslant 0$, donc
+$\abs{x-y} = -(x-y) = y-x = \abs{y-x}$.
+C'est bien la longueur du segment $[x\,;\,y]$ sur la droite réelle.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Résoudre graphiquement une équation — Représenter </span></div>
+
+Résoudre graphiquement $\abs{x-5} = 3$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\abs{x-5} = 3$ : on cherche les réels à distance $3$ du point $5$.
+
+$S = \{2\,;\,8\}$
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_distance_zero2.png" style="width: 45%;">
+</div>
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Résolution graphique 2 — Représenter, Calculer </span></div>
+
+Résoudre graphiquement $\abs{3-2x} = 2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* On fait un changement de variable $X$ à la place de $2x$. Une fois que l'on a trouver les valeurs de $X$ on en déduit celles de $x$.
+
+$\abs{3-2x} = \abs{2x-3} = 2$
+
+Soit $\abs{X-3} = 2$, alors  obtient $X=1$ ou $X=5$,
+
+Donc  $2x = 1$ ou $2x = 5$, soit $x = \dfrac{1}{2}$ ou $x = \dfrac{5}{2}$.
+
+Donc $S = \left\{\dfrac{1}{2}\,;\,\dfrac{5}{2}\right\}$
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_distance_zero3.png" style="width: 45%;">
+</div>
+
+</details>
+:::

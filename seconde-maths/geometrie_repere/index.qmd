@@ -1,0 +1,23 @@
+---
+title: "Géométrie repérée"
+description: "Coordonnées de vecteurs, norme, milieu, colinéarité et déterminant dans un repère orthonormé."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Représenter un vecteur dont on connaît les coordonnées ; lire les coordonnées d'un vecteur.
+- Calculer les coordonnées d'une somme de vecteurs et d'un produit d'un vecteur par un réel.
+- Calculer la distance entre deux points. Calculer les coordonnées du milieu d'un segment.
+- Caractériser alignement et parallélisme par la colinéarité de vecteurs (critère du déterminant).
+- Résoudre des problèmes avec des méthodes diverses (méthodes vectorielles, repérées ou non, méthodes géométriques).
+:::

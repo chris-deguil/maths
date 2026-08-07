@@ -66,6 +66,9 @@ function Meta(meta)
   return meta
 end
 
+-- VERSION ACTIVE — mêmes liens prev/next, sans les emoji ⬅️/➡️.
+
+
 function Pandoc(doc)
   if not chapter_dir or not current_order then return doc end
 
@@ -89,10 +92,10 @@ function Pandoc(doc)
   end
 
   local prev_link = prev
-    and ('<a class="prev" href="' .. html_name(prev.name) .. '" title="' .. prev.title .. '">⬅️</a>')
+    and ('<a class="prev" href="' .. html_name(prev.name) .. '" title="' .. prev.title .. '"></a>')
     or ""
   local next_link = nextf
-    and ('<a class="next" href="' .. html_name(nextf.name) .. '" title="' .. nextf.title .. '">➡️</a>')
+    and ('<a class="next" href="' .. html_name(nextf.name) .. '" title="' .. nextf.title .. '"></a>')
     or ""
 
   local nav_html = '<div class="nav-pages">' .. prev_link .. next_link .. "</div>"

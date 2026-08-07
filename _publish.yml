@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 7454a1a6-62f6-499d-b43d-10cc0599454f
+      url: 'https://quiet-sprite-71ce0b.netlify.app'

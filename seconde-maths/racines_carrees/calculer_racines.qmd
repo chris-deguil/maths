@@ -1,0 +1,119 @@
+---
+title: "Calculer avec des racines carrées"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Règles de produit et de quotient sur les racines carrées, simplification et calculs."
+order: 2
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soient $a$ et $b$ deux réels **positifs ou nuls**.
+
+1. **Produit :**
+   $\sqrt{ab} = \sqrt{a}\,\sqrt{b}$
+2. **Quotient** (avec $b \neq 0$) :
+   $\sqrt{\dfrac{a}{b}} = \dfrac{\sqrt{a}}{\sqrt{b}}$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Montrons que $\sqrt{ab} = \sqrt{a} \times \sqrt{b}$
+pour $a \geqslant 0$ et $b \geqslant 0$.
+
+D'une part, $\sqrt{a} \times \sqrt{b} \geqslant 0$
+car c'est un produit de deux réels positifs ou nuls.
+
+D'autre part,
+$\left(\sqrt{a} \times \sqrt{b}\right)^2
+ = \left(\sqrt{a}\right)^2 \times \left(\sqrt{b}\right)^2
+ = a \times b$.
+
+Ainsi $\sqrt{a} \times \sqrt{b}$ est un réel positif ou nul
+dont le carré vaut $ab$.
+Par unicité de la racine carrée, $\sqrt{ab} = \sqrt{a}\,\sqrt{b}$.
+
+On raisonne de même pour le quotient.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Ces règles s'appliquent uniquement pour $a \geqslant 0$
+et $b \geqslant 0$.
+
+En particulier,
+$\sqrt{a + b} \neq \sqrt{a} + \sqrt{b}$ en général :
+par exemple, $\sqrt{9 + 16} = \sqrt{25} = 5 \neq 3 + 4 = 7$.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode — simplifier $\sqrt{n}$</span>
+
+- **Simplifier $\sqrt{n}$** : chercher le plus grand
+  carré parfait divisant $n$.
+  Exemple : $\sqrt{75} = \sqrt{25 \times 3} = 5\sqrt{3}$.
+- **Additionner** : $a\sqrt{k} + b\sqrt{k}
+  = (a+b)\sqrt{k}$ — on factorise sur $\sqrt{k}$.
+- **Multiplier** : $\sqrt{a} \times \sqrt{b}
+  = \sqrt{ab}$ uniquement si $a \geqslant 0$
+  et $b \geqslant 0$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Simplifier une racine carrée — Calculer </span></div>
+
+Simplifier les expressions suivantes.
+
+$\sqrt{50}$ ; $\sqrt{72}$ ; $\sqrt{18} + \sqrt{8}$ ; $\dfrac{\sqrt{50}}{\sqrt{2}}$ ;
+$2\sqrt{75} - \sqrt{48} + 3\sqrt{3}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+1. $\sqrt{50} = \sqrt{25 \times 2} = 5\sqrt{2}$
+2. $\sqrt{72} = \sqrt{36 \times 2} = 6\sqrt{2}$
+3. $\sqrt{18} + \sqrt{8} = \sqrt{9 \times 2} + \sqrt{4 \times 2} = 3 \sqrt{2} +2 \sqrt{2} = 5 \sqrt{2} 5\sqrt{2}$
+4. $\dfrac{\sqrt{50}}{\sqrt{2}} = \sqrt{\dfrac{50}{2}}
+   = \sqrt{25} = 5$
+5. $2\sqrt{75} - \sqrt{48} + 3\sqrt{3}
+   = \sqrt{25 \times 3}  -  \sqrt{16 \times 3} + 3\sqrt{3}
+   = 2 \times 5\sqrt{3} - 4\sqrt{3} + 3\sqrt{3}
+   = 10 \times 5\sqrt{3} - 4\sqrt{3} + 3\sqrt{3}
+   =9 \sqrt{3}$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Simplifier des expressions avec des radicaux — Calculer </span></div>
+
+1. Simplifier $\sqrt{125} - 3\sqrt{5} + 2\sqrt{20}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\sqrt{125} - 3\sqrt{5} + 2\sqrt{20}
+= \sqrt{25 \times 5} - 3\sqrt{5} + 2\sqrt{4 \times 5}
+= 5\sqrt{5} - 3\sqrt{5} + 4\sqrt{5}
+= 6\sqrt{5}$
+
+</details>
+
+2. Développer et simplifier $(3 - 2\sqrt{3})(5 - \sqrt{3})$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$(3 - 2\sqrt{3})(5 - \sqrt{3})
+= 15 - 3\sqrt{3} - 10\sqrt{3} + 2 \times 3
+= 15 - 13\sqrt{3} + 6
+= 21 - 13\sqrt{3}$
+
+</details>
+:::

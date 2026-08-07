@@ -8,6 +8,7 @@ description: "λu, distributivité"
 order: 7
 ---
 
+## Produit d'un vecteur par un réel 
 ::: {.bloc .def}
 <span class="bloc-titre">Définition : Produit par un réel</span>
 
@@ -30,7 +31,7 @@ Par convention, $0\cdot\ve{u} = \ve{0}$.
 | $\lambda = 0$ | vecteur nul | $0$ |
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Vecteurs_Translation_colinearite1.png" style="width: 55%;">
+  <img src="../../image/seconde/Vecteurs_Translation_colinearite1.png" style="width: 45%;">
 </div>
 :::
 
@@ -47,14 +48,20 @@ $$k(\ve{u}+\ve{v}) = k\ve{u}+k\ve{v} \qquad \text{et} \qquad (k+m)\ve{u} = k\ve{
 Soient $\ve{u}$ et $\ve{v}$ deux vecteurs.
 
 1. On donne $2\ve{u}+3\ve{v}-5\ve{u} = \ve{0}$. Montrer que $\ve{u} = \ve{v}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$(2-5)\ve{u}+3\ve{v} = -3\ve{u}+3\ve{v} = \ve{0}$, donc $3\ve{v} = 3\ve{u}$, soit $\ve{u} = \ve{v}$.
+
+</details>
+
 2. On donne $-3(\ve{u}+2\ve{v}) = 2\ve{v}+\ve{u}$. Que peut-on dire des vecteurs $\ve{u}$ et $\ve{v}$ ?
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-1. $(2-5)\ve{u}+3\ve{v} = -3\ve{u}+3\ve{v} = \ve{0}$, donc $3\ve{v} = 3\ve{u}$, soit $\ve{u} = \ve{v}$.
-2. $-3\ve{u}-6\ve{v} = 2\ve{v}+\ve{u}$, donc $-4\ve{u} = 8\ve{v}$, soit $\ve{u} = -2\ve{v}$.
+$-3\ve{u}-6\ve{v} = 2\ve{v}+\ve{u}$, donc $-4\ve{u} = 8\ve{v}$, soit $\ve{u} = -2\ve{v}$.
 
-   Les vecteurs $\ve{u}$ et $\ve{v}$ ont **même direction et de sens contraires**, et $\norm{\ve{u}} = 2\norm{\ve{v}}$.
+Les vecteurs $\ve{u}$ et $\ve{v}$ ont **même direction et de sens contraires**, et $\norm{\ve{u}} = 2\norm{\ve{v}}$.
 
 </details>
 :::
@@ -96,4 +103,62 @@ afin de montrer des relations.
 On dit que l'on **décompose** le vecteur $\ve{AM}$ dans la **base $\left(\ve{AB}\,;\,\ve{AC}\right)$**.
 
 En pratique, on cherche à écrire les deux vecteurs dans la même base, puis à montrer que l'un est multiple de l'autre ou à exhiber les coordonnées d'un point.
+:::
+
+## Milieu d'un segment
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Caractérisation vectorielle du milieu</span>
+
+$I$ est le milieu de $[AB]$ si et seulement si $\ve{AI} = \ve{IB}$, ou encore $\ve{AB} = 2\,\ve{AI}$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Par Chasles, $\ve{AB} = \ve{AI}+\ve{IB}$. Si $I$ est le milieu, $\ve{AI} = \ve{IB}$, donc $\ve{AB} = 2\,\ve{AI}$.
+
+Réciproquement, si $\ve{AB} = 2\,\ve{AI}$, alors $\ve{AI}+\ve{IB} = 2\,\ve{AI}$, d'où $\ve{IB} = \ve{AI}$, soit $I$ milieu de $[AB]$.
+
+</details>
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Propriété vectorielle du milieu</span>
+
+$I$ est le milieu de $[AB]$ si et seulement si, pour tout point $M$ du plan :
+$$\ve{MI} = \frac{1}{2}(\ve{MA}+\ve{MB})$$
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteur_milieu.png" style="width: 25%;">
+</div>
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+$$\ve{MA}+\ve{MB} = (\ve{MI}+\ve{IA})+(\ve{MI}+\ve{IB}) = 2\,\ve{MI}+\ve{IA}+\ve{IB}$$
+
+Or $I$ milieu de $[AB]$ implique $\ve{IA}+\ve{IB} = \ve{0}$.
+
+Donc $\ve{MA}+\ve{MB} = 2\,\ve{MI}$, soit
+$$\ve{MI} = \frac{1}{2}(\ve{MA}+\ve{MB})$$
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Milieu et relation de Chasles — Calculer, Raisonner</span></div>
+
+Soient $A$, $B$, $C$ trois points, et $I$, $J$ les milieux respectifs de $[AB]$ et $[BC]$.
+
+Exprimer $\ve{IJ}$ en fonction de $\ve{AC}$, puis en déduire que $(IJ)\parallel(AC)$ et que $IJ = \dfrac{1}{2}AC$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : $I$ est le milieu de $[AB]$ donc on fait apparaître le vecteur $\ve{BI}$ pour utiliser la relation vectorielle sur le milieu.*
+
+$$\ve{IJ} = \ve{IB}+\ve{BJ} = \frac{1}{2}\ve{AB}+\frac{1}{2}\ve{BC} = \frac{1}{2}(\ve{AB}+\ve{BC}) = \frac{1}{2}\ve{AC}$$
+
+Ainsi $\ve{IJ} = \dfrac{1}{2}\ve{AC}$ : on en déduit que $(IJ)\parallel(AC)$ et $IJ = \dfrac{1}{2}AC$.
+
+C'est le **théorème des milieux**.
+
+</details>
 :::

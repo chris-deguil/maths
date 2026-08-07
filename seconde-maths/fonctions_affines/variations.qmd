@@ -33,12 +33,21 @@ Comme $x_2-x_1>0$ :
 
 ## Représenter les variations
 
+::: {.bloc .info}
+<span class="bloc-titre">Représentation graphique des variations</span>
+
 Pour représenter graphiquement les variations d'une fonction affine, on utilise un tableau de variations indiquant le sens de variation.
+
+<div style="text-align: center;">
+  <div style="display:inline-block; width: 45%; margin-right:3%; text-align:center;">$m>0$ : $f$ strictement croissante</div>
+  <div style="display:inline-block; width: 45%; text-align:center;">$m<0$ : $f$ strictement décroissante</div>
+</div>
 
 <div style="text-align: center;">
   <img src="../../image/seconde/Fonction_Affine_signe1.png" style="width: 45%; margin-right:3%">
   <img src="../../image/seconde/Fonction_Affine_signe2.png" style="width: 45%;">
 </div>
+:::
 
 ::: {.bloc .sfc}
 <div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Dresser le tableau de variations — Représenter</span></div>
@@ -52,7 +61,7 @@ $f$ : $m=4>0$, donc $f$ est strictement croissante.
 
 $g$ : $m=-\dfrac{1}{3}<0$, donc $g$ est strictement décroissante.
 
-$h$ : $m=0$, donc $h$ est constante.
+$h$ : $m=0$, donc $h$ est constante (tableau des variations inutile)
 
 <div style="text-align: center;">
   <img src="../../image/seconde/Fonction_Affine_signe3.png" style="width: 45%; margin-right:3%">

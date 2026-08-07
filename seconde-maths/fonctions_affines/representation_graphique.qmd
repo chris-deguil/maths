@@ -27,7 +27,7 @@ $$m = \frac{y_B - y_A}{x_B - x_A} \quad \text{et} \quad p = y_A - mx_A$$
 Soit $M(x\,;\,y)$ un point du plan. On note $A'$, $B'$, $M'$ les projetés orthogonaux respectifs de $A$, $B$, $M$ sur la droite horizontale d'ordonnée $y_A$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Fonction_Affine_demo_courbe.png" style="width: 70%;">
+  <img src="../../image/seconde/Fonction_Affine_demo_courbe.png" style="width: 50%;">
 </div>
 
 **Sens direct.** Supposons $M \in (d)$ avec $x \neq x_A$.
@@ -81,7 +81,7 @@ On choisit des valeurs de $x$ multiples de $3$ (dénominateur de $m$) pour évit
 - $f(6)=-\dfrac{2}{3}\times 6 +2=-4+2=-2$, donc $B(6\,;\,-2)$ est un point de $(d)$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Fonction_Affine_droite_exercice1.png" style="width: 60%;">
+  <img src="../../image/seconde/Fonction_Affine_droite_exercice1.png" style="width: 30%;">
 </div>
 
 </details>
@@ -97,7 +97,7 @@ Tracer la droite représentative de la fonction $f$ définie par $f(x)=\dfrac{4}
 La représentation graphique de $f$ admet $-2$ comme ordonnée à l'origine et admet $\dfrac{4}{3}$ comme coefficient directeur ainsi
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Fonction_Affine_droite_exercice2.png" style="width: 60%;">
+  <img src="../../image/seconde/Fonction_Affine_droite_exercice2.png" style="width: 20%;">
 </div>
 
 </details>
@@ -116,7 +116,7 @@ Tracer la droite représentative de $g(x)=\dfrac{3}{2}x-1$. Lire graphiquement u
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-*Point clef :* pour tracer une droite, on place le point d'ordonnée à l'origine $(0\,;\,p)$, puis on utilise la pente $m$ pour trouver un second point.
+*Point clef : pour tracer une droite, on place le point d'ordonnée à l'origine $(0\,;\,p)$, puis on utilise la pente $m$ pour trouver un second point.*
 
 L'ordonnée à l'origine est $p=-1$ et le coefficient directeur est $m=\dfrac{3}{2}$ : quand on avance de $2$, on monte de $3$.
 
@@ -125,7 +125,7 @@ Lecture graphique : la droite atteint l'ordonnée $3{,}5$ en $x=3$, donc l'anté
 Vérification : $\dfrac{3}{2}\times 3-1=\dfrac{9}{2}-1=\dfrac{7}{2}=3{,}5$. Donc $g(3)=3{,}5$, et donc $3$ est bien l'antécédent de $3{,}5$ par $g$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Fonction_Affine_droite_exercice3.png" style="width: 60%;">
+  <img src="../../image/seconde/Fonction_Affine_droite_exercice3.png" style="width: 30%;">
 </div>
 
 </details>

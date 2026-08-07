@@ -15,7 +15,7 @@ Soient $A$, $B$ et $C$ trois points quelconques du plan. Alors :
 $$\ve{AC} = \ve{AB} + \ve{BC}$$
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Vecteurs_Translation_chasles.png" style="width: 45%;">
+  <img src="../../image/seconde/Vecteurs_Translation_chasles.png" style="width: 25%;">
 </div>
 :::
 
@@ -44,7 +44,7 @@ $$\ve{AB}+\ve{BC}+\ve{CD}+\ve{DA} \quad \text{et} \quad \ve{MA}+\ve{BC}+\ve{AM}$
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-*Point clef :* on enchaîne les vecteurs tête-à-queue en repérant les points qui se télescopent (lettre de fin d'un vecteur = lettre de début du suivant).
+***Point clef :** on enchaîne les vecteurs tête-à-queue en repérant les points qui se télescopent (lettre de fin d'un vecteur = lettre de début du suivant).*
 
 1. $\ve{AB}+\ve{BC}+\ve{CD}+\ve{DA} = \ve{AC}+\ve{CA} = \ve{AA} = \ve{0}$.
 2. $\ve{MA}+\ve{AM} = \ve{MM} = \ve{0}$, donc $\ve{MA}+\ve{BC}+\ve{AM} = \ve{BC}$.

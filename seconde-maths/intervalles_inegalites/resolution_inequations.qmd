@@ -1,0 +1,126 @@
+---
+title: "Résolution d'inéquations du premier degré"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Résolution algébrique et lecture graphique d'inéquations du premier degré."
+order: 5
+---
+
+## Résolution d'inéquations du premier degré
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Inéquation du premier degré</span>
+
+On appelle **inéquation du premier degré** en $x$  toute inégalité pouvant se ramener à une inégalité de la forme
+$$ax + b > 0 \quad ax + b \geqslant 0 \quad ax + b < 0 \quad \text{ou} \quad ax + b \leqslant 0$$
+où $a$ et $b$ sont des réels avec $a \neq 0$.
+
+**Résoudre** une inéquation, c'est déterminer l'ensemble des réels $x$
+qui vérifient l'inégalité. Cet ensemble est appelé **ensemble des solutions**.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Résoudre une inéquation du premier degré — Calculer </span></div>
+
+Résoudre $2x - 7 \leqslant 5x + 13$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* lorsqu'on multiplie ou divise les deux membres d'une inégalité par un réel **strictement négatif**, le sens de l'inégalité est inversé.
+
+Pour tout réel $x$, $$
+2x - 7 \leqslant 5x + 13
+\ssi 2x - 5x \leqslant 13 + 7 
+\ssi -3x \leqslant 20 
+\underset{-3<0} {\ssi} x \geqslant -\frac{20}{3}$$
+
+L'ensemble des solutions est $S = \left[-\dfrac{20}{3}\,;\,+\infty\right[$.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Résoudre une inéquation avec fractions — Calculer </span></div>
+
+Résoudre $\dfrac{3x+1}{2} - \dfrac{x-4}{3} > 1$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, 
+$$
+\frac{3(3x+1) - 2(x-4)}{6} > 1
+\ssi 9x + 3 - 2x + 8 > 6 
+\ssi 7x + 11 > 6 
+\ssi 7x > -5 
+\ssi x > -\frac{5}{7}
+$$
+$S = \left]-\dfrac{5}{7}\,;\,+\infty\right[$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Résolution d'inéquations — Calculer </span></div>
+
+1. Résoudre $3(x-2) \leqslant 2x + 1$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, 
+$$3x - 6 \leqslant 2x + 1 \ssi x \leqslant 7$$
+$S = ]-\infty\,;\,7]$.
+
+</details>
+
+2. Résoudre $\dfrac{x+1}{4} > \dfrac{2x-3}{6}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, 
+
+$$3(x+1) > 2(2x-3) \ssi 3x+3 > 4x-6 \ssi -x > -9 \ssi x < 9$$
+$S = ]-\infty\,;\,9[$.
+
+</details>
+:::
+
+## Résolution graphique d'inéquations se ramenant au premier degré
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Résolution graphique d'une inéquation $f(x) > k$</span>
+
+Pour résoudre graphiquement $f(x) > k$ (où $f$ est une fonction affine),
+on trace la droite $\mathcal{C}_f$ et la droite horizontale $y = k$,
+puis on lit les abscisses des points de $\mathcal{C}_f$ **au-dessus**
+de la droite $y = k$.
+
+De même, $f(x) < k$ correspond aux abscisses où $\mathcal{C}_f$ est
+**en dessous** de $y = k$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Résoudre graphiquement une inéquation — Représenter </span></div>
+
+On considère $f(x) = -\dfrac{1}{2}x + 2$.  Résoudre graphiquement $f(x) > 0$
+et $f(x) \leqslant 1$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_inequation_grapique1.png" style="width:49%; margin-right:5%">
+  <img src="../../image/seconde/Intervalles_Inegalites_inequation_grapique2.png" style="width: 49%;">
+</div>
+
+$f(x) > 0 \ssi x \in ]-\infty\,;\,4[$
+
+$f(x) \leqslant 1 \ssi x \in [2\,;\,+\infty[$
+
+</details>
+:::

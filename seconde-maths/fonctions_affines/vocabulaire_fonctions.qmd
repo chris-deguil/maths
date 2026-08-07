@@ -31,12 +31,20 @@ Une **fonction** $f$ définie sur un ensemble $D$ associe à tout réel $x \in D
 Soit $f$ la fonction définie sur $\R$ par $f(x)=2x-3$.
 
 1. Calculer $f(4)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$f(4)=2\times 4-3=8-3=5$. L'image de $4$ par $f$ est $\mathbf{5}$.
+
+</details>
+
 2. Déterminer le ou les antécédents de $5$ par $f$.
 
-<details class="bloc cor"><summary>Afficher la correction :</summary>
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
 
-1. $f(4)=2\times 4-3=8-3=5$. L'image de $4$ par $f$ est $\mathbf{5}$.
-2. On cherche $x$ tel que $f(x)=5$ : $2x-3=5 \iff 2x=8 \iff x=4$. L'unique antécédent de $5$ par $f$ est $\mathbf{4}$.
+On cherche $x$ tel que $f(x)=5$ : $2x-3=5 \iff 2x=8 \iff x=4$. L'unique antécédent de $5$ par $f$ est $\mathbf{4}$.
 
 </details>
 :::

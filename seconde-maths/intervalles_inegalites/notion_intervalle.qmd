@@ -1,0 +1,203 @@
+---
+title: "Notion d'intervalle"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Ensemble des réels, droite des réels et définition des intervalles bornés et non bornés."
+order: 2
+---
+
+## Ensemble des réels, droite des réels
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span>
+
+À tout point de la droite graduée est associé un unique nombre réel
+(son abscisse) et, réciproquement, à tout nombre réel correspond un
+unique point de la droite graduée.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Représentation graphique : droite des réels</span>
+
+On représente graphiquement l'ensemble des réels par une droite graduée,
+orientée de gauche à droite.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_droite_des_reels.png" style="width: 55%;">
+</div>
+
+L'idée essentielle est que la droite réelle est **continue** :
+il n'existe pas de « trou ».
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Ensemble des réels</span>
+
+On appelle **ensemble des réels**, noté $\R$, l'ensemble de tous
+les nombres représentables sur la droite graduée.
+:::
+
+## Notion d'intervalle
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : </span>
+
+La représentation de $\R$ étant une droite, on peut définir sur cette
+droite des segments (ouverts ou fermés) et des demi-droites (ouvertes ou fermées).
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Représenter un segment sur la droite graduée — Représenter </span></div>
+
+Soit $A(-3)$ et $B(4)$ deux points d'une droite graduée.
+Représenter $[AB[$ sur une droite graduée.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_representation_segment.png" style="width: 55%;">
+</div>
+
+</details>
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Intervalle</span>
+
+Un **intervalle** est une partie de $\R$ constituée de tous les
+réels compris entre deux **bornes** (finies ou infinies),
+éventuellement incluses.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Tableau des intervalles — intervalles bornés</span>
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th>Notation</th><th>Ensemble des réels $x$ tels que</th><th>Représentation</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>$[a\,;\,b]$</td>
+<td>$a \leqslant x \leqslant b$</td>
+<td style="text-align:center;"><img src="../../image/seconde/Intervalles_Inegalites_intervalle1.png" style="width: 220px;"></td>
+</tr>
+<tr>
+<td>$[a\,;\,b[$</td>
+<td>$a \leqslant x < b$</td>
+<td style="text-align:center;"><img src="../../image/seconde/Intervalles_Inegalites_intervalle2.png" style="width: 220px;"></td>
+</tr>
+<tr>
+<td>$]a\,;\,b]$</td>
+<td>$a < x \leqslant b$</td>
+<td style="text-align:center;"><img src="../../image/seconde/Intervalles_Inegalites_intervalle3.png" style="width: 220px;"></td>
+</tr>
+<tr>
+<td>$]a\,;\,b[$</td>
+<td>$a < x < b$</td>
+<td style="text-align:center;"><img src="../../image/seconde/Intervalles_Inegalites_intervalle4.png" style="width: 220px;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Tableau des intervalles — intervalles non bornés</span>
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th>Notation</th><th>Ensemble des réels $x$ tels que</th><th>Représentation</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>$[a\,;\,+\infty[$</td>
+<td>$x \geqslant a$</td>
+<td style="text-align:center;"><img src="../../image/seconde/Intervalles_Inegalites_intervalle5.png" style="width: 220px;"></td>
+</tr>
+<tr>
+<td>$]a\,;\,+\infty[$</td>
+<td>$x > a$</td>
+<td style="text-align:center;"><img src="../../image/seconde/Intervalles_Inegalites_intervalle6.png" style="width: 220px;"></td>
+</tr>
+<tr>
+<td>$]-\infty\,;\,b]$</td>
+<td>$x \leqslant b$</td>
+<td style="text-align:center;"><img src="../../image/seconde/Intervalles_Inegalites_intervalle7.png" style="width: 220px;"></td>
+</tr>
+<tr>
+<td>$]-\infty\,;\,b[$</td>
+<td>$x < b$</td>
+<td style="text-align:center;"><img src="../../image/seconde/Intervalles_Inegalites_intervalle8.png" style="width: 220px;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+:::
+
+::: {.bloc .hist}
+<span class="bloc-titre">Anecdote : </span>
+
+Le symbole $\infty$ est dû au mathématicien John Wallis (1655,
+*De sectionibus conicis*). Il désigne le caractère illimité
+d'un ensemble de nombres ; ce n'est pas un nombre réel.
+En $-\infty$ et $+\infty$, les crochets sont donc toujours **ouverts**.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Lire un intervalle sur une droite graduée — Représenter </span></div>
+
+Donner l'ensemble des réels représentés, sous forme d'inégalité
+puis d'intervalle.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_intervalle9.png" style="width: 45%;">
+</div>
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$-2 \leqslant x < 3$, soit $x \in [-2\,;\,3[$.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Lire et écrire un intervalle — Représenter </span></div>
+
+Soit $x$ un réel. Écrire sous forme d'intervalle l'ensemble des
+solutions des inégalités suivantes, puis représenter chacune sur
+une droite graduée.
+
+1. $-2 \leqslant x < 5$
+2. $x > 3$
+3. $x \leqslant -1$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$-2 \leqslant x < 5 \Longleftrightarrow x \in [-2\,;\,5[$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_intervalle10.png" style="width: 40%;">
+</div>
+
+$x > 3 \Longleftrightarrow x \in ]3\,;\,+\infty[$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_intervalle11.png" style="width: 40%;">
+</div>
+
+$x \leqslant -1 \Longleftrightarrow x \in ]-\infty\,;\,-1]$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_intervalle112.png" style="width: 40%;">
+</div>
+
+</details>
+:::

@@ -9,6 +9,9 @@ listing:
       - ensembles_nombres/index.qmd
       - fonctions_affines/index.qmd
       - vecteurs_translation/index.qmd
+      - intervalles_inegalites/index.qmd
+      - racine_carrees/index.qmd
+      - geometrie_repere/index.qmd
 ---
 
 

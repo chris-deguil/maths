@@ -1,0 +1,89 @@
+---
+title: "Coordonnées d'un vecteur"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Base orthonormée, coordonnées d'un vecteur et égalité de deux vecteurs."
+order: 1
+---
+
+## Base orthonormée — rappel
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Base orthonormée</span>
+
+On dit que $(\ve{i}\,;\,\ve{j})$ est une **base orthonormée** du plan si :
+
+- $\ve{i}$ et $\ve{j}$ sont **perpendiculaires** (orthogonaux) ;
+- $\ve{i}$ et $\ve{j}$ sont de **norme** $1$ : $\|\ve{i}\| = \|\ve{j}\| = 1$.
+
+On dit alors que $\Oij$ est un **repère orthonormé** du plan.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Dans un repère orthonormé, on a $\ve{i} = \ve{OI}$ et $\ve{j} = \ve{OJ}$,
+où $OI = OJ = 1$ (unité) et $(OI) \perp (OJ)$.
+
+Dans un repère orthonormé, les formules de distance et de norme proviennent
+directement du théorème de Pythagore : c'est l'orthogonalité qui les rend possibles.
+:::
+
+## Coordonnées d'un vecteur
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Coordonnées d'un vecteur</span>
+
+Soit $\Oij$ un repère orthonormé du plan.
+Tout vecteur $\ve{u}$ du plan s'écrit de manière **unique**
+$$\ve{u} = x\,\ve{i} + y\,\ve{j},$$
+où $x$ et $y$ sont des réels appelés **coordonnées** (ou composantes) de $\ve{u}$.
+
+On note $\ve{u}\vecol{x}{y}$ ou $\ve{u}\,(x\,;\,y)$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Geometrie_Reperee_coordonnee1.png" style="width: 40%;">
+</div>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Égalité de deux vecteurs</span>
+
+Deux vecteurs $\ve{u}\,(x\,;\,y)$ et $\ve{v}\,(x'\,;\,y')$ sont égaux
+si et seulement si ils ont les mêmes coordonnées :
+$$\ve{u} = \ve{v} \ssi x = x' \et y = y'.$$
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Méthode — Lire et représenter les coordonnées d'un vecteur</span>
+
+La **première coordonnée** (abscisse) est le déplacement horizontal :
+positif vers la droite, négatif vers la gauche.
+La **deuxième coordonnée** (ordonnée) est le déplacement vertical :
+positif vers le haut, négatif vers le bas.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Lire et représenter les coordonnées d'un vecteur — Représenter </span></div>
+
+1. On donne $A(1\,;\,3)$, $B(4\,;\,5)$, $C(-1\,;\,0)$.
+   Lire les coordonnées des vecteurs $\ve{OA}$, $\ve{OB}$, $\ve{OC}$.
+2. Représenter le vecteur $\ve{w}\vecol{-2}{3}$ depuis l'origine $O$
+   dans un repère orthonormé.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Par définition, les coordonnées de $\ve{OM}$ sont celles du point $M$.
+Donc $\ve{OA}\vecol{1}{3}$, $\ve{OB}\vecol{4}{5}$, $\ve{OC}\vecol{-1}{0}$.
+
+*Point clef :* les coordonnées d'un vecteur donnent directement le déplacement à effectuer : première coordonnée horizontalement, deuxième verticalement.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Geometrie_Reperee_coordonnee2.png" style="width: 55%;">
+</div>
+
+</details>
+:::

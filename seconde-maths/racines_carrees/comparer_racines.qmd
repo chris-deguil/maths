@@ -1,0 +1,77 @@
+---
+title: "Comparer des réels avec des racines carrées"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Comparaison de deux réels positifs à l'aide de leurs carrés."
+order: 4
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Comparaison</span>
+
+Soient $a$ et $b$ deux réels **positifs ou nuls**.
+$$a < b \ssi \sqrt{a} < \sqrt{b}$$
+En particulier, pour comparer deux réels positifs,
+on peut comparer leurs carrés.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Si $0 \leqslant a < b$, alors $\sqrt{a}$ et $\sqrt{b}$
+sont deux réels positifs distincts.
+$\left(\sqrt{a}\right)^2 = a < b = \left(\sqrt{b}\right)^2$
+entraîne $\sqrt{a} < \sqrt{b}$.
+
+Réciproquement, si $\sqrt{a} < \sqrt{b}$, en élevant
+au carré (les deux membres sont positifs) : $a < b$.
+
+</details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode — comparer des racines</span>
+
+Pour comparer $x\sqrt{a}$ et $y\sqrt{b}$ avec $x, y > 0$,
+on compare leurs carrés :
+$$(x\sqrt{a})^2 = x^2 a \qquad \text{et} \qquad
+(y\sqrt{b})^2 = y^2 b$$
+Les deux réels ont le même ordre que leurs carrés.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Comparer des réels — Raisonner </span></div>
+
+Comparer $2\sqrt{3}$ et $3\sqrt{2}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Les deux réels sont positifs. On compare leurs carrés :
+$$(2\sqrt{3})^2 = 4 \times 3 = 12
+\qquad \text{et} \qquad
+(3\sqrt{2})^2 = 9 \times 2 = 18$$
+Comme $12 < 18$, on conclut que $2\sqrt{3} < 3\sqrt{2}$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Comparer des réels — Raisonner </span></div>
+
+Ranger dans l'ordre croissant les réels :
+$3\sqrt{5}$, $4\sqrt{3}$, $2\sqrt{11}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Ces trois réels sont positifs. On compare leurs carrés :
+$$(3\sqrt{5})^2 = 9 \times 5 = 45, \qquad
+(4\sqrt{3})^2 = 16 \times 3 = 48, \qquad
+(2\sqrt{11})^2 = 4 \times 11 = 44$$
+Comme $44 < 45 < 48$, on conclut :
+$$2\sqrt{11} < 3\sqrt{5} < 4\sqrt{3}$$
+
+</details>
+:::

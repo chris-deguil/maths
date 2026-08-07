@@ -34,6 +34,7 @@ website:
       - text: "Terminale"
         href: terminale-maths/index.qmd
 
+
     right:
       - icon: github
         href: https://github.com/chris-deguil/maths
@@ -41,7 +42,7 @@ website:
 
   sidebar:
     - title: "Seconde"
-      logo: assets/images/logo_maths2.png
+      logo: image/logo/logo_maths2.png
       style: docked
       collapse-level: 1
       contents:
@@ -56,14 +57,14 @@ website:
             - seconde-maths/ensembles_nombres/reels_irrationnels.qmd
             - seconde-maths/ensembles_nombres/fractions.qmd
             - seconde-maths/ensembles_nombres/puissances.qmd
-            - seconde-maths/ensembles_nombres/notation_scientifique.qmd
+            - seconde-maths/ensembles_nombres/notation_scientifique.qmd 
 
         - section: "Chapitre 2 : Fonctions affines"
           contents:
             - seconde-maths/fonctions_affines/index.qmd
             - seconde-maths/fonctions_affines/vocabulaire_fonctions.qmd
             - seconde-maths/fonctions_affines/definition_fonction_affine.qmd
-            - seconde-maths/fonctions_affines/determiner_expression.qmd
+         #- seconde-maths/fonctions_affines/determiner_expression.qmd
             - seconde-maths/fonctions_affines/representation_graphique.qmd
             - seconde-maths/fonctions_affines/appartenance_droite.qmd
             - seconde-maths/fonctions_affines/variations.qmd
@@ -75,16 +76,48 @@ website:
           contents:
             - seconde-maths/vecteurs_translation/index.qmd
             - seconde-maths/vecteurs_translation/translation_vecteur.qmd
-            - seconde-maths/vecteurs_translation/vecteurs_egaux.qmd
             - seconde-maths/vecteurs_translation/somme_vecteurs.qmd
             - seconde-maths/vecteurs_translation/relation_chasles.qmd
             - seconde-maths/vecteurs_translation/identite_parallelogramme.qmd
             - seconde-maths/vecteurs_translation/vecteur_oppose.qmd
             - seconde-maths/vecteurs_translation/produit_reel.qmd
-            - seconde-maths/vecteurs_translation/milieu_segment.qmd
             - seconde-maths/vecteurs_translation/vecteurs_colineaires.qmd
-            - seconde-maths/vecteurs_translation/alignement_parallelisme.qmd
             - seconde-maths/vecteurs_translation/bilan.qmd
+
+        - section: "Chapitre 4 : Intervalle et inégalités"
+          contents:
+            - seconde-maths/intervalles_inegalites/index.qmd
+            - seconde-maths/intervalles_inegalites/inegalite_encadrement.qmd
+            - seconde-maths/intervalles_inegalites/notion_intervalle.qmd
+            - seconde-maths/intervalles_inegalites/operations_intervalles.qmd
+            - seconde-maths/intervalles_inegalites/ordre_comparaison.qmd
+            - seconde-maths/intervalles_inegalites/resolution_inequations.qmd
+            - seconde-maths/intervalles_inegalites/valeur_absolue_distance.qmd
+            - seconde-maths/intervalles_inegalites/valeur_absolue_intervalles.qmd
+
+        - section: "Chapitre 5 : Les racines carrées"
+          contents:
+            - seconde-maths/racines_carrees/index.qmd
+            - seconde-maths/racines_carrees/definition.qmd
+            - seconde-maths/racines_carrees/calculer_racines.qmd
+            - seconde-maths/racines_carrees/rationalisation.qmd
+            - seconde-maths/racines_carrees/comparer_racines.qmd
+            - seconde-maths/racines_carrees/racine2_irrationnel.qmd
+            - seconde-maths/racines_carrees/pythagore.qmd
+            - seconde-maths/racines_carrees/thales.qmd
+            - seconde-maths/racines_carrees/valeurs_remarquables.qmd
+            - seconde-maths/racines_carrees/combinaison_pythagore_thales.qmd
+
+        - section: "Chapitre 6 : Géométrie repérée"
+          contents:
+            - seconde-maths/geometrie_repere/index.qmd
+            - seconde-maths/geometrie_repere/coordonnees_vecteur.qmd
+            - seconde-maths/geometrie_repere/somme_produit_vecteurs.qmd
+            - seconde-maths/geometrie_repere/vecteur_ab_norme.qmd
+            - seconde-maths/geometrie_repere/milieu_segment.qmd
+            - seconde-maths/geometrie_repere/colinearite_determinant.qmd
+            - seconde-maths/geometrie_repere/aire_parallelogramme.qmd
+            - seconde-maths/geometrie_repere/bilan.qmd
 
     - title: "Première"
       logo: assets/images/logo_maths2.png

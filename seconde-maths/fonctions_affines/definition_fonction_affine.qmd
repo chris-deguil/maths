@@ -32,3 +32,101 @@ $$f(x)=-2x+7 \qquad g(x)=5x \qquad h(x)=4$$
 
 </details>
 :::
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Accroissements proportionnels</span>
+
+$f$ est une fonction affine si et seulement si, pour tous réels $a$ et $b$ avec $a \neq b$, il existe un réel $m$ tel que
+$$\frac{f(b)-f(a)}{b-a} = m$$
+Cette constante est appelée **taux d'accroissement** et est le coefficient directeur de $f$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Soit $f$ une fonction définie sur $\R$ et $a \in \R$.
+
+On suppose qu'il existe un réel $m$, tel que pour tout réel $x \neq a$,
+$$\frac{f(x)-f(a)}{x-a}=m \iff f(x)-f(a)=m\times(x-a) \iff f(x)=mx+f(a)-ma$$
+
+Cette dernière forme est bien celle d'une fonction affine, avec $p=f(a)-ma$.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Une fonction affine est entièrement déterminée par la donnée de deux points distincts de sa représentation graphique, ou bien par la donnée du coefficient directeur $m$ et d'un point.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Méthode — Déterminer $f(x)=mx+p$ : </span>
+
+1. **Écrire** $f(x)=mx+p$.
+2. **Calculer $m$** à partir des deux points $(x_1\,;\,y_1)$ et $(x_2\,;\,y_2)$ : $m=\dfrac{y_2-y_1}{x_2-x_1}$. (Si $m$ est déjà donné, passer à l'étape suivante.)
+3. **Remplacer** $m$ dans $f(x)=mx+p$, puis substituer les coordonnées d'un point connu.
+4. **Calculer $p$** en résolvant l'équation obtenue.
+5. **Conclure** en écrivant l'expression de $f$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Déterminer une fonction affine par deux points — Calculer</span></div>
+
+Déterminer la fonction affine $f$ dont la courbe passe par $A(1\,;\,3)$ et $B(4\,;\,-3)$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f$ est une fonction affine, donc il existe deux réels $m$ et $p$ tels que $f(x)=mx+p$.
+$$m=\frac{-3-3}{4-1}=\frac{-6}{3}=-2$$
+
+Donc $f(x)=-2x+p$.
+
+De plus $f(1)=3$, donc $3=-2\times 1+p$, d'où $p=5$.
+
+Ainsi, pour tout $x \in \R$, $f(x)=-2x+5$.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Déterminer une fonction affine par un point et la pente — Calculer</span></div>
+
+Une droite a pour coefficient directeur $2$ et passe par $A(1\,;\,3)$. Déterminer son équation.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f$ est une fonction affine, donc il existe deux réels $m$ et $p$ tels que $f(x)=mx+p$.
+
+Le coefficient directeur est $2$ donc $f(x)=2x+p$.
+
+De plus $f(1)=3$, donc $3=2\times 1+p$, d'où $p=1$.
+
+Ainsi, pour tout $x \in \R$, $f(x)=2x+1$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Le point $B(5\,;\,13)$ appartient aussi à cette droite : cette information est vraie mais **inutile** — un seul point suffit quand $m$ est déjà connu.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Déterminer une fonction affine par deux points — Calculer</span></div>
+
+Déterminer la fonction affine $f$ dont la courbe passe par $A(-1\,;\,5)$ et $B(3\,;\,-3)$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f$ est une fonction affine, donc il existe deux réels $m$ et $p$ tels que $f(x)=mx+p$.
+$$m=\frac{-3-5}{3-(-1)}=\frac{-8}{4}=-2$$
+
+Donc $f(x)=-2x+p$.
+
+De plus $f(-1)=5$, donc $-2\times(-1)+p=5$, d'où $p=3$.
+
+Ainsi, pour tout $x \in \R$, $f(x)=-2x+3$.
+
+</details>
+:::

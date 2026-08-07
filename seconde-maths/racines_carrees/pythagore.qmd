@@ -1,0 +1,89 @@
+---
+title: "Théorème de Pythagore"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Utiliser le théorème de Pythagore pour calculer des longueurs exactes avec des racines carrées."
+order: 6
+---
+
+Les racines carrées apparaissent naturellement en géométrie
+dès que l'on applique le théorème de Pythagore ou
+le théorème de Thalès pour calculer des longueurs exactes.
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Rappel — Théorème de Pythagore</span>
+
+Dans un triangle $ABC$ rectangle en $C$ :
+$$AB^2 = AC^2 + BC^2$$
+Autrement dit, $AB = \sqrt{AC^2 + BC^2}$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Calculer une longueur exacte — Calculer </span></div>
+
+Dans un triangle $ABC$ rectangle en $C$,
+on donne $AC = 3$ et $BC = 5$.
+Calculer $AB$ en valeur exacte.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Par le théorème de Pythagore :
+$$AB^2 = AC^2 + BC^2 = 9 + 25 = 34$$
+Donc $AB = \sqrt{34}$ (valeur exacte).
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Pythagore — valeur exacte — Calculer </span></div>
+
+1. Dans un triangle $DEF$ rectangle en $F$,
+   on donne $DF = 2\sqrt{3}$ et $EF = \sqrt{5}$.
+   Calculer $DE$ en valeur exacte et simplifiée.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Par le théorème de Pythagore :
+$$DE^2 = DF^2 + EF^2
+= (2\sqrt{3})^2 + (\sqrt{5})^2
+= 4 \times 3 + 5
+= 12 + 5 = 17$$
+Donc $DE = \sqrt{17}$.
+
+</details>
+
+2. Un terrain rectangulaire mesure $5$ m de large
+   et $8$ m de long. Calculer la longueur de sa diagonale
+   en valeur exacte, puis arrondie au centimètre.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Notons $d$ la longueur de la diagonale.
+Par le théorème de Pythagore dans le triangle rectangle
+formé par la diagonale et deux côtés :
+$$d^2 = 5^2 + 8^2 = 25 + 64 = 89$$
+Donc $d = \sqrt{89} \approx 9{,}43$ m (au centimètre près).
+
+</details>
+
+3. Dans un triangle $ABC$ rectangle en $B$,
+   on donne $AB = 3\sqrt{2}$ et $AC = \sqrt{30}$.
+   Calculer $BC$ en valeur exacte et simplifiée.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Par le théorème de Pythagore :
+$$AC^2 = AB^2 + BC^2
+\Longrightarrow BC^2 = AC^2 - AB^2
+= 30 - (3\sqrt{2})^2
+= 30 - 18 = 12$$
+Donc $BC = \sqrt{12} = \sqrt{4 \times 3} = 2\sqrt{3}$.
+
+</details>
+:::

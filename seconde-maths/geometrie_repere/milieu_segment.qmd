@@ -1,0 +1,87 @@
+---
+title: "Milieu d'un segment"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Calculer les coordonnées du milieu d'un segment."
+order: 4
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Coordonnées du milieu</span>
+
+Soit $A(x_A\,;\,y_A)$ et $B(x_B\,;\,y_B)$. Le milieu $I$ du segment $[AB]$ a pour coordonnées
+$$I\left(\dfrac{x_A + x_B}{2}\,;\,\dfrac{y_A + y_B}{2}\right).$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+$I$ est le milieu de $[AB]$ si et seulement si $\ve{AI} = \ve{IB}$,
+si et seulement si $\ve{OI} - \ve{OA} = \ve{OB} - \ve{OI}$,
+si et seulement si $2\,\ve{OI} = \ve{OA} + \ve{OB}$.
+
+En coordonnées :
+$$2x_I = x_A + x_B \et 2y_I = y_A + y_B,$$
+d'où $x_I = \dfrac{x_A + x_B}{2}$ et $y_I = \dfrac{y_A + y_B}{2}$.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+La formule du milieu est la **moyenne** des coordonnées :
+on fait la moyenne des abscisses et la moyenne des ordonnées.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Calculer les coordonnées d'un milieu — Calculer </span></div>
+
+Soit $A(-3\,;\,5)$ et $B(7\,;\,-1)$. Calculer les coordonnées du milieu $I$ de $[AB]$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$x_I = \dfrac{-3+7}{2} = 2,\qquad y_I = \dfrac{5 + (-1)}{2} = 2.$$
+Donc $I(2\,;\,2)$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Milieu et parallélogramme — Calculer et Raisonner </span></div>
+
+Soit $A(1\,;\,7)$, $B(-4\,;\,2)$, $C(2\,;\,-2)$ et $D(7\,;\,3)$.
+
+1. Calculer les coordonnées du milieu $L$ de $[AC]$ et du milieu $M$ de $[BD]$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$\begin{cases}
+x_L = \dfrac{1+2}{2} = \dfrac{3}{2} \\[6pt]
+y_L = \dfrac{7+(-2)}{2} = \dfrac{5}{2}
+\end{cases}
+\quad\text{donc}\quad L\!\left(\dfrac{3}{2}\,;\,\dfrac{5}{2}\right)
+\qquad
+\begin{cases}
+x_M = \dfrac{-4+7}{2} = \dfrac{3}{2} \\[6pt]
+y_M = \dfrac{2+3}{2} = \dfrac{5}{2}
+\end{cases}
+\quad\text{donc}\quad M\!\left(\dfrac{3}{2}\,;\,\dfrac{5}{2}\right)$$
+
+</details>
+
+2. Que peut-on conclure pour le quadrilatère $ABCD$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$L$ et $M$ ont les mêmes coordonnées, donc $L = M$ :
+les diagonales $[AC]$ et $[BD]$ se coupent en leur milieu.
+Or un quadrilatère dont les diagonales se coupent en leur milieu est un parallélogramme.
+Donc $ABCD$ est un parallélogramme.
+
+</details>
+:::

@@ -1,0 +1,13 @@
+---
+title: "Bilan — carte mentale"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Carte mentale récapitulant les notions du chapitre de géométrie repérée."
+order: 7
+---
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Geometrie_Reperee_bilan.png" style="width: 90%;">
+</div>

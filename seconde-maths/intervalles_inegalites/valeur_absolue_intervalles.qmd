@@ -1,0 +1,213 @@
+---
+title: "Intervalles, valeur absolue et valeur approchée"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Intervalles centrés en 0 ou en a, inéquations avec valeur absolue et valeurs approchées."
+order: 7
+---
+
+## Intervalles et valeur absolue
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Intervalle centré en $0$</span>
+
+Soit $r > 0$. Pour tout réel $x$ :
+$$\abs{x} \leqslant r \ssi x \in [-r\,;\,r]
+\qquad\text{et}\qquad
+\abs{x} < r \ssi x \in ]-r\,;\,r[$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+$\abs{x} < r$ signifie que $x$ est à distance $< r$ de $0$, soit $-r < x < r$.
+
+</details>
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Intervalle centré en $a$</span>
+
+Soient $a \in \R$ et $r > 0$. Pour tout réel $x$ :
+$$\abs{x - a} \leqslant r \ssi x \in [a-r\,;\,a+r]$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Pour tout réel $x$ :
+$x \in [a-r\,;\,a+r] \ssi -r \leqslant x-a \leqslant r \ssi \abs{x-a} \leqslant r$.
+
+</details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Illustration graphique</span>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_distance_zero4.png" style="width: 55%;">
+</div>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Résoudre une inéquation avec valeur absolue — Calculer et Représenter </span></div>
+
+Résoudre dans $\R$.
+
+1. $\abs{x - 3} \leqslant 5$
+2. $\abs{\pi - x} > 3$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* $\abs{A} \leqslant r$ (avec $r > 0$) équivaut à $-r \leqslant A \leqslant r$, c'est-à-dire $A \in [-r\,;\,r]$. De même, $\abs{A} > r$ équivaut à $A < -r$ ou $A > r$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_distance_zero5.png" style="width:49%; margin-right:5%">
+  <img src="../../image/seconde/Intervalles_Inegalites_distance_zero6.png" style="width: 49%;">
+</div>
+
+$\abs{x-3} \leqslant 5$ : $x \in [-2\,;\,8]$
+
+$\abs{x-\pi} > 3$ : $x \in ]-\infty\,;\,\pi-3[\,\cup\,]\pi+3\,;\,+\infty[$
+
+</details>
+:::
+
+## Valeur approchée
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Valeur approchée</span>
+
+Soient $x$ un réel et $p > 0$. On dit que $a$ est une **valeur approchée**
+de $x$ à $p$ près si :
+$$\abs{x - a} \leqslant p$$
+
+- Si de plus $a \leqslant x$, la valeur approchée est dite **par défaut**.
+- Si de plus $x \leqslant a$, la valeur approchée est dite **par excès**.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Valeur approchée — Raisonner </span></div>
+
+1. On sait que $\sqrt{2} \approx 1{,}41421\ldots$
+   Justifier que $1{,}414$ est une valeur approchée de $\sqrt{2}$
+   à $10^{-3}$ près. Est-elle par défaut ou par excès ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$1{,}414 \leqslant \sqrt{2} \leqslant 1{,}415$, donc
+$\abs{\sqrt{2} - 1{,}414} \leqslant 10^{-3}$ :
+$1{,}414$ est une valeur approchée de $\sqrt{2}$ à $10^{-3}$ près,
+**par défaut** (car $1{,}414 \leqslant \sqrt{2}$).
+
+</details>
+
+2. Justifier que $0{,}142857033$ est une valeur approchée
+   de $\dfrac{1}{7}$ à $10^{-6}$ près. Est-elle par défaut ou par excès ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\dfrac{1}{7} = 0{,}142857142\ldots$, donc :
+$$\abs{\dfrac{1}{7} - 0{,}142857033}
+= 0{,}142857142\ldots - 0{,}142857033
+= 0{,}000000109\ldots \leqslant 10^{-6}$$
+Donc $0{,}142857033$ est une valeur approchée de $\dfrac{1}{7}$
+à $10^{-6}$ près, **par défaut**
+(car $0{,}142857033 \leqslant \dfrac{1}{7}$).
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Arrondi par défaut et par excès — Calculer </span></div>
+
+Donner l'arrondi de $\pi \approx 3{,}14159\ldots$ à $10^{-2}$ près, par excès.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* Il suffit « d'augmenter » de 1, le dernier chiffre.
+
+L'arrondi de $\pi$ à $10^{-2}$ près par excès est  $3{,}15$.
+
+En effet $\abs{\pi - 3{,}15} \leqslant 10^{-2}$ 
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+L'arrondi **usuel** (ou arrondi au plus près) est $3{,}14$ car le troisième
+chiffre après la virgule est $1 < 5$ : on arrondit par défaut.
+Si ce chiffre avait été $\geqslant 5$, on aurait arrondi par excès.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Inéquation avec valeur absolue et fraction — Calculer </span></div>
+
+Résoudre $\abs{2x-1} < \dfrac{5}{2}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, 
+$$\abs{2x-1} < \frac{5}{2}
+\ssi -\frac{5}{2} < 2x-1 < \frac{5}{2}
+\ssi -\frac{3}{2} < 2x < \frac{7}{2}
+\ssi -\frac{3}{4} < x < \frac{7}{4}$$
+
+$S = \left]-\dfrac{3}{4}\,;\,\dfrac{7}{4}\right[$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Valeur approchée et intervalle — Raisonner </span></div>
+
+On sait que $x \in [3{,}14\,;\,3{,}15]$.
+Montrer que $3{,}141$ est une valeur approchée de $x$ à $10^{-2}$ près,
+quelle que soit la valeur de $x$ dans cet intervalle.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Soit $x \in [3{,}14\,;\,3{,}15]$.
+
+$x$ et $3{,}141$ sont tous deux dans $[3{,}14\,;\,3{,}15]$, donc :
+$$\abs{x - 3{,}141} \leqslant 3{,}15 - 3{,}14 = 0{,}01 = 10^{-2}$$
+
+Donc $3{,}141$ est une valeur approchée de $x$ à $10^{-2}$ près,
+pour toute valeur de $x$ dans $[3{,}14\,;\,3{,}15]$.
+
+</details>
+:::
+
+## Bilan
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Propriétés d'ordre et valeur absolue</span>
+
+<div style="overflow-x:auto;">
+<table>
+<thead><tr><th colspan="2" style="text-align:center;">Propriétés d'ordre</th></tr></thead>
+<tbody>
+<tr><td><strong>Addition</strong></td><td>$a \leqslant b \iff a + c \leqslant b + c$</td></tr>
+<tr><td><strong>Multiplication ($c>0$)</strong></td><td>$a \leqslant b \iff ac \leqslant bc$</td></tr>
+<tr><td><strong>Multiplication ($c<0$)</strong></td><td>$a \leqslant b \iff ac \geqslant bc$ (sens inversé !)</td></tr>
+</tbody>
+<thead><tr><th colspan="2" style="text-align:center;">Valeur absolue</th></tr></thead>
+<tbody>
+<tr><td><strong>Définition</strong></td><td>$\abs{x} = x$ si $x \geqslant 0$, $\abs{x} = -x$ si $x < 0$</td></tr>
+<tr><td><strong>Distance</strong></td><td>$\abs{x-a}$ = distance de $x$ à $a$ sur la droite réelle</td></tr>
+<tr><td><strong>Équation</strong></td><td>$\abs{A} = k$ ($k \geqslant 0$) $\iff A = k$ ou $A = -k$</td></tr>
+<tr><td><strong>Inéquation ($k>0$)</strong></td><td>$\abs{A} \leqslant k \iff -k \leqslant A \leqslant k \iff A \in [-k\,;\,k]$</td></tr>
+<tr><td><strong>Inéquation stricte ($k>0$)</strong></td><td>$\abs{A} > k \iff A < -k$ ou $A > k$</td></tr>
+<tr><td><strong>Intervalle centré</strong></td><td>$\abs{x-a} \leqslant r \iff x \in [a-r\,;\,a+r]$</td></tr>
+</tbody>
+</table>
+</div>
+:::

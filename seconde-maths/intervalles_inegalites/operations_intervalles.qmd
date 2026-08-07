@@ -1,0 +1,84 @@
+---
+title: "Opérations sur les intervalles"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Intersection et réunion de deux intervalles."
+order: 3
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Intersection et réunion</span>
+
+Soient $A$ et $B$ deux intervalles.
+
+- L'**intersection** $A \cap B$ est l'ensemble des réels
+  appartenant **à la fois** à $A$ et à $B$.
+- La **réunion** $A \cup B$ est l'ensemble des réels
+  appartenant **à au moins un** des deux intervalles.
+
+Lorsque $A$ et $B$ n'ont aucun élément en commun,
+leur intersection est l'**ensemble vide** $\emptyset$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Intersection et réunion d'intervalles — Calculer </span></div>
+
+Soient $A = [-1\,;\,4]$ et $B = ]2\,;\,7[$. Déterminer $A \cap B$ et $A \cup B$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+- Un réel $x$ appartient à $A \cap B$ ssi
+  $-1 \leqslant x \leqslant 4$ et $2 < x < 7$, soit $2 < x \leqslant 4$.
+  Donc $A \cap B = ]2\,;\,4]$.
+
+- Un réel $x$ appartient à $A \cup B$ ssi
+  $-1 \leqslant x \leqslant 4$ ou $2 < x < 7$, soit $-1 \leqslant x < 7$.
+  Donc $A \cup B = [-1\,;\,7[$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_intervalle13.png" style="width: 55%;">
+</div>
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Intersection et réunion — Calculer et Raisonner </span></div>
+
+Soient $I = ]-3\,;\,5]$ et $J = [2\,;\,+\infty[$.
+
+1. Le réel $5$ appartient-il à $I$ ? à $J$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$5 \in J$ car $5 \geqslant 2$.
+Mais $5 \notin I$ car $I$ est ouvert à droite en $5$ (inégalité stricte).
+
+</details>
+
+2. Déterminer $I \cap J$ et $I \cup J$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Intervalles_Inegalites_intervalle14.png" style="width: 50%;">
+</div>
+
+$I \cap J = ]2\,;\,5]$ et $I \cup J = ]-3\,;\,+\infty[$.
+
+</details>
+
+3. Le réel $-3$ appartient-il à $I \cup J$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$-3 \notin I$ (borne exclue) et $-3 \notin J$, donc $-3 \notin I \cup J$.
+
+</details>
+:::

@@ -1,0 +1,25 @@
+---
+title: "Intervalles, Inégalités et Valeur absolue"
+description: "Intervalles de R, inégalités, comparaison de deux quantités et valeur absolue."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Lire l'abscisse d'un nombre réel sur une droite graduée et placer un nombre réel d'abscisse donnée.
+- Représenter un intervalle sur la droite numérique. Déterminer si un réel appartient à un intervalle.
+- Donner un encadrement d'amplitude donnée, d'un réel, par des décimaux.
+- Comparer deux quantités en utilisant leur différence, ou leur rapport (ratio) dans le cas de quantités positives. Interpréter, selon le contexte, cette comparaison en termes de variation additive ou multiplicative.
+- Dans le cadre de la résolution de problèmes, arrondir en donnant le nombre de chiffres significatifs adapté à la situation étudiée.
+- Modéliser un problème par une inéquation.
+- Donner l'ensemble des solutions d'une inéquation du premier degré du type $a \geqslant b,\quad a+x \geqslant b,\quad ax+b \geqslant cx+d$
+:::

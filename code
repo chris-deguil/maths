@@ -1,0 +1,82 @@
+<div style="text-align: center;">
+  <img src="../../image/maths/NombreDerivee_limite_taux1.png" style="width:49%; margin-right:5%">
+  <img src="../../image/maths/NombreDerivee_limite_taux2.png" style="width: 49%;">
+</div>
+
+<div style="text-align: center;">
+  <img src="../../image/maths/NombreDerivee_limite_taux1.png" style="width: 49%;">
+</div>
+
+<iframe src="https://www.youtube.com/embed/YYoPSUiPT90" title="Prix 2020 — Prix spécial cyberharcèlement" allowfullscreen style="width:70%;aspect-ratio:16/9;border:0;"></iframe>
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra">   </span></div>
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : </span>
+
+:::
+
+::: {.bloc .hist}
+<span class="bloc-titre">Anecdote : </span>
+
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra">   </span></div>
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+</details>
+:::
+
+::: {.bloc .exo}
+<span class="exo-num"></span><span class="exo-extra"> Étude par le quotient </span>
+
+~~~{=html}
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo1">
+    <div class="bar-top"><span class="cell-num">NOM DU SCRIPT </span></div>
+    <textarea id="code">
+</textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled></button>
+      <button class="btn" id="check" disabled></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
+</div>
+~~~
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+</details>
+:::

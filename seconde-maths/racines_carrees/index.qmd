@@ -1,0 +1,19 @@
+---
+title: "Racines carrées"
+description: "Définition, règles de calcul, comparaison et applications géométriques des racines carrées."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Effectuer des calculs numériques mettant en jeu des racines carrées.
+:::

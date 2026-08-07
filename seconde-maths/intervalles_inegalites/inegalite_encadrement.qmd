@@ -1,0 +1,66 @@
+---
+title: "Inégalité et encadrement"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définitions de l'inégalité, de l'encadrement et de l'encadrement à 10^-n près."
+order: 1
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Inégalité</span>
+
+Soient $a$ et $b$ deux réels. On dit que $a$ est **inférieur ou égal** à $b$,
+et on note $a \leqslant b$, lorsque la différence $b - a$ est positive ou nulle.
+Si $b - a > 0$, on écrit $a < b$ (inégalité **stricte**).
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Encadrement</span>
+
+Soient $a$, $b$ et $x$ trois réels tels que $a \leqslant b$.
+
+On dit que $x$ est **encadré** par $a$ et $b$ si :
+$$a \leqslant x \leqslant b$$
+
+On dit que $[a\,;\,b]$ est un **encadrement** de $x$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Encadrer un réel revient à trouver deux nombres entre lesquels il est
+compris. Plus l'écart $b - a$ est petit, plus l'encadrement est
+**précis**.
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Encadrement à $10^{-n}$ près</span>
+
+On dit qu'un réel $x$ est encadré à $10^{-n}$ près si :
+$$a \leqslant x \leqslant b \quad \text{avec} \quad b - a \leqslant 10^{-n}$$
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Encadrer un réel — Calculer </span></div>
+
+1. Encadrer $\sqrt{2}$ à $10^{-2}$ près (on admet que $\sqrt{2} \approx 1{,}41421\ldots$).
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$1{,}41^2 = 1{,}9881 < 2$ et $1{,}42^2 = 2{,}0164 > 2$,
+donc $1{,}41 < \sqrt{2} < 1{,}42$.
+
+</details>
+
+2. Encadrer $\dfrac{5}{3}$ à $10^{-1}$ près.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\dfrac{5}{3} \approx 1{,}66\ldots$, donc $1{,}60 < \dfrac{5}{3} < 1{,}70$.
+
+</details>
+:::

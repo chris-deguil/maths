@@ -15,9 +15,11 @@ Résoudre $3x-1=5$.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-Pour tout réel $x$, $3x-1=5 \iff 3x=6 \iff x=2$.
+Pour tout réel $x$, 
 
-L'équation a pour solution $S= \{2\}$.
+$$3x-1=5 \iff 3x=6 \iff x=2$$
+
+L'équation a pour ensemble solution $S= \{2\}$.
 
 </details>
 :::
@@ -32,7 +34,7 @@ Résoudre $-2x+7=3x-3$.
 Pour tout réel $x$,
 $$-2x+7=3x-3 \iff -2x-3x=-3-7 \iff -5x=-10 \iff x=2$$
 
-L'équation a pour unique solution $S= \{2\}$.
+L'équation a pour ensemble solution $S= \{2\}$.
 
 </details>
 :::
@@ -52,14 +54,14 @@ Résoudre graphiquement $-x+4=2x-2$.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-*Point clef :* on réécrit l'équation sous la forme $f(x)=g(x)$ avec $f(x)=-x+4$ et $g(x)=2x-2$, puis on cherche l'abscisse du point d'intersection des deux droites.
+* **Point clef** : on réécrit l'équation sous la forme $f(x)=g(x)$ avec $f(x)=-x+4$ et $g(x)=2x-2$, puis on cherche l'abscisse du point d'intersection des deux droites.*
 
 On trace les droites $y=-x+4$ et $y=2x-2$.
 
 Les deux droites se coupent au point $(2\,;\,2)$, ainsi $S=\{2\}$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Fonction_Affine_exo_intersection1.png" style="width: 60%;">
+  <img src="../../image/seconde/Fonction_Affine_exo_intersection1.png" style="width: 30%;">
 </div>
 
 </details>

@@ -1,0 +1,91 @@
+---
+title: "Le nombre √2 est irrationnel"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Nombres irrationnels et démonstration par l'absurde de l'irrationalité de racine de 2."
+order: 5
+---
+
+::: {.bloc .hist}
+<span class="bloc-titre">Anecdote : Irrationnels et crise des mathématiques grecques</span>
+
+Les Grecs anciens croyaient que tout rapport de grandeurs pouvait
+s'exprimer comme un rapport d'entiers. La découverte, attribuée aux
+Pythagoriciens (vers le v<sup>e</sup> siècle av. J.-C.), que la
+diagonale d'un carré de côté $1$ n'est commensurable avec aucun
+rationnel provoqua une véritable crise : $\sqrt{2}$ ne peut pas
+s'écrire $\dfrac{p}{q}$ avec $p, q \in \Z$, $q \neq 0$.
+La légende veut qu'Hippase de Métaponte, qui aurait divulgué ce
+secret, fut jeté à la mer par ses condisciples. Euclide donna une
+démonstration rigoureuse de l'irrationalité de $\sqrt{2}$ dans ses
+*Éléments* (livre X), fondée sur un raisonnement par l'absurde
+encore enseigné aujourd'hui.
+
+Le nombre $\sqrt{2}$ est la mesure de la diagonale d'un carré
+de côté $1$ ; on peut donc le construire à la règle et au compas.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Racine_carree_racine2_1.png" style="width: 40%;">
+</div>
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Nombre irrationnel</span>
+
+On appelle **nombre irrationnel** tout réel qui n'est
+pas rationnel. L'ensemble des irrationnels se note
+$\R \setminus \Q$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+- Il existe une infinité de nombres irrationnels.
+  Les plus connus sont $\sqrt{2}$, $\sqrt{3}$ et $\pi$.
+- Démontrer que $\pi$ est irrationnel requiert
+  des outils post-bac.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : $\sqrt{2}$ est irrationnel — démonstration exigible</span>
+
+Le nombre réel $\sqrt{2}$ est irrationnel.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Raisonnons par l'absurde. Supposons $\sqrt{2}$ rationnel :
+il existe $a \in \Z$ et $b \in \N^*$ tels que
+$\sqrt{2} = \dfrac{a}{b}$ avec $\dfrac{a}{b}$ irréductible.
+
+Alors $2 = \dfrac{a^2}{b^2}$, soit $a^2 = 2b^2$.
+
+Le tableau ci-dessous donne le **chiffre des unités**
+de $a^2$ et de $2b^2$ selon celui de $a$ (resp. $b$).
+
+<div style="overflow-x:auto;">
+<table>
+<tbody>
+<tr><td>$a$</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+<tr><td>$a^2$</td><td>0</td><td>1</td><td>4</td><td>9</td><td>6</td><td>5</td><td>6</td><td>9</td><td>4</td><td>1</td></tr>
+<tr><td>$b$</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+<tr><td>$2b^2$</td><td>0</td><td>2</td><td>8</td><td>8</td><td>2</td><td>0</td><td>2</td><td>8</td><td>8</td><td>2</td></tr>
+</tbody>
+</table>
+</div>
+
+Pour que $a^2 = 2b^2$, il faut que les deux membres aient
+le même chiffre des unités, c'est-à-dire $0$.
+Ainsi $a^2$ se termine par $0$, donc $a$ se termine par $0$ :
+$a$ est multiple de $10$.
+Et $2b^2$ se termine par $0$, donc $b^2$ se termine par $0$
+ou $5$, et $b$ est multiple de $5$.
+
+Donc $\dfrac{a}{b}$ se simplifie par $5$, ce qui contredit
+l'hypothèse d'irréductibilité.
+L'hypothèse de départ est fausse : $\sqrt{2}$ est irrationnel.
+
+</details>

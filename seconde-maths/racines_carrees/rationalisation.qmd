@@ -1,0 +1,159 @@
+---
+title: "Rationalisation du dénominateur"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Rationaliser une fraction contenant une racine carrée au dénominateur, avec ou sans conjugué."
+order: 3
+---
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : </span>
+
+On dit qu'une fraction est **rationalisée** lorsque
+son dénominateur ne contient plus de racine carrée.
+
+Pour éliminer $\sqrt{a}$ au dénominateur, on multiplie
+le numérateur et le dénominateur par $\sqrt{a}$ :
+$$\dfrac{k}{\sqrt{a}}
+= \dfrac{k \times \sqrt{a}}{\sqrt{a} \times \sqrt{a}}
+= \dfrac{k\sqrt{a}}{a}$$
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode — rationaliser un dénominateur</span>
+
+- **Dénominateur de la forme $\sqrt{a}$** :
+  multiplier au numérateur et au dénominateur $\sqrt{a}$ :
+  $$\dfrac{k}{\sqrt{a}}
+  = \dfrac{k\sqrt{a}}{\sqrt{a} \times \sqrt{a}}
+  = \dfrac{k\sqrt{a}}{a}$$
+
+- **Dénominateur de la forme $a + b\sqrt{n}$** :
+  multiplier au numérateur et au dénominateur par le **conjugué**
+  $a - b\sqrt{n}$, en utilisant
+  $(a + b\sqrt{n})(a - b\sqrt{n}) = a^2 - b^2 n$ :
+  $$\dfrac{k}{a + b\sqrt{n}}
+  = \dfrac{k(a - b\sqrt{n})}{a^2 - b^2 n}$$
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Rationaliser un dénominateur — Calculer </span></div>
+
+Écrire les expressions suivantes sans racine carrée
+au dénominateur.
+$$\dfrac{6}{\sqrt{3}} \et \dfrac{10}{4 - \sqrt{5}}$$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+1. $\dfrac{6}{\sqrt{3}}
+   = \dfrac{6\sqrt{3}}{\sqrt{3} \times \sqrt{3}}
+   = \dfrac{6\sqrt{3}}{3}
+   = 2\sqrt{3}$
+
+2. On multiplie par le conjugué $4 + \sqrt{5}$ :
+   $$\dfrac{10}{4 - \sqrt{5}}
+   = \dfrac{10(4 + \sqrt{5})}{(4 - \sqrt{5})(4 + \sqrt{5})}
+   = \dfrac{10(4 + \sqrt{5})}{16 - 5}
+   = \dfrac{10(4 + \sqrt{5})}{11}
+   = \dfrac{40 + 10\sqrt{5}}{11}$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Rationaliser et simplifier — Calculer </span></div>
+
+1. Simplifier $\dfrac{\sqrt{5} + \sqrt{20}}{\sqrt{5}}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* on commence par
+simplifier $\sqrt{20}$, puis on factorise au numérateur.
+
+$$\dfrac{\sqrt{5} + \sqrt{20}}{\sqrt{5}}
+= \dfrac{\sqrt{5} + \sqrt{4 \times 5}}{\sqrt{5}}
+= \dfrac{\sqrt{5} + 2\sqrt{5}}{\sqrt{5}}
+= \dfrac{3\sqrt{5}}{\sqrt{5}}
+= 3$$
+
+</details>
+
+2. Simplifier $\dfrac{\sqrt{12} \times \sqrt{27}}{5\sqrt{3} + \sqrt{75}}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* on commence par simplifier
+chaque radical séparément, puis on factorise.
+
+$$\dfrac{\sqrt{12} \times \sqrt{27}}{5\sqrt{3} + \sqrt{75}}
+= \dfrac{\sqrt{4 \times 3} \times \sqrt{9 \times 3}}{5\sqrt{3} + \sqrt{25 \times 3}}
+= \dfrac{2\sqrt{3} \times 3\sqrt{3}}{5\sqrt{3} + 5\sqrt{3}}
+= \dfrac{6 \times 3}{10\sqrt{3}}
+= \dfrac{18}{10\sqrt{3}}
+= \dfrac{9}{5\sqrt{3}}
+= \dfrac{9\sqrt{3}}{15}
+= \dfrac{3\sqrt{3}}{5}$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Rationaliser et simplifier — Calculer, Raisonner </span></div>
+
+1. Montrer que $\dfrac{1}{\sqrt{n+1} + \sqrt{n}}
+   = \sqrt{n+1} - \sqrt{n}$ pour tout entier $n \geqslant 0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* on multiplie
+par le conjugué
+
+Pour tout entier $n$, 
+$$\dfrac{1}{\sqrt{n+1} + \sqrt{n}}
+= \dfrac{\sqrt{n+1} - \sqrt{n}}
+        {(\sqrt{n+1} + \sqrt{n})(\sqrt{n+1} - \sqrt{n})}
+= \dfrac{\sqrt{n+1} - \sqrt{n}}
+        {(n+1) - n}
+= \dfrac{\sqrt{n+1} - \sqrt{n}}{1}
+= \sqrt{n+1} - \sqrt{n}$$
+
+</details>
+
+2. En déduire la valeur exacte de la somme :
+$$S = \dfrac{1}{\sqrt{2}+\sqrt{1}}
+    + \dfrac{1}{\sqrt{3}+\sqrt{2}}
+    + \dfrac{1}{\sqrt{4}+\sqrt{3}}
+    + \cdots
+    + \dfrac{1}{\sqrt{100}+\sqrt{99}}$$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* d'après la question
+précédente, chaque terme se simplifie — c'est une somme
+télescopique.
+
+D'après la question précédente, pour tout entier
+$n \geqslant 0$ :
+$$\dfrac{1}{\sqrt{n+1} + \sqrt{n}} = \sqrt{n+1} - \sqrt{n}$$
+
+Donc, en appliquant ce résultat à chaque terme :
+$$S = (\sqrt{2} - \sqrt{1})
+    + (\sqrt{3} - \sqrt{2})
+    + (\sqrt{4} - \sqrt{3})
+    + \cdots
+    + (\sqrt{100} - \sqrt{99})$$
+
+Les termes se simplifient deux à deux (**somme télescopique**) :
+tous les radicaux intermédiaires $\sqrt{2}, \sqrt{3}, \ldots, \sqrt{99}$
+s'annulent, et il reste :
+$$S = \sqrt{100} - \sqrt{1} = 10 - 1 = 9$$
+
+</details>
+:::

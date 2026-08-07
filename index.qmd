@@ -3,6 +3,10 @@ title: "Accueil"
 page-layout: article
 ---
 
+<div style="text-align: center;">
+  <img src="image/logo/logo_maths2.png" style="width: 25%;">
+</div>
+
 # Bienvenue sur le site pédagogique
 
 Utilisez la barre de navigation ci-dessus pour accéder aux sections :

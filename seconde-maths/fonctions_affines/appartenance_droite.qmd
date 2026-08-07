@@ -14,6 +14,21 @@ order: 5
 Un point $M(a\,;\,b)$ appartient à la droite d'équation $y=mx+p$ si et seulement si $b=ma+p$.
 :::
 
+<details class="bloc demo">
+<summary>Démonstration : </summary>
+
+On se place dans un repère du plan. Soit $(d)$ la droite d'équation $y=mx+p$, c'est-à-dire l'ensemble des points $N(x\,;\,y)$ du plan vérifiant $y=mx+p$.
+
+Soit $M(a\,;\,b)$ un point du plan.
+
+**Sens direct.** Si $M \in (d)$, alors les coordonnées de $M$ vérifient l'équation de $(d)$, donc $b=ma+p$.
+
+**Réciproque.** Si $b=ma+p$, alors le couple $(a\,;\,b)$ vérifie l'équation $y=mx+p$ (avec $x=a$ et $y=b$), donc le point $M(a\,;\,b)$ appartient à $(d)$.
+
+On a donc bien l'équivalence : $M(a\,;\,b) \in (d) \iff b=ma+p$.
+
+</details>
+
 ::: {.bloc .sfc}
 <div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Tester l'appartenance à une droite — Raisonner</span></div>
 

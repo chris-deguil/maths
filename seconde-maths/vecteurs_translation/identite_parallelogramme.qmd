@@ -16,7 +16,7 @@ Soient $A$, $B$, $D$ trois points non alignés. Le point $C$ est défini par $\v
 Alors $ABCD$ est un **parallélogramme**.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Vecteurs_Translation_identite_parall.png" style="width: 45%;">
+  <img src="../../image/seconde/Vecteurs_Translation_identite_parall.png" style="width: 25%;">
 </div>
 :::
 
