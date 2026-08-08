@@ -13,6 +13,26 @@
     <lastmod>2026-08-07T08:16:23.831Z</lastmod>
   </url>
   <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/fonctions_reference/fonction_carre.html</loc>
+    <lastmod>2026-08-08T18:17:12.213Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/fonctions_reference/fonction_valeur_absolue.html</loc>
+    <lastmod>2026-08-08T18:24:36.707Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/fonctions_reference/index.html</loc>
+    <lastmod>2026-08-08T14:25:32.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/probabilites/loi_probabilite.html</loc>
+    <lastmod>2026-08-08T18:11:26.894Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/probabilites/loi_grands_nombres.html</loc>
+    <lastmod>2026-08-08T18:15:02.934Z</lastmod>
+  </url>
+  <url>
     <loc>https://chris-deguil.github.io/maths/seconde-maths/equations/meme_denominateur.html</loc>
     <lastmod>2026-08-08T10:10:10.635Z</lastmod>
   </url>
@@ -50,19 +70,19 @@
   </url>
   <url>
     <loc>https://chris-deguil.github.io/maths/seconde-maths/generalites_fonctions/variations_tableau.html</loc>
-    <lastmod>2026-08-08T08:29:56.000Z</lastmod>
+    <lastmod>2026-08-08T14:05:55.266Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/maths/seconde-maths/generalites_fonctions/ensemble_definition.html</loc>
-    <lastmod>2026-08-08T08:28:11.000Z</lastmod>
+    <lastmod>2026-08-08T11:28:54.705Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/maths/seconde-maths/generalites_fonctions/variations_avec_python.html</loc>
-    <lastmod>2026-08-08T08:30:46.000Z</lastmod>
+    <lastmod>2026-08-08T14:08:22.538Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/maths/seconde-maths/generalites_fonctions/extremums.html</loc>
-    <lastmod>2026-08-08T08:30:35.000Z</lastmod>
+    <lastmod>2026-08-08T14:06:42.588Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/maths/seconde-maths/racines_carrees/rationalisation.html</loc>
@@ -117,59 +137,19 @@
     <lastmod>2026-08-07T10:21:50.885Z</lastmod>
   </url>
   <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/vocabulaire.html</loc>
-    <lastmod>2026-08-06T17:16:37.000Z</lastmod>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/inequations/resolution_graphique_inequation.html</loc>
+    <lastmod>2026-08-08T18:14:32.260Z</lastmod>
   </url>
   <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/puissances.html</loc>
-    <lastmod>2026-08-06T17:16:37.000Z</lastmod>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/inequations/inequation_quotient.html</loc>
+    <lastmod>2026-08-08T18:13:57.654Z</lastmod>
   </url>
   <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/reels_irrationnels.html</loc>
-    <lastmod>2026-08-07T08:47:12.227Z</lastmod>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/index.html</loc>
+    <lastmod>2026-08-07T08:13:31.605Z</lastmod>
   </url>
   <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/index.html</loc>
-    <lastmod>2026-08-06T11:53:50.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/colinearite_determinant.html</loc>
-    <lastmod>2026-08-08T08:00:45.635Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/vecteur_ab_norme.html</loc>
-    <lastmod>2026-08-08T07:43:04.024Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/bilan.html</loc>
-    <lastmod>2026-08-07T07:44:13.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/index.html</loc>
-    <lastmod>2026-08-07T07:44:13.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/coordonnees_vecteur.html</loc>
-    <lastmod>2026-08-08T07:31:19.425Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/milieu_segment.html</loc>
-    <lastmod>2026-08-07T07:43:20.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/aire_parallelogramme.html</loc>
-    <lastmod>2026-08-08T08:11:44.421Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/somme_produit_vecteurs.html</loc>
-    <lastmod>2026-08-08T07:40:53.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/fractions.html</loc>
-    <lastmod>2026-08-06T17:16:37.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/entiers.html</loc>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/rationnels_decimaux.html</loc>
     <lastmod>2026-08-06T17:16:37.000Z</lastmod>
   </url>
   <url>
@@ -177,12 +157,72 @@
     <lastmod>2026-08-06T17:16:37.000Z</lastmod>
   </url>
   <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/rationnels_decimaux.html</loc>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/entiers.html</loc>
     <lastmod>2026-08-06T17:16:37.000Z</lastmod>
   </url>
   <url>
-    <loc>https://chris-deguil.github.io/maths/seconde-maths/index.html</loc>
-    <lastmod>2026-08-07T08:13:31.605Z</lastmod>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/fractions.html</loc>
+    <lastmod>2026-08-06T17:16:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/somme_produit_vecteurs.html</loc>
+    <lastmod>2026-08-08T07:40:53.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/aire_parallelogramme.html</loc>
+    <lastmod>2026-08-08T08:11:44.421Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/milieu_segment.html</loc>
+    <lastmod>2026-08-07T07:43:20.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/coordonnees_vecteur.html</loc>
+    <lastmod>2026-08-08T07:31:19.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/index.html</loc>
+    <lastmod>2026-08-07T07:44:13.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/bilan.html</loc>
+    <lastmod>2026-08-07T07:44:13.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/vecteur_ab_norme.html</loc>
+    <lastmod>2026-08-08T07:43:04.024Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/geometrie_repere/colinearite_determinant.html</loc>
+    <lastmod>2026-08-08T08:00:45.635Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/index.html</loc>
+    <lastmod>2026-08-06T11:53:50.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/reels_irrationnels.html</loc>
+    <lastmod>2026-08-07T08:47:12.227Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/puissances.html</loc>
+    <lastmod>2026-08-06T17:16:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/ensembles_nombres/vocabulaire.html</loc>
+    <lastmod>2026-08-06T17:16:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/inequations/index.html</loc>
+    <lastmod>2026-08-08T14:23:04.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/inequations/inequation_produit.html</loc>
+    <lastmod>2026-08-08T18:13:25.476Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/inequations/signe_fonction_affine.html</loc>
+    <lastmod>2026-08-08T14:21:57.000Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/maths/seconde-maths/vecteurs_translation/translation_vecteur.html</loc>
@@ -242,11 +282,11 @@
   </url>
   <url>
     <loc>https://chris-deguil.github.io/maths/seconde-maths/generalites_fonctions/tableau_valeurs_representation.html</loc>
-    <lastmod>2026-08-08T08:28:46.000Z</lastmod>
+    <lastmod>2026-08-08T11:58:27.484Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/maths/seconde-maths/generalites_fonctions/resolution_graphique.html</loc>
-    <lastmod>2026-08-08T08:29:21.000Z</lastmod>
+    <lastmod>2026-08-08T13:58:16.000Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/maths/seconde-maths/fonctions_affines/vocabulaire_fonctions.html</loc>
@@ -287,6 +327,26 @@
   <url>
     <loc>https://chris-deguil.github.io/maths/seconde-maths/equations/ensemble_resolution.html</loc>
     <lastmod>2026-08-08T10:10:13.440Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/probabilites/index.html</loc>
+    <lastmod>2026-08-08T14:21:42.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/probabilites/experience_aleatoire.html</loc>
+    <lastmod>2026-08-08T18:05:50.806Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/fonctions_reference/fonction_racine_carree.html</loc>
+    <lastmod>2026-08-08T18:16:12.371Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/fonctions_reference/fonction_inverse.html</loc>
+    <lastmod>2026-08-08T18:23:35.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chris-deguil.github.io/maths/seconde-maths/fonctions_reference/position_relative_courbes.html</loc>
+    <lastmod>2026-08-08T18:24:06.556Z</lastmod>
   </url>
   <url>
     <loc>https://chris-deguil.github.io/maths/terminale-maths/index.html</loc>

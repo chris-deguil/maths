@@ -1,5 +1,15 @@
 [
   {
+    "listing": "/seconde-maths/fonctions_reference/index.html",
+    "items": [
+      "/seconde-maths/fonctions_reference/fonction_carre.html",
+      "/seconde-maths/fonctions_reference/fonction_inverse.html",
+      "/seconde-maths/fonctions_reference/fonction_racine_carree.html",
+      "/seconde-maths/fonctions_reference/fonction_valeur_absolue.html",
+      "/seconde-maths/fonctions_reference/position_relative_courbes.html"
+    ]
+  },
+  {
     "listing": "/seconde-maths/equations/index.html",
     "items": [
       "/seconde-maths/equations/developper_factoriser.html",
@@ -65,15 +75,13 @@
     ]
   },
   {
-    "listing": "/seconde-maths/ensembles_nombres/index.html",
+    "listing": "/seconde-maths/index.html",
     "items": [
-      "/seconde-maths/ensembles_nombres/vocabulaire.html",
-      "/seconde-maths/ensembles_nombres/entiers.html",
-      "/seconde-maths/ensembles_nombres/rationnels_decimaux.html",
-      "/seconde-maths/ensembles_nombres/reels_irrationnels.html",
-      "/seconde-maths/ensembles_nombres/fractions.html",
-      "/seconde-maths/ensembles_nombres/puissances.html",
-      "/seconde-maths/ensembles_nombres/notation_scientifique.html"
+      "/seconde-maths/ensembles_nombres/index.html",
+      "/seconde-maths/fonctions_affines/index.html",
+      "/seconde-maths/vecteurs_translation/index.html",
+      "/seconde-maths/geometrie_repere/index.html",
+      "/seconde-maths/intervalles_inegalites/index.html"
     ]
   },
   {
@@ -89,13 +97,24 @@
     ]
   },
   {
-    "listing": "/seconde-maths/index.html",
+    "listing": "/seconde-maths/ensembles_nombres/index.html",
     "items": [
-      "/seconde-maths/ensembles_nombres/index.html",
-      "/seconde-maths/fonctions_affines/index.html",
-      "/seconde-maths/vecteurs_translation/index.html",
-      "/seconde-maths/geometrie_repere/index.html",
-      "/seconde-maths/intervalles_inegalites/index.html"
+      "/seconde-maths/ensembles_nombres/vocabulaire.html",
+      "/seconde-maths/ensembles_nombres/entiers.html",
+      "/seconde-maths/ensembles_nombres/rationnels_decimaux.html",
+      "/seconde-maths/ensembles_nombres/reels_irrationnels.html",
+      "/seconde-maths/ensembles_nombres/fractions.html",
+      "/seconde-maths/ensembles_nombres/puissances.html",
+      "/seconde-maths/ensembles_nombres/notation_scientifique.html"
+    ]
+  },
+  {
+    "listing": "/seconde-maths/inequations/index.html",
+    "items": [
+      "/seconde-maths/inequations/signe_fonction_affine.html",
+      "/seconde-maths/inequations/inequation_produit.html",
+      "/seconde-maths/inequations/inequation_quotient.html",
+      "/seconde-maths/inequations/resolution_graphique_inequation.html"
     ]
   },
   {
@@ -107,6 +126,14 @@
       "/seconde-maths/generalites_fonctions/variations_tableau.html",
       "/seconde-maths/generalites_fonctions/extremums.html",
       "/seconde-maths/generalites_fonctions/variations_avec_python.html"
+    ]
+  },
+  {
+    "listing": "/seconde-maths/probabilites/index.html",
+    "items": [
+      "/seconde-maths/probabilites/experience_aleatoire.html",
+      "/seconde-maths/probabilites/loi_probabilite.html",
+      "/seconde-maths/probabilites/loi_grands_nombres.html"
     ]
   },
   {
