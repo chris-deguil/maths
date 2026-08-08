@@ -1,0 +1,56 @@
+---
+title: "Ensemble de résolution et valeurs interdites"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Ensemble de résolution d'une équation et notion de valeur interdite."
+order: 5
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Ensemble de résolution — valeurs interdites</span>
+
+L'**ensemble de résolution** d'une équation est l'ensemble des réels $x$ pour lesquels
+toutes les opérations de l'équation sont définies.
+
+Les valeurs pour lesquelles une opération n'est pas définie sont appelées **valeurs interdites**.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Les deux principales sources de valeurs interdites en classe de Seconde sont :
+
+- un **dénominateur nul** : on ne peut jamais diviser par zéro ;
+- un **radicande strictement négatif** : la racine carrée $\sqrt{u(x)}$ n'est définie
+  que pour $u(x)\geqslant 0$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Déterminer l'ensemble de résolution d'une équation — Raisonner</span></div>
+
+1. Sans chercher à résoudre, préciser l'ensemble de résolution de chaque équation.
+   a) $(E_1)\,:\,3x-5=5x+2$
+   b) $(E_2)\,:\,\dfrac{3x-5}{5x+2}=1$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+a) L'équation $(E_1)$ ne contient aucune opération non définie : $D_{E_1}=\R$.
+
+b) Le dénominateur de $(E_2)$ ne peut pas être nul, donc $5x+2\neq 0$, soit $x\neq-\dfrac{2}{5}$.
+   Ainsi $D_{E_2}=\R\setminus\left\{-\dfrac{2}{5}\right\}$.
+
+</details>
+
+2. Sans résoudre l'équation, expliquer pourquoi $x=-\dfrac{2}{5}$ ne peut pas être
+   une solution de $(E_2)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour $-\dfrac{2}{5}$, on a $5x+2=0$ n'appartient pas à l'ensemble de résolution de l'équation $(E_2)$ (valeur interdite), elle ne peut donc pas être une solution de l'équation.
+
+</details>
+:::

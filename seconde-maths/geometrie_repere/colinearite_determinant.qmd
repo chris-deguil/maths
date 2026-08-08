@@ -156,5 +156,8 @@ $\ve{AB}\vecol{2}{4}$ et $\ve{CD}\vecol{5}{8}$.
 $$\det(\ve{AB},\ve{CD}) = 2 \times 8 - 5 \times 4 = 16 - 20 = -4 \neq 0.$$
 Les droites $(AB)$ et $(CD)$ ne sont **pas parallèles**.
 
+<div style="text-align: center;">
+  <img src="../../image/seconde/Geometrie_Reperee_droites_ABCD.png" style="width: 35%;">
+</div>
 </details>
 :::

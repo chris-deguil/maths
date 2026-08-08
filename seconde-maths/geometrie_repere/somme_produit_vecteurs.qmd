@@ -20,9 +20,10 @@ $$\ve{u} + \ve{v} = \vecol{x + x'}{y + y'},
 <details class="bloc demo">
 <summary>Démonstration :</summary>
 
-On a $\ve{u} + \ve{v} = (x\,\ve{i} + y\,\ve{j}) + (x'\,\ve{i} + y'\,\ve{j})
-= (x+x')\,\ve{i} + (y+y')\,\ve{j}$.
-De même, $k\,\ve{u} = k(x\,\ve{i} + y\,\ve{j}) = kx\,\ve{i} + ky\,\ve{j}$.
+On a $$\ve{u} + \ve{v} = (x\,\ve{i} + y\,\ve{j}) + (x'\,\ve{i} + y'\,\ve{j})
+= (x+x')\,\ve{i} + (y+y')\,\ve{j}$$
+
+De même, $$k\,\ve{u} = k(x\,\ve{i} + y\,\ve{j}) = kx\,\ve{i} + ky\,\ve{j}$$
 
 </details>
 

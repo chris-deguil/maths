@@ -1,0 +1,152 @@
+---
+title: "Équation produit nul"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Règle du produit nul et résolution d'équations produit nul."
+order: 6
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Équation produit nul</span>
+
+On appelle **équation produit nul** une équation de la forme
+$$A(x)\times B(x)=0$$
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Règle du produit nul</span>
+
+Un produit est nul si et seulement si l'un au moins de ses facteurs est nul :
+$$A(x)\times B(x)=0 \iff A(x)=0 \ou B(x)=0$$
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Identifier une structure de produit nul — Raisonner</span></div>
+
+Sans développer, expliquer pourquoi l'équation
+$(E)\,:\, x(x-3)+2(x-3)=0$ 
+peut se résoudre à l'aide de la règle du produit nul.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :**On remarque que les deux termes contiennent le facteur commun $(x-3)$ *
+Pour tout réel $x$, 
+$$x(x-3)+2(x-3)=(x+2)(x-3)$$
+L'équation s'écrit donc sous la forme d'un produit nul, ce qui permet d'appliquer la règle.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résoudre une équation produit nul — Calculer</span></div>
+
+Résoudre $(E)\,:\,(2x-3)(5x+1)+(3-2x)(x-3)=0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :** On remarque que $3-2x=-(2x-3)$ pour faire apparaître le facteur commun $(2x-3)$*
+
+Pour tout $x \in \R$, 
+$$\begin{aligned}
+(2x-3)(5x+1)+(3-2x)(x-3)=0
+&\iff (2x-3)(5x+1)-(2x-3)(x-3)=0\\
+&\iff (2x-3)\left[5x+1-(x-3)\right]=0\\
+&\iff (2x-3)(4x+4)=0\\
+&\iff 2x-3=0 \ou 4x+4=0
+\end{aligned}$$
+Ainsi $S=\left\{-1\,;\,\dfrac{3}{2}\right\}$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Résoudre une équation produit nul — Calculer</span></div>
+
+Résoudre $(E)\,:\,4x^2+12x+9=0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :**On reconnaît une identité remarquable *
+
+Pour tout réel $x$, 
+$$4x^2+12x+9 = (2x)^2+2\times 2x\times 3+3^2 = (2x+3)^2$$
+L'équation devient $(2x+3)^2=0$, soit $2x+3=0$, d'où $x=-\dfrac{3}{2}$.
+
+Ainsi $S=\left\{-\dfrac{3}{2}\right\}$.
+
+</details>
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode</span>
+
+Avant de développer une expression, vérifier s'il est possible de factoriser.
+
+Une factorisation permet souvent d'obtenir directement une équation produit nul,
+ce qui simplifie fortement la résolution.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Choisir une stratégie — Raisonner</span></div>
+
+Résoudre $(E)\,:\,(x-1)^2-(x-1)=0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :**On reconnaît un facteur commun $(x-1)$ *
+
+Pour tout réel $x$, 
+
+$$(x-1)^2-(x-1)=(x-1)\left[(x-1)-1\right]=(x-1)(x-2)$$
+On obtient une équation produit nul :
+$$x-1=0 \ou x-2=0$$
+Ainsi $x=1$ ou $x=2$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Choisir une stratégie — Raisonner</span></div>
+
+On considère l'équation $(E)\,:\,x(x-1) = 2$.
+
+1. Peut-on appliquer directement la règle du produit nul ? Pourquoi ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Non. La règle du produit nul s'applique uniquement lorsque le membre de droite
+est $0$. Or ici le membre de droite vaut $2$.
+
+</details>
+
+2. Résoudre $(E')\,:\,(x-2)(x+1) = 0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout $x \in \R$,
+$$(x-2)(x+1) = 0 \iff x - 2 = 0 \ou x + 1 = 0 \iff x = 2 \ou x = -1$$
+Ainsi $S_{E'}=\{-1\,;\,2\}$.
+
+</details>
+
+3. En déduire les solutions de $(E)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, 
+$$x(x-1)=2 \iff x^2-x-2 =0 \et (x-2)(x+1)= x^2 -2x +x -2 =x^2-x-2=0$$
+On déduit que $(E)$ et $(E')$ sont deux équations équivalentes.
+
+Ainsi $S=\{-1\,;\,2\}$.
+
+</details>
+:::

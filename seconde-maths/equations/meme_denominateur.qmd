@@ -1,0 +1,120 @@
+---
+title: "Mise au même dénominateur d'expressions littérales"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Fractions algébriques, valeurs interdites et mise au même dénominateur."
+order: 4
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Fraction algébrique</span>
+
+Une **fraction algébrique** est une expression de la forme $\dfrac{A(x)}{B(x)}$,
+où $A(x)$ et $B(x)$ sont des expressions algébriques avec $B(x)\neq 0$.
+
+Les valeurs annulant $B(x)$ sont appelées les **valeurs interdites** de la fraction algébrique.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Pour additionner ou soustraire deux fractions algébriques, on les ramène au
+**même dénominateur**, exactement comme pour les fractions numériques.
+
+Le dénominateur commun peut être le produit des deux dénominateurs, ou un
+multiple commun plus simple lorsque l'un divise l'autre.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode</span>
+
+Avant de résoudre une équation ou de transformer une expression algébrique,
+il faut déterminer sur quel ensemble on a le droit de travailler.
+
+La première étape est donc de chercher les **valeurs interdites** :
+valeurs de $x$ pour lesquelles un dénominateur s'annule ou une racine carrée
+n'est pas définie. Ces valeurs sont exclues de l'ensemble de résolution,
+et aucune solution ne peut leur appartenir.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Mettre au même dénominateur — Calculer</span></div>
+
+Écrire sous la forme d'une seule fraction $\dfrac{1}{x+1}+\dfrac{2}{x-3}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :** avant tout calcul sur une expression fractionnaire, identifier les valeurs interdites (annulant un dénominateur), puis multiplier chaque fraction par la forme manquante pour obtenir le dénominateur commun.*
+
+Valeurs interdites : $x+1\neq 0$ et $x-3\neq 0$, donc $x \neq -1 \et x \neq 3$.
+
+Pour tout $x\in\R\setminus\{-1\,;\,3\}$, 
+$$\frac{1}{x+1}+\frac{2}{x-3}
+= \frac{x-3}{(x+1)(x-3)}+\frac{2(x+1)}{(x+1)(x-3)}
+= \frac{x-3+2x+2}{(x+1)(x-3)}
+= \frac{3x-1}{(x+1)(x-3)}$$
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Simplifier une expression fractionnaire — Calculer</span></div>
+
+Écrire sous la forme d'une seule fraction réduite
+$$\frac{3}{2x}-\frac{x+1}{x^2}$$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Valeurs interdites : $x\neq 0$, donc $x\in\R\setminus\{0\}$.
+
+Pour tout $x\in\R\setminus\{0\}$,
+$$\frac{3}{2x}-\frac{x+1}{x^2}
+= \frac{3x}{2x^2}-\frac{2(x+1)}{2x^2}
+= \frac{3x-2x-2}{2x^2}
+= \frac{x-2}{2x^2}$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Simplifier une expression fractionnaire — Calculer</span></div>
+
+1. Écrire sous la forme d'une seule fraction $\dfrac{x}{x-2}-\dfrac{3}{x+1}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Valeurs interdites : $x -2 \neq 0$ et $x +1 \neq 0$, donc $x\neq 2 \et x\neq -1 $.
+
+Pour tout $x\in\R\setminus\{-1\,;\,2\}$, le dénominateur commun est $(x-2)(x+1)$ :
+$$\begin{aligned}
+\frac{x}{x-2}-\frac{3}{x+1}
+&= \frac{x(x+1)}{(x-2)(x+1)}-\frac{3(x-2)}{(x-2)(x+1)}\\
+&= \frac{x^2+x-3x+6}{(x-2)(x+1)}\\
+&= \frac{x^2-2x+6}{(x-2)(x+1)}
+\end{aligned}$$
+
+</details>
+
+2. Écrire sous la forme d'une seule fraction
+   $\dfrac{2}{x}+\dfrac{x-1}{x^2}-\dfrac{3}{2x}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Valeurs interdites : $x\neq 0$, donc $x\in\R\setminus\{0\}$.
+
+Pour tout $x\in\R\setminus\{0\}$, le dénominateur commun est $2x^2$ :
+$$\begin{aligned}
+\frac{2}{x}+\frac{x-1}{x^2}-\frac{3}{2x}
+&= \frac{4x}{2x^2}+\frac{2(x-1)}{2x^2}-\frac{3x}{2x^2}\\
+&= \frac{4x+2x-2-3x}{2x^2}\\
+&= \frac{3x-2}{2x^2}
+\end{aligned}$$
+
+</details>
+:::

@@ -1,0 +1,250 @@
+---
+title: "Identités remarquables"
+format:
+  html:
+    toc: true
+    number-sections: false
+    include-in-header:
+      - ../../assets/css/pyodide-include.html
+description: "Les trois identités remarquables, leurs démonstrations et un exemple algorithmique de test d'égalité."
+order: 3
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Identités remarquables</span>
+
+Pour tous réels $a$ et $b$ :
+$$(a+b)^2 = a^2+2ab+b^2$$
+$$(a-b)^2 = a^2-2ab+b^2$$
+$$(a+b)(a-b) = a^2-b^2$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+Pour tous réels $a$ et $b$, 
+$$\begin{aligned}
+(a+b)^2 &= (a+b)(a+b) = a^2+ab+ba+b^2 = a^2+2ab+b^2\\
+(a-b)^2 &= (a-b)(a-b) = a^2-ab-ba+b^2 = a^2-2ab+b^2\\
+(a+b)(a-b) &= a^2-ab+ba-b^2 = a^2-b^2
+\end{aligned}$$
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : Erreur à éviter</span>
+
+$(a+b)^2 \neq a^2+b^2$ en général : le terme $2ab$, appelé **double produit**, est souvent oublié.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Développer avec les identités remarquables — Calculer</span></div>
+
+Développer $(5x-7)^2$ et $(5x-2)(5x+2)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$,
+$$(5x-7)^2=(5x)^2-2\times 5x\times 7+7^2=25x^2-70x+49$$
+$$(5x-2)(5x+2)=(5x)^2-2^2=25x^2-4$$
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Factoriser avec les identités remarquables — Calculer</span></div>
+
+Factoriser $36x^2-49x^4$ et $25x^2-40x+16$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$,
+$$36x^2-49x^4=(6x)^2-(7x^2)^2=(6x-7x^2)(6x+7x^2)$$
+$$25x^2-40x+16=(5x)^2-2\times 5x\times 4+4^2=(5x-4)^2$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Choisir la forme adaptée — Calculer, Raisonner</span></div>
+
+1. Développer et réduire $A=(3x+1)^2-(3x+1)(x-2)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* on développe chaque terme séparément
+en utilisant les identités remarquables et la double distributivité.
+
+Pour tout réel $x$,
+$$\begin{aligned}
+A &= (3x+1)^2-(3x+1)(x-2)\\
+  &= 9x^2+6x+1-(3x^2-6x+x-2)\\
+  &= 9x^2+6x+1-(3x^2-5x-2)\\
+  &= 9x^2+6x+1-3x^2+5x+2\\
+  &= 6x^2+11x+3
+\end{aligned}$$
+
+</details>
+
+2. Factoriser $B=9x^2-6x+1$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$,
+$$B=9x^2-6x+1=(3x)^2-2\times 3x\times 1+1^2=(3x-1)^2$$
+
+</details>
+
+3. Factoriser $C=(2x-1)^2-(2-3x)^2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$,
+$$\begin{aligned}
+C=(2x-1)^2-(2-3x)^2=\left[(2x-1)-(2-3x)\right]\left[(2x-1)+(2-3x)\right]=(5x-3)(1-x)
+\end{aligned}$$
+
+</details>
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode</span>
+
+Pour transformer une expression, on choisit la forme la plus adaptée à l'objectif :
+
+- **Développer** :
+  - pour calculer une valeur numérique ;
+  - pour simplifier une expression ;
+  - pour résoudre une équation dont le second membre n'est pas nul.
+
+- **Factoriser** :
+  - pour résoudre une équation (obtenir un produit nul) ;
+  - pour mettre en évidence une structure.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Algorithmique — Tester une égalité algébrique — Programmer</span></div>
+
+On considère les deux programmes Python suivants, qui testent si les expressions
+$A=(2x-1)(x+3)-(x^2-1)$ et $B=x^2+5x-2$ sont égales pour une valeur de $x$ donnée.
+
+::: {.columns}
+
+::: {.column width="48%"}
+```python
+# Programme 1
+x = -1
+A = (2*x - 1)*(x + 3) - (x**2 - 1)
+B = x**2 + 5*x - 2
+
+if A == B:
+    print(f"A = B pour x = {x}")
+else:
+    print(f"A != B pour x = {x}")
+```
+:::
+
+::: {.column width="48%"}
+```python
+# Programme 2
+x = -1
+A = (2*x - 1)*(x + 3) - (x**2 - 1)
+B = x**2 + 5*x - 2
+
+if A != B:
+    print(f"A != B pour x = {x}")
+```
+:::
+
+:::
+
+1. Comparer le fonctionnement des deux programmes.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Les deux programmes calculent les mêmes expressions $A$ et $B$.
+
+- Le programme 1 affiche un message si $A=B$, puis un message différent si $A\neq B$ : il couvre les deux cas.
+- Le programme 2 n'affiche un message que si $A\neq B$. Il n'affiche rien si les quantités sont égales.
+
+</details>
+
+2. Comment tester tous les entiers entre $-10$ et $10$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Il faut utiliser une boucle `for` pour parcourir tous les entiers de $-10$ à $10$.
+
+```python
+for x in range(-10, 11):
+    A = (2*x - 1)*(x + 3) - (x**2 - 1)
+    B = x**2 + 5*x - 2
+    if A != B:
+        print(f"A != B pour x = {x}")
+```
+
+*Si aucun message n'apparaît, alors $A=B$ pour toutes les valeurs testées.*
+
+</details>
+
+3. Après l'exécution de ce script, peut-on affirmer que les expressions $A$ et $B$
+   sont égales pour tout réel $x$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Non. Le script ne teste qu'un nombre fini de valeurs entières (les $21$ entiers de $-10$ à $10$).
+Même si $A=B$ pour toutes ces valeurs, cela ne constitue pas une preuve mathématique valable pour
+tout réel $x$.
+
+Pour le prouver rigoureusement, il faut développer et réduire $A$ :
+$$(2x-1)(x+3)-(x^2-1)=2x^2+6x-x-3-x^2+1=x^2+5x-2=B$$
+On conclut que $A=B$ pour tout réel $x$.
+
+**À retenir :** un test numérique peut suggérer une égalité algébrique, mais seul
+un calcul littéral la démontre.
+
+</details>
+
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+def division_euclidienne(a, b):
+    return a // b, a % b
+```
+
+</details>
+
+Pour tester les programmes.
+
+~~~{=html}
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo_div_eucl">
+    <div class="bar-top"><span class="cell-num">tester.py</span></div>
+    <textarea id="code">
+    # ton code ici
+
+
+
+</textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled></button>
+      <button class="btn" id="check" disabled></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
+</div>
+~~~
+:::

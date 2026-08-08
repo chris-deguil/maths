@@ -1,0 +1,129 @@
+---
+title: "Distributivité"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Simple et double distributivité, avec démonstration géométrique par les aires."
+order: 2
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Simple et double distributivité</span>
+
+Pour tous réels $k$, $a$, $b$, $c$ et $d$ :
+$$k(a+b)=ka+kb \et (a+b)(c+d)=ac+ad+bc+bd$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+On illustre la double distributivité par l'égalité des aires.
+
+Le grand rectangle a pour dimensions $(a+b)$ et $(c+d)$, donc son aire vaut $(a+b)(c+d)$.
+
+Il est découpé en quatre rectangles d'aires $ac$, $ad$, $bc$, $bd$, d'où l'égalité.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Equation_equation2.png" style="width: 25%;">
+</div>
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Développer et réduire avec la distributivité — Calculer</span></div>
+
+Développer et réduire $(x-4)(2x-5)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, 
+$$(x-4)(2x-5)=2x^2-5x-8x+20=2x^2-13x+20$$
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Factoriser en faisant apparaître un facteur commun — Raisonner</span></div>
+
+Factoriser $(2x-6)(5-x)-(x-3)(1-2x)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$,
+$$\begin{aligned}
+(2x-6)(5-x)-(x-3)(1-2x)
+&= 2(x-3)(5-x)+(x-3)(2x-1)\\
+&= (x-3)\left[2(5-x)+(2x-1)\right]\\
+&= (x-3)(10-2x+2x-1)\\
+&= 9(x-3)
+\end{aligned}$$
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : Erreur à éviter</span>
+
+Lorsqu'un signe $-$ précède une expression entre parenthèses, il faut le distribuer sur chaque terme.
+Par exemple, pour tout réel $x$, $$-(x-3)(1-2x) = (x-3)\times(-(1-2x)) = (x-3)(2x-1)$$
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Factoriser en faisant apparaître un facteur commun — Calculer</span></div>
+
+1. Factoriser $(2x-3)(5x+1)+(3-2x)(x-3)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :** on remarque que $3-2x=-(2x-3)$,
+ce qui fait apparaître le facteur commun $(2x-3)$.*
+
+Pour tout réel $x$,
+$$\begin{aligned}
+(2x-3)(5x+1)+(3-2x)(x-3)
+&= (2x-3)(5x+1)-(2x-3)(x-3)\\
+&= (2x-3)\left[(5x+1)-(x-3)\right]\\
+&= (2x-3)(4x+4)\\
+&= 4(2x-3)(x+1)
+\end{aligned}$$
+
+</details>
+
+2. Factoriser $6x(x+4)+3(x+4)^2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :** on pré-factorise chaque terme par $3$
+pour faire apparaître le facteur commun $(x+4)$.*
+
+Pour tout réel $x$,
+$$
+6x(x+4)+3(x+4)^2= 3\times 2x(x+4)+3(x+4)(x+4)= 3(x+4)\left[2x+(x+4)\right]= 3(x+4)(3x+4)
+$$
+
+</details>
+
+3. Factoriser $(3x-1)(2x+5)-(3x-1)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :** le terme $(3x-1)$ seul s'écrit
+$(3x-1)\times 1$ ; le facteur commun $(3x-1)$ apparaît immédiatement.*
+
+Pour tout réel $x$,
+$$\begin{aligned}
+(3x-1)(2x+5)-(3x-1)
+&= (3x-1)(2x+5)-(3x-1)\times 1\\
+&= (3x-1)\left[(2x+5)-1\right]\\
+&= (3x-1)(2x+4)\\
+&= 2(3x-1)(x+2)
+\end{aligned}$$
+
+</details>
+:::

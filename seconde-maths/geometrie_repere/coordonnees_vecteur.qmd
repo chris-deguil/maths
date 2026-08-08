@@ -36,16 +36,28 @@ directement du théorème de Pythagore : c'est l'orthogonalité qui les rend pos
 ::: {.bloc .def}
 <span class="bloc-titre">Définition : Coordonnées d'un vecteur</span>
 
+<table style="border: none; width: 100%; table-layout: fixed;">
+<tr style="border: none;">
+<td style="border: none; vertical-align: middle; padding-right: 1.5rem; width: calc(100% - 260px);">
+
 Soit $\Oij$ un repère orthonormé du plan.
-Tout vecteur $\ve{u}$ du plan s'écrit de manière **unique**
+
+On considère $M(x\,;\,y)$ et $\ve{u} = \ve{OM}$.
+
+Alors $\ve{u}$ s'écrit de manière **unique**
+
 $$\ve{u} = x\,\ve{i} + y\,\ve{j},$$
+
 où $x$ et $y$ sont des réels appelés **coordonnées** (ou composantes) de $\ve{u}$.
 
 On note $\ve{u}\vecol{x}{y}$ ou $\ve{u}\,(x\,;\,y)$.
 
-<div style="text-align: center;">
-  <img src="../../image/seconde/Geometrie_Reperee_coordonnee1.png" style="width: 40%;">
-</div>
+</td>
+<td style="border: none; width: 260px; text-align: center;">
+<img src="../../image/seconde/Geometrie_Reperee_coordonnee1.png" style="width: 100%;">
+</td>
+</tr>
+</table>
 :::
 
 ::: {.bloc .thm}
@@ -53,8 +65,21 @@ On note $\ve{u}\vecol{x}{y}$ ou $\ve{u}\,(x\,;\,y)$.
 
 Deux vecteurs $\ve{u}\,(x\,;\,y)$ et $\ve{v}\,(x'\,;\,y')$ sont égaux
 si et seulement si ils ont les mêmes coordonnées :
-$$\ve{u} = \ve{v} \ssi x = x' \et y = y'.$$
+$$\ve{u} = \ve{v} \iff x = x' \et y = y'.$$
 :::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soit $O$ l'origine du repère, et $A$, $B$ les points tels que $\ve{OA}=\ve{u}$ et $\ve{OB}=\ve{v}$.
+Par définition des coordonnées d'un vecteur, $A(x\,;y)$ et $B(x'\,;y')$.
+
+- $\ve{u}=\ve{v} \llr \ve{OA}=\ve{OB} \llr A=B$, car deux vecteurs de même origine sont égaux si et seulement si leurs extrémités coïncident (unicité de l'image par translation)
+- Or $A=B \llr x=x' \et y=y'$, puisque deux points sont égaux si et seulement si ils ont les mêmes coordonnées.
+
+D'où le résultat : $\ve{u}=\ve{v} \llr x=x' \et y=y'$.
+
+</details>
 
 ::: {.bloc .info}
 <span class="bloc-titre">À retenir : Méthode — Lire et représenter les coordonnées d'un vecteur</span>
@@ -64,14 +89,12 @@ positif vers la droite, négatif vers la gauche.
 La **deuxième coordonnée** (ordonnée) est le déplacement vertical :
 positif vers le haut, négatif vers le bas.
 :::
-
 ::: {.bloc .sfc}
 <div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Lire et représenter les coordonnées d'un vecteur — Représenter </span></div>
 
 1. On donne $A(1\,;\,3)$, $B(4\,;\,5)$, $C(-1\,;\,0)$.
    Lire les coordonnées des vecteurs $\ve{OA}$, $\ve{OB}$, $\ve{OC}$.
-2. Représenter le vecteur $\ve{w}\vecol{-2}{3}$ depuis l'origine $O$
-   dans un repère orthonormé.
+  <img src="../../image/seconde/Geometrie_Reperee_coordonnee2_1.png" style="width: 35%;">
 
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
@@ -79,10 +102,18 @@ positif vers le haut, négatif vers le bas.
 Par définition, les coordonnées de $\ve{OM}$ sont celles du point $M$.
 Donc $\ve{OA}\vecol{1}{3}$, $\ve{OB}\vecol{4}{5}$, $\ve{OC}\vecol{-1}{0}$.
 
-*Point clef :* les coordonnées d'un vecteur donnent directement le déplacement à effectuer : première coordonnée horizontalement, deuxième verticalement.
+</details>
+
+2. Représenter le vecteur $\ve{w}\vecol{-2}{3}$ depuis l'origine $O$
+   dans un repère orthonormé.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :** les coordonnées d'un vecteur donnent directement le déplacement à effectuer : première coordonnée horizontalement, deuxième verticalement.*
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Geometrie_Reperee_coordonnee2.png" style="width: 55%;">
+  <img src="../../image/seconde/Geometrie_Reperee_coordonnee2.png" style="width: 35%;">
 </div>
 
 </details>

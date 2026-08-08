@@ -1,0 +1,133 @@
+---
+title: "Ensemble de définition"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Ensemble de définition d'une fonction, et définir/calculer une image en Python."
+order: 1
+---
+
+## Ensemble de définition
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Ensemble de définition</span>
+
+On appelle **ensemble de définition** de la fonction $f$ l'ensemble de tous les réels $x$
+pour lesquels $f(x)$ existe.
+On le note généralement $D_f$.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode : déterminer l'ensemble de définition</span>
+
+- S'il y a une **racine carrée** $\sqrt{u(x)}$, on impose $u(x) \geqslant 0$.
+- S'il y a un **dénominateur** $u(x)$, on impose $u(x) \neq 0$.
+- On peut avoir les deux conditions simultanément.
+
+Toujours déterminer $D_f$ **avant** toute étude graphique ou algébrique de la fonction.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Déterminer un ensemble de définition — Calculer</span></div>
+
+Déterminer l'ensemble de définition de chacune des fonctions suivantes :
+
+1. $f(x) = 3x - 5$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$f(x)$ existe quel que soit le réel $x$ choisi, donc $D_f = \R$.
+
+</details>
+
+2. $h(x) = \sqrt{x - 5}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$h(x)$ existe si et seulement si $x - 5 \geqslant 0$, c'est-à-dire $x \geqslant 5$.
+Donc $D_h = [5\,;\,+\infty[$.
+
+</details>
+
+3. $g(x) = \dfrac{1}{x - 3}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$g(x)$ n'est pas définie en $x = 3$ (division par zéro).
+Donc $D_g = ]-\infty\,;\,3[\,\cup\,]3\,;\,+\infty[$.
+
+</details>
+:::
+
+## Fonctions en Python — définir et calculer une image
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Définir une fonction en Python</span>
+
+En Python, on peut définir une fonction mathématique à l'aide du mot-clé `def`.
+
+```python
+def f(x):
+    return 2*x**2 - 4
+```
+
+- `def f(x):` déclare une fonction nommée `f` qui prend un
+  paramètre `x`.
+- `return` renvoie le résultat du calcul.
+- L'indentation (4 espaces) est **obligatoire** en Python.
+
+Pour calculer une image, il suffit d'**appeler** la fonction avec une valeur :
+
+```python
+print(f(1))     # affiche -2.0 : image de 1 par f
+print(f(3))     # affiche 14.0 : image de 3 par f
+print(f(-2))    # affiche 4.0  : image de -2 par f
+```
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+En Python, `x**2` signifie $x^2$, et `x**3` signifie $x^3$.
+L'opérateur `*` est la multiplication.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Définir une fonction et calculer des images — Calculer</span></div>
+
+1. Définir en Python la fonction $g$ donnée par $g(x) = x^3 - 3x + 1$ et calculer $g(-1)$ et $g(1,3)$ à l'aide de Python.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+def g(x):
+    return x**3 - 3*x + 1
+
+print(g(-1))   # affiche 3
+print(g(1.3))    # affiche -0.7030000000000003
+```
+
+</details>
+
+2. Vérifier les résultats par le calcul à la main.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$g(-1) = -1 + 3 + 1 = 3$ ✓
+
+$g(1{,}3) = 1{,}3^3 - 3 \times 1{,}3 + 1 = 2{,}197 - 3{,}9 + 1 = -0{,}703$ ✓
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Python affiche `-0.7030000000000003` : le résultat est correct mais Python introduit une légère imprécision due à la représentation des nombres décimaux en machine.
+:::

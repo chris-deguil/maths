@@ -1,0 +1,25 @@
+---
+title: "Généralités sur les fonctions"
+description: "Ensemble de définition, représentation graphique, résolution graphique, variations et extremums d'une fonction."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Déterminer graphiquement des images et des antécédents.
+- Exploiter une équation de courbe (appartenance d'un point, calcul de coordonnées).
+- Résoudre, graphiquement ou à l'aide d'un outil numérique, une équation ou inéquation du type $f(x)=g(x)$, $f(x)<g(x)$.
+- Relier représentation graphique et tableau de variations.
+- Déterminer graphiquement les extremums d'une fonction sur un intervalle.
+- Exploiter un logiciel de géométrie dynamique ou de calcul formel, la calculatrice ou Python pour décrire les variations d'une fonction donnée par une formule.
+- Résoudre une équation ou une inéquation du type $f(x) = k$, $f(x) < k$, en choisissant une méthode adaptée : graphique, algébrique, logicielle.
+:::

@@ -1,0 +1,128 @@
+---
+title: "Équation avec une racine carrée"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Résolution d'équations avec racine carrée par la méthode d'analyse-synthèse."
+order: 9
+---
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode — Analyse-synthèse</span>
+
+La méthode d'analyse-synthèse se déroule en deux étapes.
+
+*Analyse :* on suppose qu'une solution existe et on en déduit des conditions nécessaires.
+On obtient ainsi une liste de candidats.
+
+*Synthèse :* on vérifie chaque candidat dans l'équation de départ.
+Les candidats qui vérifient l'équation sont les solutions ; les autres sont écartés.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Analyse-synthèse — Calculer, Raisonner</span></div>
+
+Résoudre $(E)\,:\,\sqrt{3x+4}=x+2$ par un raisonnement d'analyse-synthèse.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+1. **Analyse — conditions nécessaires.**
+
+   Soit $x$ une solution de $(E)$.
+   $$\sqrt{3x+4}=x+2 \Longrightarrow 3x+4=(x+2)^2=x^2+4x+4 \Longrightarrow x^2+x=0 \Longrightarrow x(x+1)=0 \Longrightarrow x=0 \ou x=-1$$
+   Les seules solutions possibles sont $x=0$ et $x=-1$.
+
+2. **Synthèse — vérification de chaque candidat.**
+
+   Pour $x=0$ : $\sqrt{3\times 0+4}=\sqrt{4}=2$ et $0+2=2$. L'égalité est vérifiée. 
+
+   Pour $x=-1$ : $\sqrt{3\times(-1)+4}=\sqrt{1}=1$ et $(-1)+2=1$. L'égalité est vérifiée.
+
+Ainsi $S=\{-1\,;\,0\}$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+On peut aussi mener un raisonnement par équivalences, mais cela nécessite des propriétés sur la fonction carré qui seront vues ultérieurement.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode</span>
+
+La mise au carré n'est pas une équivalence en général sur $\R$ : elle peut introduire
+des solutions supplémentaires.
+
+Il est donc nécessaire de vérifier chaque solution obtenue dans l'équation de départ.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Résoudre une équation avec une racine carrée — Calculer</span></div>
+
+Résoudre dans $\R$ l'équation $(E)\,:\,\sqrt{4-x}=3x+2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+1. *Analyse — conditions nécessaires.*
+
+   Soit $x$ une solution de $(E)$.
+   $$\sqrt{4-x}=3x+2 \Longrightarrow 4-x=(3x+2)^2=9x^2+12x+4 \Longrightarrow 9x^2+13x=0 \Longrightarrow x(9x+13)=0 \Longrightarrow x=0 \ou x=-\dfrac{13}{9}$$
+   Les seuls candidats sont $x=0$ et $x=-\dfrac{13}{9}$.
+
+2. *Synthèse — vérification de chaque candidat.*
+
+   Pour $x=0$ : $\sqrt{4-0}=\sqrt{4}=2$ et $3\times 0+2=2$. L'égalité est vérifiée. ✓
+
+   Pour $x=-\dfrac{13}{9}$ : $3\times\left(-\dfrac{13}{9}\right)+2=-\dfrac{7}{3}<0$. Le membre droit est strictement négatif, l'égalité est impossible. On écarte $x=-\dfrac{13}{9}$.
+
+Ainsi $S=\{0\}$.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Choisir la stratégie de résolution — Raisonner</span></div>
+
+Pour chaque équation, indiquer la méthode de résolution adaptée sans résoudre.
+
+1. $(x-3)(2x+1)=0$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+L'équation est déjà sous forme d'un produit nul : on applique directement la règle du produit nul.
+
+</details>
+
+2. $\dfrac{3x-1}{x+4}=2$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+C'est une équation quotient avec $k=2$ : on commence par déterminer la valeur interdite $x\neq -4$, puis on ramène à un quotient nul.
+
+</details>
+
+3. $5x+1=x-2$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+C'est une équation du premier degré : on regroupe les termes en $x$ d'un côté et les constantes de l'autre.
+
+</details>
+
+4. $4x^2+12x+9=0$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On reconnaît $(2x+3)^2=0$ : c'est une équation produit nul avec un carré.
+
+</details>
+:::

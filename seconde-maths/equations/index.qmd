@@ -1,0 +1,23 @@
+---
+title: "Équations"
+description: "Calcul littéral (développement, factorisation, identités remarquables) et résolution d'équations."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Isoler une variable dans une égalité qui en comporte plusieurs, sur des exemples internes aux mathématiques ou issus des autres disciplines.
+- Effectuer un calcul littéral élémentaire (expressions additives et multiplicatives usuelles).
+- Développer, factoriser, réduire une expression algébrique simple (identités remarquables ; factorisation de $ax^2+bx$, $ax+bx$).
+- Résoudre une équation du type $ax+b=cx+d$, $a/x=b$, ou une inéquation du premier degré.
+- Résoudre une équation du type $x^2=a$
+:::

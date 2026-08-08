@@ -1,0 +1,176 @@
+---
+title: "Équation quotient"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Équation quotient nul et équation quotient égale à une constante k."
+order: 8
+---
+
+## Cas $k=0$ : équation quotient nul
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Équation quotient nul</span>
+
+On appelle **équation quotient nul** une équation de la forme
+$$\frac{A(x)}{B(x)}=0$$
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Résolution d'une équation quotient nul</span>
+
+Les solutions de $\dfrac{A(x)}{B(x)}=0$ sont exactement les réels $x$ vérifiant simultanément
+$$A(x)=0 \et B(x)\neq 0$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Un quotient est nul si et seulement si son numérateur est nul.
+La condition $B(x)\neq 0$ est requise pour que le quotient soit bien défini.
+
+</details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode</span>
+
+Pour résoudre une équation quotient nul $\dfrac{A(x)}{B(x)}=0$ :
+
+1. Déterminer les **valeurs interdites** en résolvant $B(x)=0$,
+   et en déduire l'ensemble de résolution $D_E$.
+2. Résoudre $A(x)=0$ sur $D_E$.
+3. Vérifier que les solutions obtenues appartiennent bien à $D_E$,
+   et écarter celles qui en sont absentes.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résoudre une équation quotient nul — Raisonner</span></div>
+
+Résoudre $(E)\,:\,\dfrac{5x-3}{x^2-4}=0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :** un quotient est nul si et seulement si son numérateur est nul **et** son dénominateur est non nul. Il faut toujours vérifier que la solution trouvée n'est pas une valeur interdite.*
+
+- Valeurs interdites : $x^2-4=0 \iff x=2$ ou $x=-2$.
+
+  Ensemble de résolution : $D_E=\R\setminus\{-2\,;\,2\}$.
+
+- Pour $x\in D_E$ :
+  $$\frac{5x-3}{x^2-4}=0 \iff 5x-3=0 \iff x=\frac{3}{5} \et \dfrac{3}{5}\in D_E$$
+
+Ainsi $S=\left\{\dfrac{3}{5}\right\}$.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Éviter une erreur classique — Raisonner</span></div>
+
+Expliquer pourquoi il est faux d'affirmer que les solutions de
+$\frac{(2x+1)(x-1)}{x^2-1}=0$
+sont exactement les solutions de $(2x+1)(x-1)=0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, $(2x+1)(x-1)=0$ équivaut à $x=-\dfrac{1}{2}$ ou $x=1$.
+
+Cependant, $x^2-1=0 \iff x=1$ ou $x=-1$, donc $D_E=\R\setminus\{-1\,;\,1\}$.
+
+Ainsi $x=1$ est une valeur interdite, elle ne peut pas être solution de l'équation.
+
+On ne peut donc pas se contenter de résoudre $A(x)=0$ sans vérifier que les solutions
+obtenues appartiennent bien à l'ensemble de résolution.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Piège — simplification abusive — Raisonner</span></div>
+
+Résoudre dans $\R$ l'équation $(E)\,:\,\dfrac{(x-1)(x+5)-2x(x-1)}{x^2-1}=0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction (méthode 1) :</summary>
+
+Valeurs interdites : $x^2-1=0 \iff x=1$ ou $x=-1$,
+donc $D_E=\R\setminus\{-1\,;\,1\}$.
+
+Pour tout réel $x \in D_E$
+$$\dfrac{(x-1)(x+5)-2x(x-1)}{x^2-1}=0 \iff (x-1)(x+5)-2x(x-1)=(x-1)\left[(x+5)-2x\right]=(x-1)(5-x) \iff x=1 \ou x=5$$
+
+De plus $5 \in D_E$, et $-1 \notin D_E$ donc  $S=\{5\}$.
+
+</details>
+
+<details class="bloc cor">
+<summary>Afficher la correction (méthode 2) :</summary>
+
+Valeurs interdites : $x^2-1=0 \iff x=1$ ou $x=-1$,
+donc $D_E=\R\setminus\{-1\,;\,1\}$.
+
+Pour tout réel $x \in D_E$
+$$\dfrac{(x-1)(x+5)-2x(x-1)}{x^2-1}=0 \iff \dfrac{(x-1)[(x+5)-2x]}{(x-1)(x+1)}=0 
+\iff \dfrac{-x+5}{x+1}=0 \iff -x+5=0 \iff x = 5$$
+De plus $5 \in D_E$ donc  $S=\{5\}$.
+
+</details>
+:::
+
+## Cas général : équation $\dfrac{A(x)}{B(x)}=k$
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Résolution d'une équation quotient</span>
+
+Les solutions de $\dfrac{A(x)}{B(x)}=k$ (avec $k$ un réel quelconque) sont exactement
+les réels $x$ vérifiant simultanément
+$$A(x)-k\,B(x)=0 \et B(x)\neq 0$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Sur l'ensemble de résolution ($B(x)\neq 0$), on peut soustraire $k$ des deux membres :
+$$\frac{A(x)}{B(x)}=k \iff \frac{A(x)}{B(x)}-k=0 \iff \frac{A(x)-k\,B(x)}{B(x)}=0$$
+On applique alors la règle du quotient nul : numérateur nul et dénominateur non nul.
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Choisir une stratégie — Raisonner</span></div>
+
+1. Résoudre dans $\R$ l'équation $(E)\,:\,\dfrac{(x-2)(x+1)}{x-3}=0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Valeur interdite : $x-3\neq 0$ donc $x\neq 3$, ainsi $D_E=\R\setminus\{3\}$.
+
+Pour $x\in D_E$ :
+$$(x-2)(x+1)=0 \iff x=2 \ou x=-1$$
+
+$2\neq 3$ et $-1\neq 3$, donc $2\in D_E$ et $-1\in D_E$.
+
+Ainsi $S=\{-1\,;\,2\}$.
+
+</details>
+
+2. Résoudre dans $\R$ l'équation $(E')\,:\,\dfrac{2x+3}{x+1}=3$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Valeur interdite : $x+1\neq 0$ donc $x\neq -1$, ainsi $D_{E'}=\R\setminus\{-1\}$.
+
+Pour $x\in D_{E'}$ :
+$$\frac{2x+3}{x+1}=3 \iff \frac{2x+3-3(x+1)}{x+1}=0 \iff \frac{-x}{x+1}=0 \iff x=0$$
+
+$0\neq -1$, donc $0\in D_{E'}$.
+
+Ainsi $S=\{0\}$.
+
+</details>
+:::

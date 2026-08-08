@@ -118,6 +118,29 @@ website:
             - seconde-maths/geometrie_repere/aire_parallelogramme.qmd
             - seconde-maths/geometrie_repere/bilan.qmd
 
+        - section: "Chapitre 7 : Équations"
+          contents:
+            - seconde-maths/equations/index.qmd
+            - seconde-maths/equations/developper_factoriser.qmd
+            - seconde-maths/equations/distributivite.qmd
+            - seconde-maths/equations/identites_remarquables.qmd
+            - seconde-maths/equations/meme_denominateur.qmd
+            - seconde-maths/equations/ensemble_resolution.qmd
+            - seconde-maths/equations/equation_produit_nul.qmd
+            - seconde-maths/equations/equation_x2_egale_a.qmd
+            - seconde-maths/equations/equation_quotient.qmd
+            - seconde-maths/equations/equation_racine_carree.qmd
+
+        - section: "Chapitre 8 : Généralités sur les fonctions"
+          contents:
+            - seconde-maths/generalites_fonctions/index.qmd
+            - seconde-maths/generalites_fonctions/ensemble_definition.qmd
+            - seconde-maths/generalites_fonctions/tableau_valeurs_representation.qmd
+            - seconde-maths/generalites_fonctions/resolution_graphique.qmd
+            - seconde-maths/generalites_fonctions/variations_tableau.qmd
+            - seconde-maths/generalites_fonctions/extremums.qmd
+            - seconde-maths/generalites_fonctions/variations_avec_python.qmd 
+
     - title: "Première"
       logo: assets/images/logo_maths2.png
       style: docked

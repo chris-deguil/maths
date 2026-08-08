@@ -22,6 +22,7 @@ $$\ve{AB}\vecol{x_B - x_A}{y_B - y_A}.$$
 <summary>Démonstration :</summary>
 
 D'après la relation de Chasles, $\ve{AB} = \ve{AO} + \ve{OB} = \ve{OB} - \ve{OA}$.
+
 Donc
 $$\ve{AB} = x_B\,\ve{i} + y_B\,\ve{j} - x_A\,\ve{i} - y_A\,\ve{j}
           = (x_B - x_A)\,\ve{i} + (y_B - y_A)\,\ve{j}.$$
@@ -37,7 +38,7 @@ Soit $A(1\,;\,3)$ et $B(-2\,;\,5)$. Comment calculer les coordonnées de $\ve{AB
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
-*Point clef :* Déterminer les coordonnées du vecteur revient à la différence des coordonnées.
+***Point clef :** Déterminer les coordonnées du vecteur revient à la différence des coordonnées.*
 
 $$\ve{AB}\vecol{-2 - 1}{5 - 3} = \vecol{-3}{2}.$$
 
@@ -133,8 +134,6 @@ Soit $A(1\,;\,2)$ et $B(4\,;\,6)$. Calculer la distance $AB$.
 
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
-
-*Point clef :* dans un repère orthonormé, $AB = \sqrt{(x_B-x_A)^2+(y_B-y_A)^2}$.
 
 $$AB = \sqrt{(4-1)^2 + (6-2)^2} = \sqrt{9 + 16} = \sqrt{25} = 5.$$
 

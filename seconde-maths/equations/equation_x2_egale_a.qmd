@@ -1,0 +1,87 @@
+---
+title: "Équation du type x² = a"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Résolution de l'équation x² = a selon le signe de a."
+order: 7
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Résolution de $x^2=a$</span>
+
+Soit $a$ un réel.
+
+- Si $a<0$ : l'équation n'admet **aucune solution réelle**.
+- Si $a=0$ : l'unique solution est $x=0$.
+- Si $a>0$ : l'équation admet exactement **deux solutions**, $x=\sqrt{a}$ et $x=-\sqrt{a}$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Pour $a>0$ :
+$$x^2=a \iff x^2-a=0 \iff x^2-(\sqrt{a})^2=0 \iff (x-\sqrt{a})(x+\sqrt{a})=0$$
+On conclut par la règle du produit nul.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résoudre une équation du type $x^2=a$ — Calculer</span></div>
+
+Résoudre $x^2=4$ et $x^2=50$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$, 
+
+$$x^2=4 \iff x=2 \ou x=-2$$
+
+Donc $S=\{-2\,;\,2\}$
+
+$$x^2=50 \iff x=\sqrt{50} \ou x= -\sqrt{50} \iff x= 5 \sqrt{2} \ou x = -5 \sqrt{2}$$
+
+Donc $S=\left\{-5\sqrt{2} \,;\, 5 \sqrt{2} \right\}$
+
+</details>
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode</span>
+
+Pour résoudre une équation de la forme $X^2=a$ :
+
+- Identifier clairement l'expression jouant le rôle de $X$ ;
+- Appliquer le théorème selon le signe de $a$ ;
+- Revenir à la variable initiale.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Résoudre une équation du type $x^2=a$ — Calculer</span></div>
+
+1. Pour tout $x\in\R$, résoudre $(E)\,:\,(3x+1)^2=25$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :** on pose $X=3x+1$. L'équation s'écrit alors $X^2=25$.*
+
+Pour tout réel $x$,
+$$(3x+1)^2 = 25 \iff 3x+1 = 5 \ou 3x+1=-5 \iff 3x=4 \ou 3x=-6 \iff x=\dfrac{4}{3} \ou x=-2$$
+Ainsi $S=\left\{-2\,;\,\dfrac{4}{3}\right\}$.
+
+</details>
+
+2. Pour tout $x\in\R$, résoudre $(E')\,:\,5x^2-20=0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$,
+$$5x^2-20=0 \iff x^2=4 \iff x=2 \ou x=-2$$
+Ainsi $S=\{-2\,;\,2\}$.
+
+</details>
+:::

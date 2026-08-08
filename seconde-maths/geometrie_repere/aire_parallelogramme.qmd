@@ -14,24 +14,29 @@ order: 6
 Soit $\Oij$ un repère orthonormé et $\ve{u}\vecol{x}{y}$, $\ve{v}\vecol{x'}{y'}$ deux vecteurs
 non colinéaires. L'aire du parallélogramme construit sur $\ve{u}$ et $\ve{v}$ est
 $$\mathscr{A} = \abs{\det(\ve{u},\ve{v})} = \abs{xy' - x'y}.$$
+<div style="text-align: center;">
+  <img src="../../image/seconde/Geometrie_Reperee_aire_parallelogramme1.png" style="width: 30%;">
+</div>
 :::
 
 <details class="bloc demo">
 <summary>Démonstration :</summary>
 
 On se place dans le cas $0 < x < x'$ et $0 < y < y'$.
+
 Soit $O$ l'origine, $A(x\,;\,y)$, $B(x'\,;\,y')$, $A'(x\,;\,0)$, $B'(x'\,;\,0)$.
 
 Par soustraction d'aires trapézoïdales :
 $$\mathscr{A}_{OAB}
-  = \mathscr{A}_{OBB'} - \mathscr{A}_{OAA'} - \mathscr{A}_{ABB'A'}$$
-$$= \dfrac{1}{2}x'y' - \dfrac{1}{2}xy - \dfrac{1}{2}(y+y')(x'-x)$$
+  = \mathscr{A}_{OBB'} - \mathscr{A}_{OAA'} - \mathscr{A}_{ABB'A'}
+  = \dfrac{1}{2}x'y' - \dfrac{1}{2}xy - \dfrac{1}{2}(y+y')(x'-x)$$
 En développant, on obtient $\mathscr{A}_{OAB} = \dfrac{1}{2}(xy'-x'y)$.
+
 L'aire du parallélogramme, deux fois celle du triangle, vaut $xy' - x'y$,
 et dans le cas général $\abs{xy'-x'y} = \abs{\det(\ve{u},\ve{v})}$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Geometrie_Reperee_Aire1.png" style="width: 40%;">
+  <img src="../../image/seconde/Geometrie_Reperee_Aire1.png" style="width: 30%;">
 </div>
 
 </details>
