@@ -1,5 +1,19 @@
 [
   {
+    "listing": "/seconde-maths/equations/index.html",
+    "items": [
+      "/seconde-maths/equations/developper_factoriser.html",
+      "/seconde-maths/equations/distributivite.html",
+      "/seconde-maths/equations/identites_remarquables.html",
+      "/seconde-maths/equations/meme_denominateur.html",
+      "/seconde-maths/equations/ensemble_resolution.html",
+      "/seconde-maths/equations/equation_produit_nul.html",
+      "/seconde-maths/equations/equation_x2_egale_a.html",
+      "/seconde-maths/equations/equation_quotient.html",
+      "/seconde-maths/equations/equation_racine_carree.html"
+    ]
+  },
+  {
     "listing": "/seconde-maths/fonctions_affines/index.html",
     "items": [
       "/seconde-maths/fonctions_affines/vocabulaire_fonctions.html",
@@ -13,37 +27,28 @@
     ]
   },
   {
-    "listing": "/seconde-maths/index.html",
+    "listing": "/seconde-maths/racines_carrees/index.html",
     "items": [
-      "/seconde-maths/ensembles_nombres/index.html",
-      "/seconde-maths/fonctions_affines/index.html",
-      "/seconde-maths/vecteurs_translation/index.html",
-      "/seconde-maths/geometrie_repere/index.html",
-      "/seconde-maths/intervalles_inegalites/index.html"
+      "/seconde-maths/racines_carrees/definition.html",
+      "/seconde-maths/racines_carrees/calculer_racines.html",
+      "/seconde-maths/racines_carrees/rationalisation.html",
+      "/seconde-maths/racines_carrees/comparer_racines.html",
+      "/seconde-maths/racines_carrees/racine2_irrationnel.html",
+      "/seconde-maths/racines_carrees/pythagore.html",
+      "/seconde-maths/racines_carrees/valeurs_remarquables.html",
+      "/seconde-maths/racines_carrees/combinaison_pythagore_thales.html"
     ]
   },
   {
-    "listing": "/seconde-maths/geometrie_repere/index.html",
+    "listing": "/seconde-maths/intervalles_inegalites/index.html",
     "items": [
-      "/seconde-maths/geometrie_repere/coordonnees_vecteur.html",
-      "/seconde-maths/geometrie_repere/somme_produit_vecteurs.html",
-      "/seconde-maths/geometrie_repere/vecteur_ab_norme.html",
-      "/seconde-maths/geometrie_repere/milieu_segment.html",
-      "/seconde-maths/geometrie_repere/colinearite_determinant.html",
-      "/seconde-maths/geometrie_repere/aire_parallelogramme.html",
-      "/seconde-maths/geometrie_repere/bilan.html"
-    ]
-  },
-  {
-    "listing": "/seconde-maths/ensembles_nombres/index.html",
-    "items": [
-      "/seconde-maths/ensembles_nombres/vocabulaire.html",
-      "/seconde-maths/ensembles_nombres/entiers.html",
-      "/seconde-maths/ensembles_nombres/rationnels_decimaux.html",
-      "/seconde-maths/ensembles_nombres/reels_irrationnels.html",
-      "/seconde-maths/ensembles_nombres/fractions.html",
-      "/seconde-maths/ensembles_nombres/puissances.html",
-      "/seconde-maths/ensembles_nombres/notation_scientifique.html"
+      "/seconde-maths/intervalles_inegalites/inegalite_encadrement.html",
+      "/seconde-maths/intervalles_inegalites/notion_intervalle.html",
+      "/seconde-maths/intervalles_inegalites/operations_intervalles.html",
+      "/seconde-maths/intervalles_inegalites/ordre_comparaison.html",
+      "/seconde-maths/intervalles_inegalites/resolution_inequations.html",
+      "/seconde-maths/intervalles_inegalites/valeur_absolue_distance.html",
+      "/seconde-maths/intervalles_inegalites/valeur_absolue_intervalles.html"
     ]
   },
   {
@@ -60,28 +65,48 @@
     ]
   },
   {
-    "listing": "/seconde-maths/intervalles_inegalites/index.html",
+    "listing": "/seconde-maths/ensembles_nombres/index.html",
     "items": [
-      "/seconde-maths/intervalles_inegalites/inegalite_encadrement.html",
-      "/seconde-maths/intervalles_inegalites/notion_intervalle.html",
-      "/seconde-maths/intervalles_inegalites/operations_intervalles.html",
-      "/seconde-maths/intervalles_inegalites/ordre_comparaison.html",
-      "/seconde-maths/intervalles_inegalites/resolution_inequations.html",
-      "/seconde-maths/intervalles_inegalites/valeur_absolue_distance.html",
-      "/seconde-maths/intervalles_inegalites/valeur_absolue_intervalles.html"
+      "/seconde-maths/ensembles_nombres/vocabulaire.html",
+      "/seconde-maths/ensembles_nombres/entiers.html",
+      "/seconde-maths/ensembles_nombres/rationnels_decimaux.html",
+      "/seconde-maths/ensembles_nombres/reels_irrationnels.html",
+      "/seconde-maths/ensembles_nombres/fractions.html",
+      "/seconde-maths/ensembles_nombres/puissances.html",
+      "/seconde-maths/ensembles_nombres/notation_scientifique.html"
     ]
   },
   {
-    "listing": "/seconde-maths/racines_carrees/index.html",
+    "listing": "/seconde-maths/geometrie_repere/index.html",
     "items": [
-      "/seconde-maths/racines_carrees/definition.html",
-      "/seconde-maths/racines_carrees/calculer_racines.html",
-      "/seconde-maths/racines_carrees/rationalisation.html",
-      "/seconde-maths/racines_carrees/comparer_racines.html",
-      "/seconde-maths/racines_carrees/racine2_irrationnel.html",
-      "/seconde-maths/racines_carrees/pythagore.html",
-      "/seconde-maths/racines_carrees/valeurs_remarquables.html",
-      "/seconde-maths/racines_carrees/combinaison_pythagore_thales.html"
+      "/seconde-maths/geometrie_repere/coordonnees_vecteur.html",
+      "/seconde-maths/geometrie_repere/somme_produit_vecteurs.html",
+      "/seconde-maths/geometrie_repere/vecteur_ab_norme.html",
+      "/seconde-maths/geometrie_repere/milieu_segment.html",
+      "/seconde-maths/geometrie_repere/colinearite_determinant.html",
+      "/seconde-maths/geometrie_repere/aire_parallelogramme.html",
+      "/seconde-maths/geometrie_repere/bilan.html"
+    ]
+  },
+  {
+    "listing": "/seconde-maths/index.html",
+    "items": [
+      "/seconde-maths/ensembles_nombres/index.html",
+      "/seconde-maths/fonctions_affines/index.html",
+      "/seconde-maths/vecteurs_translation/index.html",
+      "/seconde-maths/geometrie_repere/index.html",
+      "/seconde-maths/intervalles_inegalites/index.html"
+    ]
+  },
+  {
+    "listing": "/seconde-maths/generalites_fonctions/index.html",
+    "items": [
+      "/seconde-maths/generalites_fonctions/ensemble_definition.html",
+      "/seconde-maths/generalites_fonctions/tableau_valeurs_representation.html",
+      "/seconde-maths/generalites_fonctions/resolution_graphique.html",
+      "/seconde-maths/generalites_fonctions/variations_tableau.html",
+      "/seconde-maths/generalites_fonctions/extremums.html",
+      "/seconde-maths/generalites_fonctions/variations_avec_python.html"
     ]
   },
   {
