@@ -12,6 +12,11 @@ listing:
       - intervalles_inegalites/index.qmd
       - racine_carrees/index.qmd
       - geometrie_repere/index.qmd
+      - equations/index.qmd
+      - generalites_fonctions/index.qmd
+      - probabilites/index.qmd
+      - inequations/index.qmd
+      - fonctions_reference/index.qmd
 ---
 
 
