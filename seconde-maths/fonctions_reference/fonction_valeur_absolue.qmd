@@ -1,0 +1,144 @@
+---
+title: "Fonction valeur absolue"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition, symétrie, variations et résolution graphique avec la fonction valeur absolue."
+order: 4
+---
+
+## Définition et propriétés
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Fonction valeur absolue</span>
+
+On appelle **fonction valeur absolue** la fonction qui à tout réel $x$ associe sa valeur absolue.
+$$f : x \longmapsto \abs{x} \qquad D_f = \R$$
+On rappelle que $\abs{x}= \begin{cases} x & \text{si } x \geqslant 0 \\ -x & \text{si } x < 0 \end{cases}$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+La valeur absolue mesure la **distance** entre $x$ et $0$ sur la droite numérique.
+Plus généralement, $\abs{a - b}$ mesure la distance entre $a$ et $b$.
+
+Tout réel positif $k$ admet deux antécédents par la fonction valeur absolue : $k$ et $-k$.
+En effet, $\abs{x} = k \Longleftrightarrow x = k \ou x = -k$.
+
+On déduit que la représentation graphique de la valeur absolue n'est pas une droite.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Construction et observations</span> 
+
+On établit d'abord le tableau de valeurs :
+
+<div style="overflow-x:auto;">
+<table>
+<tbody>
+<tr><td>$x$</td><td>$-4$</td><td>$-3$</td><td>$-2$</td><td>$-1$</td><td>$0$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td></tr>
+<tr><td>$|x|$</td><td>$4$</td><td>$3$</td><td>$2$</td><td>$1$</td><td>$0$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td></tr>
+</tbody>
+</table>
+</div>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref14.png" style="width: 50%;">
+</div>
+
+**Observations :**
+
+- Deux points d'abscisses opposées ont la même ordonnée.
+- L'axe des ordonnées est un axe de symétrie de $\mathscr{C}_f$.
+- Sur $]-\infty\,;\,0]$, la fonction valeur absolue est décroissante.
+- Sur $[0\,;\,+\infty[$, la fonction valeur absolue est croissante.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Symétrie de la fonction valeur absolue</span>
+
+L'axe des ordonnées est l'unique axe de symétrie de $\mathscr{C}_f$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soit $x$ un réel et soit $M(x\,;\,|x|)$ et $M'(-x\,;\,|-x|) = M'(-x\,;\,|x|)$.
+Ces deux points ont la même ordonnée et des abscisses opposées : ils sont symétriques par rapport à l'axe des ordonnées.
+
+</details>
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Variations de la fonction valeur absolue</span>
+
+La fonction valeur absolue est **décroissante** sur $]-\infty\,;\,0]$ et **croissante** sur $[0\,;\,+\infty[$.
+Elle admet un **minimum** égal à $0$ en $x = 0$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soient $0 \leqslant a < b$.
+$$f(b) - f(a) = |b| - |a| = b - a > 0$$
+donc la fonction valeur absolue est croissante sur $[0\,;\,+\infty[$.
+
+Le résultat sur $]-\infty\,;\,0]$ s'obtient par parité.
+
+</details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Tableau de variations</span>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref15.png" style="width: 45%;">
+</div>
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Ordre et fonction valeur absolue</span>
+
+- Deux nombres **négatifs** sont rangés dans l'**ordre inverse** de leurs valeurs absolues.
+- Deux nombres **positifs** sont rangés dans le **même ordre** que leurs valeurs absolues.
+:::
+
+## Résolution graphique d'équations et d'inéquations
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résolution graphique d'équation avec la valeur absolue — Représenter</span></div>
+
+Résoudre graphiquement $|x| = 3$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On trace la droite $y = 3$. Les deux points d'intersection ont pour abscisses $x = -3$ et $x = 3$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref16.png" style="width: 45%;">
+</div>
+
+Ainsi $\abs{x}  = 3 \Longleftrightarrow x = -3 \ou x = 3$.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résolution graphique d'inéquation — Représenter</span></div>
+
+Résoudre $|x| > 1$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On cherche les abscisses des points dont les ordonnées sont strictement supérieures à $1$.
+
+D'après la figure ci-dessous, $\abs{x} > 1 \Longleftrightarrow x \in \left]-\infty\,;\,-1\right[\,\cup\,\left]1\,;\,+\infty\right[$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref17.png" style="width: 40%;">
+</div>
+
+</details>
+:::

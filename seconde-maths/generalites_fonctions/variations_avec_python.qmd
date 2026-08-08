@@ -77,3 +77,4 @@ Pour prouver la croissance, il faudrait utiliser la méthode algébrique.
 <div style="text-align: center;">
   <img src="../../image/seconde/Generalites_fonctions_fonction10.png" style="width: 90%;">
 </div>
+

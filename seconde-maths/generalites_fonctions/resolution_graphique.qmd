@@ -58,7 +58,7 @@ Son ordonnée est $f(x)$, donc :
 On considère la fonction $f$ dont on donne la représentation graphique.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_fonction3.png" style="width: 50%;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction3.png" style="width: 40%;">
 </div>
 
 Déterminer le signe de $f(x)$ sur $[-4\,;\,5]$ et dresser le tableau de signes de $f$.
@@ -85,7 +85,7 @@ Donc pour tout $x \in [-4\,;\,-3]\,\cup\,[-1\,;\,4[$, $f(x) \leqslant 0$.
 On résume ces résultats dans le tableau de signes :
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_var1.png" style="width: 45%;">
+  <img src="../../image/seconde/Generalites_fonctions_var1.png" style="width: 40%;">
 </div>
 :::
 
@@ -96,7 +96,7 @@ On considère la courbe représentative $\mathscr{C}_g$ de la fonction $g$ défi
 représentée ci-dessous.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_fonction4.png" style="width: 50%;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction4.png" style="width: 40%;">
 </div>
 
 Résoudre graphiquement $g(x) = 0$ et dresser le tableau de signes de $g$ sur $[-3\,;\,4]$.
@@ -122,7 +122,7 @@ La courbe est en dessous de l'axe sur $[-3\,;\,-2[\,\cup\,]1\,;\,3[$, donc $g(x)
 On considère la représentation graphique $\mathscr{C}_f$ de la fonction $f$ définie sur $[-2\,;\,4]$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_fonction5.png" style="width: 40%;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction5a.png" style="width: 20%;">
 </div>
 
 1. Lire graphiquement $f(1)$ et $f(-1)$.
@@ -133,14 +133,18 @@ On considère la représentation graphique $\mathscr{C}_f$ de la fonction $f$ d�
 $f(1) = 3$ (lecture de l'ordonnée du point d'abscisse $1$).
 
 $f(-1) = 0$ : le point d'abscisse $-1$ est sur l'axe des abscisses.
-
+<div style="text-align: center;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction5.png" style="width: 20%;">
+</div>
 </details>
 
 2. Déterminer graphiquement les antécédents de $0$ par $f$.
 
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
-
+<div style="text-align: center;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction5b.png" style="width: 20%;">
+</div>
 Les antécédents de $0$ sont les abscisses des points de $\mathscr{C}_f$ d'ordonnée $0$.
 Graphiquement, la courbe coupe l'axe des abscisses en $x = -1$ et $x = 4$.
 Donc les antécédents de $0$ par $f$ sont $-1$ et $4$.
@@ -152,6 +156,9 @@ Donc les antécédents de $0$ par $f$ sont $-1$ et $4$.
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
+<div style="text-align: center;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction5c.png" style="width: 20%;">
+</div>
 La courbe est au-dessus de l'axe entre $-1$ et $4$ (exclu), et en dessous sur $[-2\,;\,-1[$.
 
 <div style="text-align: center;">
@@ -188,10 +195,12 @@ $M(x\,;\,g(x))$, donc $M \in \mathscr{C}_f \cap \mathscr{C}_g$.
 <span class="bloc-titre">À retenir : Point méthode — Résoudre graphiquement $f(x) = k$ ou $f(x) = g(x)$</span>
 
 - **Équation $f(x) = k$ :** on trace la droite horizontale $y = k$,
+  
   on repère le ou les points d'intersection avec $\mathscr{C}_f$, puis on lit
   les abscisses correspondantes à l'aide de tirets pointillés.
 
 - **Équation $f(x) = g(x)$ :** on repère le ou les points
+  
   d'intersection de $\mathscr{C}_f$ et $\mathscr{C}_g$, puis on lit
   les abscisses correspondantes à l'aide de tirets pointillés.
 :::
@@ -202,6 +211,11 @@ $M(x\,;\,g(x))$, donc $M \in \mathscr{C}_f \cap \mathscr{C}_g$.
 On considère la représentation graphique $\mathscr{C}_f$ de la fonction $f$
 définie sur $[-6\,;\,6]$ donnée ci-dessous.
 
+<div style="text-align: center;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction6_a.png" style="width: 35%;">
+</div>
+
+</details>
 Résoudre graphiquement $f(x) = 2$.
 
 <details class="bloc cor">
@@ -212,7 +226,7 @@ d'ordonnée $2$. On lit graphiquement :
 $$\mathcal{S}_1 = \{-4{,}8\,;\,0{,}4\,;\,4{,}4\}.$$
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_fonction6.png" style="width: 55%;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction6.png" style="width: 35%;">
 </div>
 
 </details>
@@ -227,6 +241,9 @@ On considère la fonction $f$ définie sur $[-6\,;\,6]$ représentée ci-dessus.
 
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
+<div style="text-align: center;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction6-inter.png" style="width: 35%;">
+</div>
 
 Les solutions de $f(x) = 0$ sont les abscisses des points
 d'intersection de $\mathscr{C}_f$ avec l'axe des abscisses.
@@ -238,6 +255,9 @@ On lit : $\mathcal{S}_3 = \{-4\,;\,-1\,;\,5\}$.
 
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
+<div style="text-align: center;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction6-signe.png" style="width: 35%;">
+</div>
 
 $f$ est négative (courbe sous l'axe) sur $[-4\,;\,-1] \cup [5\,;\,6]$,
 positive sur $[-6\,;\,-4] \cup [-1\,;\,5]$.

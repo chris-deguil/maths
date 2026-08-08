@@ -1,0 +1,68 @@
+---
+title: "Signe d'un quotient"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Signe d'un quotient, valeurs interdites et résolution d'inéquations quotient."
+order: 3
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Signe d'un quotient</span>
+
+Pour $B(x) \neq 0$, le quotient $\dfrac{A(x)}{B(x)}$ est du même signe que
+le produit $A(x) \times B(x)$.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : </span>
+
+On trace le tableau de signes de la même façon, en prenant garde de mettre
+**une barre** (interdit) sur la ligne du quotient à la valeur annulant
+le dénominateur, car le quotient n'est pas défini en ce point.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résoudre une inéquation quotient — Calculer, Raisonner</span></div>
+
+Déterminer l'ensemble de définition de $f(x) = \sqrt{\dfrac{-2x + 6}{4x + 3}}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On doit avoir $\dfrac{-2x + 6}{4x + 3} \geqslant 0$, et  $4x + 3 \neq 0$, soit $x \neq -\dfrac{3}{4}$.
+
+Pour tout $x \in \R \setminus \left\{-\dfrac{3}{4}\right\}$,
+$$-2x + 6 \geqslant 0 \iff x \leqslant 3 \et 4x + 3 \geqslant 0 \iff x \geqslant -\dfrac{3}{4}$$
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Inequations_Produit_ineq5.png" style="width: 65%;">
+</div>
+
+$\mathcal{D}_f = \left]-\dfrac{3}{4}\,;\,3\right]$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Inéquation quotient — Calculer, Raisonner</span></div>
+
+Résoudre $\dfrac{3x - 1}{x + 4} \leqslant 2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On ramène l'inéquation à une expression de signe constant :
+$$\dfrac{3x - 1}{x + 4} \leqslant 2 \iff \dfrac{3x - 1}{x + 4} - 2 \leqslant 0 \iff \dfrac{3x - 1 - 2(x + 4)}{x + 4} \leqslant 0 \iff \dfrac{x - 9}{x + 4} \leqslant 0.$$
+
+$x = -4$ est interdit (annule le dénominateur) ; $x = 9$ est la racine du numérateur.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Inequations_Produit_ineq6.png" style="width: 65%;">
+</div>
+
+$$\mathcal{S} = \left]-4\,;\,9\right].$$
+
+</details>
+:::

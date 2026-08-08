@@ -1,0 +1,22 @@
+---
+title: "Fonctions de référence"
+description: "Fonctions carré, inverse, racine carrée, valeur absolue : définitions, courbes, signe et variations."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Fonctions valeur absolue, carré, inverse : définitions et courbes représentatives.
+- Pour les fonctions valeur absolue, carré, résoudre graphiquement ou algébriquement une équation ou une inéquation du type $f(x) = k$, $f(x) < k$.
+- Fonctions valeur absolue, carré : signe et variations.
+- Pour deux nombres a et b donnés et une fonction de référence $f$, comparer $f(a)$ et $f(b)$ numériquement ou graphiquement.
+:::

@@ -1,0 +1,78 @@
+---
+title: "Signe d'une fonction affine"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Théorème du signe d'une fonction affine et tableau de signes."
+order: 1
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Signe d'une fonction affine</span>
+
+Soit $f$ définie par $f(x) = mx+p$, avec $m \neq 0$.
+La racine de $f$ est $x_0 = -\dfrac{p}{m}$, et :
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Inequations_Produit_ineq1.png" style="width: 55%;">
+</div>
+
+Autrement dit : **$f$ est du signe de $m$ après $x_0$, et du signe
+opposé avant $x_0$.**
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soit $x \in \R$. On a $f(x) = mx + p$.
+
+**Cas $m > 0$.**
+$$
+mx + p > 0
+\Longleftrightarrow mx > -p
+\underset{m > 0}{\Longleftrightarrow} x > -\dfrac{p}{m}
+$$
+
+Donc $f(x) \geqslant 0$ pour $x \in \left[-\dfrac{p}{m}\,;\,+\infty\right[$
+et $f(x) \leqslant 0$ pour $x \in \left]-\infty\,;\,-\dfrac{p}{m}\right]$.
+
+**Cas $m < 0$.**
+$$
+mx + p > 0
+\Longleftrightarrow mx > -p
+\underset{m < 0}{\Longleftrightarrow} x < -\dfrac{p}{m}
+$$
+
+Donc $f(x) \geqslant 0$ pour $x \in \left]-\infty\,;\,-\dfrac{p}{m}\right]$
+et $f(x) \leqslant 0$ pour $x \in \left[-\dfrac{p}{m}\,;\,+\infty\right[$.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Le signe d'une fonction **constante** ($m = 0$, $p \neq 0$) est constant
+sur $\R$ : $f(x) = p > 0$ pour tout $x$ si $p > 0$, et $f(x) = p < 0$ pour
+tout $x$ si $p < 0$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Dresser le tableau de signes d'une fonction affine — Calculer, Raisonner</span></div>
+
+Dresser le tableau de signes de $h(x) = -4x + 5$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Le coefficient directeur est $-4 < 0$ et la racine est
+$x_0 = -\dfrac{5}{-4} = \dfrac{5}{4}$.
+
+Donc $h$ est **positive avant** $\dfrac{5}{4}$ et **négative après** :
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Inequations_Produit_ineq12.png" style="width: 45%;">
+</div>
+
+</details>
+:::

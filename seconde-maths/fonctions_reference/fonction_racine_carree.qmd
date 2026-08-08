@@ -1,0 +1,120 @@
+---
+title: "Fonction racine carrée"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition, variations et résolution graphique avec la fonction racine carrée."
+order: 3
+---
+
+## Définition et propriétés
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Fonction racine carrée</span>
+
+On appelle **fonction racine carrée** la fonction qui à tout réel $x \geqslant 0$ associe l'unique réel positif $\sqrt{x}$ vérifiant $(\sqrt{x})^2 = x$.
+$$f : x \longmapsto \sqrt{x} \qquad D_f = [0\,;\,+\infty[$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Pour tout réel $x$, on a $\sqrt{x^2} = |x|$, et non $\sqrt{x^2} = x$.
+Par exemple, $\sqrt{(-3)^2} = \sqrt{9} = 3 = |-3|$.
+
+La représentation graphique de la fonction racine carrée n'est pas une droite. En effet, pour $0 \leqslant x < y$ :
+$$\frac{\sqrt{y} - \sqrt{x}}{y - x} = \frac{1}{\sqrt{y}+\sqrt{x}} \neq \text{constante}$$
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Construction et observations</span>
+
+On établit d'abord le tableau de valeurs :
+
+<div style="overflow-x:auto;">
+<table>
+<tbody>
+<tr><td>$x$</td><td>$0$</td><td>$\dfrac{1}{4}$</td><td>$1$</td><td>$\dfrac{9}{4}$</td><td>$4$</td><td>$\dfrac{25}{4}$</td><td>$9$</td><td>$\dfrac{49}{4}$</td><td>$16$</td></tr>
+<tr><td>$\sqrt{x}$</td><td>$0$</td><td>$\dfrac{1}{2}$</td><td>$1$</td><td>$\dfrac{3}{2}$</td><td>$2$</td><td>$\dfrac{5}{2}$</td><td>$3$</td><td>$\dfrac{7}{2}$</td><td>$4$</td></tr>
+</tbody>
+</table>
+</div>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref10.png" style="width: 60%;">
+</div>
+
+**Observations :**
+
+- La courbe est définie uniquement pour $x \geqslant 0$.
+- Les abscisses et les ordonnées sont rangées dans le même ordre : la fonction racine carrée est croissante sur $[0\,;\,+\infty[$.
+- La courbe part de l'origine et monte de plus en plus lentement.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Variations de la fonction racine carrée</span>
+
+La fonction racine carrée est **croissante** sur $[0\,;\,+\infty[$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soient $0 \leqslant a < b$.
+$$f(b) - f(a) = \sqrt{b} - \sqrt{a} = \frac{(\sqrt{b} - \sqrt{a})(\sqrt{b}+\sqrt{a})}{\sqrt{b}+\sqrt{a}} = \frac{b - a}{\sqrt{b}+\sqrt{a}}$$
+Or $b > a$ donc $b - a > 0$, et $\sqrt{b} + \sqrt{a} > 0$, donc $f(b) - f(a) > 0$ : la fonction racine carrée est croissante.
+
+</details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Tableau de variations</span>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref11.png" style="width: 40%;">
+</div>
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Ordre et fonction racine carrée</span>
+
+- Deux nombres **positifs** sont rangés dans le **même ordre** que leurs racines carrées.
+:::
+
+## Résolution graphique d'équations et d'inéquations
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résolution graphique d'équation — Représenter</span></div>
+
+Résoudre graphiquement $\sqrt{x} = 2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On trace la droite $y = 2$. Le point d'intersection avec la courbe a pour abscisse $x = 4$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref12.png" style="width: 45%;">
+</div>
+
+Ainsi $\sqrt{x} = 2 \Longleftrightarrow x = 4$.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résolution graphique d'inéquation — Représenter</span></div>
+
+Résoudre $2 \leqslant \sqrt{x} \leqslant 3$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref13.png" style="width: 45%;">
+</div>
+
+Ainsi $2 \leqslant \sqrt{x} \leqslant 3 \Longleftrightarrow x \in \left[4\,;\,9\right]$.
+
+</details>
+:::

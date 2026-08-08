@@ -62,6 +62,9 @@
   <div class="editor-shell" id="exo1">
     <div class="bar-top"><span class="cell-num">NOM DU SCRIPT </span></div>
     <textarea id="code">
+
+
+      
 </textarea>
     <div class="output" id="out"><pre></pre></div>
     <div class="toolbar">
@@ -75,6 +78,7 @@
   </div>
 </div>
 ~~~
+
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 

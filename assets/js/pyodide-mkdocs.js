@@ -49,6 +49,21 @@ window.addEventListener('DOMContentLoaded', () => {
       if (pre.style) pre.style.color = ok ? "#065f46" : "#111827";
     };
 
+    const showImage = (base64png) => {
+      if (!outBox) return;
+      // Retire une éventuelle image précédente
+      const old = outBox.querySelector('img.pyodide-figure');
+      if (old) old.remove();
+      if (!base64png) return;
+      const img = document.createElement('img');
+      img.className = 'pyodide-figure';
+      img.src = 'data:image/png;base64,' + base64png;
+      img.style.maxWidth = '100%';
+      img.style.display = 'block';
+      img.style.marginTop = '8px';
+      outBox.appendChild(img);
+    };
+
     // 3) Quand Pyodide est prêt, activer les boutons d'exécution de CE shell
     pyodideReady.then((pyodide) => {
       if (!pyodide) { printToOut("Échec de chargement de Pyodide."); return; }
@@ -63,7 +78,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   setBusy(true); printToOut("… exécution en cours …");
   try{
-    // 1) Réinitialiser les tampons pour CETTE exécution
+    // 0) Charger automatiquement les paquets utilisés par le code (matplotlib, numpy, sympy...)
+    await pyodide.loadPackagesFromImports(code);
+
+    // 1) Réinitialiser les tampons pour CETTE exécution + préparer matplotlib en mode "image"
     pyodide.runPython(`
 import sys, io
 if not hasattr(sys, '_orig_stdout'):
@@ -72,6 +90,10 @@ if not hasattr(sys, '_orig_stderr'):
     sys._orig_stderr = sys.stderr
 sys.stdout = io.StringIO()
 sys.stderr = io.StringIO()
+
+if "matplotlib" in sys.modules or "matplotlib.pyplot" in sys.modules:
+    import matplotlib
+    matplotlib.use("Agg")
 `);
 
     // 2) Exécuter le code
@@ -81,11 +103,31 @@ sys.stderr = io.StringIO()
     const outText = pyodide.runPython("sys.stdout.getvalue()");
     const errText = pyodide.runPython("sys.stderr.getvalue()");
 
-    // 4) Afficher
-    printToOut((errText ? (errText + "\n") : "") + (outText || "✓ Exécution terminée sans sortie."), !errText);
+    // 3bis) Capturer une éventuelle figure matplotlib créée par le code, sans exiger plt.show()
+    const imgB64 = pyodide.runPython(`
+def _capture_figure():
+    try:
+        import base64, io as _io
+        import matplotlib.pyplot as plt
+        if not plt.get_fignums():
+            return None
+        buf = _io.BytesIO()
+        plt.savefig(buf, format="png", bbox_inches="tight", dpi=110)
+        plt.close("all")
+        buf.seek(0)
+        return base64.b64encode(buf.read()).decode("ascii")
+    except Exception:
+        return None
+_capture_figure()
+`);
+
+    // 4) Afficher texte + image
+    printToOut((errText ? (errText + "\n") : "") + (outText || (imgB64 ? "" : "✓ Exécution terminée sans sortie.")), !errText);
+    showImage(imgB64);
 
   }catch(err){
-    printToOut(String(err));
+    printToOut(String(err && err.message ? err.message : err));
+    showImage(null);
   }finally{
     // 5) Restaurer stdout/stderr d’origine (important si plusieurs blocs partagent la même instance)
     try{

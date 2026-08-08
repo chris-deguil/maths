@@ -30,21 +30,21 @@ Une fonction est dite **monotone** sur $I$ lorsqu'elle est soit croissante, soit
 ::: {.bloc .info}
 <span class="bloc-titre">À retenir : Illustration graphique</span>
 
-**Fonction croissante :**
+<div style="display: flex; justify-content: center; gap: 2em;">
 
-<div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_fonction7.png" style="width: 42%;">
+<div style="text-align: center; width: 45%;">
+<p><strong>Fonction croissante :</strong></p>
+<img src="../../image/seconde/Generalites_fonctions_fonction7.png" style="width: 55%;">
+<p>On dit qu'une fonction croissante <strong>conserve l'ordre</strong>.</p>
 </div>
 
-On dit qu'une fonction croissante **conserve l'ordre**.
-
-**Fonction décroissante :**
-
-<div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_fonction8.png" style="width: 42%;">
+<div style="text-align: center; width: 45%;">
+<p><strong>Fonction décroissante :</strong></p>
+<img src="../../image/seconde/Generalites_fonctions_fonction8.png" style="width: 55%;">
+<p>On dit qu'une fonction décroissante <strong>inverse l'ordre</strong>.</p>
 </div>
 
-On dit qu'une fonction décroissante **inverse l'ordre**.
+</div>
 :::
 
 ::: {.bloc .rem}
@@ -136,18 +136,18 @@ On considère la représentation graphique d'une fonction $f$ sur $[-3{,}5\,;\,5
 Décrire les variations de $f$ et donner son tableau de variations.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_fonction9.png" style="width: 50%;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction9.png" style="width: 40%;">
 </div>
 
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
-*Point clef :* on lit le tableau de variations en suivant la courbe de gauche à droite. Là où la courbe monte, $f$ est croissante ; là où elle descend, $f$ est décroissante.
+***Point clef :** on lit le tableau de variations en suivant la courbe de gauche à droite. Là où la courbe monte, $f$ est croissante ; là où elle descend, $f$ est décroissante.*
 
 La fonction $f$ est croissante sur $[-3{,}5\,;\,-1{,}5]$ et sur $[3\,;\,5]$, décroissante sur $[-1{,}5\,;\,3]$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_var5.png" style="width: 50%;">
+  <img src="../../image/seconde/Generalites_fonctions_var5.png" style="width: 40%;">
 </div>
 
 </details>
@@ -175,7 +175,7 @@ La fonction $f$ est croissante sur $[-3{,}5\,;\,-1{,}5]$ et sur $[3\,;\,5]$, dé
 On donne le tableau de variations de la fonction $f$ définie sur $[-3\,;\,8]$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_var6.png" style="width: 50%;">
+  <img src="../../image/seconde/Generalites_fonctions_var6.png" style="width: 40%;">
 </div>
 
 1. Encadrer $f(2)$.

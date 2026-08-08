@@ -1,0 +1,191 @@
+---
+title: "Fonction carré"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition, parabole, symétrie, variations et résolution graphique avec la fonction carré."
+order: 1
+---
+
+## Définition et propriétés
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Fonction carré</span>
+
+On appelle **fonction carré** la fonction qui à tout réel $x$ associe son carré.
+$$f : x \longmapsto x^2 \qquad D_f = \R$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Un nombre strictement négatif n'admet aucun antécédent par la fonction carré.
+En effet, $x^2 \geqslant 0$ pour tout $x \in \R$.
+
+La représentation graphique de la fonction carré n'est pas une droite : pour tout $x \neq y$,
+$$\frac{f(x) - f(y)}{x - y} = \frac{x^2 - y^2}{x - y} = x + y$$
+ce rapport n'est pas constant, donc les accroissements ne sont pas proportionnels.
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Parabole</span>
+
+La représentation graphique de la fonction carré est appelée **parabole**, d'équation $y = x^2$.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Construction et observations</span>
+
+On établit d'abord le tableau de valeurs :
+
+<div style="overflow-x:auto;">
+<table>
+<tbody>
+<tr><td>$x$</td><td>$-3$</td><td>$-2$</td><td>$-\dfrac{3}{2}$</td><td>$-1$</td><td>$-\dfrac{1}{2}$</td><td>$0$</td><td>$\dfrac{1}{2}$</td><td>$1$</td><td>$\dfrac{3}{2}$</td><td>$2$</td><td>$3$</td></tr>
+<tr><td>$x^2$</td><td>$9$</td><td>$4$</td><td>$\dfrac{9}{4}$</td><td>$1$</td><td>$\dfrac{1}{4}$</td><td>$0$</td><td>$\dfrac{1}{4}$</td><td>$1$</td><td>$\dfrac{9}{4}$</td><td>$4$</td><td>$9$</td></tr>
+</tbody>
+</table>
+</div>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref1.png" style="width: 35%;">
+</div>
+
+**Observations :**
+
+- Deux points d'abscisses opposées ont la même ordonnée.
+- L'axe des ordonnées est un axe de symétrie de $\mathscr{C}_f$.
+- Sur la partie négative, la fonction carré est décroissante, donc les ordonnées sont rangées dans l'ordre inverse des abscisses.
+- Sur la partie positive, la fonction carré est croissante donc les ordonnées sont rangées dans le même ordre que les abscisses.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Symétrie de la fonction carré</span>
+
+L'axe des ordonnées est l'unique axe de symétrie de $\mathscr{C}_f$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soit $x$ un réel et soit $M(x\,;\,x^2)$ et $M'(-x\,;\,f(-x)) = M'(-x\,;\,x^2)$.
+Ces deux points ont la même ordonnée et des abscisses opposées : ils sont symétriques par rapport à l'axe des ordonnées.
+Ceci étant valable pour tout $x$, l'axe des ordonnées est un axe de symétrie de $\mathscr{C}_f$.
+
+</details>
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Variations de la fonction carré</span>
+
+La fonction carré est **décroissante** sur $]-\infty\,;\,0]$ et **croissante** sur $[0\,;\,+\infty[$.
+Elle admet un **minimum** égal à $0$ en $x = 0$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soient $a, b \in [0\,;\,+\infty[$ avec $a < b$.
+$$b^2 - a^2 = (b-a)(b+a)$$
+Or $a < b$ donc $b - a > 0$, et $a, b \geqslant 0$ donc $b + a \geqslant 0$.
+Ainsi $b^2 - a^2 \geqslant 0$, soit $a^2 \leqslant b^2$ : la fonction carré est croissante sur $[0\,;\,+\infty[$.
+
+Le résultat sur $]-\infty\,;\,0]$ s'obtient par symétrie.
+
+</details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Tableau de variations</span>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref2.png" style="width: 45%;">
+</div>
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Ordre et fonction carré</span>
+
+- Deux nombres **négatifs** sont rangés dans l'**ordre inverse** de leurs carrés.
+- Deux nombres **positifs** sont rangés dans le **même ordre** que leurs carrés.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Encadrement avec la fonction carré — Calculer</span></div>
+
+1. Soit $x$ vérifiant $-3 < x < -2$. Encadrer $x^2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+La fonction carré inverse l'ordre sur $[-3\,;\,-2] \subset ]-\infty\,;\,0]$, donc :
+$$-3 < x < -2 \Longrightarrow (-3)^2 > x^2 > (-2)^2 \Longrightarrow 4 < x^2 < 9$$
+
+</details>
+
+2. Soit $x$ vérifiant $-3 \leqslant x \leqslant 4$. Encadrer $x^2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Sur $[-3\,;\,0]$, la fonction carré inverse l'ordre, donc $-3 \leqslant x \leqslant 0 \Longrightarrow 0 \leqslant x^2 \leqslant 9$.
+
+Sur $[0\,;\,4]$, elle conserve l'ordre, donc $0 \leqslant x \leqslant 4 \Longrightarrow 0 \leqslant x^2 \leqslant 16$.
+
+Ainsi  $$-3 \leqslant x \leqslant 4 \Longrightarrow 0 \leqslant x^2 \leqslant 16$$
+
+</details>
+:::
+
+## Résolution graphique d'équations et d'inéquations
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode — Résolution graphique</span>
+
+Pour résoudre graphiquement $f(x) = k$ ou $f(x) \leqslant k$ :
+
+- **Équation $f(x) = k$ :** on trace la droite horizontale $y = k$, on repère le ou les points d'intersection avec $\mathscr{C}_f$, puis on lit les abscisses correspondantes à l'aide de tirets pointillés.
+
+- **Inéquation $f(x) \leqslant k$ :** on procède en trois étapes colorées :
+  1. On colorie en **vert** la partie de l'axe des ordonnées correspondant aux ordonnées concernées.
+  2. On colorie en **bleu** la partie de la courbe $\mathscr{C}_f$ dont les ordonnées vérifient la condition.
+  3. On colorie en **rouge** la partie de l'axe des abscisses qui correspond aux abscisses solution.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résolution graphique d'équation avec la fonction carré — Représenter</span></div>
+
+Résoudre graphiquement $x^2 = 4$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :** on trace la droite $y = k$, on lit les abscisses des points d'intersection avec $\mathscr{C}_f$.*
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref3.png" style="width: 40%;">
+</div>
+
+Ainsi $x^2 = 4 \Longleftrightarrow x = -2 \ou x = 2$.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résolution graphique d'inéquation avec la fonction carré — Calculer</span></div>
+
+Résoudre $3 < x^2 \leqslant 8$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :** on colorie la partie de la courbe dont les ordonnées vérifient la condition, puis on lit les abscisses correspondantes sur l'axe des $x$.*
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref4.png" style="width: 40%;">
+</div>
+
+Ainsi 
+$$3 < x^2 \leqslant 8 \Longleftrightarrow x \in \left[-\sqrt{8}\,;\,-\sqrt{3}\,\right[ \cup \left]\,\sqrt{3}\,;\,\sqrt{8}\,\right]$$
+
+</details>
+:::

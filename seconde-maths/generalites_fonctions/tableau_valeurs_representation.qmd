@@ -4,6 +4,8 @@ format:
   html:
     toc: true
     number-sections: false
+    include-in-header:
+      - ../../assets/css/pyodide-include.html
 description: "Construire un tableau de valeurs et définir la courbe représentative d'une fonction."
 order: 2
 ---
@@ -54,13 +56,29 @@ Soit $f$ définie par $f(x) = x^2 - 1$.
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
-```python
+~~~{=html}
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo1">
+    <div class="bar-top"><span class="cell-num">Correction exercice  </span></div>
+    <textarea id="code">
 def f(x):
     return x**2 - 1          # definition de la fonction
 
 for x in range(-2, 4):       # x prend les valeurs -2, -1, 0, 1, 2, 3
-    print(x, f(x))           # affiche x et son image f(x)
-```
+    print(x, f(x))           # affiche x et son image f(x) 
+</textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled></button>
+      <button class="btn" id="check" disabled></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
+</div>
+~~~
 
 Ce code affiche :
 
@@ -145,23 +163,39 @@ Les quantités ne sont pas égales. Donc le point n'appartient pas à la représ
 :::
 
 ::: {.bloc .sfc}
-<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Lire des images et des antécédents — Représenter</span></div>
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Lire des images et des antécédents — Représenter</span></div>
 
 On considère la courbe $\mathscr{C}_f$ de la fonction $f$ définie sur $[-3{,}5\,;\,5]$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_fonction2.png" style="width: 50%;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction2_3.png" style="width: 30%;">
 </div>
 
 1. Lire graphiquement $f(2)$.
-2. Déterminer graphiquement les antécédents de $-1$ par $f$.
 
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
-1. On lit $f(2) = -2{,}5$.
-2. Les antécédents de $-1$ sont les abscisses des points de $\mathscr{C}_f$ d'ordonnée $-1$.
-   Graphiquement : $x = -3$, $x = 1$ et $x = 4$.
+On lit $f(2) = -2{,}5$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction2_1.png" style="width: 30%;">
+</div>
+
+</details>
+
+2. Déterminer graphiquement les antécédents de $-1$ par $f$. 
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Generalites_fonctions_fonction2_2.png" style="width: 30%;">
+</div>
+
+
+Les antécédents de $-1$ sont les abscisses des points de $\mathscr{C}_f$ d'ordonnée $-1$.
+Graphiquement : $x = -3$, $x = 1$ et $x = 4$. 
 
 </details>
 :::
@@ -170,6 +204,10 @@ On considère la courbe $\mathscr{C}_f$ de la fonction $f$ définie sur $[-3{,}5
 <span class="bloc-titre">À retenir : Tracé de la courbe avec Python</span>
 
 Le code ci-dessous trace la courbe de $f(x) = x^2 - 1$ sur $[-2\,;\,3]$.
+
+
+
+
 
 ```python
 import matplotlib.pyplot as plt        # importation de la bibliotheque graphique
@@ -189,6 +227,39 @@ plt.show()                             # affiche le graphique
 ```
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_graph_python.png" style="width: 55%;">
+  <img src="../../image/seconde/graph_python.png" style="width: 55%;">
 </div>
+
+~~~{=html}
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo1">
+    <div class="bar-top"><span class="cell-num">Représentation graphique  </span></div>
+    <textarea id="code">
+import matplotlib.pyplot as plt        # importation de la bibliotheque graphique
+
+def f(x):
+    return x**2 - 1                    # definition de la fonction
+
+x = [i/10 for i in range(-20, 31)]    # valeurs de x entre -2 et 3 par pas de 0.1
+y = [f(xi) for xi in x]               # calcul des images correspondantes
+
+plt.plot(x, y)                         # trace la courbe
+plt.axhline(0, color='black', linewidth=0.8)   # trace l'axe des abscisses
+plt.axvline(0, color='black', linewidth=0.8)   # trace l'axe des ordonnees
+plt.grid(True, linestyle='--', alpha=0.5)      # affiche une grille
+plt.title("Courbe de f(x) = x^2 - 1")         # titre du graphique
+plt.show()                             # affiche le graphique
+</textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled></button>
+      <button class="btn" id="check" disabled></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
+</div>
+~~~ 
 :::

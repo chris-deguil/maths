@@ -1,0 +1,23 @@
+---
+title: "Inéquations produit/quotient et graphique"
+description: "Signe d'une fonction affine, tableau de signes d'un produit ou d'un quotient, résolution graphique d'inéquations."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Isoler une variable dans une formule.
+- Effectuer une application numérique d'une formule.
+- Pour une fonction affine, relier sens de variation, signe de la fonction et droite représentative.
+- Résoudre une inéquation de la forme $f(x) > 0$ à l'aide d'un tableau de signes, lorsque $f$ est un produit ou un quotient.
+- Résoudre une équation ou une inéquation du type $f(x) = k$, $f(x) < k$, en choisissant une méthode adaptée : graphique, algébrique, logicielle.
+:::

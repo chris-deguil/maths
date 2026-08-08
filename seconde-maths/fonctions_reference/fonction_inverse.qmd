@@ -1,0 +1,193 @@
+---
+title: "Fonction inverse"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition, hyperbole, symétrie, variations et résolution graphique avec la fonction inverse."
+order: 2
+---
+
+## Définition et propriétés
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Fonction inverse</span>
+
+On appelle **fonction inverse** la fonction qui à chaque réel non nul associe son inverse.
+$$f : x \longmapsto \frac{1}{x} \qquad D_f = \R^*$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Chaque réel non nul admet un unique antécédent par la fonction inverse, et image et antécédent sont de même signe. En effet, pour $k \neq 0$ : $\dfrac{1}{x} = k \Longleftrightarrow x = \dfrac{1}{k}$.
+
+La représentation graphique de la fonction inverse n'est pas une droite : pour tout $x \neq y$ dans $\R^*$,
+$$\frac{f(x)-f(y)}{x-y} = \frac{\dfrac{1}{x}-\dfrac{1}{y}}{x-y} = -\frac{1}{xy}$$
+ce rapport n'est pas constant.
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Hyperbole</span>
+
+La représentation graphique de la fonction inverse est appelée **hyperbole**, d'équation $y = \dfrac{1}{x}$.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Construction et observations</span>
+
+On établit d'abord le tableau de valeurs :
+
+<div style="overflow-x:auto;">
+<table>
+<tbody>
+<tr><td>$x$</td><td>$-4$</td><td>$-2$</td><td>$-1$</td><td>$-\dfrac{1}{2}$</td><td>$-\dfrac{1}{4}$</td><td>$\dfrac{1}{4}$</td><td>$\dfrac{1}{2}$</td><td>$1$</td><td>$2$</td><td>$4$</td></tr>
+<tr><td>$\dfrac{1}{x}$</td><td>$-\dfrac{1}{4}$</td><td>$-\dfrac{1}{2}$</td><td>$-1$</td><td>$-2$</td><td>$-4$</td><td>$4$</td><td>$2$</td><td>$1$</td><td>$\dfrac{1}{2}$</td><td>$\dfrac{1}{4}$</td></tr>
+</tbody>
+</table>
+</div>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref5.png" style="width: 45%;">
+</div>
+
+**Observations :**
+
+- Deux points d'abscisses opposées sont symétriques par rapport à l'origine.
+- La représentation graphique admet l'origine du repère comme centre de symétrie.
+- Sur chaque demi-intervalle ($]-\infty\,;\,0[$ et $]0\,;\,+\infty[$), les ordonnées sont rangées dans l'ordre *inverse* des abscisses.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Symétrie de la fonction inverse</span>
+
+La représentation graphique de la fonction inverse admet l'origine comme centre de symétrie.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soit $x$ un réel non nul et soit $M(x\,;\,f(x))$ et $N(-x\,;\,f(-x))$. Le milieu de $[MN]$ a pour coordonnées :
+$$\left(\frac{x+(-x)}{2}\,;\,\frac{f(x)+f(-x)}{2}\right) = \left(0\,;\,\frac{\dfrac{1}{x}-\dfrac{1}{x}}{2}\right) = (0\,;\,0)$$
+Les points $M$ et $N$ sont donc symétriques par rapport à l'origine.
+
+</details>
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Variations de la fonction inverse</span>
+
+La fonction inverse est **décroissante** sur $]-\infty\,;\,0[$ et **décroissante** sur $]0\,;\,+\infty[$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soient $a, b \in \,]0\,;\,+\infty[$ avec $a < b$.
+$$f(a) - f(b) = \frac{1}{a} - \frac{1}{b} = \frac{b-a}{ab}$$
+Comme $a, b > 0$, on a $ab > 0$ et $b - a > 0$, donc $f(a) - f(b) > 0$, soit $f(a) > f(b)$ : la fonction inverse est décroissante sur $]0\,;\,+\infty[$.
+
+Le résultat sur $]-\infty\,;\,0[$ s'obtient par imparité.
+
+</details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Tableau de variations</span>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref6.png" style="width: 45%;">
+</div>
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Ordre et fonction inverse</span>
+
+- Deux nombres **positifs** sont rangés dans l'**ordre inverse** de leurs inverses.
+- Deux nombres **négatifs** sont rangés dans l'**ordre inverse** de leurs inverses.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Encadrement avec la fonction inverse — Calculer</span></div>
+
+1. Soit $x$ vérifiant $-4 \leqslant x < -1$. Encadrer $\dfrac{1}{x}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+La fonction inverse inverse l'ordre sur $]-\infty\,;\,0[$, donc :
+$$-4 \leqslant x < -1 \Longrightarrow \frac{1}{-1} < \frac{1}{x} \leqslant \frac{1}{-4} \Longrightarrow -1 < \frac{1}{x} \leqslant -\frac{1}{4}$$
+
+</details>
+
+2. Soit $x$ vérifiant $-3 \leqslant x \leqslant 4$ avec $x \neq 0$. Encadrer $\dfrac{1}{x}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Sur $[-3\,;\,0[$, la fonction inverse inverse l'ordre : $-3 \leqslant x < 0 \Longrightarrow \dfrac{1}{x} \leqslant -\dfrac{1}{3}$.
+
+Sur $]0\,;\,4]$, la fonction inverse inverse l'ordre : $0 < x \leqslant 4 \Longrightarrow \dfrac{1}{x} \geqslant \dfrac{1}{4}$.
+
+Ainsi $-3 \leqslant x \leqslant 4$ et  $x \neq 0$ 
+$$\dfrac{1}{x} \in \left]-\infty\,;\,-\dfrac{1}{3}\right] \cup \left[\dfrac{1}{4}\,;\,+\infty\right[$$
+
+</details>
+:::
+
+## Résolution graphique d'équations et d'inéquations
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résolution graphique d'équation avec la fonction inverse — Représenter</span></div>
+
+Résoudre graphiquement $\dfrac{1}{x} = \dfrac{3}{2}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+***Point clef :** on trace la droite $y = k$, on lit les abscisses des points d'intersection avec $\mathscr{C}_f$.*
+
+On trace la droite $y = \dfrac{3}{2}$. Le point d'intersection avec l'hyperbole a pour abscisse $x = \dfrac{2}{3}$.
+
+Ainsi $\dfrac{1}{x} = \dfrac{3}{2} \Longleftrightarrow x = \dfrac{2}{3}$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref7.png" style="width: 25%;">
+</div>
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résolution graphique d'inéquation — Représenter</span></div>
+
+Résoudre $\dfrac{1}{x} > \dfrac{3}{2}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\dfrac{1}{x} > \dfrac{3}{2} \Longleftrightarrow x \in \left]0\,;\,\dfrac{2}{3}\right[$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref8.png" style="width: 25%;">
+</div>
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résolution graphique d'inéquation — Représenter</span></div>
+
+Résoudre $\dfrac{1}{x} < 2$ sur $\R^*$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On cherche les abscisses des points dont les ordonnées sont strictement inférieures à $2$.
+
+Ainsi $\dfrac{1}{x} < 2 \Longleftrightarrow x \in \left]-\infty\,;\,0\right[\,\cup\,\left]\dfrac{1}{2}\,;\,+\infty\right[$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonctions_references_ref9.png" style="width: 35%;">
+</div>
+
+</details>
+::: 

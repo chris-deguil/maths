@@ -1,0 +1,153 @@
+---
+title: "Loi des grands nombres"
+format:
+  html:
+    toc: true
+    number-sections: false
+    include-in-header:
+      - ../../assets/css/pyodide-include.html  
+description: "Observation expérimentale et simulation Python de la stabilisation des fréquences."
+order: 3
+---
+
+## Observation expérimentale
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : </span>
+
+Lorsque l'on répète un grand nombre de fois une même expérience aléatoire, les fréquences observées semblent se stabiliser autour d'une valeur fixe. C'est ce phénomène que formalise la loi des grands nombres.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Loi des grands nombres — version intuitive</span>
+
+Lors d'une expérience aléatoire répétée $n$ fois de façon indépendante, la **fréquence** d'apparition d'un événement $A$ se rapproche de la **probabilité** $P(A)$ lorsque $n$ devient très grand.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Ce résultat justifie l'utilisation des fréquences observées pour *construire* un modèle probabiliste : si on lance une punaise 10 000 fois et qu'elle tombe pointe en l'air dans 37 % des cas, on modélisera la probabilité correspondante par $0{,}37$.
+:::
+
+## Simulation Python : stabilisation des fréquences
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Simulation Python</span>
+
+Le programme ci-dessous simule $n$ lancers d'un dé équilibré et affiche la fréquence d'obtention du chiffre $6$.
+
+~~~{=html}
+<style>
+  #exo1 textarea#code,
+  #exo1 .CodeMirror { height: 450px; }
+</style>
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo1">
+    <div class="bar-top"><span class="cell-num">definir une fonction python </span></div>
+    <textarea id="code">
+import random
+
+def frequence_six(n):
+    """Simule n lancers d'un dé équilibré et
+    renvoie la fréquence d'apparition du 6."""
+    compteur = 0       # nombre de fois où le 6 est apparu
+    for i in range(n): # on répète n fois le lancer
+        lancer = random.randint(1, 6)  # entier aléatoire entre 1 et 6
+        if lancer == 6:
+            compteur += 1              # on compte les 6 obtenus
+    return compteur / n  # fréquence = nb de succès / nb de lancers
+ 
+# On fait varier n pour observer la stabilisation de la fréquence
+for n in [10, 100, 1000, 10000, 100000]:
+    freq = frequence_six(n)
+    print(f"n = {n:>7} : frequence = {freq:.4f}")
+</textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled></button>
+      <button class="btn" id="check" disabled></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
+</div>
+~~~
+
+
+```python
+
+```
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th>$n$</th><th>Fréquence observée</th><th>Valeur théorique</th></tr>
+</thead>
+<tbody>
+<tr><td>$10$</td><td>variable ($0$ à $0{,}5$)</td><td rowspan="3">$\dfrac{1}{6} \approx 0{,}1667$</td></tr>
+<tr><td>$1\,000$</td><td>$\approx 0{,}165$</td></tr>
+<tr><td>$100\,000$</td><td>$\approx 0{,}1667$</td></tr>
+</tbody>
+</table>
+</div>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : Erreur à éviter</span>
+
+La loi des grands nombres dit que la fréquence *se rapproche* de la probabilité sur de longues séries ; elle **ne dit pas** que les résultats se compensent sur les prochains lancers. Si le $6$ n'est pas sorti depuis longtemps, il n'a pas plus de chances de sortir au prochain lancer. Chaque lancer est indépendant.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Python — Simuler et comparer</span></div>
+
+On considère un dé à 6 faces équilibré. On note $A$ : « obtenir un nombre pair ».
+
+1. Quelle est la valeur théorique de $P(A)$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$A = \{2\,;\,4\,;\,6\}$, donc $P(A) = \dfrac{3}{6} = \dfrac{1}{2}$.
+
+</details>
+
+2. Modifier le programme précédent pour simuler $n$ lancers et calculer la fréquence d'obtention d'un nombre pair. Compléter le tableau.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+import random          # module pour générer des nombres aléatoires
+
+def frequence_pair(n):
+    """Simule n lancers d'un dé et renvoie
+    la fréquence d'obtention d'un nombre pair."""
+    compteur = 0                            # nombre de résultats pairs
+    for i in range(n):                      # on répète n fois le lancer
+        lancer = random.randint(1, 6)       # entier aléatoire entre 1 et 6
+        if lancer % 2 == 0:                 # pair si le reste de la division vaut 0
+            compteur += 1                   # on compte les résultats pairs
+    return compteur / n                     # fréquence = nb de pairs / nb de lancers
+
+for n in [100, 1000, 10000, 100000]:        # on fait varier n
+    freq = frequence_pair(n)
+    print(f"n = {n:>7} : frequence = {freq:.4f}")
+```
+
+Les fréquences observées convergent vers $0{,}5000$, confirmant $P(A) = \dfrac{1}{2}$.
+
+</details>
+
+3. Que peut-on conclure sur la relation entre fréquence et probabilité lorsque $n$ est très grand ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Conformément à la loi des grands nombres, la fréquence observée se rapproche de plus en plus de la probabilité théorique quand $n$ augmente. Pour $n = 100\,000$, l'écart entre fréquence et $\dfrac{1}{2}$ est inférieur à $0{,}002$.
+
+</details>
+:::

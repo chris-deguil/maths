@@ -1,0 +1,21 @@
+---
+title: "Probabilités"
+description: "Expérience aléatoire, événements, loi de probabilité et loi des grands nombres."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Observer la loi des grands nombres à l'aide d'une simulation sur Python ou tableur.
+- Construire un arbre pondéré ou un tableau en lien avec une situation donnée. Passer du registre de la langue naturelle au registre symbolique et inversement.
+- Interpréter les pondérations de chaque branche d'un arbre en termes de probabilité.
+:::

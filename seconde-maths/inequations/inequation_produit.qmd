@@ -1,0 +1,78 @@
+---
+title: "Signe d'un produit"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Règle des signes et résolution d'inéquations produit par tableau de signes."
+order: 2
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Règle des signes</span>
+
+Soient $a$ et $b$ deux réels alors
+
+- le produit est positif si $a$ et $b$ sont de **même signe**,
+- le produit est négatif si $a$ et $b$ sont de **signes opposés**.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode — Dresser le tableau de signes d'un produit $A(x) \times B(x)$</span>
+
+1. Déterminer la racine de chaque facteur en résolvant $A(x) \geqslant 0$
+   et $B(x) \geqslant 0$.
+2. Dresser le tableau de signes de chaque facteur sur une ligne séparée.
+3. Appliquer la règle des signes ligne par ligne pour obtenir le signe
+   du produit.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résoudre une inéquation produit — Calculer, Raisonner</span></div>
+
+Résoudre $(3x - 7)(2 - 5x) > 0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout $x \in \R$,
+$$3x - 7 \geqslant 0 \iff 3x \geqslant 7 \iff x \geqslant \dfrac{7}{3} \et 2 - 5x \geqslant 0 \iff -5x \geqslant -2 \iff x \leqslant \dfrac{2}{5}$$
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Inequations_Produit_ineq3.png" style="width: 65%;">
+</div>
+
+$$\mathcal{S} = \left]\dfrac{2}{5}\,;\,\dfrac{7}{3}\right[.$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Position relative de deux courbes — Calculer, Raisonner</span></div>
+
+On considère les fonctions $f$ et $g$ définies sur $\R$ par
+$$f(x) = (2x-3)(5x+1) \qquad \text{et} \qquad g(x) = 2x-3.$$
+
+Résoudre $f(x) \geqslant g(x)$ et interpréter le résultat.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout réel $x$,
+$$f(x) \geqslant g(x) \iff (2x-3)(5x+1) - (2x-3) \geqslant 0
+\iff (2x-3)\bigl[(5x+1) - 1\bigr] \geqslant 0
+\iff 5x (2x-3) \geqslant 0$$
+
+De plus
+$$5x \geqslant 0 \iff x \geqslant 0 \et 2x-3 \geqslant 0 \iff x \geqslant \dfrac{3}{2}$$
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Inequations_Produit_ineq4.png" style="width: 65%;">
+</div>
+
+$$\mathcal{S} = \left]-\infty\,;\,0\right] \cup \left[\dfrac{3}{2}\,;\,+\infty\right[$$
+
+Ainsi la représentation graphique de $f$ est au-dessus de celle de $g$ sur $\left]-\infty\,;\,0\right]$ et sur $\left[\dfrac{3}{2}\,;\,+\infty\right[$.
+
+</details>
+:::

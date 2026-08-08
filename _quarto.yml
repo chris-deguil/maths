@@ -141,6 +141,30 @@ website:
             - seconde-maths/generalites_fonctions/extremums.qmd
             - seconde-maths/generalites_fonctions/variations_avec_python.qmd 
 
+        - section: "Chapitre 9 : Probabilités"
+          contents:
+            - seconde-maths/probabilites/index.qmd
+            - seconde-maths/probabilites/experience_aleatoire.qmd
+            - seconde-maths/probabilites/loi_probabilite.qmd
+            - seconde-maths/probabilites/loi_grands_nombres.qmd
+
+        - section: "Chapitre 10 : Inéquations produit/quotient et graphique"
+          contents:
+            - seconde-maths/inequations/index.qmd
+            - seconde-maths/inequations/signe_fonction_affine.qmd
+            - seconde-maths/inequations/inequation_produit.qmd
+            - seconde-maths/inequations/inequation_quotient.qmd
+            - seconde-maths/inequations/resolution_graphique_inequation.qmd
+
+        - section: "Chapitre 11 : Fonctions de référence"
+          contents:
+            - seconde-maths/fonctions_reference/index.qmd
+            - seconde-maths/fonctions_reference/fonction_carre.qmd
+            - seconde-maths/fonctions_reference/fonction_inverse.qmd
+            - seconde-maths/fonctions_reference/fonction_racine_carree.qmd
+            - seconde-maths/fonctions_reference/fonction_valeur_absolue.qmd
+            - seconde-maths/fonctions_reference/position_relative_courbes.qmd
+
     - title: "Première"
       logo: assets/images/logo_maths2.png
       style: docked

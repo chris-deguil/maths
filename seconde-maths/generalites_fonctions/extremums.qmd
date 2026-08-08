@@ -34,7 +34,7 @@ Un extremum est dit **global** sur $I$ lorsque c'est le plus grand (ou le plus p
 On donne le tableau de variations de la fonction $f$ définie sur $[-5\,;\,8]$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_var7.png" style="width: 50%;">
+  <img src="../../image/seconde/Generalites_fonctions_var7.png" style="width: 35%;">
 </div>
 
 1. Déterminer le maximum et le minimum de $f$ sur $[-5\,;\,8]$.
@@ -78,7 +78,7 @@ Donc pour tout $x \in [-5\,;\,8]$, $f(x) \leqslant 6 < 7$ : on ne peut pas avoir
 On considère une fonction $f$ dont on donne le tableau de variations :
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Generalites_fonctions_var8.png" style="width: 55%;">
+  <img src="../../image/seconde/Generalites_fonctions_var8.png" style="width: 65%;">
 </div>
 
 1. Compléter par le symbole qui convient ($<$, $>$, $=$ ou $?$) :
