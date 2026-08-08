@@ -53,15 +53,19 @@ if ! check_large_staged; then
   exit 1
 fi
 
+# --- CORRECTION : s'arrêter immédiatement si rien n'a changé, ---
+# --- au lieu de continuer vers la publication Quarto dans tous les cas ---
 if git diff --cached --quiet; then
-  echo "Aucune modification détectée dans les fichiers sources."
-else
-  git commit -m "$MSG"
-  git push
-  echo "✅ Modifications du code source envoyées sur main."
+  echo "Aucune modification détectée dans les fichiers sources. Rien à publier."
+  exit 0
 fi
 
+git commit -m "$MSG"
+git push
+echo "✅ Modifications du code source envoyées sur main."
+
 # 5) Compilation et publication automatique du site
+#    (n'est atteint que si quelque chose a réellement changé)
 echo "🚀 Publication du site avec Quarto..."
 quarto publish gh-pages --no-prompt
 echo "✅ Publication terminée."
