@@ -1,0 +1,66 @@
+---
+title: "Position relative de deux droites"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Droites sécantes, strictement parallèles ou confondues, sous forme réduite ou cartésienne."
+order: 4
+---
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Synthèse — position relative de deux droites</span>
+
+Soient $(d)$ et $(d')$ deux droites du plan.
+
+**Sous forme réduite** : $(d) : y = m_1x + p_1$ et $(d') : y = m_2x + p_2$ :
+
+- Si $m_1 \neq m_2$ : les droites sont **sécantes** (système admet une unique solution).
+- Si $m_1 = m_2$ et $p_1 \neq p_2$ : les droites sont **strictement parallèles** (aucune solution).
+- Si $m_1 = m_2$ et $p_1 = p_2$ : les droites sont **confondues** (infinité de solutions).
+
+**Sous forme cartésienne** : $(d) : ax+by+c=0$ et $(d') : a'x+b'y+c'=0$ :
+
+- Si $ab'-a'b \neq 0$ : les droites sont **sécantes**.
+- Si $ab'-a'b = 0$ et les équations ne sont pas proportionnelles : les droites sont **strictement parallèles**.
+- Si les équations sont proportionnelles (il existe $k\neq 0$ tel que $a'=ka$, $b'=kb$, $c'=kc$) : les droites sont **confondues**.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Déterminer la position relative de deux droites — Raisonner</span></div>
+
+1. Déterminer la position relative des droites $(d_1) : y = -2x + 3$ et $(d_2) : y = -2x - 1$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$(d_1)$ et $(d_2)$ ont le même coefficient directeur $-2$ mais des ordonnées à l'origine différentes ($3$ et $-1$). Elles sont **strictement parallèles**.
+
+</details>
+
+2. Déterminer la position relative des droites $(d_3) : 2x - y + 1 = 0$ et $(d_4) : 4x - 2y + 2 = 0$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On cherche si les équations sont proportionnelles : $4x-2y+2 = 2(2x-y+1)$. Oui, elles sont proportionnelles de rapport $2$. Les droites $(d_3)$ et $(d_4)$ sont donc **confondues**.
+
+</details>
+
+3. Déterminer la position relative des droites $(d_5) : y = 3x - 1$ et $(d_6) : y = -x + 7$.
+   Si elles sont sécantes, trouver leur point d'intersection.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$(d_5)$ et $(d_6)$ ont des coefficients directeurs différents ($3$ et $-1$), donc elles sont **sécantes**.
+
+On résout le système :
+$$\begin{cases} y = 3x-1 \\ y = -x+7 \end{cases}
+\iff 3x-1 = -x+7 \iff 4x=8 \iff x=2,$$
+puis $y = 3\times 2 - 1 = 5$.
+
+Le point d'intersection est $I(2\,;\,5)$.
+
+</details>
+:::

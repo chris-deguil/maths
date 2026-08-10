@@ -1,5 +1,5 @@
 ---
-title: "Théorème de Pythagore"
+title: "Théorème de Pythagore et Thalès"
 format:
   html:
     toc: true

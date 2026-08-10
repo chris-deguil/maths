@@ -1,0 +1,24 @@
+---
+title: "Équation de droites"
+description: "Vecteur directeur, équations cartésienne et réduite, parallélisme, position relative et systèmes d'équations."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Déterminer une équation de droite à partir de deux points, un point et un vecteur directeur ou un point et la pente.
+- Déterminer la pente ou un vecteur directeur d'une droite donnée par une équation ou une représentation graphique.
+- Tracer une droite connaissant son équation cartésienne ou réduite.
+- Établir que trois points sont alignés ou non.
+- Déterminer si deux droites sont parallèles ou sécantes.
+- Déterminer le point d'intersection de deux droites sécantes données par leur équation réduite.
+:::

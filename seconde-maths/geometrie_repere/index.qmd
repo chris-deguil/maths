@@ -1,6 +1,7 @@
 ---
-title: "Géométrie repérée"
+title: "Chapitre 6 : Géométrie repérée"
 description: "Coordonnées de vecteurs, norme, milieu, colinéarité et déterminant dans un repère orthonormé."
+chapter-order: 6
 listing:
   type: table
   fields: [title, description]

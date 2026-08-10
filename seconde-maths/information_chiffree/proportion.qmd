@@ -1,0 +1,150 @@
+---
+title: "Proportion et pourcentage"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Proportion d'une partie dans un ensemble, pourcentage, et proportion de proportion."
+order: 1
+---
+
+## Proportion d'une partie
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Proportion</span>
+
+Soit $A$ une partie d'un ensemble $E$ non vide. Si $n_E$ et $n_A$ désignent
+respectivement les effectifs de $E$ et de $A$, la **proportion** de $A$ dans $E$ est :
+$$p = \frac{n_A}{n_E}$$
+:::
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Information_Chiffree_chiff1.png" style="width: 50%;">
+</div>
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Pourcentage</span>
+
+Exprimer une proportion $p$ **en pourcentage**, c'est l'écrire sous la forme
+$p \times 100\,\%$.
+Le symbole $\%$ signifie « pour cent », c'est-à-dire $\dfrac{1}{100}$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+L'écriture $60\,\%$ désigne le nombre réel $60 \times \dfrac{1}{100} = 0{,}6$.
+
+Ainsi, les écritures $60\,\%$ et $0{,}6$ représentent le **même réel**. Le symbole $\%$
+n'introduit pas un nouveau type de nombre : il indique simplement que la proportion est
+exprimée « pour cent ».
+
+L'intérêt du symbole $\%$ est uniquement contextuel : il met en évidence qu'on parle
+d'une proportion rapportée à $100$.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Encadrement d'une proportion</span>
+
+Pour tout $A \subset E$ avec $E$ non vide, on a $p \in [0\,;\,1]$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+$E$ est non vide donc $n_E \neq 0$, et $0 \leqslant n_A \leqslant n_E$.
+En divisant par $n_E > 0$ : $0 \leqslant \dfrac{n_A}{n_E} \leqslant 1$.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer une proportion et en déduire un effectif — Calculer</span></div>
+
+1. Une urne contient $8$ boules rouges et $22$ boules blanches.
+   Calculer la proportion de boules rouges.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+L'effectif total est $8 + 22 = 30$.
+La proportion de boules rouges est $p = \dfrac{8}{30} = \dfrac{4}{15} \approx 26{,}7\,\%$.
+
+</details>
+
+2. La proportion de filles dans une classe est $\dfrac{2}{3}$ et il y a $10$ filles.
+   Déterminer le nombre total d'élèves.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Soit $n$ le nombre total d'élèves.
+$$\frac{10}{n} = \frac{2}{3} \iff n = 10 \times \frac{3}{2} = 15.$$
+Il y a **15** élèves dans la classe.
+
+</details>
+:::
+
+## Proportion de proportion
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Pourcentage de pourcentage</span>
+
+Soient $A \subset E \subset F$ avec $F$ non vide.
+On note $p_1$ la proportion de $A$ dans $E$ et $p_2$ la proportion de $E$ dans $F$.
+La proportion $p$ de $A$ dans $F$ vérifie :
+$$p = p_1 \times p_2$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Par définition, $p_1 = \dfrac{n_A}{n_E}$ et $p_2 = \dfrac{n_E}{n_F}$. Donc
+$$p_1 \times p_2 = \frac{n_A}{n_E} \times \frac{n_E}{n_F} = \frac{n_A}{n_F} = p.$$
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer un pourcentage de pourcentage — Calculer</span></div>
+
+Dans une classe, $60\,\%$ des élèves sont des garçons et, parmi eux, $70\,\%$ sont demi-pensionnaires.
+Quel est le pourcentage de garçons demi-pensionnaires dans la classe ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* on multiplie les proportions : la proportion de garçons demi-pensionnaires dans la classe est le produit des deux proportions.
+
+$$p = 0{,}6 \times 0{,}7 = 0{,}42$$
+
+Il y a **42 %** de garçons demi-pensionnaires dans la classe.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Pourcentage de pourcentage — Calculer, Modéliser</span></div>
+
+Dans une école, $45\,\%$ des élèves pratiquent un sport. Parmi eux, $30\,\%$ font de la natation.
+
+1. Calculer la proportion d'élèves qui pratiquent la natation dans l'école.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$p = 0{,}45 \times 0{,}30 = 0{,}135$.
+
+Il y a **13,5 %** d'élèves pratiquant la natation dans l'école.
+
+</details>
+
+2. L'école compte $400$ élèves. Combien pratiquent la natation ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$400 \times 0{,}135 = 54$.
+
+Il y a **54** élèves qui pratiquent la natation.
+
+</details>
+:::

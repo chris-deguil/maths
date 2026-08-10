@@ -1,0 +1,66 @@
+---
+title: "Évolution réciproque"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Taux d'évolution réciproque permettant de retrouver une valeur initiale."
+order: 4
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Taux d'évolution réciproque</span>
+
+Si une grandeur subit une évolution de coefficient multiplicateur $CM$,
+le taux d'évolution réciproque $t'$ permettant de retrouver la valeur initiale vérifie :
+$$CM \times CM' = 1 \iff CM' = \frac{1}{CM}$$
+D'où $t' = \dfrac{1}{CM} - 1$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer un taux d'évolution réciproque — Calculer</span></div>
+
+Un article subit une hausse de $25\,\%$.
+Quelle baisse faut-il appliquer pour retrouver le prix initial ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Soit $t$ le taux réciproque.
+
+$$\left(1+\frac{25}{100}\right)\left(1+\frac{t}{100}\right) = 1 \iff 1+\frac{t}{100} = \dfrac{1}{1,25}  \iff t= 100 \times (1-0,8) =0,2$$
+
+Or $t < 0$, ainsi pour compenser une hausse de $25\,\%$, il faut appliquer une **baisse de 20 %**.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Évolution réciproque — Calculer, Raisonner</span></div>
+
+1. Un prix baisse de $40\,\%$. Quel taux d'augmentation faut-il appliquer
+   pour retrouver le prix initial ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Soit $t$ le taux réciproque, 
+$$\left(1-\frac{40}{100}\right)\left(1+\frac{t}{100}\right) = 1 \iff 1+\frac{t}{100} = \dfrac{1}{0,6} \iff t\approx  100 \times(1-1,667 ) = 66,7$$
+
+$t > 0$  donc pour compenser une baisse de $40\,\%$, il faut appliquer une **hausse d'environ 66,7 %**.
+
+</details>
+
+2. Un capital augmente de $10\,\%$ puis subit une baisse. Le capital retrouve
+   sa valeur initiale. Quelle est cette baisse ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Soit $t$ le taux réciproque,
+$$\left(1+\frac{10}{100}\right)\left(1+\frac{t}{100}\right) = 1 \iff 1+\frac{t}{100} = \dfrac{1}{1{,}10} \iff t\approx 100 \times(0{,}909-1) = -9{,}1$$
+
+$t < 0$ donc pour compenser une hausse de $10\,\%$, il faut appliquer une **baisse d'environ 9,1 %**.
+
+</details>
+:::

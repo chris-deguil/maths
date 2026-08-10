@@ -1,6 +1,7 @@
 ---
-title: "Racines carrées"
+title: "Chapitre 5 : Racines carrées"
 description: "Définition, règles de calcul, comparaison et applications géométriques des racines carrées."
+chapter-order: 5
 listing:
   type: table
   fields: [title, description]

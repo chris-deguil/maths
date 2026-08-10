@@ -1,0 +1,131 @@
+---
+title: "Traiter un fichier d'individus en Python"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Filtrer une liste d'individus en Python pour reconstruire un tableau croisé. Bilan du chapitre."
+order: 6
+---
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Pourquoi Python ici</span>
+
+Sur internet, les données croisées sont rarement fournies directement sous forme de tableau croisé : on dispose plutôt d'un **fichier d'individus**, où chaque individu est associé à ses caractères. Python permet de reconstruire le tableau croisé et de calculer les fréquences conditionnelles à partir de ce fichier.
+:::
+
+On considère deux listes de même longueur, où l'indice $i$ correspond au même individu dans les deux listes.
+
+```python
+sexe = ["F", "F", "G", "F", "G", "G", "F", "G"]
+resultat = ["R", "R", "R", "N", "R", "N", "N", "R"]
+# "F" = fille, "G" = garcon, "R" = recu, "N" = non recu
+```
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Sélectionner un sous-ensemble d'individus</span>
+
+Pour déterminer les individus répondant à un critère, on utilise un **filtre** : une boucle qui teste, pour chaque indice, une condition portant sur les deux listes. On peut combiner des conditions avec `and` (ET), `or` (OU) et `not` (NON).
+
+```python
+effectif_FR = 0                              # nombre de filles recues
+for i in range(len(sexe)):                   # on parcourt tous les individus
+    if sexe[i] == "F" and resultat[i] == "R":  # fille ET recue
+        effectif_FR += 1                     # on compte l'individu
+print(effectif_FR)                           # affiche 3
+```
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Dresser un tableau croisé à partir d'un fichier d'individus — Calculer</span></div>
+
+À l'aide des listes `sexe` et `resultat` ci-dessus, écrire un programme qui calcule l'effectif des garçons non reçus, puis la fréquence conditionnelle de réussite sachant que l'individu est un garçon.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+sexe = ["F", "F", "G", "F", "G", "G", "F", "G"]
+resultat = ["R", "R", "R", "N", "R", "N", "N", "R"]
+
+effectif_GN = 0                                # garcons non recus
+effectif_G = 0                                  # total des garcons
+for i in range(len(sexe)):                      # on parcourt tous les individus
+    if sexe[i] == "G":                           # l'individu est un garcon
+        effectif_G += 1                          # on le compte dans l'effectif marginal
+        if resultat[i] == "N":                   # et il n'est pas recu
+            effectif_GN += 1
+
+print(effectif_GN)                              # affiche 2
+print(effectif_GN / effectif_G)                 # frequence conditionnelle : affiche 0.5
+```
+
+Il y a $2$ garçons non reçus sur $4$ garçons, donc la fréquence conditionnelle de réussite sachant que l'individu est un garçon est $1 - 0{,}5 = 0{,}5$, soit **50 %**.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Filtrer un fichier d'individus — Modéliser, Calculer</span></div>
+
+Un fichier recense, pour $10$ communes, leur région (`"Nord"` ou `"Sud"`) et si elles disposent d'une gare (`"Oui"` ou `"Non"`) :
+
+```python
+region = ["Nord", "Sud", "Nord", "Nord", "Sud", "Sud", "Nord", "Sud", "Nord", "Sud"]
+gare = ["Oui", "Non", "Oui", "Non", "Oui", "Non", "Oui", "Oui", "Non", "Non"]
+```
+
+1. Écrire un programme qui affiche l'effectif des communes du Nord disposant d'une gare.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+effectif = 0
+for i in range(len(region)):
+    if region[i] == "Nord" and gare[i] == "Oui":
+        effectif += 1
+print(effectif)   # affiche 3
+```
+
+</details>
+
+2. En déduire, sans nouveau programme, la fréquence conditionnelle d'avoir une gare sachant que la commune est dans le Nord.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Il y a $5$ communes dans le Nord (indices $0,2,3,6,8$), dont $3$ ont une gare.
+$$f_{\text{Nord}}(\text{Gare}) = \frac{3}{5} = 0{,}6$$
+soit **60 %** des communes du Nord.
+
+</details>
+:::
+
+## Bilan
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Récapitulatif — Informations chiffrées</span>
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th>Notion</th><th>Formule</th><th>Remarque</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Proportion</strong></td><td>$p = \dfrac{n_A}{n_E}$</td><td>$p \in [0\,;\,1]$, sans unité</td></tr>
+<tr><td><strong>Pourcentage</strong></td><td>$p \times 100\,\%$</td><td>$42\,\% = 0{,}42$</td></tr>
+<tr><td><strong>Proportion de proportion</strong></td><td>$p = p_1 \times p_2$</td><td>On multiplie, on n'additionne pas</td></tr>
+<tr><td><strong>Variation absolue</strong></td><td>$\Delta V = V_2 - V_1$</td><td>Exprimée dans l'unité de $V$</td></tr>
+<tr><td><strong>Taux d'évolution</strong></td><td>$t = \dfrac{V_2 - V_1}{V_1}$</td><td>$t > 0$ : hausse — $t < 0$ : baisse</td></tr>
+<tr><td><strong>Coefficient multiplicateur</strong></td><td>$CM = \dfrac{V_2}{V_1} = 1 + \dfrac{t}{100}$</td><td>Augmenter de $t\,\%$ : $\times\left(1+\dfrac{t}{100}\right)$</td></tr>
+<tr><td><strong>Évolutions successives</strong></td><td>$CM_{\text{global}} = CM_1 \times CM_2$</td><td>Ne jamais additionner les taux !</td></tr>
+<tr><td><strong>Taux d'évolution moyen</strong></td><td>$t = \sqrt[n]{CM_{\text{global}}} - 1 = CM_{\text{global}}^{1/n} - 1$</td><td>Taux unique équivalent à $n$ évolutions</td></tr>
+<tr><td><strong>Taux réciproque</strong></td><td>$\left(1+\dfrac{t}{100}\right)\!\left(1+\dfrac{t'}{100}\right) = 1$</td><td>$-25\,\%$ ne compense pas $+25\,\%$ !</td></tr>
+<tr><td><strong>Indice base 100</strong></td><td>$I = \dfrac{Q}{Q_{\text{ref}}} \times 100$</td><td>Taux d'évolution identique à celui de $Q$</td></tr>
+<tr><td><strong>Fréquence marginale</strong></td><td>$f(A_i) = \dfrac{n_{A_i}}{N}$</td><td>Se lit dans la marge du tableau croisé</td></tr>
+<tr><td><strong>Fréquence conditionnelle</strong></td><td>$f_{A_i}(B_j) = \dfrac{n_{ij}}{n_{A_i}}$</td><td>$f_{A_i}(B_j) \neq f_{B_j}(A_i)$ en général</td></tr>
+</tbody>
+</table>
+</div>
+:::

@@ -1,0 +1,114 @@
+---
+title: "Taux d'évolution et coefficient multiplicateur"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Variation absolue, taux d'évolution et coefficient multiplicateur."
+order: 2
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Taux d'évolution</span>
+
+Une grandeur évolue d'une valeur $V_1$ à une valeur $V_2$.
+
+- La **variation absolue** est $\Delta V = V_2 - V_1$.
+- Le **taux d'évolution** (ou variation relative) est
+  $$t = \frac{V_2 - V_1}{V_1}$$
+  Il s'exprime souvent en pourcentage : $t \times 100\,\%$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+- Si $t > 0$ : augmentation. Si $t < 0$ : diminution.
+- Le taux d'évolution s'applique toujours à la valeur **initiale** $V_1$.
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Coefficient multiplicateur</span>
+
+Le **coefficient multiplicateur** associé au taux d'évolution $t$ est :
+$$CM = \frac{V_2}{V_1} = 1 + t$$
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Formulations équivalentes</span>
+
+- Augmenter de $t\,\%$ revient à multiplier par $1 + \dfrac{t}{100}$.
+- Diminuer de $t\,\%$ revient à multiplier par $1 - \dfrac{t}{100}$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer un taux d'évolution — Calculer</span></div>
+
+Jean place $110$ € en bourse. Quinze jours plus tard, ses actions valent $132$ €.
+Calculer la variation absolue et le taux d'évolution.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+- Variation absolue : $\Delta V = 132 - 110 = 22$ €.
+- Taux d'évolution : $t = \dfrac{132 - 110}{110} = \dfrac{22}{110} = 0{,}2$.
+
+Il s'agit d'une hausse de **20 %**.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Appliquer un coefficient multiplicateur — Calculer</span></div>
+
+1. Un article coûte $125$ €. Son prix augmente de $30\,\%$.
+   Quel est son nouveau prix ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* pour retrouver la valeur initiale, on divise par le coefficient multiplicateur — on ne soustrait pas le pourcentage.
+
+$CM = 1 + 0{,}30 = 1{,}30$.
+Nouveau prix : $125 \times 1{,}30 = 162{,}50$ €.
+
+</details>
+
+2. Après une baisse de $15\,\%$, un article coûte $102$ €.
+   Quel était son prix initial ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$CM = 1 - 0{,}15 = 0{,}85$.
+Prix initial : $\dfrac{102}{0{,}85} = 120$ €.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Taux d'évolution et coefficient multiplicateur — Calculer</span></div>
+
+1. Le loyer d'un appartement passe de $750$ € à $810$ €.
+   Calculer le taux d'évolution.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$t = \dfrac{810 - 750}{750} = \dfrac{60}{750} = 0{,}08$.
+
+Le loyer a augmenté de **8 %**.
+
+</details>
+
+2. Un vêtement est soldé à $-25\,\%$. Son prix soldé est $45$ €.
+   Quel était son prix initial ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$CM = 1 - 0{,}25 = 0{,}75$.
+
+Prix initial : $\dfrac{45}{0{,}75} = 60$ €.
+
+</details>
+:::

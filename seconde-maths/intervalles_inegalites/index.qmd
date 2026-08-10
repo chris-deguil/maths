@@ -1,6 +1,7 @@
 ---
-title: "Intervalles, Inégalités et Valeur absolue"
+title: "Chapitre 4 : Intervalles, Inégalités et Valeur absolue"
 description: "Intervalles de R, inégalités, comparaison de deux quantités et valeur absolue."
+chapter-order: 4
 listing:
   type: table
   fields: [title, description]

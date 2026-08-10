@@ -1,0 +1,103 @@
+---
+title: "Influence de l'ajout ou de la suppression d'une valeur"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Effet de l'ajout ou de la suppression d'une valeur sur la moyenne et sur la médiane."
+order: 3
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Ajout d'une valeur — effet sur la moyenne</span>
+
+Soit une série de $n$ valeurs de moyenne $\overline{x}$. Si on ajoute une nouvelle valeur $x_{n+1}$, la nouvelle moyenne est
+$$\overline{x}' = \frac{n\overline{x} + x_{n+1}}{n+1}$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+La somme des $n$ premières valeurs vaut $n\overline{x}$ (par définition de la moyenne). En ajoutant $x_{n+1}$, la nouvelle somme est $n\overline{x} + x_{n+1}$, répartie sur $n+1$ valeurs, d'où le résultat.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+- Si $x_{n+1} > \overline{x}$, la nouvelle moyenne augmente ($\overline{x}' > \overline{x}$).
+- Si $x_{n+1} < \overline{x}$, la nouvelle moyenne diminue.
+- Si $x_{n+1} = \overline{x}$, la moyenne est inchangée.
+- Plus $n$ est grand, moins l'ajout d'une seule valeur modifie la moyenne : une valeur isolée pèse moins dans une grande série.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Effet sur la médiane</span>
+
+La médiane ne dépend que du **rang** des valeurs, pas de leur écart à cette médiane. Ajouter ou supprimer une valeur peut :
+
+- décaler la médiane vers une autre valeur de la série si la nouvelle valeur change la position centrale ;
+- ne pas modifier la médiane si la valeur ajoutée se situe « loin » du centre de la série, du côté où l'effectif était déjà majoritaire.
+
+Contrairement à la moyenne, la médiane est peu sensible aux valeurs extrêmes (elle est dite **robuste**).
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Étudier l'effet de l'ajout d'une valeur — Calculer, Raisonner</span></div>
+
+Une série de $9$ notes a pour moyenne $12$ et pour médiane $13$. On ajoute la note $2$ à cette série.
+
+1. Calculer la nouvelle moyenne.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$\overline{x}' = \frac{9 \times 12 + 2}{10} = \frac{110}{10} = 11$$
+La nouvelle moyenne est **11** : elle a diminué, car la valeur ajoutée ($2$) est inférieure à l'ancienne moyenne ($12$).
+
+</details>
+
+2. La nouvelle médiane peut-elle rester égale à $13$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+La série compte désormais $10$ valeurs : la médiane est la moyenne des deux valeurs centrales (5ᵉ et 6ᵉ valeurs de la série ordonnée). La valeur $2$, très inférieure aux autres, se place en première position et ne modifie pas l'ordre des valeurs déjà présentes autour du centre. La médiane peut donc rester proche de $13$, bien que la moyenne ait nettement baissé.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Ajout et suppression d'une valeur — Calculer, Raisonner</span></div>
+
+Les salaires (en k€) de $6$ employés d'un petit atelier sont : $22\,;\,24\,;\,23\,;\,25\,;\,21\,;\,140$ (le dernier salaire est celui du gérant).
+
+1. Calculer la moyenne des salaires.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$\overline{x} = \frac{22+24+23+25+21+140}{6} = \frac{255}{6} = 42{,}5$$
+La moyenne est **42,5 k€**.
+
+</details>
+
+2. Calculer la moyenne des salaires **en retirant** celui du gérant.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$\overline{x}' = \frac{22+24+23+25+21}{5} = \frac{115}{5} = 23$$
+Sans le salaire du gérant, la moyenne tombe à **23 k€**.
+
+</details>
+
+3. Ce résultat illustre-t-il mieux le salaire d'un employé « typique » de l'atelier ? Justifier.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Oui : la moyenne de $42{,}5$ k€ est fortement tirée vers le haut par le salaire du gérant, très supérieur aux autres. C'est un exemple classique où une **valeur extrême** rend la moyenne peu représentative de la série ; la médiane, moins sensible aux valeurs extrêmes, serait ici un indicateur plus pertinent.
+
+</details>
+:::

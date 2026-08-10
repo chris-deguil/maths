@@ -1,0 +1,24 @@
+---
+title: "Chapitre 12 : Informations chiffrées"
+description: "Proportions, pourcentages, taux d'évolution, coefficient multiplicateur et tableaux croisés."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Exploiter la relation entre effectifs, proportions et pourcentages.
+- Traiter des situations simples mettant en jeu des pourcentages de pourcentages.
+- Exploiter la relation entre deux valeurs successives et leur taux d'évolution.
+- Calculer le taux d'évolution global à partir des taux d'évolution successifs. Calculer un taux d'évolution réciproque.
+- Calculer des fréquences conditionnelles et des fréquences marginales.
+- Compléter un tableau croisé par des raisonnements sur les effectifs ou en utilisant des fréquences conditionnelles.
+:::

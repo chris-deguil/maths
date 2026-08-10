@@ -1,0 +1,163 @@
+---
+title: "Évolutions successives"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Taux d'évolution global d'évolutions successives et taux d'évolution moyen."
+order: 3
+---
+
+## Taux d'évolution global
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Évolutions successives</span>
+
+Soit une quantité subissant successivement deux évolutions de coefficients multiplicateurs
+$CM_1$ et $CM_2$. Le coefficient multiplicateur global est :
+$$CM_{\text{global}} = CM_1 \times CM_2$$
+Le taux d'évolution global est alors $\dfrac{t_{\text{global}}}{100} = CM_{\text{global}} - 1$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soit $V_0$ la valeur initiale. Après la première évolution : $V_1 = CM_1 \times V_0$.
+Après la deuxième : $V_2 = CM_2 \times V_1 = CM_2 \times CM_1 \times V_0$.
+Donc $CM_{\text{global}} = \dfrac{V_2}{V_0} = CM_1 \times CM_2$.
+
+</details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Illustration graphique</span>
+
+$t_1$ et $t_2$ sont des évolutions, elles peuvent être une hausse ($t_1>0$) ou une baisse ($t_1<0$).
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Information_Chiffree_chiff2.png" style="width: 70%;">
+</div>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer un taux d'évolution global — Calculer</span></div>
+
+La production d'un bien augmente de $15\,\%$ la première année,
+puis diminue de $5\,\%$ la seconde année.
+Calculer le taux d'évolution global sur deux ans.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$CM_{\text{global}} = 1{,}15 \times 0{,}95 = 1{,}0925$$
+
+Taux global : $\dfrac{t}{100} = 1{,}0925 - 1 = 0{,}0925$, soit $t = 9{,}25$, donc une hausse de **9,25 %**.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+- Le résultat est indépendant de l'ordre des évolutions.
+- **On ne peut pas additionner les taux d'évolution.**
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> On ne peut pas additionner les taux d'évolution — Raisonner</span></div>
+
+Un article subit une hausse de $10\,\%$ la première année, puis une hausse de $10\,\%$
+la seconde année. Un élève affirme que le prix a augmenté de $20\,\%$ au total.
+A-t-il raison ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$CM_{\text{global}} = 1{,}10 \times 1{,}10 = 1{,}21$$
+
+Le taux d'évolution global est $\dfrac{t}{100} = 1{,}21 - 1 = 0{,}21$, soit $t = 21$, donc une hausse de **21 %**.
+
+L'élève a tort : deux hausses successives de $10\,\%$ donnent une hausse globale de
+$21\,\%$ et non $20\,\%$. L'écart provient du fait que la deuxième hausse s'applique
+à un prix déjà augmenté, et non au prix initial.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Évolutions successives — Calculer</span></div>
+
+Un capital subit trois évolutions successives : $+20\,\%$, $-10\,\%$, $+5\,\%$.
+
+1. Calculer le coefficient multiplicateur global.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$CM_{\text{global}} = 1{,}20 \times 0{,}90 \times 1{,}05 = 1{,}134$.
+
+</details>
+
+2. Le capital initial est $2\,000$ €. Quel est le capital final ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$2\,000 \times 1{,}134 = 2\,268$ €.
+
+</details>
+
+3. Calculer le taux d'évolution global.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$t = 1{,}134 - 1 = 0{,}134$, soit une hausse de **13,4 %**.
+
+</details>
+:::
+
+## Taux d'évolution moyen
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Taux d'évolution moyen</span>
+
+Soit $V_0$ la valeur initiale et $V_n$ la valeur après $n$ évolutions successives.
+Le **taux d'évolution moyen** est le taux $t$ tel que, appliqué $n$ fois, il donne
+le même résultat global :
+$$(1+t)^n = CM_{\text{global}} = \frac{V_n}{V_0}$$
+On en déduit $1+t = \sqrt[n]{CM_{\text{global}}}$, d'où $t = \sqrt[n]{CM_{\text{global}}} - 1$.
+
+*Autrement dit : c'est le taux unique qui, appliqué $n$ fois de suite,
+produit la même évolution globale que les $n$ évolutions successives.*
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer un taux d'évolution moyen — Calculer</span></div>
+
+Un article subit sur trois ans les taux d'évolution successifs $+25\,\%$, $-5\,\%$ et $+50\,\%$.
+Déterminer le taux d'évolution annuel moyen.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* on calcule d'abord le coefficient multiplicateur global, puis on en extrait la racine $n$-ième.
+
+$$CM_{\text{global}} = 1{,}25 \times 0{,}95 \times 1{,}50 = 1{,}78125$$
+
+Taux moyen : $(1+t)^3 = 1{,}78125$, soit $1+t = \sqrt[3]{1{,}78125} \approx 1{,}212$.
+
+Le taux d'évolution annuel moyen est d'environ **21,2 %**.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+La racine $n$-ième d'un réel positif $a$ s'obtient en élevant $a$ à la puissance $\dfrac{1}{n}$ :
+$$\sqrt[n]{a} = a^{1/n}$$
+Ainsi, $(1+t)^n = CM_{\text{global}}$ donne $1+t = CM_{\text{global}}^{1/n}$,
+ce qui se calcule directement à la calculatrice avec la touche puissance.
+
+*Exemple :* $\sqrt[3]{1{,}78125} = 1{,}78125^{1/3} \approx 1{,}212$.
+:::

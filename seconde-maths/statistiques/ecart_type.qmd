@@ -1,0 +1,165 @@
+---
+title: "Écart type"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Variance et écart type, indicateur de dispersion, et calcul avec Python."
+order: 2
+---
+
+## Définition
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Pourquoi un nouvel indicateur</span>
+
+La moyenne renseigne sur la position centrale d'une série, mais deux séries de même moyenne peuvent être très différentes : l'une resserrée autour de la moyenne, l'autre très dispersée. L'**écart type** mesure cette dispersion en tenant compte de **toutes** les valeurs de la série, contrairement à l'étendue ou à l'écart interquartile.
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Variance, écart type</span>
+
+Soit une série statistique de valeurs $x_1, \ldots, x_n$ de moyenne $\overline{x}$. La **variance** de cette série est
+$$V = \frac{1}{n}\Big[(x_1 - \overline{x})^2 + (x_2 - \overline{x})^2 + \cdots + (x_n - \overline{x})^2\Big]$$
+L'**écart type** est la racine carrée de la variance :
+$$\sigma = \sqrt{V}$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+- $(x_i - \overline{x})$ est l'**écart à la moyenne** de la valeur $x_i$ : il est positif si $x_i > \overline{x}$, négatif sinon.
+- On élève ces écarts au carré avant de les moyenner, afin que les écarts positifs et négatifs ne se compensent pas.
+- L'écart type $\sigma$ s'exprime dans la **même unité** que les valeurs de la série, contrairement à la variance.
+- Plus $\sigma$ est grand, plus la série est dispersée autour de sa moyenne.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer un écart type — Calculer</span></div>
+
+On considère la série de valeurs $2\,;\,4\,;\,6\,;\,8$. Calculer sa moyenne, sa variance puis son écart type.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$\overline{x} = \frac{2+4+6+8}{4} = \frac{20}{4} = 5$$
+$$V = \frac{1}{4}\Big[(2-5)^2 + (4-5)^2 + (6-5)^2 + (8-5)^2\Big] = \frac{1}{4}\big[9+1+1+9\big] = \frac{20}{4} = 5$$
+$$\sigma = \sqrt{5} \approx 2{,}24$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Comparer deux séries à l'aide de l'écart type — Calculer, Raisonner</span></div>
+
+Deux tireurs à l'arc effectuent chacun $5$ tirs. Les distances au centre de la cible (en cm) sont :
+$$\text{Tireur A : } 3\,;\,4\,;\,5\,;\,6\,;\,7 \qquad \text{Tireur B : } 1\,;\,2\,;\,5\,;\,8\,;\,9$$
+
+1. Vérifier que les deux séries ont la même moyenne.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$\overline{x_A} = \frac{3+4+5+6+7}{5} = \frac{25}{5} = 5 \qquad \overline{x_B} = \frac{1+2+5+8+9}{5} = \frac{25}{5} = 5$$
+Les deux séries ont la même moyenne $\overline{x} = 5$.
+
+</details>
+
+2. Calculer l'écart type de chaque série.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$V_A = \frac{1}{5}\big[(-2)^2+(-1)^2+0^2+1^2+2^2\big] = \frac{1}{5}\big[4+1+0+1+4\big] = \frac{10}{5} = 2 \quad\Longrightarrow\quad \sigma_A = \sqrt{2} \approx 1{,}41$$
+$$V_B = \frac{1}{5}\big[(-4)^2+(-3)^2+0^2+3^2+4^2\big] = \frac{1}{5}\big[16+9+0+9+16\big] = \frac{50}{5} = 10 \quad\Longrightarrow\quad \sigma_B = \sqrt{10} \approx 3{,}16$$
+
+</details>
+
+3. Interpréter la comparaison des deux écarts types.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Bien que les deux tireurs aient la même moyenne, $\sigma_A < \sigma_B$ : les tirs du tireur A sont plus **regroupés** autour de la moyenne, donc plus **réguliers**, tandis que ceux du tireur B sont plus dispersés.
+
+</details>
+:::
+
+## Calcul avec Python
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Fonctions moyenne et écart type</span>
+
+Calculer un écart type « à la main » devient vite fastidieux dès que la série contient beaucoup de valeurs. On écrit des fonctions Python qui reproduisent les formules de la définition.
+
+```python
+def moyenne(liste):
+    """Renvoie la moyenne d'une liste de valeurs."""
+    return sum(liste) / len(liste)         # somme des valeurs divisee par l'effectif
+
+def variance(liste):
+    """Renvoie la variance d'une liste de valeurs."""
+    m = moyenne(liste)                     # moyenne de la serie
+    somme_carres = 0                       # somme des carres des ecarts a la moyenne
+    for x in liste:                        # on parcourt chaque valeur
+        somme_carres += (x - m) ** 2       # on ajoute le carre de l'ecart
+    return somme_carres / len(liste)       # variance = moyenne des carres des ecarts
+
+def ecart_type(liste):
+    """Renvoie l'ecart type d'une liste de valeurs."""
+    return variance(liste) ** 0.5          # racine carree de la variance
+```
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+En Python, `** 0.5` calcule une racine carrée. On peut aussi utiliser `import math` puis `math.sqrt(...)`.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Vérifier un calcul d'écart type avec Python — Calculer</span></div>
+
+Reprendre la série $2\,;\,4\,;\,6\,;\,8$ de l'exemple précédent et vérifier avec Python que $\sigma \approx 2{,}24$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+serie = [2, 4, 6, 8]
+print(moyenne(serie))       # affiche 5.0
+print(variance(serie))      # affiche 5.0
+print(ecart_type(serie))    # affiche 2.23606797749979
+```
+On retrouve bien $\overline{x} = 5$, $V = 5$ et $\sigma \approx 2{,}24$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Écart type d'une série de données — Calculer</span></div>
+
+1. Écrire la liste Python des temps (en secondes) suivants, obtenus au chronométrage d'un $100$ m par $8$ athlètes : $10{,}9\,;\,11{,}2\,;\,10{,}8\,;\,11{,}5\,;\,10{,}7\,;\,11{,}0\,;\,10{,}9\,;\,11{,}3$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+temps = [10.9, 11.2, 10.8, 11.5, 10.7, 11.0, 10.9, 11.3]
+```
+
+</details>
+
+2. Calculer, à l'aide des fonctions précédentes, la moyenne et l'écart type de cette série.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+print(moyenne(temps))       # affiche 11.037499999999998
+print(ecart_type(temps))    # affiche 0.2603...
+```
+La moyenne est d'environ $11{,}04$ s et l'écart type d'environ $0{,}26$ s.
+
+</details>
+:::

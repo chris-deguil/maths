@@ -1,0 +1,23 @@
+---
+title: "Chapitre 14 : Statistiques"
+description: "Linéarité de la moyenne, écart type, regroupement en classes et comparaison de séries statistiques."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Pour une série statistique regroupée en classes, calculer la moyenne à partir de la moyenne et des effectifs de chaque classe (moyenne pondérée).
+- Déterminer la classe médiane à partir des effectifs des classes ; estimation de la médiane dans le cas de répartition uniforme dans la classe médiane.
+- Décrire les différences entre deux séries statistiques, en s'appuyant sur des indicateurs ou couples d'indicateurs (moyenne-écart type / médiane-écart interquartile), sur des représentations graphiques données.
+- Calculer des fréquences conditionnelles et des fréquences marginales.
+- Compléter un tableau croisé par des raisonnements sur les effectifs ou en utilisant des fréquences conditionnelles.
+:::

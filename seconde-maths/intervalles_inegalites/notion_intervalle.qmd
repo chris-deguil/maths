@@ -61,7 +61,21 @@ Représenter $[AB[$ sur une droite graduée.
   <img src="../../image/seconde/Intervalles_Inegalites_representation_segment.png" style="width: 55%;">
 </div>
 
+
 </details>
+
+:::
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Ce segment est un morceau de la droite des réels. Le point $A$ a pour
+abscisse $-3$ et $B$ pour abscisse $4$. 
+
+Pour tout point $M(x) \in [AB[$,
+$M$ est compris entre $A$ et $B$, donc :
+
+$$-3 \leqslant x < 4 $$
+
 :::
 
 ::: {.bloc .def}

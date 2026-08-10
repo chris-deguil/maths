@@ -1,6 +1,7 @@
 ---
 title: "Chapitre 3 : Vecteurs — Translation"
 description: "Translation, vecteurs égaux, somme, Chasles, produit par un réel, colinéarité"
+chapter-order: 3
 listing:
   type: table
   fields: [title, description]

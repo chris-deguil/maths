@@ -1,6 +1,7 @@
 ---
-title: "Fonctions de référence"
+title: "Chapitre 11 : Fonctions de référence"
 description: "Fonctions carré, inverse, racine carrée, valeur absolue : définitions, courbes, signe et variations."
+chapter-order: 11
 listing:
   type: table
   fields: [title, description]

@@ -1,6 +1,7 @@
 ---
-title: "Équations"
+title: "Chapitre 7 : Équations"
 description: "Calcul littéral (développement, factorisation, identités remarquables) et résolution d'équations."
+chapter-order: 7
 listing:
   type: table
   fields: [title, description]

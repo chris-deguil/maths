@@ -1,0 +1,80 @@
+---
+title: "Application géométrique — Droites remarquables d'un triangle"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Médiane, médiatrice et hauteur d'un triangle en géométrie repérée."
+order: 5
+---
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Droites remarquables d'un triangle</span>
+
+Dans un triangle $ABC$ :
+
+- la **médiane** issue de $A$ est la droite passant par $A$ et par le milieu de $[BC]$ ;
+- la **médiatrice** du côté $[BC]$ est la droite perpendiculaire à $(BC)$ passant par le milieu de $[BC]$ ;
+- la **hauteur** issue de $A$ est la droite passant par $A$ et perpendiculaire à $(BC)$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Dans un repère orthonormal :
+
+- Pour la médiane et la médiatrice, on utilise la formule du milieu.
+- Pour la hauteur et la médiatrice, on utilise la perpendicularité : si $(BC)$ a pour coefficient directeur $m\neq 0$, la droite perpendiculaire a pour coefficient directeur $-\dfrac{1}{m}$.
+- Si $(BC)$ est horizontale, la hauteur issue de $A$ et la médiatrice sont verticales ; si $(BC)$ est verticale, elles sont horizontales.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Équations des droites remarquables d'un triangle — Calculer</span></div>
+
+Dans un repère $\Oij$ orthonormal, on donne $A(2\,;\,5)$, $B(-1\,;\,1)$ et $C(5\,;\,1)$.
+
+1. Déterminer l'équation de la médiane issue de $A$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Le milieu $M$ de $[BC]$ a pour coordonnées $(2\,;\,1)$.
+
+Un point $P(x\,;\,y)$ appartient à $(AM)$ si et seulement si $\det(\ve{AP},\ve{AM})=0$ :
+$$(x-2)(1-5)-(y-5)(2-2)=0 \iff -4(x-2)=0 \iff x=2.$$
+
+L'équation de la médiane issue de $A$ est $x=2$.
+ 
+</details>
+
+2. Déterminer l'équation de la hauteur issue de $B$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Le coefficient directeur de $(AC)$ est $m_{AC} = \dfrac{1-5}{5-2} = -\dfrac{4}{3}$.
+
+La hauteur issue de $B$ est perpendiculaire à $(AC)$, donc son coefficient directeur est $m' = \dfrac{3}{4}$.
+
+Comme $B(-1\,;\,1)\in(BH)$ : $1 = \dfrac{3}{4}\times(-1)+p$, d'où $p = \dfrac{7}{4}$.
+
+L'équation réduite de la hauteur est $y = \dfrac{3}{4}x + \dfrac{7}{4}$.
+
+Soit sous forme cartésienne : $3x - 4y + 7 = 0$.
+
+</details>
+
+3. Déterminer l'équation de la médiatrice de $[AC]$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+La médiatrice de $[AC]$ est perpendiculaire à $(AC)$ : elle a donc la même équation cartésienne de la forme $3x - 4y + c = 0$.
+
+Le milieu de $[AC]$ est $N\left(\dfrac{7}{2}\,;\,3\right)$, qui appartient à la médiatrice :
+$$3\times\dfrac{7}{2} - 4\times 3 + c = 0 \iff \dfrac{21}{2} - 12 + c = 0 \iff c = \dfrac{3}{2}.$$
+
+L'équation de la médiatrice de $[AC]$ est $3x - 4y + \dfrac{3}{2} = 0$, soit $6x - 8y + 3 = 0$.
+
+</details>
+:::

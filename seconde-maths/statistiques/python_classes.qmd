@@ -1,0 +1,62 @@
+---
+title: "Traiter des classes en Python"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Calculer la moyenne et estimer la médiane d'une série regroupée en classes avec Python."
+order: 6
+---
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Fonctions pour des données regroupées en classes</span>
+
+On représente une série regroupée en classes par une liste de triplets `(borne_inf, borne_sup, effectif)`.
+
+```python
+classes = [(10, 20, 4), (20, 30, 10), (30, 40, 18), (40, 50, 13), (50, 60, 5)]
+
+def moyenne_classes(classes):
+    """Renvoie la moyenne ponderee estimee a partir des classes."""
+    somme_ponderee = 0                      # somme des centres ponderes par l'effectif
+    effectif_total = 0                      # effectif total N
+    for (borne_inf, borne_sup, effectif) in classes:  # on parcourt chaque classe
+        centre = (borne_inf + borne_sup) / 2          # centre de la classe
+        somme_ponderee += centre * effectif           # contribution de la classe
+        effectif_total += effectif                    # mise a jour de l'effectif total
+    return somme_ponderee / effectif_total  # moyenne ponderee
+
+print(moyenne_classes(classes))            # affiche 36.0
+```
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Estimer une médiane à partir de classes en Python — Calculer</span></div>
+
+Compléter le programme précédent par une fonction `mediane_classes(classes)` qui estime la médiane par interpolation linéaire.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+def mediane_classes(classes):
+    """Estime la mediane d'une serie regroupee en classes,
+    par interpolation lineaire dans la classe mediane."""
+    effectif_total = 0                       # calcul de l'effectif total N
+    for (borne_inf, borne_sup, effectif) in classes:
+        effectif_total += effectif
+    seuil = effectif_total / 2               # seuil N/2 a atteindre
+
+    cumul = 0                                # effectif cumule avant la classe courante
+    for (borne_inf, borne_sup, effectif) in classes:
+        if cumul + effectif >= seuil:        # la classe mediane est trouvee
+            amplitude = borne_sup - borne_inf
+            return borne_inf + (seuil - cumul) / effectif * amplitude
+        cumul += effectif                    # sinon on cumule et on continue
+
+print(mediane_classes(classes))              # affiche 36.11111111111111
+```
+On retrouve, à l'arrondi près, l'estimation $36{,}1$ obtenue à la main.
+
+</details>
+:::

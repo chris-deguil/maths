@@ -130,6 +130,7 @@ website:
             - seconde-maths/equations/equation_x2_egale_a.qmd
             - seconde-maths/equations/equation_quotient.qmd
             - seconde-maths/equations/equation_racine_carree.qmd
+            - seconde-maths/equations/bilan.qmd
 
         - section: "Chapitre 8 : Généralités sur les fonctions"
           contents:
@@ -164,6 +165,39 @@ website:
             - seconde-maths/fonctions_reference/fonction_racine_carree.qmd
             - seconde-maths/fonctions_reference/fonction_valeur_absolue.qmd
             - seconde-maths/fonctions_reference/position_relative_courbes.qmd
+
+        - section: "Chapitre 12 : Informations chiffrées"
+          contents:
+            - seconde-maths/information_chiffree/index.qmd
+            - seconde-maths/information_chiffree/proportion.qmd
+            - seconde-maths/information_chiffree/taux_evolution_coefficient_multiplicateur.qmd
+            - seconde-maths/information_chiffree/evolutions_successives.qmd
+            - seconde-maths/information_chiffree/evolution_reciproque.qmd
+            - seconde-maths/information_chiffree/tableau_croise_frequence_conditionnelle.qmd
+            - seconde-maths/information_chiffree/python_fichier_individus.qmd
+
+        - section: "Chapitre 13 : Équation de droites"
+          contents:
+            - seconde-maths/equation_droite/index.qmd
+            - seconde-maths/equation_droite/vecteur_directeur_equation_cartesienne.qmd
+            - seconde-maths/equation_droite/equation_reduite.qmd
+            - seconde-maths/equation_droite/parallelisme.qmd
+            - seconde-maths/equation_droite/position_relative_droites.qmd
+            - seconde-maths/equation_droite/droites_remarquables_triangle.qmd
+            - seconde-maths/equation_droite/systemes_resolution_graphique.qmd
+            - seconde-maths/equation_droite/systemes_resolution_algebrique.qmd
+
+        - section: "Chapitre 14 : Statistiques"
+          contents:
+            - seconde-maths/statistiques/index.qmd
+            - seconde-maths/statistiques/linearite_moyenne.qmd
+            - seconde-maths/statistiques/ecart_type.qmd
+            - seconde-maths/statistiques/influence_ajout_suppression.qmd
+            - seconde-maths/statistiques/classes_effectifs_representations.qmd
+            - seconde-maths/statistiques/effectifs_cumules_moyenne_mediane.qmd
+            - seconde-maths/statistiques/python_classes.qmd
+            - seconde-maths/statistiques/comparer_series.qmd
+
 
     - title: "Première"
       logo: assets/images/logo_maths2.png

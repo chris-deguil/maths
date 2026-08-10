@@ -1,6 +1,7 @@
 ---
-title: "Inéquations produit/quotient et graphique"
+title: "Chapitre 10 : Inéquations produit/quotient et graphique"
 description: "Signe d'une fonction affine, tableau de signes d'un produit ou d'un quotient, résolution graphique d'inéquations."
+chapter-order: 10
 listing:
   type: table
   fields: [title, description]

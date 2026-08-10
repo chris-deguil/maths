@@ -4,19 +4,22 @@ listing:
   - id: Chapitre
     type: grid
     fields: [title, description]
-    sort: "title"
+    sort: "chapter-order"
     contents:
       - ensembles_nombres/index.qmd
       - fonctions_affines/index.qmd
       - vecteurs_translation/index.qmd
       - intervalles_inegalites/index.qmd
-      - racine_carrees/index.qmd
+      - racines_carrees/index.qmd
       - geometrie_repere/index.qmd
       - equations/index.qmd
       - generalites_fonctions/index.qmd
       - probabilites/index.qmd
       - inequations/index.qmd
       - fonctions_reference/index.qmd
+      - information_chiffree/index.qmd
+      - equation_droite/index.qmd
+      - statistiques/index.qmd 
 ---
 
 

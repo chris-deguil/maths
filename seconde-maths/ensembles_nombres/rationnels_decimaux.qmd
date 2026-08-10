@@ -17,6 +17,27 @@ Un réel $d$ est un **nombre décimal** s'il existe $a \in \Z$ et $n \in \N$ tel
 L'ensemble des nombres décimaux est noté $\D$.
 :::
 
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Un nombre décimal peut s'écrire avec un nombre **fini** de chiffres
+après la virgule :
+$$0{,}25 = \dfrac{25}{100} \qquad
+  3{,}14 = \dfrac{314}{100} \qquad
+  7 = \dfrac{7}{10^0}$$
+
+Une écriture dont tous les chiffres sont égaux à $9$
+à partir d'un certain rang désigne en réalité un nombre décimal :
+$$0{,}999\ldots = 1 \qquad \text{et} \qquad 0{,}24999\ldots = 0{,}25$$
+
+En effet, posons $x = 0{,}999\ldots$ Alors $10x = 9{,}999\ldots$, d'où
+$10x - x = 9$, c'est-à-dire $9x = 9$, soit $x = 1$.
+
+Ce sont deux **écritures** différentes d'un **même** nombre.
+Tout nombre décimal non entier admet ainsi une unique écriture décimale
+« propre », celle qui ne se termine pas par une infinité de $9$.
+:::
+
 ::: {.bloc .sfc}
 <div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Reconnaître un nombre décimal — Raisonner</span></div>
 

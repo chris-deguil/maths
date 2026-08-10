@@ -1,0 +1,130 @@
+---
+title: "Linéarité de la moyenne"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Rappel sur la moyenne d'une série statistique, moyenne pondérée et linéarité de la moyenne."
+order: 1
+---
+
+## Rappel : moyenne d'une série statistique
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Moyenne</span>
+
+Soit une série statistique de valeurs $x_1, x_2, \ldots, x_n$. La **moyenne** de cette série est le réel
+$$\overline{x} = \frac{x_1 + x_2 + \cdots + x_n}{n}$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : Interprétation</span>
+
+Si toutes les valeurs de la série sont égales à un même réel $c$ — par exemple, si tous les élèves d'une classe ont la même note $c$ à un devoir — alors $\overline{x} = c$ : la moyenne d'une série constante est égale à cette constante.
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Moyenne pondérée</span>
+
+Si les valeurs sont regroupées avec des effectifs $n_1, n_2, \ldots, n_p$ (d'effectif total $N = n_1 + \cdots + n_p$), la moyenne s'écrit
+$$\overline{x} = \frac{n_1 x_1 + n_2 x_2 + \cdots + n_p x_p}{N}$$
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Exemple</span>
+
+Un professeur relève les notes obtenues par sa classe de $30$ élèves à un devoir :
+
+<div style="overflow-x:auto;">
+<table>
+<tbody>
+<tr><td>Note $x_i$</td><td>$8$</td><td>$12$</td><td>$15$</td><td>$18$</td></tr>
+<tr><td>Effectif $n_i$</td><td>$3$</td><td>$10$</td><td>$12$</td><td>$5$</td></tr>
+</tbody>
+</table>
+</div>
+
+$$\overline{x} = \frac{8\times 3 + 12\times 10 + 15\times 12 + 18\times 5}{30} = \frac{24+120+180+90}{30} = \frac{414}{30} = 13{,}8$$
+La moyenne de la classe est **13,8**.
+:::
+
+## Linéarité de la moyenne
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Linéarité de la moyenne</span>
+
+Soit une série statistique de valeurs $x_1, \ldots, x_n$ et de moyenne $\overline{x}$. Soient $a$ et $b$ deux réels. La série de valeurs $y_i = a x_i + b$ a pour moyenne
+$$\overline{y} = a\overline{x} + b$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Par définition,
+$$\overline{y} = \frac{y_1 + \cdots + y_n}{n} = \frac{(ax_1+b) + \cdots + (ax_n+b)}{n} = \frac{a(x_1+\cdots+x_n) + nb}{n}$$
+$$\overline{y} = a \times \frac{x_1+\cdots+x_n}{n} + \frac{nb}{n} = a\overline{x} + b$$
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+- Ajouter une même constante $b$ à toutes les valeurs ajoute $b$ à la moyenne.
+- Multiplier toutes les valeurs par un même réel $a$ multiplie la moyenne par $a$.
+- Cette propriété permet de calculer une nouvelle moyenne **sans refaire tous les calculs**, dès que la série subit une transformation affine.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Utiliser la linéarité de la moyenne — Calculer</span></div>
+
+La moyenne des notes d'un devoir est $\overline{x} = 11{,}2$. Le professeur décide d'ajouter un point bonus à chaque copie, puis de convertir chaque note sur $10$ (en la multipliant par $0{,}5$).
+Calculer la moyenne après ces deux transformations.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Après l'ajout du point bonus, la nouvelle série est $y_i = x_i + 1$, de moyenne
+$$\overline{y} = \overline{x} + 1 = 12{,}2$$
+Après la conversion sur $10$, la série devient $z_i = 0{,}5 y_i$, de moyenne
+$$\overline{z} = 0{,}5 \times \overline{y} = 0{,}5 \times 12{,}2 = 6{,}1$$
+La moyenne finale, sur $10$, est **6,1**.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Linéarité de la moyenne — Calculer, Raisonner</span></div>
+
+Une entreprise emploie $30$ salariés dont le salaire mensuel moyen est $\overline{x} = 1\,850$ €.
+
+1. Tous les salaires augmentent de $3\,\%$. Calculer la nouvelle moyenne.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+La nouvelle série est $y_i = 1{,}03 \times x_i$, donc
+$$\overline{y} = 1{,}03 \times 1\,850 = 1\,905{,}50$$
+La nouvelle moyenne est **1 905,50 €**.
+
+</details>
+
+2. L'entreprise verse en réalité une prime fixe de $40$ € en plus de l'augmentation de $3\,\%$. Calculer la nouvelle moyenne.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+La série devient $z_i = 1{,}03 \times x_i + 40$, donc
+$$\overline{z} = 1{,}03 \times 1\,850 + 40 = 1\,945{,}50$$
+La nouvelle moyenne est **1 945,50 €**.
+
+</details>
+
+3. Un salarié affirme que si le salaire moyen augmente, alors le salaire de chaque salarié a augmenté. A-t-il raison ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Non. La moyenne est un indicateur global : elle peut augmenter alors que certains salaires individuels diminuent, si d'autres augmentent davantage. La linéarité de la moyenne décrit l'effet d'une transformation **identique appliquée à toutes les valeurs**, ce qui n'est pas la même chose qu'une évolution individuelle quelconque.
+
+</details>
+:::

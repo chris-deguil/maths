@@ -8,6 +8,7 @@ description: "Calcul des valeurs remarquables de cosinus, sinus et tangente pour
 order: 8
 ---
 
+## cos 45
 ::: {.bloc .info}
 <span class="bloc-titre">À retenir : Cas de $45^\circ$ — triangle isocèle rectangle de côté $a$.</span>
 
@@ -22,7 +23,7 @@ $$AB^2 = AC^2 + BC^2 = a^2 + a^2 = 2a^2$$
 donc $AB = \sqrt{2a^2} = a\sqrt{2}$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Racine_carree_racine2_2.png" style="width: 35%;">
+  <img src="../../image/seconde/Racine_carree_racine2_2.png" style="width: 20%;">
 </div>
 
 On en déduit, dans le triangle $ABC$ rectangle en $C$,
@@ -32,6 +33,7 @@ $$\cos 45^\circ = \dfrac{AC}{AB} = \dfrac{a}{a\sqrt{2}}
 = \dfrac{\sqrt{2}}{2} \; ;\; \tan 45^\circ = \dfrac{BC}{AC} = \dfrac{a}{a} = 1$$
 :::
 
+## cos 30 et cos 60
 ::: {.bloc .info}
 <span class="bloc-titre">À retenir : Cas de $30^\circ$ et $60^\circ$ — demi-triangle équilatéral de côté $a$.</span>
 
@@ -55,7 +57,7 @@ $$AB^2 = AC^2 + BC^2
 donc $AC = \sqrt{\dfrac{3a^2}{4}} = \dfrac{a\sqrt{3}}{2}$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Racine_carree_racine2_3.png" style="width: 40%;">
+  <img src="../../image/seconde/Racine_carree_racine2_3.png" style="width: 20%;">
 </div>
 
 On en déduit, dans le triangle $ABC$ rectangle en $C$,
@@ -80,6 +82,7 @@ $$\cos 30^\circ = \dfrac{AC}{AB}
 = \dfrac{\sqrt{3}}{3}$$
 :::
 
+## Théorème et applications
 ::: {.bloc .thm}
 <span class="bloc-titre">Propriété : Valeurs remarquables</span>
 

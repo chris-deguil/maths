@@ -1,0 +1,92 @@
+---
+title: "Comparer deux séries statistiques"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Comparer deux séries à l'aide de couples d'indicateurs cohérents, et bilan du chapitre."
+order: 7
+---
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Point méthode</span>
+
+Pour décrire les différences entre deux séries statistiques, on compare des **couples cohérents** d'indicateurs :
+
+- **moyenne et écart type** : la moyenne situe la série, l'écart type mesure la dispersion autour de cette moyenne (indicateurs sensibles aux valeurs extrêmes) ;
+- **médiane et écart interquartile** : la médiane situe la série, l'écart interquartile mesure la dispersion des $50\,\%$ des valeurs centrales (indicateurs robustes) ;
+- les **représentations graphiques** (histogrammes, boîtes à moustaches) permettent également de comparer la forme des distributions (symétrie, étalement, valeurs atypiques).
+
+On ne mélange pas les deux couples : comparer une moyenne à une médiane, ou un écart type à un écart interquartile, n'a pas de sens direct.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Comparer deux séries statistiques — Raisonner, Communiquer</span></div>
+
+Deux classes de seconde ont passé le même devoir de mathématiques.
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th></th><th>Moyenne</th><th>Écart type</th><th>Médiane</th><th>Écart interquartile</th></tr>
+</thead>
+<tbody>
+<tr><td>Classe A</td><td>$12{,}0$</td><td>$1{,}8$</td><td>$12{,}5$</td><td>$2{,}0$</td></tr>
+<tr><td>Classe B</td><td>$12{,}0$</td><td>$4{,}5$</td><td>$11{,}0$</td><td>$6{,}5$</td></tr>
+</tbody>
+</table>
+</div>
+
+1. Que peut-on dire des deux classes en ne comparant que les moyennes ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Les deux classes ont exactement la même moyenne ($12{,}0$) : en ne regardant que cet indicateur, on pourrait conclure, à tort, que les deux classes ont un niveau comparable.
+
+</details>
+
+2. Comparer les écarts types. Qu'en déduire sur l'homogénéité de chaque classe ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\sigma_A = 1{,}8 < \sigma_B = 4{,}5$ : les notes de la classe A sont beaucoup plus resserrées autour de la moyenne que celles de la classe B. La classe A est plus **homogène**, la classe B est plus **hétérogène**, avec probablement des élèves en grande difficulté et d'autres très à l'aise.
+
+</details>
+
+3. Les médianes confirment-elles cette analyse ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Oui : l'écart interquartile de la classe B ($6{,}5$) est nettement plus grand que celui de la classe A ($2{,}0$), ce qui confirme la plus grande dispersion des notes en classe B. On remarque aussi que la médiane de la classe A ($12{,}5$) est légèrement supérieure à sa moyenne, tandis que celle de la classe B ($11{,}0$) est inférieure à sa moyenne, ce qui suggère une distribution plus étalée vers le haut en classe A et vers le bas en classe B.
+
+</details>
+:::
+
+## Bilan
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Récapitulatif — Statistiques</span>
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th>Notion</th><th>Formule</th><th>Remarque</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Moyenne</strong></td><td>$\overline{x} = \dfrac{x_1+\cdots+x_n}{n}$</td><td>Sensible aux valeurs extrêmes</td></tr>
+<tr><td><strong>Linéarité de la moyenne</strong></td><td>$\overline{ax+b} = a\overline{x}+b$</td><td>Évite de tout recalculer</td></tr>
+<tr><td><strong>Variance</strong></td><td>$V = \dfrac{1}{n}\sum (x_i-\overline{x})^2$</td><td>Moyenne des carrés des écarts</td></tr>
+<tr><td><strong>Écart type</strong></td><td>$\sigma = \sqrt{V}$</td><td>Même unité que les valeurs</td></tr>
+<tr><td><strong>Ajout d'une valeur</strong></td><td>$\overline{x}' = \dfrac{n\overline{x}+x_{n+1}}{n+1}$</td><td>La médiane est plus robuste</td></tr>
+<tr><td><strong>Centre de classe</strong></td><td>$c_k = \dfrac{e_k+e_{k+1}}{2}$</td><td>Hypothèse de répartition uniforme</td></tr>
+<tr><td><strong>Moyenne pondérée (classes)</strong></td><td>$\overline{x} \approx \dfrac{\sum n_k c_k}{N}$</td><td>Estimation, pas valeur exacte</td></tr>
+<tr><td><strong>Classe médiane</strong></td><td>1ʳᵉ classe où le cumul $\geqslant \dfrac{N}{2}$</td><td>Se lit sur les effectifs cumulés</td></tr>
+<tr><td><strong>Médiane estimée</strong></td><td>$M_e \approx e_k + \dfrac{\frac{N}{2}-N_{k-1}}{n_k}(e_{k+1}-e_k)$</td><td>Interpolation linéaire</td></tr>
+<tr><td><strong>Comparer deux séries</strong></td><td>Moyenne-écart type <strong>ou</strong> médiane-écart interquartile</td><td>Ne pas mélanger les deux couples</td></tr>
+</tbody>
+</table>
+</div>
+:::

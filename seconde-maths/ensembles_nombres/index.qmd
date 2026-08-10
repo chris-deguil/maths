@@ -1,6 +1,7 @@
 ---
 title: "Chapitre 1 : Ensembles de nombres"
 description: "Vocabulaire ensembliste, N, Z, D, Q, R, fractions et puissances"
+chapter-order: 1
 listing:
   type: table
   fields: [title, description]

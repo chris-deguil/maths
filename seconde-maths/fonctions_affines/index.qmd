@@ -1,6 +1,7 @@
 ---
 title: "Chapitre 2 : Fonctions affines"
 description: "Vocabulaire des fonctions, fonctions affines, représentation graphique, variations, équations"
+chapter-order: 2
 listing:
   type: table
   fields: [title, description]

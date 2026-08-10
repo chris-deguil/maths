@@ -1,0 +1,141 @@
+---
+title: "Équations cartésiennes et parallélisme"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Critères de parallélisme de deux droites par équations cartésiennes ou réduites."
+order: 3
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Critère de parallélisme — équations cartésiennes</span>
+
+Dans un repère $\Oij$, soient deux droites $(d)$ et $(d')$ d'équations cartésiennes
+$$ax + by + c = 0 \et a'x + b'y + c' = 0.$$
+Alors $(d) \parallel (d')$ si et seulement si $ab' - a'b = 0$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Deux droites sont parallèles si et seulement si leurs vecteurs directeurs sont colinéaires.
+
+Les vecteurs directeurs de $(d)$ et $(d')$ ont respectivement pour coordonnées $(-b\,;\,a)$ et $(-b'\,;\,a')$.
+
+Leur déterminant vaut
+$$\det(\ve{u},\ve{u'}) =
+\begin{vmatrix}
+-b & -b' \\
+a & a'
+\end{vmatrix}
+= (-b)\times a' - a\times(-b') = a'b - ab'.$$
+Il est nul si et seulement si $ab' - a'b = 0$.
+
+</details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Interprétation</span>
+
+Donc deux droites sont parallèles si et seulement si leurs vecteurs directeurs sont colinéaires.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Vérifier que deux droites sont parallèles — Raisonner</span></div>
+
+Les droites d'équations
+$$
+(d) : (1-\sqrt{2})\,x + \sqrt{6}\,y - 5 = 0
+\quad\text{et}\quad
+(d') : \left(\dfrac{\sqrt{2}}{2}-1\right)x + \sqrt{3}\,y - 3 = 0
+$$
+sont-elles parallèles ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On considère $\ve{u} ( -\sqrt{6} \,;\, 1-\sqrt{2})$ et $\ve{v} \left( -\sqrt{3}\,;\, \frac{\sqrt{2}}{2} -1 \right)$
+$$
+\det(\ve{u},\ve{v})= (1-\sqrt{2})\sqrt{3} - \sqrt{6}\left(\dfrac{\sqrt{2}}{2}-1\right)
+= \sqrt{3}-\sqrt{6}  - \dfrac{\sqrt{12}}{2} + \sqrt{6}
+= \sqrt{3} - \sqrt{3} = 0$$
+Le déterminant est nul, donc $(d)\parallel(d')$.
+
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Critère de parallélisme — équations réduites</span>
+
+Deux droites non parallèles à l'axe des ordonnées sont parallèles si et seulement si elles ont le même coefficient directeur.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soient $(d):y=mx+p$ et $(d'):y=m'x+p'$.
+
+**Même coefficient directeur $\Rightarrow$ parallèles.**
+
+Si $p=p'$, les droites sont confondues. Si $p\neq p'$, supposons par l'absurde qu'elles se coupent en $A(a\,;\,b)$. Alors $b=ma+p$ et $b=ma+p'$, donc $p=p'$, contradiction. Donc $(d)\parallel(d')$.
+
+**Parallèles $\Rightarrow$ même coefficient directeur.**
+
+Si $(d)\parallel(d')$, les droites $(\Delta):y=mx$ et $(\Delta'):y=m'x$ vérifient $(\Delta)\parallel(d)$ et $(\Delta')\parallel(d')$, donc $(\Delta)\parallel(\Delta')$. Or elles passent toutes deux par $O$ ; étant parallèles et ayant un point commun, elles sont confondues, donc $m=m'$.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Trouver les valeurs d'un paramètre — Calculer</span></div>
+
+Déterminer les valeurs de $m$ pour lesquelles $(d) : y=(m^2+1)x+3$ est parallèle à $(d') : y=(1-2m)x$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$(d) \parallel (d')$ si et seulement si elles ont le même coefficient directeur :
+$$m^2+1 = 1-2m \iff m^2+2m = 0 \iff m(m+2)=0 \iff m\in\{-2\,;\,0\}.$$
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Pour montrer que deux droites ne sont pas parallèles, il suffit de montrer que leurs coefficients directeurs sont distincts.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Parallélisme et équation de droite — Calculer</span></div>
+
+Dans un repère $\Oij$, on donne $A(1\,;\,3)$ et la droite $(\Delta) : 2x-y+4=0$.
+
+1. Déterminer l'équation réduite de $(\Delta)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$2x-y+4=0 \iff y=2x+4$. Le coefficient directeur est $m=2$ et l'ordonnée à l'origine est $p=4$.
+
+</details>
+
+2. Déterminer l'équation de la droite $(d)$ passant par $A$ et parallèle à $(\Delta)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$(d)\parallel(\Delta)$ donc $m=2$. Comme $A(1\,;\,3)\in(d)$ : $3=2\times 1+p$, d'où $p=1$.
+
+Une équation de $(d)$ est $y=2x+1$.
+
+</details>
+
+3. La droite $(\delta) : 4x-2y-1=0$ est-elle parallèle à $(\Delta)$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$4x-2y-1=0 \iff y=2x-\dfrac{1}{2}$. Même coefficient directeur $2$, donc $(\delta)\parallel(\Delta)$.
+
+</details>
+:::

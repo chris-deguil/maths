@@ -7,6 +7,24 @@ format:
 description: "Règles de produit et de quotient sur les racines carrées, simplification et calculs."
 order: 2
 ---
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Les radicaux sont des nombres réels : on peut donc leur appliquer les
+opérations usuelles (addition, soustraction, multiplication...), à condition
+de rester vigilant sur la façon de les mener.
+
+On peut multiplier un radical par un entier, par exemple $2\sqrt{5}$ ou $3\sqrt{7}$.
+
+On peut également additionner ou soustraire des termes ayant le même radical,
+en factorisant par ce radical commun :
+
+$$2\sqrt{5} - 3\sqrt{5} + 7\sqrt{5} = (2 - 3 + 7)\sqrt{5} = 6\sqrt{5}$$
+
+
+
+:::
+
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Propriété : </span>
@@ -93,7 +111,7 @@ $2\sqrt{75} - \sqrt{48} + 3\sqrt{3}$
 ::: {.bloc .ex}
 <div class="bloc-titre">Exercice :<span class="exemp-extra"> Simplifier des expressions avec des radicaux — Calculer </span></div>
 
-1. Simplifier $\sqrt{125} - 3\sqrt{5} + 2\sqrt{20}$.
+1. Simplifier $\sqrt{125} - 3\sqrt{5} + 2\sqrt{20}$ et $\sqrt{12} + \sqrt{27} - \sqrt{75}$
 
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
@@ -103,6 +121,8 @@ $\sqrt{125} - 3\sqrt{5} + 2\sqrt{20}
 = 5\sqrt{5} - 3\sqrt{5} + 4\sqrt{5}
 = 6\sqrt{5}$
 
+$\sqrt{12} + \sqrt{27} - \sqrt{75}
+= \sqrt{3 \times 4} + \sqrt{3 \times 3^2 } - \sqrt{3 \times 5^2 } = 2 \sqrt{3} +3 \sqrt{3} -5 \sqrt{3} = 0$
 </details>
 
 2. Développer et simplifier $(3 - 2\sqrt{3})(5 - \sqrt{3})$.
@@ -117,3 +137,4 @@ $(3 - 2\sqrt{3})(5 - \sqrt{3})
 
 </details>
 :::
+

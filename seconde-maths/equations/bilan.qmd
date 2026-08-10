@@ -1,0 +1,13 @@
+---
+title: "Bilan Equation"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: " "
+order: 10
+---
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Equation_bilan_equation.png" style="width: 90%;">
+</div>

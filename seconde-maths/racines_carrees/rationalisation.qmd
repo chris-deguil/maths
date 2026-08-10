@@ -43,22 +43,34 @@ $$\dfrac{k}{\sqrt{a}}
 
 Écrire les expressions suivantes sans racine carrée
 au dénominateur.
-$$\dfrac{6}{\sqrt{3}} \et \dfrac{10}{4 - \sqrt{5}}$$
+
+$$\dfrac{6}{\sqrt{3}} \quad ; \quad  \dfrac{10}{4 - \sqrt{5}} \quad\text{et}\quad \dfrac{\sqrt{3}-1}{\sqrt{3}+1}$$
 
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
-1. $\dfrac{6}{\sqrt{3}}
-   = \dfrac{6\sqrt{3}}{\sqrt{3} \times \sqrt{3}}
-   = \dfrac{6\sqrt{3}}{3}
-   = 2\sqrt{3}$
+- 
+$\dfrac{6}{\sqrt{3}}
+= \dfrac{6\sqrt{3}}{\sqrt{3} \times \sqrt{3}}
+= \dfrac{6\sqrt{3}}{3}
+= 2\sqrt{3}$
 
-2. ***Point clef :** On  multiplie par le conjugué $4 + \sqrt{5}$* 
-   $$\dfrac{10}{4 - \sqrt{5}}
-   = \dfrac{10(4 + \sqrt{5})}{(4 - \sqrt{5})(4 + \sqrt{5})}
-   = \dfrac{10(4 + \sqrt{5})}{16 - 5}
-   = \dfrac{10(4 + \sqrt{5})}{11}
-   = \dfrac{40 + 10\sqrt{5}}{11}$$
+- ***Point clef :** On multiplie par le conjugué $4 + \sqrt{5}$*
+
+$$\dfrac{10}{4 - \sqrt{5}}
+= \dfrac{10(4 + \sqrt{5})}{(4 - \sqrt{5})(4 + \sqrt{5})}
+= \dfrac{10(4 + \sqrt{5})}{16 - 5}
+= \dfrac{10(4 + \sqrt{5})}{11}
+= \dfrac{40 + 10\sqrt{5}}{11}$$
+
+- ***Point clef :** On multiplie par le conjugué $\sqrt{3}-1$*
+
+$$\dfrac{\sqrt{3}-1}{\sqrt{3}+1}
+= \dfrac{(\sqrt{3}-1)(\sqrt{3}-1)}{(\sqrt{3}+1)(\sqrt{3}-1)}
+= \dfrac{(\sqrt{3}-1)^2}{3 - 1}
+= \dfrac{3 - 2\sqrt{3} + 1}{2}
+= \dfrac{4 - 2\sqrt{3}}{2}
+= 2 - \sqrt{3}$$
 
 </details>
 :::
@@ -111,8 +123,6 @@ $$\dfrac{\sqrt{12} \times \sqrt{27}}{5\sqrt{3} + \sqrt{75}}
 <details class="bloc cor">
 <summary>Afficher la correction :</summary>
 
-***Point clef :** on multiplie
-par le conjugué*
 
 Pour tout entier $n$, 
 $$\dfrac{1}{\sqrt{n+1} + \sqrt{n}}
@@ -125,7 +135,7 @@ $$\dfrac{1}{\sqrt{n+1} + \sqrt{n}}
 
 </details>
 
-2. En déduire la valeur exacte de la somme :
+1. En déduire la valeur exacte de la somme :
 $$S = \dfrac{1}{\sqrt{2}+\sqrt{1}}
     + \dfrac{1}{\sqrt{3}+\sqrt{2}}
     + \dfrac{1}{\sqrt{4}+\sqrt{3}}

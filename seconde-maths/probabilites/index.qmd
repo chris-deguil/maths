@@ -1,6 +1,7 @@
 ---
-title: "Probabilités"
+title: "Chapitre 9 : Probabilités"
 description: "Expérience aléatoire, événements, loi de probabilité et loi des grands nombres."
+chapter-order: 9
 listing:
   type: table
   fields: [title, description]

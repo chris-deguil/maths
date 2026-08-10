@@ -1,0 +1,155 @@
+---
+title: "Tableau croisé et fréquence conditionnelle"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Tableau croisé d'effectifs, effectifs marginaux, fréquence marginale et fréquence conditionnelle."
+order: 5
+---
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Pourquoi croiser deux variables</span>
+
+Une variable **qualitative** (ou catégorielle) répartit une population en catégories : sexe, niveau d'étude, département de résidence, mention obtenue, etc. Étudier une seule variable ne renseigne pas sur les **liens** entre deux caractères d'une même population. Croiser deux variables qualitatives, c'est examiner simultanément deux caractères sur les mêmes individus, pour répondre à des questions du type « les filles réussissent-elles mieux que les garçons à cet examen ? »
+:::
+
+## Tableau croisé d'effectifs
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Tableau croisé d'effectifs</span>
+
+Soit une population répartie selon deux variables qualitatives, la première en catégories $A_1, A_2, \ldots, A_p$ et la seconde en catégories $B_1, B_2, \ldots, B_q$. Un **tableau croisé d'effectifs** présente, à l'intersection de la ligne $A_i$ et de la colonne $B_j$, l'effectif $n_{ij}$ des individus qui possèdent **à la fois** le caractère $A_i$ et le caractère $B_j$.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Exemple de tableau croisé</span>
+
+Dans un lycée de $200$ élèves, on croise le sexe et la réussite au baccalauréat :
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th></th><th>Reçu ($R$)</th><th>Non reçu ($\overline{R}$)</th><th>Total</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Filles ($F$)</strong></td><td>$95$</td><td>$15$</td><td>$110$</td></tr>
+<tr><td><strong>Garçons ($G$)</strong></td><td>$72$</td><td>$18$</td><td>$90$</td></tr>
+<tr><td><strong>Total</strong></td><td>$167$</td><td>$33$</td><td>$200$</td></tr>
+</tbody>
+</table>
+</div>
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Effectif marginal, fréquence marginale</span>
+
+Dans un tableau croisé, les effectifs de la dernière ligne et de la dernière colonne sont les **effectifs marginaux** : ce sont les effectifs de chaque catégorie, toutes catégories de l'autre variable confondues.
+
+La **fréquence marginale** d'une catégorie $A_i$ est la proportion de l'effectif total qu'elle représente :
+$$f(A_i) = \frac{n_{A_i}}{N}$$
+où $N$ est l'effectif total de la population.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Lire un tableau croisé — Communiquer</span></div>
+
+À partir du tableau ci-dessus, déterminer l'effectif marginal des filles, puis la fréquence marginale des élèves reçus.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+L'effectif marginal des filles est le total de leur ligne : $n_F = 110$.
+
+La fréquence marginale des élèves reçus est $f(R) = \dfrac{167}{200} = 0{,}835$, soit **83,5 %** des élèves du lycée.
+
+</details>
+:::
+
+## Fréquence conditionnelle
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Fréquence conditionnelle</span>
+
+Soit une population répartie dans un tableau croisé selon deux caractères. La **fréquence conditionnelle** de $B_j$ sachant $A_i$, notée $f_{A_i}(B_j)$, est la proportion d'individus possédant le caractère $B_j$ **parmi ceux qui possèdent déjà le caractère** $A_i$ :
+$$f_{A_i}(B_j) = \frac{n_{ij}}{n_{A_i}}$$
+où $n_{ij}$ est l'effectif de la case $(A_i, B_j)$ et $n_{A_i}$ l'effectif marginal de $A_i$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+- La fréquence conditionnelle se lit en restreignant le tableau à **une seule ligne** (ou une seule colonne) : le dénominateur est le **total de cette ligne** (ou de cette colonne), pas l'effectif total $N$.
+- $f_{A_i}(B_j)$ et $f_{B_j}(A_i)$ répondent à des questions différentes : la population de référence n'est pas la même.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer une fréquence conditionnelle — Calculer</span></div>
+
+À partir du tableau croisé de l'exemple précédent, calculer $f_F(R)$ et $f_R(F)$. Interpréter chaque résultat.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$f_F(R) = \frac{n_{FR}}{n_F} = \frac{95}{110} \approx 0{,}864$$
+Parmi les filles, environ **86,4 %** ont été reçues.
+
+$$f_R(F) = \frac{n_{FR}}{n_R} = \frac{95}{167} \approx 0{,}569$$
+Parmi les élèves reçus, environ **56,9 %** sont des filles.
+
+Ces deux pourcentages sont différents : le premier se lit dans la ligne des filles ($110$ élèves), le second dans la colonne des reçus ($167$ élèves).
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Compléter un tableau croisé — Raisonner, Calculer</span></div>
+
+Une enquête auprès de $250$ clients d'un magasin porte sur leur niveau de satisfaction (« Satisfait » ou « Insatisfait ») selon leur mode d'achat (« En ligne » ou « En magasin »). On sait que :
+
+- $160$ clients ont acheté en ligne ;
+- $70\,\%$ des clients sont satisfaits ;
+- parmi les clients ayant acheté en magasin, $54$ sont satisfaits.
+
+1. Compléter le tableau croisé d'effectifs suivant.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr><th></th><th>Satisfait</th><th>Insatisfait</th><th>Total</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>En ligne</strong></td><td>$121$</td><td>$39$</td><td>$160$</td></tr>
+<tr><td><strong>En magasin</strong></td><td>$54$</td><td>$36$</td><td>$90$</td></tr>
+<tr><td><strong>Total</strong></td><td>$175$</td><td>$75$</td><td>$250$</td></tr>
+</tbody>
+</table>
+</div>
+
+Le total des clients satisfaits est $0{,}70 \times 250 = 175$. Les clients ayant acheté en magasin sont $250 - 160 = 90$, dont $36$ insatisfaits ($90 - 54$). Les clients en ligne satisfaits sont $175 - 54 = 121$, d'où $160 - 121 = 39$ clients en ligne insatisfaits.
+
+</details>
+
+2. Calculer la fréquence conditionnelle de satisfaction sachant un achat en ligne.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$f_{\text{En ligne}}(\text{Satisfait}) = \frac{121}{160} \approx 0{,}756$$
+Parmi les clients ayant acheté en ligne, environ **75,6 %** sont satisfaits.
+
+</details>
+
+3. Comparer avec la fréquence conditionnelle de satisfaction sachant un achat en magasin. Que peut-on en conclure ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$f_{\text{En magasin}}(\text{Satisfait}) = \frac{54}{90} = 0{,}6$$
+Seulement **60 %** des clients ayant acheté en magasin sont satisfaits, contre environ $75{,}6\,\%$ pour un achat en ligne. La satisfaction semble donc plus élevée chez les clients ayant acheté en ligne.
+
+</details>
+:::

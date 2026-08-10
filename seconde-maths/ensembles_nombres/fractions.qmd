@@ -137,8 +137,3 @@ $B = \dfrac{2}{3} - \dfrac{7}{3} \times \dfrac{1}{ \dfrac{6}{2} - \dfrac{3}{2}}
 </details>
 :::
 
-::: {.bloc .rem}
-<span class="bloc-titre">Remarque : </span>
-
-Les puissances permettent de manipuler efficacement les grands nombres rencontrés dans les fractions et en notation scientifique.
-:::

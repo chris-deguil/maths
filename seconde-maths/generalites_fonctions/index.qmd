@@ -1,6 +1,7 @@
 ---
-title: "Généralités sur les fonctions"
+title: "Chapitre 8 : Généralités sur les fonctions"
 description: "Ensemble de définition, représentation graphique, résolution graphique, variations et extremums d'une fonction."
+chapter-order: 8
 listing:
   type: table
   fields: [title, description]

@@ -8,33 +8,29 @@ description: "Résoudre f(x) = k, f(x) = g(x), intersection de deux droites"
 order: 7
 ---
 
+
 ::: {.bloc .sfc}
-<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résoudre $f(x)=k$ algébriquement — Calculer</span></div>
+<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Résoudre $f(x)=k$ algébriquement — Calculer </span></div>
 
-Résoudre $3x-1=5$.
+1. Résoudre $3x-1=5$.
 
-<details class="bloc cor"><summary>Afficher la correction :</summary>
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
 
-Pour tout réel $x$, 
+Pour tout réel $x$,
 
-$$3x-1=5 \iff 3x=6 \iff x=2$$
+$3x-1=5 \iff 3x=6 \iff x=2$.
 
 L'équation a pour ensemble solution $S= \{2\}$.
 
 </details>
-:::
 
-::: {.bloc .sfc}
-<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résoudre $f(x)=g(x)$ algébriquement — Calculer</span></div>
+2. Interpréter graphiquement le résultat.
 
-Résoudre $-2x+7=3x-3$.
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
 
-<details class="bloc cor"><summary>Afficher la correction :</summary>
-
-Pour tout réel $x$,
-$$-2x+7=3x-3 \iff -2x-3x=-3-7 \iff -5x=-10 \iff x=2$$
-
-L'équation a pour ensemble solution $S= \{2\}$.
+Le point d'ordonnée $5$ de la représentation graphique de la fonction affine $f:x \longmapsto 3x-1$ a pour abscisse $2$.
 
 </details>
 :::
