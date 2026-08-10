@@ -1,12 +1,10 @@
 [
   {
-    "listing": "/seconde-maths/fonctions_reference/index.html",
+    "listing": "/seconde-maths/probabilites/index.html",
     "items": [
-      "/seconde-maths/fonctions_reference/fonction_carre.html",
-      "/seconde-maths/fonctions_reference/fonction_inverse.html",
-      "/seconde-maths/fonctions_reference/fonction_racine_carree.html",
-      "/seconde-maths/fonctions_reference/fonction_valeur_absolue.html",
-      "/seconde-maths/fonctions_reference/position_relative_courbes.html"
+      "/seconde-maths/probabilites/experience_aleatoire.html",
+      "/seconde-maths/probabilites/loi_probabilite.html",
+      "/seconde-maths/probabilites/loi_grands_nombres.html"
     ]
   },
   {
@@ -20,7 +18,8 @@
       "/seconde-maths/equations/equation_produit_nul.html",
       "/seconde-maths/equations/equation_x2_egale_a.html",
       "/seconde-maths/equations/equation_quotient.html",
-      "/seconde-maths/equations/equation_racine_carree.html"
+      "/seconde-maths/equations/equation_racine_carree.html",
+      "/seconde-maths/equations/bilan.html"
     ]
   },
   {
@@ -47,6 +46,18 @@
       "/seconde-maths/racines_carrees/pythagore.html",
       "/seconde-maths/racines_carrees/valeurs_remarquables.html",
       "/seconde-maths/racines_carrees/combinaison_pythagore_thales.html"
+    ]
+  },
+  {
+    "listing": "/seconde-maths/equation_droite/index.html",
+    "items": [
+      "/seconde-maths/equation_droite/vecteur_directeur_equation_cartesienne.html",
+      "/seconde-maths/equation_droite/equation_reduite.html",
+      "/seconde-maths/equation_droite/parallelisme.html",
+      "/seconde-maths/equation_droite/position_relative_droites.html",
+      "/seconde-maths/equation_droite/droites_remarquables_triangle.html",
+      "/seconde-maths/equation_droite/systemes_resolution_graphique.html",
+      "/seconde-maths/equation_droite/systemes_resolution_algebrique.html"
     ]
   },
   {
@@ -80,13 +91,17 @@
       "/seconde-maths/ensembles_nombres/index.html",
       "/seconde-maths/fonctions_affines/index.html",
       "/seconde-maths/vecteurs_translation/index.html",
-      "/seconde-maths/fonctions_reference/index.html",
-      "/seconde-maths/generalites_fonctions/index.html",
-      "/seconde-maths/geometrie_repere/index.html",
       "/seconde-maths/intervalles_inegalites/index.html",
-      "/seconde-maths/inequations/index.html",
+      "/seconde-maths/racines_carrees/index.html",
+      "/seconde-maths/geometrie_repere/index.html",
+      "/seconde-maths/equations/index.html",
+      "/seconde-maths/generalites_fonctions/index.html",
       "/seconde-maths/probabilites/index.html",
-      "/seconde-maths/equations/index.html"
+      "/seconde-maths/inequations/index.html",
+      "/seconde-maths/fonctions_reference/index.html",
+      "/seconde-maths/information_chiffree/index.html",
+      "/seconde-maths/equation_droite/index.html",
+      "/seconde-maths/statistiques/index.html"
     ]
   },
   {
@@ -114,6 +129,18 @@
     ]
   },
   {
+    "listing": "/seconde-maths/statistiques/index.html",
+    "items": [
+      "/seconde-maths/statistiques/linearite_moyenne.html",
+      "/seconde-maths/statistiques/ecart_type.html",
+      "/seconde-maths/statistiques/influence_ajout_suppression.html",
+      "/seconde-maths/statistiques/classes_effectifs_representations.html",
+      "/seconde-maths/statistiques/effectifs_cumules_moyenne_mediane.html",
+      "/seconde-maths/statistiques/python_classes.html",
+      "/seconde-maths/statistiques/comparer_series.html"
+    ]
+  },
+  {
     "listing": "/seconde-maths/inequations/index.html",
     "items": [
       "/seconde-maths/inequations/signe_fonction_affine.html",
@@ -134,11 +161,24 @@
     ]
   },
   {
-    "listing": "/seconde-maths/probabilites/index.html",
+    "listing": "/seconde-maths/fonctions_reference/index.html",
     "items": [
-      "/seconde-maths/probabilites/experience_aleatoire.html",
-      "/seconde-maths/probabilites/loi_probabilite.html",
-      "/seconde-maths/probabilites/loi_grands_nombres.html"
+      "/seconde-maths/fonctions_reference/fonction_carre.html",
+      "/seconde-maths/fonctions_reference/fonction_inverse.html",
+      "/seconde-maths/fonctions_reference/fonction_racine_carree.html",
+      "/seconde-maths/fonctions_reference/fonction_valeur_absolue.html",
+      "/seconde-maths/fonctions_reference/position_relative_courbes.html"
+    ]
+  },
+  {
+    "listing": "/seconde-maths/information_chiffree/index.html",
+    "items": [
+      "/seconde-maths/information_chiffree/proportion.html",
+      "/seconde-maths/information_chiffree/taux_evolution_coefficient_multiplicateur.html",
+      "/seconde-maths/information_chiffree/evolutions_successives.html",
+      "/seconde-maths/information_chiffree/evolution_reciproque.html",
+      "/seconde-maths/information_chiffree/tableau_croise_frequence_conditionnelle.html",
+      "/seconde-maths/information_chiffree/python_fichier_individus.html"
     ]
   },
   {
