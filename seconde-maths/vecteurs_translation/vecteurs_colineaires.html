@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Définition, tester la colinéarité - Caractériser alignement et parallélisme par la colinéarité">
+<meta name="description" content="Colinéarité, alignement, parallélisme">
 
-<title>Vecteurs colinéaires et applications – Mathématiques — Christophe Deguil</title>
+<title>Vecteurs colinéaires – Mathématiques — Christophe Deguil</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -233,7 +233,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/vecteurs_translation/index.html">Chapitre 3 : Vecteurs — Translation</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/vecteurs_translation/vecteurs_colineaires.html">Vecteurs colinéaires et applications</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/vecteurs_translation/index.html">Chapitre 3 : Vecteurs — Translation</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/vecteurs_translation/vecteurs_colineaires.html">Vecteurs colinéaires</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -259,12 +259,41 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
+ <span class="menu-text">Stage de pré-rentrée</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/jour1.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/jour2.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/jour3.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/jour4.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/jour5.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/index.html" class="sidebar-item-text sidebar-link">
@@ -317,13 +346,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Chapitre 2 : Fonctions affines</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/fonctions_affines/index.html" class="sidebar-item-text sidebar-link">
@@ -351,7 +380,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/fonctions_affines/appartenance_droite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Appartenance d’un point à une droite</span></a>
+ <span class="menu-text">Appartenance d’un point à la représentation graphique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -363,7 +392,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/fonctions_affines/resolution_equations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Résolution d’équations — intersection</span></a>
+ <span class="menu-text">Intersection de droites</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -382,13 +411,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Chapitre 3 : Vecteurs — Translation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/vecteurs_translation/index.html" class="sidebar-item-text sidebar-link">
@@ -434,7 +463,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/vecteurs_translation/vecteurs_colineaires.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Vecteurs colinéaires et applications</span></a>
+ <span class="menu-text">Vecteurs colinéaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -447,609 +476,366 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 4 : Intervalle et inégalités</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 4 : Intervalles, Inégalités et Valeur absolue</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/inegalite_encadrement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Inégalité et encadrement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/notion_intervalle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Notion d’intervalle</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/operations_intervalles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Opérations sur les intervalles</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/ordre_comparaison.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ordre et comparaison de deux quantités</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/resolution_inequations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Résolution d’inéquations du premier degré</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/valeur_absolue_distance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Valeur absolue et distance</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/valeur_absolue_intervalles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Intervalles, valeur absolue et valeur approchée</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 5 : Les racines carrées</span></a>
+ <span class="menu-text">Chapitre 4 : Intervalle et inégalités</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 5 : Racines carrées</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Définition et premières propriétés</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/inegalite_encadrement.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/calculer_racines.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Calculer avec des racines carrées</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/notion_intervalle.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/rationalisation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Rationalisation du dénominateur</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/operations_intervalles.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/comparer_racines.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Comparer des réels avec des racines carrées</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/ordre_comparaison.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/racine2_irrationnel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Le nombre √2 est irrationnel</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/resolution_inequations.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/pythagore.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Théorème de Pythagore et Thalès</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/valeur_absolue_distance.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/valeurs_remarquables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Valeurs remarquables de cosinus, sinus et tangente</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/combinaison_pythagore_thales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/valeur_absolue_intervalles.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 6 : Géométrie repérée</span></a>
+ <span class="menu-text">Chapitre 5 : Les racines carrées</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 6 : Géométrie repérée</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/coordonnees_vecteur.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Coordonnées d’un vecteur</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/definition.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/somme_produit_vecteurs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Somme de deux vecteurs et produit par un réel</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/calculer_racines.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/vecteur_ab_norme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Coordonnées de AB, norme et distance</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/rationalisation.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/milieu_segment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Milieu d’un segment</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/comparer_racines.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/colinearite_determinant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Colinéarité et déterminant de deux vecteurs</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/racine2_irrationnel.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/aire_parallelogramme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Approfondissement : aire d’un parallélogramme</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/pythagore.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan — carte mentale</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/valeurs_remarquables.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/racines_carrees/combinaison_pythagore_thales.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 7 : Équations</span></a>
+ <span class="menu-text">Chapitre 6 : Géométrie repérée</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 7 : Équations</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/developper_factoriser.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Développer, factoriser, réduire</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/coordonnees_vecteur.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/distributivite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Distributivité</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/somme_produit_vecteurs.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/identites_remarquables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Identités remarquables</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/vecteur_ab_norme.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/meme_denominateur.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mise au même dénominateur d’expressions littérales</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/milieu_segment.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/ensemble_resolution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ensemble de résolution et valeurs interdites</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/colinearite_determinant.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/equation_produit_nul.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équation produit nul</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/aire_parallelogramme.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/equation_x2_egale_a.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équation du type x² = a</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/equation_quotient.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équation quotient</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/equation_racine_carree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équation avec une racine carrée</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan Equation</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/bilan.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 8 : Généralités sur les fonctions</span></a>
+ <span class="menu-text">Chapitre 7 : Équations</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 8 : Généralités sur les fonctions</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/ensemble_definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ensemble de définition</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/developper_factoriser.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/tableau_valeurs_representation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tableau de valeurs et représentation graphique</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/distributivite.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/resolution_graphique.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Résolution graphique d’équations et d’inéquations</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/identites_remarquables.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/variations_tableau.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonctions croissante, décroissante et tableau de variations</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/meme_denominateur.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/extremums.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extremums d’une fonction</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/ensemble_resolution.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/variations_avec_python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Avec Python</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/equation_produit_nul.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equations/equation_x2_egale_a.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equations/equation_quotient.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equations/equation_racine_carree.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equations/bilan.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 9 : Probabilités</span></a>
+ <span class="menu-text">Chapitre 8 : Généralités sur les fonctions</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/probabilites/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 9 : Probabilités</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/generalites_fonctions/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/probabilites/experience_aleatoire.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Expérience aléatoire, univers et événements</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/generalites_fonctions/ensemble_definition.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/probabilites/loi_probabilite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Loi de probabilité</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/generalites_fonctions/tableau_valeurs_representation.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/probabilites/loi_grands_nombres.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Loi des grands nombres</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/generalites_fonctions/resolution_graphique.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/generalites_fonctions/variations_tableau.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/generalites_fonctions/extremums.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/generalites_fonctions/variations_avec_python.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 10 : Inéquations produit/quotient et graphique</span></a>
+ <span class="menu-text">Chapitre 9 : Probabilités</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/inequations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 10 : Inéquations produit/quotient et graphique</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/probabilites/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/inequations/signe_fonction_affine.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe d’une fonction affine</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/probabilites/experience_aleatoire.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/inequations/inequation_produit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe d’un produit</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/probabilites/loi_probabilite.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/inequations/inequation_quotient.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe d’un quotient</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/inequations/resolution_graphique_inequation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Résolution graphique d’une inéquation</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/probabilites/loi_grands_nombres.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 11 : Fonctions de référence</span></a>
+ <span class="menu-text">Chapitre 10 : Inéquations produit/quotient et graphique</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 11 : Fonctions de référence</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/inequations/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/fonction_carre.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction carré</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/inequations/signe_fonction_affine.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/fonction_inverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction inverse</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/inequations/inequation_produit.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/fonction_racine_carree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction racine carrée</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/inequations/inequation_quotient.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/fonction_valeur_absolue.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction valeur absolue</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/position_relative_courbes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Position relative des courbes de référence</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/inequations/resolution_graphique_inequation.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 12 : Informations chiffrées</span></a>
+ <span class="menu-text">Chapitre 11 : Fonctions de référence</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 12 : Informations chiffrées</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/proportion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Proportion et pourcentage</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/fonction_carre.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/taux_evolution_coefficient_multiplicateur.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Taux d’évolution et coefficient multiplicateur</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/fonction_inverse.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/evolutions_successives.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Évolutions successives</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/fonction_racine_carree.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/evolution_reciproque.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Évolution réciproque</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/fonction_valeur_absolue.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/tableau_croise_frequence_conditionnelle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tableau croisé et fréquence conditionnelle</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/python_fichier_individus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Traiter un fichier d’individus en Python</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/position_relative_courbes.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 13 : Équation de droites</span></a>
+ <span class="menu-text">Chapitre 12 : Informations chiffrées</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équation de droites</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/vecteur_directeur_equation_cartesienne.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vecteur directeur et équation cartésienne</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/proportion.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/equation_reduite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équations réduites d’une droite</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/taux_evolution_coefficient_multiplicateur.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/parallelisme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équations cartésiennes et parallélisme</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/evolutions_successives.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/position_relative_droites.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Position relative de deux droites</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/evolution_reciproque.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/droites_remarquables_triangle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Application géométrique — Droites remarquables d’un triangle</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/tableau_croise_frequence_conditionnelle.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/systemes_resolution_graphique.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Systèmes d’équations — définitions et résolution graphique</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/systemes_resolution_algebrique.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Systèmes d’équations — résolution algébrique</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/python_fichier_individus.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 14 : Statistiques</span></a>
+ <span class="menu-text">Chapitre 13 : Équation de droites</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">seconde-maths/equation_droite/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/vecteur_directeur_equation_cartesienne.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/equation_reduite.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/parallelisme.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/position_relative_droites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/droites_remarquables_triangle.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/systemes_resolution_graphique.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/systemes_resolution_algebrique.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
  <span class="menu-text">Chapitre 14 : Statistiques</span></a>
-  </div>
-</li>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/linearite_moyenne.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Linéarité de la moyenne</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/ecart_type.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Écart type</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/linearite_moyenne.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/influence_ajout_suppression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Influence de l’ajout ou de la suppression d’une valeur</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/ecart_type.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/classes_effectifs_representations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Classes, effectifs et représentations graphiques</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/influence_ajout_suppression.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/effectifs_cumules_moyenne_mediane.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Effectifs cumulés, moyenne et médiane d’une série en classes</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/classes_effectifs_representations.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/python_classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Traiter des classes en Python</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/effectifs_cumules_moyenne_mediane.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/comparer_series.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Comparer deux séries statistiques</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/python_classes.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/statistiques/comparer_series.qmd</span>
+  </li>
       </ul>
   </li>
     </ul>
@@ -1062,22 +848,22 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#vecteurs-colinéaires" id="toc-vecteurs-colinéaires" class="nav-link active" data-scroll-target="#vecteurs-colinéaires">Vecteurs colinéaires</a></li>
-  <li><a href="#alignement-er-parallélisme" id="toc-alignement-er-parallélisme" class="nav-link" data-scroll-target="#alignement-er-parallélisme">Alignement er parallélisme</a></li>
+  <li><a href="#définition" id="toc-définition" class="nav-link active" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#alignement-et-parallélisme" id="toc-alignement-et-parallélisme" class="nav-link" data-scroll-target="#alignement-et-parallélisme">Alignement et parallélisme</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/vecteurs_translation/index.html">Chapitre 3 : Vecteurs — Translation</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/vecteurs_translation/vecteurs_colineaires.html">Vecteurs colinéaires et applications</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../seconde-maths/vecteurs_translation/index.html">Chapitre 3 : Vecteurs — Translation</a></li><li class="breadcrumb-item"><a href="../../seconde-maths/vecteurs_translation/vecteurs_colineaires.html">Vecteurs colinéaires</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Vecteurs colinéaires et applications</h1>
+<h1 class="title">Vecteurs colinéaires</h1>
 </div>
 
 <div>
   <div class="description">
-    Définition, tester la colinéarité - Caractériser alignement et parallélisme par la colinéarité
+    Colinéarité, alignement, parallélisme
   </div>
 </div>
 
@@ -1094,8 +880,8 @@ window.Quarto = {
 </header>
 
 
-<section id="vecteurs-colinéaires" class="level2">
-<h2 class="anchored" data-anchor-id="vecteurs-colinéaires">Vecteurs colinéaires</h2>
+<section id="définition" class="level2">
+<h2 class="anchored" data-anchor-id="définition">Définition</h2>
 <div class="bloc def">
 <p><span class="bloc-titre">Définition : Vecteurs colinéaires</span></p>
 <p>Deux vecteurs <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> sont <strong>colinéaires</strong> s’il existe un réel <span class="math inline">\(k\)</span> tel que <span class="math inline">\(\ve{u} = k\,\ve{v}\)</span> (ou <span class="math inline">\(\ve{v} = k\,\ve{u}\)</span>).</p>
@@ -1106,12 +892,12 @@ window.Quarto = {
 <p><span class="math display">\[\ve{v} = 1{,}5\,\ve{u} \qquad \text{et} \qquad \ve{w} = -2{,}3\,\ve{u}\]</span></p>
 <p>Les vecteurs <span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{w}\)</span> sont colinéaires.</p>
 <div style="text-align: center;">
-<p><img src="../../image/seconde/Vecteurs_Translation_colineaire2.png" style="width: 25%;"></p>
+<p><img src="../../image/seconde/Vecteurs_Translation_colineaire2.png" style="width: 30%;"></p>
 </div>
 </div>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span></p>
-<p>Deux vecteurs sont colinéaires si et seulement si ils sont de même direction (ou de directions opposées).</p>
+<p>Deux vecteurs non nuls sont colinéaires si et seulement s’ils ont la <strong>même direction</strong>, qu’ils soient de même sens ou de sens opposés.</p>
 </div>
 <div class="bloc sfc">
 <div class="bloc-titre">
@@ -1124,12 +910,32 @@ Savoir-Faire :<span class="exemp-extra"> Tester la colinéarité — Raisonner</
 Afficher la correction :
 </summary>
 <p><span class="math display">\[\ve{v} = \ve{AC}-2\ve{AB} = -(2\ve{AB}-\ve{AC}) = -\ve{u}\]</span></p>
-<p>Les vecteurs sont colinéaires.</p>
+<p>Les vecteurs sont colinéaires, ils sont même opposés.</p>
+</details>
+</div>
+<div class="bloc sfc">
+<div class="bloc-titre">
+Savoir-Faire :<span class="exemp-extra"> Reconnaître graphiquement des vecteurs colinéaires — Représenter</span>
+</div>
+<p>Les vecteurs <span class="math inline">\(\ve{u}\)</span>, <span class="math inline">\(\ve{v}\)</span>, <span class="math inline">\(\ve{w}\)</span> et <span class="math inline">\(\ve{r}\)</span> sont représentés sur le quadrillage ci-dessous.</p>
+<div style="text-align: center;">
+<p><img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig6.png" style="width: 40%;"></p>
+</div>
+<p>Parmi les vecteurs <span class="math inline">\(\ve{v}\)</span>, <span class="math inline">\(\ve{w}\)</span> et <span class="math inline">\(\ve{r}\)</span>, lesquels sont colinéaires à <span class="math inline">\(\ve{u}\)</span> ? Le cas échéant, donner le réel <span class="math inline">\(k\)</span> correspondant.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<ul>
+<li>On remarque que <span class="math inline">\(\ve{v}=-2\ve{u}\)</span> : <span class="math inline">\(\ve{v}\)</span> et <span class="math inline">\(\ve{u}\)</span> sont colinéaires.</li>
+<li>On remarque que <span class="math inline">\(\ve{r}=3\ve{u}\)</span> : <span class="math inline">\(\ve{r}\)</span> et <span class="math inline">\(\ve{u}\)</span> sont colinéaires.</li>
+<li><span class="math inline">\(\ve{w}\)</span> n’a pas la même direction que <span class="math inline">\(\ve{u}\)</span> : il n’existe aucun réel <span class="math inline">\(k\)</span> tel que <span class="math inline">\(\ve{w}=k\ve{u}\)</span>, donc <span class="math inline">\(\ve{w}\)</span> et <span class="math inline">\(\ve{u}\)</span> ne sont pas colinéaires.</li>
+</ul>
 </details>
 </div>
 </section>
-<section id="alignement-er-parallélisme" class="level2">
-<h2 class="anchored" data-anchor-id="alignement-er-parallélisme">Alignement er parallélisme</h2>
+<section id="alignement-et-parallélisme" class="level2">
+<h2 class="anchored" data-anchor-id="alignement-et-parallélisme">Alignement et parallélisme</h2>
 <div class="bloc rem">
 <p><span class="bloc-titre">Idée fondamentale : </span></p>
 <p>Un vecteur permet de traduire des propriétés géométriques (parallélisme, alignement, milieu) en égalités vectorielles.</p>
@@ -1143,33 +949,11 @@ Afficher la correction :
 </ol>
 </div>
 <div class="bloc rem">
-<p><span class="bloc-titre">Point méthode — démontrer un alignement ou un parallélisme : </span></p>
-<p><strong>Pour montrer que <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> sont alignés :</strong> exprimer <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AC}\)</span> dans la même base vectorielle, puis exhiber <span class="math inline">\(k\)</span> tel que <span class="math inline">\(\ve{AB} = k\,\ve{AC}\)</span>.</p>
-<p><strong>Pour montrer que <span class="math inline">\((AB)\parallel(CD)\)</span> :</strong> exprimer <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{CD}\)</span>, puis exhiber <span class="math inline">\(k\)</span> tel que <span class="math inline">\(\ve{AB} = k\,\ve{CD}\)</span>.</p>
-</div>
-<div class="bloc sfc">
-<div class="bloc-titre">
-Savoir-Faire :<span class="exemp-extra"> Démontrer un parallélisme — Calculer, Raisonner</span>
-</div>
-<p><span class="math inline">\(ABC\)</span> est un triangle. Les points <span class="math inline">\(I\)</span> et <span class="math inline">\(J\)</span> sont définis par <span class="math inline">\(\ve{AI} = \dfrac{1}{3}\ve{AB}\)</span> et <span class="math inline">\(\ve{AJ} = \dfrac{1}{3}\ve{AC}\)</span>.</p>
-<p>Exprimer <span class="math inline">\(\ve{IJ}\)</span> en fonction de <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AC}\)</span>, puis montrer que <span class="math inline">\((IJ)\parallel(BC)\)</span>.</p>
-<details class="bloc cor">
-<summary>
-Afficher la correction :
-</summary>
-<p><em><strong>Point clef</strong> : On introduit le point <span class="math inline">\(A\)</span> pour faire apparaître les données de l’énoncé : <span class="math inline">\(\ve{AI}\)</span> par exemple.</em></p>
-<p><span class="math display">\[\ve{IJ} = \ve{IA}+\ve{AJ} = -\frac{1}{3}\ve{AB}+\frac{1}{3}\ve{AC} = \frac{1}{3}(\ve{AC}-\ve{AB}) = \frac{1}{3}\ve{BC}\]</span></p>
-<p>Ainsi <span class="math inline">\(\ve{IJ} = \dfrac{1}{3}\ve{BC}\)</span> : les vecteurs sont colinéaires, donc <span class="math inline">\((IJ)\parallel(BC)\)</span>.</p>
-<p>On remarque aussi que <span class="math inline">\(IJ = \dfrac{1}{3}BC\)</span>.</p>
-</details>
-</div>
-<div class="bloc rem">
-<p><span class="bloc-titre">Remarque : Combinaison linéaire et colinéarité</span></p>
-<ul>
-<li><p>Exprimer un vecteur sous la forme <span class="math inline">\(\alpha\,\ve{AB}+\beta\,\ve{AC}\)</span> (où <span class="math inline">\(\alpha, \beta \in \R\)</span>) s’appelle écrire ce vecteur comme <strong>combinaison linéaire</strong> de <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AC}\)</span> ;</p></li>
-<li><p>Lorsque <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AC}\)</span> ne sont pas colinéaires, cette décomposition est <strong>unique</strong> ;</p></li>
-</ul>
-<p>Ainsi, pour montrer que deux vecteurs <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> sont colinéaires, on peut décomposer <span class="math inline">\(\ve{u}\)</span> et <span class="math inline">\(\ve{v}\)</span> en fonction de <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AC}\)</span>, et montrer que les coefficient obtenues sont proportionnelles.</p>
+<p><span class="bloc-titre">Point méthode — Démontrer un alignement ou un parallélisme : </span></p>
+<p><strong>Pour montrer que <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span> sont alignés :</strong> on montre que <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AC}\)</span> sont colinéaires, en exhibant un réel <span class="math inline">\(k\)</span> tel que <span class="math inline">\(\ve{AB} = k\,\ve{AC}\)</span>.</p>
+<p><strong>Pour montrer que <span class="math inline">\((AB)\parallel(CD)\)</span> :</strong> on montre que <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{CD}\)</span> sont colinéaires, en exhibant un réel <span class="math inline">\(k\)</span> tel que <span class="math inline">\(\ve{AB} = k\,\ve{CD}\)</span>.</p>
+<p><strong>En pratique :</strong> on écrit les deux vecteurs comme combinaisons linéaires des deux mêmes vecteurs non colinéaires, par exemple <span class="math inline">\(\alpha\,\ve{AB}+\beta\,\ve{AC}\)</span>. Cette décomposition est alors <strong>unique</strong> : les deux vecteurs sont colinéaires si et seulement si leurs coefficients sont proportionnels.</p>
+<p><strong>Attention :</strong> il faut trouver un <strong>même</strong> réel <span class="math inline">\(k\)</span> pour les deux coefficients. Ne jamais conclure à la colinéarité en ne comparant qu’un seul coefficient.</p>
 </div>
 <div class="bloc sfc">
 <div class="bloc-titre">
@@ -1181,34 +965,120 @@ Savoir-Faire :<span class="exemp-extra"> Alignement de trois points — Raisonne
 <summary>
 Afficher la correction :
 </summary>
-<p><em><strong>Point clef</strong> : pour montrer que trois points <span class="math inline">\(A\)</span>, <span class="math inline">\(M\)</span>, <span class="math inline">\(N\)</span> sont alignés, on montre que les vecteurs <span class="math inline">\(\ve{AM}\)</span> et <span class="math inline">\(\ve{AN}\)</span> sont colinéaires.</em></p>
+<p><em>Point clef : pour montrer que trois points <span class="math inline">\(A\)</span>, <span class="math inline">\(M\)</span>, <span class="math inline">\(N\)</span> sont alignés, on montre que les vecteurs <span class="math inline">\(\ve{AM}\)</span> et <span class="math inline">\(\ve{AN}\)</span> sont colinéaires.</em></p>
 <p><span class="math display">\[\ve{AN} = 4\ve{AB} + 2\ve{AC} = 2(2\ve{AB}+\ve{AC}) = 2\,\ve{AM}\]</span></p>
 <p>Les vecteurs <span class="math inline">\(\ve{AN}\)</span> et <span class="math inline">\(\ve{AM}\)</span> sont colinéaires, donc les droites <span class="math inline">\((AM)\)</span> et <span class="math inline">\((AN)\)</span> sont parallèles. Or <span class="math inline">\(A\)</span> appartient aux deux droites, donc les droites sont confondues, donc les points <span class="math inline">\(A\)</span>, <span class="math inline">\(M\)</span>, <span class="math inline">\(N\)</span> sont <strong>alignés</strong>.</p>
 </details>
 </div>
 <div class="bloc ex">
 <div class="bloc-titre">
-Exercice :<span class="exemp-extra"> Parallélisme par les vecteurs — Calculer, Raisonner</span>
+Exercice :<span class="exemp-extra"> Parallélisme et alignement par décomposition — Calculer, Raisonner</span>
 </div>
-<p><span class="math inline">\(ABC\)</span> est un triangle. Les points <span class="math inline">\(I\)</span> et <span class="math inline">\(J\)</span> sont définis par <span class="math inline">\(\ve{AI} = \dfrac{1}{3}\ve{AB}\)</span> et <span class="math inline">\(\ve{AJ} = 3\ve{AC}\)</span>.</p>
+<p>Soit <span class="math inline">\(ABC\)</span> un triangle, <span class="math inline">\(M\)</span> le milieu de <span class="math inline">\([AB]\)</span>, et <span class="math inline">\(N\)</span>, <span class="math inline">\(P\)</span> les points définis par <span class="math display">\[\ve{AN} = \frac13\ve{AC} \qquad \text{et} \qquad \ve{AP} = 2\ve{AB}-\ve{AC}\]</span></p>
 <ol type="1">
-<li>Exprimer <span class="math inline">\(\ve{IC}\)</span> et <span class="math inline">\(\ve{BJ}\)</span> en fonction de <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AC}\)</span>.</li>
+<li>Faire une figure.</li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p><span class="math display">\[\ve{IC} = \ve{IA}+\ve{AC} = -\frac{1}{3}\ve{AB}+\ve{AC} \quad \text{et} \quad \ve{BJ} = \ve{BA}+\ve{AJ} = -\ve{AB}+3\ve{AC}\]</span></p>
+<div style="text-align: center;">
+<p><img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig7.png" style="width: 50%;"></p>
+</div>
 </details>
 <ol start="2" type="1">
-<li>Montrer que les droites <span class="math inline">\((IC)\)</span> et <span class="math inline">\((BJ)\)</span> sont parallèles.</li>
+<li>Exprimer <span class="math inline">\(\ve{MN}\)</span> et <span class="math inline">\(\ve{BC}\)</span> en fonction de <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AC}\)</span>.</li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p><span class="math display">\[\ve{BJ} = -\ve{AB}+3\ve{AC} = 3\!\left(-\frac{1}{3}\ve{AB}+\ve{AC}\right) = 3\,\ve{IC}\]</span></p>
-<p>Les vecteurs <span class="math inline">\(\ve{BJ}\)</span> et <span class="math inline">\(\ve{IC}\)</span> sont colinéaires donc les droites <span class="math inline">\((IC)\)</span> et <span class="math inline">\((BJ)\)</span> sont <strong>parallèles</strong>.</p>
+<p><span class="math inline">\(M\)</span> est le milieu de <span class="math inline">\([AB]\)</span>, donc <span class="math inline">\(\ve{MA}=-\dfrac12\ve{AB}\)</span>. D’après la relation de Chasles, <span class="math display">\[\ve{MN} = \ve{MA}+\ve{AN} = -\frac12\ve{AB}+\frac13\ve{AC} \et \ve{BC} = \ve{BA}+\ve{AC} = -\ve{AB}+\ve{AC}\]</span></p>
+</details>
+<ol start="3" type="1">
+<li>Les droites <span class="math inline">\((MN)\)</span> et <span class="math inline">\((BC)\)</span> sont-elles parallèles ?</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Supposons qu’il existe un réel <span class="math inline">\(k\)</span> tel que <span class="math inline">\(\ve{MN}=k\,\ve{BC}\)</span>, c’est-à-dire <span class="math display">\[-\frac12\ve{AB}+\frac13\ve{AC} = -k\,\ve{AB}+k\,\ve{AC}\]</span></p>
+<p>Les vecteurs <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AC}\)</span> ne sont pas colinéaires, donc la décomposition est unique : <span class="math inline">\(k=\dfrac12\)</span> et <span class="math inline">\(k=\dfrac13\)</span>, ce qui est impossible.</p>
+<p>Les vecteurs <span class="math inline">\(\ve{MN}\)</span> et <span class="math inline">\(\ve{BC}\)</span> ne sont pas colinéaires : les droites <span class="math inline">\((MN)\)</span> et <span class="math inline">\((BC)\)</span> ne sont <strong>pas parallèles</strong>.</p>
+</details>
+<ol start="4" type="1">
+<li>Exprimer <span class="math inline">\(\ve{MP}\)</span> en fonction de <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AC}\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>D’après la relation de Chasles, <span class="math display">\[\ve{MP} = \ve{MA}+\ve{AP} = -\frac12\ve{AB}+2\ve{AB}-\ve{AC} = \frac32\ve{AB}-\ve{AC}\]</span></p>
+</details>
+<ol start="5" type="1">
+<li>Montrer que les points <span class="math inline">\(M\)</span>, <span class="math inline">\(N\)</span> et <span class="math inline">\(P\)</span> sont alignés.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math display">\[\ve{MP} = \frac32\ve{AB}-\ve{AC} = -3\left(-\frac12\ve{AB}+\frac13\ve{AC}\right) = -3\,\ve{MN}\]</span></p>
+<p>Les vecteurs <span class="math inline">\(\ve{MP}\)</span> et <span class="math inline">\(\ve{MN}\)</span> sont colinéaires, donc les points <span class="math inline">\(M\)</span>, <span class="math inline">\(N\)</span> et <span class="math inline">\(P\)</span> sont <strong>alignés</strong>.</p>
+</details>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Alignement dans un parallélogramme — Calculer, Raisonner</span>
+</div>
+<p>Soit <span class="math inline">\(ABCD\)</span> un parallélogramme et <span class="math inline">\(I\)</span> le milieu de <span class="math inline">\([BC]\)</span>. On note <span class="math inline">\(G\)</span> le point défini par <span class="math inline">\(\ve{AG} = \dfrac{2}{3}\ve{AI}\)</span>.</p>
+<ol type="1">
+<li>Faire une figure.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<div style="text-align: center;">
+<p><img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig8.png" style="width: 40%;"></p>
+</div>
+</details>
+<ol start="2" type="1">
+<li>Exprimer <span class="math inline">\(\ve{AI}\)</span> en fonction de <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AD}\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(I\)</span> est le milieu de <span class="math inline">\([BC]\)</span>, donc <span class="math inline">\(\ve{BI}=\dfrac12\ve{BC}\)</span>. De plus <span class="math inline">\(ABCD\)</span> est un parallélogramme, donc <span class="math inline">\(\ve{BC}=\ve{AD}\)</span>.</p>
+<p>D’après la relation de Chasles, <span class="math display">\[\ve{AI} = \ve{AB}+\ve{BI} = \ve{AB}+\frac12\ve{BC} = \ve{AB}+\frac12\ve{AD}\]</span></p>
+</details>
+<ol start="3" type="1">
+<li>En déduire <span class="math inline">\(\ve{AG}\)</span> en fonction de <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AD}\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math display">\[\ve{AG} = \frac23\ve{AI} = \frac23\left(\ve{AB}+\frac12\ve{AD}\right) = \frac23\ve{AB}+\frac13\ve{AD}\]</span></p>
+</details>
+<ol start="4" type="1">
+<li>Exprimer <span class="math inline">\(\ve{DB}\)</span> et <span class="math inline">\(\ve{DG}\)</span> en fonction de <span class="math inline">\(\ve{AB}\)</span> et <span class="math inline">\(\ve{AD}\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>D’après la relation de Chasles, <span class="math display">\[\ve{DB} = \ve{DA}+\ve{AB} = \ve{AB}-\ve{AD}\]</span> <span class="math display">\[\ve{DG} = \ve{DA}+\ve{AG} = -\ve{AD}+\frac23\ve{AB}+\frac13\ve{AD} = \frac23\ve{AB}-\frac23\ve{AD}\]</span></p>
+</details>
+<ol start="5" type="1">
+<li>Montrer que les points <span class="math inline">\(D\)</span>, <span class="math inline">\(G\)</span> et <span class="math inline">\(B\)</span> sont alignés.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math display">\[\ve{DG} = \frac23\ve{AB}-\frac23\ve{AD} = \frac23\left(\ve{AB}-\ve{AD}\right) = \frac23\ve{DB}\]</span></p>
+<p>Les vecteurs <span class="math inline">\(\ve{DG}\)</span> et <span class="math inline">\(\ve{DB}\)</span> sont colinéaires, donc les points <span class="math inline">\(D\)</span>, <span class="math inline">\(G\)</span> et <span class="math inline">\(B\)</span> sont <strong>alignés</strong>.</p>
 </details>
 </div>
 

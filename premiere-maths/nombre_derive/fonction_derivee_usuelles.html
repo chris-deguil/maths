@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Fonction dérivée, tableau des dérivées usuelles, tangentes et bilan du chapitre.">
+
+<title>Fonction dérivée et dérivées usuelles – Mathématiques — Christophe Deguil</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../premiere-maths/nombre_derive/approximation_affine.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const path = window.location.pathname;
+
+    if (path.includes("/seconde-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+    if (path.includes("/premiere-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+    if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+  });
+</script>
+<script>
+window.MathJax = {
+  tex: {
+    // Charge le package optionnel "enclose" (tu l'avais déjà ; je conserve)
+    packages: {'[+]': ['enclose']},
+
+    // === Macros ===
+    macros: {
+      // --- Constantes / ensembles ---
+      dd: "\\mathrm{d}",
+      e: "\\mathrm{e}",
+      R: "\\mathbb{R}",
+      Z: "\\mathbb{Z}",
+      N: "\\mathbb{N}",
+      Q: "\\mathbb{Q}",
+      C: "\\mathbb{C}",
+      F: "\\mathbb{F}",
+      D: "\\mathbb{D}",
+      epsilon: "\\varepsilon",
+      pgcd: "\\operatorname{pgcd}",
+      Div: "\\operatorname{Div}",
+
+      // --- Mises en forme / utilitaires ---
+      rem: "\\mathbf{Remarque\\ :\\ }",
+      gras: ["\\mathbf{#1}", 1],
+      LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
+      et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
+      llr: "\\Longleftrightarrow",
+      base: ["#1_{\\mathrm{#2}}", 2],
+      abs: ["\\left\\lvert #1 \\right\\rvert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      ve: ["\\overrightarrow{#1}", 1],
+      vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
+
+      OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
+      Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
+      Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
+      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
+      vE: "\\overrightarrow{\\mathscr{E}}",
+      E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
+
+
+      // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
+      // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
+      lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
+
+      // (Optionnel) Pour forcer aussi limsup/liminf :
+      // limsup: ["\\mathop{\\operatorname{lim\\,sup}}\\limits", 0],
+      // liminf: ["\\mathop{\\operatorname{lim\\,inf}}\\limits", 0],
+    }
+  }
+};
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../assets/css/maths.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed maths-theme">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Mathématiques — Christophe Deguil</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../seconde-maths/index.html"> 
+<span class="menu-text">Seconde</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
+<span class="menu-text">Première</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../terminale-maths/index.html"> 
+<span class="menu-text">Terminale</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/chris-deguil/maths"> <i class="bi bi-github" role="img" aria-label="Dépôt GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/nombre_derive/index.html">Chapitre 3 : Nombre dérivé et fonction dérivée</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/nombre_derive/fonction_derivee_usuelles.html">Fonction dérivée et dérivées usuelles</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours de Première</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 0 : Stage de pré-rentrée</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/stage_prerentree/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Stage de pré-rentrée</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/stage_prerentree/jour1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jour 1 : Calcul, équations et fonctions affines</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/stage_prerentree/jour2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jour 2 : Radicaux, inéquations et géométrie repérée</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/stage_prerentree/jour3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jour 3 : Fonctions, variations et probabilités</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/stage_prerentree/jour4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jour 4 : Optimisation, géométrie repérée et probabilités</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/stage_prerentree/jour5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jour 5 : Vecteurs, droites paramétrées et probabilités</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 1 : Second degré</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/second_degre/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Second degré</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/second_degre/definition_forme_canonique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition et forme canonique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/second_degre/equation_racine_second_degre.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Équation et racine d’un polynôme du second degré</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/second_degre/factorisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Factorisation du trinôme</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/second_degre/signe_trinome.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Signe d’un polynôme de degré 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/second_degre/liens_racines_coefficients.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Liens entre racines et coefficients</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/second_degre/parabole_representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">La parabole — représentation graphique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/second_degre/axe_symetrie_variations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Axe de symétrie et variations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/second_degre/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bilan : représentation graphique et équation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 2 : Suites numériques</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suites_numeriques/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites numériques : généralités</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suites_numeriques/notion_suites.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion de suites numériques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suites_numeriques/suites_fonctionnelles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites fonctionnelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suites_numeriques/suites_recurrence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suites définies par une relation de récurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suites_numeriques/liste_termes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Liste des termes d’une suite numérique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suites_numeriques/variations_suite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variations d’une suite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suites_numeriques/notion_limite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion de limite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suites_numeriques/algorithme_somme_seuil.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme et programmation : somme et seuil</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/suites_numeriques/exercice_bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercice bilan</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Chapitre 3 : Nombre dérivé et fonction dérivée</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/nombre_derive/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nombre dérivé et fonction dérivée</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/nombre_derive/taux_accroissement_nombre_derive.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Taux d’accroissement et nombre dérivé</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/nombre_derive/fonctions_non_derivables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonctions non dérivables en a</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/nombre_derive/interpretation_geometrique_tangente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interprétation géométrique du nombre dérivé</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/nombre_derive/equation_tangente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Équation de la tangente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/nombre_derive/approximation_affine.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Approximation affine</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../premiere-maths/nombre_derive/fonction_derivee_usuelles.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Fonction dérivée et dérivées usuelles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#fonction-dérivée" id="toc-fonction-dérivée" class="nav-link active" data-scroll-target="#fonction-dérivée">Fonction dérivée</a></li>
+  <li><a href="#dérivées-usuelles" id="toc-dérivées-usuelles" class="nav-link" data-scroll-target="#dérivées-usuelles">Dérivées usuelles</a></li>
+  <li><a href="#bilan" id="toc-bilan" class="nav-link" data-scroll-target="#bilan">Bilan</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../premiere-maths/nombre_derive/index.html">Chapitre 3 : Nombre dérivé et fonction dérivée</a></li><li class="breadcrumb-item"><a href="../../premiere-maths/nombre_derive/fonction_derivee_usuelles.html">Fonction dérivée et dérivées usuelles</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Fonction dérivée et dérivées usuelles</h1>
+</div>
+
+<div>
+  <div class="description">
+    Fonction dérivée, tableau des dérivées usuelles, tangentes et bilan du chapitre.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="fonction-dérivée" class="level2">
+<h2 class="anchored" data-anchor-id="fonction-dérivée">Fonction dérivée</h2>
+<div class="bloc def">
+<p><span class="bloc-titre">Définition : Fonction dérivée</span></p>
+<p>On dit que <span class="math inline">\(f\)</span> est <strong>dérivable sur <span class="math inline">\(I\)</span></strong> si elle est dérivable en tout point <span class="math inline">\(a \in I\)</span>. On appelle alors <strong>fonction dérivée</strong> de <span class="math inline">\(f\)</span> la fonction <span class="math inline">\(f'\)</span> définie sur <span class="math inline">\(I\)</span> par <span class="math inline">\(x \mapsto f'(x)\)</span>.</p>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Déterminer une fonction dérivée — Calculer</span>
+</div>
+<p>Déterminer la fonction dérivée de <span class="math inline">\(f(x) = 2x^2 - 3x + 5\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Pour tout réel <span class="math inline">\(a\)</span> et <span class="math inline">\(h \neq 0\)</span> : <span class="math display">\[\dfrac{f(a+h) - f(a)}{h} = \dfrac{2(a+h)^2 - 3(a+h) + 5 - (2a^2 - 3a + 5)}{h} = \dfrac{4ah + 2h^2 - 3h}{h} = 4a + 2h - 3\]</span> Donc <span class="math inline">\(\displaystyle\lim_{h \to 0}(4a + 2h - 3) = 4a - 3\)</span>. Ainsi, pour tout réel <span class="math inline">\(x\)</span>, la fonction dérivée est <span class="math inline">\(f'(x) = 4x - 3\)</span>.</p>
+</details>
+</div>
+</section>
+<section id="dérivées-usuelles" class="level2">
+<h2 class="anchored" data-anchor-id="dérivées-usuelles">Dérivées usuelles</h2>
+<div class="bloc thm">
+<p><span class="bloc-titre">Théorème : Tableau des dérivées usuelles</span></p>
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr>
+<th>
+Fonction <span class="math inline">\(f\)</span>
+</th>
+<th>
+Domaine de définition
+</th>
+<th>
+Dérivée <span class="math inline">\(f'\)</span>
+</th>
+<th>
+Domaine de dérivabilité
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<span class="math inline">\(k\)</span> (constante)
+</td>
+<td>
+<span class="math inline">\(\R\)</span>
+</td>
+<td>
+<span class="math inline">\(0\)</span>
+</td>
+<td>
+<span class="math inline">\(\R\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(ax\)</span>
+</td>
+<td>
+<span class="math inline">\(\R\)</span>
+</td>
+<td>
+<span class="math inline">\(a\)</span>
+</td>
+<td>
+<span class="math inline">\(\R\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(x^2\)</span>
+</td>
+<td>
+<span class="math inline">\(\R\)</span>
+</td>
+<td>
+<span class="math inline">\(2x\)</span>
+</td>
+<td>
+<span class="math inline">\(\R\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\sqrt{x}\)</span>
+</td>
+<td>
+<span class="math inline">\(\R_+\)</span>
+</td>
+<td>
+<span class="math inline">\(\dfrac{1}{2\sqrt{x}}\)</span>
+</td>
+<td>
+<span class="math inline">\(\R_+^*\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\dfrac{1}{x}\)</span>
+</td>
+<td>
+<span class="math inline">\(\R^*\)</span>
+</td>
+<td>
+<span class="math inline">\(-\dfrac{1}{x^2}\)</span>
+</td>
+<td>
+<span class="math inline">\(\R^*\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<details class="bloc demo">
+<summary>
+Démonstration :
+</summary>
+<ul>
+<li><p><strong>Fonction carrée :</strong> Pour tout <span class="math inline">\(a \in \R\)</span> et <span class="math inline">\(h \neq 0\)</span> : <span class="math display">\[(a+h)^2 - a^2 = 2ah+h^2 \quad \text{donc} \quad \dfrac{f(a+h)-f(a)}{h}=2a+h \xrightarrow[h\to 0]{} 2a.\]</span> Ainsi <span class="math inline">\(f'(a)=2a\)</span>.</p></li>
+<li><p><strong>Fonction racine carrée :</strong> Pour tout <span class="math inline">\(a \in \R_+^*\)</span> et <span class="math inline">\(h \neq 0\)</span> tel que <span class="math inline">\(a+h&gt;0\)</span> : <span class="math display">\[\sqrt{a+h}-\sqrt{a}=\dfrac{h}{\sqrt{a+h}+\sqrt{a}} \quad \text{donc} \quad \dfrac{f(a+h)-f(a)}{h}=\dfrac{1}{\sqrt{a+h}+\sqrt{a}} \xrightarrow[h\to 0]{} \dfrac{1}{2\sqrt{a}}.\]</span> Ainsi <span class="math inline">\(f'(a)=\dfrac{1}{2\sqrt{a}}\)</span>.</p></li>
+<li><p><strong>Fonction inverse :</strong> Pour tout réel <span class="math inline">\(a \neq 0\)</span> et <span class="math inline">\(h \neq 0\)</span> tel que <span class="math inline">\(a+h \neq 0\)</span> : <span class="math display">\[\dfrac{f(a+h)-f(a)}{h}
+= \dfrac{\dfrac{1}{a+h}-\dfrac{1}{a}}{h}
+= \dfrac{a-(a+h)}{ha(a+h)}
+= -\dfrac{1}{a(a+h)} \xrightarrow[h\to 0]{} -\dfrac{1}{a^2}.\]</span> Ainsi <span class="math inline">\(f'(a) = -\dfrac{1}{a^2}\)</span>.</p></li>
+</ul>
+</details>
+<div class="bloc sfc">
+<div class="bloc-titre">
+Savoir-Faire :<span class="exemp-extra"> Tangentes parallèles à une droite donnée — Calculer, Raisonner</span>
+</div>
+<p>Déterminer les tangentes à <span class="math inline">\(\mathcal{C}_f\)</span> où <span class="math inline">\(f(x) = \dfrac{1}{x}\)</span> parallèles à la droite <span class="math inline">\(d : y = -2x + 5\)</span> sur <span class="math inline">\(]0\,;\,+\infty[\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>La fonction <span class="math inline">\(f\)</span> est la fonction inverse, dont on admet pour l’instant que <span class="math inline">\(f'(x) = -\dfrac{1}{x^2}\)</span> pour tout <span class="math inline">\(x \in ]0\,;\,+\infty[\)</span>. <span class="math display">\[T_a \parallel d \Longleftrightarrow f'(a) = -2 \Longleftrightarrow -\dfrac{1}{a^2} = -2 \Longleftrightarrow a^2 = \dfrac{1}{2} \underset{a &gt;0}{\Longleftrightarrow} a = \dfrac{1}{\sqrt{2}}\]</span> Il existe une seule tangente parallèle à <span class="math inline">\(d\)</span>, au point d’abscisse <span class="math inline">\(\dfrac{1}{\sqrt{2}}\)</span>.</p>
+</details>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Tangentes passant par un point extérieur — Raisonner</span>
+</div>
+<p>Soit <span class="math inline">\(f(x) = 2x^2 - 3x + 1\)</span>. Déterminer le nombre de tangentes à <span class="math inline">\(\mathcal{C}_f\)</span> passant par <span class="math inline">\((2\,;\,6)\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>La fonction <span class="math inline">\(f\)</span> est une fonction polynôme donc dérivable sur <span class="math inline">\(\R\)</span>. Pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(f'(x) = 4x - 3\)</span>. <span class="math display">\[M(x \,;\, y) \in T_a \Longleftrightarrow y = f'(a)(x-a)+f(a) \Longleftrightarrow T_a \,:\, y= (4a-3)x - 2a^2 + 1\]</span> Ainsi <span class="math display">\[(2\,;\,6) \in T_a \Longleftrightarrow 6 = 2(4a-3) - 2a^2 + 1 \Longleftrightarrow 2a^2 - 8a + 11 = 0\]</span> <span class="math inline">\(\Delta = 64 - 88 &lt; 0\)</span>, donc le polynôme n’admet aucune racine réelle. On en déduit que le point <span class="math inline">\((2\,;\,6)\)</span> n’appartient à aucune tangente de <span class="math inline">\(\mathcal{C}_f\)</span>.</p>
+</details>
+</div>
+<div class="bloc thm">
+<p><span class="bloc-titre">Théorème (admis) : </span></p>
+<div style="overflow-x:auto;">
+<table>
+<thead>
+<tr>
+<th>
+Fonction <span class="math inline">\(f\)</span>
+</th>
+<th>
+Domaine de définition
+</th>
+<th>
+Dérivée <span class="math inline">\(f'\)</span>
+</th>
+<th>
+Domaine de dérivabilité
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<span class="math inline">\(x^n\)</span> (<span class="math inline">\(n \in \N^*\)</span>)
+</td>
+<td>
+<span class="math inline">\(\R\)</span>
+</td>
+<td>
+<span class="math inline">\(nx^{n-1}\)</span>
+</td>
+<td>
+<span class="math inline">\(\R\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\dfrac{1}{x^n}\)</span> (<span class="math inline">\(n \in \N^*\)</span>)
+</td>
+<td>
+<span class="math inline">\(\R^*\)</span>
+</td>
+<td>
+<span class="math inline">\(-\dfrac{n}{x^{n+1}}\)</span>
+</td>
+<td>
+<span class="math inline">\(\R^*\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="bloc sfc">
+<div class="bloc-titre">
+Savoir-Faire :<span class="exemp-extra"> Calculer des dérivées et des tangentes — Calculer</span>
+</div>
+<p>Pour chacune des fonctions suivantes, calculer la dérivée puis l’équation de la tangente au point indiqué.</p>
+<ol type="1">
+<li><span class="math inline">\(f(x) = x^3\)</span> au point d’abscisse <span class="math inline">\(a = 1\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(f\)</span> est la fonction cube donc dérivable sur <span class="math inline">\(\R\)</span>. Pour tout réel <span class="math inline">\(x\)</span>, <span class="math inline">\(f'(x) = 3x^2\)</span>. <span class="math inline">\(f(1) = 1\)</span> et <span class="math inline">\(f'(1) = 3\)</span>. <span class="math display">\[T_1 : y = 3(x-1) + 1 = 3x - 2\]</span></p>
+</details>
+<ol start="2" type="1">
+<li><span class="math inline">\(g(x) = \dfrac{1}{x^2}\)</span> au point d’abscisse <span class="math inline">\(a = 3\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(g\)</span> est rationnelle donc dérivable sur tout intervalle de son ensemble de définition. Pour tout réel <span class="math inline">\(x \in \R^*\)</span>, <span class="math inline">\(g'(x) = -\dfrac{2}{x^3}\)</span>. <span class="math inline">\(g(3) = \dfrac{1}{9}\)</span> et <span class="math inline">\(g'(3) = -\dfrac{2}{27}\)</span>. <span class="math display">\[T_3 : y = -\dfrac{2}{27}(x-3) + \dfrac{1}{9} = -\dfrac{2}{27}x + \dfrac{1}{3}\]</span></p>
+</details>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Tangente et position relative — Calculer, Raisonner</span>
+</div>
+<p>On considère la fonction <span class="math inline">\(f\)</span> définie par <span class="math inline">\(f(x)= 3x^2 - 5x + 3\)</span>, et on note <span class="math inline">\(\mathscr{C}_f\)</span> sa représentation graphique.</p>
+<ol type="1">
+<li>Déterminer l’équation réduite de la tangente à la représentation graphique de <span class="math inline">\(f\)</span> au point d’abscisse <span class="math inline">\(2\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(f\)</span> est une fonction polynôme donc dérivable sur <span class="math inline">\(\R\)</span>. Pour tout <span class="math inline">\(x \in \R\)</span>, <span class="math display">\[f'(x) = 2 \times 3x - 5 = 6x - 5\]</span> On a <span class="math inline">\(f(2) = 3(2)^2 - 5(2) + 3 = 5\)</span> et <span class="math inline">\(f'(2) = 6(2) - 5 = 7\)</span>. L’équation de la tangente est donnée par : <span class="math display">\[M(x \, ;\,y) \in T_2 \Longleftrightarrow y = f'(2)(x-2) + f(2)\Longleftrightarrow y = 7(x-2) + 5\Longleftrightarrow y = 7x - 9\]</span> Ainsi <span class="math inline">\(T_2 : y = 7x - 9\)</span>.</p>
+</details>
+<ol start="2" type="1">
+<li>Déterminer la position relative de la représentation graphique de <span class="math inline">\(f\)</span> par rapport à sa tangente.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Pour étudier la position relative de <span class="math inline">\(\mathcal{C}_f\)</span> par rapport à <span class="math inline">\(T_2\)</span>, on étudie le signe de la différence <span class="math inline">\(f(x) - (7x - 9)\)</span>.</p>
+<p>Pour tout réel <span class="math inline">\(x\)</span> : <span class="math display">\[f(x) - (7x - 9) = 3x^2 - 5x + 3 - 7x + 9= 3x^2 - 12x + 12 = 3(x^2 - 4x + 4) = 3(x - 2)^2\]</span> Comme un carré est toujours positif ou nul et que <span class="math inline">\(3 &gt; 0\)</span>, on en déduit que pour tout réel <span class="math inline">\(x\)</span> : <span class="math display">\[f(x) - (7x - 9) \geqslant 0 \Longleftrightarrow f(x) \geqslant 7x - 9\]</span> La représentation graphique de <span class="math inline">\(f\)</span> est donc située au-dessus de sa tangente <span class="math inline">\(T_2\)</span> sur <span class="math inline">\(\R\)</span>.</p>
+</details>
+</div>
+</section>
+<section id="bilan" class="level2">
+<h2 class="anchored" data-anchor-id="bilan">Bilan</h2>
+<div class="bloc info">
+<p><span class="bloc-titre">À retenir : Résumé — Ce qu’il faut retenir</span></p>
+<div style="overflow-x:auto;">
+<table>
+<tbody>
+<tr>
+<td>
+<strong>Nombre dérivé</strong>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(f'(a) = \displaystyle\lim_{h \to 0} \dfrac{f(a+h)-f(a)}{h}\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Interprétation</strong>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(f'(a)\)</span> = coefficient directeur de la tangente en <span class="math inline">\(a\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Équation de tangente</strong>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(T_a : y = f'(a)(x-a) + f(a)\)</span>
+</td>
+</tr>
+<tr>
+<td>
+<strong>Approximation affine</strong>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(f(a+h) \approx f(a) + hf'(a)\)</span> pour <span class="math inline">\(h\)</span> petit
+</td>
+</tr>
+<tr>
+<td>
+<strong>Tangente verticale</strong>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(\displaystyle\lim_{h\to 0}\dfrac{f(a+h)-f(a)}{h} = \pm\infty\)</span> : <span class="math inline">\(f\)</span> non dérivable en <span class="math inline">\(a\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div class="nav-pages"><a class="prev" href="approximation_affine.html" title="Approximation affine"></a></div>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/chris-deguil\.github\.io\/maths\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../premiere-maths/nombre_derive/approximation_affine.html" class="pagination-link" aria-label="Approximation affine">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Approximation affine</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 — Christophe Deguil</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+<p>Accueil</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:christophe.Deguil@ac-versailles.fr">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

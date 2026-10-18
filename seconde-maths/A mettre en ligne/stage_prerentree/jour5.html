@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Calcul littéral et équations, problèmes, pourcentages, fonctions et un problème de synthèse géométrie-Thalès-fonctions.">
+
+<title>Jour 5 : Synthèse – Mathématiques — Christophe Deguil</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const path = window.location.pathname;
+
+    if (path.includes("/seconde-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+    if (path.includes("/premiere-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+    if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+  });
+</script>
+<script>
+window.MathJax = {
+  tex: {
+    // Charge le package optionnel "enclose" (tu l'avais déjà ; je conserve)
+    packages: {'[+]': ['enclose']},
+
+    // === Macros ===
+    macros: {
+      // --- Constantes / ensembles ---
+      dd: "\\mathrm{d}",
+      e: "\\mathrm{e}",
+      R: "\\mathbb{R}",
+      Z: "\\mathbb{Z}",
+      N: "\\mathbb{N}",
+      Q: "\\mathbb{Q}",
+      C: "\\mathbb{C}",
+      F: "\\mathbb{F}",
+      D: "\\mathbb{D}",
+      epsilon: "\\varepsilon",
+      pgcd: "\\operatorname{pgcd}",
+      Div: "\\operatorname{Div}",
+
+      // --- Mises en forme / utilitaires ---
+      rem: "\\mathbf{Remarque\\ :\\ }",
+      gras: ["\\mathbf{#1}", 1],
+      LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
+      et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
+      llr: "\\Longleftrightarrow",
+      base: ["#1_{\\mathrm{#2}}", 2],
+      abs: ["\\left\\lvert #1 \\right\\rvert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      ve: ["\\overrightarrow{#1}", 1],
+      vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
+
+      OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
+      Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
+      Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
+      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
+      vE: "\\overrightarrow{\\mathscr{E}}",
+      E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
+
+
+      // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
+      // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
+      lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
+
+      // (Optionnel) Pour forcer aussi limsup/liminf :
+      // limsup: ["\\mathop{\\operatorname{lim\\,sup}}\\limits", 0],
+      // liminf: ["\\mathop{\\operatorname{lim\\,inf}}\\limits", 0],
+    }
+  }
+};
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../assets/css/maths.css">
+</head>
+
+<body class="nav-fixed maths-theme">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Mathématiques — Christophe Deguil</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../seconde-maths/index.html"> 
+<span class="menu-text">Seconde</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../premiere-maths/index.html"> 
+<span class="menu-text">Première</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../terminale-maths/index.html"> 
+<span class="menu-text">Terminale</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/chris-deguil/maths"> <i class="bi bi-github" role="img" aria-label="Dépôt GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#calcul-littéral-et-équations" id="toc-calcul-littéral-et-équations" class="nav-link active" data-scroll-target="#calcul-littéral-et-équations">Calcul littéral et équations</a></li>
+  <li><a href="#proportion-et-pourcentage" id="toc-proportion-et-pourcentage" class="nav-link" data-scroll-target="#proportion-et-pourcentage">Proportion et pourcentage</a></li>
+  <li><a href="#fonctions" id="toc-fonctions" class="nav-link" data-scroll-target="#fonctions">Fonctions</a></li>
+  <li><a href="#géométrie-problèmes-de-synthèse" id="toc-géométrie-problèmes-de-synthèse" class="nav-link" data-scroll-target="#géométrie-problèmes-de-synthèse">Géométrie — Problèmes de synthèse</a></li>
+  <li><a href="#raisonnement" id="toc-raisonnement" class="nav-link" data-scroll-target="#raisonnement">Raisonnement</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Jour 5 : Synthèse</h1>
+</div>
+
+<div>
+  <div class="description">
+    Calcul littéral et équations, problèmes, pourcentages, fonctions et un problème de synthèse géométrie-Thalès-fonctions.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="bloc rem">
+<p><span class="bloc-titre">Points travaillés : </span></p>
+<ul>
+<li>Enchaîner développement, factorisation et résolution d’équation.</li>
+<li>Mettre un problème en équation ; calculer une évolution en pourcentage.</li>
+<li>Déterminer l’expression d’une fonction affine ; lire graphiquement les caractéristiques d’une fonction.</li>
+<li>Résoudre une équation du troisième degré en la factorisant.</li>
+<li>Mobiliser plusieurs notions (géométrie, théorème de Thalès, fonctions) dans un même problème.</li>
+</ul>
+</div>
+<section id="calcul-littéral-et-équations" class="level2">
+<h2 class="anchored" data-anchor-id="calcul-littéral-et-équations">Calcul littéral et équations</h2>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Développer, factoriser, résoudre</span>
+</div>
+<ol type="1">
+<li><p>Soit <span class="math inline">\(A = 9x^2 - 49 + (3x + 7)(2x + 3)\)</span>.</p>
+<ol type="a">
+<li>Développer l’expression <span class="math inline">\(A\)</span>.</li>
+</ol></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(A=9x^2-49+6x^2+9x+14x+21=15x^2+23x-28\)</span>.</p>
+</details>
+<ol start="2" type="a">
+<li>Factoriser l’expression <span class="math inline">\(A\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(9x^2-49=(3x-7)(3x+7)\)</span>, donc <span class="math inline">\(A=(3x+7)\big[(3x-7)+(2x+3)\big]=(3x+7)(5x-4)\)</span>.</p>
+</details>
+<ol start="3" type="a">
+<li>Résoudre l’équation <span class="math inline">\(A=0\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(A=0 \iff 3x+7=0\)</span> ou <span class="math inline">\(5x-4=0 \iff x=-\dfrac{7}{3}\)</span> ou <span class="math inline">\(x=\dfrac{4}{5}\)</span>. <span class="math inline">\(\mathcal{S}=\left\{-\dfrac{7}{3};\dfrac{4}{5}\right\}\)</span>.</p>
+</details>
+<ol start="2" type="1">
+<li><p>On considère <span class="math inline">\(E = (3x + 2)^2 - (x - 1)^2\)</span>.</p>
+<ol type="a">
+<li>Développer et réduire <span class="math inline">\(E\)</span>.</li>
+</ol></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(E=(9x^2+12x+4)-(x^2-2x+1)=8x^2+14x+3\)</span>.</p>
+</details>
+<ol start="2" type="a">
+<li>Factoriser <span class="math inline">\(E\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(E=\big[(3x+2)-(x-1)\big]\big[(3x+2)+(x-1)\big]=(2x+3)(4x+1)\)</span>.</p>
+</details>
+<ol start="3" type="a">
+<li>Résoudre l’équation <span class="math inline">\(E = 0\)</span> et l’équation <span class="math inline">\(E=3\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(E=0 \iff (2x+3)(4x+1)=0 \iff x=-\dfrac{3}{2}\)</span> ou <span class="math inline">\(x=-\dfrac{1}{4}\)</span>.</p>
+<p><span class="math inline">\(E=3 \iff 8x^2+14x=0 \iff 2x(4x+7)=0 \iff x=0\)</span> ou <span class="math inline">\(x=-\dfrac{7}{4}\)</span>.</p>
+</details>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Problèmes se ramenant à une équation</span>
+</div>
+<ol type="1">
+<li>L’âge d’un père est le quadruple de celui de son fils. Quel est l’âge du père, sachant que, dans 20 ans, il ne sera plus que le double de celui de son fils ?</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Notons <span class="math inline">\(x\)</span> l’âge actuel du fils, l’âge du père est <span class="math inline">\(4x\)</span>. Dans 20 ans : <span class="math inline">\(4x+20=2(x+20)\)</span>, d’où <span class="math inline">\(2x=20\)</span> et <span class="math inline">\(x=10\)</span>. Le fils a <span class="math inline">\(10\)</span> ans, le père a <span class="math inline">\(40\)</span> ans.</p>
+</details>
+<ol start="2" type="1">
+<li>Bob a le double de l’âge de Joe. Il y a 10 ans, Bob avait quatre fois l’âge de Joe. Quels sont les âges de Bob et de Joe ?</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Notons <span class="math inline">\(x\)</span> l’âge actuel de Joe, l’âge de Bob est <span class="math inline">\(2x\)</span>. Il y a 10 ans : <span class="math inline">\(2x-10=4(x-10)\)</span>, d’où <span class="math inline">\(30=2x\)</span> et <span class="math inline">\(x=15\)</span>. Joe a <span class="math inline">\(15\)</span> ans, Bob a <span class="math inline">\(30\)</span> ans.</p>
+</details>
+<ol start="3" type="1">
+<li>Il y a 55 ans, l’âge d’un père dépassait de 25 ans l’âge de son fils. Dans 14 ans, l’âge du fils sera égal aux trois quarts de l’âge de son père. Quels sont les âges du père et du fils ?</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Notons <span class="math inline">\(P\)</span> l’âge actuel du père et <span class="math inline">\(F\)</span> celui du fils. Il y a 55 ans : <span class="math inline">\(P-55=(F-55)+25\)</span>, donc <span class="math inline">\(P=F+25\)</span>. Dans 14 ans : <span class="math inline">\(F+14=\dfrac{3}{4}(P+14)\)</span>. En remplaçant <span class="math inline">\(P\)</span> : <span class="math inline">\(4F+56=3(F+39)\)</span>, soit <span class="math inline">\(F=61\)</span> et <span class="math inline">\(P=86\)</span>. Le fils a <span class="math inline">\(61\)</span> ans, le père a <span class="math inline">\(86\)</span> ans.</p>
+</details>
+</div>
+</section>
+<section id="proportion-et-pourcentage" class="level2">
+<h2 class="anchored" data-anchor-id="proportion-et-pourcentage">Proportion et pourcentage</h2>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Pourcentages</span>
+</div>
+<ol type="1">
+<li>Le prix d’un article passe de 250 euros à 300 euros. Calculer son évolution en pourcentage.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Taux d’évolution <span class="math inline">\(=\dfrac{300-250}{250}=0{,}2=20\%\)</span>. Le prix a augmenté de <span class="math inline">\(20\%\)</span>.</p>
+</details>
+<ol start="2" type="1">
+<li>Le prix d’un article passe de 300 euros à 250 euros. Calculer son évolution en pourcentage (arrondir au dixième de pour-cent).</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Taux d’évolution <span class="math inline">\(=\dfrac{250-300}{300}\approx-0{,}167\)</span>. Le prix a baissé d’environ <span class="math inline">\(16{,}7\%\)</span>.</p>
+</details>
+<ol start="3" type="1">
+<li>Après une réduction de 30%, le prix d’un article est de 1 050 euros. Calculer le prix de l’article avant la réduction.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Coefficient multiplicateur <span class="math inline">\(0{,}7\)</span>. <span class="math inline">\(0{,}7P=1\,050 \iff P=1\,500\)</span> euros.</p>
+</details>
+<ol start="4" type="1">
+<li>Après une augmentation de 5%, le prix d’un article est de 556,5 euros. Calculer le prix de l’article avant l’augmentation.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Coefficient multiplicateur <span class="math inline">\(1{,}05\)</span>. <span class="math inline">\(1{,}05P=556{,}5 \iff P=530\)</span> euros.</p>
+</details>
+<ol start="5" type="1">
+<li>Le cours d’une action chute de 60%. Pour revenir à son niveau initial, de quel pourcentage faudrait-il que sa valeur augmente ?</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Coefficient multiplicateur <span class="math inline">\(0{,}4\)</span>. Pour retrouver la valeur initiale, il faut multiplier par <span class="math inline">\(\dfrac{1}{0{,}4}=2{,}5\)</span>, soit une augmentation de <span class="math inline">\(150\%\)</span>.</p>
+</details>
+</div>
+</section>
+<section id="fonctions" class="level2">
+<h2 class="anchored" data-anchor-id="fonctions">Fonctions</h2>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Lecture graphique de fonctions</span>
+</div>
+<p>On donne ci-dessous les représentations graphiques de trois fonctions. Ces représentations sont nommées <span class="math inline">\(\mathscr{C}_1\)</span>, <span class="math inline">\(\mathscr{C}_2\)</span> et <span class="math inline">\(\mathscr{C}_3\)</span>. L’une d’entre elles est la représentation graphique d’une fonction affine <span class="math inline">\(f\)</span> non linéaire.</p>
+<div style="text-align: center;">
+<p><img src="../../image/seconde/StagePrerentree_Jour5_fig1.png" style="width: 60%;"></p>
+</div>
+<ol type="1">
+<li>Lire graphiquement les coordonnées du point B.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(B(-2\,;\,-2)\)</span>.</p>
+</details>
+<ol start="2" type="1">
+<li>Par lecture graphique, déterminer les abscisses des points d’intersection de la courbe <span class="math inline">\(\mathscr{C}_3\)</span> avec l’axe des abscisses.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(\mathscr{C}_3\)</span> coupe l’axe des abscisses en <span class="math inline">\(x=-1\)</span>, <span class="math inline">\(x=2\)</span> et <span class="math inline">\(x=4\)</span>.</p>
+</details>
+<ol start="3" type="1">
+<li><ol type="a">
+<li>Laquelle de ces représentations est celle de la fonction <span class="math inline">\(f\)</span> ? Justifier.</li>
+</ol></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(\mathscr{C}_2\)</span> passe par l’origine <span class="math inline">\(O\)</span> : c’est une droite représentant une fonction linéaire, donc <span class="math inline">\(\mathscr{C}_2\neq f\)</span>. <span class="math inline">\(\mathscr{C}_3\)</span> n’est pas une droite. Il reste <span class="math inline">\(\mathscr{C}_1\)</span> : c’est la représentation de <span class="math inline">\(f\)</span>.</p>
+</details>
+<ol start="2" type="a">
+<li>Déterminer l’expression de la fonction <span class="math inline">\(f\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(\mathscr{C}_1\)</span> passe par <span class="math inline">\((0\,;\,3)\)</span> et a pour coefficient directeur <span class="math inline">\(-\dfrac{2}{5}\)</span>, donc <span class="math inline">\(f(x)=-\dfrac{2}{5}x+3\)</span>.</p>
+</details>
+<ol start="3" type="a">
+<li>Quel est l’antécédent de 1 par la fonction <span class="math inline">\(f\)</span> ? Justifier par un calcul.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(f(x)=1 \iff -\dfrac{2}{5}x+3=1 \iff -\dfrac{2}{5}x=-2 \iff x=5\)</span>. L’antécédent de <span class="math inline">\(1\)</span> par <span class="math inline">\(f\)</span> est <span class="math inline">\(5\)</span>.</p>
+</details>
+<ol start="4" type="1">
+<li><p>On admet que <span class="math inline">\(\mathscr{C}_3\)</span> est la représentation graphique de la fonction <span class="math inline">\(g\)</span> définie par <span class="math inline">\(g(x)=\dfrac{1}{12}(x+1)(x-2)(x-4)\)</span>.</p>
+<ol type="a">
+<li>Déterminer, par le calcul, l’ordonnée du point <span class="math inline">\(A\)</span> d’abscisse <span class="math inline">\(5\)</span>.</li>
+</ol></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(g(5)=\dfrac{1}{12}\times(5+1)(5-2)(5-4)=\dfrac{1}{12}\times6\times3\times1=\dfrac{18}{12}=\dfrac{3}{2}\)</span>. L’ordonnée du point <span class="math inline">\(A\)</span> est <span class="math inline">\(\dfrac{3}{2}\)</span>.</p>
+</details>
+<ol start="2" type="a">
+<li>Quelles sont les points de <span class="math inline">\(\mathscr{C}_3\)</span> dont l’abscisse est égale à l’ordonnée ?</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>On cherche les points de <span class="math inline">\(\mathscr{C}_3\)</span> tels que <span class="math inline">\(g(x)=x\)</span> : <span class="math display">\[\dfrac{1}{12}(x+1)(x-2)(x-4)=x \iff (x+1)(x-2)(x-4)=12x\]</span> En développant : <span class="math inline">\((x+1)(x-2)(x-4)=(x+1)(x^2-6x+8)=x^3-5x^2+2x+8\)</span>, donc l’équation devient : <span class="math display">\[x^3-5x^2+2x+8=12x \iff x^3-5x^2-10x+8=0\]</span> <span class="math inline">\(x=-2\)</span> est solution car <span class="math inline">\((-2)^3-5(-2)^2-10(-2)+8=-8-20+20+8=0\)</span>. On factorise par <span class="math inline">\((x+2)\)</span> : <span class="math display">\[x^3-5x^2-10x+8=(x+2)(x^2-7x+4)\]</span> Pour <span class="math inline">\(x^2-7x+4=0\)</span>, le discriminant vaut <span class="math inline">\(\Delta = 49-16=33&gt;0\)</span>, donc <span class="math inline">\(x=\dfrac{7-\sqrt{33}}{2}\)</span> ou <span class="math inline">\(x=\dfrac{7+\sqrt{33}}{2}\)</span>.</p>
+<p>Les trois points de <span class="math inline">\(\mathscr{C}_3\)</span> dont l’abscisse est égale à l’ordonnée sont : <span class="math display">\[(-2\,;\,-2)\ (\text{point } B), \qquad \left(\dfrac{7-\sqrt{33}}{2}\,;\,\dfrac{7-\sqrt{33}}{2}\right) \qquad \text{et} \qquad \left(\dfrac{7+\sqrt{33}}{2}\,;\,\dfrac{7+\sqrt{33}}{2}\right)\]</span></p>
+</details>
+</div>
+</section>
+<section id="géométrie-problèmes-de-synthèse" class="level2">
+<h2 class="anchored" data-anchor-id="géométrie-problèmes-de-synthèse">Géométrie — Problèmes de synthèse</h2>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Problème de synthèse : cercle, théorème de Thalès et fonctions</span>
+</div>
+<p><strong>Partie A</strong></p>
+<p>Soit <span class="math inline">\(\mathscr{C}\)</span> le cercle de centre <span class="math inline">\(O\)</span>, de diamètre <span class="math inline">\([RM]\)</span> avec <span class="math inline">\(RM = 10\)</span>. Soit <span class="math inline">\(T\)</span> un point de <span class="math inline">\(\mathscr{C}\)</span> tel que <span class="math inline">\(RT = 6\)</span>.</p>
+<div style="text-align: center;">
+<p><img src="../../image/seconde/StagePrerentree_Jour5_fig2.png" style="width: 40%;"></p>
+</div>
+<ol type="1">
+<li>Démontrer que RMT est un triangle rectangle. On pourra considérer le symétrique de <span class="math inline">\(T\)</span> par rapport à <span class="math inline">\(O\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Soit <span class="math inline">\(T'\)</span> le symétrique de <span class="math inline">\(T\)</span> par rapport à <span class="math inline">\(O\)</span>. Comme <span class="math inline">\(O\)</span> est le centre de <span class="math inline">\(\mathscr{C}\)</span>, <span class="math inline">\(T'\in\mathscr{C}\)</span>. De plus, <span class="math inline">\(O\)</span> est le milieu de <span class="math inline">\([RM]\)</span> et de <span class="math inline">\([TT']\)</span>, donc <span class="math inline">\(RTMT'\)</span> est un parallélogramme ; ses diagonales <span class="math inline">\([RM]\)</span> et <span class="math inline">\([TT']\)</span> étant deux diamètres, elles ont même longueur : <span class="math inline">\(RTMT'\)</span> est un rectangle. Donc <span class="math inline">\(\widehat{RTM}\)</span> est droit et RMT est rectangle en T.</p>
+</details>
+<ol start="2" type="1">
+<li>Démontrer que <span class="math inline">\(TM = 8\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Dans le triangle RMT rectangle en T, Pythagore donne <span class="math inline">\(RM^2=RT^2+TM^2\)</span>, soit <span class="math inline">\(100=36+TM^2\)</span>, donc <span class="math inline">\(TM=8\)</span>.</p>
+</details>
+<p><strong>Partie B</strong></p>
+<p>Soit <span class="math inline">\(S\)</span> un point de <span class="math inline">\([RT]\)</span> et <span class="math inline">\(H\)</span> le point de <span class="math inline">\([RM]\)</span> tel que <span class="math inline">\((SH) \parallel (TM)\)</span>. On pose <span class="math inline">\(RS = x\)</span>.</p>
+<ol type="1">
+<li>Donner un encadrement de <span class="math inline">\(x\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(S\)</span> décrit <span class="math inline">\([RT]\)</span>, donc <span class="math inline">\(0\leqslant x\leqslant6\)</span>.</p>
+</details>
+<ol start="2" type="1">
+<li>Démontrer que <span class="math inline">\(RH = \dfrac{5}{3}x\)</span> et <span class="math inline">\(SH = \dfrac{4}{3}x\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>D’après le théorème de Thalès dans le triangle RTM : <span class="math inline">\(\dfrac{RS}{RT}=\dfrac{RH}{RM}=\dfrac{SH}{TM}\)</span>, avec <span class="math inline">\(\dfrac{RS}{RT}=\dfrac{x}{6}\)</span>. Donc <span class="math inline">\(RH=10\times\dfrac{x}{6}=\dfrac{5}{3}x\)</span> et <span class="math inline">\(SH=8\times\dfrac{x}{6}=\dfrac{4}{3}x\)</span>.</p>
+</details>
+<ol start="3" type="1">
+<li>Exprimer, en fonction de <span class="math inline">\(x\)</span>, le périmètre du triangle <span class="math inline">\(RSH\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Périmètre <span class="math inline">\(=RS+SH+RH=x+\dfrac{4}{3}x+\dfrac{5}{3}x=4x\)</span>.</p>
+</details>
+<ol start="4" type="1">
+<li>Démontrer que le périmètre du trapèze <span class="math inline">\(STMH\)</span> est égal à <span class="math inline">\(24 - \dfrac{4}{3}x\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(ST=6-x\)</span>, <span class="math inline">\(TM=8\)</span>, <span class="math inline">\(MH=10-\dfrac{5}{3}x\)</span>, <span class="math inline">\(HS=\dfrac{4}{3}x\)</span>. Somme <span class="math inline">\(=(6-x)+8+\left(10-\dfrac{5}{3}x\right)+\dfrac{4}{3}x=24-\dfrac{4}{3}x\)</span>.</p>
+</details>
+<p><strong>Partie C</strong></p>
+<p>On considère les fonctions affines <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> telles que : <span class="math display">\[f : x \longmapsto 4x \quad \text{et} \quad g : x \longmapsto 24 - \dfrac{4}{3}x.\]</span></p>
+<ol type="1">
+<li>Calculer <span class="math inline">\(f(0)\)</span>, <span class="math inline">\(f(6)\)</span>, <span class="math inline">\(g(0)\)</span> et <span class="math inline">\(g(6)\)</span>.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(f(0)=0\)</span>, <span class="math inline">\(f(6)=24\)</span>, <span class="math inline">\(g(0)=24\)</span>, <span class="math inline">\(g(6)=16\)</span>.</p>
+</details>
+<ol start="2" type="1">
+<li>Représenter graphiquement <span class="math inline">\(f\)</span> et <span class="math inline">\(g\)</span> dans un repère orthonormé (origine en bas à gauche de la feuille de papier millimétré, unité le cm).</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(f\)</span> est la droite passant par <span class="math inline">\(O\)</span> de coefficient directeur <span class="math inline">\(4\)</span> ; <span class="math inline">\(g\)</span> est la droite passant par <span class="math inline">\((0;24)\)</span> de coefficient directeur <span class="math inline">\(-\dfrac{4}{3}\)</span>.</p>
+</details>
+<ol start="3" type="1">
+<li><ol type="a">
+<li>Déterminer par le calcul la valeur de <span class="math inline">\(x\)</span> pour laquelle <span class="math inline">\(f(x) = g(x)\)</span>.</li>
+</ol></li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(4x=24-\dfrac{4}{3}x \iff 12x=72-4x \iff 16x=72 \iff x=4{,}5\)</span>.</p>
+</details>
+<ol start="2" type="a">
+<li>Retrouver cette valeur sur le graphique ; faire apparaître les pointillés nécessaires.</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>On lit l’abscisse du point d’intersection des deux droites tracées à la question 2, à repérer par des pointillés menant de ce point de croisement jusqu’à l’axe des abscisses.</p>
+</details>
+<ol start="4" type="1">
+<li>Que représente la solution de l’équation <span class="math inline">\(f(x) = g(x)\)</span> pour la partie B de ce problème ?</li>
+</ol>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><span class="math inline">\(f(x)\)</span> est le périmètre du triangle RSH et <span class="math inline">\(g(x)\)</span> celui du trapèze STMH. La solution <span class="math inline">\(x=4{,}5\)</span> est donc la valeur de <span class="math inline">\(RS\)</span> pour laquelle ces deux périmètres sont égaux.</p>
+</details>
+</div>
+</section>
+<section id="raisonnement" class="level2">
+<h2 class="anchored" data-anchor-id="raisonnement">Raisonnement</h2>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exercice :<span class="exemp-extra"> Mensonges</span>
+</div>
+<p>Un garçon dit toujours la vérité le jeudi et le vendredi. Il ment toujours le mardi. Et les autres jours, il ment ou dit la vérité au hasard. Sept jours de suite, on lui demande son prénom. Voici, dans l’ordre, ses réponses des six premiers jours : John, Bob, John, Bob, Pit, Bob. Quelle est sa réponse le septième jour ?</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Comme le garçon dit la vérité deux jours de suite (jeudi et vendredi), et que sur les six premières réponses on observe une alternance sans deux réponses identiques consécutives sauf nulle part évidente, il n’y a que deux possibilités pour que deux jours consécutifs de vérité apparaissent dans la suite de sept jours interrogés :</p>
+<ul>
+<li>soit le premier jour interrogé était un vendredi et il s’appelle John ;</li>
+<li>soit le dernier jour interrogé (le septième) est un jeudi et il s’appelle Bob.</li>
+</ul>
+<p>Dans ce dernier cas, le jour du mardi (le troisième jour interrogé, puisque le septième serait jeudi) il aurait dit « Bob », c’est-à-dire la vérité ; or il ment toujours le mardi : contradiction.</p>
+<p>Il s’appelle donc John et le premier jour interrogé est un vendredi. Le septième jour est alors un jeudi, jour où il dit la vérité : il répond <strong>John</strong>.</p>
+</details>
+</div>
+
+
+<div class="nav-pages"><a class="prev" href="jour4.html" title="Jour 4 : Calcul avec les puissances, équations et géométrie"></a></div>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/chris-deguil\.github\.io\/maths\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 — Christophe Deguil</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../index.html">
+<p>Accueil</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:christophe.Deguil@ac-versailles.fr">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

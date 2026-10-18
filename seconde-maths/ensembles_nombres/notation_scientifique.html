@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Écriture x = ± a × 10^n">
+<meta name="description" content="Écriture x = ± a × 10^n, première puissance dépassant un seuil">
 
 <title>Notation scientifique – Mathématiques — Christophe Deguil</title>
 <style>
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -258,13 +292,42 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Stage de pré-rentrée</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/jour1.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/jour2.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/jour3.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/jour4.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/stage_prerentree/jour5.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Chapitre 1 : Ensembles de nombres</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/ensembles_nombres/index.html" class="sidebar-item-text sidebar-link">
@@ -317,13 +380,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Chapitre 2 : Fonctions affines</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/fonctions_affines/index.html" class="sidebar-item-text sidebar-link">
@@ -351,7 +414,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/fonctions_affines/appartenance_droite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Appartenance d’un point à une droite</span></a>
+ <span class="menu-text">Appartenance d’un point à la représentation graphique</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -363,7 +426,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/fonctions_affines/resolution_equations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Résolution d’équations — intersection</span></a>
+ <span class="menu-text">Intersection de droites</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -382,13 +445,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Chapitre 3 : Vecteurs — Translation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/vecteurs_translation/index.html" class="sidebar-item-text sidebar-link">
@@ -434,7 +497,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../seconde-maths/vecteurs_translation/vecteurs_colineaires.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vecteurs colinéaires et applications</span></a>
+ <span class="menu-text">Vecteurs colinéaires</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -447,609 +510,366 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 4 : Intervalle et inégalités</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 4 : Intervalles, Inégalités et Valeur absolue</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/inegalite_encadrement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Inégalité et encadrement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/notion_intervalle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Notion d’intervalle</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/operations_intervalles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Opérations sur les intervalles</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/ordre_comparaison.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ordre et comparaison de deux quantités</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/resolution_inequations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Résolution d’inéquations du premier degré</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/valeur_absolue_distance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Valeur absolue et distance</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/intervalles_inegalites/valeur_absolue_intervalles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Intervalles, valeur absolue et valeur approchée</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 5 : Les racines carrées</span></a>
+ <span class="menu-text">Chapitre 4 : Intervalle et inégalités</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 5 : Racines carrées</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Définition et premières propriétés</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/inegalite_encadrement.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/calculer_racines.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Calculer avec des racines carrées</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/notion_intervalle.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/rationalisation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Rationalisation du dénominateur</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/operations_intervalles.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/comparer_racines.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Comparer des réels avec des racines carrées</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/ordre_comparaison.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/racine2_irrationnel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Le nombre √2 est irrationnel</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/resolution_inequations.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/pythagore.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Théorème de Pythagore et Thalès</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/valeur_absolue_distance.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/valeurs_remarquables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Valeurs remarquables de cosinus, sinus et tangente</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/racines_carrees/combinaison_pythagore_thales.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/intervalles_inegalites/valeur_absolue_intervalles.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 6 : Géométrie repérée</span></a>
+ <span class="menu-text">Chapitre 5 : Les racines carrées</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 6 : Géométrie repérée</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/coordonnees_vecteur.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Coordonnées d’un vecteur</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/definition.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/somme_produit_vecteurs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Somme de deux vecteurs et produit par un réel</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/calculer_racines.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/vecteur_ab_norme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Coordonnées de AB, norme et distance</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/rationalisation.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/milieu_segment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Milieu d’un segment</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/comparer_racines.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/colinearite_determinant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Colinéarité et déterminant de deux vecteurs</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/racine2_irrationnel.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/aire_parallelogramme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Approfondissement : aire d’un parallélogramme</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/pythagore.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/geometrie_repere/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan — carte mentale</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/racines_carrees/valeurs_remarquables.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/racines_carrees/combinaison_pythagore_thales.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 7 : Équations</span></a>
+ <span class="menu-text">Chapitre 6 : Géométrie repérée</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 7 : Équations</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/developper_factoriser.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Développer, factoriser, réduire</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/coordonnees_vecteur.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/distributivite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Distributivité</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/somme_produit_vecteurs.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/identites_remarquables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Identités remarquables</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/vecteur_ab_norme.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/meme_denominateur.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mise au même dénominateur d’expressions littérales</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/milieu_segment.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/ensemble_resolution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ensemble de résolution et valeurs interdites</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/colinearite_determinant.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/equation_produit_nul.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équation produit nul</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/aire_parallelogramme.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/equation_x2_egale_a.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équation du type x² = a</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/equation_quotient.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équation quotient</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/equation_racine_carree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équation avec une racine carrée</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equations/bilan.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bilan Equation</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/geometrie_repere/bilan.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 8 : Généralités sur les fonctions</span></a>
+ <span class="menu-text">Chapitre 7 : Équations</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 8 : Généralités sur les fonctions</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/ensemble_definition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ensemble de définition</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/developper_factoriser.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/tableau_valeurs_representation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tableau de valeurs et représentation graphique</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/distributivite.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/resolution_graphique.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Résolution graphique d’équations et d’inéquations</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/identites_remarquables.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/variations_tableau.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonctions croissante, décroissante et tableau de variations</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/meme_denominateur.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/extremums.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Extremums d’une fonction</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/ensemble_resolution.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/generalites_fonctions/variations_avec_python.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Avec Python</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/equations/equation_produit_nul.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equations/equation_x2_egale_a.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equations/equation_quotient.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equations/equation_racine_carree.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equations/bilan.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 9 : Probabilités</span></a>
+ <span class="menu-text">Chapitre 8 : Généralités sur les fonctions</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/probabilites/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 9 : Probabilités</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/generalites_fonctions/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/probabilites/experience_aleatoire.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Expérience aléatoire, univers et événements</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/generalites_fonctions/ensemble_definition.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/probabilites/loi_probabilite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Loi de probabilité</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/generalites_fonctions/tableau_valeurs_representation.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/probabilites/loi_grands_nombres.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Loi des grands nombres</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/generalites_fonctions/resolution_graphique.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/generalites_fonctions/variations_tableau.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/generalites_fonctions/extremums.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/generalites_fonctions/variations_avec_python.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 10 : Inéquations produit/quotient et graphique</span></a>
+ <span class="menu-text">Chapitre 9 : Probabilités</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/inequations/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 10 : Inéquations produit/quotient et graphique</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/probabilites/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/inequations/signe_fonction_affine.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe d’une fonction affine</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/probabilites/experience_aleatoire.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/inequations/inequation_produit.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe d’un produit</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/probabilites/loi_probabilite.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/inequations/inequation_quotient.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Signe d’un quotient</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/inequations/resolution_graphique_inequation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Résolution graphique d’une inéquation</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/probabilites/loi_grands_nombres.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 11 : Fonctions de référence</span></a>
+ <span class="menu-text">Chapitre 10 : Inéquations produit/quotient et graphique</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 11 : Fonctions de référence</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/inequations/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/fonction_carre.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction carré</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/inequations/signe_fonction_affine.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/fonction_inverse.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction inverse</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/inequations/inequation_produit.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/fonction_racine_carree.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction racine carrée</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/inequations/inequation_quotient.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/fonction_valeur_absolue.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fonction valeur absolue</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/fonctions_reference/position_relative_courbes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Position relative des courbes de référence</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/inequations/resolution_graphique_inequation.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 12 : Informations chiffrées</span></a>
+ <span class="menu-text">Chapitre 11 : Fonctions de référence</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Chapitre 12 : Informations chiffrées</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/proportion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Proportion et pourcentage</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/fonction_carre.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/taux_evolution_coefficient_multiplicateur.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Taux d’évolution et coefficient multiplicateur</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/fonction_inverse.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/evolutions_successives.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Évolutions successives</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/fonction_racine_carree.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/evolution_reciproque.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Évolution réciproque</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/fonction_valeur_absolue.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/tableau_croise_frequence_conditionnelle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tableau croisé et fréquence conditionnelle</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/information_chiffree/python_fichier_individus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Traiter un fichier d’individus en Python</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/fonctions_reference/position_relative_courbes.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 13 : Équation de droites</span></a>
+ <span class="menu-text">Chapitre 12 : Informations chiffrées</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équation de droites</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/vecteur_directeur_equation_cartesienne.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Vecteur directeur et équation cartésienne</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/proportion.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/equation_reduite.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équations réduites d’une droite</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/taux_evolution_coefficient_multiplicateur.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/parallelisme.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Équations cartésiennes et parallélisme</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/evolutions_successives.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/position_relative_droites.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Position relative de deux droites</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/evolution_reciproque.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/droites_remarquables_triangle.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Application géométrique — Droites remarquables d’un triangle</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/tableau_croise_frequence_conditionnelle.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/systemes_resolution_graphique.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Systèmes d’équations — définitions et résolution graphique</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/equation_droite/systemes_resolution_algebrique.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Systèmes d’équations — résolution algébrique</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/information_chiffree/python_fichier_individus.qmd</span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
- <span class="menu-text">Chapitre 14 : Statistiques</span></a>
+ <span class="menu-text">Chapitre 13 : Équation de droites</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">seconde-maths/equation_droite/index.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/vecteur_directeur_equation_cartesienne.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/equation_reduite.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/parallelisme.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/position_relative_droites.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/droites_remarquables_triangle.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/systemes_resolution_graphique.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/equation_droite/systemes_resolution_algebrique.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false">
  <span class="menu-text">Chapitre 14 : Statistiques</span></a>
-  </div>
-</li>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-15" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-15" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/linearite_moyenne.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Linéarité de la moyenne</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/index.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/ecart_type.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Écart type</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/linearite_moyenne.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/influence_ajout_suppression.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Influence de l’ajout ou de la suppression d’une valeur</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/ecart_type.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/classes_effectifs_representations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Classes, effectifs et représentations graphiques</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/influence_ajout_suppression.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/effectifs_cumules_moyenne_mediane.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Effectifs cumulés, moyenne et médiane d’une série en classes</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/classes_effectifs_representations.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/python_classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Traiter des classes en Python</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/effectifs_cumules_moyenne_mediane.qmd</span>
+  </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../seconde-maths/statistiques/comparer_series.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Comparer deux séries statistiques</span></a>
-  </div>
-</li>
+ <span class="menu-text">seconde-maths/statistiques/python_classes.qmd</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">seconde-maths/statistiques/comparer_series.qmd</span>
+  </li>
       </ul>
   </li>
     </ul>
@@ -1063,6 +883,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#définition" id="toc-définition" class="nav-link active" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#algorithmique" id="toc-algorithmique" class="nav-link" data-scroll-target="#algorithmique">Algorithmique</a></li>
   </ul>
 </nav>
     </div>
@@ -1076,7 +897,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Écriture x = ± a × 10^n
+    Écriture x = ± a × 10^n, première puissance dépassant un seuil
   </div>
 </div>
 
@@ -1097,12 +918,12 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="définition">Définition</h2>
 <div class="bloc def">
 <p><span class="bloc-titre">Définition : Notation scientifique</span></p>
-<p>Tout réel <span class="math inline">\(x \neq 0\)</span> peut s’écrire de façon unique sous la forme <span class="math display">\[x =\pm a \times 10^n\]</span> où <span class="math inline">\(n \in \Z\)</span> et <span class="math inline">\(a\)</span> un réel dont la partie entière est comprise entre 1 et 9 inclus.</p>
+<p>Tout nombre décimal <span class="math inline">\(x \neq 0\)</span> peut s’écrire de façon unique sous la forme <span class="math display">\[x =\pm a \times 10^n\]</span> où <span class="math inline">\(n \in \Z\)</span> et <span class="math inline">\(a\)</span> est un nombre décimal vérifiant <span class="math inline">\(1 \leqslant a &lt; 10\)</span>.</p>
 <p>On dit que <span class="math inline">\(x\)</span> est écrit en <strong>notation scientifique</strong>.</p>
 </div>
 <div class="bloc rem">
 <p><span class="bloc-titre">Remarque : </span></p>
-<p>L’écriture en notation scientifique est <strong>unique</strong>. Cette unicité provient de la condition sur <span class="math inline">\(a\)</span>, qui détermine à la fois la valeur de <span class="math inline">\(a\)</span> et celle de <span class="math inline">\(n\)</span>.</p>
+<p>L’unicité provient de la condition <span class="math inline">\(1 \leqslant a &lt; 10\)</span> : l’exposant <span class="math inline">\(n\)</span> donne l’<strong>ordre de grandeur</strong> de <span class="math inline">\(x\)</span>. Pour un réel non décimal (comme <span class="math inline">\(\dfrac{1}{3}\)</span> ou <span class="math inline">\(\pi\)</span>), on utilise une valeur approchée : <span class="math inline">\(\pi \approx 3{,}14 \times 10^0\)</span>, <span class="math inline">\(\dfrac{1}{3} \approx 3{,}3 \times 10^{-1}\)</span>.</p>
 </div>
 <div class="bloc sfc">
 <div class="bloc-titre">
@@ -1127,7 +948,7 @@ Afficher la correction :
 <p><span class="math inline">\(2{,}5 \times 10^3 \times 4 \times 10^{-7}
          = (2{,}5 \times 4) \times 10^{3+(-7)}
          = 10 \times 10^{-4}
-         = 1{,}0 \times 10^{-3}\)</span></p>
+         = 1 \times 10^{-3}\)</span></p>
 </details>
 </div>
 <div class="bloc ex">
@@ -1145,16 +966,16 @@ Afficher la correction :
 <p>La case <span class="math inline">\(n\)</span> contient <span class="math inline">\(2^{n-1}\)</span> grains. La dernière case (<span class="math inline">\(n = 64\)</span>) contient <span class="math inline">\(2^{63}\)</span> grains.</p>
 </details>
 <ol start="2" type="1">
-<li>Exprimer <span class="math inline">\(2^{63}\)</span> en notation scientifique (on admet <span class="math inline">\(2^{10} \approx 1{,}024 \times 10^3\)</span>).</li>
+<li>Exprimer <span class="math inline">\(2^{63}\)</span> en notation scientifique (on rappelle que <span class="math inline">\(2^{10} = 1\,024 = 1{,}024 \times 10^3\)</span>).</li>
 </ol>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p><span class="math inline">\(2^{63} = (2^{10})^6 \times 2^3 \approx (1{,}024)^6 \times 10^{18} \times 8\)</span>. Or <span class="math inline">\((1{,}024)^6 \approx 1{,}16\)</span>, donc <span class="math inline">\(2^{63} \approx 9{,}2 \times 10^{18}\)</span>.</p>
+<p><span class="math inline">\(2^{63} = (2^{10})^6 \times 2^3 \approx (1{,}024)^6 \times 10^{18} \times 8\)</span>. À la calculatrice, <span class="math inline">\((1{,}024)^6 \approx 1{,}153\)</span>, donc <span class="math inline">\(2^{63} \approx 9{,}2 \times 10^{18}\)</span>.</p>
 </details>
 <ol start="3" type="1">
-<li>Un grain de riz pèse environ <span class="math inline">\(25 \times 10^{-3}\)</span> grammes. Quelle est la masse totale de riz sur cette case ? La comparer à la production mondiale annuelle <span class="math inline">\(\approx 5 \times 10^{14}\)</span> g.</li>
+<li>Un grain de riz pèse environ <span class="math inline">\(25 \times 10^{-3}\)</span> grammes. Quelle est la masse totale de riz sur cette case ? La comparer à la production mondiale annuelle <span class="math inline">\(\approx 5 \times 10^{14}\)</span> g (environ <span class="math inline">\(500\)</span> millions de tonnes).</li>
 </ol>
 <details class="bloc cor">
 <summary>
@@ -1164,6 +985,25 @@ Afficher la correction :
 <p>Rapport avec la production : <span class="math inline">\(\dfrac{2{,}3 \times 10^{17}}{5 \times 10^{14}} \approx 460\)</span>.</p>
 <p>La masse de riz sur la <span class="math inline">\(64\)</span><sup>e</sup> case seule représente <strong>460 fois</strong> la production mondiale annuelle !</p>
 </details>
+</div>
+</section>
+<section id="algorithmique" class="level2">
+<h2 class="anchored" data-anchor-id="algorithmique">Algorithmique</h2>
+<div class="bloc info">
+<p><span class="bloc-titre">À retenir : Première puissance dépassant un seuil</span></p>
+<p>On cherche le plus petit entier <span class="math inline">\(n\)</span> tel que <span class="math inline">\(q^n &gt; S\)</span>, pour un réel <span class="math inline">\(q &gt; 1\)</span> et un seuil <span class="math inline">\(S\)</span> donnés.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> premiere_puissance(q, S):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Plus petit entier n tel que q**n &gt; S (q &gt; 1)."""</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> <span class="dv">1</span>                <span class="co"># p contient q**n</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> p <span class="op">&lt;=</span> S:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> n <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> p <span class="op">*</span> q</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(premiere_puissance(<span class="dv">2</span>, <span class="dv">10</span><span class="op">**</span><span class="dv">6</span>))  <span class="co"># affiche 20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On obtient <span class="math inline">\(20\)</span> car <span class="math inline">\(2^{19} = 524\,288 \leqslant 10^6 &lt; 2^{20} = 1\,048\,576\)</span>.</p>
+<p>Pour la première puissance <strong>inférieure</strong> à un seuil (avec <span class="math inline">\(0 &lt; q &lt; 1\)</span>), on remplace la condition par <code>while p &gt;= S</code>.</p>
 </div>
 
 
