@@ -1,0 +1,76 @@
+---
+title: "Interprétation géométrique du nombre dérivé"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "La tangente comme position limite de la droite (AM), et le nombre dérivé comme coefficient directeur de la tangente."
+order: 3
+---
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : </span>
+
+Lorsque $h \to 0$, le point $M$ se rapproche de $A$ et la droite $(AM)$ se rapproche d'une position limite : la **tangente** à $\mathcal{C}_f$ en $A$.
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/NombreDerivee_tangente1.png" style="width:45%; margin-right:5%">
+  <img src="../../image/premiere/NombreDerivee_tangente2.png" style="width: 45%;">
+</div>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Coefficient directeur de la tangente</span>
+
+Soit $f$ dérivable en $a$.
+$f'(a)$ est le **coefficient directeur de la tangente** à $\mathcal{C}_f$ au point d'abscisse $a$.
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/NombreDerivee_tangente3.png" style="width: 40%;">
+</div>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Lire graphiquement un nombre dérivé — Représenter</span></div>
+
+Sur la courbe ci-dessous, on sait que :
+
+- la tangente en $A(-1\,;\,5)$ est parallèle à l'axe des abscisses,
+- la tangente en $B(2\,;\,1)$ coupe l'axe des abscisses en $(3\,;\,0)$.
+
+Déterminer $f'(-1)$ et $f'(2)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Le nombre dérivé en $a$ est le coefficient directeur de la tangente au point d'abscisse $a$.
+
+- La tangente en $A$ est parallèle à l'axe des abscisses : son coefficient directeur est $0$, donc $f'(-1) = 0$.
+- La tangente en $B(2\,;\,1)$ passe par $(3\,;\,0)$ : son coefficient directeur est $\dfrac{1 - 0}{2 - 3} = -1$, donc $f'(2) = -1$.
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/NombreDerivee_tangente4.png" style="width: 55%;">
+</div>
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Équation de tangente par les outils de seconde — Calculer</span></div>
+
+La tangente à $\mathcal{C}_f$ au point d'abscisse $3$ passe par les points $(3\,;\,-1)$ et $(6\,;\,5)$. Déterminer $f(3)$, $f'(3)$ puis l'équation de la tangente à $\mathcal{C}_f$ en ce point.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Le point de tangence est $(3\,;\,-1)$, donc $f(3) = -1$.
+Le coefficient directeur est :
+$$f'(3) = \frac{5-(-1)}{6-3} = \frac{6}{3} = 2$$
+On note $T_3$ la tangente au point d'abscisse $3$.
+$$M(x \,;\, y) \in T_3 \Longleftrightarrow \begin{vmatrix} 1 & 2 \\ x-3 & y+1 \end{vmatrix} = 0
+\Longleftrightarrow
+(y+1) - 2(x-3) = 0 \Longleftrightarrow y=2x -7$$
+Ainsi $T_3 : y= 2x-7$.
+
+</details>
+:::

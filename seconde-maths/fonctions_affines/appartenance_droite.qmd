@@ -1,74 +1,94 @@
 ---
-title: "Appartenance d'un point à une droite"
+title: "Appartenance d'un point à la représentation graphique"
 format:
   html:
     toc: true
     number-sections: false
-description: "Tester si un point appartient à une droite d'équation y = mx + p"
+description: "Tester si un point appartient à la représentation graphique, calculer des coordonnées"
 order: 5
 ---
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Propriété : Appartenance</span>
 
-Un point $M(a\,;\,b)$ appartient à la droite d'équation $y=mx+p$ si et seulement si $b=ma+p$.
+Soit $f$ la fonction affine définie sur $\R$ par $f(x)=mx+p$, et $\mathcal{C}_f$ sa représentation graphique dans un repère.
+Un point $M(a\,;\,b)$ appartient à $\mathcal{C}_f$ si et seulement si $f(a)=b$, c'est-à-dire $ma+p=b$.
 :::
 
-<details class="bloc demo">
-<summary>Démonstration : </summary>
+<details class="bloc demo"><summary>Démonstration : </summary>
 
-On se place dans un repère du plan. Soit $(d)$ la droite d'équation $y=mx+p$, c'est-à-dire l'ensemble des points $N(x\,;\,y)$ du plan vérifiant $y=mx+p$.
+Par définition, la représentation graphique $\mathcal{C}_f$ de $f$ est l'ensemble des points $N(x\,;\,y)$ du plan tels que $x\in\R$ et $y=f(x)$.
 
 Soit $M(a\,;\,b)$ un point du plan.
 
-**Sens direct.** Si $M \in (d)$, alors les coordonnées de $M$ vérifient l'équation de $(d)$, donc $b=ma+p$.
+**Sens direct.** Si $M \in \mathcal{C}_f$, alors son ordonnée est l'image de son abscisse par $f$, donc $b = f(a) = ma+p$.
 
-**Réciproque.** Si $b=ma+p$, alors le couple $(a\,;\,b)$ vérifie l'équation $y=mx+p$ (avec $x=a$ et $y=b$), donc le point $M(a\,;\,b)$ appartient à $(d)$.
+**Réciproque.** Si $f(a) = b$, alors le point d'abscisse $a$ et d'ordonnée $f(a)=b$ est un point de $\mathcal{C}_f$ : c'est exactement le point $M(a\,;\,b)$, donc $M\in\mathcal{C}_f$.
 
-On a donc bien l'équivalence : $M(a\,;\,b) \in (d) \iff b=ma+p$.
+On a donc bien l'équivalence : $M(a\,;\,b) \in \mathcal{C}_f \iff f(a) = b$.
 
 </details>
 
 ::: {.bloc .sfc}
-<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Tester l'appartenance à une droite — Raisonner</span></div>
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Tester l'appartenance à une représentation graphique — Raisonner</span></div>
 
-La droite $(d)$ a pour équation $y=3x-1$.
+Soit $f$ la fonction affine définie par $f(x)=3x-1$ et $\mathcal{C}_f$ sa représentation graphique.
 
-1. Le point $A(2\,;\,5)$ appartient-il à $(d)$ ?
+1. Le point $A(2\,;\,5)$ appartient-il à $\mathcal{C}_f$ ?
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$3\times 2-1=5$. On obtient bien $5$, donc $A(2\,;\,5)\in(d)$.
+On calcule l'image de l'abscisse de $A$ : $f(2)=3\times 2-1=5$. On obtient bien l'ordonnée de $A$, donc $A(2\,;\,5)\in\mathcal{C}_f$.
 
 </details>
 
-2. Le point $B(2\,;\,4)$ appartient-il à $(d)$ ?
+2. Le point $B(2\,;\,4)$ appartient-il à $\mathcal{C}_f$ ?
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$3\times 2-1=5\neq 4$. L'ordonnée calculée ($5$) est différente de celle de $B$ ($4$), donc $B(2\,;\,4)\notin(d)$.
+$f(2)=5\neq 4$. L'image de $2$ par $f$ ($5$) est différente de l'ordonnée de $B$ ($4$), donc $B(2\,;\,4)\notin\mathcal{C}_f$.
 
 </details>
 :::
 
 ::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tester l'appartenance à une droite — Raisonner</span></div>
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tester l'appartenance à une représentation graphique — Raisonner</span></div>
 
-La droite $(d)$ a pour équation $y=2x+3$.
+Soit $g$ la fonction affine définie par $g(x)=2x+3$ et $\mathcal{C}_g$ sa représentation graphique.
 
-1. Le point $C(1\,;\,5)$ appartient-il à $(d)$ ?
+1. Le point $C(1\,;\,5)$ appartient-il à $\mathcal{C}_g$ ?
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$2\times 1+3=5$. Oui, $C\in(d)$.
+$g(1)=2\times 1+3=5$. Oui, $C\in\mathcal{C}_g$.
 
 </details>
 
-2. Le point $D(-2\,;\,0)$ appartient-il à $(d)$ ?
+2. Le point $D(-2\,;\,0)$ appartient-il à $\mathcal{C}_g$ ?
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$2\times(-2)+3=-4+3=-1\neq 0$. Non, $D\notin(d)$.
+$g(-2)=2\times(-2)+3=-4+3=-1\neq 0$. Non, $D\notin\mathcal{C}_g$.
+
+</details>
+
+3. Déterminer l'ordonnée du point $E$ de $\mathcal{C}_g$ d'abscisse $-4$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$E \in \mathcal{C}_g$ donc son ordonnée est $g(-4)=2\times(-4)+3=-5$. Ainsi $E(-4\,;\,-5)$.
+
+</details>
+
+4. Déterminer l'abscisse du point $F$ de $\mathcal{C}_g$ d'ordonnée $7$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Soit $x\in\R$ l'abscisse de $F$ : $F \in \mathcal{C}_g$ donc $g(x)=7$.
+Or
+$$g(x)=7 \iff 2x+3=7 \iff 2x=4 \iff x=2$$
+
+Ainsi $F(2\,;\,7)$.
 
 </details>
 :::

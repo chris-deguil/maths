@@ -1,0 +1,21 @@
+---
+title: "Stage de pré-rentrée"
+description: "Cinq jours de révisions pour préparer l'entrée en Première : calcul numérique et littéral, équations et inéquations, fonctions, vecteurs et géométrie repérée, probabilités et raisonnement."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Présentation : </span>
+
+Ce stage de pré-rentrée propose cinq journées de révisions pour consolider les acquis de Seconde avant l'entrée en Première : calcul numérique (fractions, puissances, racines carrées) et calcul littéral (développement, factorisation, identités remarquables), résolution d'équations et d'inéquations, étude de fonctions (affines, homographiques, lectures graphiques, variations, optimisation), vecteurs et géométrie repérée, probabilités et raisonnement.
+
+Chaque journée est constituée d'exercices corrigés : la correction de chaque question est masquée et s'affiche d'un clic.
+:::

@@ -1,0 +1,106 @@
+---
+title: "Factorisation du trinôme"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Factorisation d'un polynôme du second degré selon le signe du discriminant."
+order: 3
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $f$ une fonction polynôme de degré $2$ définie sur $\R$ par $f(x) = ax^2 + bx + c$.
+
+1. Si $\Delta > 0$, alors $f(x) = a(x - x_1)(x - x_2)$, où $x_1$ et $x_2$ sont les racines de $f(x)=0$.
+2. Si $\Delta = 0$, alors $f(x)= a (x - x_0)^2$, où $x_0$ est la racine double de $f(x)=0$.
+3. Si $\Delta < 0$, alors $f(x)$ ne se factorise pas (en produit de deux fonctions affines).
+
+Un polynôme que l'on ne peut pas factoriser est dit **irréductible**.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+On considère la forme canonique $f(x)=a\left(x+ \dfrac{b}{2a}\right)^2 - \dfrac{\Delta}{4a}$.
+
+1. Si $\Delta >0$,
+   $$f(x)= a\left(x+ \dfrac{b}{2a}\right)^2 - \dfrac{\Delta}{4a} = a\left(\left(x+ \dfrac{b}{2a}\right)^2 - \dfrac{\Delta}{4a^2}\right) = a(x-x_1)(x-x_2)$$
+   Donc $f(x)=a(x-x_1)(x-x_2)$.
+2. Si $\Delta=0$, alors $\beta=0$, donc pour tout réel $x$, $f(x)=a\left(x+ \dfrac{b}{2a}\right)^2$.
+3. Si $\Delta <0$, alors $-\dfrac{\Delta}{4a^2}>0$. Ainsi $f(x)$ étant, à un facteur $a$ près, la somme de deux quantités positives, il n'est pas factorisable.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Factoriser un trinôme — Calculer</span></div>
+
+Factoriser $-3x^2+5x+4$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\Delta=5^2-4 \times (-3) \times 4 = 73 >0$.
+
+Ainsi le polynôme admet deux racines réelles distinctes
+$$x_1=\dfrac{-5-\sqrt{73}}{-6} \et x_2=\dfrac{-5+\sqrt{73}}{-6}$$
+On déduit que pour tout réel $x$, $-3x^2+5x+4=-3(x-x_1)(x-x_2)$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Factoriser avec de la réflexion — Raisonner</span></div>
+
+Soient $a$ et $b$ deux réels distincts. Factoriser $P(x)=(b-a)x^2+(a^2-b^2)x+ab(b-a)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* il faut observer correctement l'expression et remarquer une certaine symétrie, puis essayer de deviner les solutions.
+
+On remarque que $P(a)=a^2(b-a)+(a^2-b^2)a+ab(b-a)=0$, et de même $P(b)=0$.
+
+On a trouvé deux racines distinctes de $P$, ce sont donc ses deux racines.
+
+Le coefficient dominant étant $b-a$, pour tout réel $x$, $P(x)=(b-a)(x-a)(x-b)$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Dans $\R$, tout polynôme se factorise en produit de polynômes du second degré et du premier degré.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Factoriser un polynôme de degré 3 — Calculer, Raisonner</span></div>
+
+Soit $P(x)=2x^3-x-1$. Donner une forme factorisée de $P(x)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$1$ est une racine évidente de $P$. En effet $P(1) = 2-1-1=0$.
+
+Donc il existe trois réels $a$, $b$, $c$ tels que pour tout réel $x$, $P(x)=(x-1)(ax^2+bx+c)$.
+
+Or, pour tout réel $x$, $(x-1)(ax^2+bx+c) = ax^3+(b-a)x^2 + (c-b)x - c$.
+
+Donc $2x^3-x-1= ax^3 + (b-a)x^2 + (c-b)x - c$.
+
+Ces polynômes étant égaux, les coefficients des mêmes monômes sont deux à deux égaux :
+$$\left\{\begin{array}{l} a=2\\
+b-a=0\\
+c-b = -1\\
+-c=-1 \end{array} \right.$$
+Ainsi $a=2$, $b=2$ et $c=-1$, donc $P(x)=(x-1)(2x^2+2x+1)$.
+
+Or $2x^2+2x+1$ admet pour discriminant $\Delta = 2^2-4 \times 2 \times 1 = -4 <0$, ce trinôme n'est donc pas factorisable.
+
+Une forme factorisée de $P$ est $P(x)=(x-1)(2x^2+2x+1)$.
+
+</details>
+:::

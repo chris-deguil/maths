@@ -15,7 +15,7 @@ order: 6
 
 **Les physiciens (XIX<sup>e</sup>–XX<sup>e</sup> s.).** La charge de l'électron vaut $e \approx 1{,}6 \times 10^{-19}$ C ; la masse du proton $\approx 1{,}67 \times 10^{-27}$ kg ; la constante d'Avogadro $N_A \approx 6{,}02 \times 10^{23}$ mol$^{-1}$. Sans les puissances, aucune formule de physique ou de chimie ne serait lisible.
 
-**L'informatique (XX<sup>e</sup>–XXI<sup>e</sup> s.).** Un octet contient $8 = 2^3$ bits. Un kilo-octet vaut $2^{10} = 1\,024$ octets, un méga-octet $2^{20} \approx 10^6$ octets, un téra-octet $2^{40} \approx 10^{12}$. La loi de Moore (1965) prévoyait que le nombre de transistors dans un processeur doublerait tous les deux ans : entre $1971$ ($2\,300$ transistors) et $2020$ ($\approx 10^{10}$), le facteur est d'environ $2^{32} \approx 4 \times 10^9$.
+**L'informatique (XX<sup>e</sup>–XXI<sup>e</sup> s.).** Un octet contient $8 = 2^3$ bits. Un kibioctet (Kio) vaut $2^{10} = 1\,024$ octets, un mébioctet $2^{20} \approx 10^6$ octets, un tébioctet $2^{40} \approx 10^{12}$ octets (alors qu'un kilo-octet vaut exactement $10^3$ octets). La loi de Moore prévoit que le nombre de transistors dans un processeur double environ tous les deux ans : entre $1971$ ($2\,300$ transistors) et $2020$ ($\approx 10^{10}$), le nombre a été multiplié par environ $4 \times 10^6 \approx 2^{22}$, soit $22$ doublements en $49$ ans.
 :::
 
 ## Définitions et premières propriétés
@@ -29,6 +29,14 @@ $$a^n = \underbrace{a \times a \times \dots \times a}_{n \text{ facteurs}}
 a^0 = 1 \quad (a \neq 0)
 \qquad;\qquad
 a^{-n} = \frac{1}{a^n} \quad (a \neq 0)$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+- $0^n = 0$ pour $n \geqslant 1$ ; $0^0$ et $0^{-n}$ ne sont pas définis.
+- $(-1)^n = 1$ si $n$ est pair, $(-1)^n = -1$ si $n$ est impair ; plus généralement $(-a)^n = a^n$ si $n$ est pair et $(-a)^n = -a^n$ si $n$ est impair.
+- Attention : $-3^2 = -9$ alors que $(-3)^2 = 9$ (la puissance est prioritaire sur le signe $-$).
 :::
 
 ::: {.bloc .sfc}
@@ -54,6 +62,21 @@ $$a^m \times a^n = a^{m+n} \qquad
   (a^m)^n = a^{mn} \qquad
   (ab)^n = a^n\,b^n \qquad
   \left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On démontre la première relation pour $m, n \in \N^*$ :
+
+$$a^m \times a^n = \underbrace{a \times a \times \dots \times a}_{m \text{ facteurs}}
+\times \underbrace{a \times a \times \dots \times a}_{n \text{ facteurs}} = \underbrace{a \times a \times \dots \times a}_{m+n \text{ facteurs}} = a^{m+n}$$
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Il n'existe **pas** de règle pour une somme : en général $a^n + b^n \neq (a+b)^n$ et $a^m + a^n \neq a^{m+n}$ (par exemple $2^2 + 2^3 = 12$ alors que $2^5 = 32$).
 :::
 
 ::: {.bloc .sfc}
@@ -133,11 +156,12 @@ Calculer ou simplifier les expressions suivantes.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$$B =\dfrac{(-5)^4 \times 7^2 \times (-2)^{-3}}{(-4)^4 \times (-1)^5 \times 25}  = \dfrac{5^4 \times 49 \times \left(-\dfrac{1}{8}\right)}{2^8 \times (-1) \times 25}
-      = \dfrac{-5^4 \times 49}{-2^8 \times 5^2 \times 8}
-      = \dfrac{5^2 \times 49}{2^8 \times 2^3}
-      = \dfrac{25 \times 49}{2^{11}}
-      = \dfrac{1225}{2048}$$
+*Point clef :* on traite d'abord les signes : exposant pair $\Rightarrow$ positif, exposant impair $\Rightarrow$ négatif.
+Ici $(-5)^4 = 5^4$, $(-4)^4 = 4^4 = 2^8$, $(-2)^{-3} = -\dfrac{1}{2^3}$ et $(-1)^5 = -1$ : il y a un signe $-$ au numérateur et un au dénominateur, donc $B > 0$.
+$$B = \dfrac{5^4 \times 7^2}{2^3 \times 2^8 \times 5^2}
+    = \dfrac{5^{4-2} \times 7^2}{2^{11}}
+    = \dfrac{5^2 \times 7^2}{2^{11}}
+    = \dfrac{1225}{2048}$$
 
 </details>
 

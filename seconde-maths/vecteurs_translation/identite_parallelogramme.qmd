@@ -4,34 +4,30 @@ format:
   html:
     toc: true
     number-sections: false
-description: "AC = AB + AD caractérise un parallélogramme"
+description: "ABCD parallélogramme ⇔ AC = AB + AD, somme de vecteurs de même origine"
 order: 5
 ---
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Propriété : Identité du parallélogramme</span>
 
-Soient $A$, $B$, $D$ trois points non alignés. Le point $C$ est défini par $\ve{AC} = \ve{AB} + \ve{AD}$.
+Soient $A$, $B$, $C$ et $D$ quatre points du plan.
 
-Alors $ABCD$ est un **parallélogramme**.
+$ABCD$ est un **parallélogramme** si et seulement si
+$$\ve{AC} = \ve{AB} + \ve{AD}$$
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Vecteurs_Translation_identite_parall.png" style="width: 25%;">
+  <img src="../../image/seconde/Vecteurs_Translation_identite_parall.png" style="width: 30%;">
 </div>
 :::
 
 <details class="bloc demo"><summary>Démonstration : </summary>
 
-Soit $ABCD$ un parallélogramme, alors $\ve{AB} = \ve{DC}$.
-
-Ainsi $\ve{DC} = \ve{DA}+\ve{AC}$, donc $\ve{AB} = \ve{DA}+\ve{AC}$,
-
-Donc $\ve{AC} = \ve{AB}-\ve{DA} = \ve{AB}+\ve{AD}$.
-
-Réciproquement, soit $\ve{AC} = \ve{AB}+\ve{AD}$, ainsi, puisque $\ve{DA}+\ve{AD} = \ve{0}$,
-$$\ve{DC} = \ve{DA}+\ve{AC} = \ve{DA}+\ve{AB}+\ve{AD} = \ve{AB}$$
-
-Donc $ABCD$ est un parallélogramme.
+- **Sens direct ($\Longrightarrow$) :**  
+  Si $ABCD$ est un parallélogramme, alors $\ve{AD}=\ve{BC}$. D'après la relation de Chasles,
+  $$\ve{AC}=\ve{AB}+\ve{BC}=\ve{AB}+\ve{AD}$$
+- **Sens indirect ($\Longleftarrow$) :**  
+  Supposons $\ve{AC}=\ve{AB}+\ve{AD}$. Soit $C'$ le point tel que $ABC'D$ soit un parallélogramme. D'après le sens direct, $\ve{AC'}=\ve{AB}+\ve{AD}=\ve{AC}$. Or un vecteur n'a qu'un seul représentant d'origine $A$, donc $C'=C$ : $ABCD$ est un parallélogramme.
 
 </details>
 
@@ -49,6 +45,28 @@ $\ve{OE} = \ve{OA}+\ve{OB}$ signifie que $OAEB$ est un parallélogramme (identit
 $\ve{OF} = \ve{OB}+\ve{OC}$ signifie que $OBFC$ est un parallélogramme, donc $\ve{CF} = \ve{OB}$.
 
 Ainsi $\ve{AE} = \ve{CF}$, d'où $AEFC$ est un **parallélogramme**.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Construire la somme de deux vecteurs de même origine — Représenter</span></div>
+
+Les vecteurs $\ve{u}$ et $\ve{v}$ sont représentés sur le quadrillage ci-dessous.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig3.png" style="width: 40%;">
+</div>
+
+Construire le représentant d'origine $O$ du vecteur $\ve{u}+\ve{v}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+- On trace le représentant d'origine $O$ de $\ve{u}$ : $\ve{OA}=\ve{u}$.
+- On trace le représentant d'origine $O$ de $\ve{v}$ : $\ve{OB}=\ve{v}$.
+- On construit le point $C$ tel que $OACB$ soit un parallélogramme.
+
+D'après l'identité du parallélogramme, $\ve{OC}=\ve{OA}+\ve{OB}=\ve{u}+\ve{v}$.
 
 </details>
 :::

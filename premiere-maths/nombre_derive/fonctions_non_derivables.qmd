@@ -1,0 +1,67 @@
+---
+title: "Fonctions non dérivables en a"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Point anguleux, tangente verticale, et exemples de non-dérivabilité (racine carrée, valeur absolue)."
+order: 2
+---
+
+Il peut arriver que le taux d'accroissement ait des limites différentes selon que $h \to 0^+$ ou $h \to 0^-$, ou bien que cette limite soit infinie. On parle de **limite à droite** et **limite à gauche**.
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : </span>
+
+- Si $\displaystyle\lim_{h \to 0^+} \dfrac{f(a+h)-f(a)}{h} \neq \lim_{h \to 0^-} \dfrac{f(a+h)-f(a)}{h}$, alors $f$ **n'est pas dérivable en $a$** (point anguleux).
+- Si $\displaystyle\lim_{h \to 0} \dfrac{f(a+h)-f(a)}{h} = \pm\infty$, alors $f$ **n'est pas dérivable en $a$** (tangente verticale).
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Fonctions non dérivables en $0$</span>
+
+La fonction racine carrée $x \mapsto \sqrt{x}$ et la fonction valeur absolue $x \mapsto |x|$ ne sont pas dérivables en $0$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+- **Racine carrée :**
+  $$\lim_{h \to 0^+} \dfrac{\sqrt{h} - 0}{h} = \lim_{h \to 0^+} \dfrac{1}{\sqrt{h}} = +\infty$$
+  La limite est infinie : la fonction n'est pas dérivable en $0$ (la tangente en $0$ est verticale).
+
+- **Valeur absolue :**
+  $$\lim_{h \to 0^+} \dfrac{|h|}{h} = \dfrac{h}{h} = 1 \qquad \text{et} \qquad \lim_{h \to 0^-} \dfrac{|h|}{h} = \dfrac{-h}{h} = -1$$
+  Les limites à droite et à gauche sont différentes : la fonction n'est pas dérivable en $0$.
+
+</details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Illustration graphique</span>
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/NombreDerivee_point_anguleux.png" style="width: 40%;">
+</div>
+
+En $0$, la pente de la droite $(AM)$ vaut $1$ lorsque $M$ arrive par la droite, et $-1$ lorsque $M$ arrive par la gauche. Ces valeurs étant différentes, la courbe présente un **point anguleux** en $0$ : il n'existe pas de tangente unique.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Non dérivabilité d'une fonction définie par morceaux — Raisonner</span></div>
+
+On considère $f$ définie par :
+$$f(x) = \begin{cases} x^2 & \text{si } x \geqslant 0 \\ -2x & \text{si } x < 0 \end{cases}$$
+La fonction $f$ est-elle dérivable en $0$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On calcule les limites à droite et à gauche du taux d'accroissement en $0$.
+
+- Pour $h > 0$ : $\dfrac{f(0+h)-f(0)}{h} = \dfrac{h^2 - 0}{h} = h \xrightarrow[h \to 0^+]{} 0$
+- Pour $h < 0$ : $\dfrac{f(0+h)-f(0)}{h} = \dfrac{-2h - 0}{h} = -2 \xrightarrow[h \to 0^-]{} -2$
+
+Les limites à droite ($0$) et à gauche ($-2$) sont différentes : $f$ **n'est pas dérivable en $0$**. La courbe présente un point anguleux en $0$.
+
+</details>
+:::

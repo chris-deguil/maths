@@ -1,0 +1,25 @@
+---
+chapter-order: 3
+title: "Nombre dérivé et fonction dérivée"
+description: "Taux d'accroissement, nombre dérivé, tangente, approximation affine et dérivées usuelles."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Calculer le taux d'accroissement d'une fonction entre deux points.
+- Définir le nombre dérivé comme limite du taux d'accroissement.
+- Établir l'équation de la tangente en un point de la représentation graphique d'une fonction dérivable.
+- Interpréter le nombre dérivé comme coefficient directeur de la tangente et comme vitesse instantanée.
+- Représenter une fonction dérivable et son approximation affine en un point.
+- Connaître les dérivées des fonctions de référence : $x^n$, $\sqrt{x}$, $\dfrac{1}{x}$.
+:::

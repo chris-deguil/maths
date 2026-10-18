@@ -1,0 +1,93 @@
+---
+title: "Exercice bilan"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Étude complète d'une suite récurrente : calcul de termes, liste Python, expression explicite, variations et limite."
+order: 8
+---
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Étude complète (extrait d'évaluation 2025) — Calculer, Raisonner</span></div>
+
+On considère la suite $(u_n)$ définie par $u_0=\dfrac12$ et, pour tout $n \in \N$, $u_{n+1} = \dfrac{2u_n}{1+u_n}$.
+
+1. Calculer, sous forme irréductible, $u_1$ et $u_2$. On fera apparaître toutes les étapes nécessaires.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$$u_1 = \dfrac{2 \times u_0}{1+ u_0} = \dfrac{2 \times \dfrac{1}{2}}{1+ \dfrac{1}{2}} = \dfrac{1}{\dfrac32}= \dfrac23 \et u_2 =\dfrac{2 \times u_1}{1+ u_1} = \dfrac{2 \times \dfrac{2}{3}}{1+ \dfrac{2}{3}} = \dfrac{\dfrac43}{\dfrac53}= \dfrac45$$
+
+</details>
+
+2. On souhaite écrire une fonction `liste_suite` qui renvoie la liste des $n$ premiers termes de la suite $(u_n)$. Compléter le code Python.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+def liste_suite(n):
+    u = 1/2
+    L = [u]
+    for i in range(1, n):
+        u = 2*u/(1+u)
+        L.append(u)
+    return L
+```
+
+</details>
+
+3. On considère la suite $(v_n)$ définie pour tout $n \in \N$ par $v_n= \dfrac{2^n}{1+2^n}$.
+
+   a. Montrer que la suite $(v_n)$ vérifie la même relation de récurrence que la suite $(u_n)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout $n \in \N$,
+$$\dfrac{2v_n}{1+v_n}=\dfrac{2 \times \dfrac{2^n}{1+2^n}}{1 + \dfrac{2^n}{1+2^n}}= \dfrac{\dfrac{2^{n+1}}{1+2^n}}{\dfrac{1+2^n + 2^n}{1+2^n}}= \dfrac{2^{n+1}}{1+2^{n+1}}=v_{n+1}$$
+
+</details>
+
+   b. En déduire $u_n$ en fonction de $n$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$(v_n)$ et $(u_n)$ suivent la même relation de récurrence, et $u_0=v_0$. On déduit que, pour tout $n \in \N$, $u_n=v_n=\dfrac{2^n}{1+2^n}$.
+
+</details>
+
+4. a. Démontrer que la suite $(u_n)$ est croissante.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout $n \in \N$, on a $u_n >0$. De plus,
+$$\dfrac{u_{n+1}}{u_n} = \dfrac{2^{n+1}}{1+2^{n+1}} \times \dfrac{2^n+1}{2^n} = \dfrac{2 \times (2^n+1)}{2^{n+1} +1}= \dfrac{2^{n+1}+2}{2^{n+1} +1} >1$$
+Donc $u_{n+1} > u_n$ : la suite $(u_n)$ est croissante.
+
+</details>
+
+   b. À l'aide de la calculatrice, conjecturer la limite de la suite $(u_n)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On obtient le tableau de valeurs suivant :
+
+<div style="overflow-x:auto;">
+<table>
+<tbody>
+<tr><td>$k$</td><td>$0$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td><td>$5$</td><td>$6$</td><td>$7$</td><td>$8$</td><td>$9$</td><td>$10$</td></tr>
+<tr><td>$u_k$</td><td>$0{,}500$</td><td>$0{,}667$</td><td>$0{,}800$</td><td>$0{,}889$</td><td>$0{,}941$</td><td>$0{,}970$</td><td>$0{,}985$</td><td>$0{,}992$</td><td>$0{,}996$</td><td>$0{,}998$</td><td>$0{,}999$</td></tr>
+</tbody>
+</table>
+</div>
+
+On conjecture que $\displaystyle\lim_{n \to + \infty} u_n =1$.
+
+</details>
+:::

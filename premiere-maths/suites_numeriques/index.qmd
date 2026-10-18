@@ -1,0 +1,25 @@
+---
+chapter-order: 2
+title: "Suites numériques : généralités"
+description: "Notion de suite, modes de génération, variations, limite et algorithmique sur les suites."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Modéliser un phénomène discret par une suite. Étudier des variations en langage naturel ou avec le langage des suites.
+- Générer des termes d'une suite définie explicitement ou par récurrence, sur un tableur ou avec un langage de programmation.
+- Représenter graphiquement une suite définie explicitement ou par récurrence.
+- Conjecturer le comportement global d'une suite ou de ses premiers termes à l'aide d'un tableur ou d'un algorithme.
+- Étudier les variations d'une suite définie explicitement, par récurrence, ou par une somme.
+- Écrire une fonction déterminant le terme de rang $n$, la somme des premiers termes, ou un rang seuil.
+:::

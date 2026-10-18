@@ -19,7 +19,7 @@ listing:
 - Vecteur $\ve{MM'}$ associé à la translation qui transforme $M$ en $M'$, direction, sens et norme.
 - Égalité de deux vecteurs. Notation $\ve{u}$. Vecteur nul.
 - Représentants d'un vecteur.
-- Somme de deux vecteurs en lien avec l'enchaînement des translations. Relation de Chasles.
+- Somme de deux vecteurs en lien avec l'enchaînement des translations. Relation de Chasles. Vecteur opposé.
 - Produit d'un vecteur par un nombre réel. Colinéarité de deux vecteurs.
 - Représentation d'un vecteur comme combinaison linéaire de deux vecteurs non colinéaires.
 - Caractérisation vectorielle du milieu d'un segment.

@@ -4,7 +4,7 @@ format:
   html:
     toc: true
     number-sections: false
-description: "Fonction, image, antécédent"
+description: "Fonction, image, antécédent, représentation graphique"
 order: 1
 ---
 
@@ -22,42 +22,79 @@ Une **fonction** $f$ définie sur un ensemble $D$ associe à tout réel $x \in D
 <span class="bloc-titre">Image et antécédent — mémo : </span>
 
 - **Calculer une image :** on connaît $x$, on calcule $f(x)$.
-- **Chercher un antécédent :** on connaît $f(x)$ (le résultat), on cherche $x$. On résout une équation.
+- **Déterminer un antécédent :** on connaît le nombre $k$ (le résultat), on détermine les réels $x$ tels que $f(x)=k$ : on résout une équation.
 :::
 
 ::: {.bloc .sfc}
 <div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer une image et chercher un antécédent — Calculer</span></div>
 
-Soit $f$ la fonction définie sur $\R$ par $f(x)=2x-3$.
+Soit $g$ la fonction définie sur $\R$ par $g(x)=x^2$.
 
-1. Calculer $f(4)$.
+1. Calculer $g(-3)$.
 
-<details class="bloc cor">
-<summary>Afficher la correction :</summary>
+<details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$f(4)=2\times 4-3=8-3=5$. L'image de $4$ par $f$ est $\mathbf{5}$.
+$g(-3)=(-3)^2=9$.
+
+L'image de $-3$ par $g$ est $9$.
 
 </details>
 
-2. Déterminer le ou les antécédents de $5$ par $f$.
+2. Déterminer le ou les antécédents de $4$ par $g$.
 
-<details class="bloc cor">
-<summary>Afficher la correction :</summary>
+<details class="bloc cor"><summary>Afficher la correction :</summary>
 
-On cherche $x$ tel que $f(x)=5$ : $2x-3=5 \iff 2x=8 \iff x=4$. L'unique antécédent de $5$ par $f$ est $\mathbf{4}$.
+Soit $x\in\R$ tel que $g(x)=4$.
+Or
+$$g(x)=4 \iff x^2=4 \iff x^2-4=0 \iff (x-2)(x+2)=0 \iff x=2 \text{ ou } x=-2$$
+
+Le nombre $4$ admet donc deux antécédents par $g$, qui sont $2$ et $-2$.
 
 </details>
 :::
 
-::: {.bloc .rem}
-<span class="bloc-titre">Remarque : </span>
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Représentation graphique</span>
 
-Un réel peut avoir **plusieurs antécédents**, un seul, ou aucun. Par exemple, pour la fonction $g$ définie par $g(x)=x^2$ :
+Dans un repère du plan, la **représentation graphique** (ou courbe représentative) d'une fonction $f$ définie sur $D$ est l'ensemble $\mathcal{C}_f$ des points $M(x\,;\,y)$ tels que $x \in D$ et $y = f(x)$.
 
-- $g(2)=4$ et $g(-2)=4$ : le réel $4$ a **deux** antécédents, $2$ et $-2$.
-- Le réel $-1$ n'a **aucun** antécédent (un carré est toujours positif).
+On dit que $\mathcal{C}_f$ a pour **équation** $y = f(x)$.
+:::
 
-Graphiquement, la courbe de $g$ est une parabole : une droite horizontale $y=k$ peut couper cette courbe en $0$, $1$ ou $2$ points selon la valeur de $k$.
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Lire graphiquement images, antécédents et coordonnées — Représenter</span></div>
+
+La courbe $\mathcal{C}_h$ ci-dessous est la représentation graphique d'une fonction $h$ définie sur $\R$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonction_Affine_affine_fig1.png" style="width: 45%;">
+</div>
+
+Déterminer graphiquement :
+
+1. l'image de $-2$ par $h$ ;
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+L'image de $-2$ par $h$ est $4$.
+
+</details>
+
+2. le ou les antécédents de $1$ par $h$ ;
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Le nombre $1$ a trois antécédents par $h$, qui sont $-3$, $1$ et $3$.
+
+</details>
+
+3. l'ordonnée du point de $\mathcal{C}_h$ d'abscisse $2$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Le point de $\mathcal{C}_h$ d'abscisse $2$ a pour ordonnée $0$ : c'est le point $(2\,;\,0)$.
+
+</details>
 :::
 
 ::: {.bloc .ex}
@@ -79,7 +116,11 @@ Il s'agit de **calculs d'images**. $h(0)=0-1=-1$ ; $h(3)=9-1=8$ ; $h(-3)=9-1=8$.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-Il s'agit d'une **recherche d'antécédents**. On résout $x^2-1=3$, soit $x^2=4$, d'où $x=2$ ou $x=-2$. Les antécédents de $3$ sont $\mathbf{2}$ et $\mathbf{-2}$.
+Il s'agit d'une **recherche d'antécédents**. Soit $x\in\R$ tel que $h(x)=3$.
+Or
+$$h(x)=3 \iff x^2-1=3 \iff x^2-4=0 \iff (x-2)(x+2)=0 \iff x=2 \text{ ou } x=-2$$
+
+Le nombre $3$ a deux antécédents par $h$, qui sont $2$ et $-2$.
 
 </details>
 
@@ -87,7 +128,12 @@ Il s'agit d'une **recherche d'antécédents**. On résout $x^2-1=3$, soit $x^2=4
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-Il s'agit d'une **recherche d'antécédents**. On résout $x^2-1=-2$, soit $x^2=-1$. Il n'existe aucun réel dont le carré est négatif : $-2$ n'a **aucun** antécédent par $h$.
+Il s'agit d'une **recherche d'antécédents**. Soit $x\in\R$ tel que $h(x)=-2$.
+Or
+$$h(x)=-2 \iff x^2-1=-2 \iff x^2=-1$$
+
+Un carré est toujours positif ou nul, donc cette équation n'a pas de solution.
+Le nombre $-2$ n'a aucun antécédent par $h$.
 
 </details>
 :::

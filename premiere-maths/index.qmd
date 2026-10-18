@@ -4,8 +4,9 @@ listing:
   - id: Chapitre
     type: grid
     fields: [title, description]
-    sort: "title"
-    contents: []
+    sort: "chapter-order"
+    contents:
+      - second_degre/index.qmd
+      - suites_numeriques/index.qmd
+      - nombre_derive/index.qmd
 ---
-
-

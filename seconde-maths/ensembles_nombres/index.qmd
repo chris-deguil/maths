@@ -16,28 +16,27 @@ listing:
 ::: {.bloc .rem}
 <span class="bloc-titre">Attendus et savoir-faire :</span>
 
-- Élément d'un ensemble, sous-ensemble, ensemble vide, appartenance, inclusion, réunion, intersection, complémentaire ; symboles $\emptyset$, $\in$, $\subset$, $\cap$, $\cup$, $\{ ... \}$.
-- Notations $\Z$ et $\N$.
-- Multiple, diviseur, nombre pair, nombre impair : $a$ est multiple de $b$ s'il existe un entier $k$ tel que $a = kb$.
-- Ensemble $\D$ des nombres décimaux.
-- Ensemble $\Q$ des nombres rationnels. Nombres irrationnels ; exemples fournis par la géométrie $\sqrt{2}$ et $\pi$.
-- Règles de calcul sur les puissances entières relatives (dont exposant littéral $n$).
-- Ensemble $\R$ des nombres réels.
+- Vocabulaire ensembliste : élément, appartenance, inclusion, ensemble vide, réunion, intersection, complémentaire ; symboles $\in$, $\subset$, $\emptyset$, $\cup$, $\cap$, $\{\ldots\}$.
+- Notations $\N$ et $\Z$.
+- Définition des notions de multiple, de diviseur, de nombre pair, de nombre impair : $a$ est multiple de $b$ s'il existe un entier $k$ tel que $a = kb$.
+- Ensemble $\D$ des nombres décimaux, ensemble $\Q$ des nombres rationnels.
+- Nombres irrationnels ; exemples fournis par la géométrie, par exemple $\sqrt{2}$ et $\pi$.
 
 **Savoir-faire :**
 
-- Présenter les fractions sous forme irréductible.
 - Modéliser et résoudre des problèmes mobilisant les notions de multiple, de diviseur, de nombre pair, de nombre impair.
+- Présenter les fractions sous forme irréductible.
 - Effectuer des calculs numériques mettant en jeu des puissances, des écritures fractionnaires.
 :::
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Automatismes :</span>
 
-- Comparer deux nombres directement ou par calcul de leur différence, ou (s'ils sont strictement positifs) de leur quotient.
 - Effectuer des opérations et des comparaisons entre des fractions simples.
 - Effectuer des opérations sur les puissances.
-- Effectuer une application numérique d'une formule (notamment pour les formules utilisées dans les autres disciplines).
-- Application simple du théorème de Thalès.
+- Passer d'une écriture d'un nombre à une autre (décimale, fractionnaire, pourcentage).
+- Estimer un ordre de grandeur.
 - Effectuer des conversions d'unités : longueurs, aires, volumes, contenances, durées, vitesses, masses.
+- Application simple du théorème de Pythagore, du théorème de Thalès.
+- Calculer des périmètres (polygone et cercle), aires (rectangle, triangle et disque) et volumes (pavé droit, prisme, cylindre, pyramide, cône et boule).
 :::

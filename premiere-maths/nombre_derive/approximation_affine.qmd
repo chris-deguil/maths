@@ -1,0 +1,84 @@
+---
+title: "Approximation affine"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Approximation affine d'une fonction dérivable au voisinage d'un point, et applications."
+order: 5
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Approximation affine</span>
+
+Soit $f$ dérivable en $a$. Pour $h$ proche de $0$, on a l'approximation :
+$$f(a + h) \approx f(a) + h \cdot f'(a)$$
+On l'appelle **approximation affine** (ou développement limité à l'ordre 1) de $f$ en $a$.
+Cette approximation est la « meilleure ».
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+On cherche la meilleure approximation affine $g(h) = \alpha h + \beta$ de $f(a+h)$ au voisinage de $h = 0$.
+
+- En $h = 0$ : $f(a) = g(0) = \beta$, donc $\beta = f(a)$.
+- Soit $E(h) = f(a+h) - f(a) - \alpha h$ la fonction erreur.
+
+  Pour que l'approximation soit optimale, on demande que l'erreur soit *négligeable devant $h$*, c'est-à-dire $\displaystyle\lim_{h \to 0} \dfrac{E(h)}{h} = 0$, soit :
+  $$\lim_{h \to 0} \dfrac{f(a+h) - f(a)}{h} - \alpha = 0 \Longrightarrow \alpha = f'(a)$$
+
+La seule approximation affine optimale est donc $f(a+h) \approx f(a) + h f'(a)$.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Géométriquement, cela revient à remplacer la courbe $\mathcal{C}_f$ par sa tangente en $a$ au voisinage de ce point. Lorsque l'on « zoome » sur $A(a\,;\,f(a))$, courbe et tangente deviennent localement indiscernables.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Utiliser l'approximation affine — Calculer</span></div>
+
+Soit $f(x) = \sqrt{x}$.
+
+Donner l'approximation affine de $\sqrt{1+h}$ pour $h$ proche de $0$ et en déduire une valeur approchée de $\sqrt{1{,}08}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On sait que $f$ est dérivable en $1$.
+On a $f'(1) = \dfrac{1}{2\sqrt{1}} = \dfrac{1}{2}$ et $f(1) = \sqrt{1} = 1$.
+
+D'après la formule de l'approximation affine,
+$$ f(1+h) \approx f(1) + h f'(1) $$
+On obtient l'approximation suivante, valable pour $h$ proche de $0$ :
+$$ \sqrt{1+h} \approx 1 + \dfrac{1}{2}h $$
+
+Ainsi, pour  $h = 0{,}08$
+$$\sqrt{1{,}08} \approx 1 + \dfrac{0{,}08}{2} = 1{,}04$$
+La calculatrice donne $\sqrt{1{,}08} \approx 1{,}03923\ldots$
+L'erreur est inférieure à $0{,}001$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Approximation affine en physique — Modéliser, Calculer</span></div>
+
+Un pendule simple de longueur $L$ a une période $T(L) = 2\pi\sqrt{\dfrac{L}{g}}$ où $g \approx 9{,}81\,\text{m/s}^2$.
+Pour $L_0 = 1\,\text{m}$, on mesure $T(1) \approx 2{,}007\,\text{s}$.
+Estimer la période pour $L = 1{,}04\,\text{m}$ à l'aide de l'approximation affine, sans calculatrice.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On a $T(L) = 2\pi\sqrt{\dfrac{L}{g}} = \dfrac{2\pi}{\sqrt{g}}\sqrt{L}$.
+Donc $T'(L) = \dfrac{2\pi}{\sqrt{g}} \cdot \dfrac{1}{2\sqrt{L}} = \dfrac{\pi}{\sqrt{gL}}$.
+En $L_0 = 1$ : $T'(1) = \dfrac{\pi}{\sqrt{g}} \approx \dfrac{3{,}1416}{3{,}132} \approx 1{,}004\,\text{s/m}$.
+Par approximation affine avec $h = 0{,}04$ :
+$$T(1{,}04) \approx T(1) + 0{,}04 \times T'(1) \approx 2{,}007 + 0{,}04 \times 1{,}004 \approx 2{,}047\,\text{s}$$
+
+</details>
+:::

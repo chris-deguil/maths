@@ -1,0 +1,24 @@
+---
+chapter-order: 1
+title: "Second degré"
+description: "Fonction polynôme du second degré, forme canonique, racines, factorisation, signe, parabole et variations."
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire : </span>
+
+- Déterminer la forme canonique d'une fonction polynôme du second degré.
+- Résoudre une équation du second degré, factoriser une expression du second degré, étudier son signe.
+- Relier les coefficients d'une fonction polynôme du second degré et les éléments géométriques de sa représentation graphique (sommet, axe de symétrie, sens de variation, position par rapport à l'axe des abscisses).
+- Établir la factorisation éventuelle d'une fonction polynôme du second degré à l'aide de ses racines.
+- Utiliser le discriminant et les racines pour étudier le signe d'une fonction polynôme du second degré.
+:::

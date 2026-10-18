@@ -1,0 +1,49 @@
+---
+title: "Équation de la tangente"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Équation de la tangente en un point à partir du nombre dérivé."
+order: 4
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Équation de la tangente en $a$</span>
+
+Soit $f$ dérivable en $a$. La tangente à $\mathcal{C}_f$ au point d'abscisse $a$ a pour équation :
+$$T_a : y = f'(a)(x - a) + f(a)$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+La tangente en $A(a\,;\,f(a))$ a pour coefficient directeur $f'(a)$, donc son équation est de la forme $y = f'(a)x + p$.
+
+Comme $A \in T_a$ : $f(a) = f'(a) \cdot a + p$, d'où $p = f(a) - f'(a) \cdot a$.
+
+On obtient : $T_a : y = f'(a)(x-a) + f(a)$.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Déterminer l'équation d'une tangente — Calculer</span></div>
+
+On sait que la tangente à $\mathcal{C}_f$ au point d'abscisse $2$ passe par les points $(2\,;\,3)$ et $(5\,;\,9)$.
+
+Déterminer $f(2)$, $f'(2)$ puis l'équation de la tangente en $2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Le point $(2\,;\,3)$ est le point de tangence, donc $f(2) = 3$.
+
+$f'(2)$ est le coefficient directeur de la tangente au point d'abscisse $2$, ainsi
+$$f'(2) = \dfrac{9 - 3}{5 - 2} = \dfrac{6}{3} = 2$$
+
+Soit $T_2$ l'équation de la tangente à $\mathscr{C}_f$ au point d'abscisse $2$.
+$$M(x\,;\,y) \in T_2 \Longleftrightarrow T_2 \,:\, y = f'(2)(x - 2) + f(2) \Longleftrightarrow T_2 \,:\, y = 2(x-2) + 3 \Longleftrightarrow T_2 \,:\, y = 2x - 1$$
+Ainsi $T_2\,:\, y = 2x - 1$.
+
+</details>
+:::

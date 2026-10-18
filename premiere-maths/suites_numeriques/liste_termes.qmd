@@ -1,0 +1,78 @@
+---
+title: "Liste des termes d'une suite numérique"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Utiliser les listes Python pour générer les termes d'une suite explicite ou récurrente."
+order: 4
+---
+
+On introduit dans cette partie la notion de `liste` en Python. Une liste est une structure Python qui permet de stocker, dans une variable, un ensemble d'éléments comme des nombres.
+
+Une liste se crée avec :
+
+```python
+L = []    # on cree une liste vide
+L = [4]   # on cree une liste dont le premier element est 4
+```
+
+De plus, les listes sont des structures ordonnées. Chaque élément est repéré par sa position, son **indice** (comme pour les suites) : $0$ pour le premier élément, $1$ pour le deuxième, etc.
+
+```python
+L = [1, 8, -5, 4]  # liste de quatre elements : dans l'ordre 1, 8, -5 et 4
+# L[0] renvoie la valeur 1
+# L[2] renvoie la valeur -5
+L.append(-2)       # permet d'ajouter -2 en derniere position de la liste
+```
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Lister les termes d'une suite explicite — Calculer</span></div>
+
+Écrire une fonction Python qui renvoie la liste des $n$ premiers termes de la suite $(u_n)$ définie par $u_n=3n^2-5n+1$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+def terme_u(n):     # liste des n premiers termes, de u_0 a u_{n-1}
+    L = []          # on definit une liste vide
+    for i in range(n):        # i prend les valeurs de 0 a n-1
+        u = 3*i**2 - 5*i + 1  # on calcule le terme de la suite
+        L.append(u)           # on ajoute le terme a la liste
+    return L
+```
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Lister les termes d'une suite récurrente — Calculer</span></div>
+
+Écrire une fonction Python qui renvoie la liste des $n$ premiers termes de la suite $(u_n)$ définie par $u_0=3$ et, pour tout $n \geqslant 2$, $u_{n+1} = \dfrac{u_n^2}{n-1}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+```python
+def terme_u(n):     # liste des n premiers termes, de u_0 a u_{n-1}
+    u = 3
+    L = [u]         # on ajoute le premier terme a la liste
+    for i in range(1, n+1):   # i correspond a l'indice
+        u = u**2/(i-2)        # on calcule le terme de la suite
+        L.append(u)           # on ajoute le terme a la liste
+    return L
+```
+
+On peut aussi écrire :
+
+```python
+def terme_u(n):
+    L = [3]
+    for i in range(2, n+2):
+        L.append(L[-1]**2/(i-1))
+    return L
+```
+
+</details>
+:::

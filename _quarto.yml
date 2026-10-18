@@ -47,7 +47,15 @@ website:
       collapse-level: 1
       contents:
         - seconde-maths/index.qmd
-
+        
+        - section: "Stage de pré-rentrée"
+          contents:
+            - seconde-maths/stage_prerentree/index.qmd
+            - seconde-maths/stage_prerentree/jour1.qmd
+            - seconde-maths/stage_prerentree/jour2.qmd
+            - seconde-maths/stage_prerentree/jour3.qmd
+            - seconde-maths/stage_prerentree/jour4.qmd
+            - seconde-maths/stage_prerentree/jour5.qmd
         - section: "Chapitre 1 : Ensembles de nombres"
           contents:
             - seconde-maths/ensembles_nombres/index.qmd
@@ -200,11 +208,56 @@ website:
 
 
     - title: "Première"
-      logo: assets/images/logo_maths2.png
+      logo: image/logo/logo_maths2.png
       style: docked
       collapse-level: 1
       contents:
         - premiere-maths/index.qmd
+
+        - section: "Chapitre 0 : Stage de pré-rentrée"
+          contents:
+            - premiere-maths/stage_prerentree/index.qmd
+            - premiere-maths/stage_prerentree/jour1.qmd
+            - premiere-maths/stage_prerentree/jour2.qmd
+            - premiere-maths/stage_prerentree/jour3.qmd
+            - premiere-maths/stage_prerentree/jour4.qmd
+            - premiere-maths/stage_prerentree/jour5.qmd
+
+
+        - section: "Chapitre 1 : Second degré"
+          contents:
+            - premiere-maths/second_degre/index.qmd
+            - premiere-maths/second_degre/definition_forme_canonique.qmd
+            - premiere-maths/second_degre/equation_racine_second_degre.qmd
+            - premiere-maths/second_degre/factorisation.qmd
+            - premiere-maths/second_degre/signe_trinome.qmd
+            - premiere-maths/second_degre/liens_racines_coefficients.qmd
+            - premiere-maths/second_degre/parabole_representation.qmd
+            - premiere-maths/second_degre/axe_symetrie_variations.qmd
+            - premiere-maths/second_degre/bilan.qmd
+
+        - section: "Chapitre 2 : Suites numériques"
+          contents:
+            - premiere-maths/suites_numeriques/index.qmd
+            - premiere-maths/suites_numeriques/notion_suites.qmd
+            - premiere-maths/suites_numeriques/suites_fonctionnelles.qmd
+            - premiere-maths/suites_numeriques/suites_recurrence.qmd
+            - premiere-maths/suites_numeriques/liste_termes.qmd
+            - premiere-maths/suites_numeriques/variations_suite.qmd
+            - premiere-maths/suites_numeriques/notion_limite.qmd
+            - premiere-maths/suites_numeriques/algorithme_somme_seuil.qmd
+            - premiere-maths/suites_numeriques/exercice_bilan.qmd
+
+        - section: "Chapitre 3 : Nombre dérivé et fonction dérivée"
+          contents:
+            - premiere-maths/nombre_derive/index.qmd
+            - premiere-maths/nombre_derive/taux_accroissement_nombre_derive.qmd
+            - premiere-maths/nombre_derive/fonctions_non_derivables.qmd
+            - premiere-maths/nombre_derive/interpretation_geometrique_tangente.qmd
+            - premiere-maths/nombre_derive/equation_tangente.qmd
+            - premiere-maths/nombre_derive/approximation_affine.qmd
+            - premiere-maths/nombre_derive/fonction_derivee_usuelles.qmd
+
 
     - title: "Terminale"
       logo: assets/images/logo_maths2.png

@@ -4,11 +4,12 @@ format:
   html:
     toc: true
     number-sections: false
-description: "λu, distributivité"
+description: "λu, règles de calcul, décomposition, milieu d'un segment"
 order: 7
 ---
 
-## Produit d'un vecteur par un réel 
+## Produit d'un vecteur par un réel
+
 ::: {.bloc .def}
 <span class="bloc-titre">Définition : Produit par un réel</span>
 
@@ -18,14 +19,14 @@ Soit $\lambda \in \R$ et $\ve{u}$ un vecteur non nul. Le **produit** $\lambda\ve
 - le même **sens** que $\ve{u}$ si $\lambda > 0$, le sens contraire si $\lambda < 0$ ;
 - pour **norme** $|\lambda|\cdot\norm{\ve{u}}$.
 
-Par convention, $0\cdot\ve{u} = \ve{0}$.
+Par convention, $0\cdot\ve{u} = \ve{0}$ et, pour tout réel $\lambda$, $\lambda\,\ve{0} = \ve{0}$.
 :::
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Récapitulatif selon le signe de $\lambda$ : </span>
 
 | Condition | Sens | Norme |
-|---|---|---|
+|:---:|:---:|:---:|
 | $\lambda > 0$ | même sens que $\ve{u}$ | $\lambda\norm{\ve{u}}$ |
 | $\lambda < 0$ | sens contraire à $\ve{u}$ | $\vert\lambda\vert\norm{\ve{u}}$ |
 | $\lambda = 0$ | vecteur nul | $0$ |
@@ -35,11 +36,34 @@ Par convention, $0\cdot\ve{u} = \ve{0}$.
 </div>
 :::
 
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Construire le produit d'un vecteur par un réel — Représenter</span></div>
+
+Le vecteur $\ve{u}$ est représenté sur le quadrillage ci-dessous.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig4.png" style="width: 40%;">
+</div>
+
+Construire les représentants d'origine $O$ des vecteurs $3\ve{u}$ et $-2\ve{u}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour $\ve{u}$, on avance de $2$ carreaux et on monte de $1$.
+
+- $3\ve{u}$ a la même direction et le même sens que $\ve{u}$, et une norme trois fois plus grande : on avance de $6$ et on monte de $3$.
+- $-2\ve{u}$ a la même direction que $\ve{u}$, le sens contraire, et une norme deux fois plus grande : on recule de $4$ et on descend de $2$.
+
+</details>
+:::
+
 ::: {.bloc .thm}
-<span class="bloc-titre">Propriété : Distributivité (admis)</span>
+<span class="bloc-titre">Propriété : Règles de calcul (admis)</span>
 
 Pour tous vecteurs $\ve{u}$, $\ve{v}$ et tous réels $k$, $m$ :
-$$k(\ve{u}+\ve{v}) = k\ve{u}+k\ve{v} \qquad \text{et} \qquad (k+m)\ve{u} = k\ve{u}+m\ve{u}$$
+$$k(\ve{u}+\ve{v}) = k\ve{u}+k\ve{v} \qquad ; \qquad (k+m)\ve{u} = k\ve{u}+m\ve{u} \qquad ; \qquad k(m\ve{u}) = (km)\ve{u}$$
+
+De plus, $k\ve{u} = \ve{0} \iff k = 0$ ou $\ve{u} = \ve{0}$.
 :::
 
 ::: {.bloc .sfc}
@@ -61,7 +85,7 @@ $(2-5)\ve{u}+3\ve{v} = -3\ve{u}+3\ve{v} = \ve{0}$, donc $3\ve{v} = 3\ve{u}$, soi
 
 $-3\ve{u}-6\ve{v} = 2\ve{v}+\ve{u}$, donc $-4\ve{u} = 8\ve{v}$, soit $\ve{u} = -2\ve{v}$.
 
-Les vecteurs $\ve{u}$ et $\ve{v}$ ont **même direction et de sens contraires**, et $\norm{\ve{u}} = 2\norm{\ve{v}}$.
+Si $\ve{v} \neq \ve{0}$, les vecteurs $\ve{u}$ et $\ve{v}$ ont **même direction et des sens contraires**, et $\norm{\ve{u}} = 2\norm{\ve{v}}$.
 
 </details>
 :::
@@ -87,8 +111,8 @@ $$\ve{MA} = 3(\ve{MA}+\ve{AB}) - (\ve{MA}+\ve{AC})$$
 Donc,
 $$\ve{MA} = 3\ve{MA} + 3\ve{AB} - \ve{MA} - \ve{AC} = 2\ve{MA} + 3\ve{AB} - \ve{AC}$$
 
-Ainsi $2\ve{MA} = 2\ve{AB} - \ve{AC}$, d'où :
-$$\ve{AM} = -\ve{AB} + \frac{1}{2}\ve{AC}$$
+Ainsi $\ve{MA} - 2\ve{MA} = 3\ve{AB} - \ve{AC}$, soit $-\ve{MA} = 3\ve{AB} - \ve{AC}$, d'où :
+$$\ve{AM} = 3\ve{AB} - \ve{AC}$$
 
 </details>
 :::
@@ -105,7 +129,32 @@ On dit que l'on **décompose** le vecteur $\ve{AM}$ dans la **base $\left(\ve{AB
 En pratique, on cherche à écrire les deux vecteurs dans la même base, puis à montrer que l'un est multiple de l'autre ou à exhiber les coordonnées d'un point.
 :::
 
-## Milieu d'un segment
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Lire la décomposition d'un vecteur sur un quadrillage — Représenter</span></div>
+
+Sur le quadrillage ci-dessous, on a placé les points $A$, $B$, $C$ et $M$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig5.png" style="width: 35%;">
+</div>
+
+Exprimer $\ve{AM}$ en fonction de $\ve{AB}$ et $\ve{AC}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : on cherche un chemin de $A$ à $M$ qui n'utilise que des déplacements parallèles à $\ve{AB}$ puis à $\ve{AC}$.*
+
+On part de $A$ et on applique deux fois le déplacement $\ve{AB}$ : on arrive au point $P$ tel que $\ve{AP}=2\ve{AB}$.
+
+Puis on applique une fois le déplacement $\ve{AC}$ : on arrive en $M$, donc $\ve{PM}=\ve{AC}$.
+
+D'après la relation de Chasles,
+$$\ve{AM}=\ve{AP}+\ve{PM}=2\ve{AB}+\ve{AC}$$
+
+</details>
+:::
+
+## Milieu d'un segment et vecteurs
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Propriété : Caractérisation vectorielle du milieu</span>
@@ -115,9 +164,12 @@ $I$ est le milieu de $[AB]$ si et seulement si $\ve{AI} = \ve{IB}$, ou encore $\
 
 <details class="bloc demo"><summary>Démonstration : </summary>
 
-Par Chasles, $\ve{AB} = \ve{AI}+\ve{IB}$. Si $I$ est le milieu, $\ve{AI} = \ve{IB}$, donc $\ve{AB} = 2\,\ve{AI}$.
+D'après la relation de Chasles, $\ve{AB} = \ve{AI}+\ve{IB}$.
 
-Réciproquement, si $\ve{AB} = 2\,\ve{AI}$, alors $\ve{AI}+\ve{IB} = 2\,\ve{AI}$, d'où $\ve{IB} = \ve{AI}$, soit $I$ milieu de $[AB]$.
+- **Sens direct ($\Longrightarrow$) :**  
+  Si $I$ est le milieu de $[AB]$, alors $\ve{AI} = \ve{IB}$, donc $\ve{AB} = \ve{AI}+\ve{AI} = 2\,\ve{AI}$.
+- **Sens indirect ($\Longleftarrow$) :**  
+  Si $\ve{AB} = 2\,\ve{AI}$, alors $\ve{AI}+\ve{IB} = \ve{AI}+\ve{AI}$, d'où $\ve{IB} = \ve{AI}$ : $I$ est le milieu de $[AB]$.
 
 </details>
 
@@ -128,18 +180,18 @@ $I$ est le milieu de $[AB]$ si et seulement si, pour tout point $M$ du plan :
 $$\ve{MI} = \frac{1}{2}(\ve{MA}+\ve{MB})$$
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Vecteurs_Translation_vecteur_milieu.png" style="width: 25%;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteur_milieu.png" style="width: 30%;">
 </div>
 :::
 
 <details class="bloc demo"><summary>Démonstration : </summary>
 
-$$\ve{MA}+\ve{MB} = (\ve{MI}+\ve{IA})+(\ve{MI}+\ve{IB}) = 2\,\ve{MI}+\ve{IA}+\ve{IB}$$
-
-Or $I$ milieu de $[AB]$ implique $\ve{IA}+\ve{IB} = \ve{0}$.
-
-Donc $\ve{MA}+\ve{MB} = 2\,\ve{MI}$, soit
-$$\ve{MI} = \frac{1}{2}(\ve{MA}+\ve{MB})$$
+- **Sens direct ($\Longrightarrow$) :**  
+  Soit $M$ un point du plan. D'après la relation de Chasles,
+  $$\ve{MA}+\ve{MB} = (\ve{MI}+\ve{IA})+(\ve{MI}+\ve{IB}) = 2\,\ve{MI}+\ve{IA}+\ve{IB}$$
+  Or $I$ est le milieu de $[AB]$, donc $\ve{IA}+\ve{IB} = \ve{0}$. Ainsi $\ve{MA}+\ve{MB} = 2\,\ve{MI}$, soit $\ve{MI} = \dfrac{1}{2}(\ve{MA}+\ve{MB})$.
+- **Sens indirect ($\Longleftarrow$) :**  
+  Si l'égalité est vraie pour tout point $M$, on l'applique à $M = A$ : $\ve{AI} = \dfrac{1}{2}(\ve{AA}+\ve{AB}) = \dfrac{1}{2}\ve{AB}$, donc $I$ est le milieu de $[AB]$.
 
 </details>
 
@@ -152,13 +204,51 @@ Exprimer $\ve{IJ}$ en fonction de $\ve{AC}$, puis en déduire que $(IJ)\parallel
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-*Point clef : $I$ est le milieu de $[AB]$ donc on fait apparaître le vecteur $\ve{BI}$ pour utiliser la relation vectorielle sur le milieu.*
+*Point clef : $I$ est le milieu de $[AB]$ donc on fait apparaître le vecteur $\ve{IB}$ pour utiliser la relation vectorielle sur le milieu.*
 
 $$\ve{IJ} = \ve{IB}+\ve{BJ} = \frac{1}{2}\ve{AB}+\frac{1}{2}\ve{BC} = \frac{1}{2}(\ve{AB}+\ve{BC}) = \frac{1}{2}\ve{AC}$$
 
 Ainsi $\ve{IJ} = \dfrac{1}{2}\ve{AC}$ : on en déduit que $(IJ)\parallel(AC)$ et $IJ = \dfrac{1}{2}AC$.
 
 C'est le **théorème des milieux**.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Théorème des milieux : deux méthodes — Raisonner</span></div>
+
+Soit $ABC$ un triangle, $I$ le milieu de $[AB]$ et $J$ le milieu de $[AC]$. On veut démontrer que $(IJ)\parallel(BC)$ et que $IJ=\dfrac12 BC$.
+
+1. Démontrer ce résultat à l'aide des vecteurs.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+D'après la relation de Chasles,
+$$\ve{IJ}=\ve{IA}+\ve{AJ}=\frac12\ve{BA}+\frac12\ve{AC}=\frac12\left(\ve{BA}+\ve{AC}\right)=\frac12\ve{BC}$$
+
+Les vecteurs $\ve{IJ}$ et $\ve{BC}$ sont colinéaires, donc $(IJ)\parallel(BC)$, et $IJ=\dfrac12 BC$.
+
+</details>
+
+2. Démontrer ce résultat à l'aide du théorème de Thalès.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Dans le triangle $ABC$, $I\in[AB]$ et $J\in[AC]$ avec
+$$\frac{AI}{AB}=\frac12 \et \frac{AJ}{AC}=\frac12$$
+
+Les points $A$, $I$, $B$ et $A$, $J$, $C$ sont alignés dans le même ordre et $\dfrac{AI}{AB}=\dfrac{AJ}{AC}$ : d'après la réciproque du théorème de Thalès, $(IJ)\parallel(BC)$.
+
+D'après le théorème de Thalès, $\dfrac{IJ}{BC}=\dfrac{AI}{AB}=\dfrac12$, donc $IJ=\dfrac12 BC$.
+
+</details>
+
+3. Quelle méthode vous semble la plus rapide ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+La méthode vectorielle donne en une seule égalité le parallélisme et la longueur ; la méthode géométrique nécessite la réciproque puis le théorème de Thalès.
 
 </details>
 :::

@@ -1,47 +1,76 @@
 ---
-title: "Résolution d'équations — intersection"
+title: "Intersection de droites"
 format:
   html:
     toc: true
     number-sections: false
-description: "Résoudre f(x) = k, f(x) = g(x), intersection de deux droites"
+description: "Droites sécantes ou parallèles, résoudre f(x) = g(x) et f(x) = k graphiquement"
 order: 7
 ---
 
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Position relative de deux droites</span>
 
-::: {.bloc .sfc}
-<div class="bloc-titre">Savoir - faire :<span class="exemp-extra"> Résoudre $f(x)=k$ algébriquement — Calculer </span></div>
+Soient $f$ et $g$ deux fonctions affines de coefficients directeurs respectifs $m$ et $m'$, et de représentations graphiques respectives $d$ et $d'$.
 
-1. Résoudre $3x-1=5$.
+- $d$ et $d'$ sont **sécantes** si et seulement si $m\neq m'$ ;
+- $d$ et $d'$ sont **parallèles** si et seulement si $m=m'$.
+:::
 
-<details class="bloc cor">
-<summary>Afficher la correction :</summary>
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Notons $f(x)=mx+p$ et $g(x)=m'x+p'$. Un point $M(x\,;\,y)$ appartient à $d$ et à $d'$ si et seulement si $y=f(x)$ et $y=g(x)$ ; son abscisse vérifie donc $f(x)=g(x)$.
 
 Pour tout réel $x$,
+$$f(x)=g(x) \iff mx+p=m'x+p' \iff (m-m')x=p'-p$$
 
-$3x-1=5 \iff 3x=6 \iff x=2$.
+**Si $m\neq m'$**, cette équation a une unique solution $x=\dfrac{p'-p}{m-m'}$ : les droites $d$ et $d'$ ont un unique point commun, elles sont sécantes.
 
-L'équation a pour ensemble solution $S= \{2\}$.
+**Si $m=m'$**, l'équation s'écrit $0=p'-p$.
+Si $p\neq p'$, elle n'a aucune solution : $d$ et $d'$ n'ont aucun point commun, elles sont parallèles (et distinctes).
+Si $p=p'$, $f=g$ : $d$ et $d'$ sont confondues, donc parallèles.
+
+Les deux situations (sécantes, parallèles) s'excluent : on obtient bien les deux équivalences.
 
 </details>
 
-2. Interpréter graphiquement le résultat.
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonction_Affine_affine_fig4.png" style="width: 80%;">
+</div>
 
-<details class="bloc cor">
-<summary>Afficher la correction :</summary>
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Étudier l'intersection de deux droites — Calculer, Raisonner</span></div>
 
-Le point d'ordonnée $5$ de la représentation graphique de la fonction affine $f:x \longmapsto 3x-1$ a pour abscisse $2$.
+On note $d$ et $d'$ les représentations graphiques respectives de $f$ et $g$. Dans chaque cas, déterminer si $d$ et $d'$ sont sécantes ou parallèles, puis résoudre l'équation $f(x)=g(x)$.
+
+1. $f(x)=-2x+7$ et $g(x)=3x-3$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f$ et $g$ n'ont pas le même coefficient directeur ($-2\neq3$), donc $d$ et $d'$ sont sécantes.
+
+Pour tout réel $x$,
+$$f(x)=g(x) \iff -2x+7=3x-3 \iff -2x-3x=-3-7 \iff -5x=-10 \iff x=2$$
+
+Donc $S=\{2\}$ : $d$ et $d'$ se coupent au point d'abscisse $2$.
+
+</details>
+
+2. $f(x)=2x+1$ et $g(x)=2x-3$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f$ et $g$ ont le même coefficient directeur $2$, donc $d$ et $d'$ sont parallèles.
+
+Pour tout réel $x$,
+$$f(x)=g(x) \iff 2x+1=2x-3 \iff 1=-3$$
+
+ce qui est faux. Donc $S=\emptyset$ : $d$ et $d'$ n'ont aucun point commun.
 
 </details>
 :::
 
-::: {.bloc .rem}
-<span class="bloc-titre">Lien avec l'intersection de droites : </span>
-
-Résoudre $f(x)=g(x)$, c'est trouver la valeur de $x$ pour laquelle les représentations graphiques de $f$ et $g$ se coupent.
-
-**Graphiquement :** le point d'intersection des droites $y=f(x)$ et $y=g(x)$ a pour abscisse la solution de $f(x)=g(x)$.
-:::
+## Résolution graphique
 
 ::: {.bloc .sfc}
 <div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résolution graphique — Représenter, Calculer</span></div>
@@ -50,14 +79,36 @@ Résoudre graphiquement $-x+4=2x-2$.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-* **Point clef** : on réécrit l'équation sous la forme $f(x)=g(x)$ avec $f(x)=-x+4$ et $g(x)=2x-2$, puis on cherche l'abscisse du point d'intersection des deux droites.*
+*Point clef : on réécrit l'équation sous la forme $f(x)=g(x)$ avec $f(x)=-x+4$ et $g(x)=2x-2$. Les solutions sont les abscisses des points d'intersection des représentations graphiques $\mathcal{C}_f$ et $\mathcal{C}_g$.*
 
-On trace les droites $y=-x+4$ et $y=2x-2$.
+Les fonctions $f$ et $g$ définies par $f(x)=-x+4$ et $g(x)=2x-2$ sont affines, donc $\mathcal{C}_f$ et $\mathcal{C}_g$ sont des droites.
 
-Les deux droites se coupent au point $(2\,;\,2)$, ainsi $S=\{2\}$.
+$\mathcal{C}_f$ et $\mathcal{C}_g$ se coupent au point d'abscisse $2$ (on a bien $f(2)=g(2)=2$), ainsi $S=\{2\}$.
 
 <div style="text-align: center;">
   <img src="../../image/seconde/Fonction_Affine_exo_intersection1.png" style="width: 30%;">
+</div>
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résoudre graphiquement $f(x)=k$ — Représenter</span></div>
+
+$f$ est la fonction affine définie sur $\R$ par $f(x)=\dfrac12x-1$. Résoudre graphiquement l'équation $f(x)=2$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : c'est le cas particulier de l'intersection de $\mathcal{C}_f$ avec la droite d'équation $y=2$, parallèle à l'axe des abscisses.*
+
+On trace la droite parallèle à l'axe des abscisses passant par $(0\,;\,2)$.
+
+Elle coupe $\mathcal{C}_f$ en un unique point, d'abscisse $6$.
+
+Donc $S=\{6\}$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonction_Affine_resolution_graphique_k.png" style="width: 35%;">
 </div>
 
 </details>

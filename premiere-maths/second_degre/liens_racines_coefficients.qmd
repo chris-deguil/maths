@@ -1,0 +1,58 @@
+---
+title: "Liens entre racines et coefficients"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Somme et produit des racines d'un trinôme, et utilisation d'une racine évidente."
+order: 5
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $f(x) = ax^2 + bx + c$ une fonction polynôme du second degré, de racines $x_1$ et $x_2$ (éventuellement $x_1=x_2$). En appelant $S$ la somme des racines et $P$ le produit des racines, on a
+$$S = x_1 + x_2 = - \dfrac{b}{a} \et P = x_1 \times x_2 = \dfrac{c}{a}$$
+et, pour tout réel $x$, $f(x) = a \left(x^2 - S x + P \right)$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soit $f(x) = ax^2 + bx + c$ une fonction polynôme du second degré, de racines $x_1$ et $x_2$. Alors
+$$S = x_1 + x_2 = \dfrac{-b + \sqrt{\Delta}}{2a}+ \dfrac{-b - \sqrt{\Delta}}{2a}= -\dfrac{b}{a}$$
+et
+$$P = x_1 x_2 = \dfrac{-b + \sqrt{\Delta}}{2a} \times \dfrac{-b - \sqrt{\Delta}}{2a}
+=\dfrac{(-b)^2 - \Delta}{4a^2} = \dfrac{b^2 - b^2 + 4ac}{4a^2} =\dfrac{c}{a}$$
+Réciproquement, considérons l'équation $ax^2 - aSx + aP = 0$. Son discriminant vaut
+$$\Delta = (-aS)^2 - 4a^2P = a^2\big((x_1 + x_2)^2 - 4x_1 x_2\big) = a^2(x_1-x_2)^2$$
+Ainsi les solutions $u$ et $v$ de cette équation sont
+$$u = \dfrac{S + (x_1 - x_2)}{2} \et v = \dfrac{S -( x_1 -x_2)}{2}$$
+Donc $u = x_1$ et $v = x_2$.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Utiliser une racine évidente — Calculer</span></div>
+
+Soit $f(x)=-5x^2+3x+14$. Déterminer les racines de $f$ en remarquant une racine évidente.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$x_1=2$ est une racine évidente : en effet $-5\times 2^2 +3\times 2 + 14 = 0$.
+
+Le polynôme admettant une racine, il en admet une deuxième $x_2$, et $x_1x_2 = \dfrac{14}{-5}$.
+
+Ainsi $x_2 = \dfrac{14}{2 \times (-5)} = -\dfrac{7}{5}$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Lorsque l'on connaît l'expression algébrique d'un polynôme du second degré et une de ses racines, on connaît automatiquement la seconde racine.
+
+On peut chercher, par exemple, parmi les valeurs $-2$, $-1$, $1$, $2$ (éventuellement $\sqrt{2}$), si l'une d'elles est racine du polynôme. Si c'est le cas, on peut alors la qualifier de **racine évidente**.
+:::

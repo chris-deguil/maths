@@ -1,0 +1,122 @@
+---
+title: "Taux d'accroissement et nombre dérivé"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition du taux d'accroissement et du nombre dérivé en un point."
+order: 1
+---
+
+::: {.bloc .hist}
+<span class="bloc-titre">Anecdote : De Descartes à Cauchy — naissance du calcul différentiel</span>
+
+Comment construire la tangente à une courbe en un point ? René **Descartes** (1596-1650) propose une méthode algébrique dans sa *Géométrie* (1637) : il cherche le cercle osculateur à la courbe, dont la tangente coïncide avec celle de la courbe. La méthode fonctionne mais est laborieuse. Pierre de **Fermat** (1601-1665), quasi simultanément, introduit une idée plus proche de la nôtre : il remplace $x$ par $x + e$ dans l'expression de la courbe, calcule le rapport $\dfrac{f(x+e)-f(x)}{e}$, puis fait « s'évanouir » $e$, sans pour autant disposer de la notion de limite.
+
+Isaac **Newton** (1643-1727) aborde le problème par la physique : un point se déplace le long d'une courbe, et Newton appelle *fluxion* la vitesse instantanée de ce mouvement. Il développe sa méthode dès 1666, mais ne la publie qu'en 1704. Pour lui, la variable $x$ est une quantité en mouvement — une *fluente* — et $\dot{x}$ désigne sa fluxion.
+
+Gottfried Wilhelm **Leibniz** (1646-1716) arrive aux mêmes idées indépendamment, par la géométrie et les *infiniment petits*. Il introduit en 1675 la notation $dx$ pour un accroissement infinitésimal de $x$, et $\dfrac{dy}{dx}$ pour le rapport de deux infiniment petits.
+
+Les méthodes de Newton et Leibniz donnent des résultats corrects, mais reposent sur des objets mal définis : que signifie exactement « faire tendre $h$ vers $0$ » ? Le philosophe irlandais George **Berkeley** (1685-1753) raille dans *The Analyst* (1734) ces « fantômes de quantités évanouies » et dénonce l'absence de rigueur. Ses critiques, jugées insolentes à l'époque, se révéleront mathématiquement fondées. Leonhard **Euler** (1707-1783) continue d'utiliser les infiniment petits avec un succès prodigieux, sans résoudre la question de leur nature.
+
+C'est Augustin-Louis **Cauchy** (1789-1857) qui donne enfin une définition rigoureuse, dans son *Cours d'analyse* de 1821. Il introduit la notion de **limite** telle que nous l'utilisons aujourd'hui, et définit la dérivée comme la limite du taux d'accroissement :
+$$f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}$$
+
+La dérivée est devenue l'outil fondamental par lequel les mathématiques décrivent le *changement* : vitesse en physique, coût marginal en économie, propagation d'un virus en biologie, entraînement des réseaux de neurones en intelligence artificielle. Chaque fois qu'un phénomène évolue, la dérivée est là pour le mesurer.
+:::
+
+## Taux d'accroissement
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Taux d'accroissement</span>
+
+Soit $f$ une fonction définie sur un intervalle $I$ contenant le réel $a$, et $h \in \R^*$ tel que $a+h \in I$.
+
+On appelle **taux d'accroissement** de $f$ entre $a$ et $a+h$ le réel :
+$$t(h) = \dfrac{f(a+h) - f(a)}{h}$$
+C'est le coefficient directeur de la droite $(AM)$, où $A(a\,;\,f(a))$ et $M(a+h\,;\,f(a+h))$.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : </span>
+
+L'objet de ce chapitre est l'étude du comportement du taux d'accroissement lorsque $h \to 0$, c'est-à-dire lorsque $M \to A$.
+On cherche donc :
+$$\lim_{h \to 0} \dfrac{f(a+h) - f(a)}{h}$$
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/NombreDerivee_taux1.png" style="width: 55%;">
+</div>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : Contextes d'application</span>
+
+- **En physique :** le taux d'accroissement correspond à la vitesse moyenne entre deux instants.
+  $$v_{\text{moy}} = \dfrac{d_B - d_A}{t_B - t_A}$$
+  Lorsque $t_B \to t_A$, on obtient la **vitesse instantanée**.
+- **En économie :** le coût marginal est le taux d'accroissement de la fonction coût $\mathscr{C}$ :
+  $$\dfrac{\mathscr{C}(n+h) - \mathscr{C}(n)}{h} \xrightarrow[h \to 0]{} \mathscr{C}'(n)$$
+:::
+
+## Nombre dérivé en $a$
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Fonction dérivable en $a$ — Nombre dérivé</span>
+
+On dit que $f$ est **dérivable en $a$** lorsque le taux d'accroissement admet une limite finie $L$ quand $h \to 0$ :
+$$\lim_{h \to 0} \dfrac{f(a+h) - f(a)}{h} = L \in \R$$
+Ce réel $L$ s'appelle le **nombre dérivé** de $f$ en $a$, noté $f'(a)$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Nombre dérivé d'une fonction rationnelle — Calculer</span></div>
+
+Montrer que $f : x \mapsto \dfrac{2}{x+1}$ est dérivable en $1$ et calculer $f'(1)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout $h \neq 0$ :
+$$\dfrac{f(1+h) - f(1)}{h} = \dfrac{\dfrac{2}{2+h} - 1}{h} = \dfrac{2 - (2+h)}{h(2+h)} = \dfrac{-h}{h(2+h)} = \dfrac{-1}{2+h}$$
+Donc $\displaystyle\lim_{h \to 0} \dfrac{-1}{2+h} = -\dfrac{1}{2}$. La fonction est dérivable en $1$ et $f'(1) = -\dfrac{1}{2}$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Calculer un nombre dérivé — Calculer</span></div>
+
+1. Montrer que $f : x \mapsto \dfrac{1}{x-3}$ est dérivable en $4$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout $h \neq 0$ :
+$$\dfrac{f(4+h) - f(4)}{h} = \dfrac{\dfrac{1}{1+h} - 1}{h} = \dfrac{1 - (1+h)}{h(1+h)} = -\dfrac{1}{1+h}$$
+Donc $\displaystyle\lim_{h \to 0} \dfrac{f(4+h) - f(4)}{h} = -1$. La fonction est dérivable en $4$ et $f'(4) = -1$.
+
+</details>
+
+2. Montrer que $g : x \mapsto \sqrt{x+2}$ est dérivable en $4$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout $h \neq 0$ :
+$$\dfrac{g(4+h) - g(4)}{h} = \dfrac{\sqrt{6+h} - \sqrt{6}}{h} = \dfrac{(\sqrt{6+h} - \sqrt{6})(\sqrt{6+h} + \sqrt{6})}{h(\sqrt{6+h} + \sqrt{6})} = \dfrac{h}{h(\sqrt{6+h} + \sqrt{6})} = \dfrac{1}{\sqrt{6+h} + \sqrt{6}}$$
+Or $\displaystyle\lim_{h \to 0} \dfrac{1}{\sqrt{6+h} + \sqrt{6}} = \dfrac{1}{2\sqrt{6}}$.
+Donc $g$ est dérivable en $4$ et $g'(4) = \dfrac{1}{2\sqrt{6}}$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : Calcul approché avec la calculatrice</span>
+
+Lorsque le calcul analytique est trop complexe, on peut obtenir une valeur approchée du nombre dérivé à la calculatrice. Par exemple, pour $f(x) = \dfrac{1 - x^2}{\sqrt{x^3 - 2} - 1}$, on trouve $f'(2) \approx 0{,}73797$.
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/NombreDerivee_numworks_derivee.png" style="width: 35%;">
+</div>
+:::

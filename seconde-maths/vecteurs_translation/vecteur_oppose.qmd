@@ -4,7 +4,7 @@ format:
   html:
     toc: true
     number-sections: false
-description: "Définition, soustraction de vecteurs"
+description: "Vecteur opposé, différence de deux vecteurs"
 order: 6
 ---
 
@@ -26,6 +26,34 @@ Deux vecteurs sont opposés si et seulement s'ils ont même norme, même directi
 Soit $\ve{u} = \ve{AB}$, alors $-\ve{u} = \ve{BA}$.
 :::
 
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Reconnaître des vecteurs opposés — Raisonner</span></div>
+
+Les deux questions sont indépendantes.
+
+1. On reprend la figure du savoir-faire *Construire l'image d'un point par une translation* (page [Translation et notion de vecteur](translation_vecteur.qmd)). Citer un vecteur opposé au vecteur $\ve{u}$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig1.png" style="width: 45%;">
+</div>
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$\ve{w}$ a la même direction et la même norme que $\ve{u}$, mais le sens contraire : $\ve{w}=-\ve{u}$.
+
+</details>
+
+2. Soit $M$ le milieu du segment $[AB]$. Que peut-on dire des vecteurs $\ve{MA}$ et $\ve{MB}$ ? Que peut-on dire de $\ve{MA}+\ve{MB}$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$M$ est le milieu de $[AB]$, donc $MA=MB$ et les points $A$, $M$, $B$ sont alignés, $M$ étant entre $A$ et $B$. Les vecteurs $\ve{MA}$ et $\ve{MB}$ ont donc la même direction, la même norme et des sens contraires : ils sont opposés, $\ve{MA}=-\ve{MB}$.
+
+Ainsi $\ve{MA}+\ve{MB}=\ve{MA}+(-\ve{MA})=\ve{0}$.
+
+</details>
+:::
+
 ::: {.bloc .rem}
 <span class="bloc-titre">Point méthode — soustraire deux vecteurs : </span>
 
@@ -39,11 +67,11 @@ $$\ve{AC} - \ve{BC} = \ve{AC} + \ve{CB} = \ve{AB}$$
 ::: {.bloc .sfc}
 <div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Simplifier une différence de vecteurs — Calculer</span></div>
 
-Simplifier $2\ve{AB}+\ve{BC}-\ve{AC}$.
+Simplifier $\ve{MA}-\ve{MB}+\ve{AC}$.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$$2\ve{AB}+\ve{BC}-\ve{AC} = 2\ve{AB}+\ve{BC}-(\ve{AB}+\ve{BC}) = 2\ve{AB}+\ve{BC}-\ve{AB}-\ve{BC} = \ve{AB}$$
+$$\ve{MA}-\ve{MB}+\ve{AC} = \ve{MA}+\ve{BM}+\ve{AC} = \ve{BM}+\ve{MA}+\ve{AC} = \ve{BC}$$
 
 </details>
 :::
@@ -67,9 +95,11 @@ Or $\ve{DC} = -\ve{CD}$, donc $\ve{AB} = -\ve{CD}$ : les vecteurs $\ve{AB}$ et $
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-***Point clef** : On décompose avec la relation de Chasles*
+*Point clef : on décompose avec la relation de Chasles en passant par $B$ puis par $C$.*
 
-$\ve{AC}+\ve{BD} = \ve{AB} + \ve{BC} + \ve{BC}+\ve{CD} = \ve{BC}+\ve{BC} +\ve{AB} + \ve{CD} = \ve{BC} + \ve{BC}$
+$\ve{AC}+\ve{BD} = (\ve{AB}+\ve{BC}) + (\ve{BC}+\ve{CD}) = \ve{BC}+\ve{BC} + (\ve{AB}+\ve{CD})$.
+
+D'après la question 1, $\ve{AB}+\ve{CD} = \ve{0}$, donc $\ve{AC}+\ve{BD} = \ve{BC}+\ve{BC}$, que l'on notera $2\,\ve{BC}$ dans la partie suivante.
 
 </details>
 :::

@@ -1,0 +1,361 @@
+---
+title: "Jour 4 : Optimisation, géométrie repérée et probabilités"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Variations de fonctions, forme canonique et optimisation, médianes et médiatrices, cercle circonscrit, probabilités et raisonnement."
+order: 4
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Points travaillés : </span>
+
+- Étudier les variations d'une fonction sur un intervalle donné.
+- Résoudre une équation ou une inéquation à l'aide d'une factorisation ou d'une identité remarquable.
+- Modéliser et résoudre un problème d'optimisation (aire maximale).
+- Déterminer une équation de médiane, de médiatrice et d'un cercle circonscrit.
+- Calculer des probabilités à partir d'un tableau croisé ou d'un arbre pondéré.
+- Mener une démonstration rigoureuse par le calcul.
+:::
+
+## Fonctions et optimisation
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Variations de fonctions</span></div>
+
+Déterminer les variations de la fonction $f$ sur l'intervalle $I$ donné.
+
+1. $f(x) = -2(x-3)^2+5$, $I=\,]-\infty~;~3]$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour $x_1<x_2\leqslant3$ : $x_1-3<x_2-3\leqslant0$, donc $(x_1-3)^2>(x_2-3)^2$, puis $-2(x_1-3)^2<-2(x_2-3)^2$, soit $f(x_1)<f(x_2)$. **$f$ est strictement croissante sur $]-\infty~;~3]$.**
+
+</details>
+
+2. $f(x)= \dfrac{1}{4-(1-3x)^2}$, $I=\,]1~;~+\infty[$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Sur $]1~;~+\infty[$, $(1-3x)^2=(3x-1)^2$ croît, donc $g(x)=4-(1-3x)^2$ décroît et reste négatif. Comme $t\mapsto\frac1t$ décroît sur $]-\infty~;~0[$, $f=\frac1g$ est **strictement croissante sur $]1~;~+\infty[$** (de $-\infty$ vers $0^-$).
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Fonctions $f$, $g$ — parabole et droite</span></div>
+
+On considère deux fonctions $f$ et $g$, de représentations graphiques $\mathscr{C}_f$ et $\mathscr{C}_g$, définies par
+$$f(x)= x^2 \qquad\text{et}\qquad g(x)=4x-3.$$
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/StagePrerentree_Jour4_parabole_droite.png" style="width: 45%;">
+</div>
+
+1. Résoudre graphiquement, en justifiant, l'équation $f(x)=g(x)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Les courbes se coupent aux points d'abscisses $1$ et $3$. $\boxed{S=\{1~;~3\}}$.
+
+</details>
+
+2. Résoudre graphiquement, en justifiant, l'inéquation $f(x) < g(x)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+La parabole est sous la droite entre les points d'intersection. $\boxed{S=\,]1~;~3[}$.
+
+</details>
+
+3. Calculer les coordonnées du point d'intersection entre $\mathscr{C}_g$ et l'axe des abscisses.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$g(x)=0\iff4x-3=0\iff x=\dfrac34$. Point $\left(\dfrac34~;~0\right)$.
+
+</details>
+
+4. a. Montrer que $f(x)-g(x)=(x-1)(x-3)$.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $f(x)-g(x)=x^2-4x+3=(x-1)(x-3)$.
+
+    </details>
+
+    b. Retrouver le résultat de la question 2 par le calcul.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $f(x)<g(x)\iff(x-1)(x-3)<0$ : négatif entre les racines. $\boxed{S=\,]1~;~3[}$.
+
+    </details>
+
+5. On admet que $x^2-4x+3=(x-2)^2-1$. Retrouver les résultats des questions 1 et 2 par le calcul.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$f(x)=g(x)\iff(x-2)^2=1\iff x\in\{1~;~3\}$. $f(x)<g(x)\iff(x-2)^2<1\iff\boxed{1<x<3}$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Rectangle inscrit dans un triangle — aire maximale</span></div>
+
+Soit $ABC$ un triangle rectangle en $A$, tel que $AB = 4$ et $AC = 8$. $M$ est un point de $[AB]$, et $N$, $P$ sont respectivement des points de $[BC]$ et $[AC]$ de façon que $AMNP$ soit un rectangle. On pose $AM = x$ et on admet que $MN = 2(4-x)$. L'aire du rectangle est donnée par $f(x) = 8x - 2x^2$.
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/StagePrerentree_Jour4_rectangle_triangle.png" style="width: 35%;">
+</div>
+
+1. À quel intervalle appartient $x$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$M\in[AB]$ avec $AB=4$ : $\boxed{x\in[0~;~4]}$.
+
+</details>
+
+2. a. Démontrer que, pour tout $x$, $f(x) = -2(x - 2)^2 +8$. En déduire les valeurs exactes de l'équation $f(x) = 6$. Peut-on avoir une aire de $10~\text{cm}^2$ pour le rectangle ? Justifier.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $-2(x-2)^2+8=-2x^2+8x=f(x)$. $f(x)=6\iff(x-2)^2=1\iff x\in\{1~;~3\}$, donc $\boxed{S=\{1~;~3\}}$.
+
+    $f(x)=10\iff(x-2)^2=-1$ : impossible. *Non*, on ne peut pas obtenir $10~\text{cm}^2$ (le maximum est $8$).
+
+    </details>
+
+    b. Déterminer la position du point $M$ pour que l'aire du rectangle soit maximale. Justifier la réponse.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $f(x)=-2(x-2)^2+8\leqslant8$, avec égalité en $x=2$. L'aire est maximale, égale à $8~\text{cm}^2$, pour $AM=2$.
+
+    </details>
+
+3. On souhaite savoir si le rectangle peut recouvrir plus des $\dfrac{3}{8}$ du triangle rectangle.
+
+    a. Quelle inéquation doit-on résoudre ?
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    Aire du triangle $=\dfrac{4\times8}{2}=16$ et $\dfrac38\times16=6$. L'inéquation est $\boxed{f(x)>6}$.
+
+    </details>
+
+    b. Démontrer que, pour tout réel $x$, $f(x) - 6 = - 2(x-1)(x-3)$.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $-2(x-1)(x-3)=-2x^2+8x-6=f(x)-6$.
+
+    </details>
+
+    c. Répondre au problème.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $f(x)>6\iff-2(x-1)(x-3)>0\iff(x-1)(x-3)<0\iff1<x<3$. $\boxed{S=\,]1~;~3[}$ : *oui*, pour $AM\in\,]1~;~3[$.
+
+    </details>
+:::
+
+## Géométrie repérée
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Triangle — médiane, médiatrice, cercle circonscrit</span></div>
+
+Le plan est muni d'un repère orthonormé. On considère le triangle $ABC$ avec $A(3~;~-2)$, $B(5~;~4)$ et $C(0~;~6)$.
+
+1. a. Déterminer une équation de la médiane issue de $A$, puis de celle issue de $B$.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $I$ milieu de $[BC]$ : $I\left(\dfrac52~;~5\right)$, médiane $(AI)$ : $y=-14x+40$.
+
+    $J$ milieu de $[AC]$ : $J\left(\dfrac32~;~2\right)$, médiane $(BJ)$ : $y=\dfrac47x+\dfrac87$.
+
+    </details>
+
+    b. Déterminer les coordonnées de $G$, point d'intersection de ces deux médianes.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $-14x+40=\dfrac47x+\dfrac87\iff x=\dfrac83$, puis $y=\dfrac83$. $\boxed{G\left(\dfrac83~;~\dfrac83\right)}$.
+
+    </details>
+
+    c. En notant $I$ le milieu de $[BC]$, vérifier que $\ve{AG} = \dfrac{2}{3} \ve{AI}$.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $\ve{AG}=\left(-\dfrac13~;~\dfrac{14}{3}\right)$ et $\dfrac23\ve{AI}=\dfrac23\left(-\dfrac12~;~7\right)=\left(-\dfrac13~;~\dfrac{14}{3}\right)=\ve{AG}$.
+
+    </details>
+
+2. a. Déterminer une équation de la médiatrice de $[BC]$.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $MB^2=MC^2$ : $(x-5)^2+(y-4)^2=x^2+(y-6)^2\iff\boxed{10x-4y-5=0}$.
+
+    </details>
+
+    b. On admet que la médiatrice de $[AC]$ a pour équation $6x - 16y + 23 = 0$. Déterminer les coordonnées du point $\Omega$, intersection des deux médiatrices précédentes.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    Le système $\begin{cases}10x-4y-5=0\\6x-16y+23=0\end{cases}$ donne $\boxed{\Omega\left(\dfrac{43}{34}~;~\dfrac{65}{34}\right)}$.
+
+    </details>
+
+    c. En déduire une équation du cercle circonscrit au triangle $ABC$.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $R^2=\Omega A^2=\dfrac{59^2+133^2}{34^2}=\dfrac{10585}{578}$, d'où
+    $$\boxed{\left(x-\dfrac{43}{34}\right)^2+\left(y-\dfrac{65}{34}\right)^2=\dfrac{10585}{578}}.$$
+
+    </details>
+:::
+
+## Probabilités
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Probabilités — tableau croisé</span></div>
+
+Dans un lycée de $1\,280$ élèves, $300$ élèves se font vacciner contre la grippe. Pendant l'hiver, il y a une épidémie de grippe et $10\%$ des élèves contractent la maladie. De plus, $3\%$ des élèves vaccinés ont la grippe. Dans cet exercice, les résultats seront arrondis à $10^{-3}$ près.
+
+1. Compléter le tableau.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Total grippe $=10\%\times1280=128$ ; vaccinés avec grippe $=3\%\times300=9$. On complète par différences :
+
+|                | Grippe | Pas de grippe | Total |
+|:---------------|:------:|:-------------:|:-----:|
+| Vaccinés       | $9$    | $291$         | $300$ |
+| Non vaccinés   | $119$  | $861$         | $980$ |
+| Total          | $128$  | $1152$        | $1280$|
+
+</details>
+
+2. On choisit au hasard un des élèves de ce lycée, tous les élèves ayant la même probabilité d'être choisi. Calculer la probabilité des événements suivants : $A$ : « L'élève a été vacciné » ; $B$ : « L'élève a eu la grippe » ; $C$ : « L'élève a été vacciné et a eu la grippe ».
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$P(A)=\dfrac{300}{1280}=\dfrac{15}{64}\approx0{,}234$ ; $P(B)=\dfrac{128}{1280}=0{,}1$ ; $P(C)=\dfrac{9}{1280}\approx0{,}007$.
+
+</details>
+
+3. On choisit au hasard un des élèves non vaccinés. Calculer la probabilité que cet élève ait eu la grippe.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Parmi les $980$ non vaccinés, $119$ ont eu la grippe : $\dfrac{119}{980}=\dfrac{17}{140}\approx0{,}121$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Probabilités — tirage dans trois urnes</span></div>
+
+Pour organiser le passage à l'oral de leur épreuve de langue, les élèves tirent au hasard trois cartons, un dans chacune des trois urnes.
+
+- La première urne contient les lettres « A », « B » et « C » ;
+- la seconde urne contient les nombres « 25 » et « 27 » ;
+- la dernière urne contient les mots « Matin » et « Après-midi ».
+
+*Exemple : le tirage (A ; 25 ; Matin) signifie que l'élève passera son oral le 25 juin au matin avec le sujet A.*
+
+1. Déterminer, à l'aide d'un arbre des possibilités, les tirages possibles.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Il y a $3\times2\times2=12$ tirages équiprobables (arbre à trois niveaux : lettre, nombre, moment).
+
+</details>
+
+2. Après le tirage, on choisit un élève au hasard.
+
+    a. Quelle est la probabilité que l'élève choisi passe le matin ?
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $\dfrac{6}{12}=\dfrac12$.
+
+    </details>
+
+    b. Quelle est la probabilité que l'élève choisi passe le 27 juin ?
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $\dfrac{6}{12}=\dfrac12$.
+
+    </details>
+
+    c. Quelle est la probabilité que l'élève choisi soit interrogé sur le sujet C ?
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $\dfrac{4}{12}=\dfrac13$.
+
+    </details>
+
+    d. Quelle est la probabilité que l'élève choisi passe l'après-midi avec le sujet B ?
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $\dfrac13\times\dfrac12=\dfrac{2}{12}=\dfrac16$.
+
+    </details>
+:::
+
+## Raisonnement
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Fonction strictement croissante — démonstration</span></div>
+
+Démontrer qu'il n'existe pas de fonction $f$ de $\R$ dans $\R$ strictement croissante qui vérifie
+$$\text{pour tout } x \in \R,\quad f(x^2) - (f(x))^2 \geqslant \frac{1}{4}.$$
+*Indication : si $f$ existe, utiliser $x = 0$ et $x = 1$.*
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Par l'absurde, supposons $f$ telle. Pour $x=0$ : $f(0)-f(0)^2\geqslant\dfrac14\iff\left(f(0)-\dfrac12\right)^2\leqslant0$, donc $f(0)=\dfrac12$. De même pour $x=1$ : $f(1)=\dfrac12$. Or $f$ strictement croissante et $0<1$ imposent $f(0)<f(1)$ : contradiction. **Aucune telle fonction n'existe.**
+
+</details>
+:::

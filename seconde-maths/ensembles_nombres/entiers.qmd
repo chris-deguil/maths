@@ -4,7 +4,7 @@ format:
   html:
     toc: true
     number-sections: false
-description: "N, Z, multiples, diviseurs, parité, notation étoile"
+description: "N, Z, multiples, diviseurs, parité, nombres premiers, notation étoile"
 order: 2
 ---
 
@@ -33,7 +33,7 @@ Soient $a \in \Z$ et $b \in \N^*$.
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque : </span>
 
-$0$ est multiple de tout entier (car $0 = 0 \times b$). Tout entier $a$ est divisible par $1$ et par lui-même.
+$0$ est multiple de tout entier $b$ (car $0 = 0 \times b$). Tout entier naturel non nul $n$ est divisible par $1$ et par $n$.
 :::
 
 ::: {.bloc .sfc}
@@ -79,6 +79,90 @@ Alors $n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 2(2k^2+2k) + 1$.
 Comme $2k^2+2k \in \Z$, le nombre $n^2$ est de la forme $2m+1$ avec $m = 2k^2+2k$ : $n^2$ est impair.
 
 </details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Algorithmique — multiples</span>
+
+En Python, `a % b` donne le reste de la division euclidienne de $a$ par $b$, et `a // b` son quotient.
+
+```python
+def est_multiple(a, b):
+    """Renvoie True si l'entier a est un multiple de b (b > 0)."""
+    return a % b == 0
+
+def plus_grand_multiple(a, b):
+    """Plus grand multiple de a inferieur ou egal a b (a > 0, b >= 0)."""
+    m = 0
+    while m + a <= b:     # tant que le multiple suivant ne depasse pas b
+        m = m + a
+    return m              # version directe : (b // a) * a
+
+print(est_multiple(24, 6))           # affiche True
+print(plus_grand_multiple(7, 100))   # affiche 98
+```
+:::
+
+## Nombres premiers et décomposition
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Nombre premier</span>
+
+Un entier naturel $p \geqslant 2$ est dit **premier** s'il n'admet que deux diviseurs positifs : $1$ et lui-même.
+
+Les premiers nombres premiers sont $2, 3, 5, 7, 11, 13, 17, 19, 23, \ldots$
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Décomposition en facteurs premiers (admis)</span>
+
+Tout entier $n \geqslant 2$ s'écrit comme un produit de nombres premiers, et cette écriture est **unique** à l'ordre des facteurs près.
+:::
+
+::: {.bloc .info}
+<span class="bloc-titre">Méthode : Décomposer un entier en facteurs premiers</span>
+
+On divise successivement par les nombres premiers ($2, 3, 5, 7, 11,\ldots$) jusqu'à obtenir un quotient égal à $1$.
+
+**Exemple :** décomposer $360$.
+
+| Quotient | Diviseur premier |
+|---:|:---|
+| $360$ | $2$ |
+| $180$ | $2$ |
+| $90$ | $2$ |
+| $45$ | $3$ |
+| $15$ | $3$ |
+| $5$ | $5$ |
+| $1$ | |
+
+Donc $360 = 2^3 \times 3^2 \times 5$.
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : PGCD</span>
+
+Le **plus grand commun diviseur** de deux entiers naturels non nuls $a$ et $b$, noté $\pgcd(a,b)$, est le plus grand entier qui divise à la fois $a$ et $b$.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Décomposer et calculer un PGCD — Calculer</span></div>
+
+Décomposer $252$ et $180$ en produit de facteurs premiers, puis en déduire $\pgcd(252, 180)$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$252 = 2^2 \times 3^2 \times 7$ et $180 = 2^2 \times 3^2 \times 5$.
+
+Le $\pgcd$ est le produit des facteurs premiers communs, chacun avec le plus petit exposant : $\pgcd(252, 180) = 2^2 \times 3^2 = 36$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Anecdote historique : D'Euclide à la cryptographie</span>
+
+Euclide (*Éléments*, livre IX, vers $300$ av. J.-C.) démontre déjà qu'il existe une infinité de nombres premiers. Aujourd'hui, la sécurité des paiements en ligne (algorithme RSA) repose sur la difficulté de retrouver la décomposition en facteurs premiers de très grands entiers.
+:::
 
 ## Notation étoile
 

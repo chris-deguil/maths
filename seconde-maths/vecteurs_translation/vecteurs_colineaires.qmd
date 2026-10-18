@@ -1,15 +1,15 @@
 ---
-title: "Vecteurs colinéaires et applications"
+title: "Vecteurs colinéaires"
 format:
   html:
     toc: true
     number-sections: false
-description: "Définition, tester la colinéarité - Caractériser alignement et parallélisme par la colinéarité"
-order: 9
+description: "Colinéarité, alignement, parallélisme"
+order: 8
 ---
 
+## Définition
 
-## Vecteurs colinéaires
 ::: {.bloc .def}
 <span class="bloc-titre">Définition : Vecteurs colinéaires</span>
 
@@ -26,14 +26,14 @@ $$\ve{v} = 1{,}5\,\ve{u} \qquad \text{et} \qquad \ve{w} = -2{,}3\,\ve{u}$$
 Les vecteurs $\ve{u}$, $\ve{v}$ et $\ve{w}$ sont colinéaires.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Vecteurs_Translation_colineaire2.png" style="width: 25%;">
+  <img src="../../image/seconde/Vecteurs_Translation_colineaire2.png" style="width: 30%;">
 </div>
 :::
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque : </span>
 
-Deux vecteurs sont colinéaires si et seulement si ils sont de même direction (ou de directions opposées).
+Deux vecteurs non nuls sont colinéaires si et seulement s'ils ont la **même direction**, qu'ils soient de même sens ou de sens opposés.
 :::
 
 ::: {.bloc .sfc}
@@ -48,13 +48,32 @@ Les vecteurs $\ve{u}$ et $\ve{v}$ sont-ils colinéaires ?
 
 $$\ve{v} = \ve{AC}-2\ve{AB} = -(2\ve{AB}-\ve{AC}) = -\ve{u}$$
 
-Les vecteurs sont colinéaires.
+Les vecteurs sont colinéaires, ils sont même opposés.
 
 </details>
 :::
 
-## Alignement er parallélisme 
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Reconnaître graphiquement des vecteurs colinéaires — Représenter</span></div>
 
+Les vecteurs $\ve{u}$, $\ve{v}$, $\ve{w}$ et $\ve{r}$ sont représentés sur le quadrillage ci-dessous.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig6.png" style="width: 40%;">
+</div>
+
+Parmi les vecteurs $\ve{v}$, $\ve{w}$ et $\ve{r}$, lesquels sont colinéaires à $\ve{u}$ ? Le cas échéant, donner le réel $k$ correspondant.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+- On remarque que $\ve{v}=-2\ve{u}$ : $\ve{v}$ et $\ve{u}$ sont colinéaires.
+- On remarque que $\ve{r}=3\ve{u}$ : $\ve{r}$ et $\ve{u}$ sont colinéaires.
+- $\ve{w}$ n'a pas la même direction que $\ve{u}$ : il n'existe aucun réel $k$ tel que $\ve{w}=k\ve{u}$, donc $\ve{w}$ et $\ve{u}$ ne sont pas colinéaires.
+
+</details>
+:::
+
+## Alignement et parallélisme
 
 ::: {.bloc .rem}
 <span class="bloc-titre">Idée fondamentale : </span>
@@ -72,44 +91,15 @@ Soient $A$, $B$, $C$, $D$ des points du plan avec $A\neq B$ et $C\neq D$.
 :::
 
 ::: {.bloc .rem}
-<span class="bloc-titre">Point méthode — démontrer un alignement ou un parallélisme : </span>
+<span class="bloc-titre">Point méthode — Démontrer un alignement ou un parallélisme : </span>
 
-**Pour montrer que $A$, $B$, $C$ sont alignés :** exprimer $\ve{AB}$ et $\ve{AC}$ dans la même base vectorielle, puis exhiber $k$ tel que $\ve{AB} = k\,\ve{AC}$.
+**Pour montrer que $A$, $B$, $C$ sont alignés :** on montre que $\ve{AB}$ et $\ve{AC}$ sont colinéaires, en exhibant un réel $k$ tel que $\ve{AB} = k\,\ve{AC}$.
 
-**Pour montrer que $(AB)\parallel(CD)$ :** exprimer $\ve{AB}$ et $\ve{CD}$, puis exhiber $k$ tel que $\ve{AB} = k\,\ve{CD}$.
-:::
+**Pour montrer que $(AB)\parallel(CD)$ :** on montre que $\ve{AB}$ et $\ve{CD}$ sont colinéaires, en exhibant un réel $k$ tel que $\ve{AB} = k\,\ve{CD}$.
 
-::: {.bloc .sfc}
-<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Démontrer un parallélisme — Calculer, Raisonner</span></div>
+**En pratique :** on écrit les deux vecteurs comme combinaisons linéaires des deux mêmes vecteurs non colinéaires, par exemple $\alpha\,\ve{AB}+\beta\,\ve{AC}$. Cette décomposition est alors **unique** : les deux vecteurs sont colinéaires si et seulement si leurs coefficients sont proportionnels.
 
-$ABC$ est un triangle. Les points $I$ et $J$ sont définis par $\ve{AI} = \dfrac{1}{3}\ve{AB}$ et $\ve{AJ} = \dfrac{1}{3}\ve{AC}$.
-
-Exprimer $\ve{IJ}$ en fonction de $\ve{AB}$ et $\ve{AC}$, puis montrer que $(IJ)\parallel(BC)$.
-
-<details class="bloc cor"><summary>Afficher la correction :</summary>
-
-***Point clef** : On introduit le point $A$ pour faire apparaître les données de l'énoncé : $\ve{AI}$ par exemple.*
-
-$$\ve{IJ} = \ve{IA}+\ve{AJ} = -\frac{1}{3}\ve{AB}+\frac{1}{3}\ve{AC} = \frac{1}{3}(\ve{AC}-\ve{AB}) = \frac{1}{3}\ve{BC}$$
-
-Ainsi $\ve{IJ} = \dfrac{1}{3}\ve{BC}$ : les vecteurs sont colinéaires, donc $(IJ)\parallel(BC)$.
-
-On remarque aussi que $IJ = \dfrac{1}{3}BC$.
-
-</details>
-:::
-
-::: {.bloc .rem}
-<span class="bloc-titre">Remarque : Combinaison linéaire et colinéarité</span>
-
-- Exprimer un vecteur sous la forme $\alpha\,\ve{AB}+\beta\,\ve{AC}$
-(où $\alpha, \beta \in \R$) s'appelle écrire ce vecteur comme
-**combinaison linéaire** de $\ve{AB}$ et $\ve{AC}$ ;
-
-- Lorsque $\ve{AB}$ et $\ve{AC}$ ne sont pas colinéaires, cette décomposition
-est **unique** ;
-
-Ainsi, pour montrer que deux vecteurs $\ve{u}$ et $\ve{v}$ sont colinéaires, on peut décomposer $\ve{u}$ et $\ve{v}$ en fonction de $\ve{AB}$ et $\ve{AC}$, et montrer que les coefficient obtenues sont proportionnelles.
+**Attention :** il faut trouver un **même** réel $k$ pour les deux coefficients. Ne jamais conclure à la colinéarité en ne comparant qu'un seul coefficient.
 :::
 
 ::: {.bloc .sfc}
@@ -122,7 +112,7 @@ Montrer que $A$, $M$, $N$ sont alignés.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-***Point clef** : pour montrer que trois points $A$, $M$, $N$ sont alignés, on montre que les vecteurs $\ve{AM}$ et $\ve{AN}$ sont colinéaires.*
+*Point clef : pour montrer que trois points $A$, $M$, $N$ sont alignés, on montre que les vecteurs $\ve{AM}$ et $\ve{AN}$ sont colinéaires.*
 
 $$\ve{AN} = 4\ve{AB} + 2\ve{AC} = 2(2\ve{AB}+\ve{AC}) = 2\,\ve{AM}$$
 
@@ -132,25 +122,114 @@ Les vecteurs $\ve{AN}$ et $\ve{AM}$ sont colinéaires, donc les droites $(AM)$ e
 :::
 
 ::: {.bloc .ex}
-<div class="bloc-titre">Exercice :<span class="exemp-extra"> Parallélisme par les vecteurs — Calculer, Raisonner</span></div>
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Parallélisme et alignement par décomposition — Calculer, Raisonner</span></div>
 
-$ABC$ est un triangle. Les points $I$ et $J$ sont définis par $\ve{AI} = \dfrac{1}{3}\ve{AB}$ et $\ve{AJ} = 3\ve{AC}$.
+Soit $ABC$ un triangle, $M$ le milieu de $[AB]$, et $N$, $P$ les points définis par
+$$\ve{AN} = \frac13\ve{AC} \qquad \text{et} \qquad \ve{AP} = 2\ve{AB}-\ve{AC}$$
 
-1. Exprimer $\ve{IC}$ et $\ve{BJ}$ en fonction de $\ve{AB}$ et $\ve{AC}$.
+1. Faire une figure.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$$\ve{IC} = \ve{IA}+\ve{AC} = -\frac{1}{3}\ve{AB}+\ve{AC} \quad \text{et} \quad \ve{BJ} = \ve{BA}+\ve{AJ} = -\ve{AB}+3\ve{AC}$$
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig7.png" style="width: 50%;">
+</div>
 
 </details>
 
-2. Montrer que les droites $(IC)$ et $(BJ)$ sont parallèles.
+2. Exprimer $\ve{MN}$ et $\ve{BC}$ en fonction de $\ve{AB}$ et $\ve{AC}$.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$$\ve{BJ} = -\ve{AB}+3\ve{AC} = 3\!\left(-\frac{1}{3}\ve{AB}+\ve{AC}\right) = 3\,\ve{IC}$$
+$M$ est le milieu de $[AB]$, donc $\ve{MA}=-\dfrac12\ve{AB}$. D'après la relation de Chasles,
+$$\ve{MN} = \ve{MA}+\ve{AN} = -\frac12\ve{AB}+\frac13\ve{AC} \et \ve{BC} = \ve{BA}+\ve{AC} = -\ve{AB}+\ve{AC}$$
 
-Les vecteurs $\ve{BJ}$ et $\ve{IC}$ sont colinéaires donc les droites $(IC)$ et $(BJ)$ sont **parallèles**.
+</details>
+
+3. Les droites $(MN)$ et $(BC)$ sont-elles parallèles ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Supposons qu'il existe un réel $k$ tel que $\ve{MN}=k\,\ve{BC}$, c'est-à-dire
+$$-\frac12\ve{AB}+\frac13\ve{AC} = -k\,\ve{AB}+k\,\ve{AC}$$
+
+Les vecteurs $\ve{AB}$ et $\ve{AC}$ ne sont pas colinéaires, donc la décomposition est unique : $k=\dfrac12$ et $k=\dfrac13$, ce qui est impossible.
+
+Les vecteurs $\ve{MN}$ et $\ve{BC}$ ne sont pas colinéaires : les droites $(MN)$ et $(BC)$ ne sont **pas parallèles**.
+
+</details>
+
+4. Exprimer $\ve{MP}$ en fonction de $\ve{AB}$ et $\ve{AC}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+D'après la relation de Chasles,
+$$\ve{MP} = \ve{MA}+\ve{AP} = -\frac12\ve{AB}+2\ve{AB}-\ve{AC} = \frac32\ve{AB}-\ve{AC}$$
+
+</details>
+
+5. Montrer que les points $M$, $N$ et $P$ sont alignés.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$\ve{MP} = \frac32\ve{AB}-\ve{AC} = -3\left(-\frac12\ve{AB}+\frac13\ve{AC}\right) = -3\,\ve{MN}$$
+
+Les vecteurs $\ve{MP}$ et $\ve{MN}$ sont colinéaires, donc les points $M$, $N$ et $P$ sont **alignés**.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Alignement dans un parallélogramme — Calculer, Raisonner</span></div>
+
+Soit $ABCD$ un parallélogramme et $I$ le milieu de $[BC]$. On note $G$ le point défini par $\ve{AG} = \dfrac{2}{3}\ve{AI}$.
+
+1. Faire une figure.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig8.png" style="width: 40%;">
+</div>
+
+</details>
+
+2. Exprimer $\ve{AI}$ en fonction de $\ve{AB}$ et $\ve{AD}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$I$ est le milieu de $[BC]$, donc $\ve{BI}=\dfrac12\ve{BC}$. De plus $ABCD$ est un parallélogramme, donc $\ve{BC}=\ve{AD}$.
+
+D'après la relation de Chasles,
+$$\ve{AI} = \ve{AB}+\ve{BI} = \ve{AB}+\frac12\ve{BC} = \ve{AB}+\frac12\ve{AD}$$
+
+</details>
+
+3. En déduire $\ve{AG}$ en fonction de $\ve{AB}$ et $\ve{AD}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$\ve{AG} = \frac23\ve{AI} = \frac23\left(\ve{AB}+\frac12\ve{AD}\right) = \frac23\ve{AB}+\frac13\ve{AD}$$
+
+</details>
+
+4. Exprimer $\ve{DB}$ et $\ve{DG}$ en fonction de $\ve{AB}$ et $\ve{AD}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+D'après la relation de Chasles,
+$$\ve{DB} = \ve{DA}+\ve{AB} = \ve{AB}-\ve{AD}$$
+$$\ve{DG} = \ve{DA}+\ve{AG} = -\ve{AD}+\frac23\ve{AB}+\frac13\ve{AD} = \frac23\ve{AB}-\frac23\ve{AD}$$
+
+</details>
+
+5. Montrer que les points $D$, $G$ et $B$ sont alignés.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$\ve{DG} = \frac23\ve{AB}-\frac23\ve{AD} = \frac23\left(\ve{AB}-\ve{AD}\right) = \frac23\ve{DB}$$
+
+Les vecteurs $\ve{DG}$ et $\ve{DB}$ sont colinéaires, donc les points $D$, $G$ et $B$ sont **alignés**.
 
 </details>
 :::

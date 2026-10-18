@@ -4,11 +4,12 @@ format:
   html:
     toc: true
     number-sections: false
-description: "Translation, vecteur nul"
+description: "Translation, vecteur, vecteur nul, vecteurs égaux, représentants"
 order: 1
 ---
 
-## Notion de vecteur
+## Translation et notion de vecteur
+
 ::: {.bloc .def}
 <span class="bloc-titre">Définition : Translation</span>
 
@@ -16,7 +17,7 @@ Soit $A$ et $B$ deux points du plan.
 
 La **translation qui transforme $A$ en $B$** est la transformation du plan qui, à tout point $C$, associe l'unique point $M$ tel que $[AM]$ et $[BC]$ aient le même milieu.
 
-Le quadrilatère $ABMC$ est alors un **parallélogramme**.
+Le quadrilatère $ABMC$ est alors un **parallélogramme** (éventuellement aplati si $C$ est sur la droite $(AB)$).
 
 - $M$ est **l'image de $C$ par la translation de vecteur $\ve{AB}$** ;
 - on note $t_{\ve{AB}}(C)=M$.
@@ -32,6 +33,12 @@ Le quadrilatère $ABMC$ est alors un **parallélogramme**.
 Intuitivement, une translation fait **glisser** tout le plan dans la même direction, du même sens et de la même longueur, sans rotation ni déformation.
 :::
 
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Vecteur</span>
+
+À la translation qui transforme $A$ en $B$, on associe le **vecteur** $\ve{AB}$. On dit que cette translation est la **translation de vecteur $\ve{AB}$**, notée $t_{\ve{AB}}$.
+:::
+
 ::: {.bloc .rem}
 <span class="bloc-titre">Remarque : </span>
 
@@ -42,6 +49,18 @@ $A$ est l'**origine** du vecteur $\ve{AB}$ et $B$ son **extrémité**. En partic
 <div style="text-align: center;">
   <img src="../../image/seconde/Vecteurs_Translation_vecteur.png" style="width: 25%;">
 </div>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Caractéristiques d'un vecteur : </span>
+
+Un vecteur non nul $\ve{AB}$ (avec $A \neq B$) est entièrement caractérisé par les trois données suivantes :
+
+- sa **direction** (celle de la droite support) ;
+- son **sens** (de l'origine vers l'extrémité) ;
+- sa **norme**, notée $\norm{\ve{AB}}$, la longueur $AB$.
+
+Le vecteur nul n'a ni direction ni sens, et sa norme vaut $0$.
 :::
 
 ::: {.bloc .def}
@@ -58,13 +77,55 @@ $\ve{AB} = \ve{0} \Longleftrightarrow A = B$
 
 <details class="bloc demo"><summary>Démonstration : </summary>
 
-- **Sens direct** ($\Rightarrow$) Supposons $\ve{AB} = \ve{0}$. Alors $t_{\ve{AB}} = t_{\ve{0}}$ est la translation qui laisse tout point invariant. En particulier $t_{\ve{AB}}(A) = B$ et $t_{\ve{0}}(A) = A$, donc $B = A$.
-
-- **Sens indirect** ($\Leftarrow$) Réciproquement, si $A = B$, alors la translation qui envoie $A$ sur $B$ laisse $A$ fixe, donc c'est la translation de vecteur nul : $\ve{AB} = \ve{0}$.
+- **Sens direct ($\Longrightarrow$) :**  
+  Supposons $\ve{AB} = \ve{0}$. Alors $t_{\ve{AB}} = t_{\ve{0}}$ est la translation qui laisse tout point invariant. En particulier $t_{\ve{AB}}(A) = B$ et $t_{\ve{0}}(A) = A$, donc $B = A$.
+- **Sens indirect ($\Longleftarrow$) :**  
+  Si $A = B$, alors la translation qui envoie $A$ sur $B$ laisse $A$ fixe, donc c'est la translation de vecteur nul : $\ve{AB} = \ve{0}$.
 
 </details>
 
-## Vecteurs égaux
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Construire l'image d'un point par une translation — Représenter</span></div>
+
+On considère la figure ci-dessous.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig1.png" style="width: 45%;">
+</div>
+
+1. Construire le point $D$, image du point $A$ par la translation de vecteur $\ve{u}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Voir la figure : $t_{\ve{u}}(A)=D$.
+
+</details>
+
+2. Justifier que $C$ est l'image de $B$ par la translation de vecteur $\ve{u}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour aller de $B$ à $C$, on avance de $2$ carreaux et on monte de $1$, comme pour $\ve{u}$ : $t_{\ve{u}}(B)=C$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Méthode — Construire l'image d'un point au compas : </span>
+
+Sur une feuille blanche, pour construire l'image $M'$ d'un point $M$ par la translation de vecteur $\ve{AB}$ :
+
+1. On prend au compas l'écartement $AB$ ; pointe en $M$, on trace un arc de cercle.
+2. On prend au compas l'écartement $AM$ ; pointe en $B$, on trace un arc de cercle.
+3. Les deux arcs se coupent en $M'$ (du même côté que $B$ par rapport à $(AM)$).
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig2.png" style="width: 35%;">
+</div>
+:::
+
+## Vecteurs égaux — Représentants
+
 ::: {.bloc .def}
 <span class="bloc-titre">Définition : Vecteurs égaux</span>
 
@@ -78,17 +139,9 @@ On dit que $\ve{AB}$ et $\ve{CD}$ sont **égaux** lorsque $[AD]$ et $[BC]$ ont l
 :::
 
 ::: {.bloc .rem}
-<span class="bloc-titre">Caractéristiques d'un vecteur : </span>
-
-Un vecteur est entièrement caractérisé par les trois données suivantes :
-
-- sa **direction** (celle de la droite support) ;
-- son **sens** (de l'origine vers l'extrémité) ;
-- sa **norme**, notée $\norm{\ve{AB}}$, la longueur $AB$.
-:::
-
-::: {.bloc .rem}
 <span class="bloc-titre">Remarque : </span>
+
+Un vecteur peut être désigné par une seule lettre surmontée d'une flèche : $\ve{u}$, $\ve{v}$, $\ve{w}$…
 
 Soit $\ve{u}$ le vecteur de la translation qui transforme $A$ en $B$ et aussi $C$ en $D$.
 
@@ -102,8 +155,7 @@ Soit $\ve{u}$ le vecteur de la translation qui transforme $A$ en $B$ et aussi $C
 <span class="bloc-titre">Erreur à éviter : </span>
 
 1. La réciproque de « $\ve{AB} = \ve{CD} \Rightarrow \norm{\ve{AB}} = \norm{\ve{CD}}$ » est **fausse**.
-
-   Dans un carré $ABCD$, on a $\norm{\ve{AB}} = \norm{\ve{BC}}$ pourtant $\ve{AB} \neq \ve{BC}$ car ces deux vecteurs n'ont pas la même direction.
+   Dans un carré $ABCD$, on a $\norm{\ve{AB}} = \norm{\ve{BC}}$ pourtant $\ve{AB}$ et $\ve{BC}$ n'ont pas la même direction.
 
 2. Ne pas confondre **même direction** et **même sens**.
 
@@ -120,6 +172,42 @@ Dans un parallélogramme $ABCD$, quels couples de vecteurs sont égaux ? Justifi
 $ABCD$ est un parallélogramme si et seulement si $\ve{AB} = \ve{DC}$ et $\ve{AD} = \ve{BC}$, donc les couples de vecteurs égaux sont $(\ve{AB},\ve{DC})$ et $(\ve{AD},\ve{BC})$.
 
 En revanche, $\ve{AB}$ et $\ve{CD}$ ont même direction mais des sens contraires, donc ils ne sont pas égaux.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Comparer des vecteurs — Raisonner</span></div>
+
+On reprend la figure du savoir-faire *Construire l'image d'un point par une translation* ci-dessus.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Vecteurs_Translation_vecteurs_fig1.png" style="width: 45%;">
+</div>
+
+Parmi les vecteurs $\ve{v}$, $\ve{w}$ et $\ve{r}$, citer :
+
+1. un vecteur égal à $\ve{u}$ ;
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$\ve{v}=\ve{u}$ : même direction, même sens, même norme.
+
+</details>
+
+2. un vecteur opposé à $\ve{u}$ ;
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$\ve{w}$ est opposé à $\ve{u}$ : même direction, même norme, sens contraire.
+
+</details>
+
+3. un vecteur de même direction et de même sens que $\ve{u}$, mais de norme différente.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$\ve{r}$ a la même direction et le même sens que $\ve{u}$, mais une norme deux fois plus grande.
 
 </details>
 :::

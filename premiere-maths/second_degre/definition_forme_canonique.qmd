@@ -1,0 +1,213 @@
+---
+title: "Définition et forme canonique"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Fonction polynôme du second degré, unicité des coefficients et forme canonique."
+order: 1
+---
+
+## Définition
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+On dit que $f$ est une **fonction polynôme de degré 2** lorsqu'il existe $a$, $b$, $c$ trois réels, avec $a\neq 0$, tels que
+$$f(x) = ax^2+bx+c$$
+
+- Les réels $a$, $b$ et $c$ sont appelés les **coefficients** du polynôme.
+- Le coefficient $a$ est appelé **coefficient dominant** et $c$ le **coefficient constant**.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Reconnaître une fonction polynôme du second degré — Calculer</span></div>
+
+1. Les fonctions $f$, $g$ et $h$ définies respectivement par
+   $$f(x)=x^2-4 \qquad g(x)=2(x-3)(5-3x) \qquad h(x)=(x-4)^2-(2x-4)^2$$
+   sont-elles des fonctions polynômes du second degré ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+C'est immédiat pour $f$ (avec $a=1$, $b=0$ et $c=-4$).
+
+Pour tout réel $x$, on a, après développement et simplification,
+$$g(x)=-6x^2+28x-30 \qquad \text{et} \qquad h(x)=-3x^2+8x$$
+Ainsi $g$ et $h$ sont aussi de la forme cherchée.
+
+- Les coefficients dominants de $f$, $g$ et $h$ sont respectivement $1$, $-6$ et $-3$.
+- Les coefficients constants de $f$, $g$ et $h$ sont respectivement $-4$, $-30$ et $0$.
+
+</details>
+
+2. Les fonctions $i$, $j$ et $k$ définies respectivement par
+   $$i(x) = \sqrt{x}-3x^2 \qquad j(x)=\dfrac{x^2+3x+2}{x^2+1} \qquad k(x) =3x-1$$
+   sont-elles des fonctions du second degré ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Les fonctions $i$, $j$ et $k$ ne sont pas des fonctions du second degré : $i$ contient une racine carrée, $j$ est une expression rationnelle, et $k$ est une fonction affine (polynôme de degré 1).
+
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Une fonction polynôme du second degré est nulle si et seulement si tous ses coefficients sont nuls.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soit $f$ une fonction polynôme de degré $2$ définie sur $\R$ par $f(x)=ax^2+bx+c$.
+
+- Si $a=b=c=0$, alors $f(x)=0$ et donc $f$ est la fonction nulle.
+- Si $f(x)=0$ pour tout réel $x$, alors $f(1)=f(-1)=f(0)=0$.
+
+  C'est-à-dire que $a+b+c=0$, $a-b+c=0$ et $c=0$.
+
+  On en déduit que $a+b=0$ et $a-b=0$, d'où $a=0$ et $b=0$.
+
+</details>
+
+::: {.bloc .info}
+<span class="bloc-titre">À retenir : Conséquence</span>
+
+Deux fonctions polynômes sont égales si et seulement si elles ont les mêmes coefficients. Ainsi l'écriture d'une fonction polynôme du second degré sous la forme
+$$f(x)=ax^2+bx+c$$
+est unique.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Recherche d'une fonction — Calculer, Raisonner</span></div>
+
+1. Déterminer une fonction polynôme du second degré $f$ vérifiant $f(x+1)-f(x)=x$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Soit $f:x \longmapsto ax^2+bx+c$ avec $a$, $b$, $c \in \R$ et $a\neq 0$.
+
+Pour tout $x \in \R$,
+$$\begin{aligned}
+f(x+1)-f(x)&=a(x+1)^2+b(x+1)+c-ax^2-bx-c \\
+&= ax^2+2ax+a+bx+b-ax^2-bx \\
+&= 2ax+a+b
+\end{aligned}$$
+Ainsi
+$$f(x+1)-f(x) =x \Longleftrightarrow 2ax+a+b=x$$
+On déduit donc, par comparaison des monômes de même degré, que
+$$\left\{\begin{array}{l}
+2a=1\\
+a+b=0
+\end{array} \right.$$
+donc $a=\dfrac{1}{2}$, d'où $b=-\dfrac{1}{2}$.
+
+Ainsi
+$$f(x)=\dfrac{1}{2}x^2-\dfrac{1}{2}x$$
+
+</details>
+
+2. En déduire une expression de $S_n=\displaystyle\sum_{k=1}^n k =1+2+3+ \dots+n$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout entier non nul $k$, on a $k=f(k+1)-f(k)$.
+
+Ainsi
+$$\begin{aligned}
+S_n&=1+2+3+ \dots +(n-1)+n \\
+&= \big(f(2)-f(1)\big)+\big(f(3)-f(2)\big)+ \dots +\big(f(n+1)-f(n)\big)\\
+&= f(n+1)- f(1) \\
+&= \dfrac{1}{2}n^2+\dfrac{1}{2} n\\
+&=\dfrac{n(n+1)}{2}
+\end{aligned}$$
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+On vient de démontrer que la somme des $n$ premiers entiers naturels non nuls est
+$$\dfrac{n(n+1)}{2}$$
+:::
+
+## Forme canonique
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $f$ une fonction polynôme du second degré définie sur $\R$ par
+$$f(x) = ax^2 + bx + c$$
+Alors, pour tout réel $x$,
+$$f(x) = a\left(x - \alpha\right)^2 + \beta$$
+avec
+$$\alpha = - \dfrac{b}{2a}\quad \text{et} \quad \beta = - \dfrac{b^2 - 4ac}{4a}$$
+Cette forme est appelée **forme canonique**.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Pour tout réel $x$,
+$$\begin{aligned}
+f(x) &= ax^2 + bx + c = a\left(x^2 + \dfrac{b}{a} x\right) + c = a\left[\left(x + \dfrac{b}{2a}\right)^2 - \dfrac{b^2}{4a^2} \right] + c \\
+&= a\left(x + \dfrac{b}{2a}\right)^2 - \dfrac{b^2}{4a} + \dfrac{4ac}{4a} = a\left(x + \dfrac{b}{2a}\right)^2 - \dfrac{b^2 - 4ac}{4a}
+\end{aligned}$$
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+On ne cherche pas à retenir les expressions de $\alpha$ et $\beta$ : il faut connaître la méthode de mise sous forme canonique.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Mise sous forme canonique — Calculer</span></div>
+
+1. Déterminer la forme canonique de la fonction $f$ définie sur $\R$ par $f(x) = -x^2 + 4x - 5$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout $x \in \R$,
+$$f(x) = -x^2 + 4x - 5 = -(x^2 - 4x) - 5 = -\left((x-2)^2 - 4 \right) - 5 = -(x-2)^2 - 1$$
+
+</details>
+
+2. Soit $g$ la fonction définie sur $\R$ par $g(x) = 3x^2 + 6x - 3$. Résoudre $g(x) = 30$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+*Point clef :* on ne sait pas encore résoudre ce type d'équation, on se ramène donc à une forme connue $X^2=a$.
+
+Pour tout $x \in \R$,
+$$g(x) = 3x^2 + 6x - 3 = 3(x^2 + 2x) - 3 = 3\left((x + 1)^2 - 1 \right) - 3 = 3(x+1)^2 - 6$$
+Ainsi, pour tout réel $x$,
+$$\begin{aligned}
+g(x) = 30 &\Longleftrightarrow 3(x+1)^2 - 6 = 30 \\
+&\Longleftrightarrow 3(x+1)^2 = 36 \\
+&\Longleftrightarrow (x+1)^2 = 12 \\
+&\Longleftrightarrow x+1 = \sqrt{12} \ou x+1 = -\sqrt{12} \\
+&\Longleftrightarrow x = -1 + 2\sqrt{3} \ou x = -1 - 2 \sqrt{3}
+\end{aligned}$$
+Les solutions de l'équation (c'est-à-dire les antécédents de $30$) sont $-1+2\sqrt{3}$ et $-1-2\sqrt{3}$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+On ne peut pas factoriser $f$, puisque sa forme canonique est la somme de deux quantités négatives (donc différente de $a^2-b^2$).
+
+La forme canonique obtenue pour la fonction $g$ étant la différence de deux quantités positives, l'expression est factorisable, avec $a^2-b^2=(a-b)(a+b)$ :
+$$g(x) = 3(x+1)^2 - 6 = 3\big[(x+1)^2-2\big] = 3(x+1-\sqrt{2})(x+1+\sqrt{2})$$
+:::

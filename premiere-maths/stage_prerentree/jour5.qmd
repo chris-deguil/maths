@@ -1,0 +1,170 @@
+---
+title: "Jour 5 : Vecteurs, droites paramétrées et probabilités"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Alignement de points par les vecteurs, famille de droites dépendant d'un paramètre, distances et minimisation, arbre pondéré."
+order: 5
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Points travaillés : </span>
+
+- Utiliser les vecteurs pour démontrer un alignement de points.
+- Étudier une famille de droites dépendant d'un paramètre.
+- Calculer une distance et résoudre un problème de minimisation.
+- Construire un arbre pondéré et calculer une probabilité.
+:::
+
+## Vecteurs
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Vecteurs — alignement de points</span></div>
+
+$ABC$ est un triangle non plat quelconque. Les points $M$, $N$ et $P$ sont définis par
+$$\ve{AM} = \frac{1}{3} \ve{AB}\qquad \ve{BN} = \frac{2}{3} \ve{BC}\qquad \ve{CP} = \frac{3}{5} \ve{CM}.$$
+Démontrer que les points $A$, $P$ et $N$ sont alignés. *(On se placera dans le repère $\left(A~;~\ve{AB}~;~\ve{AC}\right)$, après avoir justifié l'existence d'un tel repère.)*
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+**Existence du repère.** $ABC$ étant non plat, $\ve{AB}$ et $\ve{AC}$ ne sont pas colinéaires : ils forment une base et $\left(A~;~\ve{AB}~;~\ve{AC}\right)$ est un repère. On a alors $A(0~;~0)$, $B(1~;~0)$, $C(0~;~1)$ et $\ve{BC}=(-1~;~1)$.
+
+**Coordonnées.** $\ve{AM}=\dfrac13\ve{AB}$ donne $M\left(\dfrac13~;~0\right)$. $\ve{BN}=\dfrac23\ve{BC}$ donne $N\left(\dfrac13~;~\dfrac23\right)$. $\ve{CM}=\left(\dfrac13~;~-1\right)$, donc $\ve{CP}=\dfrac35\ve{CM}=\left(\dfrac15~;~-\dfrac35\right)$ et $P\left(\dfrac15~;~\dfrac25\right)$.
+
+**Alignement.** $\ve{AP}=\left(\dfrac15~;~\dfrac25\right)$ et $\ve{AN}=\left(\dfrac13~;~\dfrac23\right)$. Le déterminant vaut
+$$\dfrac15\times\dfrac23-\dfrac25\times\dfrac13=\dfrac{2}{15}-\dfrac{2}{15}=0.$$
+$\ve{AP}$ et $\ve{AN}$ sont colinéaires (on a $\ve{AP}=\dfrac35\ve{AN}$) : **les points $A$, $P$, $N$ sont alignés.**
+
+*Nota : le coefficient $\frac23$ (devant $\ve{BC}$) est celui qui rend l'alignement effectif avec $\ve{AM}=\frac13\ve{AB}$ et $\ve{CP}=\frac35\ve{CM}$.*
+
+</details>
+:::
+
+## Droites et paramètres
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Famille de droites $\mathcal{D}_m$</span></div>
+
+À tout réel $m \neq 3$, on associe la droite $\mathcal{D}_m$ dont une équation cartésienne est
+$$(m-3)y + (2m-1)x -7m+6 = 0.$$
+
+1. Déterminer $m$ et donner une équation cartésienne de $\mathcal{D}_m$ dans chacun des cas suivants.
+
+    a. $\mathcal{D}_m$ passe par $A(1~;~1)$.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $(m-3)+(2m-1)-7m+6=0\iff-4m+2=0\iff m=\dfrac12$. Équation : $\boxed{y=1}$.
+
+    </details>
+
+    b. $\mathcal{D}_m$ passe par l'origine du repère.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $-7m+6=0\iff m=\dfrac67$. Équation : $\boxed{5x-15y=0}$ (soit $y=\frac13x$).
+
+    </details>
+
+    c. $\mathcal{D}_m$ est parallèle à l'axe des abscisses.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    Coefficient de $x$ nul : $2m-1=0\iff m=\dfrac12$ (et $m-3\neq0$). Équation : $\boxed{y=1}$.
+
+    </details>
+
+    d. Peut-on trouver $m$ tel que $\mathcal{D}_m$ soit parallèle à l'axe des ordonnées ?
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    Il faudrait $m-3=0\iff m=3$, valeur *exclue*. **C'est impossible.**
+
+    </details>
+
+    e. $\mathcal{D}_m$ est parallèle à la droite d'équation $y=3x-6$.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    Coefficient directeur $\dfrac{1-2m}{m-3}=3\iff1-2m=3m-9\iff m=2$. Équation : $\boxed{y=3x-8}$.
+
+    </details>
+
+2. Montrer qu'il existe un point $K$ appartenant à toutes les droites $\mathcal{D}_m$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$m(y+2x-7)+(-3y-x+6)=0$ pour tout $m$ si et seulement si $\begin{cases}y+2x-7=0\\-3y-x+6=0\end{cases}$, d'unique solution $x=3,\ y=1$. $\boxed{K(3~;~1)}$ appartient à toutes les $\mathcal{D}_m$.
+
+</details>
+:::
+
+## Distances et optimisation
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Cube — calcul de distances</span></div>
+
+On considère un cube $ABCDEFGH$ d'arête $2$ cm et l'on désigne par $I$ le milieu de $[FG]$ et par $M$ un point quelconque du segment $[BF]$. On pose $x = BM$.
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/StagePrerentree_Jour5_cube.png" style="width: 35%;">
+</div>
+
+1. Exprimer, en fonction de $x$, la longueur du trajet « $AMI$ » (segment $[AM]$, suivi du segment $[MI]$).
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Dans le repère d'origine $A$ : $M(2,0,x)$ et $I(2,1,2)$, avec $0\leqslant x\leqslant2$. Alors $AM=\sqrt{x^2+4}$ et $MI=\sqrt{(2-x)^2+1}$, donc
+$$\boxed{L(x)=\sqrt{x^2+4}+\sqrt{(2-x)^2+1}}.$$
+
+</details>
+
+2. Trouver la valeur de $x$ telle que la longueur de ce trajet soit minimale.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Par dépliage, $L(x)$ est la somme des distances d'un point $(x~;~0)$ à $A'(0~;~2)$ et $I'(2~;~-1)$ (de part et d'autre) ; elle est minimale sur la droite $A'I'$, de longueur $\sqrt{2^2+3^2}=\sqrt{13}$, atteinte pour $\boxed{x=\dfrac43}$.
+
+</details>
+:::
+
+## Probabilités
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Probabilités — urne et sacs de jetons</span></div>
+
+Une urne contient $5$ boules indiscernables au toucher : deux bleues « B » et trois rouges « R ». On dispose également de deux sacs contenant des jetons : l'un est bleu et contient un jeton bleu « b » et trois jetons rouges « r » ; l'autre est rouge et contient deux jetons bleus « b » et deux jetons rouges « r ». On extrait une boule de l'urne puis on tire un jeton dans le sac qui est de la même couleur que la boule tirée.
+
+1. Représenter cette expérience à l'aide d'un arbre pondéré.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Premier niveau : $P(B)=\dfrac25$, $P(R)=\dfrac35$. Second niveau : $P(b\mid B)=\dfrac14$, $P(r\mid B)=\dfrac34$ (sac bleu) ; $P(b\mid R)=\dfrac12$, $P(r\mid R)=\dfrac12$ (sac rouge).
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/StagePrerentree_Jour5_arbre.png" style="width: 40%;">
+</div>
+
+</details>
+
+2. Déterminer la probabilité de l'événement $A$ : « La boule et le jeton sont de la même couleur ».
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$A$ correspond aux chemins (B, b) et (R, r) :
+$$P(A)=\dfrac25\times\dfrac14+\dfrac35\times\dfrac12=\dfrac{1}{10}+\dfrac{3}{10}=\boxed{\dfrac25}.$$
+
+</details>
+:::

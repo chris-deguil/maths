@@ -6,6 +6,7 @@ listing:
     fields: [title, description]
     sort: "chapter-order"
     contents:
+      - stage_prerentree/index.qmd
       - ensembles_nombres/index.qmd
       - fonctions_affines/index.qmd
       - vecteurs_translation/index.qmd

@@ -4,19 +4,21 @@ format:
   html:
     toc: true
     number-sections: false
-description: "Existence, unicité, commutativité, associativité"
+description: "Enchaînement de translations, commutativité, associativité"
 order: 3
 ---
 
 ## Existence et propriétés
 
 ::: {.bloc .thm}
-<span class="bloc-titre">Propriété : Existence et unicité de la somme</span>
+<span class="bloc-titre">Propriété : Somme de deux vecteurs</span>
 
-Soient $\ve{u}$ et $\ve{v}$ deux vecteurs du plan. Il existe un unique vecteur $\ve{w}$ tel que $\ve{w} = \ve{u} + \ve{v}$.
+Soient $\ve{u}$ et $\ve{v}$ deux vecteurs du plan. Appliquer la translation de vecteur $\ve{u}$, puis la translation de vecteur $\ve{v}$, revient à appliquer une **unique** translation.
+
+Son vecteur $\ve{w}$ est appelé **somme** de $\ve{u}$ et $\ve{v}$ : on note $\ve{w} = \ve{u} + \ve{v}$.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Vecteurs_Translation_unicite.png" style="width: 25%;">
+  <img src="../../image/seconde/Vecteurs_Translation_unicite.png" style="width: 30%;">
 </div>
 :::
 
@@ -27,7 +29,7 @@ Soient $A$, $B$, $D$, $E$, $C$, $F$ des points tels que $t_{\ve{u}}(A) = B$, $t_
 $ABED$ et $BCFE$ sont des parallélogrammes.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Vecteurs_Translation_figure_demo1.png" style="width: 20%;">
+  <img src="../../image/seconde/Vecteurs_Translation_figure_demo1.png" style="width: 30%;">
 </div>
 
 On en déduit que $ACFD$ est aussi un parallélogramme. Il existe donc une unique translation de vecteur $\ve{w}$ telle que $t_{\ve{w}}(A) = C$ et $t_{\ve{w}}(D) = F$.

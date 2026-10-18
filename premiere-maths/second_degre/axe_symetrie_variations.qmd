@@ -1,0 +1,140 @@
+---
+title: "Axe de symétrie et variations"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Axe de symétrie de la parabole, milieu des racines, et variations d'une fonction du second degré."
+order: 7
+---
+
+## Axe de symétrie
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $f$ une fonction du second degré telle que $f(x) = a(x - \alpha)^2 + \beta$, où $\alpha$ et $\beta$ sont des réels et $a$ non nul. Alors la droite $(d)$ d'équation $x = \alpha$ est un axe de symétrie de la représentation graphique de $f$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soit $d:x =\alpha$ et $\mathscr{C}$ la représentation graphique d'une fonction $f$ du second degré. La droite $d$ est un axe de symétrie de $\mathscr{C}$ si et seulement si, pour tout $x \in \R$, les points $M(\alpha - x\,;\, f(\alpha - x))$ et $M'(\alpha + x\,;\, f(\alpha + x))$ sont symétriques par rapport à $d$, c'est-à-dire si $f(\alpha - x) = f(\alpha + x)$.
+
+Or, pour tout réel $x$,
+$$f(\alpha - x) = a(\alpha - x - \alpha)^2 + \beta = ax^2 + \beta \et f(\alpha + x) = a(\alpha + x - \alpha)^2 + \beta = ax^2 + \beta$$
+Donc les points $M$ et $M'$ sont symétriques par rapport à $d$.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Axe de symétrie — Calculer, Raisonner</span></div>
+
+On considère la fonction $f$ définie par $f(x)=2x^2-5x+3$.
+
+1. Déterminer l'équation de l'axe de symétrie de la représentation graphique de $f$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+L'axe de symétrie a pour équation $d: x = \dfrac{-(-5)}{2 \times 2} = \dfrac{5}{4}$.
+
+</details>
+
+2. En déduire, sans aucun calcul, que les points d'abscisses $1$ et $\dfrac{3}{2}$ ont la même ordonnée.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+L'axe de symétrie a pour équation $x= \dfrac{5}{4} = 1{,}25$. Or $1$ et $1{,}5$ sont symétriques par rapport à $1{,}25$ (puisque $1{,}25-0{,}25 = 1$ et $1{,}25+0{,}25=1{,}5$).
+
+On déduit alors que $f(1)=f(1{,}5)$.
+
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $f$ une fonction du second degré définie par $f(x)=ax^2+bx+c$. Les racines de $f$, si elles existent, ont pour milieu $-\dfrac{b}{2a}$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Immédiate.
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Exploiter le sommet et une racine — Raisonner</span></div>
+
+Soit $f:x \longmapsto ax^2+bx+c$, $a \neq 0$, une fonction polynôme de degré $2$ dont la représentation graphique admet $S(4\, ; \, -2)$ comme sommet. On suppose de plus que $f(-3)=0$.
+
+1. Déterminer la valeur de la seconde racine.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$S(4\, ; \, -2)$ est le sommet de la représentation graphique de $f$, donc la droite $x=4$ est un axe de symétrie de cette représentation.
+
+On a $-3 = 4-7$ et $f(-3)=0$, donc par symétrie $f(4+7)=0$. Ainsi la seconde racine est $11$.
+
+</details>
+
+2. Déterminer le signe de $a$ et celui de $b$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On a, pour tout réel $x$, $f(x)=a(x-4)^2-2$.
+
+Ainsi $f(x)=0 \Longleftrightarrow (x-4)^2=\dfrac{2}{a}$.
+
+Cette équation n'admet deux solutions que si $a>0$. Comme $f$ admet deux racines, on déduit que $a>0$. Puisque $4=\alpha=-\dfrac{b}{2a}$, la règle des signes donne $b<0$.
+
+</details>
+:::
+
+## Variations
+
+On sait que la représentation graphique de $f$ admet un axe de symétrie $d:x= \alpha$. Pour étudier les variations de $f$, il suffit donc de les étudier sur $\left]- \infty \, ; \,\alpha \right]$ (par exemple) et d'en déduire le reste par symétrie.
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $f$ une fonction polynôme du second degré définie par $f(x) = ax^2 + bx + c$. Alors :
+
+1. Si $a > 0$, alors $f$ est décroissante sur $\left]-\infty~;~-\dfrac{b}{2a} \right]$ et croissante sur $\left[-\dfrac{b}{2a}~;~+\infty \right[$.
+2. Si $a < 0$, alors $f$ est croissante sur $\left]-\infty~;~-\dfrac{b}{2a} \right]$ et décroissante sur $\left[-\dfrac{b}{2a}~;~+\infty \right[$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration :</summary>
+
+Soit $u < v \leqslant \alpha$ et $a >0$. Alors
+$$f(u) - f(v) = a\left[\Big(u + \dfrac{b}{2a}\Big)^2 - \Big(v + \dfrac{b}{2a}\Big)^2\right] = a(u - v)\Big(u + v + 2 \times \dfrac{b}{2a}\Big)$$
+Or $u < v \Longleftrightarrow u - v < 0$, et $u + v < - \dfrac{b}{2a}$. Ainsi
+$$u - v < 0 \et \Big(u + v + 2 \times \dfrac{b}{2a}\Big) < 0$$
+Comme $a > 0$, on a $f(u) - f(v) > 0$, donc $f$ est décroissante sur $\left] - \infty~;~-\dfrac{b}{2a} \right]$.
+
+La représentation graphique de $f$ admettant $x = - \dfrac{b}{2a}$ comme axe de symétrie, on déduit que $f$ est croissante sur $\left[-\dfrac{b}{2a}~;~+\infty \right[$.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Variations d'un trinôme — Représenter</span></div>
+
+Soit $f$ la fonction définie sur $\R$ par $f(x) = 2x^2-7x +1$. Étudier les variations de $f$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+La représentation graphique de $f$ admet comme axe de symétrie $x = \dfrac{7}{4}$.
+
+Son coefficient dominant $2>0$, donc $f$ est décroissante sur $\left]-\infty~;~\dfrac{7}{4}\right]$ et croissante sur $\left[\dfrac{7}{4}~;+\infty\right[$.
+
+On déduit qu'elle admet un minimum en $\dfrac{7}{4}$.
+
+</details>
+:::

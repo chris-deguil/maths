@@ -1,0 +1,458 @@
+---
+title: "Jour 3 : Fonctions, variations et probabilités"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Radicaux et fractions littérales, tableaux de variations, fonction homographique, encadrements, valeurs absolues et probabilités."
+order: 3
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Points travaillés : </span>
+
+- Calculer et simplifier des expressions avec radicaux et fractions littérales.
+- Lire, compléter et exploiter un tableau de variations.
+- Étudier une fonction homographique (ensemble de définition, écriture, variations).
+- Encadrer une expression à partir d'encadrements de variables.
+- Résoudre une équation avec valeurs absolues.
+- Calculer une probabilité simple à partir d'une expérience aléatoire.
+:::
+
+## Calcul numérique
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Calcul de radicaux et de fractions</span></div>
+
+*Dans l'ensemble des calculs suivants, on supposera que $a$, $b$, $c$, $x$ et $z$ sont des réels non nuls (ou dans leur ensemble de validité).*
+
+Calculer et simplifier.
+
+1. $A = \dfrac{2}{x+1} + \dfrac{1 - \dfrac{1}{x}}{1 + \dfrac{1}{x}}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\dfrac{1-\frac1x}{1+\frac1x}=\dfrac{x-1}{x+1}$, donc $A=\dfrac{2}{x+1}+\dfrac{x-1}{x+1}=\dfrac{x+1}{x+1}=1$.
+
+</details>
+
+2. $B = \sqrt{\dfrac{48a^6b^{12}}{243(ab)^4}}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\dfrac{48a^6b^{12}}{243a^4b^4}=\dfrac{16}{81}a^2b^8$, donc $B=\sqrt{\dfrac{16}{81}a^2b^8}=\dfrac49\,|a|\,b^4$.
+
+</details>
+
+3. $C = \sqrt{\dfrac{4^{80} + 5 \times 8^{53}}{28 \times 2^{155}}}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Numérateur : $2^{160}+5\cdot2^{159}=7\cdot2^{159}$ ; dénominateur : $28\times2^{155}=7\cdot2^{157}$.
+$$C=\sqrt{\dfrac{7\cdot2^{159}}{7\cdot2^{157}}}=\sqrt{2^2}=2.$$
+
+</details>
+
+4. $D = \left(\sqrt{1 + \sqrt{1-z^2}} + \sqrt{1 - \sqrt{1-z^2}}\right)^2$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$D=(1+\sqrt{1-z^2})+2\sqrt{1-(1-z^2)}+(1-\sqrt{1-z^2})=2+2\sqrt{z^2}=2+2|z|$.
+
+</details>
+
+**Questions supplémentaires.**
+
+5. Justifier que le calcul de $A$ ne peut se faire pour $x = 0$, $x=1$ et $x=-1$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Le calcul nécessite $x\neq0$ (pour $\frac1x$) et $x\neq-1$ (pour $\frac{2}{x+1}$ et $1+\frac1x=\frac{x+1}{x}$). Remarque : pour $x=1$, l'expression est en fait définie et $A=1$ ; seules $x=0$ et $x=-1$ sont à exclure rigoureusement.
+
+</details>
+
+6. Pour quelles valeurs de $z$ peut-on effectuer le calcul de $D$ ? *(On pourra représenter l'ensemble de ces nombres sur une droite graduée.)*
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Il faut $1-z^2\geqslant0$ et $1-\sqrt{1-z^2}\geqslant0$ (toujours vraie). La première donne $\boxed{z\in[-1~;~1]}$.
+
+</details>
+:::
+
+## Fonctions
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tableau de variations</span></div>
+
+On considère une fonction $f$ dont on donne le tableau des variations.
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/StagePrerentree_Jour3_tableau_variations.png" style="width: 65%;">
+</div>
+
+*Rappel : $f$ décroît sur $[-8~;~-1]$, croît sur $[-1~;~2]$, décroît sur $[2~;~3]$, croît sur $[3~;~11]$, décroît sur $[11~;~13]$.*
+
+1. Compléter par le symbole qui convient ($<$, $>$, $=$ ou $?$) :
+$$f(-5)\ \dots\ f(-4)\qquad f(0)\ \dots\ f(3)\qquad f(4)\ \dots\ f(12)\qquad f(-3)\ \dots\ f(8)\qquad f(-8)\ \dots\ f(11)$$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$f(-5)>f(-4)$ (décroissante) ; $f(0)>f(3)$ (car $f(0)>-3>-5=f(3)$) ; $f(4)\ ?\ f(12)$ (indéterminé) ; $f(-3)\ ?\ f(8)$ (indéterminé) ; $f(-8)<f(11)$ (car $1<5$).
+
+</details>
+
+2. Peut-on comparer $f(a)$ et $f(b)$ sachant que $a \in [-8~;~3]$ et $b \in [-1~;~2]$ ? Justifier.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Sur $[-8~;~3]$, $f(a)\in[-5~;~1]$ ; sur $[-1~;~2]$, $f(b)\in[-3~;~-1]$. Ces intervalles se chevauchent : *on ne peut pas* comparer $f(a)$ et $f(b)$ en général.
+
+</details>
+
+3. Quel est le maximum de $f$ ? le minimum de $f$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Maximum $\boxed{5}$ (en $x=11$) ; minimum $\boxed{-5}$ (en $x=3$).
+
+</details>
+
+4. Donner un encadrement de $f(x)$ pour $x \in [-1~;~5]$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Le minimum sur $[-1~;~5]$ est $-5$ (en $x=3$) et $f\leqslant5$ : $\boxed{-5\leqslant f(x)\leqslant5}$.
+
+</details>
+
+5. Déterminer le signe de $f(x)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$f$ s'annule en $\alpha\in\,]-8~;~-1[$ et $\beta\in\,]3~;~11[$ :
+$$f(x)>0\ \text{sur}\ [-8~;~\alpha[\,\cup\,]\beta~;~13],\qquad f(x)<0\ \text{sur}\ ]\alpha~;~\beta[.$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Lecture graphique et tableau de variations</span></div>
+
+Soit $(O~;~I,J)$ un repère orthonormé et $\mathscr{C}_f$ la courbe représentative d'une fonction $f$.
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/StagePrerentree_Jour3_courbe_f.png" style="width: 50%;">
+</div>
+
+1. Donner l'ensemble de définition de la fonction $f$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\boxed{D_f=[-5~;~6]}$ (partie visible de la courbe).
+
+</details>
+
+2. Résoudre graphiquement, en justifiant, l'équation $f(x)=3$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\dfrac18(x+3)(x-2)(x-4)=3\iff x(x-5)(x+2)=0$. $\boxed{S=\{-2~;~0~;~5\}}$.
+
+</details>
+
+3. Résoudre graphiquement, en justifiant, les inéquations suivantes.
+
+    a. $f(x)>3$
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $\dfrac18\,x(x-5)(x+2)>0$ sur $D_f$ : $\boxed{S=\,]-2~;~0[\,\cup\,]5~;~6]}$.
+
+    </details>
+
+    b. $f(x)\leqslant 0$
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $f$ a pour racines $-3,\ 2,\ 4$ : $\boxed{S=[-5~;~-3]\,\cup\,[2~;~4]}$.
+
+    </details>
+
+4. a. Établir le tableau de variations de la fonction $f$.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $f$ croît sur $[-5~;~x_1]$, décroît sur $[x_1~;~x_2]$, croît sur $[x_2~;~6]$, avec un maximum local $\approx3{,}8$ en $x_1\approx-1{,}1$ et un minimum local $\approx-0{,}8$ en $x_2\approx3{,}1$.
+
+    </details>
+
+    b. Établir le tableau de signes de $f(x)$.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $f<0$ sur $[-5~;~-3[$, $f>0$ sur $]-3~;~2[$, $f<0$ sur $]2~;~4[$, $f>0$ sur $]4~;~6]$, et $f(-3)=f(2)=f(4)=0$.
+
+    </details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Trois fonctions $f$, $g$, $h$ — lecture graphique</span></div>
+
+Voici les représentations graphiques de trois fonctions $f$, $g$ et $h$ de $\R$ dans $\R$.
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/StagePrerentree_Jour3_courbes_fgh.png" style="width: 55%;">
+</div>
+
+1. Déterminer à partir de ces graphes :
+$$f(1)\qquad f(-2)\qquad g(1)\qquad g(0)\qquad h(-2)\qquad h(0)$$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$f(1)=-2$ ; $f(-2)=-\dfrac12$ ; $g(1)=2$ ; $g(0)=3$ ; $h(-2)=-1$ ; $h(0)=1$.
+
+</details>
+
+2. « Le point $(-49~;~-48)$ appartient à la courbe représentative de $h$. » VRAI ou FAUX ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$h(-49)=-49+1=-48$ : **VRAI**.
+
+</details>
+
+3. Compléter.
+
+    a. Si $f(x) = -3$, alors $x = \dots$
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $-\tfrac12x-\tfrac32=-3\iff x=3$.
+
+    </details>
+
+    b. Si $g(x) = 3$, alors $x = \dots$
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $-\tfrac12x(x+1)=0\iff x\in\{-1~;~0\}$.
+
+    </details>
+
+    c. Si $h(x) = 0$, alors $x = \dots$
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $x+1=0\iff x=-1$.
+
+    </details>
+
+    d. Si $f(x) = g(2)$, alors $x = \dots$
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $g(2)=0$, donc $-\tfrac12x-\tfrac32=0\iff x=-3$.
+
+    </details>
+
+    e. Si $f(x) = h(x)$, alors $x = \dots$
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $-\tfrac12x-\tfrac32=x+1\iff x=-\dfrac53$.
+
+    </details>
+
+    f. Si $g(x) > f(x)$, alors $x \dots$
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $-\tfrac12x^2+\tfrac92>0\iff x^2<9\iff x\in\,]-3~;~3[$.
+
+    </details>
+
+    g. Si $g(x) = h(x)$, alors $x = \dots$
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    $x^2+3x-4=0\iff(x+4)(x-1)=0\iff x\in\{-4~;~1\}$.
+
+    </details>
+
+4. Sur quel ensemble $f$ est-elle positive ? Sur quel ensemble $g$ est-elle négative ? Sur quel ensemble $h$ est-elle strictement positive ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$f\geqslant0$ sur $\boxed{\,]-\infty~;~-3]\,}$ ; $g\leqslant0$ sur $\boxed{\,]-\infty~;~-3]\cup[2~;~+\infty[\,}$ ; $h>0$ sur $\boxed{\,]-1~;~+\infty[\,}$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Fonction $\dfrac{2x-5}{x-3}$</span></div>
+
+On considère la fonction $f$ définie par $f(x) = \dfrac{2x-5}{x-3}$.
+
+1. Quel est l'ensemble de définition de la fonction $f$ ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Le dénominateur s'annule en $3$ : $\boxed{D_f=\R\setminus\{3\}}$.
+
+</details>
+
+2. Déterminer, s'il(s) existe(nt), les antécédents de $0$, $2$ et $-2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Antécédent de $0$ : $2x-5=0\iff x=\dfrac52$. Antécédent de $2$ : $2x-5=2(x-3)\iff-5=-6$, impossible : *pas d'antécédent*. Antécédent de $-2$ : $2x-5=-2(x-3)\iff x=\dfrac{11}{4}$.
+
+</details>
+
+3. Démontrer que, pour tout réel $x$ de cet ensemble, $f(x) = 2 + \dfrac{1}{x-3}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour tout $x\neq3$ : $2+\dfrac{1}{x-3}=\dfrac{2(x-3)+1}{x-3}=\dfrac{2x-5}{x-3}=f(x)$.
+
+</details>
+
+4. Déterminer les variations de $f$ sur $]3~;~+\infty[$ :
+
+    a. en utilisant la définition ;
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    Pour $3<x_1<x_2$ : $f(x_2)-f(x_1)=\dfrac{x_1-x_2}{(x_2-3)(x_1-3)}<0$ (numérateur $<0$, dénominateur $>0$). **$f$ est strictement décroissante sur $]3~;~+\infty[$.**
+
+    </details>
+
+    b. par encadrements successifs.
+
+    <details class="bloc cor">
+    <summary>Afficher la correction :</summary>
+
+    Si $3<x_1<x_2$ alors $0<x_1-3<x_2-3$, donc $\dfrac{1}{x_1-3}>\dfrac{1}{x_2-3}$, puis $2+\dfrac{1}{x_1-3}>2+\dfrac{1}{x_2-3}$, soit $f(x_1)>f(x_2)$ : $f$ décroît.
+
+    </details>
+:::
+
+## Encadrements
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Encadrements</span></div>
+
+On considère deux réels $a$ et $b$ vérifiant $2 \leqslant a < 7$ et $1 < b < 5$.
+
+1. Donner un encadrement de $-2a+4$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$2\leqslant a<7\Rightarrow-14<-2a\leqslant-4\Rightarrow\boxed{-10<-2a+4\leqslant0}$.
+
+</details>
+
+2. Donner un encadrement de $2a-b$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$4\leqslant2a<14$ et $-5<-b<-1$, d'où $\boxed{-1<2a-b<13}$.
+
+</details>
+
+3. Donner un encadrement de $ab$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$a$ et $b$ sont strictement positifs, donc $\boxed{2<ab<35}$.
+
+</details>
+:::
+
+## Équations
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Équation avec valeurs absolues — Raisonner</span></div>
+
+Pour quelle valeur du réel $a$ l'équation
+$$|x - 1| + |x - 2| + |x - 3| + |x - 4| + |x - 5| = a$$
+possède-t-elle une unique solution ?
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+La fonction $S(x)=|x-1|+\dots+|x-5|$ est convexe, affine par morceaux, minimale à la médiane $x=3$, avec $S(3)=2+1+0+1+2=6$. Elle décroît puis croît. L'équation $S(x)=a$ a une unique solution si et seulement si $a$ est ce minimum. $\boxed{a=6}$.
+
+</details>
+:::
+
+## Probabilités
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Probabilités — jeu de cartes</span></div>
+
+On tire au hasard une carte dans un jeu de $32$ cartes. On considère les événements suivants : $A$ : « Tirer un trèfle » et $B$ : « Tirer un roi ».
+
+1. Déterminer les probabilités des événements $A$ et $B$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$P(A)=\dfrac{8}{32}=\dfrac14$ et $P(B)=\dfrac{4}{32}=\dfrac18$.
+
+</details>
+
+2. Définir par une phrase l'événement $\bar{A}$ puis calculer sa probabilité.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\bar A$ : « la carte tirée n'est pas un trèfle ». $P(\bar A)=1-\dfrac14=\dfrac34$.
+
+</details>
+
+3. Définir par une phrase les événements $A \cup B$ et $A \cap B$ puis calculer leur probabilité.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$A\cup B$ : « tirer un trèfle ou un roi » ; $A\cap B$ : « tirer le roi de trèfle ».
+$$P(A\cap B)=\dfrac{1}{32},\qquad P(A\cup B)=\dfrac14+\dfrac18-\dfrac{1}{32}=\dfrac{11}{32}.$$
+
+</details>
+:::

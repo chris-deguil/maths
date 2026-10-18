@@ -4,7 +4,7 @@ format:
   html:
     toc: true
     number-sections: false
-description: "R, hiérarchie des ensembles, arbre de décision"
+description: "R, irrationnels (√2, π), hiérarchie des ensembles, arbre de décision"
 order: 4
 ---
 
@@ -16,8 +16,6 @@ La secte pythagoricienne (Grèce antique, VI<sup>e</sup>–V<sup>e</sup> siècle
 **Le scandale.** Hippase de Métaponte aurait démontré que la diagonale d'un carré de côté $1$, de longueur $\sqrt{2}$, ne peut s'écrire $\dfrac{p}{q}$ avec $p, q \in \N^*$. La légende veut que ses frères de secte, incapables d'accepter ce résultat, l'aient noyé en mer Égée pour étouffer la découverte.
 
 **La crise des fondements.** Cette découverte inaugure la première « crise des fondements » des mathématiques : si des grandeurs géométriques parfaitement réelles ne correspondent à aucune fraction, que sont vraiment les nombres ? Il faudra attendre Richard Dedekind (1872) et Georg Cantor pour que les réels soient rigoureusement définis — soit plus de **2 400 ans** après Hippase.
-
-**Au programme (chapitre suivant) :** vous démontrerez que $\sqrt{2} \notin \Q$ par l'absurde, en reprenant l'argument d'Euclide (*Éléments*, livre X).
 :::
 
 ## Ensemble des réels
@@ -27,7 +25,18 @@ La secte pythagoricienne (Grèce antique, VI<sup>e</sup>–V<sup>e</sup> siècle
 
 L'ensemble $\R$ des **nombres réels** est l'ensemble de tous les nombres représentables sur la droite graduée.
 
-Un **nombre irrationnel** est un réel qui n'est pas rationnel. On note $\R \setminus \Q$ cet ensemble.
+Un **nombre irrationnel** est un réel qui n'est pas rationnel. L'ensemble des irrationnels est noté $\R \setminus \Q$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+La géométrie fournit des exemples d'irrationnels :
+
+- $\sqrt{2}$, longueur de la diagonale d'un carré de côté $1$ (irrationalité démontrée au chapitre 5) ;
+- $\pi$, rapport du périmètre d'un cercle à son diamètre (irrationalité admise, démontrée par Lambert en 1761).
+
+Les valeurs $3{,}14$ ou $\dfrac{22}{7}$ ne sont que des **valeurs approchées** rationnelles de $\pi$.
 :::
 
 ## Hiérarchie des ensembles de nombres
@@ -53,11 +62,14 @@ En notant $\mathbb{I} = \R \setminus \Q$ l'ensemble des irrationnels : $\Q \cap 
 ::: {.bloc .sfc}
 <div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Classer un rationnel dans la hiérarchie des ensembles — Raisonner</span></div>
 
-Déterminer le plus petit ensemble auquel appartient $\dfrac{7}{40}$ et $\dfrac{5}{6}$.
+Déterminer le plus petit ensemble auquel appartient chacun des nombres $\dfrac{7}{40}$ et $\dfrac{5}{6}$.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$\dfrac{7}{40}= \dfrac{7}{2^3 \times 5} \in \D$ (écriture : $0{,}175$) et $\dfrac{5}{6} = \dfrac{5}{2 \times 3} \notin \D$.
+Les deux fractions sont irréductibles.
+
+- $40 = 2^3 \times 5$ : le dénominateur n'a que $2$ et $5$ comme facteurs premiers, donc $\dfrac{7}{40} \in \D$ (en effet $\dfrac{7}{40} = 0{,}175$). Ce n'est pas un entier : le plus petit ensemble est $\D$.
+- $6 = 2 \times 3$ : le facteur $3$ apparaît, donc $\dfrac{5}{6} \notin \D$. Le plus petit ensemble est $\Q$.
 
 </details>
 :::
@@ -70,7 +82,7 @@ $$\frac{-14}{2} \qquad \frac{5}{6} \qquad 0{,}125 \qquad \sqrt{5} \qquad \frac{2
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-| Nombre | $\N$ | $\Z$ | $\D$ | $\Q$ | $\R$ |
+| Nombre | $\N$ | $\Z$ | $\D$ | $\Q$ | $\R \setminus \Q$ |
 |:-----------------------|:---:|:---:|:---:|:---:|:---:|
 | $\dfrac{-14}{2} = -7$  |     |  ✓  |     |     |     |
 | $\dfrac{5}{6}$         |     |     |     |  ✓  |     |

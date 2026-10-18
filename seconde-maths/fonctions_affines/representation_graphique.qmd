@@ -4,9 +4,11 @@ format:
   html:
     toc: true
     number-sections: false
-description: "Droite d'équation y = mx + p, tracer une fonction affine"
+description: "Droite d'équation y = mx + p, lire et tracer une fonction affine"
 order: 4
 ---
+
+## Fonction affine et droite
 
 ::: {.bloc .thm}
 <span class="bloc-titre">Propriété : Représentation d'une fonction affine</span>
@@ -30,7 +32,7 @@ Soit $M(x\,;\,y)$ un point du plan. On note $A'$, $B'$, $M'$ les projetés ortho
   <img src="../../image/seconde/Fonction_Affine_demo_courbe.png" style="width: 50%;">
 </div>
 
-**Sens direct.** Supposons $M \in (d)$ avec $x \neq x_A$.
+**Sens direct.** Supposons $M \in (d)$. Si $x = x_A$, alors $M = A$ (la droite $(d)$ n'est pas verticale) et $y_A = mx_A + p$ par définition de $p$. Supposons maintenant $x \neq x_A$ ; on se place, comme sur la figure, dans le cas $x_A < x_B < x$ et $y_A < y_B$ (les autres cas se traitent de la même façon, en tenant compte des signes).
 
 Les droites $(BB')$ et $(MM')$ sont verticales, donc parallèles. D'après le théorème de Thalès dans le triangle $AM'M$, la droite $(B'B)$ est parallèle à $(M'M)$ et coupe $[AM']$ en $B'$ et $[AM]$ en $B$, donc :
 $$\frac{AB'}{AM'} = \frac{BB'}{MM'}$$
@@ -51,6 +53,8 @@ d'où $y = mx + (y_A - mx_A) = mx + p$. Ainsi tout point de $(d)$ vérifie $y = 
 
 **Conclusion :** l'ensemble des points du plan vérifiant $y = mx + p$ est exactement la droite $(d)$.
 
+Enfin, pour $f(x)=mx+p$, la droite passant par $A(0\,;\,p)$ et $B(1\,;\,m+p)$ a pour coefficient $\dfrac{(m+p)-p}{1-0}=m$ et pour ordonnée à l'origine $p$ : la représentation graphique de $f$ est donc cette droite.
+
 </details>
 
 ::: {.bloc .rem}
@@ -63,8 +67,59 @@ d'où $y = mx + (y_A - mx_A) = mx + p$. Ainsi tout point de $(d)$ vérifie $y = 
 ::: {.bloc .rem}
 <span class="bloc-titre">Interprétation de la pente : </span>
 
-Le coefficient directeur $m=\dfrac{a}{b}$ indique l'inclinaison de la droite par rapport à l'axe des abscisses : quand on **avance de $b$** vers la droite, on **monte de $a$** (ou descend si $a<0$).
+Le coefficient directeur indique l'inclinaison de la droite par rapport à l'axe des abscisses. Pour deux points $A$ et $B$ de la droite :
+$$m=\frac{\Delta y}{\Delta x}=\frac{y_B-y_A}{x_B-x_A}$$
+
+Quand on **avance de $\Delta x$** vers la droite, on **monte de $\Delta y$** (ou on descend si $\Delta y<0$).
 :::
+
+## Lire l'expression d'une fonction affine
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Lire graphiquement l'expression d'une fonction affine — Représenter</span></div>
+
+La droite ci-dessous est la représentation graphique d'une fonction affine $f$. Déterminer graphiquement l'expression de $f$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonction_Affine_lecture_expression.png" style="width: 40%;">
+</div>
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f$ est une fonction affine, donc il existe deux réels $m$ et $p$ tels que $f(x)=mx+p$.
+
+- La droite coupe l'axe des ordonnées au point $(0\,;\,3)$, donc $p=3$.
+- On choisit deux points de la droite sur des nœuds du quadrillage, $A(2\,;\,2)$ et $B(4\,;\,1)$. Pour aller de $A$ à $B$ : $\Delta y=-1$ et $\Delta x=+2$, donc
+  $$m=\frac{\Delta y}{\Delta x}=\frac{f(4)-f(2)}{4-2}=\frac{1-2}{2}=-\frac12$$
+
+Ainsi, pour tout réel $x$, $f(x)=-\dfrac12x+3$.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Lire graphiquement l'expression d'une fonction affine (2) — Représenter</span></div>
+
+La droite ci-dessous est la représentation graphique d'une fonction affine $g$. Déterminer graphiquement l'expression de $g$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonction_Affine_affine_fig2.png" style="width: 35%;">
+</div>
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$g$ est une fonction affine, donc il existe deux réels $m$ et $p$ tels que $g(x)=mx+p$.
+
+- La droite coupe l'axe des ordonnées au point $(0\,;\,-2)$, donc $p=-2$.
+- On choisit deux points de la droite sur des nœuds du quadrillage, $A(2\,;\,1)$ et $B(4\,;\,4)$. Pour aller de $A$ à $B$ : $\Delta y=+3$ et $\Delta x=+2$, donc
+  $$m=\frac{\Delta y}{\Delta x}=\frac{g(4)-g(2)}{4-2}=\frac{4-1}{2}=\frac32$$
+
+Ainsi, pour tout réel $x$, $g(x)=\dfrac32x-2$.
+
+</details>
+:::
+
+## Tracer la représentation graphique
 
 ::: {.bloc .sfc}
 <div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Tracer la droite représentative : méthode 1</span></div>
@@ -94,19 +149,15 @@ Tracer la droite représentative de la fonction $f$ définie par $f(x)=\dfrac{4}
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-La représentation graphique de $f$ admet $-2$ comme ordonnée à l'origine et admet $\dfrac{4}{3}$ comme coefficient directeur ainsi
+La représentation graphique de $f$ admet $-2$ comme ordonnée à l'origine et $\dfrac43$ comme coefficient directeur.
+
+On place le point $(0\,;\,-2)$, puis on monte de $4$ et on avance de $3$ : on obtient le point $(3\,;\,2)$. On trace la droite passant par ces deux points.
 
 <div style="text-align: center;">
-  <img src="../../image/seconde/Fonction_Affine_droite_exercice2.png" style="width: 20%;">
+  <img src="../../image/seconde/Fonction_Affine_droite_exercice2.png" style="width: 25%;">
 </div>
 
 </details>
-:::
-
-::: {.bloc .rem}
-<span class="bloc-titre">Antécédent pour les fonctions affines : </span>
-
-Pour une fonction affine $f(x)=mx+p$ avec $m\neq 0$, tout réel admet **un unique antécédent**.
 :::
 
 ::: {.bloc .ex}
@@ -127,6 +178,68 @@ Vérification : $\dfrac{3}{2}\times 3-1=\dfrac{9}{2}-1=\dfrac{7}{2}=3{,}5$. Donc
 <div style="text-align: center;">
   <img src="../../image/seconde/Fonction_Affine_droite_exercice3.png" style="width: 30%;">
 </div>
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Tableau de valeurs d'une fonction affine — Calculer, Raisonner, Représenter</span></div>
+
+Le tableau de valeurs suivant, auquel il manque certaines valeurs, est celui d'une fonction affine $f:x\mapsto ax+b$.
+
+| $x$ | $0$ | | $4$ | $5$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $f(x)$ | | $-3$ | $1$ | $3$ |
+
+1. Dans un repère, tracer la représentation graphique de $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+D'après le tableau, $f(4)=1$ et $f(5)=3$ : les points $(4\,;\,1)$ et $(5\,;\,3)$ appartiennent à la représentation graphique de $f$, qui est une droite. On trace la droite passant par ces deux points.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Fonction_Affine_affine_fig3.png" style="width: 30%;">
+</div>
+
+</details>
+
+2. Déterminer l'expression de la fonction $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f(4)=1$ et $f(5)=3$. Or $f$ est une fonction affine, donc il existe deux réels $a$ et $b$ tels que $f(x)=ax+b$, avec
+$$a=\frac{f(5)-f(4)}{5-4}=\frac{3-1}{1}=2$$
+
+Donc $f(x)=2x+b$. De plus $f(4)=1$, donc $2\times4+b=1$, d'où $b=-7$.
+
+Ainsi, pour tout réel $x$, $f(x)=2x-7$.
+
+</details>
+
+3. Compléter le tableau de valeurs en justifiant.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f(0)=2\times0-7=-7$.
+
+Soit $x\in\R$ tel que $f(x)=-3$.
+Or
+$$f(x)=-3 \iff 2x-7=-3 \iff 2x=4 \iff x=2$$
+
+| $x$ | $0$ | $2$ | $4$ | $5$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $f(x)$ | $-7$ | $-3$ | $1$ | $3$ |
+
+</details>
+
+4. Sans utiliser l'expression de la fonction $f$, peut-on déterminer, à partir de la lecture du tableau, la valeur de $f(6)$ ? Justifier.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Oui. $f$ est affine, donc son taux d'accroissement est constant :
+$$\frac{f(6)-f(5)}{6-5}=\frac{f(5)-f(4)}{5-4}=2$$
+
+donc $f(6)-f(5)=2$, d'où $f(6)=3+2=5$.
 
 </details>
 :::

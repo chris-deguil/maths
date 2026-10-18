@@ -13,9 +13,9 @@ order: 6
 
 Soit $f(x)=mx+p$ une fonction affine.
 
-- Si $m>0$ : $f$ est **strictement croissante** sur $\R$.
-- Si $m<0$ : $f$ est **strictement décroissante** sur $\R$.
-- Si $m=0$ : $f$ est **constante** sur $\R$.
+- Si $m>0$ alors $f$ est **strictement croissante** sur $\R$.
+- Si $m<0$ alors $f$ est **strictement décroissante** sur $\R$.
+- Si $m=0$ alors $f$ est **constante** sur $\R$.
 :::
 
 <details class="bloc demo"><summary>Démonstration : </summary>
@@ -36,7 +36,9 @@ Comme $x_2-x_1>0$ :
 ::: {.bloc .info}
 <span class="bloc-titre">Représentation graphique des variations</span>
 
-Pour représenter graphiquement les variations d'une fonction affine, on utilise un tableau de variations indiquant le sens de variation.
+Graphiquement, si $m>0$ la droite « monte » de gauche à droite, si $m<0$ elle « descend », et si $m=0$ elle est parallèle à l'axe des abscisses.
+
+On résume les variations dans un tableau de variations.
 
 <div style="text-align: center;">
   <div style="display:inline-block; width: 45%; margin-right:3%; text-align:center;">$m>0$ : $f$ strictement croissante</div>
@@ -53,15 +55,13 @@ Pour représenter graphiquement les variations d'une fonction affine, on utilise
 <div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Dresser le tableau de variations — Représenter</span></div>
 
 Pour chaque fonction, dresser le tableau de variations :
-$$f(x)=4x-1 \qquad g(x)=-\frac{1}{3}x+2 \qquad h(x)=7$$
+$$f(x)=4x-1 \qquad g(x)=-\frac{1}{3}x+2$$
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
 $f$ : $m=4>0$, donc $f$ est strictement croissante.
 
 $g$ : $m=-\dfrac{1}{3}<0$, donc $g$ est strictement décroissante.
-
-$h$ : $m=0$, donc $h$ est constante (tableau des variations inutile)
 
 <div style="text-align: center;">
   <img src="../../image/seconde/Fonction_Affine_signe3.png" style="width: 45%; margin-right:3%">
@@ -74,7 +74,7 @@ $h$ : $m=0$, donc $h$ est constante (tableau des variations inutile)
 ::: {.bloc .ex}
 <div class="bloc-titre">Exercice :<span class="exemp-extra"> Reconnaître $m$ à partir d'un tableau de variations — Raisonner</span></div>
 
-Une fonction affine est décroissante sur $\R$.
+Une fonction affine est strictement décroissante sur $\R$.
 
 1. Que peut-on dire du signe de $m$ ?
 

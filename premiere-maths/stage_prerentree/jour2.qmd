@@ -1,0 +1,344 @@
+---
+title: "Jour 2 : Radicaux, inéquations et géométrie repérée"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Radicaux, inéquations produit et quotient, lecture graphique, vecteurs, équations de droites et probabilités."
+order: 2
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Points travaillés : </span>
+
+- Simplifier une expression avec radicaux, rendre un dénominateur rationnel.
+- Résoudre une inéquation produit ou quotient à l'aide d'un tableau de signes.
+- Résoudre graphiquement une équation ou une inéquation à partir de courbes.
+- Calculer les coordonnées d'un vecteur et déterminer une équation de droite.
+- Utiliser la relation de Chasles pour démontrer qu'un quadrilatère est un parallélogramme.
+- Calculer la probabilité d'une union et d'une intersection d'événements.
+:::
+
+## Calcul numérique
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Radicaux — expressions sans dénominateur irrationnel</span></div>
+
+Écrire sans radical au dénominateur et simplifier les expressions suivantes.
+
+1. $A=\dfrac{5}{\sqrt{6}-1}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$A=\dfrac{5(\sqrt6+1)}{(\sqrt6-1)(\sqrt6+1)}=\dfrac{5(\sqrt6+1)}{6-1}=\sqrt6+1$.
+
+</details>
+
+2. $I=\dfrac{1-\sqrt{3}}{1+\sqrt{3}}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$I=\dfrac{(1-\sqrt3)^2}{1-3}=\dfrac{4-2\sqrt3}{-2}=\sqrt3-2$.
+
+</details>
+
+3. $L=\dfrac{\sqrt{2}+\sqrt{3}}{\sqrt{2}-\sqrt{3}}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$L=\dfrac{(\sqrt2+\sqrt3)^2}{2-3}=\dfrac{5+2\sqrt6}{-1}=-5-2\sqrt6$.
+
+</details>
+
+4. $M=\dfrac{\sqrt{3}+\sqrt{5}}{\sqrt{2}-\sqrt{5}}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$M=\dfrac{(\sqrt3+\sqrt5)(\sqrt2+\sqrt5)}{2-5}=\dfrac{\sqrt6+\sqrt{15}+\sqrt{10}+5}{-3}=-\dfrac{5+\sqrt6+\sqrt{10}+\sqrt{15}}{3}$.
+
+</details>
+
+Calculer et simplifier les expressions suivantes.
+
+5. $O=\dfrac{\sqrt{3}}{\sqrt{3}-1} - \dfrac{\sqrt{3}+1}{\sqrt{3}+2}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\dfrac{\sqrt3}{\sqrt3-1}=\dfrac{3+\sqrt3}{2}$ et $\dfrac{\sqrt3+1}{\sqrt3+2}=\dfrac{(\sqrt3+1)(\sqrt3-2)}{3-4}=\sqrt3-1$, donc
+$$O=\dfrac{3+\sqrt3}{2}-(\sqrt3-1)=\dfrac{5-\sqrt3}{2}.$$
+
+</details>
+
+6. $P=\sqrt{\dfrac{7 + 4\sqrt{3}}{7 - 4 \sqrt{3}}} + \sqrt{\dfrac{7 - 4\sqrt{3}}{7 + 4 \sqrt{3}}}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Comme $7\pm4\sqrt3=(2\pm\sqrt3)^2$ (avec $2>\sqrt3$) :
+$$P=\dfrac{2+\sqrt3}{2-\sqrt3}+\dfrac{2-\sqrt3}{2+\sqrt3}=\dfrac{(2+\sqrt3)^2+(2-\sqrt3)^2}{1}=14.$$
+
+</details>
+
+7. $Q=\left(\sqrt{2-\sqrt{2}} + \sqrt{2+\sqrt{2}}\right)^2$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$Q=(2-\sqrt2)+2\sqrt{(2-\sqrt2)(2+\sqrt2)}+(2+\sqrt2)=4+2\sqrt{4-2}=4+2\sqrt2$.
+
+</details>
+
+8. $R=\sqrt{\dfrac{2^6+2^6+2^6+2^6}{5^2+5^2+5^2+5^2}}$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$R=\sqrt{\dfrac{4\times2^6}{4\times5^2}}=\sqrt{\dfrac{2^6}{5^2}}=\dfrac{2^3}{5}=\dfrac85$.
+
+</details>
+:::
+
+## Inéquations
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Inéquations produit et quotient</span></div>
+
+Résoudre dans $\R$ les inéquations suivantes.
+
+1. $(5x+3)(1-2x) > 0$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Racines $-\dfrac35$ et $\dfrac12$ ; le produit est positif entre les racines.
+$$\boxed{S=\left]-\dfrac35~;~\dfrac12\right[}$$
+
+</details>
+
+2. $\dfrac{(5x + 3)(2x-1)}{x^2 - 4} < 0$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Avec $x^2-4=(x-2)(x+2)$ (donc $x\neq\pm2$), les points remarquables sont $-2,\ -\dfrac35,\ \dfrac12,\ 2$. Le tableau de signes donne
+$$\boxed{S=\left]-2~;~-\dfrac35\right[\,\cup\,\left]\dfrac12~;~2\right[}.$$
+
+</details>
+
+3. $16a^4-9 < 0$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$16a^4-9=(4a^2-3)(4a^2+3)$ avec $4a^2+3>0$, donc le signe est celui de $4a^2-3$ :
+$$4a^2-3<0\iff a^2<\dfrac34\iff\boxed{S=\left]-\dfrac{\sqrt3}{2}~;~\dfrac{\sqrt3}{2}\right[}.$$
+
+</details>
+
+4. $\dfrac{3x - 16}{5x - 2} \geqslant 3x + 8$
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Pour $x\neq\dfrac25$ : $\dfrac{3x-16-(3x+8)(5x-2)}{5x-2}\geqslant0\iff\dfrac{-x(15x+31)}{5x-2}\geqslant0\iff\dfrac{x(15x+31)}{5x-2}\leqslant0$.
+Racines $-\dfrac{31}{15}$, $0$, valeur interdite $\dfrac25$. Le tableau de signes donne
+$$\boxed{S=\left]-\infty~;~-\dfrac{31}{15}\right]\,\cup\,\left[0~;~\dfrac25\right[}.$$
+
+</details>
+:::
+
+## Fonctions
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Fonctions $f$ et $g$ — lecture graphique</span></div>
+
+On considère deux fonctions $f$ et $g$ dont on donne les représentations graphiques $\mathscr{C}_f$ et $\mathscr{C}_g$.
+
+<div style="text-align: center;">
+  <img src="../../image/premiere/StagePrerentree_Jour2_courbes_fg.png" style="width: 60%;">
+</div>
+
+1. Résoudre graphiquement $g(x)=2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Abscisses des points de $\mathscr{C}_g$ d'ordonnée $2$ : $\boxed{S=\{-3~;~6\}}$.
+
+</details>
+
+2. Résoudre graphiquement $f(x)=g(x)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Abscisses des points d'intersection des deux courbes : $\boxed{S=\{-2~;~2~;~6\}}$ (lecture graphique).
+
+</details>
+
+3. Résoudre graphiquement $f(x)\geqslant 1$ et $g(x)\geqslant 2$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$g(x)\geqslant2$ : $\boxed{\,]-\infty~;~-3]\cup[6~;~+\infty[\,}$. $f(x)\geqslant1$ : $\boxed{[5~;~13]}$ (lecture graphique).
+
+</details>
+
+4. Résoudre graphiquement $f(x)<g(x)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\mathscr{C}_f$ en dessous de $\mathscr{C}_g$ : $\boxed{S=\,]-2~;~2[\,\cup\,]6~;~+\infty[}$ (lecture graphique).
+
+</details>
+:::
+
+## Vecteurs et repérage
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Vecteurs — coordonnées</span></div>
+
+On se place dans le plan rapporté au repère $\Oij$. On considère les points $A (-2~;~1)$, $B (-1~;~-5)$, $C (3~;~-2)$ et $D (2~;~2)$.
+
+1. Déterminer les coordonnées de $\ve{AB}$, $\ve{BC}$ et $\ve{AC}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\ve{AB}=(1~;~-6)$, $\ve{BC}=(4~;~3)$, $\ve{AC}=(5~;~-3)$.
+
+</details>
+
+2. Déterminer les coordonnées de $2 \ve{DC}$ et $-3 \ve{DA}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\ve{DC}=(1~;~-4)$ donc $2\ve{DC}=(2~;~-8)$ ; $\ve{DA}=(-4~;~-1)$ donc $-3\ve{DA}=(12~;~3)$.
+
+</details>
+
+3. Déterminer les coordonnées de $\ve{AB} - 3\ve{DA}$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\ve{AB}-3\ve{DA}=(1~;~-6)-3(-4~;~-1)=(13~;~-3)$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Équations de droites</span></div>
+
+On munit le plan d'un repère $\OIJ$. On donne $A(-2~;~7)$, $B(5~;~-7)$, $C(5~;~-3)$, $E(1~;~-1)$ et $F\left(\dfrac{8}{3}~;~\dfrac{3}{10}\right)$.
+
+1. Faire une figure et placer les points.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+On place les cinq points dans le repère (figure laissée au soin de l'élève).
+
+</details>
+
+2. Soit $\Delta$ la droite d'équation $y=x-2$. Tracer $\Delta$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$\Delta$ passe par $(0~;~-2)$ et $(2~;~0)$ (coefficient directeur $1$).
+
+</details>
+
+3. Les points $E$ et $F$ appartiennent-ils à $\Delta$ ? Justifier.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$x_E-2=1-2=-1=y_E$ : oui, $E\in\Delta$. $x_F-2=\dfrac83-2=\dfrac23\neq\dfrac{3}{10}=y_F$ : donc $F\notin\Delta$.
+
+</details>
+
+4. Déterminer les équations cartésiennes respectives de $(AB)$ et $(BC)$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$(AB)$ : coefficient directeur $\dfrac{-7-7}{5+2}=-2$ et $7=-2\times(-2)+b\Rightarrow b=3$, d'où $y=-2x+3$, soit $\boxed{2x+y-3=0}$.
+
+$(BC)$ : $B$ et $C$ ont la même abscisse $5$ : $\boxed{x=5}$.
+
+</details>
+
+5. Déterminer l'équation réduite de $d$, la parallèle à $(AB)$ passant par $C$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Coefficient directeur $-2$, passant par $C(5~;~-3)$ : $-3=-2\times5+b\Rightarrow b=7$. $\boxed{d:\ y=-2x+7}$.
+
+</details>
+
+6. Justifier que $\Delta$ et $(AB)$ sont sécantes, puis déterminer les coordonnées de $P$, leur point d'intersection.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+Les coefficients directeurs $1$ et $-2$ diffèrent : les droites sont sécantes. $x-2=-2x+3\iff x=\dfrac53$, puis $y=-\dfrac13$. $\boxed{P\left(\dfrac53~;~-\dfrac13\right)}$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Vecteurs — parallélogramme $ACMN$</span></div>
+
+$ABC$ est un triangle. $M$ et $N$ sont définis par $\ve{BM} = 2 \ve{CB}$ et $\ve{AN} = 3 \ve{CB}$.
+
+Démontrer que $ACMN$ est un parallélogramme.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$ACMN$ est un parallélogramme si et seulement si $\ve{AC}=\ve{NM}$. Avec $\ve{CB}=\ve{AB}-\ve{AC}$ :
+$$\ve{AM}=\ve{AB}+2\ve{CB}=3\ve{AB}-2\ve{AC},\qquad \ve{AN}=3\ve{CB}=3\ve{AB}-3\ve{AC}.$$
+$$\ve{NM}=\ve{AM}-\ve{AN}=(3\ve{AB}-2\ve{AC})-(3\ve{AB}-3\ve{AC})=\ve{AC}.$$
+Donc $\ve{NM}=\ve{AC}$ : le quadrilatère $ACMN$ est un parallélogramme.
+
+</details>
+:::
+
+## Probabilités
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Probabilités — $A\cup B$ et $A\cap B$</span></div>
+
+Soit $\Omega$ un univers et $A$, $B$ deux événements de $\Omega$.
+
+1. Calculer $P(A \cup B)$ sachant que $A$ et $B$ sont incompatibles, $P(A)=0{,}35$ et $P(\bar{B})= 0{,}55$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$P(B)=1-0{,}55=0{,}45$. $A$ et $B$ incompatibles donc $P(A\cap B)=0$ :
+$$P(A\cup B)=P(A)+P(B)=0{,}35+0{,}45=\boxed{0{,}80}.$$
+
+</details>
+
+2. Calculer $P(A \cap B)$ sachant que $P(\bar{A})=0{,}6$, $P(B)= 0{,}7$ et $P(A \cup B)= 0{,}9$.
+
+<details class="bloc cor">
+<summary>Afficher la correction :</summary>
+
+$P(A)=1-0{,}6=0{,}4$, donc
+$$P(A\cap B)=P(A)+P(B)-P(A\cup B)=0{,}4+0{,}7-0{,}9=\boxed{0{,}2}.$$
+
+</details>
+:::

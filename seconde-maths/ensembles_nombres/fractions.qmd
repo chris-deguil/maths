@@ -4,7 +4,7 @@ format:
   html:
     toc: true
     number-sections: false
-description: "Addition, simplification, multiplication de fractions"
+description: "Simplification, addition, multiplication, division, forme irréductible"
 order: 5
 ---
 
@@ -14,52 +14,43 @@ order: 5
 <span class="bloc-titre">Propriété : Opérations sur les fractions</span>
 
 Soient $a, c \in \Z$, $b, d \in \N^*$ et $k \in \Z^*$.
-$$\frac{a}{c} +  \frac{b}{c} = \frac{a+b}{c} \qquad ; \qquad
-  \frac{ka}{kb} = \frac{a}{b}
+$$\frac{ka}{kb} = \frac{a}{b}
   \qquad;\qquad
-  \frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd}
+  \frac{a}{b} + \frac{c}{b} = \frac{a+c}{b}
   \qquad;\qquad
-  \frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}
-$$
+  \frac{a}{b} + \frac{c}{d} = \frac{ad+bc}{bd}$$
+$$\frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}
+  \qquad;\qquad
+  \frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \times \frac{d}{c} = \frac{ad}{bc}
+  \quad (c \neq 0)$$
+
+La soustraction suit les mêmes règles que l'addition.
 :::
 
 <details class="bloc demo"><summary>Démonstration : </summary>
 
-**Addition — cas du même dénominateur.**
+Par définition, $\dfrac{a}{b}$ est l'unique nombre $r$ tel que $b \times r = a$.
 
-Soit $r = \dfrac{a}{b}$ et $s = \dfrac{c}{b}$ avec $b \neq 0$, ainsi par définition : $rb = a$ et $sb = c$.
+**Simplification.** Soit $r = \dfrac{a}{b}$, donc $a = b \times r$. Pour $k$ entier non nul, $k a = (kb) \times r$, donc $r = \dfrac{ka}{kb}$. Multiplier numérateur et dénominateur par un même entier non nul ne change pas la valeur de la fraction.
 
-Donc $a + c = rb + sb = b(r + s)$, ce qui donne $r + s = \dfrac{a+c}{b}$.
+**Addition — même dénominateur.** Soient $r = \dfrac{a}{b}$ et $s = \dfrac{c}{b}$ : $br = a$ et $bs = c$. Donc $a + c = br + bs = b(r + s)$, ce qui donne $r + s = \dfrac{a+c}{b}$.
 
-**Simplification.**
+**Addition — cas général.** Par simplification, $\dfrac{a}{b} = \dfrac{ad}{bd}$ et $\dfrac{c}{d} = \dfrac{bc}{bd}$, donc d'après le cas précédent $\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad}{bd} + \dfrac{bc}{bd} = \dfrac{ad + bc}{bd}$.
 
-Soit $r = \dfrac{a}{b}$ avec $b \neq 0$ ainsi par définition de la fraction, $a = b \times r$.
+**Multiplication.** Soient $r = \dfrac{a}{b}$ et $s = \dfrac{c}{d}$ : $a = br$ et $c = ds$. Donc $ac = (bd)(rs)$, ce qui donne $rs = \dfrac{ac}{bd}$.
 
-Soit $k$ un entier non nul. Alors $k \times a = (kb) \times r$, donc $r = \dfrac{ka}{kb}$.
-
-Ainsi, multiplier numérateur et dénominateur par un même entier non nul ne change pas la valeur de la fraction.
-
-**Addition — cas général.**
-
-Soient $\dfrac{a}{b}$ et $\dfrac{c}{d}$ avec $b, d \neq 0$.
-
-Ainsi $\dfrac{a}{b} = \dfrac{ad}{bd}$ et $\dfrac{c}{d} = \dfrac{bc}{bd}$.
-
-On déduit alors que
-$$\dfrac{a}{b} + \dfrac{c}{d} = \dfrac{ad}{bd} + \dfrac{bc}{bd} = \dfrac{ad + bc}{bd}$$
-
-**Multiplication.**
-
-Soit $p = \dfrac{a}{b} \times \dfrac{c}{d}$ avec $b, d \neq 0$ ; par définition, $a = b \times \dfrac{a}{b}$ et $c = d \times \dfrac{c}{d}$.
-
-Donc $a \times c = (b \times d) \times p$, ce qui donne $p = \dfrac{ac}{bd}$.
+**Division.** Avec $c \neq 0$ : $\dfrac{c}{d} \times \dfrac{d}{c} = \dfrac{cd}{dc} = 1$, donc diviser par $\dfrac{c}{d}$ revient à multiplier par son inverse $\dfrac{d}{c}$.
 
 </details>
 
-::: {.bloc .rem}
-<span class="bloc-titre">Remarque : </span>
+::: {.bloc .info}
+<span class="bloc-titre">Méthode : Rendre une fraction irréductible</span>
 
-Pour rendre une fraction **irréductible**, on divise numérateur et dénominateur par leur $\pgcd$. La décomposition en facteurs premiers fournit ce $\pgcd$.
+On décompose numérateur et dénominateur en facteurs premiers, puis on simplifie par tous les facteurs communs (ce qui revient à diviser par le $\pgcd$).
+
+**Exemple :** $18 = 2 \times 3^2$ et $24 = 2^3 \times 3$, donc
+$$\dfrac{18}{24} = \dfrac{2 \times 3 \times 3}{2 \times 3 \times 2^2} = \dfrac{3}{4},$$
+fraction irréductible car $\pgcd(3,4) = 1$.
 :::
 
 ::: {.bloc .sfc}
@@ -71,11 +62,9 @@ Calculer et donner le résultat sous forme irréductible.
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$$
-A = \frac{5 \times 4 + 3 \times 6}{24}
-  = \frac{38}{24}
-  = \frac{19}{12}
-$$
+$$A = \frac{10}{12} + \frac{9}{12} = \frac{19}{12}$$
+
+*Point clef :* on choisit le plus petit dénominateur commun ($12$) plutôt que le produit $6 \times 4 = 24$ : les calculs sont plus courts.
 
 </details>
 
@@ -85,8 +74,7 @@ $$
 
 $$
 B = \frac{7 \times 9}{12 \times 14}
-  = \frac{3^2 \times 7}{2^2 \times 3 \times 2 \times 7}
-  = \frac{3}{2^3}
+  = \frac{7 \times 3^2}{2^2 \times 3 \times 2 \times 7}
   = \frac{3}{8}
 $$
 
@@ -101,6 +89,18 @@ C = \frac{48}{84}
   = \frac{2^4 \times 3}{2^2 \times 3 \times 7}
   = \frac{2^2}{7}
   = \frac{4}{7}
+$$
+
+</details>
+
+4. $D = \dfrac{3}{4} \div \dfrac{9}{10}$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$
+D = \frac{3}{4} \times \frac{10}{9}
+  = \frac{3 \times 2 \times 5}{2^2 \times 3^2}
+  = \frac{5}{6}
 $$
 
 </details>
@@ -130,10 +130,9 @@ Donc $A = \dfrac{4}{5} - \dfrac{2}{5} \times \left(-\dfrac{8}{3}\right) = \dfrac
 $B = \dfrac{2}{3} - \dfrac{7}{3} \times \dfrac{1}{ \dfrac{6}{2} - \dfrac{3}{2}}
 = \dfrac{2}{3} - \dfrac{7}{3} \times \dfrac{1}{ \dfrac{3}{2}}
 = \dfrac{2}{3} - \dfrac{7}{3} \times \dfrac{2}{3}
-        = \dfrac{2}{3} - \dfrac{14}{9}
-        = \dfrac{6}{9} - \dfrac{14}{9}
-        = -\dfrac{8}{9}$.
+= \dfrac{2}{3} - \dfrac{14}{9}
+= \dfrac{6}{9} - \dfrac{14}{9}
+= -\dfrac{8}{9}$.
 
 </details>
 :::
-

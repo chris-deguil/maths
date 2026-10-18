@@ -4,7 +4,7 @@ format:
   html:
     toc: true
     number-sections: false
-description: "Élément, appartenance, inclusion, réunion, intersection"
+description: "Élément, appartenance, inclusion, réunion, intersection, complémentaire"
 order: 1
 ---
 
@@ -30,6 +30,16 @@ Soient $A$ et $B$ deux ensembles.
 1. On dit que $A$ est **inclus** dans $B$, noté $A \subset B$, lorsque tout élément de $A$ appartient à $B$.
 2. On appelle **intersection** de $A$ et $B$, notée $A \cap B$, l'ensemble des éléments appartenant à la fois à $A$ et à $B$.
 3. On appelle **réunion** de $A$ et $B$, notée $A \cup B$, l'ensemble des éléments appartenant à $A$ ou à $B$ (ou aux deux).
+:::
+
+## Complémentaire
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Complémentaire</span>
+
+Soit $E$ un ensemble et $A$ une partie de $E$ ($A \subset E$). Le **complémentaire** de $A$ dans $E$, noté $\overline{A}$ (ou $E \setminus A$), est l'ensemble des éléments de $E$ qui n'appartiennent pas à $A$.
+
+On a alors $A \cap \overline{A} = \emptyset$ et $A \cup \overline{A} = E$.
 :::
 
 ::: {.bloc .rem}
@@ -87,7 +97,15 @@ $A \cap B = \{2\,;\,6\}$ (éléments communs aux deux ensembles). $A \cup B = \{
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-Non : $1 \in A$ mais $1 \notin B$, donc $A \not\subset B$.
+Non : $1 \in A$ mais $1 \notin B$, donc $A \not\subset B$ (un seul contre-exemple suffit).
+
+</details>
+
+6. On note $E = \{1\,;\,2\,;\,3\,;\,4\,;\,5\,;\,6\,;\,7\,;\,8\}$. Déterminer le complémentaire $\overline{A}$ de $A$ dans $E$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$\overline{A} = \{4\,;\,5\,;\,7\,;\,8\}$.
 
 </details>
 :::
