@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Intégrale d’une fonction continue positive, aire sous la courbe, quadrature de la parabole">
+
+<title>Intégrale d’une fonction positive – Mathématiques — Christophe Deguil</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../terminale-maths/integrale/the_fonda.html" rel="next">
+<link href="../../terminale-maths/integrale/hist.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const path = window.location.pathname;
+
+    if (path.includes("/seconde-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+    if (path.includes("/premiere-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+    if (path.includes("/terminale-maths/")) {
+      document.documentElement.classList.add("maths-theme");
+    }
+  });
+</script>
+<script>
+window.MathJax = {
+  tex: {
+    // Charge le package optionnel "enclose" (tu l'avais déjà ; je conserve)
+    packages: {'[+]': ['enclose']},
+
+    // === Macros ===
+    macros: {
+      // --- Constantes / ensembles ---
+      dd: "\\mathrm{d}",
+      e: "\\mathrm{e}",
+      R: "\\mathbb{R}",
+      Z: "\\mathbb{Z}",
+      N: "\\mathbb{N}",
+      Q: "\\mathbb{Q}",
+      C: "\\mathbb{C}",
+      F: "\\mathbb{F}",
+      D: "\\mathbb{D}",
+      epsilon: "\\varepsilon",
+      pgcd: "\\operatorname{pgcd}",
+      Div: "\\operatorname{Div}",
+
+      // --- Mises en forme / utilitaires ---
+      rem: "\\mathbf{Remarque\\ :\\ }",
+      gras: ["\\mathbf{#1}", 1],
+      LH: ["\\overset{\\rule{0cm}{0.02cm}}{\\underset{\\rule{0cm}{0.01cm}}{#1}}", 1],
+      et: "\\quad \\text{et} \\quad",
+      ou: "\\quad \\text{ou} \\quad",
+      llr: "\\Longleftrightarrow",
+      base: ["#1_{\\mathrm{#2}}", 2],
+      abs: ["\\left\\lvert #1 \\right\\rvert", 1],
+      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
+      ve: ["\\overrightarrow{#1}", 1],
+      vecol: ["\\begin{pmatrix}#1\\\\#2\\end{pmatrix}", 2],
+      wideparen: ["\\overset{\\frown}{#1}", 1],
+      np: ["\\text{#1}", 1],
+      card: ["\\operatorname{card}(#1)", 1],
+      llbracket: ["\\left[\\!\\left["],
+      rrbracket: ["\\right]\\!\\right]"],
+
+      OIJ: "\\left( O\\ ;\\ I,\\ J \\right)",
+      Oij: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j} \\right)",
+      Oijk: "\\left( O\\ ;\\ \\ve{i},\\ \\ve{j},\\ \\ve{k} \\right)",
+      Oi: "\\left( O\\ ;\\ \\ve{i} \\right)",
+      vE: "\\overrightarrow{\\mathscr{E}}",
+      E: "\\mathscr{E}",
+      bar: ["\\overline {#1}",1],
+
+
+      // --- Crochets à double barre (version qui s'affiche en inline/HTML) ---
+      // --- Limites : \lim_{...} agit comme \lim\limits_{...} y compris en inline ---
+      lim: ["\\mathop{\\operatorname{lim}}\\limits", 0]
+
+      // (Optionnel) Pour forcer aussi limsup/liminf :
+      // limsup: ["\\mathop{\\operatorname{lim\\,sup}}\\limits", 0],
+      // liminf: ["\\mathop{\\operatorname{lim\\,inf}}\\limits", 0],
+    }
+  }
+};
+</script>
+<link rel="stylesheet" href="../../assets/css/pyodide-mkdocs.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css">
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/python/python.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+<script src="../../assets/js/pyodide-mkdocs.js" defer=""></script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../assets/css/maths.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed maths-theme">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Mathématiques — Christophe Deguil</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../seconde-maths/index.html"> 
+<span class="menu-text">Seconde</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../premiere-maths/index.html"> 
+<span class="menu-text">Première</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../terminale-maths/index.html"> 
+<span class="menu-text">Terminale</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/chris-deguil/maths"> <i class="bi bi-github" role="img" aria-label="Dépôt GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../terminale-maths/integrale/index.html">Chapitre 10 : Calcul intégral</a></li><li class="breadcrumb-item"><a href="../../terminale-maths/integrale/fct_positive.html">Intégrale d’une fonction positive</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../image/logo/logo_maths2.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours de Terminale Spécialité maths</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 0 : Logique et raisonnements</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 0 : Logique et raisonnements</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Histoire de la logique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/proposition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proposition mathématique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/quantificateurs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Implication et quantificateurs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/deduction_contreExemple.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Les différents types de raisonnement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/disjonctions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contraposée et Disjonction des cas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/absurde.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Raisonnement par l’absurde</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/logique/AnalyseSynthese.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Raisonnement par analyse - synthèse</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 1 : Récurrence et limites de suites</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 1 : Récurrence et limites de suites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique de la récurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/principe.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Le principe de récurrence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/complement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Récurrence double, forte et descendante</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/application.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Application à l’étude des suites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/convergence_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Suite convergente</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/convergence_prop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés de convergence</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/divergence_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Divergence et limite par comparaison</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/operation_limite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les limites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_geometrique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limites des suites géométriques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/suite1/suite_recurrente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Étude complète de suites récurrentes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 2 : Généralités sur les fonctions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 2 : Généralités sur les fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique sur les fonctions : parité, composition, convexité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/parite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fonctions paires et impaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/composee.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composée de deux fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/comp_derivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complément de dérivation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/convexite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion de convexité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/fct1/convexite_derivee.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Convexité et dérivée, point d’inflexion</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 3 : Vecteurs, droites et plans de l’espace</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 3 : Vecteurs, droites et plans de l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique de la géométrie dans l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/vecteur_espace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vecteurs de l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/repere_espace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Repère de l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/droite_plan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Droites et plans de l’espace : définition</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/position.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Positions relatives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/parallele.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Étude des plans parallèles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/espace1/representation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Représentations paramétriques</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 4 : Limites de fonctions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 4 : Limites de fonctions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique de la notion de limite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_infini_infinie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limite infinie en l’infini</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_finie_infinie.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limite finie en l’infini</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_asymptote.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Asymptotes à une courbe en l’infini</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_en_a.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limite en <span class="math inline">\(x_0\)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_en_a_propriete.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés de la limite finie en <span class="math inline">\(x_0\)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_gauche_droite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limite à gauche, limite à droite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_infinie_en_a.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limite infinie en <span class="math inline">\(x_0\)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/operations_limites.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les limites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/theoreme_comparaison.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Théorèmes d’encadrement et de comparaison</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/limite/limite_exponentielle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Limites de la fonction exponentielle</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 5 : Succession d’épreuves indépendantes, loi binomiale</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/binomiale/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 5 : Succession d’épreuves indépendantes, loi binomiale</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/binomiale/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique sur la loi binomiale</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/binomiale/epreuve_independante.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion d’épreuves indépendantes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/binomiale/bernoulli1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Épreuve de Bernoulli</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/binomiale/bernoulli2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schéma de Bernoulli</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/binomiale/binomiale1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Loi binomiale</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/binomiale/binomiale2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coefficients binomiaux</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/binomiale/binomiale3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Expression de la loi binomiale</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 6 : Continuité d’une fonction</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/continuite/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 6 : Continuité d’une fonction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/continuite/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique de la notion de continuité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/continuite/continuite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion de continuité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/continuite/operation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les fonctions continues</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/continuite/tvi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Théorème des valeurs intermédiaires</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/continuite/tvi_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Algorithme de dichotomie et Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/continuite/caracterisation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Caractérisation séquentielle de la continuité</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 7 : Fonction logarithme népérien</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Ln/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 7 : Fonction logarithme népérien</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Ln/historique.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique du logarithme népérien</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Ln/definition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition de la fonction logarithme népérien</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Ln/variation_limite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variations et limites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Ln/propriete.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés algébriques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Ln/derivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dérivation et concavité</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Ln/composition.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Composée avec la fonction logarithme</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 8 : Produit scalaire et orthogonalité dans l’espace</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Espace2/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 8 : Produit scalaire et orthogonalité dans l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Espace2/ps_espace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Définition du produit scalaire dans l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Espace2/autre_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Produit scalaire et projeté orthogonal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Espace2/def_norme_propriete.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Produit scalaire, normes et propriétés</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Espace2/orthogonalite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Orthogonalité dans l’espace</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Espace2/ps_repere.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Produit scalaire et repère orthonormé</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Espace2/equat_cart.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vecteur normal et équation cartésienne de plan</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/Espace2/distance.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projeté orthogonal sur un plan et distance</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Chapitre 9 : Primitives et équations différentielles</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/PrimED/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 9 : Primitives et équations différentielles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/PrimED/Notion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notion de primitive</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/PrimED/Usuelles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Primitives usuelles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/PrimED/Operations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Opérations sur les primitives</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/PrimED/Intro_ED.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction aux équations différentielles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/PrimED/Generalite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Généralités sur les équations différentielles</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/PrimED/EquaDiff.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Équations différentielles linéaires du premier ordre</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/PrimED/EquaDiff_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Résolution de <span class="math inline">\(y'+ay=b\)</span> et de <span class="math inline">\(y'+ay=f\)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/PrimED/cauchy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Résolution du problème de Cauchy</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">Chapitre 10 : Calcul intégral</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/integrale/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 10 : Calcul intégral</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/integrale/hist.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Historique du calcul intégral</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/integrale/fct_positive.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Intégrale d’une fonction positive</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/integrale/the_fonda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Théorème fondamental de l’analyse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/integrale/fct_continue_def.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intégrale d’une fonction continue</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/integrale/fct_continue_prop.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Propriétés de l’intégrale</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/integrale/IPP.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intégration par parties</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../terminale-maths/integrale/aire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aire sous la courbe, aire entre les courbes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#unité-daire" id="toc-unité-daire" class="nav-link active" data-scroll-target="#unité-daire">Unité d’aire</a></li>
+  <li><a href="#définition" id="toc-définition" class="nav-link" data-scroll-target="#définition">Définition</a></li>
+  <li><a href="#quadrature-de-la-parabole" id="toc-quadrature-de-la-parabole" class="nav-link" data-scroll-target="#quadrature-de-la-parabole">Quadrature de la parabole</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../terminale-maths/integrale/index.html">Chapitre 10 : Calcul intégral</a></li><li class="breadcrumb-item"><a href="../../terminale-maths/integrale/fct_positive.html">Intégrale d’une fonction positive</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Intégrale d’une fonction positive</h1>
+</div>
+
+<div>
+  <div class="description">
+    Intégrale d’une fonction continue positive, aire sous la courbe, quadrature de la parabole
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="unité-daire" class="level2">
+<h2 class="anchored" data-anchor-id="unité-daire">Unité d’aire</h2>
+<p>Soit <span class="math inline">\((O\,;\,I,\,J)\)</span> un repère orthogonal du plan.<br>
+L’unité d’aire, notée u.a., est l’aire du rectangle unitaire <span class="math inline">\(OIKJ\)</span> avec <span class="math inline">\(I(1\,;\,0)\)</span>, <span class="math inline">\(J(0\,;\,1)\)</span> et <span class="math inline">\(K(1\,;\,1)\)</span>.</p>
+<div style="text-align: center;">
+<p><img src="../../image/terminale/Chap10_Calcul_Integral_aire1.png" style="width: 25%;"></p>
+</div>
+</section>
+<section id="définition" class="level2">
+<h2 class="anchored" data-anchor-id="définition">Définition</h2>
+<div class="bloc def">
+<p><span class="bloc-titre">Définition : </span></p>
+<p>Soit <span class="math inline">\(f\)</span> une fonction continue et positive sur un intervalle <span class="math inline">\([a \, ; \, b]\)</span>, et <span class="math inline">\(\mathscr{C}_f\)</span> sa représentation graphique dans un repère orthogonal <span class="math inline">\((O\,;\,I,\,J)\)</span>.</p>
+<p>On appelle intégrale de <span class="math inline">\(f\)</span> entre <span class="math inline">\(a\)</span> et <span class="math inline">\(b\)</span> l’aire, exprimée en unité d’aire, du domaine délimité par la courbe <span class="math inline">\(\mathscr{C}_f\)</span>, l’axe des abscisses et les droites d’équations <span class="math inline">\(x=a\)</span> et <span class="math inline">\(x=b\)</span>. <br> Cette intégrale se note <span class="math display">\[\int_{a}^{b}f(x)\dd x\]</span> On lit « intégrale de <span class="math inline">\(a\)</span> à <span class="math inline">\(b\)</span> de <span class="math inline">\(f(x) \dd x\)</span> » ou plus simplement « somme de <span class="math inline">\(a\)</span> à <span class="math inline">\(b\)</span> de <span class="math inline">\(f(x)\dd x\)</span> ».</p>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Illustration : </span><br> Soit <span class="math inline">\((O\,;\,I,\,J)\)</span> un repère orthogonal du plan et <span class="math inline">\(f\)</span> une fonction continue et positive.</p>
+<div style="text-align: center;">
+<p><img src="../../image/terminale/Chap10_Calcul_Integral_aire2.png" style="width: 50%;"></p>
+</div>
+<ul>
+<li>L’aire coloriée a pour valeur en unité d’aire <span class="math inline">\(\int_a^b f(t)  \dd t\)</span>.</li>
+<li>L’unité d’aire est l’aire du rectangle <span class="math inline">\(OIKJ\)</span>.</li>
+</ul>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span></p>
+<ul>
+<li>Le nombre <span class="math inline">\(\int_a^b f(x) \dd x\)</span> ne dépend que de <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> et <span class="math inline">\(f\)</span>.</li>
+<li>Les réels <span class="math inline">\(a\)</span> et <span class="math inline">\(b\)</span> sont appelés les bornes de l’intégrale <span class="math inline">\(\displaystyle\int_{a}^{b}f(x)\dd x\)</span>.</li>
+<li>Comme pour les fonctions, le « <span class="math inline">\(x\)</span> » est une variable muette (appelée variable d’intégration). On pourrait la remplacer par un <span class="math inline">\(t\)</span>, ou un <span class="math inline">\(v\)</span>.<br>
+Ainsi <span class="math display">\[\int_{a}^{b}f(x)\dd x = \int_{a}^{b}f(t)\dd t  = \int_{a}^{b}f(v)\dd v\]</span></li>
+<li>La méthode des rectangles (voir la quadrature de la parabole ci-dessous) permet le calcul approché d’une intégrale. Elle légitime l’utilisation du symbole <span class="math inline">\(\int\)</span>, un S allongé (notation de Leibniz) pour « somme ».<br>
+L’aire est approchée par <span class="math inline">\(\sum_{k} f(x_k) \Delta x_k\)</span>, où <span class="math inline">\(\Delta x_k\)</span> est la largeur d’un rectangle et <span class="math inline">\(f(x_k)\)</span> sa hauteur.<br>
+Le théorème sur les sommes de Riemann (admis) donne <span class="math display">\[\lim_{n \to+ \infty} \frac{b-a}{n} \sum_{k=0}^{n-1} f \left(a+k\frac{b-a}{n}\right) = \int_a^b f(x) \dd x\]</span></li>
+<li><span class="math inline">\(\displaystyle\int_{a}^{a}f(x)\dd x = 0\)</span>, car le domaine est alors réduit à un segment.</li>
+</ul>
+</div>
+<div class="bloc ex">
+<p><span class="bloc-titre">Exemple : </span><br></p>
+<p>Calculons <span class="math inline">\(\displaystyle\int_{-1}^{4} \left(-0{,}4x+3{,}6\right)\dd x\)</span>.</p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>La fonction affine <span class="math inline">\(f\)</span> définie pour tout réel <span class="math inline">\(x\)</span> par <span class="math inline">\(f(x)= -0{,}4x+3{,}6\)</span> est continue et positive sur l’intervalle <span class="math inline">\([-1 ; 4]\)</span> (car <span class="math inline">\(f(-1) = 4\)</span>, <span class="math inline">\(f(4) = 2\)</span> et <span class="math inline">\(f\)</span> est décroissante).<br>
+L’intégrale <span class="math inline">\(\displaystyle\int_{-1}^{4} \left(-0{,}4x+3{,}6\right)\dd x\)</span> est égale à l’aire du trapèze rectangle <span class="math inline">\(ABCD\)</span> de hauteur <span class="math inline">\(AB = 5\)</span> et de bases <span class="math inline">\(AD = f(-1) = 4\)</span> et <span class="math inline">\(BC = f(4) = 2\)</span>. <span class="math display">\[ \displaystyle\int_{-1}^{4} \left(-0{,}4x+3{,}6\right)\dd x  = \dfrac{\left( AD + BC\right)\times AB}{2}
+=\dfrac{\left( 4 + 2\right)\times 5}{2}
+=15 \]</span></p>
+<div style="text-align: center;">
+<p><img src="../../image/terminale/Chap10_Calcul_Integral_aire3.png" style="width: 29%;"></p>
+</div>
+</details>
+</div>
+<div class="bloc ex">
+<div class="bloc-titre">
+Exemple :<span class="exemp-extra"> Encadrement entre deux aires</span>
+</div>
+<p>Soit <span class="math inline">\(f\)</span> la fonction définie pour tout réel <span class="math inline">\(x\)</span> par <span class="math inline">\(f(x)=\dfrac{6}{x^2-4x+7}\)</span>, dont la courbe <span class="math inline">\(\mathcal{C}_f\)</span> est représentée ci-dessous. Déterminer un encadrement de l’intégrale <span class="math inline">\(\displaystyle\int_{-1}^{3} f(x) \dd x\)</span>.</p>
+<div style="text-align: center;">
+<p><img src="../../image/terminale/Chap10_Calcul_Integral_aire4.png" style="width: 49%;"></p>
+</div>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p>Sur l’intervalle <span class="math inline">\([-1 ; 3]\)</span>, la fonction <span class="math inline">\(f\)</span> est continue et positive (<span class="math inline">\(x^2 - 4x + 7 = (x-2)^2 + 3 &gt; 0\)</span>). L’intégrale <span class="math inline">\(\displaystyle\int_{-1}^{3} f(x) \dd x\)</span> est égale à l’aire, en unités d’aire, du domaine <span class="math inline">\(\mathcal{D}_f\)</span> compris entre la courbe <span class="math inline">\(\mathcal{C}_f\)</span>, l’axe des abscisses et les droites d’équations <span class="math inline">\(x=-1\)</span> et <span class="math inline">\(x=3\)</span>.</p>
+<p>On peut déterminer un encadrement de l’intégrale <span class="math inline">\(\displaystyle\int_{-1}^{3} f(x) \dd x\)</span> à l’aide du quadrillage. D’où l’encadrement <span class="math display">\[\dfrac{75}{16} \leqslant \displaystyle\int_{-1}^{3} f(x) \dd x \leqslant 6\]</span></p>
+</details>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Remarque : </span></p>
+<p>On peut aussi avoir recours à un logiciel de calcul formel ou à une calculatrice</p>
+<ul>
+<li>À l’aide de la calculatrice, on trouve <span class="math inline">\(\displaystyle\int_{-1}^{3} \left(\dfrac{6}{x^2-4x+7}\right) \dd x \approx 5{,}44\)</span>.</li>
+<li>À l’aide d’un logiciel de calcul formel, on obtient <span class="math inline">\(\displaystyle\int_{-1}^{3} \left(\dfrac{6}{x^2-4x+7}\right) \dd x = \pi \sqrt{3}\)</span>.</li>
+<li>Il existe des intégrales que l’on ne sait pas calculer exactement, et dont on ne peut donner que des valeurs approchées à l’aide de différentes méthodes (mais on est capable d’en majorer l’erreur, et donc de trouver une valeur approchée aussi proche que l’on veut : analyse numérique)</li>
+</ul>
+</div>
+</section>
+<section id="quadrature-de-la-parabole" class="level2">
+<h2 class="anchored" data-anchor-id="quadrature-de-la-parabole">Quadrature de la parabole</h2>
+<div class="bloc def">
+<p><span class="bloc-titre">Définition : </span></p>
+<p>On appelle quadrature de la parabole le calcul de l’aire de la surface délimitée par un segment de parabole et une droite.</p>
+</div>
+<div class="bloc rem">
+<p><span class="bloc-titre">Méthode des rectangles : </span><br> On va déterminer l’aire <span class="math inline">\(\mathscr{A}\)</span> sous la parabole représentant la fonction carré sur <span class="math inline">\([0 \, ; \, 1]\)</span>.<br>
+Pour cela (idée de Riemann), on va encadrer l’aire par deux séries de rectangles :</p>
+<ul>
+<li>On divise <span class="math inline">\([0\,;\, 1]\)</span> en <span class="math inline">\(n\)</span> parties ;</li>
+<li>On note <span class="math inline">\(S_n\)</span> et <span class="math inline">\(T_n\)</span> les sommes des aires respectives des rectangles inférieurs et des rectangles supérieurs.<br>
+La largeur de chaque rectangle est alors <span class="math inline">\(\dfrac{1}{n}\)</span>, et la hauteur respectivement <span class="math inline">\(f\left(\dfrac{i}{n}\right)\)</span> et <span class="math inline">\(f\left(\dfrac{i+1}{n}\right)\)</span>, pour <span class="math inline">\(i \in \llbracket 0\,;\,n-1 \rrbracket\)</span>.</li>
+</ul>
+<div style="text-align: center;">
+<p><img src="../../image/terminale/Chap10_Calcul_Integral_aire5.png" style="width: 39%;"></p>
+</div>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>     <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> A(n):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    s,t<span class="op">=</span><span class="dv">0</span>,<span class="dv">0</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        s<span class="op">=</span>s<span class="op">+</span><span class="dv">1</span><span class="op">/</span>n<span class="op">*</span>f(i<span class="op">/</span>n)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        t<span class="op">=</span>t<span class="op">+</span><span class="dv">1</span><span class="op">/</span>n<span class="op">*</span>f((<span class="dv">1</span><span class="op">+</span>i)<span class="op">/</span>n)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s,t</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="exo-wrap">
+  <div class="editor-shell" id="exo1">
+    <div class="bar-top"><span class="cell-num">Quadrature de la parabole</span></div>
+    <textarea id="code">def f(x):
+     return x**2
+
+def A(n):
+    s,t=0,0
+    for i in range(n):
+        s=s+1/n*f(i/n)
+        t=t+1/n*f((1+i)/n)
+    return s,t
+</textarea>
+    <div class="output" id="out"><pre></pre></div>
+    <div class="toolbar">
+      <button class="btn" id="run" disabled=""></button>
+      <button class="btn" id="check" disabled=""></button>
+      <button class="btn" id="download"></button>
+      <button class="btn" id="reset"></button>
+      <button class="btn" id="clear"></button>
+      <button class="btn" id="save"></button>
+    </div>
+  </div>
+</div>
+<p>On obtient</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> A(<span class="dv">100</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>(<span class="fl">0.32835000000000014</span>, <span class="fl">0.33835000000000015</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> A(<span class="dv">1000</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>(<span class="fl">0.3328335000000003</span>, <span class="fl">0.3338335000000003</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> A(<span class="dv">1000000</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>(<span class="fl">0.3333328333334962</span>, <span class="fl">0.3333338333334962</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Il semble que les suites <span class="math inline">\((S_n)\)</span> et <span class="math inline">\((T_n)\)</span> convergent vers <span class="math inline">\(\frac{1}{3}\)</span>.</p>
+<details class="bloc demo">
+<summary>
+Démonstration :
+</summary>
+<p><span class="math inline">\(S_n = \frac{1}{n} \sum_{i=0}^{n-1} f\left(\frac{i}{n}\right) = \frac{1}{n} \left(0^2+\frac{1^2}{n^2} + \frac{2^2}{n^2} + \dots + \frac{(n-1)^2}{n^2} \right)= \frac{1^2+2^2+\dots + (n-1)^2}{n^3}\)</span> et <span class="math inline">\(T_n = \frac{1}{n} \sum_{i=0}^{n-1} f\left(\frac{i+1}{n}\right) = \frac{1}{n} \left(\frac{1^2}{n^2} + \frac{2^2}{n^2} + \dots + \frac{n^2}{n^2} \right)= \frac{1^2+2^2+\dots + n^2}{n^3}\)</span></p>
+<p>On peut démontrer par récurrence que <span class="math display">\[1^2+2^2+\dots + n^2 = \frac{n(n+1)(2n+1)}{6}\]</span> D’où <span class="math display">\[S_n = \frac{(n-1)n(2n-1)}{6n^3} = \frac{2n^3-3n^2+n}{6n^3} = \frac{1}{3} - \frac{1}{2n} + \frac{1}{6n^2} \qquad \text{et} \qquad T_n = S_n + \frac{n^2}{n^3} = S_n + \frac{1}{n}\]</span> On déduit que <span class="math inline">\(\lim_{n \to + \infty} S_n = \frac{1}{3}\)</span> et donc <span class="math inline">\(\lim_{n \to +\infty} T_n=\frac{1}{3}\)</span>.<br></p>
+<p>Or, pour tout <span class="math inline">\(n\)</span>, <span class="math inline">\(S_n \leqslant \mathscr{A} \leqslant T_n\)</span> ; par passage à la limite, <span class="math inline">\(\mathscr{A}= \frac{1}{3}\)</span> : <span class="math inline">\(\displaystyle\int_0^1 x^2 \dd x = \frac{1}{3}\)</span>.</p>
+</details>
+
+
+<div class="nav-pages"><a class="prev" href="hist.html" title="Historique du calcul intégral"></a><a class="next" href="the_fonda.html" title="Théorème fondamental de l"></a></div>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/chris-deguil\.github\.io\/maths\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../terminale-maths/integrale/hist.html" class="pagination-link" aria-label="Historique du calcul intégral">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Historique du calcul intégral</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../terminale-maths/integrale/the_fonda.html" class="pagination-link" aria-label="Théorème fondamental de l'analyse">
+        <span class="nav-page-text">Théorème fondamental de l’analyse</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 — Christophe Deguil</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+<p>Accueil</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:christophe.Deguil@ac-versailles.fr">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
