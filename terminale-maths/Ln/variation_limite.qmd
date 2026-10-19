@@ -1,0 +1,147 @@
+---
+title: "Variations et limites"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Variation de Ln, limites aux bornes et croissances comparées"
+order: 3
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+La fonction logarithme népérien est strictement croissante.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Soient $x, y \in \R^*_+$, alors :
+$$x < y \Longrightarrow \e^{\ln x} < \e^{\ln y} \underset{\exp \nearrow}{\Longrightarrow} \ln x < \ln y$$
+en effet, si on avait $\ln x \geqslant \ln y$, la croissance de la fonction exponentielle donnerait $\e^{\ln x} \geqslant \e^{\ln y}$, c'est-à-dire $x \geqslant y$.
+Ainsi la fonction $\ln$ est strictement croissante.
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Conséquence : </span><br>
+La stricte croissance de la fonction $\ln$ permet de déduire les relations suivantes, pour tous réels $a > 0$ et $b > 0$ :
+$$\ln a = \ln b \Longleftrightarrow a=b \quad \text{et} \quad \ln a < \ln b \Longleftrightarrow a < b$$
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Résoudre $(\ln(3x) - 2)(1-\ln x) > 0$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+L'ensemble de définition impose $x > 0$. Pour tout $x \in ]0 \, ; \, +\infty[$ :
+
+* $\ln(3x) - 2 < 0 \Longleftrightarrow \ln(3x) < 2 \Longleftrightarrow \ln(3x) < \ln(\e^2) \underset{\ln \nearrow}{\Longleftrightarrow} 3x < \e^2 \Longleftrightarrow x < \dfrac{\e^2}{3}$.
+* $1-\ln x < 0 \Longleftrightarrow \ln x > 1 \Longleftrightarrow \ln x > \ln \e \underset{\ln \nearrow}{\Longleftrightarrow} x > \e$.
+
+
+On dresse ensuite un tableau de signes sur $]0 \, ; \, +\infty[$ pour conclure (on remarque que $\dfrac{\e^2}{3} \approx 2{,}46 < \e \approx 2{,}72$).
+<div style="text-align: center;">
+  <img src="../../image/terminale/Chap6_Fonction_Ln_tab_signe1.png" style="width: 49%;">
+</div>
+
+L'ensemble des solutions est $S = \left]\dfrac{\e^2}{3}\,;\,\e\right[$.
+
+
+</details>
+
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Soit $f$ la fonction définie par $f(x)=\ln(2-x)$.
+
+1. Déterminer l'ensemble de définition de $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$D_f=\{x \in \R, \, 2-x > 0\} = ]-\infty \, ; \, 2[$.
+</details>
+
+2. Déterminer les antécédents de $1$ par $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Pour tout $x \in D_f$ :
+$$\ln(2-x) = 1 \Longleftrightarrow \ln(2-x) = \ln \e \underset{\ln \nearrow}{\Longleftrightarrow} 2-x = \e \Longleftrightarrow x = 2-\e$$
+Comme $2 - \e < 2$, $2-\e \in D_f$ : $1$ admet un unique antécédent, $2-\e$.
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+$$\lim_{x \to +\infty} \ln(x)= + \infty \qquad ; \qquad \lim_{x \to 0^+} \ln(x) = -\infty$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+Pour tout réel $A$, et pour tout réel $x$ vérifiant $x > \e^{A}$, on a, par stricte croissance de $\ln$, $\ln(x) > \ln(\e^A) = A$.  
+Ainsi, par définition :
+$$\lim_{x \to + \infty} \ln(x) = + \infty$$
+De plus, pour tout $x >0$, $\ln(x) = -\ln\left(\dfrac{1}{x} \right)$.  
+Or $\lim_{x \to 0^+} \dfrac{1}{x} = + \infty$ et $\lim_{X \to +\infty} - \ln(X) = -\infty$.  
+Donc, par composition des limites, on a :
+$$\lim_{x \to 0^+} \ln(x) = -\infty$$
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+La droite d'équation $x=0$ est une asymptote verticale à la représentation graphique de la fonction logarithme népérien.
+
+On peut donc établir le tableau de variations de la fonction $\ln$.
+<div style="text-align: center;">
+  <img src="../../image/terminale/Chap6_Fonction_Ln_var_ln.png" style="width: 49%;">
+</div>
+
+:::
+
+
+## Croissances comparées
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+$$\lim_{x \to + \infty} \dfrac{\ln(x)}{x} = 0 \qquad ; \qquad \lim_{x \to 0^+} x \ln(x) = 0^-$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+- Pour tout $x > 0$, en posant $X = \ln x$ (donc $x = \e^X$) :
+$$\dfrac{\ln x}{x} = \dfrac{X}{\e^X}.$$
+Or $\lim\limits_{x \to + \infty} \ln x = + \infty$ et $\lim\limits_{X \to +\infty} \dfrac{X}{\e^X} = 0$ (croissances comparées pour l'exponentielle). Par composition, $\lim\limits_{x \to + \infty} \dfrac{\ln x}{x} = 0$ (par valeurs positives pour $x > 1$).
+
+- Pour tout $x > 0$, en posant $X = \dfrac{1}{x}$ :
+$$x \ln x = \dfrac{1}{X} \ln\left(\dfrac{1}{X}\right) = -\dfrac{\ln X}{X}.$$
+Or $\lim\limits_{x \to 0^+} \dfrac{1}{x} = + \infty$ et $\lim\limits_{X \to + \infty} \dfrac{\ln X}{X} = 0$. Par composition, $\lim\limits_{x \to 0^+} x \ln x = 0$, et comme $x \ln x < 0$ pour $0 < x < 1$, la limite est $0^-$.
+</details>
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+Soit $n$ un entier strictement positif, alors :
+$$\lim_{x \to + \infty} \dfrac{\ln(x)}{x^n} = 0 \qquad ; \qquad \lim_{x \to 0^+} x^n \ln(x) = 0^-$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+On a pour tout $x > 0$, $\dfrac{\ln(x^n)}{x^n}= n \dfrac{\ln(x)}{x^n}$ (voir les propriétés algébriques), donc $\dfrac{\ln(x)}{x^n} = \dfrac{1}{n} \dfrac{\ln(x^n)}{x^n}$.  
+Or $\lim_{x \to + \infty} x^n = + \infty$ et $\lim_{u \to + \infty} \dfrac{\ln(u)}{u} = 0$.  
+On en déduit par composition des limites que $\lim_{x\to + \infty} \dfrac{\ln(x^n)}{x^n} = 0$, donc $\lim_{x \to +\infty} \dfrac{\ln(x)}{x^n} = 0$.  
+On obtient la deuxième limite par composition en posant $X=\dfrac{1}{x}$ : $x^n \ln x = -\dfrac{\ln X}{X^n}$.
+</details>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+Calculer les limites suivantes : $\lim_{x \to +\infty} \dfrac{\ln(x)}{x^2+x}$ et $\lim_{x \to + \infty} \dfrac{\e^x}{\ln(x)}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+* Pour tout $x > 0$, $\dfrac{\ln x}{x^2+x} = \dfrac{\ln x}{x^2} \times \dfrac{1}{1+\dfrac{1}{x}}$.  
+Or $\lim_{x \to + \infty} \dfrac{1}{x} = 0$, donc $\lim_{x \to + \infty} \dfrac{1}{1+\dfrac{1}{x}} = 1$.  
+Or pour tout $n \geqslant 1$, $\lim_{x \to + \infty} \dfrac{\ln x}{x^n} = 0$.  
+On en déduit alors par produit que $\lim_{x \to +\infty} \dfrac{\ln(x)}{x^2+x}=0$.
+
+* Pour tout $x > 1$, $\dfrac{\e^x}{\ln x} = \dfrac{\e^{x}}{x} \times \dfrac{x}{\ln x}$.  
+Or $\lim_{x \to + \infty} \dfrac{\ln x}{x} = 0^+$, donc par passage à l'inverse $\lim_{x \to + \infty} \dfrac{x}{\ln x} = + \infty$ ; de plus $\lim_{x \to + \infty} \dfrac{\e^x}{x} = + \infty$.  
+Par produit des limites, on en déduit que :
+$$\lim_{x \to + \infty} \dfrac{\e^x}{\ln(x)} = + \infty$$
+</details>
+:::

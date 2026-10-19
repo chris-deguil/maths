@@ -1,0 +1,36 @@
+---
+title: "Chapitre 2 : Généralités sur les fonctions"
+description: "Parité, composée de deux fonctions, dérivation, convexité"
+chapter-order: 2
+order: 2
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Contenus :</span><br>
+
+- Parité d'une fonction et représentation graphique.
+- Composée de deux fonctions, notation $v \circ u$. Relation $(v \circ u)' = (v' \circ u) \times u'$ pour la dérivée de la composée de deux fonctions dérivables.
+- Dérivée seconde d’une fonction.
+- Fonction convexe sur un intervalle : définition par la position relative de la courbe et des sécantes. Pour une fonction deux fois dérivable, équivalence admise avec la position par rapport aux tangentes, la croissance de $f'$, la positivité de $f''$.
+- Point d’inflexion.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Capacités attendues :</span><br>
+
+- Calculer la dérivée d’une fonction donnée par une formule simple mettant en jeu opérations algébriques et composition.
+- Calculer la fonction dérivée, déterminer les limites et étudier les variations d’une fonction construite simplement à partir des fonctions de référence.
+- Démontrer des inégalités en utilisant la convexité d’une fonction.
+- Esquisser l’allure de la courbe représentative d’une fonction $f$ à partir de la donnée des tableaux de variations de $f$, de $f'$ ou de $f''$.
+- Lire sur une représentation graphique de $f$, de $f'$ ou de $f''$ les intervalles où $f$ est convexe, concave, et les points d’inflexion.
+- Dans le cadre de la résolution de problème, étudier et utiliser la convexité d’une fonction.
+:::

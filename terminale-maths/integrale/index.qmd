@@ -1,0 +1,39 @@
+---
+title: "Chapitre 10 : Calcul intégral"
+description: "Intégrale et aire, théorème fondamental, propriétés, intégration par parties, valeur moyenne"
+chapter-order: 10
+order: 10
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Contenus :</span><br>
+
+- Définition de l’intégrale d'une fonction continue positive définie sur un segment $[a\,;\,b]$, comme aire sous la courbe représentative de $f$. Notation $\displaystyle\int_a^b f(x)\,\dd x$.
+- Théorème : si $f$ est une fonction continue positive sur $[a\,;\,b]$, la fonction $F_a : x \longmapsto \displaystyle\int_a^x f(t)\,\dd t$ est la primitive de $f$ qui s'annule en $a$.
+- Sous les hypothèses du théorème, relation $\displaystyle\int_a^b f(x)\,\dd x = F(b)-F(a)$ où $F$ est une primitive quelconque de $f$. Notation $\Bigl[F(x)\Bigr]_a^b$.
+- Théorème : toute fonction continue sur un intervalle admet des primitives.
+- Définition par les primitives de $\displaystyle\int_a^b f(x)\,\dd x$ lorsque $f$ est une fonction continue de signe quelconque sur un intervalle contenant $a$ et $b$.
+- Linéarité, positivité et intégration des inégalités. Relation de Chasles.
+- Valeur moyenne d’une fonction.
+- Intégration par parties.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Capacités attendues :</span><br>
+
+- Estimer graphiquement ou encadrer une intégrale, une valeur moyenne.
+- Calculer une intégrale à l’aide d’une primitive, à l’aide d’une intégration par parties.
+- Majorer (minorer) une intégrale à partir d'une majoration (minoration) d'une fonction par une autre fonction.
+- Calculer l’aire entre deux courbes.
+- Étudier une suite d’intégrales, vérifiant éventuellement une relation de récurrence.
+- Interpréter une intégrale, une valeur moyenne dans un contexte issu d’une autre discipline.
+:::

@@ -1,0 +1,31 @@
+---
+title: "Historique sur la loi binomiale"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Bref historique : de Pascal et Fermat à Bernoulli et de Moivre"
+order: 1
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Les coefficients binomiaux : </span><br>
+Les coefficients qui apparaissent dans le développement de $(a+b)^n$ sont connus bien avant d'être utilisés en probabilités : on les trouve chez le mathématicien indien Pingala (vers le II<sup>e</sup> siècle av. J.-C.), chez al-Karaji (X<sup>e</sup> siècle) et Omar Khayyam (XI<sup>e</sup> siècle) en Perse, puis chez le Chinois Yang Hui (XIII<sup>e</sup> siècle), qui les dispose en triangle.  
+En 1654, Blaise Pascal (1623-1662) rédige son *Traité du triangle arithmétique* (publié en 1665), dans lequel il étudie systématiquement ces nombres et leurs propriétés, en utilisant notamment un raisonnement par récurrence.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">La naissance du calcul des probabilités : </span><br>
+La même année 1654, une correspondance entre Pascal et Pierre de Fermat (1601-1665), à propos de problèmes de jeux posés par le chevalier de Méré (notamment le « problème des partis » : comment partager équitablement les mises d'une partie interrompue ?), marque la naissance du calcul des probabilités.  
+En 1657, Christian Huygens (1629-1695) publie le premier traité sur le sujet, *De ratiociniis in ludo aleae* (Du calcul dans les jeux de hasard), où apparaît la notion d'espérance.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Jacques Bernoulli et la loi binomiale : </span><br>
+Jacques Bernoulli (1654-1705) étudie la répétition d'une même expérience à deux issues, que l'on appelle aujourd'hui **épreuve de Bernoulli**. Dans son ouvrage *Ars Conjectandi* (L'art de la conjecture), publié après sa mort en 1713, il obtient la probabilité d'obtenir exactement $k$ succès lors de $n$ répétitions indépendantes : c'est la **loi binomiale**. Il y démontre aussi la première version de la **loi des grands nombres** : lorsque le nombre de répétitions augmente, la fréquence des succès se rapproche de la probabilité du succès.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Vers les approximations : </span><br>
+Les calculs avec la loi binomiale deviennent vite très longs lorsque $n$ est grand. En 1733, Abraham de Moivre (1667-1754) montre que la loi binomiale peut être approchée par une courbe « en cloche » ; Pierre-Simon de Laplace (1749-1827) généralise ce résultat dans sa *Théorie analytique des probabilités* (1812). C'est l'origine de la loi normale, centrale en statistiques.
+:::

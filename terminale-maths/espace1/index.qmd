@@ -1,0 +1,37 @@
+---
+title: "Chapitre 3 : Vecteurs, droites et plans de l'espace"
+description: "Vecteurs de l'espace, bases et repères, positions relatives, représentations paramétriques"
+chapter-order: 3
+order: 3
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Contenus :</span><br>
+
+- Vecteurs de l’espace. Translations. Combinaisons linéaires de vecteurs.
+- Droites de l’espace : vecteurs directeurs, vecteurs colinéaires, caractérisation d’une droite par un point et un vecteur directeur.
+- Plans de l’espace : direction d’un plan, vecteurs coplanaires, caractérisation d’un plan par un point et deux vecteurs non colinéaires.
+- Bases et repères de l’espace ; décomposition d’un vecteur, coordonnées.
+- Positions relatives de droites et de plans ; parallélisme.
+- Représentation paramétrique d’une droite, d'un plan.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Capacités attendues :</span><br>
+
+- Représenter des combinaisons linéaires de vecteurs donnés.
+- Exploiter une figure pour exprimer un vecteur comme combinaison linéaire de vecteurs.
+- Décrire la position relative de deux droites, d’une droite et d’un plan, de deux plans.
+- Lire sur une figure si deux vecteurs d’un plan, trois vecteurs de l’espace, forment une base ; lire la décomposition d'un vecteur dans une base.
+- Étudier géométriquement des problèmes simples de configurations dans l’espace (alignement, colinéarité, parallélisme, coplanarité).
+- Déterminer une représentation paramétrique d'une droite, d'un plan ; étudier l'intersection d'une droite et d'un plan.
+:::

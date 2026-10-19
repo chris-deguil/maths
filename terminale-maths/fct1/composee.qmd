@@ -1,0 +1,114 @@
+---
+title: "Composée de deux fonctions"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition, ensemble de définition et variations d'une fonction composée"
+order: 3
+---
+
+
+## Définition
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Soient $f$ une fonction définie sur $I$ et $g$ une fonction définie sur $J$. On suppose que $f(I) \subset J$.  
+On appelle composée de $f$ par $g$, et on note $g \circ f$ (lire $g$ rond $f$), la fonction définie par :
+$$(g \circ f)(x)=g(f(x))$$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Pour pouvoir définir $(g\circ f)(x)$, il faut et il suffit que $x \in I$ et $f(x) \in J$, c'est-à-dire que l'image de $x$ par $f$ soit dans l'ensemble de définition de $g$.
+
+$$\begin{matrix}
+f: & I & \longrightarrow & f(I) & & \\
+   & x & \longmapsto & f(x) & & \\
+   & & g : & J & \longrightarrow & g(J) \\
+   & & & f(x) & \longmapsto & g(f(x))
+\end{matrix}$$
+
+Ainsi, en notant $\mathscr{D}_f$ et $\mathscr{D}_g$ les ensembles de définition respectifs de $f$ et $g$, on a  
+$$\mathscr{D}_{g \circ f} =\{x \in \mathscr{D}_f, f(x) \in \mathscr{D}_g \}$$
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+<div style="text-align: center;">
+  <img src="../../image/terminale/Chap2_GeneralitesFonctions_composition1.png" style="width: 35%;">
+</div>
+
+On a :  
+
+- $\mathscr{D}_f=\{\alpha \, ; \, \beta \, ; \,\gamma\}$ et $\mathscr{D}_g=\{a\, ; \,b\, ; \,c \, ; \,d\, ; \,e\, ; \,f\}$  
+- $f(\mathscr{D}_f) =\{b \, ; \, a \, ; \, d\}$  et $f(\mathscr{D}_f) \subset \mathscr{D}_g$  
+- $f(\alpha)=b$ et $g(b) =1$ donc $(g \circ f)(\alpha)=1$  
+- $f(\beta)=a$ et $g(a) =2$ donc $(g \circ f)(\beta)=2$  
+- $f(\gamma)=d$ et $g(d) =3$ donc $(g \circ f)(\gamma)=3$  
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+On considère la fonction $f$ définie par $f(x)= x^2-9$ sur $\color{red}{[2 \,;\,+\infty[}$ et la fonction $g$ définie par $g(x) = \dfrac{1}{x}$ sur $\color{blue}{\mathbb{R}^*}$.
+
+1. Soit $h=g \circ f$.
+    * $D_h = \{x \in {\color{red}{[2 \,;\,+\infty[}}, \, f(x) \in {\color{blue}{\mathbb{R}^*}} \} = \{x \in {\color{red}{[2 \,;\,+\infty[}}, \, x^2-9 \neq 0\} = \{x \in \color{red}{[2 \,;\,+\infty[}, \, \color{green}{x \neq 3}\}$ (car $-3 \notin [2\,;\,+\infty[$).
+    * Donc $D_h = \color{red}{[2 \,;\,+\infty[} \setminus \color{green}{\{3\}} = [2\, ; \, 3[ \cup ]3\, ; \, + \infty[$.
+    * La fonction $h$ est définie sur $[2\, ; \, 3[ \cup ]3\, ; \, + \infty[$ par $h(x) = \dfrac{1}{x^2 - 9}$.
+
+2. Soit $k=f \circ g$.
+    * $D_k = \{x \in {\color{blue}{\mathbb{R}^*}}, \, g(x) \in {\color{red}{[2 \,;\,+\infty[}} \} = \left\{x \in {\color{blue}{\mathbb{R}^*}}, \, {\color{red}{\dfrac{1}{x} \geqslant 2}} \right \} = \left\{x \in \color{blue}{\mathbb{R}^*}, \, \color{green}{0 < x \leqslant \dfrac{1}{2}} \right\}$.
+    * Donc $D_k = \left]0 \, ; \, \dfrac{1}{2}\right]$.
+    * La fonction $k$ est définie sur $\left]0 \, ; \, \dfrac{1}{2}\right]$ par $k(x) = \left(\dfrac{1}{x} \right)^2-9$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+D'une façon générale, $f \circ g \neq g \circ f$ : dans l'exemple précédent, $h$ et $k$ n'ont ni le même ensemble de définition, ni la même expression.
+:::
+
+
+## Composée et variations
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soient $f$ une fonction monotone sur $I$ et $g$ une fonction monotone sur $J$, avec $f(I) \subset J$, de sorte que la fonction composée $h= g \circ f$ est définie sur $I$.
+
+* Si $f$ et $g$ ont même monotonie, alors $h$ est croissante sur $I$.
+* Si $f$ et $g$ sont de monotonies contraires, alors $h$ est décroissante sur $I$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+*On démontre dans le cas de monotonies contraires.* On suppose $f$ croissante sur $I$ et $g$ décroissante sur $J$ et $f(I) \subset J$.  
+$\forall x, y \in I$,
+$$
+\begin{aligned}
+x < y & \underset{f \, \nearrow \, \text{sur} \, I}{\Longrightarrow} f(x) < f(y)\\
+& \underset{g \searrow \, \text{sur} \, f(I)}{\Longrightarrow} g (f(x)) > g (f(y)) \\
+& \Longrightarrow h(x) > h(y).
+\end{aligned}
+$$
+Ainsi, par définition, $h$ est décroissante sur $I$. Les autres cas se démontrent de la même façon.
+
+</details>
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+Étudions les variations de la fonction $h:x \longmapsto - \dfrac{1}{1-x}$ définie sur $]1\, ; \, + \infty[$.
+
+* La fonction $f : x \longmapsto 1-x$ est décroissante sur $]1\, ; \, + \infty[$ et à valeurs dans $]-\infty \,; \, 0[$.
+* La fonction $g : x \longmapsto - \dfrac{1}{x}$ est croissante sur $]-\infty \, ; \, 0[$.
+
+On a $h = g \circ f$ ; $f$ et $g$ étant de monotonies contraires, on en déduit que la fonction $h$ est décroissante sur $]1\, ; \, + \infty[$.
+
+:::

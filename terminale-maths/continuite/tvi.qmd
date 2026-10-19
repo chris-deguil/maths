@@ -1,0 +1,93 @@
+---
+title: "Théorème des valeurs intermédiaires"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "TVI, résolution d'équations"
+order: 4
+---
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : Théorème des valeurs intermédiaires</span><br>
+Soit $f$ une fonction continue sur un intervalle $[a\,;\,b]$.  
+Pour tout réel $k$ compris entre $f(a)$ et $f(b)$, il existe au moins un réel $c \in [a\,;\,b]$ tel que $f(c) = k$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+$f([a\,;\,b])$ désigne l'image de l'intervalle $[a\,;\, b]$ par la fonction $f$. En général, $f([a\,;\,b]) \neq [f(a)\,;\, f(b)]$ ; le théorème affirme que (si $f(a) \leqslant f(b)$) :
+$$[f(a)\,;\, f(b)] \subset f([a\,;\,b])$$
+Le théorème s'étend à un intervalle quelconque $I$ (éventuellement ouvert ou non borné) en remplaçant $f(a)$ et $f(b)$ par les limites de $f$ aux bornes de $I$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+* Une fonction continue sur un intervalle ne peut pas changer de signe sans s'annuler.
+* On peut, à l'aide du théorème, justifier l'existence d'au moins une solution de l'équation $f(x) = 0$ pour une fonction continue de signe non constant, sans pour autant donner sa valeur ni le nombre de solutions.
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+On considère la fonction $f$ définie sur $\R$ par $f(x)=(x-1)\e^{-x}+1$.
+
+Montrer que l'équation $f(x) = 0$ admet au moins une solution.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+* On a $\lim_{x \to -\infty} (x-1) = - \infty$ et $\lim_{x \to -\infty} \e^{-x} = +\infty$. Par produit des limites, $\lim_{x \to - \infty} f(x) = -\infty$.
+* Pour tout réel $x$, $f(x) = x\e^{-x} - \e^{-x} +1$. Or $\lim_{x \to + \infty} \e^{-x} = 0$ et $\lim_{x \to + \infty} x \e^{-x} = \lim_{x \to + \infty} \dfrac{x}{\e^{x}} = 0$ (croissances comparées). Par produit et somme de limites, on déduit que $\lim_{x \to +\infty} f(x) = 1$.
+
+
+La fonction $f$ est continue sur $\mathbb{R}$ (produit et somme de fonctions continues) et $0 \in \left]\lim_{x \to-\infty} f(x) \, ; \, \lim_{x \to +\infty} f(x) \right[$.
+
+On déduit du théorème des valeurs intermédiaires l'existence d'au moins un $\alpha \in \mathbb{R}$, tel que $f(\alpha)=0$.
+</details>
+:::
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Soit $f$ une fonction strictement croissante sur un intervalle $I$. Supposons qu'il existe deux réels distincts $\alpha < \beta$ de $I$ annulant $f$ : on aurait $f(\alpha) = f(\beta) = 0$, ce qui contredit la stricte croissance de $f$ ($f(\alpha) < f(\beta)$).  
+Ainsi, une fonction strictement monotone sur $I$ s'annule au plus une fois sur $I$ ; si de plus elle est continue et change de signe, elle s'annule exactement une fois.
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+Montrer que l'équation $f(x)=0$ (fonction précédente) admet exactement une solution sur $\R$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$f$ est dérivable sur $\mathbb{R}$ comme produit et somme de fonctions dérivables. Pour tout $x \in \mathbb{R}$ :
+$$f'(x)= \e^{-x} - (x-1)\e^{-x} = (2-x)\e^{-x}$$
+La fonction exponentielle étant à valeurs strictement positives, $f'(x)$ est du signe de $2-x$.  
+Ainsi $f'(x) > 0$ sur $]-\infty\,; \, 2[$ : $f$ est strictement croissante sur $]-\infty\,; \, 2]$ ; et $f'(x) < 0$ sur $]2 \, ; \,+\infty[$ : $f$ est strictement décroissante sur $[2 \, ; \,+\infty[$.  
+La fonction $f$ admet donc un maximum en $2$ qui vaut $f(2) = \e^{-2} + 1 >0$.
+
+* Sur $]-\infty \, ; \, 2]$, $f$ est continue, strictement croissante, $\lim\limits_{x \to -\infty} f(x) = -\infty$ et $f(2) > 0$ : d'après le théorème de la bijection (ci-dessous), l'équation $f(x) = 0$ y admet une unique solution $\alpha$.
+* Sur $[2 \, ; \, +\infty[$, la fonction $f$ est strictement décroissante avec $\lim\limits_{x \to + \infty} f(x) = 1$, donc pour tout réel $x \geqslant 2$, $f(x) > 1$ : l'équation $f(x)=0$ n'admet aucune solution sur $[2\, ;\, +\infty[$.
+
+Ainsi $f(x)=0$ admet une unique solution sur $\R$. 
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Théorème de la bijection (corollaire du TVI)</span><br>
+
+Si $f$ est une fonction continue et strictement monotone sur un intervalle $I$, alors pour tout réel $k$ appartenant à $f(I)$ (intervalle dont les bornes sont les limites ou les valeurs de $f$ aux bornes de $I$), l'équation $f(x)=k$ admet une unique solution dans $I$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Soient $I$ un intervalle et $f$ une fonction continue sur $I$ : $f(I)$ est un intervalle, mais $I$ et $f(I)$ ne sont pas forcément de même nature.  
+Par exemple, la fonction $f(x)= \dfrac{2}{x^2+1}$ définie sur $]-\infty\,;\, +\infty[$ est à valeurs dans $]0\,;\,2]$. 
+
+
+Cependant (théorème admis), si $I = [a\,;\,b]$ est un intervalle fermé borné, alors $f(I)$ est un intervalle fermé borné : $f([a\,;\,b]) = [m\,;\,M]$, où $m$ et $M$ sont le minimum et le maximum de $f$ sur $[a\,;\,b]$.
+:::

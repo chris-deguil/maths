@@ -1,0 +1,31 @@
+---
+title: "Chapitre 6 : Continuité d'une fonction"
+description: "Fonction continue, théorème des valeurs intermédiaires, dichotomie, suites récurrentes"
+chapter-order: 6
+order: 6
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Contenus :</span><br>
+
+- Fonction continue en un point (définition par les limites), sur un intervalle. Toute fonction dérivable est continue.
+- Image d’une suite convergente par une fonction continue.
+- Théorème des valeurs intermédiaires. Cas des fonctions continues strictement monotones.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Capacités attendues :</span><br>
+
+- Étudier les solutions d’une équation du type $f(x)=k$ : existence, unicité, encadrement.
+- Pour une fonction continue $f$ d’un intervalle dans lui-même, étudier une suite définie par une relation de récurrence $u_{n+1}=f(u_n)$.
+- Programmer la méthode de dichotomie.
+:::

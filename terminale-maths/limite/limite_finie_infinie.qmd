@@ -1,0 +1,110 @@
+---
+title: "Limite finie en l'infini"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Limite finie en $+\\infty$ et en $-\\infty$, unicité de la limite"
+order: 3
+---
+
+
+## Limite finie
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Soit $l \in \mathbb{R}$ et $f$ une fonction définie sur $D_f$.  
+On dit que $f$ admet une limite finie $l$ en $+\infty$ (resp. $-\infty$) et on note $$\lim_{x \to +\infty} f(x)= l \quad \left( \text{resp. } \lim_{x \to -\infty} f(x)= l\right)$$
+lorsque :
+$$\forall \epsilon > 0, \, \exists x_0 \in \mathbb{R}, \,\forall x \in D_f, \, (x \geqslant x_0 \Rightarrow |f(x)-l| \leqslant \epsilon) \quad \left(\text{resp. } (x \leqslant x_0 \Rightarrow |f(x)-l| \leqslant \epsilon) \right) $$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Illustration : </span><br>
+Soit $f:x \longmapsto (2x+3)\e^{-0{,}63x}-2$, qui admet $-2$ pour limite en $+\infty$ : pour tout $\epsilon > 0$, la courbe est dans la bande comprise entre les droites d'équations $y = -2-\epsilon$ et $y = -2+\epsilon$ à partir d'une certaine abscisse $x_0$.
+
+<div style="text-align: center;">
+  <img src="../../image/terminale/Chap4_Limite_figure2.png" style="width: 40%; margin-right: 20px;">
+  <img src="../../image/terminale/Chap4_Limite_figure3.png" style="width: 40%;">
+</div>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Unicité de la limite</span>
+
+Soit $f$ une fonction admettant une limite finie $l$ en $\pm \infty$.  
+Alors le réel $l$ est unique ; ce nombre est appelé la limite de $f$ en $\pm \infty$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On fait la démonstration en $+\infty$. On suppose par l'absurde qu'il existe deux limites distinctes $l$ et $l'$.  
+Par définition on a :
+$$\forall \epsilon > 0, \, \exists x_0 \in D_f, \,\forall x \in D_f, \, (x \geqslant x_0 \Rightarrow |f(x)-l| \leqslant \epsilon)$$
+et 
+$$\forall \epsilon > 0, \, \exists x_1 \in D_f, \,\forall x \in D_f, \, (x \geqslant x_1 \Rightarrow |f(x)-l'| \leqslant \epsilon)$$
+Soit alors $\epsilon = \dfrac{|l-l'|}{4}$ et $x_{max} = \max(x_0,x_1)$.  
+Ainsi pour tout réel $x \geqslant x_{max}$ :
+$$|l-l'| = |f(x)-l' - (f(x)-l)| \leqslant |f(x)-l'| + |f(x)-l| \leqslant \dfrac{|l-l'|}{4} + \dfrac{|l-l'|}{4} = \dfrac{|l-l'|}{2}$$
+Ainsi $|l - l'| \leqslant \dfrac{|l-l'|}{2}$, donc $|l - l'| \leqslant 0$, ce qui est impossible puisque $l \neq l'$ : d'où l'unicité de la limite.
+
+</details>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+Soit $f:x \longmapsto 2+\dfrac{1}{x}$ définie sur $\mathbb{R}^*$.  
+Démontrer que $$\lim_{x \to + \infty} f(x) = 2$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Soit $\epsilon > 0$ et $x_0 = \dfrac{1}{\epsilon} > 0$.  
+La fonction inverse étant décroissante sur $\mathbb{R}^*_+$, pour tout $x > 0$ :
+$$x \geqslant x_0 \Rightarrow 0 < \dfrac{1}{x} \leqslant \dfrac{1}{x_0} = \epsilon \Rightarrow |f(x) - 2| = \dfrac{1}{x} \leqslant \epsilon.$$
+Ainsi, par définition, $\lim_{x \to +\infty} f(x) = 2$.
+
+</details>
+
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+On considère la fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \cos(\pi x)$. Montrons qu'elle n'admet pas de limite en l'infini.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Supposons par l'absurde que la fonction admette une limite $l$ en $+\infty$ : $$\lim_{x \to +\infty} \cos( \pi x) = l$$
+Alors, pour toute suite $(x_n)$ tendant vers $+\infty$, la suite $(\cos(\pi x_n))$ tend vers $l$ (composition).
+
+* On considère $x_n = 2n$, alors $\cos(\pi x_n) = \cos(2 \pi n) = 1$, ainsi $$\lim_{n \to +\infty} \cos(2 n \pi) = 1.$$
+* On considère $y_n = 2n+1$, alors $\cos(\pi y_n) = \cos(2 \pi n +\pi) = \cos(\pi) = -1$, ainsi $$\lim_{n \to +\infty} \cos(2 n \pi + \pi) = -1.$$
+
+On aurait donc $l = 1$ et $l = -1$, ce qui est impossible : la fonction n'admet pas de limite en $+\infty$.
+
+</details>
+
+:::
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admise) : </span>
+
+On considère $n \in \mathbb{N}^*$.
+$$\lim_{x \to +\infty} \dfrac{1}{x^n}= 0  \qquad \lim_{x \to + \infty} \dfrac{1}{\sqrt{x}}= 0    \qquad \qquad \lim_{x \to - \infty} \dfrac{1}{x^n} = \begin{cases}
+0^+, \text{ si } n \text{ pair}\\
+0^-, \text{ si } n \text{ impair}
+\end{cases} $$
+:::
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+<div style="text-align: center;">
+  <img src="../../image/terminale/Chap4_Limite_figure4.png" style="width: 49%;">
+</div>
+
+On parle de $0^+$ et $0^-$ : il s'agit de préciser si l'on s'approche de $0$ par des valeurs supérieures ($0^+$, valeurs positives) ou par des valeurs inférieures ($0^-$, valeurs négatives).
+:::

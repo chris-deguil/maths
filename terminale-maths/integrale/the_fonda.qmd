@@ -1,0 +1,123 @@
+---
+title: "Théorème fondamental de l'analyse"
+description: "Théorème fondamental de l'analyse (démontré pour une fonction monotone), calcul d'intégrales"
+format:
+  html:
+    toc: true
+    number-sections: false
+order: 3
+---
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Théorème fondamental de l'analyse</span><br>
+
+Soit $f$ une fonction continue et positive sur un intervalle $[a~;~b]$.  
+Soit $F$ la fonction définie sur $[a~;~b]$ par  
+$$F(x) = \int_{a}^{x}f(t)\dd t$$
+Alors $F$ est dérivable sur $[a~;~b]$, et pour tout $x \in [a~;~b]$, $F'(x) = f(x)$ : $F$ est la primitive de $f$ sur $[a~;~b]$ qui s'annule en $a$.
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On fait la démonstration dans le cas où $f$ est croissante. Soit $x_0 \in [a\,;\,b]$ et $h > 0$ tel que $x_0 + h \in [a\,;\,b]$.  
+Par soustraction des aires, $$\mathscr{A}=F(x_0+h)-F(x_0) = \int_{a}^{x_0+h} f(t) \dd t - \int_a^{x_0} f(t) \dd t = \int_{x_0}^{x_0+h} f(t) \dd t$$
+$f$ étant croissante sur $[x_0 \, ; \, x_0+h]$, pour tout $t \in [x_0 \, ; \, x_0+h]$,  $$f(x_0) \leqslant f(t) \leqslant f(x_0+h)$$
+L'aire $\mathscr{A}$ est donc comprise entre celles de deux rectangles de largeur $h$ ; d'où, en divisant par $h > 0$ :
+$$
+\begin{aligned}
+f(x_0) \times h \leqslant \mathscr{A} \leqslant f(x_0+h) \times h 
+&\Longleftrightarrow 
+f(x_0) \leqslant \frac{\mathscr{A}}{h} \leqslant f(x_0+h) \\
+& \Longleftrightarrow f(x_0) \leqslant \frac{F(x_0+h)-F(x_0)}{h} \leqslant f(x_0+h)
+\end{aligned}
+$$
+Ainsi, par continuité de $f$ en $x_0$ ($\lim\limits_{h \to 0} f(x_0 + h) = f(x_0)$) et d'après le théorème d'encadrement :
+$$\lim_{h \to 0} \frac{F(x_0+h)-F(x_0)}{h} = f(x_0)$$
+De plus, l'aire d'un segment étant nulle, on a bien $F(a)=0$.  
+*On obtient des résultats identiques pour $h<0$ et pour $f$ décroissante.*
+
+</details>
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+- La variable d'intégration ($t$) doit être différente de la variable $x$ de la fonction $F$.
+- Si la fonction $f$ est positive, alors $F$ est croissante. En effet $F(x)$ correspond à l'aire comprise entre la courbe représentative de la fonction $f$, l'axe des abscisses et les droites d'équation $t=a$ et $t=x$.  
+Donc si $x$ augmente, l'aire sous la courbe augmente : $F$ est croissante (ce que confirme $F' = f \geqslant 0$).
+- Ce théorème justifie pour une fonction continue et positive, l'existence de primitives.
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+Soit $f$ la fonction définie sur l'intervalle $[-1 ; 4]$ par $f(x)= -\dfrac{1}{2}x+\dfrac{5}{2}$. <br>
+$f$ est continue et positive sur $[-1\,;\,4]$ ($f(4) = \dfrac{1}{2} > 0$ et $f$ décroissante). La primitive de $f$ s'annulant en $-1$ est $$F(x) = - \frac{1}{4}x^2+ \frac{5}{2}x + \frac{11}{4}$$
+(on vérifie que $F(-1) = -\frac{1}{4} - \frac{5}{2} + \frac{11}{4} = 0$). Donc, pour tout $x \in [-1 \, ; \, 4]$,  $$\int_{-1}^x f(t) \dd t = - \frac{1}{4}x^2+ \frac{5}{2}x + \frac{11}{4}$$
+
+:::
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soit $f$ une fonction continue  et positive sur un intervalle $[a~;~b]$ et soit $F$ une de ses primitives, alors 
+$$\int_{a}^{b}f(x)\dd x = F(b) - F(a)$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On note $G$ la primitive de $f$ s'annulant en $a$ : $G(x) = \int_a^x f(t) \dd t$, donc $\int_a^b f(t) \dd t = G(b)$.  
+Soit $F$ une primitive de $f$ sur $[a\,;\,b]$ ; il existe un réel $k$ tel que $F=G+k$, d'où $F(a)=G(a) + k = k$ et $G(b)= F(b)-k = F(b)- F(a)$.  
+Ainsi $$\int_a^b f(t) \dd t  = F(b) - F(a)$$
+On note aussi $F(b) - F(a) = \Bigl[F(x)\Bigr]_a^b$.
+
+</details>
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Le choix de la primitive $F$ n'influe pas sur la valeur de l'intégrale (la constante s'élimine dans la différence).
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+Soit la fonction $f$  définie par 
+$$f(x) = \dfrac{7x}{\left(x^2+3\right)^2}+1$$
+Cette fonction étant continue sur $[-1~;~2]$ elle y admet des primitives.<br>
+Soit $F$ l'une d'elles.
+
+- Déterminons une primitive de $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+L'objectif est de faire apparaître $f$ comme « une dérivée connue ».
+On pose pour tout $x \in [-1~;~2]$, $u(x) = x^2+3$, ainsi $u'(x) = 2x$.<br>
+Ainsi 
+$$f(x) = \dfrac{7x}{\left(x^2+3\right)^2}+1 = 7 \times \dfrac{\frac{1}{2} (2x)}{\left(x^2+3\right)^2}+1 = 7 \times \dfrac{\frac{1}{2} u'(x)}{(u(x))^2}+1$$
+Donc 
+$$f=\frac{7}{2} \dfrac{u'}{u^2} + 1$$
+Or une primitive de $\dfrac{u'}{u^2}$ est $-\dfrac{1}{u}$.  
+Ainsi, pour tout $x \in [-1~;~2]$, 
+$$F(x) = -\dfrac{7}{2} \times \dfrac{1}{x^2+3}+x$$
+</details>
+
+- Déterminons l'aire sous la courbe sur $[-1\,;\,2]$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+La fonction $f$ est positive sur $[-1~;~2]$ (pour $x \in [-1\,;\,0]$, $\dfrac{7x}{(x^2+3)^2} \geqslant -\dfrac{7}{9} > -1$), donc l'aire, exprimée en unités d'aire, du domaine compris entre la courbe $\mathscr{C}_f$, l'axe des abscisses et les droites d'équation $x=-1$ et $x=2$ est :
+$$
+\begin{split} 
+\displaystyle\int_{-1}^{2} \dfrac{7x}{\left(x^2+3\right)^2}+1~ \dd x & =F(2) - F(-1) \\
+&=\left(2-\dfrac{7}{14}\right)-\left(-1-\dfrac{7}{8}\right) = \dfrac{3}{2} + \dfrac{15}{8}\\
+&=\dfrac{27}{8}\\
+\end{split}
+$$
+Ainsi l'aire sous la courbe est exactement de $\frac{27}{8}$ u.a.
+</details>
+:::

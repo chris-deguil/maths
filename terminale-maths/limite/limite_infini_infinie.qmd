@@ -1,0 +1,121 @@
+---
+title: "Limite infinie en l'infini"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Notion de limite, limite infinie en $+\\infty$ et en $-\\infty$"
+order: 2
+---
+
+
+## Notion de limite en l'infini
+::: {.bloc .rem}
+<span class="bloc-titre">Cadre : </span><br>
+On considère une fonction $f$ définie sur un ensemble $D_f$, contenant un intervalle de la forme $[a \, ; \, +\infty[$ (ou $]-\infty \, ; \, a]$).
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+**La limite** d’une fonction $f$ en $+\infty$ (resp. $-\infty$), si elle existe, décrit le comportement de $f(x)$ quand $x$ prend des valeurs de plus en plus grandes (resp. de plus en plus grandes en valeur absolue et négatives) : $f(x)$ peut se rapprocher d'un réel, ou devenir aussi grand (ou aussi petit) que l'on veut.
+
+On la note $$\lim_{x \to +\infty} f(x) \quad \text{ (resp. }\lim_{x \to -\infty} f(x) \text{ )}$$
+
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+<div style="text-align: center;">
+  <img src="../../image/terminale/Chap4_Limite_figure1.png" style="width: 50%;">
+</div>
+
+Intuitivement :
+$$\lim_{x \to +\infty} \frac{1}{x} = 0 \,\,\, \text{ et } \,\,\, \lim_{x \to +\infty} x^2 = + \infty$$
+
+* En effet, plus $x > 0$ devient grand, plus le quotient $\dfrac{1}{x}$, positif, se rapproche de $0$.
+* Plus $x$ devient grand, plus $x^2$ devient grand !
+
+:::
+
+
+## Limite infinie
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Soit $f$ une fonction définie sur $D_f$.  
+On dit que $f$ tend vers $+\infty$ (resp. $-\infty$) lorsque $x$ tend vers $+\infty$ et on note $$\lim_{x \to +\infty} f(x)= + \infty \quad \left( \text{resp. } \lim_{x \to +\infty} f(x)= -\infty \right)$$
+lorsque 
+$$\forall A \in \mathbb{R}, \, \exists x_0 \in \mathbb{R}, \, \forall x \in D_f, \, (x \geqslant x_0 \Rightarrow f(x) \geqslant A) \quad \left( \text{resp. } f(x) \leqslant A \right) $$
+:::
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> La racine carrée </span></div>
+
+Montrer que $$\lim_{x \to + \infty} \sqrt{x} = + \infty$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On note $f(x) = \sqrt{x}$ pour $x \geqslant 0$. Soit $A$ un réel ; il suffit de traiter le cas $A > 0$ (si $A \leqslant 0$, tout $x \geqslant 0$ convient).  
+La fonction racine carrée étant croissante sur $[0\,;\,+\infty[$, $x \geqslant A^2 \Rightarrow \sqrt{x} \geqslant \sqrt{A^2} = A$.  
+En prenant $x_0= A^2$, on a déterminé un réel $x_0$ tel que :
+$$\forall x \in [0\,;\,+\infty[, \, (x \geqslant x_0 \Rightarrow f(x) \geqslant A)$$
+Donc par définition $$\lim_{x \to +\infty} \sqrt{x} = +\infty$$
+</details>
+:::
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Soit $f$ une fonction définie sur $D_f$.  
+On dit que $f$ tend vers $+\infty$ (resp. $-\infty$) lorsque $x$ tend vers $-\infty$ et on note $$\lim_{x \to -\infty} f(x)= + \infty \quad \left( \text{resp. } \lim_{x \to -\infty} f(x)= -\infty \right)$$
+lorsque $$\forall A \in \mathbb{R}, \, \exists x_0 \in \mathbb{R}, \, \forall x \in D_f, \, (x \leqslant x_0 \Rightarrow f(x) \geqslant A) \quad \left( \text{resp. } f(x) \leqslant A \right) $$
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Une fonction affine </span></div>
+
+Soit $f :x \longmapsto ax+b$, où $a < 0$.  
+Montrer que $$\lim_{x \to -\infty} f(x) = + \infty$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Soit $A$ un réel et $x_0 = \dfrac{A-b}{a}$.  
+Pour tout réel $x$, comme $a < 0$ : $x \leqslant x_0 \Rightarrow ax \geqslant a x_0 = A - b \Rightarrow ax + b \geqslant A$.  
+On a donc $$\forall x \in \mathbb{R}, \, (x \leqslant x_0 \Rightarrow f(x) \geqslant A)$$
+Donc par définition $\lim_{x \to -\infty} f(x) = +\infty$.
+</details>
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admise) : </span>
+
+On considère $n \in \mathbb{N}^*$.
+$$\lim_{x \to + \infty} x^n= + \infty  \qquad \lim_{x \to + \infty} \sqrt{x}= + \infty    \qquad \qquad \lim_{x \to - \infty}{x^n} = \begin{cases}
++\infty\, \text{ si } n \text{ pair}\\
+-\infty\, \text{ si } n \text{ impair}
+\end{cases} $$
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Fonction polynôme du second degré</span></div>
+
+On considère une fonction polynôme de degré $2$, $f$ définie sur $\mathbb{R}$ par $f(x)=ax^2+bx+c$ où $a > 0$. 
+
+Montrer que $$\lim_{x \to \pm \infty} f(x)= + \infty$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On considère $A \in \mathbb{R}$, ainsi pour tout réel $x$, $f(x)- A = ax^2+bx+(c-A)$.  
+Ce trinôme admet comme discriminant $\Delta_A=b^2-4a(c-A)$.  
+Pour $A$ suffisamment grand, $c-A < 0$ donc $\Delta_A > 0$.  
+En notant $x_1$ et $x_2$ les deux racines où $x_1 < x_2$, on a, comme $a > 0$, pour tout $x \in ]-\infty\,;\, x_1] \cup [x_2 \,;\, + \infty[$, $f(x)-A \geqslant 0$.  
+Ainsi $x \geqslant x_2 \Rightarrow f(x) \geqslant A$ et $x \leqslant x_1 \Rightarrow f(x) \geqslant A$ : par définition,
+$$\lim_{x \to \pm \infty} f(x)= +\infty$$
+Le tableau des variations complet de $f$ est alors :
+
+<div style="text-align: center;">
+  <img src="../../image/terminale/Chap4_Limite_figure20.png" style="width: 70%;">
+</div>
+</details>
+
+:::

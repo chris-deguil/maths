@@ -2,7 +2,7 @@ body-classes: maths-theme
 format:
   html:
     theme:
-      light: [cosmo, ../assets/css/general.scss]
-      dark:  [darkly, ../assets/css/general.scss]
-    css:
-     - ../assets/css/maths.css
+      light: [cosmo, ../../assets/css/general.scss]
+      dark:  [darkly, ../../assets/css/general.scss]
+    css: 
+     - ../../assets/css/maths.css

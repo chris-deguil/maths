@@ -1,0 +1,34 @@
+---
+title: "Chapitre 4 : Limites de fonctions"
+description: "Limites en l'infini et en un réel, asymptotes, opérations, comparaison, croissances comparées"
+chapter-order: 4
+order: 4
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Contenus :</span><br>
+
+- Limite finie ou infinie d’une fonction en $+\infty$, en $-\infty$, en un point.
+- Asymptote parallèle à un axe ; asymptote oblique.
+- Limites faisant intervenir les fonctions de référence ; opérations sur les limites ; composition.
+- Croissances comparées de $x \longmapsto x^n$ et $\exp$ en $+\infty$.
+- Limites et comparaison.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Capacités attendues :</span><br>
+
+- Déterminer dans des cas simples la limite d’une fonction en un point, en $\pm\infty$, en utilisant les limites usuelles et les opérations sur les limites.
+- Utiliser les croissances comparées.
+- Utiliser des majorations, minorations ou encadrements, la factorisation du terme prépondérant dans une somme.
+- Faire le lien entre l’existence d’une asymptote parallèle à un axe et celle de la limite correspondante.
+:::

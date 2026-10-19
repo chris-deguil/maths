@@ -1,0 +1,118 @@
+---
+title: "Limites des suites géométriques"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Limites des suites géométriques"
+order: 9
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span><br>
+
+Soit $q \in \R$. La suite $(q^n)$ converge si et seulement si $|q| < 1$ ou $q = 1$.
+
+De plus :
+
+* Si $|q| < 1$, alors la suite $(q^n)$ converge vers $0$.
+* Si $q > 1$, la suite $(q^n)$ diverge vers $+\infty$.
+* Si $q = 1$, la suite $(q^n)$ est constante et converge vers $1$.
+* Si $q = -1$, la suite $(q^n)$ diverge (elle prend alternativement les valeurs $1$ et $-1$).
+* Si $q < -1$, la suite $(q^n)$ diverge et n'a pas de limite (ses termes sont alternativement positifs et négatifs, et $\abs{q^n}$ tend vers $+\infty$).
+:::
+
+
+<details class="bloc demo"><summary>Démonstration :</summary>
+
+* **Cas $q > 1$ :** Il existe un réel $a > 0$ tel que $q = 1 + a$.  
+  D'après l'inégalité de Bernoulli (avec $a \geqslant -1$), on a $q^n = (1 + a)^n \geqslant 1 + na$.  
+  Or, $\lim_{n \to +\infty} n = +\infty$, donc $\lim_{n \to +\infty} (na + 1) = +\infty$.  
+  Par comparaison, on en déduit que $\lim_{n \to +\infty} q^n = +\infty$.
+
+* **Cas $|q| < 1$ :** Si $q \neq 0$, alors $\dfrac{1}{|q|} > 1$. D'après le cas précédent, $\lim_{n \to +\infty} \left(\dfrac{1}{|q|}\right)^n = +\infty$.  
+  Ainsi, par passage à l'inverse, $\lim_{n \to +\infty} |q|^n = 0$. Comme $-|q|^n \leqslant q^n \leqslant |q|^n$, le théorème d'encadrement donne $\lim_{n \to +\infty} q^n = 0$.  
+  Si $q = 0$, la suite est nulle à partir du rang $1$ et converge vers $0$.
+
+* **Cas $q = 1$ :** la suite est constante égale à $1$.
+
+* **Réciproquement :** Supposons que la suite $u_n = q^n$ converge vers $l$.  
+  Pour tout $n \in \N$, $u_{n+1} = q^{n+1} = q \times q^n = q u_n$.  
+  Or, la suite $(u_{n+1})$ a les mêmes termes que $(u_n)$ à partir du rang $1$, donc $\lim_{n \to +\infty} u_{n+1} = l$, et par produit $\lim_{n \to +\infty} q u_n = ql$.  
+  On en déduit que $l = ql$, soit $l(1 - q) = 0$, donc $q = 1$ ou $l = 0$.  
+  Si $l = 0$ et $\abs{q} \geqslant 1$, on aurait $\abs{u_n} = \abs{q}^n \geqslant 1$ pour tout $n$, ce qui est impossible pour une suite qui converge vers $0$. Donc $q = 1$ ou $\abs{q} < 1$.
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Comparaison de puissances </span></div>
+
+On considère la suite $(u_n)$ définie par $u_n = \dfrac{2^n + 5^n}{3^n + 4^n}$.  
+Déterminons $\lim_{n \to +\infty} u_n$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout $n \in \N$, on a :
+$$u_n = \dfrac{5^n \left(\left(\dfrac{2}{5}\right)^n + 1\right)}{4^n \left(\left(\dfrac{3}{4}\right)^n + 1\right)} = \left(\dfrac{5}{4}\right)^n \dfrac{\left(\dfrac{2}{5}\right)^n + 1}{\left(\dfrac{3}{4}\right)^n + 1}$$
+
+Comme $\dfrac{2}{5}, \dfrac{3}{4} \in ]-1, 1[$, alors $\lim_{n \to +\infty} \left(\dfrac{3}{4}\right)^n = 0$ et $\lim_{n \to +\infty} \left(\dfrac{2}{5}\right)^n = 0$.  
+On en déduit, par quotient, que :
+$$\lim_{n \to +\infty} \dfrac{\left(\dfrac{2}{5}\right)^n + 1}{\left(\dfrac{3}{4}\right)^n + 1} = 1$$
+
+Or, $\dfrac{5}{4} > 1$, donc $\lim_{n \to +\infty} \left(\dfrac{5}{4}\right)^n = +\infty$.  
+Ainsi, par produit :
+$$\lim_{n \to +\infty} u_n = +\infty$$
+
+</details>
+:::
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Produit de suites </span></div>
+
+On considère les suites $(v_n)$ et $(u_n)$ définies par $u_n = 2n^2 - 3$ et $v_n = \dfrac{1}{n^2}$.  
+Déterminons $\lim_{n \to +\infty} u_n v_n$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout $n \in \N^*$, on a :
+$$u_n v_n = (2n^2 - 3) \times \dfrac{1}{n^2} = \dfrac{n^2 \left(2 - \dfrac{3}{n^2}\right)}{n^2} = 2 - \dfrac{3}{n^2}$$
+
+Or, $\lim_{n \to +\infty} \dfrac{3}{n^2} = 0$.  
+Donc :
+$$\lim_{n \to +\infty} u_n v_n = 2$$
+
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Convergence de la suite exponentielle </span></div>
+
+Montrons que la suite $u_n = \sum_{k=0}^n \dfrac{1}{k!}$ converge.  
+*On pourra montrer successivement que la suite est croissante, puis majorée.*
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+* **Montrons que la suite est croissante :**   
+    Pour tout $n \in \N$,
+  $$u_{n+1} - u_n = \sum_{k=0}^{n+1} \dfrac{1}{k!} - \sum_{k=0}^n \dfrac{1}{k!} = \dfrac{1}{(n+1)!} > 0$$
+  Donc, la suite $(u_n)$ est croissante.
+</details>
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+* **Montrons que la suite est majorée :**   
+  Pour tout $k \geqslant 1$ :
+  $$k! = 1 \times 2 \times 3 \times \dots \times k \geqslant 1 \times 2 \times 2 \times \dots \times 2 = 2^{k-1}$$
+  Donc :
+  $$\dfrac{1}{k!} \leqslant \dfrac{1}{2^{k-1}}$$
+  Par conséquent :
+  $$u_n = 1 + \sum_{k=1}^n \dfrac{1}{k!} \leqslant 1 + \sum_{k=1}^n \dfrac{1}{2^{k-1}} = 1 + \dfrac{1 - \left(\dfrac{1}{2}\right)^n}{1 - \dfrac{1}{2}} = 1 + 2 \left(1 - \dfrac{1}{2^n}\right) = 3 - \dfrac{1}{2^{n-1}}$$
+  
+  Or, $\dfrac{1}{2^{n-1}} > 0$, donc $u_n < 3$ pour tout $n \geqslant 1$ (et $u_0 = 1$) : la suite $(u_n)$ est majorée par $3$.
+
+La suite $(u_n)$ est croissante et majorée, donc elle converge.  
+*(On peut démontrer que $\lim_{n \to +\infty} u_n = \mathrm{e}$.)*
+</details>
+
+:::

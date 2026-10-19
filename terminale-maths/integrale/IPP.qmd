@@ -1,0 +1,216 @@
+---
+title: "Intégration par parties"
+description: "Calcul d'intégrale par IPP, détermination de primitive."
+format:
+  html:
+    toc: true
+    number-sections: false
+order: 6
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span>
+
+Soit $f$ et $g$ deux fonctions dérivables sur $[a\, ; \, b]$, de dérivées continues sur $[a\,;\,b]$. Alors 
+
+$$
+\int_a^b  f(x)  g'(x) \dd x  = \Bigl[f(x)g(x)\Bigr]_a^b - \int_a^b f'(x) g(x) \dd x
+$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On a $(fg)'=f'g +fg'$, donc $fg' = (fg)' - f'g$, ces fonctions étant continues sur $[a\,;\,b]$.  
+Ainsi, en intégrant et par linéarité, on obtient la relation donnée, avec $\displaystyle\int_a^b (fg)'(x) \dd x = \Bigl[f(x)g(x)\Bigr]_a^b$ ($fg$ est une primitive de $(fg)'$).
+
+</details>
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+- Avant d'utiliser l'intégration par parties, il est nécessaire de vérifier que les fonctions considérées sont dérivables et de dérivées continues sur l'intervalle considéré.
+- On considère 
+
+$$
+H(x) = \int_a^x u(t)v'(t) \dd t  = \left[u(t)v(t)\right]_a^x - \int_a^x u'(t) v(t) \dd t
+$$
+
+La fonction $H$ est alors une primitive de $uv'$. On utilise une intégration par parties quand $u'v$ est plus facile à intégrer que $uv'$.
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Calcul d'une intégrale 1</span></div>
+
+Déterminer la valeur de $\int_0^1 x \e^x \dd x$.<br>
+
+En posant 
+
+| $u(x)=x$ | $u'(x)=1$ |
+|----------|-----------|
+| $v'(x)= \e^x$ | $v(x)= \e^x$ |
+
+Les fonctions $u,v,u',v'$ sont continues ; on a, par intégration par parties (I.P.P.) :
+
+$$
+\int_0^1 x \e^x \dd x  = \Bigl[x \e^x\Bigr]_0^1 - \int_0^1 \e^x \dd x  = \Bigl[x \e^x\Bigr]_0^1 - \Bigl[\e^x\Bigr]_0^1 = (\e - 0) - (\e-1) = 1
+$$
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Calcul d'une intégrale 2</span></div>
+
+On pose $I=\displaystyle\int_0^\pi \e^x \cos(x) \dd x$ et $J=\displaystyle\int_0^\pi \e^x \sin(x) \dd x$. Calculer $I$ et $J$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+* Pour $J$, on pose :
+
+| $u(x)=\sin x$ | $u'(x)=\cos x$ |
+|---------------|----------------|
+| $v'(x)= \e^x$ | $v(x)= \e^x$ |
+
+Les fonctions $u$, $v$, $u'$, $v'$ sont continues ; par intégration par parties :
+$$
+J= \Bigl[\e^x \sin x \Bigr]_0^\pi -\int_0^\pi \e^x \cos x \dd x = 0 - I = - I
+$$
+
+* Pour $I$, on pose :
+
+| $u(x)=\cos x$ | $u'(x)=-\sin x$ |
+|---------------|----------------|
+| $v'(x)= \e^x$ | $v(x)= \e^x$ |
+
+Par intégration par parties :
+$$
+I=\Bigl[\e^x \cos x\Bigr]_0^\pi - \int_0^\pi (-\sin x)\,\e^x \dd x = (-\e^\pi - 1) + J
+$$
+
+On obtient alors $I = -\e^\pi - 1 - I$, donc
+$$
+I= -\frac{\e^\pi + 1}{2} \qquad \text{et} \qquad J= -I = \frac{\e^\pi + 1}{2}
+$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Déterminer une primitive</span></div>
+
+On cherche à déterminer la primitive de $\ln$ qui s'annule en $1$.<br>
+Soit, pour $t > 0$, $F(t)= \displaystyle\int_1^t \ln x \dd x$.<br>
+
+En posant 
+
+<div style="text-align:center;">
+
+<table style="border-collapse:collapse; margin:auto;">
+<tr>
+<td style="border:1px solid black; padding:6px;">$u(x)=\ln x$</td>
+<td style="border:1px solid black; padding:6px;">$u'(x)=\frac{1}{x}$</td>
+</tr>
+<tr>
+<td style="border:1px solid black; padding:6px;">$v'(x)= 1$</td>
+<td style="border:1px solid black; padding:6px;">$v(x)= x$</td>
+</tr>
+</table>
+
+</div>
+
+Les fonctions $u,v,u',v'$ sont continues sur $]0\,;\,+\infty[$ ; on a, par intégration par parties (I.P.P.) :
+
+$$
+\int_1^t \ln x  \dd x  = \Bigl[x \ln x\Bigr]_1^t - \int_1^t \frac{1}{x}  \times x \dd x  = t\ln t - \Bigl[x\Bigr]_1^t = t \ln t - t + 1
+$$
+La primitive de $\ln$ qui s'annule en $1$ est donc $t \longmapsto t \ln t - t + 1$.
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Lemme de Riemann-Lebesgue</span></div>
+
+On considère $f$ une fonction croissante sur $[a \, ; \, b]$, dérivable de dérivée continue sur $[a \, ; \, b]$.<br>
+*La croissance est inutile mais elle simplifie le raisonnement.*<br>
+
+Montrons que 
+
+$$
+\lim_{n \to + \infty} \int_a^b f(x) \sin(n x) \dd x = 0
+$$
+
+En posant 
+
+<div style="text-align:center;">
+
+<table style="border-collapse:collapse; margin:auto;">
+<tr>
+<td style="border:1px solid black; padding:6px;">$u(x)= f(x)$</td>
+<td style="border:1px solid black; padding:6px;">$u'(x)= f'(x)$</td>
+</tr>
+<tr>
+<td style="border:1px solid black; padding:6px;">$v'(x)= \sin(n x)$</td>
+<td style="border:1px solid black; padding:6px;">$v(x)= -\frac{1}{n} \cos( n x)$</td>
+</tr>
+</table>
+
+</div>
+
+Les fonctions $u,v,u',v'$ sont continues, on a, par intégration par partie 
+
+$$
+\begin{aligned}
+\int_a^b f(x) \sin(n x) \dd x   &
+= \left[-\frac{1}{n} \cos( n x) f(x) \right]_a^b 
+- \int_a^b -\frac{1}{n} \cos( n x) f'(x) \dd x\\
+& 
+= \frac{f(a) \cos (na)- f(b) \cos (nb)}{n} + \frac{1}{n} \int_a^b f'(x) \cos (n x ) \dd x
+\end{aligned}
+$$
+
+or 
+
+$$
+- \frac{|f(a)|}{n} \leqslant \frac{f(a) \cos ( n a)}{n}  \leqslant \frac{|f(a)|}{n}
+\qquad \text{et} \qquad
+- \frac{|f(b)|}{n} \leqslant \frac{f(b) \cos ( n b)}{n}  \leqslant \frac{|f(b)|}{n}
+$$
+
+Par encadrement, ces deux suites convergent vers $0$.<br>
+
+De plus, pour tout $n \in \N^*$ et tout $x \in [a\,;\,b]$,
+
+$$
+-1 \leqslant \cos (nx) \leqslant 1
+$$
+
+D'où, puisque $f$ est croissante, donc $f'$ positive, on a pour tout $n \in \N^*$ et tout $x \in [a\,;\,b]$,
+
+$$
+-f'(x) \leqslant \cos (nx)f'(x) \leqslant f'(x)
+$$
+
+Donc en passant aux intégrales 
+
+$$
+ \int_a^b -f'(x) \dd x \leqslant \int_a^b f'(x) \cos (nx ) \dd x \leqslant \int_a^b  f'(x) \dd x
+$$
+
+Soit 
+
+$$
+f(a) - f(b) \leqslant \int_a^b f'(x) \cos (nx ) \dd x  \leqslant f(b)- f(a)
+$$
+
+D'où 
+
+$$
+\frac{1}{n} (f(a) - f(b) ) \leqslant \frac{1}{n} \int_a^b f'(x) \cos (nx ) \dd x \leqslant \frac{1}{n}(  f(b)- f(a))
+$$
+
+Par encadrement, cette suite converge vers $0$.<br>
+Par somme, on obtient le résultat.
+
+:::

@@ -102,6 +102,7 @@ website:
             - seconde-maths/intervalles_inegalites/resolution_inequations.qmd
             - seconde-maths/intervalles_inegalites/valeur_absolue_distance.qmd
             - seconde-maths/intervalles_inegalites/valeur_absolue_intervalles.qmd
+            - seconde-maths/intervalles_inegalites/bilan.qmd
 
         - section: "Chapitre 5 : Les racines carrées"
           contents:
@@ -260,11 +261,137 @@ website:
 
 
     - title: "Terminale"
-      logo: assets/images/logo_maths2.png
+      logo: image/logo/logo_maths2.png
       style: docked
       collapse-level: 1
       contents:
         - terminale-maths/index.qmd
+
+        - section: "Chapitre 0 : Logique et raisonnements"
+          contents:
+            - terminale-maths/logique/index.qmd
+            - terminale-maths/logique/historique.qmd
+            - terminale-maths/logique/proposition.qmd
+            - terminale-maths/logique/quantificateurs.qmd
+            - terminale-maths/logique/deduction_contreExemple.qmd
+            - terminale-maths/logique/disjonctions.qmd
+            - terminale-maths/logique/absurde.qmd
+            - terminale-maths/logique/AnalyseSynthese.qmd
+
+        - section: "Chapitre 1 : Récurrence et limites de suites"
+          contents:
+            - terminale-maths/suite1/index.qmd
+            - terminale-maths/suite1/historique.qmd
+            - terminale-maths/suite1/principe.qmd
+            - terminale-maths/suite1/complement.qmd
+            - terminale-maths/suite1/application.qmd
+            - terminale-maths/suite1/convergence_def.qmd
+            - terminale-maths/suite1/convergence_prop.qmd
+            - terminale-maths/suite1/divergence_def.qmd
+            - terminale-maths/suite1/operation_limite.qmd
+            - terminale-maths/suite1/suite_geometrique.qmd
+            - terminale-maths/suite1/suite_recurrente.qmd
+
+        - section: "Chapitre 2 : Généralités sur les fonctions"
+          contents:
+            - terminale-maths/fct1/index.qmd
+            - terminale-maths/fct1/historique.qmd
+            - terminale-maths/fct1/parite.qmd
+            - terminale-maths/fct1/composee.qmd
+            - terminale-maths/fct1/comp_derivation.qmd
+            - terminale-maths/fct1/convexite.qmd
+            - terminale-maths/fct1/convexite_derivee.qmd
+
+        - section: "Chapitre 3 : Vecteurs, droites et plans de l'espace"
+          contents:
+            - terminale-maths/espace1/index.qmd
+            - terminale-maths/espace1/historique.qmd
+            - terminale-maths/espace1/vecteur_espace.qmd
+            - terminale-maths/espace1/repere_espace.qmd
+            - terminale-maths/espace1/droite_plan.qmd
+            - terminale-maths/espace1/position.qmd
+            - terminale-maths/espace1/parallele.qmd
+            - terminale-maths/espace1/representation.qmd
+
+        - section: "Chapitre 4 : Limites de fonctions"
+          contents:
+            - terminale-maths/limite/index.qmd
+            - terminale-maths/limite/historique.qmd
+            - terminale-maths/limite/limite_infini_infinie.qmd
+            - terminale-maths/limite/limite_finie_infinie.qmd
+            - terminale-maths/limite/limite_asymptote.qmd
+            - terminale-maths/limite/limite_en_a.qmd
+            - terminale-maths/limite/limite_en_a_propriete.qmd
+            - terminale-maths/limite/limite_gauche_droite.qmd
+            - terminale-maths/limite/limite_infinie_en_a.qmd
+            - terminale-maths/limite/operations_limites.qmd
+            - terminale-maths/limite/theoreme_comparaison.qmd
+            - terminale-maths/limite/limite_exponentielle.qmd
+
+        - section: "Chapitre 5 : Succession d'épreuves indépendantes, loi binomiale"
+          contents:
+            - terminale-maths/binomiale/index.qmd
+            - terminale-maths/binomiale/historique.qmd
+            - terminale-maths/binomiale/epreuve_independante.qmd
+            - terminale-maths/binomiale/bernoulli1.qmd
+            - terminale-maths/binomiale/bernoulli2.qmd
+            - terminale-maths/binomiale/binomiale1.qmd
+            - terminale-maths/binomiale/binomiale2.qmd
+            - terminale-maths/binomiale/binomiale3.qmd
+
+        - section: "Chapitre 6 : Continuité d'une fonction"
+          contents:
+            - terminale-maths/continuite/index.qmd
+            - terminale-maths/continuite/historique.qmd
+            - terminale-maths/continuite/continuite.qmd
+            - terminale-maths/continuite/operation.qmd
+            - terminale-maths/continuite/tvi.qmd
+            - terminale-maths/continuite/tvi_python.qmd
+            - terminale-maths/continuite/caracterisation.qmd
+
+        - section: "Chapitre 7 : Fonction logarithme népérien"
+          contents:
+            - terminale-maths/Ln/index.qmd
+            - terminale-maths/Ln/historique.qmd
+            - terminale-maths/Ln/definition.qmd
+            - terminale-maths/Ln/variation_limite.qmd
+            - terminale-maths/Ln/propriete.qmd
+            - terminale-maths/Ln/derivation.qmd
+            - terminale-maths/Ln/composition.qmd
+
+        - section: "Chapitre 8 : Produit scalaire et orthogonalité dans l'espace"
+          contents:
+            - terminale-maths/Espace2/index.qmd
+            - terminale-maths/Espace2/ps_espace.qmd
+            - terminale-maths/Espace2/autre_def.qmd
+            - terminale-maths/Espace2/def_norme_propriete.qmd
+            - terminale-maths/Espace2/orthogonalite.qmd
+            - terminale-maths/Espace2/ps_repere.qmd
+            - terminale-maths/Espace2/equat_cart.qmd
+            - terminale-maths/Espace2/distance.qmd
+
+        - section: "Chapitre 9 : Primitives et équations différentielles"
+          contents:
+            - terminale-maths/PrimED/index.qmd
+            - terminale-maths/PrimED/Notion.qmd
+            - terminale-maths/PrimED/Usuelles.qmd
+            - terminale-maths/PrimED/Operations.qmd
+            - terminale-maths/PrimED/Intro_ED.qmd
+            - terminale-maths/PrimED/Generalite.qmd
+            - terminale-maths/PrimED/EquaDiff.qmd
+            - terminale-maths/PrimED/EquaDiff_2.qmd
+            - terminale-maths/PrimED/cauchy.qmd
+
+        - section: "Chapitre 10 : Calcul intégral"
+          contents:
+            - terminale-maths/integrale/index.qmd
+            - terminale-maths/integrale/hist.qmd
+            - terminale-maths/integrale/fct_positive.qmd
+            - terminale-maths/integrale/the_fonda.qmd
+            - terminale-maths/integrale/fct_continue_def.qmd
+            - terminale-maths/integrale/fct_continue_prop.qmd
+            - terminale-maths/integrale/IPP.qmd
+            - terminale-maths/integrale/aire.qmd
 
 format:
   html:

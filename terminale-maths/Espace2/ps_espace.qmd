@@ -1,0 +1,83 @@
+---
+title: "Définition du produit scalaire dans l'espace"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Définition trigonométrique, vecteurs colinéaires, carré scalaire"
+order: 1
+---
+
+
+## Définition trigonométrique
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Soient $\vec{u}$ et $\vec{v}$ deux vecteurs de l'espace. Le produit scalaire de $\vec{u}$ et $\vec{v}$ dans l'espace est le nombre noté $\vec{u} \cdot \vec{v}$ qui est égal au produit scalaire des vecteurs $\vec{u}$ et $\vec{v}$ vus comme des vecteurs d'un même plan, c'est-à-dire :
+
+* $0$ si l'un des vecteurs $\vec{u}$ ou $\vec{v}$ est nul ;
+* $\lVert \vec{u} \rVert \times \lVert \vec{v} \rVert \times \cos(\theta)$ sinon, où $\theta$ est une mesure de l'angle formé par les vecteurs $\vec{u}$ et $\vec{v}$ (en les représentant avec une même origine).
+
+:::
+
+:::{.bloc .rem}
+<span class="bloc-titre">Illustration : </span><br>
+<div style="text-align: center;">
+  <img src="../../image/terminale/Chap8_Espace_II_def_trig.png" style="width: 30%;">
+</div>
+
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+En physique, on appelle « travail d'une force » l'énergie produite par cette force lors d'un déplacement rectiligne de $A$ vers $B$. Il est déterminé par $\ve{F} \cdot \ve{AB}$.
+
+On considère une charrette que l'on tire sur du plat avec une force $\ve{F}$ d'intensité $10$ N, faisant un angle de $60^\circ$ avec le déplacement $\ve{AB}$, sur une distance de $5$ m. Déterminer, en joules, le travail de cette force.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a $W = \ve{F} \cdot \ve{AB} = 10 \times 5 \times \cos(60^\circ) = 10 \times 5 \times 0{,}5 = 25$.  
+Ainsi, le travail est de $25$ J.
+
+</details>
+
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Soient $A$, $B$, $C$, $A'$, $B'$ et $C'$ six points de l'espace tels que $\ve{u}=\ve{AB}=\ve{A'B'}$ et $\ve{v}=\ve{AC}=\ve{A'C'}$, alors :
+$$\ve{u} \cdot \ve{v} = AB \times AC \times \cos\left(\widehat{BAC} \right) \quad \text{et} \quad \ve{u} \cdot \ve{v} = A'B' \times A'C' \times \cos\left(\widehat{B'A'C'} \right)$$
+
+Le produit scalaire ne dépend donc pas du choix des représentants des vecteurs.
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+Soient $\ve{u}$ et $\ve{v}$ deux vecteurs non nuls de l'espace, alors :
+
+1. $\ve{u} \cdot \ve{v} = \norm{u} \times \norm{v}$ si et seulement si $\ve{u}$ et $\ve{v}$ sont colinéaires et de même sens ;
+2. $\ve{u} \cdot \ve{v} = -\norm{u} \times \norm{v}$ si et seulement si $\ve{u}$ et $\ve{v}$ sont colinéaires et de sens contraires.
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+C'est immédiat en appliquant la définition. On démontre le second cas, en notant $\theta \in [0^\circ\,;\,180^\circ]$ une mesure de l'angle entre $\ve{u}$ et $\ve{v}$ :
+
+$\ve{u} \cdot \ve{v} = -\norm{u} \times \norm{v} \Longleftrightarrow \norm{u} \times \norm{v} \cos(\theta) = -\norm{u} \times \norm{v} \Longleftrightarrow \cos(\theta) = -1$.
+On en déduit alors que $\theta = 180^\circ$, donc que les vecteurs sont colinéaires et de sens contraires.
+
+</details>
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+Le produit scalaire du vecteur $\ve{u}$ par lui-même, noté $\ve{u}^2$, est appelé carré scalaire de $\ve{u}$.  
+On a $\ve{u}^2 = \norm{u}^2$ (car $\cos 0 = 1$).
+
+:::

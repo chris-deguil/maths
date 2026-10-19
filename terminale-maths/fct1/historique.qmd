@@ -1,0 +1,60 @@
+---
+title: "Historique sur les fonctions : parité, composition, convexité"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Bref historique de la notion de fonction, de la parité, de la composition et de la convexité"
+order: 1
+---
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Sur la notion de fonction : </span><br>
+Les premières traces du concept fonctionnel remontent à l'Antiquité grecque. Chez Euclide (vers -300 av. J.-C.), les *Éléments* contiennent déjà des relations implicites entre grandeurs géométriques : l'aire d'un carré en fonction de son côté, ou la circonférence en fonction du rayon. Apollonius de Perga (vers -262 à -190 av. J.-C.) étudie les sections coniques et établit des relations entre les coordonnées des points, préfigurant ainsi les fonctions quadratiques. On trouve aussi les tables de cordes établies par Hipparque (vers -150) et Ptolémée (vers 100-170) pour modéliser les phénomènes astronomiques : ce sont les ancêtres des fonctions sinus et cosinus, qui fourniront plus tard les exemples les plus naturels de fonctions impaire (sinus) et paire (cosinus).  
+
+<br>
+
+
+Au III<sup>e</sup> siècle, Diophante d'Alexandrie explore des relations arithmétiques qui s'apparentent à des fonctions définies sur les entiers. Ces travaux, bien qu'ils ne formalisent pas encore le concept de fonction, révèlent une intuition naissante des correspondances entre ensembles de nombres.  
+
+La Renaissance marque un tournant décisif avec l'émergence de l'algèbre symbolique. François Viète (1540-1603) introduit l'usage systématique des lettres pour représenter les inconnues et les paramètres, permettant d'exprimer des relations générales entre variables.  
+
+René Descartes (1596-1650) révolutionne l'approche avec l'introduction de la géométrie analytique dans sa *Géométrie* (1637) : une courbe plane est décrite par une équation reliant deux variables $x$ et $y$ (à chaque valeur de l'abscisse correspond une ou plusieurs valeurs de l'ordonnée). La fonction commence alors à être envisagée comme une relation entre deux ensembles de nombres.  
+
+Pierre de Fermat (1601-1665) développe parallèlement des méthodes analytiques similaires et introduit des techniques de calcul différentiel primitives pour déterminer les tangentes et les extrema, préfigurant l'analyse des propriétés locales des fonctions.  
+
+Gottfried Wilhelm Leibniz (1646-1716) invente le terme "fonction" (*functio*) en 1694 pour désigner toute quantité qui varie d'un point à l'autre d'une courbe. Il développe simultanément le calcul différentiel et intégral, posant les bases de l'analyse moderne. Sa notation $dy/dx$ pour la dérivée et le symbole $\int$ pour l'intégrale marquent durablement la discipline.  
+
+Johann Bernoulli (1667-1748) et son frère Jakob (1654-1705) enrichissent considérablement la théorie naissante. C'est Johann qui propose en 1718 la définition moderne : "Une fonction d'une grandeur variable est une expression analytique composée de quelque manière que ce soit de cette grandeur variable et de nombres ou grandeurs constantes."  
+
+Leonhard Euler (1707-1783) systématise l'usage de la notation $f(x)$ dans son *Introductio in analysin infinitorum* (1748) et distingue clairement les fonctions explicites des fonctions implicites. Dans ce même ouvrage, il définit les fonctions paires (*functiones pares*), qui vérifient $f(-x)=f(x)$, et les fonctions impaires (*functiones impares*), qui vérifient $f(-x)=-f(x)$, en référence aux puissances paires et impaires de $x$.  
+
+Ces propriétés de parité trouvent leur justification théorique dans l'étude des transformations géométriques et physiques avant d’être généralisées en algèbre et en analyse. Elles deviendront un outil puissant pour l'étude des intégrales et des séries de Fourier.  
+:::
+
+::: {.bloc .rem}
+La composition de fonctions, bien qu'utilisée intuitivement depuis l'Antiquité (chez Euclide, dans les constructions successives), est formalisée au XVIII<sup>e</sup> siècle. À la Renaissance déjà, l’essor de la trigonométrie et de l’algèbre conduit à enchaîner des opérations (comme appliquer un logarithme après une multiplication).  
+
+Euler en donne la première formalisation explicite : dans ses travaux sur les substitutions trigonométriques et les transformations d'intégrales, il manipule systématiquement des fonctions composées et introduit la notation $f(g(x))$.  
+
+La règle de dérivation d'une fonction composée était déjà connue de Leibniz (1676). Joseph-Louis Lagrange (1736-1813), dans sa *Théorie des fonctions analytiques* (1797), introduit la notation $f'$ et écrit cette règle de dérivation en chaîne sous la forme :  
+$$(f \circ g)'(x) = f'(g(x)) \cdot g'(x).$$  
+Cette règle devient fondamentale en analyse.  
+:::
+
+::: {.bloc .rem}
+La convexité trouve ses origines dans les travaux d’Archimède (III<sup>e</sup> siècle av. J.-C.) sur les aires et volumes, lorsqu’il compare une corde à l’arc de cercle qui la recouvre, esquissant l’idée qu’une courbe peut "se situer au-dessus de ses cordes". Cette intuition est reprise à la Renaissance dans l’étude des trajectoires et des miroirs paraboliques.  
+
+Avec le calcul différentiel, au XVIII<sup>e</sup> siècle, le sens de la concavité d'une courbe et ses points d'inflexion sont reliés au signe de la dérivée seconde (L'Hospital, Euler, Lagrange).  
+
+Au XIX<sup>e</sup> siècle, Augustin Cauchy (1789-1857) démontre l'inégalité arithmético-géométrique, et la convexité prend une place centrale dans l’étude des inégalités. La définition moderne d'une fonction convexe est donnée par Johan Jensen (1859-1925) en 1906, avec l'inégalité qui porte son nom. Ce lien entre propriétés géométriques et analytiques devient un outil fondamental de l’analyse moderne.  
+
+Au XX<sup>e</sup> siècle, la convexité est appliquée à l’optimisation et à la théorie des jeux avec les travaux de John von Neumann (1903-1957).  
+:::
+
+::: {.bloc .rem}
+L'évolution de la notion de fonction illustre la progression de l'abstraction mathématique : d'une conception initialement géométrique et intuitive, elle évolue vers une formalisation algébrique puis analytique, pour finalement s'épanouir dans le cadre général de la théorie des ensembles et de l'analyse fonctionnelle moderne.  
+
+Les propriétés spécifiques étudiées — parité, composition, convexité — reflètent cette évolution : nées d'observations géométriques ou numériques particulières, elles trouvent leur expression algébrique puis leur justification théorique dans le cadre unifié de l'analyse moderne. Elles constituent aujourd'hui des outils fondamentaux tant en mathématiques pures qu'appliquées, de la théorie de l'optimisation à la physique mathématique.  
+:::

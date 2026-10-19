@@ -1,0 +1,164 @@
+---
+title: "Repère de l'espace"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Coordonnées d'un point, coordonnées de vecteurs"
+order: 3
+---
+
+
+### Notion de repère et coordonnées
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : </span>
+
+On appelle **base de l'espace** tout triplet $\left(\ve{i},\ve{j},\ve{k}\right)$ de vecteurs non coplanaires de $\vec{\mathscr{E}}$.  
+On appelle **repère de l'espace**, la donnée d'un quadruplet $\left(O \, ; \, \ve{i},\ve{j},\ve{k}\right)$ où $O$ est un point de $\mathscr{E}$ appelé origine du repère et $\left(\ve{i},\ve{j},\ve{k}\right)$ une base de l'espace.
+:::
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span>
+
+On considère $\left(O \, ; \, \ve{i},\ve{j},\ve{k}\right)$ un repère de l'espace.  
+Pour tout point $M$ de l'espace, il existe un unique triplet $(x \, ; \, y \, ; \, z)$ de réels tel que : 
+$$\ve{OM}=x\ve{i}+y\ve{j}+z\ve{k}$$
+
+1. On dit alors que $M$ a pour coordonnées $(x \, ; \, y \, ; \, z)$ où $x$ est l'**abscisse** de $M$, $y$ son **ordonnée** et $z$ sa **cote**.
+2. Pour tout $\ve{u} \in \vec{\mathscr{E}}$, en notant $M$ le point tel que $\ve{u}=\ve{OM}$, on a $\ve{u}=x\ve{i}+y\ve{j}+z\ve{k}$ : ce sont les coordonnées de $\ve{u}$ dans la base $\left(\ve{i},\ve{j},\ve{k}\right)$. On note alors $\ve{u}\begin{pmatrix}x\\y\\z\end{pmatrix}$ ou $\ve{u}(x \, ; \, y \, ; \, z)$.
+:::
+
+<details class="bloc demo">
+<summary>Démonstration : </summary>
+
+Soit $\ve{w}$ un vecteur de l'espace, $O$ un point de l'espace et $M$ le point de l'espace tel que $\ve{w}=\ve{OM}$. On note $M'$ le projeté de $M$ sur le plan $\left(O \, ; \, \ve{i},\ve{j}\right)$ parallèlement à la droite $\left(O \, ; \, \ve{k}\right)$.  
+On a alors, par la relation de Chasles : 
+$$\ve{OM}=\ve{OM'}+\ve{M'M}$$
+
+* $\ve{M'M}$ est colinéaire à $\ve{k}$, donc il existe un réel $z$ tel que $\ve{M'M}=z\ve{k}$.
+* Comme $M' \in \left(O \, ; \, \ve{i},\ve{j}\right)$, il existe deux réels $x$ et $y$ tels que $\ve{OM'}=x\ve{i}+y\ve{j}$.
+
+D'où l'existence : $\ve{OM}=x\ve{i}+y\ve{j}+z\ve{k}$.  
+Pour l'unicité, supposons $x\ve{i}+y\ve{j}+z\ve{k} = x'\ve{i}+y'\ve{j}+z'\ve{k}$. Si $z \neq z'$, alors $\ve{k} = \dfrac{x'-x}{z-z'}\ve{i}+\dfrac{y'-y}{z-z'}\ve{j}$ et les vecteurs $\ve{i}$, $\ve{j}$, $\ve{k}$ seraient coplanaires, ce qui est exclu. Donc $z = z'$, puis $(x-x')\ve{i} = (y'-y)\ve{j}$ ; $\ve{i}$ et $\ve{j}$ n'étant pas colinéaires, $x = x'$ et $y = y'$.
+
+</details>
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Il existe d'autres types de coordonnées, comme par exemple les coordonnées sphériques (celles utilisées pour repérer un point sur Terre).
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+On considère un cube $ABCDEFGH$.
+
+1. Justifier que $\left(\ve{AB},\ve{AE},\ve{AD}\right)$ est une base de l'espace.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Les points $A$, $B$, $E$ et $D$ ne sont pas coplanaires ($D$ n'appartient pas au plan $(ABE)$ de la face $ABFE$), donc les vecteurs $\ve{AB}$, $\ve{AE}$ et $\ve{AD}$ ne sont pas coplanaires : ils forment une base de l’espace.
+</details>
+
+
+2. Déterminer les coordonnées des vecteurs $\ve{AH}$ et $\ve{AG}$ dans le repère $(A \, ; \, \ve{AB}, \ve{AE}, \ve{AD})$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Dans le repère $\left(A \, ; \, \ve{AB},\ve{AE},\ve{AD}\right)$ :
+
+  * Par décomposition : $\ve{AH} = \ve{AD} + \ve{DH}$. Comme $ABCDEFGH$ est un cube, $\ve{DH} = \ve{AE}$.
+  * Donc $\ve{AH} = 0\ve{AB} + 1\ve{AE} + 1\ve{AD}$. Le vecteur $\ve{AH}$ a pour coordonnées $(0 \, ; \, 1 \, ; \, 1)$.
+  * De même, $\ve{AG} = \ve{AB} + \ve{BC} + \ve{CG} = \ve{AB} + \ve{AD} + \ve{AE}$. Le vecteur $\ve{AG}$ a pour coordonnées $(1 \, ; \, 1 \, ; \, 1)$.
+
+</details>
+
+:::
+
+
+### Calculs et coordonnées
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : </span>
+
+Soit $\left(O \, ; \, \ve{i},\ve{j},\ve{k}\right)$ un repère de l'espace.  
+On considère $A(x_A \, ; \, y_A \, ; \, z_A)$ et $B(x_B \, ; \, y_B \, ; \, z_B)$ deux points de $\mathscr{E}$, $\ve{u}\begin{pmatrix}x\\y\\z\end{pmatrix}$ et $\ve{v}\begin{pmatrix}x'\\y'\\z'\end{pmatrix}$ deux vecteurs de $\vec{\mathscr{E}}$ et $k \in \mathbb{R}$.  
+Alors :
+
+$$\ve{AB}\begin{pmatrix}x_B-x_A\\y_B-y_A\\z_B-z_A\end{pmatrix} \qquad \ve{u}+\ve{v}\begin{pmatrix}x+x'\\y+y'\\z+z'\end{pmatrix} \qquad k\ve{u}\begin{pmatrix}kx\\ky\\kz\end{pmatrix}$$
+:::
+
+<details class="bloc demo">
+<summary>Démonstration : </summary>
+
+Les démonstrations sont immédiates et reposent uniquement sur la définition des coordonnées d'un point et d'un vecteur dans un repère ainsi que sur la relation de Chasles pour le vecteur $\ve{AB}$.
+
+</details>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+Soit $\left(O \, ; \, \ve{i},\ve{j},\ve{k}\right)$ un repère de l'espace et $A(2 \, ; \, -5 \, ; \, 3)$, $B(-1 \, ; \, 3 \, ; \, 1)$ deux points de l'espace.
+
+1. Déterminer les coordonnées de $\ve{AB}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+$\ve{AB}\begin{pmatrix}
+-1-2\\
+3-(-5)\\
+1-3
+\end{pmatrix}
+= \begin{pmatrix}
+-3\\8\\-2
+\end{pmatrix}$
+</details>
+
+
+2. Déterminer les coordonnées de $C$ vérifiant $\ve{AC}=2\ve{CB}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+On note $C(x_C \, ; \, y_C \, ; \, z_C)$. On a $\ve{AC}=2\ve{CB}$ si et seulement si :
+$$\left\{\begin{array}{l}
+x_C-2=2(-1-x_C)\\
+y_C-(-5)=2(3-y_C)\\
+z_C-3=2(1-z_C)
+\end{array}\right.
+\Longleftrightarrow
+\left\{\begin{array}{l}
+x_C=0\\
+y_C=\frac{1}{3}\\
+z_C=\frac{5}{3}
+\end{array}\right.$$
+
+Donc $C\left(0\,;\,\frac{1}{3}\,;\,\frac{5}{3}\right)$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+On considère $\ve{u}\begin{pmatrix}1\\1\\1\end{pmatrix}$, $\ve{v}\begin{pmatrix}-1\\1\\0\end{pmatrix}$ et $\ve{w}\begin{pmatrix}1\\0\\1\end{pmatrix}$.  
+Montrer que ces vecteurs ne sont pas coplanaires.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+Les vecteurs $\ve{u}$ et $\ve{v}$ ne sont pas colinéaires (la troisième coordonnée de $\ve{v}$ est nulle, pas celle de $\ve{u}$).  
+Supposons qu'il existe deux réels $\lambda$ et $\mu$ tels que $\ve{w}=\lambda\ve{u}+\mu\ve{v}$. Alors :
+$$
+\left\{\begin{array}{l}
+\lambda-\mu=1\\
+\lambda+\mu=0\\
+\lambda=1
+\end{array}\right.
+\Longleftrightarrow
+\left\{\begin{array}{l}
+\lambda=1\\
+\mu=-1\\
+\lambda-\mu=2=1
+\end{array}\right.$$
+
+La dernière égalité est impossible : un tel couple n'existe pas. Les vecteurs $\ve{u}$, $\ve{v}$ et $\ve{w}$ ne sont donc pas coplanaires ; ils forment une base de l'espace.
+
+</details>
+:::

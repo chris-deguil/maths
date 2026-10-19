@@ -1,0 +1,32 @@
+---
+title: "Chapitre 7 : Fonction logarithme népérien"
+description: "Définition, propriétés algébriques, dérivée, limites et croissances comparées"
+chapter-order: 7
+order: 7
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Contenus :</span><br>
+
+- Fonction logarithme népérien, notée $\ln$, construite comme réciproque de la fonction exponentielle.
+- Propriétés algébriques du logarithme.
+- Fonction dérivée du logarithme, variations.
+- Limites en $0$ et en $+\infty$, courbe représentative. Lien entre les courbes représentatives des fonctions logarithme népérien et exponentielle.
+- Croissance comparée du logarithme népérien et de $x \longmapsto x^n$ en $0$ et en $+\infty$.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Capacités attendues :</span><br>
+
+- Utiliser l’équation fonctionnelle de l’exponentielle ou du logarithme pour transformer une écriture, résoudre une équation, une inéquation.
+- Dans le cadre d’une résolution de problème, utiliser les propriétés des fonctions exponentielle et logarithme.
+:::

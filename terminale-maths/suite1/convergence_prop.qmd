@@ -1,0 +1,242 @@
+---
+title: "Propriétés de convergence"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Convergence monotone, théorème d'encadrement, recherche de seuil"
+order: 6
+---
+
+### Théorème de convergence monotone
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème (admis) : </span><br>
+
+1. Toute suite croissante et majorée converge.
+2. Toute suite décroissante et minorée converge.
+:::
+
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Suite arithmético-géométrique </span></div>
+
+Soit la suite $(u_n)$ définie par $u_{n+1} = \dfrac{1}{2} u_n + 1$ et $u_0 = 4$. Montrons que cette suite converge.
+
+1. Montrons que la suite est minorée par $2$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout $n \in \N$, soit $P_n : u_n \geqslant 2$.
+
+* **Initialisation :** $u_0 = 4 > 2$, donc $P_0$ est vraie.  
+  
+* **Hérédité :**   
+  On suppose qu'à un certain rang $n$ arbitrairement fixé, $P_n$ est vraie, donc $u_n \geqslant 2$.  
+  Montrons alors que $P_{n+1}$ est vraie.  
+  $u_{n+1} = \dfrac{1}{2} u_n + 1 \geqslant \dfrac{1}{2} \times 2 + 1 = 2$.  
+  Ainsi, $P_{n+1}$ est vraie : la propriété est héréditaire.
+
+* **Conclusion :**   
+  $P_0$ est vraie et, pour tout entier $n$, $(P_n \Rightarrow P_{n+1})$ est vraie.  
+
+  On déduit que la suite $(u_n)$ est minorée par $2$.
+</details>
+
+2. Montrons que la suite est décroissante.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout $n \in \N$, on a $u_n \geqslant 2$ d'après la question précédente, donc :
+$$u_{n+1} - u_n = \dfrac{1}{2} u_n + 1 - u_n = -\dfrac{1}{2} u_n + 1 \leqslant -\dfrac{1}{2} \times 2 + 1 = 0.$$
+Donc $u_{n+1} \leqslant u_n$ pour tout $n$ : la suite est décroissante.
+
+</details>
+
+3. Conclure
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+La suite $(u_n)$ est décroissante et minorée par $2$, donc d'après le théorème de convergence monotone, elle converge vers une limite $l \geqslant 2$.
+
+</details>
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+
+Le théorème assure l'existence de la limite mais ne donne aucune information sur sa valeur exacte.
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Suite récurrente et fonction croissante </span></div>
+
+Soit $(u_n)$ la suite définie par $u_0 = -1$ et, pour tout entier naturel $n$, $u_{n+1} = f(u_n)$ où $f$ est la fonction définie sur $[-3\,;\,+\infty[$ par $f(x) = 2\sqrt{x+3}$.  
+
+Montrons que la suite $(u_n)$ converge.
+
+1. Étudier les variations de $f$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Les fonctions $x \mapsto x+3$ (sur $[-3\,;\,+\infty[$) et $x \mapsto 2\sqrt{x}$ (sur $[0\,;\,+\infty[$) étant strictement croissantes, on déduit par composition que la fonction $f$ est strictement croissante sur $[-3\,;\,+\infty[$.
+
+</details>
+
+2. Montrer par récurrence que, pour tout $n \in \N$, $-1 \leqslant u_n \leqslant u_{n+1} \leqslant 6$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout $n \geqslant 0$, on note $P_n : -1 \leqslant u_n \leqslant u_{n+1} \leqslant 6$.
+
+Démontrons que $P_n$ est vraie pour tout $n$ par récurrence.
+
+* **Initialisation :**  
+  $u_0 = -1$ et $u_1 = f(u_0) = 2\sqrt{-1 + 3} = 2\sqrt{2} \approx 2{,}83$, donc $-1 \leqslant u_0 \leqslant u_1 \leqslant 6$.  
+  Ainsi, $P_0$ est vraie et la récurrence est initialisée.
+
+* **Hérédité :**   
+  On suppose que pour un entier $n$ arbitrairement fixé, $P_n$ est vraie.  
+  Montrons que $P_{n+1}$ est vraie.  
+  On sait que $-1 \leqslant u_n \leqslant u_{n+1} \leqslant 6$.  
+  Or, la fonction $f$ étant croissante, on en déduit que
+$$
+f(-1) \leqslant f(u_n) \leqslant f(u_{n+1}) \leqslant f(6).
+$$
+Donc, comme $f(-1) = 2\sqrt{2}$ et $f(6) = 2\sqrt{9} = 6$ :
+$$
+-1 \leqslant 2\sqrt{2} \leqslant u_{n+1} \leqslant u_{n+2} \leqslant 6.
+$$
+Ainsi, $P_{n+1}$ est vraie : la propriété est héréditaire.
+* **Conclusion :**  
+On a $P_0$ vraie et, pour tout $n$, $P_n \Rightarrow P_{n+1}$.  
+On déduit que $P_n$ est vraie pour tout $n \in \N$.
+</details>
+
+3. Conclure  
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+D'après la question précédente, pour tout $n$, $u_n \leqslant u_{n+1}$ et $u_n \leqslant 6$ : la suite $(u_n)$ est croissante et majorée par $6$, donc, d'après le théorème de convergence monotone, elle converge.
+</details>
+
+:::
+
+
+### Théorèmes d'encadrement
+
+::: {.bloc .thm}
+<span class="bloc-titre">Théorème : Théorème d'encadrement</span><br>
+
+Soit $(u_n)$, $(v_n)$ et $(w_n)$ trois suites réelles telles que :
+$$\forall n \geqslant n_0, \, u_n \leqslant v_n \leqslant w_n$$
+Si $\lim_{n \to +\infty} u_n = \lim_{n \to +\infty} w_n = l$, alors $(v_n)$ converge et $\lim_{n \to +\infty} v_n = l$.
+:::
+
+
+<details class="bloc demo"><summary>Démonstration :</summary>
+
+Soit $\epsilon > 0$ quelconque, alors par définition, il existe $n_1, n_2 \in \N$ tels que :
+
+* $\forall n \in \N, \, (n \geqslant n_1 \Rightarrow \abs{u_n - l} < \epsilon)$.  
+  En particulier, $u_n > l - \epsilon$.
+* $\forall n \in \N, \, (n \geqslant n_2 \Rightarrow \abs{w_n - l} < \epsilon)$.  
+  En particulier, $w_n < l + \epsilon$.
+
+Soit $N = \max(n_0, n_1, n_2)$, alors pour tout $n \geqslant N$, on a
+$$
+l - \epsilon < u_n \leqslant v_n \leqslant w_n < l + \epsilon,
+$$
+c'est-à-dire
+$$
+\abs{v_n - l} < \epsilon.
+$$
+D'où le résultat.
+
+</details>
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Somme de termes </span></div>
+
+On considère la suite $(u_n)$ définie, pour $n \geqslant 1$, par
+$$
+u_n = \sum_{k=1}^n \dfrac{1}{n + \sqrt{k}}.
+$$
+Montrons que la suite converge et déterminons sa limite.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+À $n$ fixé, pour tout $k \in \llbracket 1, n \rrbracket$,
+$$
+\dfrac{1}{n + \sqrt{n}} \leq \dfrac{1}{n + \sqrt{k}} \leq \dfrac{1}{n}.
+$$
+D'où, en sommant sur $k$ (on somme $n$ termes), on a
+$$
+\dfrac{n}{n + \sqrt{n}} \leq u_n \leq \dfrac{n}{n}.
+$$
+Ainsi, en divisant le numérateur et le dénominateur du membre de gauche par $n$, on obtient
+$$
+\dfrac{1}{1 + \dfrac{1}{\sqrt{n}}} \leq u_n \leq 1.
+$$
+On sait que $\lim_{n \to +\infty} \dfrac{1}{\sqrt{n}} = 0$, d'où on déduit que
+$$
+\lim_{n \to +\infty} \dfrac{1}{1 + \dfrac{1}{\sqrt{n}}} = 1.
+$$
+Ainsi, d'après le théorème d'encadrement,
+$$
+\lim_{n \to +\infty} u_n = 1.
+$$
+</details>
+
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Suite alternée </span></div>
+
+On considère la suite $(u_n)$ définie, pour $n \geqslant 1$, par $u_n = \dfrac{(-1)^n}{n}$. Déterminer sa limite.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+On a, pour tout $n \in \N^*$,
+$$
+-\dfrac{1}{n} \leqslant u_n \leqslant \dfrac{1}{n}.
+$$
+Or, $\lim\limits_{n \to +\infty} -\dfrac{1}{n} = \lim\limits_{n \to +\infty} \dfrac{1}{n} = 0$.  
+Ainsi, par le théorème d'encadrement, on déduit que
+$$
+\lim_{n \to +\infty} u_n = 0.
+$$
+</details>
+
+:::
+
+
+### Recherche de seuil
+::: {.bloc .ex}
+<div class="bloc-titre">Exemple :<span class="exemp-extra"> Algorithme de seuil </span></div>
+
+Soit $\left(r_n\right)$ la suite géométrique de raison $0{,}96$ et de premier terme $r_0 = 50\,000$.
+Comme $r_0 > 0$ et $0 < 0{,}96 < 1$, la suite $\left(r_n\right)$ est décroissante et converge vers $0$ (voir la page sur les suites géométriques) :
+$$
+\lim_{n \to +\infty} 50\,000 \times 0{,}96^n = 0.
+$$
+
+L'algorithme suivant permet d'obtenir le seuil à partir duquel le terme général de la suite est inférieur à $30\,000$,
+c'est-à-dire de déterminer le plus petit entier $N$ tel que, pour tout entier $n \geqslant N$, $50\,000 \times 0{,}96^n < 30\,000$.
+
+
+```python
+def seuil(s):
+    a = 50000
+    n = 0
+    while a >= s:
+        n = n + 1
+        a = a * 0.96
+    return n
+```
+
+```python
+>>> seuil(30000)
+13
+```
+
+On a $r_{12} \approx 30\,635$ et $r_{13} \approx 29\,410$. La suite étant décroissante, pour tout entier $n \geqslant 13$, $50\,000 \times 0{,}96^n < 30\,000$.
+:::

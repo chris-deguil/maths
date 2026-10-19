@@ -1,0 +1,127 @@
+---
+title: "Théorèmes d'encadrement et de comparaison"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Encadrer ou comparer pour déterminer des limites."
+order: 10
+---
+
+### Théorème d'encadrement
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : </span>
+
+On considère $f$, $g$ et $h$ trois fonctions définies sur $D = [a \, ; \, +\infty[$ telles que $\lim_{x \to +\infty} f(x)= \lim_{x \to +\infty} g(x)=l$.  
+Si dans un voisinage de $+\infty$ on a $f \leqslant h \leqslant g$ alors $$\lim_{x \to +\infty} h(x) = l$$
+On a des théorèmes analogues en $-\infty$ et en un réel $x_0$.
+:::
+
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+Soit $\epsilon >0$ fixé, alors il existe $x_1, x_2 \in \R$ tels que :
+$$\forall x \in D, \, ( x \geqslant x_1 \Rightarrow |f(x)-l| \leqslant \epsilon ) \qquad \text{ et } \qquad \forall x \in D, \, ( x \geqslant x_2 \Rightarrow |g(x)-l| \leqslant \epsilon)$$
+Ainsi pour $x \geqslant x_1$ et $x \geqslant x_2$ on a :
+$$l-\epsilon \leqslant f(x) \qquad \text{ et } \qquad g(x) \leqslant l + \epsilon$$
+De plus, $$\exists x_3\in \R, \, \forall x \in D, \,( x \geqslant x_3 \Rightarrow f(x) \leqslant h(x) \leqslant g(x))$$
+Soit $x_{max} = \max\{x_1, x_2, x_3\}$, alors :
+$$\forall x \geqslant x_{max}, \quad l- \epsilon \leqslant f(x) \leqslant h(x) \leqslant g(x) \leqslant l + \epsilon$$
+c'est-à-dire $|h(x) - l| \leqslant \epsilon$ : c'est la définition de $$\lim_{x \to +\infty} h(x) = l$$
+
+</details>
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+On considère la fonction $f$ définie sur $\mathbb{R}^*_+$ par $f(x)= \dfrac{5\cos(x)}{x}$. Déterminons la limite en $+\infty$.  
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout réel $x>0$ :
+$$-1 \leqslant \cos(x) \leqslant 1 \Longrightarrow -5 \leqslant 5 \cos(x) \leqslant 5 \Longrightarrow \dfrac{-5}{x} \leqslant f(x) \leqslant \dfrac{5}{x}$$
+Or $$\lim_{x \to +\infty} \dfrac{5}{x} = \lim_{x \to +\infty} \dfrac{-5}{x} = 0$$
+On déduit du théorème d'encadrement que $$\lim_{x \to +\infty} f(x) = 0$$
+
+
+</details>
+
+
+<div style="text-align: center;">
+  <img src="../../image/terminale/Chap4_Limite_figure16.png" style="width: 40%;">
+</div>
+
+:::
+
+### Théorème de comparaison
+
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété (admise) : </span>
+
+Soient $f$ et $g$ deux fonctions définies au voisinage de $+\infty$ et $a$ un réel tel que, pour tout $x \in ]a\, ; \, +\infty[$, $f(x) \leqslant g(x)$.
+
+* Si $\lim\limits_{x \to + \infty}f(x) = +\infty$, alors $\lim\limits_{x \to +\infty} g(x) = +\infty$.
+* Si $\lim\limits_{x \to + \infty}g(x) = -\infty$, alors $\lim\limits_{x \to +\infty} f(x) = -\infty$.
+
+On a des théorèmes analogues en $-\infty$ et en un réel $x_0$.
+:::
+
+
+::: {.bloc .ex}
+<span class="bloc-titre">Exemple : </span><br>
+
+1. Soient $f$ et $g$ les fonctions définies respectivement par $f(x)=x+1$ et $g(x)=\e^x$ sur $\R$.  
+Déterminer $$\lim_{x \to + \infty} \e^x$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+La droite d'équation $y=x+1$ est la tangente au point d'abscisse $0$ à la représentation graphique de la fonction exponentielle.  
+La fonction exponentielle étant convexe sur $\mathbb{R}$, on déduit que pour tout réel $x$ :
+$$x+1 \leqslant \e^x$$
+Or $\lim_{x \to +\infty} (x+1) = +\infty$.  
+Par comparaison, on déduit que :
+$$\lim_{x \to +\infty} \e^x = +\infty$$
+</details>
+
+2. En déduire $\lim\limits_{x \to 0^+} \exp\left(\sqrt{1+\dfrac{1}{x^2}}\right)$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$
+\left. \begin{array}{lll}
+\left . \begin{array}{l}
+\lim_{x \to 0^+} \left(1+\dfrac{1}{x^2}\right) = + \infty\\
+\lim_{y \to +\infty} \sqrt{y} = +\infty
+\end{array} \right\} \text{ Par composition } &\lim_{x \to 0^+} \sqrt{1+\dfrac{1}{x^2}} = + \infty&    \\
+&\lim_{y \to +\infty} \e^{y} = +\infty &  \end{array} \right\} \text{ Par composition } \lim_{x \to 0^+} \exp\left(\sqrt{1+\dfrac{1}{x^2}}\right) = + \infty$$
+
+</details>
+
+
+:::
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Prolongement des inégalités</span><br>
+Soient $f$ et $g$ deux fonctions définies au voisinage de $+\infty$ et ayant pour limites respectives (finies) $l$ et $l'$ en $+\infty$.
+
+S'il existe $x_0$ tel que $\forall x \geqslant x_0, \, f(x) < g(x)$ alors 
+
+$$l \leqslant l'$$
+
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+On raisonne par l'absurde : on suppose que $l > l'$ et on pose $\epsilon = \dfrac{l-l'}{2} > 0$.
+
+Par définition des limites, pour $x$ assez grand, on a à la fois $f(x) > l - \epsilon = \dfrac{l+l'}{2}$ et $g(x) < l' + \epsilon = \dfrac{l+l'}{2}$, donc $f(x) > g(x)$ : ceci contredit l'hypothèse $f(x) < g(x)$ pour $x \geqslant x_0$. Donc $l \leqslant l'$.
+
+</details>
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span><br>
+Par passage à la limite, les inégalités strictes deviennent des inégalités larges : par exemple, pour tout $x > 0$, $0 < \dfrac{1}{x}$, mais $\lim\limits_{x \to +\infty} \dfrac{1}{x} = 0$.
+:::

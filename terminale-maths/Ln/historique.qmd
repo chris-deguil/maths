@@ -1,0 +1,49 @@
+---
+title: "Historique du logarithme népérien"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "De Napier à Euler : la naissance du logarithme"
+order: 1
+---
+
+
+::: {.bloc .rem}
+<span class="bloc-titre">Introduction : </span><br>
+L’histoire du logarithme népérien est une aventure intellectuelle fascinante qui s’étend sur près de deux siècles et marque le passage d’un simple outil de calcul manuel à une fonction fondamentale de l’analyse mathématique.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">La genèse : simplifier le calcul (début du XVII^e^ siècle) : </span><br>
+Au tournant du XVII^e^ siècle, les astronomes, navigateurs et ingénieurs — notamment en artillerie — se heurtent à un problème majeur : les calculs de trigonométrie et de balistique nécessitent d’innombrables multiplications et divisions de grands nombres, extrêmement longues et sources d’erreurs. Le calcul de trajectoires de projectiles, par exemple, exige de prendre en compte la vitesse initiale, l’angle de tir, la masse du projectile et la résistance de l’air.
+
+En 1614, le mathématicien écossais John Napier (Jean Néper) publie *Mirifici Logarithmorum Canonis Descriptio*. Son objectif est purement pratique : transformer les multiplications en additions et les divisions en soustractions afin de rendre les calculs rapides et fiables. Il fonde son idée sur une analogie cinématique où deux points se déplacent à des vitesses différentes, établissant ainsi le principe du logarithme. Bien que ses logarithmes ne correspondent pas encore à ceux d’aujourd’hui, son invention révolutionne le calcul scientifique.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Des logarithmes à l’artillerie : </span><br>
+Dès le XVIII^e^ siècle, les logarithmes deviennent un outil central en balistique. Avant l’ère électronique, les officiers d’artillerie doivent résoudre sur le terrain des équations complexes pour atteindre une cible parfois située à plusieurs kilomètres. La résistance de l’air rend la trajectoire d’un obus non parabolique et impose des modèles où la vitesse décroît selon des lois exponentielles ou logarithmiques.
+
+Les artilleurs utilisent alors la règle à calcul, basée sur les propriétés des logarithmes, notamment :
+$$\ln(a \times b) = \ln(a) + \ln(b).$$
+Cette propriété transforme les multiplications compliquées en simples additions de longueurs sur la règle.  
+En 1742, Benjamin Robins invente le pendule balistique et Leonhard Euler complète ses travaux en utilisant les logarithmes pour modéliser la perte de vitesse d’un projectile. Les calculs issus de ces modèles sont rassemblés dans des tables de tir, utilisées jusqu’à la Première Guerre mondiale. Au XIX<sup>e</sup> siècle, c’est pour produire sans erreur de telles tables numériques (logarithmes, navigation, astronomie) que Charles Babbage conçoit ses machines à calculer, ancêtres de nos ordinateurs.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">L’avènement du logarithme naturel : </span><br>
+Vers 1647, Grégoire de Saint-Vincent et Alphonse Antonio de Sarasa remarquent que l’aire sous l’hyperbole d’équation $y = \dfrac{1}{x}$ se comporte comme un logarithme. En 1668, Nicolaus Mercator publie le développement en série de $\ln(1+x)$ et parle de logarithme « naturel ».  
+En 1683, Jacques Bernoulli rencontre, en étudiant les intérêts composés, le nombre
+$$\e = \lim_{n \to +\infty}\left(1+\dfrac{1}{n}\right)^n \approx 2{,}71828.$$
+Leonhard Euler introduit la notation $\e$ (vers 1727-1728) et, dans son *Introductio in analysin infinitorum* (1748), définit le logarithme comme la fonction réciproque de l’exponentielle.
+
+Il en résulte la propriété fondamentale :
+$$\ln'(x) = \dfrac{1}{x}.$$
+Cette propriété simple et profonde explique pourquoi le logarithme népérien est devenu l’outil central de l’analyse mathématique.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Héritage scientifique : </span><br>
+Le symbole « ln » (pour *logarithmus naturalis*) est proposé en 1893 par le mathématicien américain Irving Stringham et s'impose au XX^e^ siècle. Aujourd'hui, le logarithme népérien est partout : de la datation au carbone 14 à la mesure de l'entropie, en passant par les modèles de croissance économique. Il est passé d'une simple astuce pour artilleurs et astronomes à la clé de voûte de la compréhension des phénomènes de croissance continue.
+:::

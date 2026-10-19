@@ -1,0 +1,34 @@
+---
+title: "Chapitre 1 : Récurrence et limites de suites"
+description: "Raisonnement par récurrence, suites majorées, minorées, bornées, limites et convergence"
+chapter-order: 1
+order: 1
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Contenus :</span><br>
+
+- Raisonnement par récurrence.
+- Suites majorées, minorées, bornées.
+- Limite finie ou infinie d’une suite ; limites et comparaison, théorème des gendarmes ; opérations sur les limites.
+- Comportement d’une suite géométrique $(q^n)$.
+- Théorème admis : toute suite croissante majorée (ou décroissante minorée) converge.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Capacités attendues :</span><br>
+
+- Démontrer une propriété par récurrence ; raisonner par récurrence pour établir une propriété d’une suite.
+- Établir la convergence d’une suite, ou sa divergence vers $+\infty$ ou $-\infty$.
+- Déterminer une limite par majoration, minoration, encadrement ou par opérations.
+- Étudier des phénomènes d’évolution modélisables par une suite ; rechercher un seuil à l'aide d'un algorithme.
+:::

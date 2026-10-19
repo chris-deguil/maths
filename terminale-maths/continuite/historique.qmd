@@ -1,0 +1,26 @@
+---
+title: "Historique de la notion de continuité"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "De l'intuition géométrique à la définition de Cauchy et Weierstrass"
+order: 1
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Une notion d'abord intuitive : </span><br>
+Jusqu'au XVIII<sup>e</sup> siècle, la continuité est une idée géométrique : une courbe est « continue » si on peut la tracer d'un seul trait. Gottfried Wilhelm Leibniz (1646-1716) énonce un « principe de continuité » selon lequel la nature ne fait pas de sauts. Pour Leonhard Euler (1707-1783), une fonction est « continue » lorsqu'elle est donnée par une seule expression analytique sur tout son domaine, ce qui est très différent du sens actuel.
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Bolzano et Cauchy : </span><br>
+En 1817, Bernard Bolzano (1781-1848) donne la première démonstration purement analytique du **théorème des valeurs intermédiaires** : une fonction continue qui prend une valeur négative et une valeur positive s'annule entre les deux. Il définit la continuité sans recours à la géométrie.  
+En 1821, dans son *Cours d'analyse*, Augustin-Louis Cauchy (1789-1857) définit une fonction continue comme une fonction pour laquelle « un accroissement infiniment petit de la variable produit toujours un accroissement infiniment petit de la fonction elle-même ».
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">La rigueur de Weierstrass : </span><br>
+Vers 1860, Karl Weierstrass (1815-1897) formule la définition avec les quantificateurs utilisée aujourd'hui : $f$ est continue en $x_0$ si, pour tout $\epsilon > 0$, il existe $\eta > 0$ tel que $|x - x_0| < \eta$ implique $|f(x) - f(x_0)| < \epsilon$. Il montre aussi, à la surprise de ses contemporains, qu'il existe des fonctions continues en tout point mais dérivables en aucun point : la continuité n'implique pas la dérivabilité.
+:::
+
