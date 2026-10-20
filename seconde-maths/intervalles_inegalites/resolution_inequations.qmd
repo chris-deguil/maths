@@ -1,0 +1,121 @@
+---
+title: "Résolution d'inéquations du premier degré"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Résolution algébrique d'inéquations du premier degré, modélisation"
+order: 5
+---
+
+## Résolution d'inéquations du premier degré
+
+::: {.bloc .def}
+<span class="bloc-titre">Définition : Inéquation du premier degré</span>
+
+On appelle **inéquation du premier degré** en $x$  toute inégalité pouvant se ramener à une inégalité de la forme
+$$ax + b > 0 \qquad ; \qquad ax + b \geqslant 0 \qquad ; \qquad ax + b < 0 \qquad \text{ou} \qquad ax + b \leqslant 0$$
+où $a$ et $b$ sont des réels avec $a \neq 0$.
+
+**Résoudre** une inéquation, c'est déterminer l'ensemble des réels $x$
+qui vérifient l'inégalité. Cet ensemble est appelé **ensemble des solutions**.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résoudre une inéquation du premier degré — Calculer</span></div>
+
+Résoudre $2x - 7 \leqslant 5x + 13$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : lorsqu'on multiplie ou divise les deux membres d'une inégalité par un réel **strictement négatif**, le sens de l'inégalité est inversé.*
+
+Pour tout réel $x$, $$
+2x - 7 \leqslant 5x + 13
+\iff 2x - 5x \leqslant 13 + 7
+\iff -3x \leqslant 20
+\underset{-3<0} {\iff} x \geqslant -\frac{20}{3}$$
+
+L'ensemble des solutions est $S = \left[-\dfrac{20}{3}\,;\,+\infty\right[$.
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Résoudre une inéquation avec fractions — Calculer</span></div>
+
+Résoudre $\dfrac{3x+1}{2} - \dfrac{x-4}{3} > 1$ et $3(x-2) \leqslant 2x + 1$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+- Pour tout réel $x$,
+  $$
+  \frac{3(3x+1) - 2(x-4)}{6} > 1
+  \iff 9x + 3 - 2x + 8 > 6
+  \iff 7x + 11 > 6
+  \iff 7x > -5
+  \iff x > -\frac{5}{7}
+  $$
+  $S = \left]-\dfrac{5}{7}\,;\,+\infty\right[$.
+- Pour tout réel $x$,
+  $$3(x-2) \leqslant 2x + 1 \iff 3x - 6 \leqslant 2x + 1 \iff 3x - 2x \leqslant 1 + 6 \iff x \leqslant 7$$
+  $S = ]-\infty\,;\,7]$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Résoudre une inéquation pour comparer — Raisonner</span></div>
+
+Pour $x > 1$, comparer $\dfrac{x+3}{x-1}$ et $2$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout $x > 1$ :
+$$\frac{x+3}{x-1} - 2 = \frac{x+3 - 2(x-1)}{x-1} = \frac{5-x}{x-1}$$
+
+Comme $x - 1 > 0$, le signe dépend de $5 - x$.
+
+- Si $1 < x < 5$ alors $5-x > 0$ donc $\dfrac{x+3}{x-1} > 2$.
+- Si $x = 5$ alors $5-x = 0$ donc $\dfrac{x+3}{x-1} = 2$.
+- Si $x > 5$ alors $5-x < 0$ donc $\dfrac{x+3}{x-1} < 2$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Modéliser par une inéquation — Modéliser, Calculer</span></div>
+
+Une agence de location de voitures propose deux tarifs pour une journée :
+
+- tarif A : $20$ € de forfait, plus $0{,}15$ € par kilomètre parcouru ;
+- tarif B : $0{,}25$ € par kilomètre parcouru, sans forfait.
+
+On note $x$ le nombre de kilomètres parcourus dans la journée.
+
+1. Exprimer, en fonction de $x$, le prix payé avec chacun des deux tarifs.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Avec le tarif A, on paie $20 + 0{,}15x$ euros ; avec le tarif B, on paie $0{,}25x$ euros.
+
+</details>
+
+2. Traduire par une inéquation la phrase : « le tarif A est strictement moins cher que le tarif B ».
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$20 + 0{,}15x < 0{,}25x$.
+
+</details>
+
+3. Résoudre cette inéquation et conclure.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Pour tout réel $x \geqslant 0$,
+$$20 + 0{,}15x < 0{,}25x \iff 20 < 0{,}1x \iff x > 200$$
+Le tarif A est plus avantageux lorsque l'on parcourt **plus de $200$ km** dans la journée.
+
+</details>
+:::

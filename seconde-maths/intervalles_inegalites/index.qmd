@@ -1,0 +1,48 @@
+---
+title: "Chapitre 4 : Intervalles, Inégalités et Valeur absolue"
+description: "Intervalles de R, inégalités, comparaison de deux quantités et valeur absolue."
+chapter-order: 4
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire :</span>
+
+- Ensemble $\R$ des nombres réels, droite numérique.
+- Intervalles de $\R$ ; représentation graphique, notations
+  $[a\,;\,b]$, $[a\,;\,+\infty[$, $]-\infty\,;\,a]$, etc.
+- Notation en valeur absolue $\abs{a}$ pour la distance de $a$ à $0$. Distance entre deux nombres réels.
+- Inéquation $\abs{x-a}\leqslant r$. Représentation graphique des solutions, intervalle $[a-r\,;\,a+r]$.
+- Encadrement décimal d'un nombre réel  à $10^{-n}$ près.
+- Somme d’inégalités. Produit d’une inégalité par un réel positif, négatif, en liaison avec le sens de variation d’une fonction
+  affine.
+- Comparaison additive (par différence), comparaison multiplicative (par rapport, pour deux nombres strictement positifs).
+- Ensemble des solutions  des inéquations de la forme $ax + b > 0$.
+
+**Savoir-faire :**
+
+- Lire l'abscisse d'un nombre réel sur une droite graduée et placer un nombre réel d'abscisse donnée.
+- Représenter un intervalle sur la droite numérique. Déterminer si un réel appartient à un intervalle.
+- Donner un encadrement d'amplitude donnée, d'un réel,  par des décimaux.
+- Comparer deux quantités en utilisant leur différence, ou leur rapport (ratio) dans le cas de quantités positives. Interpréter, selon le contexte, cette comparaison en termes de variation additive ou multiplicative.
+- Dans le cadre de la résolution de problèmes, arrondir en donnant le nombre de chiffres significatifs adapté à la situation étudiée.
+- Modéliser un problème par une inéquation.
+- Donner l’ensemble des solutions d’une
+  inéquation du premier degré du type $ax \geqslant b,\quad a+x \geqslant b,\quad ax+b \geqslant cx+d$
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Automatismes :</span>
+
+- Comparer deux nombres directement ou par calcul : de leur différence ; s'ils sont strictement positifs, de leur quotient.
+- S'assurer de la vraisemblance, de la cohérence d'un résultat.
+- Sur une droite graduée, repérer ou placer un point dont l'abscisse est un nombre relatif.
+:::
