@@ -114,7 +114,7 @@ website:
             - seconde-maths/racines_carrees/racine2_irrationnel.qmd
             - seconde-maths/racines_carrees/pythagore.qmd
             - seconde-maths/racines_carrees/valeurs_remarquables.qmd
-            - seconde-maths/racines_carrees/combinaison_pythagore_thales.qmd
+            - seconde-maths/racines_carrees/bilan.qmd
 
         - section: "Chapitre 6 : Géométrie repérée"
           contents:
@@ -125,6 +125,7 @@ website:
             - seconde-maths/geometrie_repere/milieu_segment.qmd
             - seconde-maths/geometrie_repere/colinearite_determinant.qmd
             - seconde-maths/geometrie_repere/aire_parallelogramme.qmd
+            - seconde-maths/geometrie_repere/distance_droite.qmd
             - seconde-maths/geometrie_repere/bilan.qmd
 
         - section: "Chapitre 7 : Équations"

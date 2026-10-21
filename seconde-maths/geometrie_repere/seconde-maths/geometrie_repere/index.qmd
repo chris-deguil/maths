@@ -1,0 +1,37 @@
+---
+title: "Chapitre 6 : Géométrie repérée"
+description: "Coordonnées d'un vecteur, norme et distance, milieu, déterminant et colinéarité, aire et distance à une droite"
+chapter-order: 6
+listing:
+  type: table
+  fields: [title, description]
+  filter-ui: false
+  sort: "order"
+  contents:
+    - "*.qmd"
+  exclude:
+    - path: index.qmd
+---
+
+::: {.bloc .rem}
+<span class="bloc-titre">Attendus et savoir-faire :</span>
+
+- Base orthonormée. Coordonnées d'un vecteur. Expression de la norme d'un vecteur.
+- Expression des coordonnées de $\ve{AB}$ en fonction de celles de $A$ et de $B$.
+- Déterminant de deux vecteurs dans une base orthonormée ; critère de colinéarité. Application à l'alignement, au parallélisme.
+
+**Savoir-faire :**
+
+- Représenter un vecteur dont on connaît les coordonnées ; lire les coordonnées d'un vecteur.
+- Calculer les coordonnées d'une somme de vecteurs et d'un produit d'un vecteur par un réel.
+- Calculer la distance entre deux points. Calculer les coordonnées du milieu d'un segment.
+- Caractériser alignement et parallélisme par la colinéarité de vecteurs (critère du déterminant).
+- Résoudre des problèmes avec des méthodes diverses (méthodes vectorielles, repérées ou non, méthodes géométriques).
+:::
+
+::: {.bloc .rem}
+<span class="bloc-titre">Automatismes :</span>
+
+- Dans le plan muni d'un repère orthogonal, lire les coordonnées d'un point donné, placer un point de coordonnées données.
+- Calculer des périmètres (polygone et cercle), aires (rectangle, triangle et disque) et des volumes (pavé droit, prisme, cylindre, pyramide, cône et boule).
+:::

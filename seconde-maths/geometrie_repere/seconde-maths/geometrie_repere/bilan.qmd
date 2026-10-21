@@ -1,0 +1,13 @@
+---
+title: "Bilan"
+format:
+  html:
+    toc: false
+    number-sections: false
+description: "Carte mentale du chapitre"
+order: 8
+---
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Geometrie_Reperee_bilan.png" style="width: 95%;">
+</div>

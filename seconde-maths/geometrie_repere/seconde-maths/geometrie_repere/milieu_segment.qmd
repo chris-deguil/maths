@@ -1,0 +1,157 @@
+---
+title: "Milieu d'un segment"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Coordonnées du milieu, nature d'un quadrilatère, cercle de diamètre donné"
+order: 4
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Coordonnées du milieu</span>
+
+Soit $\left(O\,;\,\ve{i},\,\ve{j}\right)$   un repère du plan, $A(x_A\,;\,y_A)$ et $B(x_B\,;\,y_B)$ deux points. Le milieu $I$ du segment $[AB]$ a pour coordonnées
+$$I\left(\dfrac{x_A + x_B}{2}\,;\,\dfrac{y_A + y_B}{2}\right).$$
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Geometrie_Reperee_milieu.png" style="width: 40%;">
+</div>
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+$I$ est le milieu de $[AB]$ si et seulement si $\ve{AI} = \ve{IB}$,
+si et seulement si $\ve{OI} - \ve{OA} = \ve{OB} - \ve{OI}$ (relation de Chasles),
+si et seulement si $2\,\ve{OI} = \ve{OA} + \ve{OB}$.
+
+En coordonnées :
+$$2x_I = x_A + x_B \et 2y_I = y_A + y_B,$$
+d'où $x_I = \dfrac{x_A + x_B}{2}$ et $y_I = \dfrac{y_A + y_B}{2}$.
+
+</details>
+
+::: {.bloc .rem}
+<span class="bloc-titre">Remarque : </span>
+
+Les coordonnées du milieu sont les **moyennes** des coordonnées des extrémités :
+on fait la moyenne des abscisses et la moyenne des ordonnées.
+
+Cette formule est valable dans n'importe quel repère, orthonormé ou non.
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer les coordonnées d'un milieu — Calculer</span></div>
+
+Soit $A(-3\,;\,5)$ et $B(7\,;\,-1)$. Calculer les coordonnées du milieu $I$ de $[AB]$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$x_I = \dfrac{-3+7}{2} = 2,\qquad y_I = \dfrac{5 + (-1)}{2} = 2.$$
+Donc $I(2\,;\,2)$.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Milieu et parallélogramme — Calculer, Raisonner</span></div>
+
+Soit $A(1\,;\,7)$, $B(-4\,;\,2)$, $C(2\,;\,-2)$ et $D(7\,;\,3)$.
+
+1. Calculer les coordonnées du milieu $L$ de $[AC]$ et du milieu $M$ de $[BD]$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$L\left(\dfrac{1+2}{2}\,;\,\dfrac{7+(-2)}{2}\right) = L\left(\dfrac{3}{2}\,;\,\dfrac{5}{2}\right)
+\qquad
+M\left(\dfrac{-4+7}{2}\,;\,\dfrac{2+3}{2}\right) = M\left(\dfrac{3}{2}\,;\,\dfrac{5}{2}\right)$$
+
+</details>
+
+2. Que peut-on conclure pour le quadrilatère $ABCD$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$L$ et $M$ ont les mêmes coordonnées, donc $L = M$ :
+les diagonales $[AC]$ et $[BD]$ se coupent en leur milieu.
+Or un quadrilatère dont les diagonales se coupent en leur milieu est un parallélogramme.
+Donc $ABCD$ est un parallélogramme.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Nature d'un quadrilatère — Calculer, Raisonner</span></div>
+
+Soit $A(1\,;\,1)$, $B(4\,;\,2)$, $C(5\,;\,5)$ et $D(2\,;\,4)$ dans un repère orthonormé.
+
+1. Montrer que $ABCD$ est un parallélogramme.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Le milieu de $[AC]$ est $\left(\dfrac{1+5}{2}\,;\,\dfrac{1+5}{2}\right) = (3\,;\,3)$
+et le milieu de $[BD]$ est $\left(\dfrac{4+2}{2}\,;\,\dfrac{2+4}{2}\right) = (3\,;\,3)$.
+
+Les diagonales $[AC]$ et $[BD]$ ont le même milieu : $ABCD$ est un **parallélogramme**.
+
+</details>
+
+2. Montrer que $ABCD$ est un losange.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : un parallélogramme qui a deux côtés consécutifs de même longueur est un losange.*
+$$AB = \sqrt{(4-1)^2+(2-1)^2} = \sqrt{10} \qquad AD = \sqrt{(2-1)^2+(4-1)^2} = \sqrt{10}$$
+$ABCD$ est un parallélogramme avec $AB = AD$ : c'est un **losange**.
+
+</details>
+
+3. $ABCD$ est-il un carré ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : un losange est un carré si et seulement si ses diagonales ont la même longueur (c'est alors aussi un rectangle).*
+$$AC = \sqrt{4^2+4^2} = \sqrt{32} = 4\sqrt{2} \qquad BD = \sqrt{(-2)^2+2^2} = \sqrt{8} = 2\sqrt{2}$$
+$AC \neq BD$ : le losange $ABCD$ n'est **pas un carré**.
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Cercle et triangle rectangle — Calculer, Raisonner</span></div>
+
+Dans un repère orthonormé, on considère $A(-2\,;\,1)$, $B(4\,;\,-3)$ et $C(3\,;\,2)$.
+On note $\mathscr{C}$ le cercle de diamètre $[AB]$.
+
+1. Déterminer les coordonnées du centre $\Omega$ de $\mathscr{C}$ et son rayon $r$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Le centre est le milieu de $[AB]$ : $\Omega\left(\dfrac{-2+4}{2}\,;\,\dfrac{1+(-3)}{2}\right) = \Omega(1\,;\,-1)$.
+
+$AB = \sqrt{6^2+(-4)^2} = \sqrt{52} = 2\sqrt{13}$, donc $r = \dfrac{AB}{2} = \sqrt{13}$.
+
+</details>
+
+2. Le point $C$ appartient-il au cercle $\mathscr{C}$ ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : un point appartient à un cercle si et seulement si sa distance au centre est égale au rayon.*
+$$\Omega C = \sqrt{(3-1)^2+(2-(-1))^2} = \sqrt{4+9} = \sqrt{13} = r.$$
+Donc $C \in \mathscr{C}$.
+
+</details>
+
+3. En déduire la nature du triangle $ABC$, puis vérifier par le calcul.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$C$ appartient au cercle de diamètre $[AB]$, donc le triangle $ABC$ est **rectangle en $C$**.
+
+Vérification : $AC = \sqrt{5^2+1^2} = \sqrt{26}$ et $BC = \sqrt{(-1)^2+5^2} = \sqrt{26}$, d'où
+$$AC^2 + BC^2 = 26 + 26 = 52 = AB^2.$$
+D'après la réciproque du théorème de Pythagore, $ABC$ est rectangle en $C$ ; comme de plus $AC = BC$, il est **rectangle isocèle en $C$**.
+
+</details>
+:::

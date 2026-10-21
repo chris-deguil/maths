@@ -1,0 +1,100 @@
+---
+title: "Somme de vecteurs et produit par un réel"
+format:
+  html:
+    toc: true
+    number-sections: false
+description: "Coordonnées d'une somme et d'un produit par un réel, modélisation d'un déplacement"
+order: 2
+---
+
+::: {.bloc .thm}
+<span class="bloc-titre">Propriété : Opérations sur les coordonnées</span>
+
+Soit $\left(O\,;\,\ve{i},\,\ve{j}\right)$   un repère du plan, $\ve{u}\vecol{x}{y}$, $\ve{v}\vecol{x'}{y'}$ deux vecteurs et $k \in \R$.
+$$\ve{u} + \ve{v} \vecol{x + x'}{y + y'}
+\qquad \et \qquad
+k\,\ve{u} \vecol{kx}{ky}$$
+:::
+
+<details class="bloc demo"><summary>Démonstration : </summary>
+
+On a $\ve{u} + \ve{v} = (x\,\ve{i} + y\,\ve{j}) + (x'\,\ve{i} + y'\,\ve{j}) = (x+x')\,\ve{i} + (y+y')\,\ve{j}$.
+
+De même, $k\,\ve{u} = k(x\,\ve{i} + y\,\ve{j}) = kx\,\ve{i} + ky\,\ve{j}$.
+
+</details>
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer une combinaison de vecteurs — Calculer</span></div>
+
+Soit $\ve{u}\vecol{2}{-1}$ et $\ve{v}\vecol{-3}{4}$. Calculer les coordonnées de $\ve{u} + \ve{v}$ et de $3\,\ve{u} - 2\,\ve{v}$.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : on calcule coordonnée par coordonnée : d'abord les abscisses, puis les ordonnées.*
+$$\ve{u} + \ve{v} \vecol{2 + (-3)}{-1 + 4} = \vecol{-1}{3}
+\qquad\et\qquad
+3\,\ve{u} - 2\,\ve{v} \vecol{3\times2-2\times(-3)}{3\times(-1)-2\times4} = \vecol{12}{-11}$$
+
+</details>
+:::
+
+::: {.bloc .ex}
+<div class="bloc-titre">Exercice :<span class="exemp-extra"> Retour du drone — Modéliser, Représenter, Calculer</span></div>
+
+Un drone effectue trois déplacements successifs depuis une base $O$ :
+
+- $3$ km vers l'est et $1$ km vers le nord, il arrive au point $P$ ;
+- puis $1$ km vers l'ouest et $4$ km vers le nord, il arrive au point $Q$ ;
+- puis $2$ km vers l'est et $2$ km vers le sud, il arrive au point $M$.
+
+On se place dans un repère orthonormé $\left(O\,;\,\ve{i},\,\ve{j}\right)$   d'origine $O$, d'unité $1$ km, où $\ve{i}$ pointe vers l'est et $\ve{j}$ vers le nord.
+
+1. Placer les points $P$, $Q$ et $M$ dans le repère ci-dessous, puis modéliser chacun des trois déplacements par un vecteur, noté $\ve{u_1}$, $\ve{u_2}$ et $\ve{u_3}$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Geometrie_Reperee_drone_repere.png" style="width: 40%;">
+</div>
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Chaque déplacement est un vecteur : la première coordonnée est le déplacement vers l'est (négative vers l'ouest), la deuxième le déplacement vers le nord (négative vers le sud).
+Ainsi $\ve{u_1} = \ve{OP}\vecol{3}{1}$, $\ve{u_2} = \ve{PQ}\vecol{-1}{4}$ et $\ve{u_3} = \ve{QM}\vecol{2}{-2}$.
+
+On place les points de proche en proche : $P$ à partir de $O$ avec $\ve{u_1}$, puis $Q$ à partir de $P$ avec $\ve{u_2}$, puis $M$ à partir de $Q$ avec $\ve{u_3}$.
+
+<div style="text-align: center;">
+  <img src="../../image/seconde/Geometrie_Reperee_drone.png" style="width: 40%;">
+</div>
+
+</details>
+
+2. Calculer les coordonnées du vecteur $\ve{u} = \ve{u_1} + \ve{u_2} + \ve{u_3}$, puis vérifier le résultat graphiquement.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$$\ve{u} \vecol{3+(-1)+2}{1+4+(-2)} = \vecol{4}{3}$$
+D'après la relation de Chasles, $\ve{u} = \ve{OP} + \ve{PQ} + \ve{QM} = \ve{OM}$.
+Graphiquement (en rouge sur la figure de la question 1), pour aller de $O$ à $M$, on se déplace de $4$ unités vers l'est et de $3$ unités vers le nord : on lit bien $\ve{OM}\vecol{4}{3}$.
+
+</details>
+
+3. En déduire les coordonnées du point $M$ représentant la position finale du drone.
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+$\ve{OM} = \ve{u}$, donc $M(4\,;\,3)$.
+
+</details>
+
+4. Quel déplacement doit effectuer le drone pour revenir à sa base ?
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+Le drone doit effectuer le déplacement de vecteur $\ve{MO} = -\ve{u}$, soit
+$$\ve{MO} \vecol{-4}{-3}.$$
+Le drone doit donc se déplacer de $4$ km vers l'ouest et de $3$ km vers le sud.
+
+</details>
+:::
