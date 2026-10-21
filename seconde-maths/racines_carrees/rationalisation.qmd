@@ -28,11 +28,19 @@ $$\dfrac{k}{\sqrt{a}}
 ::: {.bloc .info}
 <span class="bloc-titre">Point méthode — rationaliser un dénominateur</span>
 
-- **Dénominateur de la forme $\sqrt{a}$** :
-  multiplier le numérateur et le dénominateur par $\sqrt{a}$.
+- **Dénominateur de la forme $\sqrt{a}$** ($a > 0$) :
+  multiplier le numérateur et le dénominateur par $\sqrt{a}$ :
+  $$\dfrac{k}{\sqrt{a}}
+  = \dfrac{k\sqrt{a}}{\sqrt{a} \times \sqrt{a}}
+  = \dfrac{k\sqrt{a}}{a}$$
 - **Dénominateur de la forme $a + b\sqrt{n}$** :
   multiplier le numérateur et le dénominateur par le **conjugué**
-  $a - b\sqrt{n}$
+  $a - b\sqrt{n}$, en utilisant l'identité remarquable
+  $(a + b\sqrt{n})(a - b\sqrt{n}) = a^2 - b^2 n$ :
+  $$\dfrac{k}{a + b\sqrt{n}}
+  = \dfrac{k(a - b\sqrt{n})}{(a + b\sqrt{n})(a - b\sqrt{n})}
+  = \dfrac{k(a - b\sqrt{n})}{a^2 - b^2 n}$$
+  De même, le conjugué de $a - b\sqrt{n}$ est $a + b\sqrt{n}$.
 :::
 
 ::: {.bloc .sfc}
@@ -58,6 +66,33 @@ $$\dfrac{6}{\sqrt{3}} \quad ; \quad  \dfrac{10}{4 - \sqrt{5}} \et \dfrac{\sqrt{3
    = \dfrac{3 - 2\sqrt{3} + 1}{2}
    = \dfrac{4 - 2\sqrt{3}}{2}
    = 2 - \sqrt{3}$$
+
+</details>
+:::
+
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Rationaliser avec le conjugué $a + b\sqrt{k}$ — Calculer</span></div>
+
+Écrire les expressions suivantes sans racine carrée au dénominateur.
+$$A = \dfrac{5}{2 + 3\sqrt{2}} \qquad ; \qquad B = \dfrac{1 + \sqrt{3}}{2 - \sqrt{3}}$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : on multiplie le numérateur et le dénominateur par le conjugué du dénominateur, puis on utilise $(a + b\sqrt{k})(a - b\sqrt{k}) = a^2 - b^2 k$.*
+
+1. Le conjugué de $2 + 3\sqrt{2}$ est $2 - 3\sqrt{2}$.
+   $$A = \dfrac{5(2 - 3\sqrt{2})}{(2 + 3\sqrt{2})(2 - 3\sqrt{2})}
+   = \dfrac{5(2 - 3\sqrt{2})}{2^2 - 3^2 \times 2}
+   = \dfrac{10 - 15\sqrt{2}}{4 - 18}
+   = \dfrac{10 - 15\sqrt{2}}{-14}
+   = \dfrac{15\sqrt{2} - 10}{14}$$
+   Attention : $(3\sqrt{2})^2 = 9 \times 2 = 18$, et non $3 \times 2$.
+2. Le conjugué de $2 - \sqrt{3}$ est $2 + \sqrt{3}$.
+   $$B = \dfrac{(1 + \sqrt{3})(2 + \sqrt{3})}{(2 - \sqrt{3})(2 + \sqrt{3})}
+   = \dfrac{2 + \sqrt{3} + 2\sqrt{3} + 3}{4 - 3}
+   = \dfrac{5 + 3\sqrt{3}}{1}
+   = 5 + 3\sqrt{3}$$
+   Le numérateur se développe normalement : seul le dénominateur doit être débarrassé de sa racine carrée.
 
 </details>
 :::
@@ -133,15 +168,16 @@ $n \geqslant 0$ :
 $$\dfrac{1}{\sqrt{n+1} + \sqrt{n}} = \sqrt{n+1} - \sqrt{n}$$
 
 Donc, en appliquant ce résultat à chaque terme :
-$$S = (\sqrt{2} - \sqrt{1})
-+ (\sqrt{3} - \sqrt{2})
-+ (\sqrt{4} - \sqrt{3})
+$$S = (\cancel{\sqrt{2}} - \sqrt{1})
++ (\cancel{\sqrt{3}} - \cancel{\sqrt{2}})
++ (\cancel{\sqrt{4}} - \cancel{\sqrt{3}})
 + \cdots
-+ (\sqrt{100} - \sqrt{99})$$
++ (\sqrt{100} - \cancel{\sqrt{99}})$$
 
 Les termes se simplifient deux à deux (**somme télescopique**) :
-tous les radicaux intermédiaires $\sqrt{2}, \sqrt{3}, \ldots, \sqrt{99}$
-s'annulent, et il reste :
+chaque $+\sqrt{k}$ est annulé par le $-\sqrt{k}$ du terme suivant.
+Tous les radicaux intermédiaires $\sqrt{2}, \sqrt{3}, \ldots, \sqrt{99}$
+s'annulent, et il reste le premier terme négatif et le dernier terme positif :
 $$S = \sqrt{100} - \sqrt{1} = 10 - 1 = 9$$
 
 </details>

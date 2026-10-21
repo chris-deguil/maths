@@ -108,6 +108,31 @@ $\sqrt{(-3)^2} = \sqrt{9} = 3 = \abs{-3} \neq -3$.
 On a toujours $\sqrt{a^2} = \abs{a}$, pas $\sqrt{a^2} = a$.
 :::
 
+::: {.bloc .sfc}
+<div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Utiliser $\sqrt{a^2} = \abs{a}$ — Calculer</span></div>
+
+Simplifier les expressions suivantes.
+$$\sqrt{5^2} \qquad ; \qquad \sqrt{(-\pi)^2} \qquad ; \qquad \sqrt{(2-\pi)^2}$$
+
+<details class="bloc cor"><summary>Afficher la correction :</summary>
+
+*Point clef : $\sqrt{a^2} = \abs{a}$ : il faut connaître le **signe** de $a$ pour enlever la valeur absolue.*
+
+1. $\sqrt{5^2} = \abs{5} = 5$, car $5 \geqslant 0$.
+2. $\sqrt{(-\pi)^2} = \abs{-\pi} = \pi$, car $-\pi < 0$ : la valeur absolue d'un nombre négatif est son opposé.
+3. $\sqrt{(2-\pi)^2} = \abs{2-\pi}$.
+
+   On étudie le signe de $2 - \pi$ : comme $\pi \approx 3{,}14$, on a $\pi > 2$, donc $2 - \pi < 0$.
+
+   La valeur absolue d'un nombre négatif est son opposé, donc
+   $$\sqrt{(2-\pi)^2} = \abs{2-\pi} = -(2-\pi) = \pi - 2.$$
+   On vérifie que le résultat est bien positif : $\pi - 2 \approx 1{,}14 > 0$.
+
+   Attention : écrire $\sqrt{(2-\pi)^2} = 2 - \pi$ serait faux, car une racine carrée n'est jamais négative.
+
+</details>
+:::
+
 ::: {.bloc .ex}
 <div class="bloc-titre">Exercice :<span class="exemp-extra"> Simplifier $\sqrt{a^2}$ — Raisonner</span></div>
 

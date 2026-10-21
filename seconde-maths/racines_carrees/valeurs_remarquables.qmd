@@ -115,7 +115,8 @@ $$\sin 30^\circ = \dfrac{AC}{AB}
 = 8 \times \dfrac{1}{2} = 4$$
 
 **Vérification par Pythagore :**
-$BC^2 + AC^2 = (4\sqrt{3})^2 + 4^2 = 48 + 16 = 64 = 8^2 = AB^2$. ✓
+$BC^2 + AC^2 = (4\sqrt{3})^2 + 4^2 = 48 + 16 = 64 = 8^2 = AB^2$ :
+la relation de Pythagore est bien vérifiée.
 
 </details>
 :::
@@ -123,15 +124,28 @@ $BC^2 + AC^2 = (4\sqrt{3})^2 + 4^2 = 48 + 16 = 64 = 8^2 = AB^2$. ✓
 ::: {.bloc .sfc}
 <div class="bloc-titre">Savoir-Faire :<span class="exemp-extra"> Calculer avec les valeurs remarquables — Calculer</span></div>
 
-Calculer en valeur exacte :
-$$4\cos 60^\circ + 3\sin 30^\circ$$
+Calculer en valeur exacte, sans racine carrée au dénominateur :
+$$A = \cos 30^\circ \times \tan 60^\circ + \sin 45^\circ \times \cos 45^\circ
+\qquad ; \qquad
+B = \dfrac{\cos 45^\circ}{1 - \sin 60^\circ}$$
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-$$4\cos 60^\circ + 3\sin 30^\circ
-= 4 \times \dfrac{1}{2} + 3 \times \dfrac{1}{2}
-= 2 + \dfrac{3}{2}
-= \dfrac{7}{2}$$
+*Point clef : on remplace chaque valeur remarquable par sa valeur exacte, puis on applique les règles de calcul sur les racines carrées (produit, rationalisation).*
+
+1. $$A = \dfrac{\sqrt{3}}{2} \times \sqrt{3} + \dfrac{\sqrt{2}}{2} \times \dfrac{\sqrt{2}}{2}
+   = \dfrac{\left(\sqrt{3}\right)^2}{2} + \dfrac{\left(\sqrt{2}\right)^2}{4}
+   = \dfrac{3}{2} + \dfrac{2}{4}
+   = \dfrac{3}{2} + \dfrac{1}{2}
+   = 2$$
+2. On commence par simplifier la fraction de fractions :
+   $$B = \dfrac{\dfrac{\sqrt{2}}{2}}{1 - \dfrac{\sqrt{3}}{2}}
+   = \dfrac{\dfrac{\sqrt{2}}{2}}{\dfrac{2 - \sqrt{3}}{2}}
+   = \dfrac{\sqrt{2}}{2 - \sqrt{3}}$$
+   puis on multiplie par le conjugué $2 + \sqrt{3}$ :
+   $$B = \dfrac{\sqrt{2}\,(2 + \sqrt{3})}{(2 - \sqrt{3})(2 + \sqrt{3})}
+   = \dfrac{2\sqrt{2} + \sqrt{6}}{4 - 3}
+   = 2\sqrt{2} + \sqrt{6}$$
 
 </details>
 :::
@@ -188,6 +202,10 @@ $$QR = PQ \sin 60^\circ = 6 \times \dfrac{\sqrt{3}}{2}
 3. La diagonale $[AC]$ d'un losange $ABCD$ mesure $\sqrt{6}$ cm
    et $\widehat{BAC} = 30^\circ$.
    Calculer le côté du losange en valeur exacte.
+
+   <div style="text-align: center;">
+     <img src="../../image/seconde/Racine_carree_losange.png" style="width: 35%;">
+   </div>
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 

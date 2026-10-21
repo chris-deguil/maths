@@ -85,9 +85,12 @@ $\sqrt{50}$ $\sqrt{72}$   $\sqrt{18} + \sqrt{8}$  $\dfrac{\sqrt{50}}{\sqrt{2}}$
 
 <details class="bloc cor"><summary>Afficher la correction :</summary>
 
-- **** $\sqrt{50} = \sqrt{25 \times 2} = 5\sqrt{2}\quad ; \quad \sqrt{72} = \sqrt{36 \times 2} = 6\sqrt{2}$
-- **** $\sqrt{18} + \sqrt{8} = \sqrt{9 \times 2} + \sqrt{4 \times 2} = 3 \sqrt{2} +2 \sqrt{2} = 5 \sqrt{2} \quad ; \quad \dfrac{\sqrt{50}}{\sqrt{2}} = \sqrt{\dfrac{50}{2}} = \sqrt{25} = 5$
-- **** $2\sqrt{75} - \sqrt{48} + 3\sqrt{3} = 2\sqrt{25 \times 3}  -  \sqrt{16 \times 3} + 3\sqrt{3} = 2 \times 5\sqrt{3} - 4\sqrt{3} + 3\sqrt{3} = 10\sqrt{3} - 4\sqrt{3} + 3\sqrt{3} =9 \sqrt{3}$
+*Point clef : on fait apparaître le plus grand carré parfait sous chaque radical, puis on regroupe les termes ayant le même radical.*
+
+- $\sqrt{50} = \sqrt{25 \times 2} = 5\sqrt{2}$  et  $\sqrt{72} = \sqrt{36 \times 2} = 6\sqrt{2}$
+- $\sqrt{18} + \sqrt{8} = \sqrt{9 \times 2} + \sqrt{4 \times 2} = 3\sqrt{2} + 2\sqrt{2} = 5\sqrt{2}$
+- $\dfrac{\sqrt{50}}{\sqrt{2}} = \sqrt{\dfrac{50}{2}} = \sqrt{25} = 5$
+- $2\sqrt{75} - \sqrt{48} + 3\sqrt{3} = 2\sqrt{25 \times 3} - \sqrt{16 \times 3} + 3\sqrt{3} = 10\sqrt{3} - 4\sqrt{3} + 3\sqrt{3} = 9\sqrt{3}$
 
 </details>
 :::
