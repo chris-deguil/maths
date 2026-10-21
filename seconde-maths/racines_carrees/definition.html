@@ -614,32 +614,59 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 6 : Géométrie repérée</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/coordonnees_vecteur.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/coordonnees_vecteur.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coordonnées d’un vecteur</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/somme_produit_vecteurs.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/somme_produit_vecteurs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Somme de vecteurs et produit par un réel</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/vecteur_ab_norme.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/vecteur_ab_norme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coordonnées de AB, norme et distance</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/milieu_segment.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/milieu_segment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milieu d’un segment</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/colinearite_determinant.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/colinearite_determinant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Déterminant et colinéarité</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/aire_parallelogramme.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/aire_parallelogramme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aire d’un parallélogramme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/distance_droite.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/distance_droite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projeté orthogonal et distance à une droite</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/bilan.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bilan</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1016,6 +1043,26 @@ Démonstration :
 <p><span class="bloc-titre">Erreur à éviter : </span></p>
 <p><span class="math inline">\(\sqrt{a^2} \neq a\)</span> en général : si <span class="math inline">\(a = -3\)</span>, alors <span class="math inline">\(\sqrt{(-3)^2} = \sqrt{9} = 3 = \abs{-3} \neq -3\)</span>.</p>
 <p>On a toujours <span class="math inline">\(\sqrt{a^2} = \abs{a}\)</span>, pas <span class="math inline">\(\sqrt{a^2} = a\)</span>.</p>
+</div>
+<div class="bloc sfc">
+<div class="bloc-titre">
+Savoir-Faire :<span class="exemp-extra"> Utiliser <span class="math inline">\(\sqrt{a^2} = \abs{a}\)</span> — Calculer</span>
+</div>
+<p>Simplifier les expressions suivantes. <span class="math display">\[\sqrt{5^2} \qquad ; \qquad \sqrt{(-\pi)^2} \qquad ; \qquad \sqrt{(2-\pi)^2}\]</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><em>Point clef : <span class="math inline">\(\sqrt{a^2} = \abs{a}\)</span> : il faut connaître le <strong>signe</strong> de <span class="math inline">\(a\)</span> pour enlever la valeur absolue.</em></p>
+<ol type="1">
+<li><p><span class="math inline">\(\sqrt{5^2} = \abs{5} = 5\)</span>, car <span class="math inline">\(5 \geqslant 0\)</span>.</p></li>
+<li><p><span class="math inline">\(\sqrt{(-\pi)^2} = \abs{-\pi} = \pi\)</span>, car <span class="math inline">\(-\pi &lt; 0\)</span> : la valeur absolue d’un nombre négatif est son opposé.</p></li>
+<li><p><span class="math inline">\(\sqrt{(2-\pi)^2} = \abs{2-\pi}\)</span>.</p>
+<p>On étudie le signe de <span class="math inline">\(2 - \pi\)</span> : comme <span class="math inline">\(\pi \approx 3{,}14\)</span>, on a <span class="math inline">\(\pi &gt; 2\)</span>, donc <span class="math inline">\(2 - \pi &lt; 0\)</span>.</p>
+<p>La valeur absolue d’un nombre négatif est son opposé, donc <span class="math display">\[\sqrt{(2-\pi)^2} = \abs{2-\pi} = -(2-\pi) = \pi - 2.\]</span> On vérifie que le résultat est bien positif : <span class="math inline">\(\pi - 2 \approx 1{,}14 &gt; 0\)</span>.</p>
+<p>Attention : écrire <span class="math inline">\(\sqrt{(2-\pi)^2} = 2 - \pi\)</span> serait faux, car une racine carrée n’est jamais négative.</p></li>
+</ol>
+</details>
 </div>
 <div class="bloc ex">
 <div class="bloc-titre">

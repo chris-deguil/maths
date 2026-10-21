@@ -614,32 +614,59 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 6 : Géométrie repérée</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/coordonnees_vecteur.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/coordonnees_vecteur.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coordonnées d’un vecteur</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/somme_produit_vecteurs.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/somme_produit_vecteurs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Somme de vecteurs et produit par un réel</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/vecteur_ab_norme.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/vecteur_ab_norme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coordonnées de AB, norme et distance</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/milieu_segment.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/milieu_segment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milieu d’un segment</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/colinearite_determinant.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/colinearite_determinant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Déterminant et colinéarité</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/aire_parallelogramme.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/aire_parallelogramme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aire d’un parallélogramme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/distance_droite.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/distance_droite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projeté orthogonal et distance à une droite</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/bilan.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bilan</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -946,8 +973,12 @@ window.Quarto = {
 <div class="bloc info">
 <p><span class="bloc-titre">Point méthode — rationaliser un dénominateur</span></p>
 <ul>
-<li><strong>Dénominateur de la forme <span class="math inline">\(\sqrt{a}\)</span></strong> : multiplier le numérateur et le dénominateur par <span class="math inline">\(\sqrt{a}\)</span>.</li>
-<li><strong>Dénominateur de la forme <span class="math inline">\(a + b\sqrt{n}\)</span></strong> : multiplier le numérateur et le dénominateur par le <strong>conjugué</strong> <span class="math inline">\(a - b\sqrt{n}\)</span></li>
+<li><strong>Dénominateur de la forme <span class="math inline">\(\sqrt{a}\)</span></strong> (<span class="math inline">\(a &gt; 0\)</span>) : multiplier le numérateur et le dénominateur par <span class="math inline">\(\sqrt{a}\)</span> : <span class="math display">\[\dfrac{k}{\sqrt{a}}
+= \dfrac{k\sqrt{a}}{\sqrt{a} \times \sqrt{a}}
+= \dfrac{k\sqrt{a}}{a}\]</span></li>
+<li><strong>Dénominateur de la forme <span class="math inline">\(a + b\sqrt{n}\)</span></strong> : multiplier le numérateur et le dénominateur par le <strong>conjugué</strong> <span class="math inline">\(a - b\sqrt{n}\)</span>, en utilisant l’identité remarquable <span class="math inline">\((a + b\sqrt{n})(a - b\sqrt{n}) = a^2 - b^2 n\)</span> : <span class="math display">\[\dfrac{k}{a + b\sqrt{n}}
+= \dfrac{k(a - b\sqrt{n})}{(a + b\sqrt{n})(a - b\sqrt{n})}
+= \dfrac{k(a - b\sqrt{n})}{a^2 - b^2 n}\]</span> De même, le conjugué de <span class="math inline">\(a - b\sqrt{n}\)</span> est <span class="math inline">\(a + b\sqrt{n}\)</span>.</li>
 </ul>
 </div>
 <div class="bloc sfc">
@@ -972,6 +1003,29 @@ Afficher la correction :
 = \dfrac{3 - 2\sqrt{3} + 1}{2}
 = \dfrac{4 - 2\sqrt{3}}{2}
 = 2 - \sqrt{3}\]</span></li>
+</ol>
+</details>
+</div>
+<div class="bloc sfc">
+<div class="bloc-titre">
+Savoir-Faire :<span class="exemp-extra"> Rationaliser avec le conjugué <span class="math inline">\(a + b\sqrt{k}\)</span> — Calculer</span>
+</div>
+<p>Écrire les expressions suivantes sans racine carrée au dénominateur. <span class="math display">\[A = \dfrac{5}{2 + 3\sqrt{2}} \qquad ; \qquad B = \dfrac{1 + \sqrt{3}}{2 - \sqrt{3}}\]</span></p>
+<details class="bloc cor">
+<summary>
+Afficher la correction :
+</summary>
+<p><em>Point clef : on multiplie le numérateur et le dénominateur par le conjugué du dénominateur, puis on utilise <span class="math inline">\((a + b\sqrt{k})(a - b\sqrt{k}) = a^2 - b^2 k\)</span>.</em></p>
+<ol type="1">
+<li>Le conjugué de <span class="math inline">\(2 + 3\sqrt{2}\)</span> est <span class="math inline">\(2 - 3\sqrt{2}\)</span>. <span class="math display">\[A = \dfrac{5(2 - 3\sqrt{2})}{(2 + 3\sqrt{2})(2 - 3\sqrt{2})}
+= \dfrac{5(2 - 3\sqrt{2})}{2^2 - 3^2 \times 2}
+= \dfrac{10 - 15\sqrt{2}}{4 - 18}
+= \dfrac{10 - 15\sqrt{2}}{-14}
+= \dfrac{15\sqrt{2} - 10}{14}\]</span> Attention : <span class="math inline">\((3\sqrt{2})^2 = 9 \times 2 = 18\)</span>, et non <span class="math inline">\(3 \times 2\)</span>.</li>
+<li>Le conjugué de <span class="math inline">\(2 - \sqrt{3}\)</span> est <span class="math inline">\(2 + \sqrt{3}\)</span>. <span class="math display">\[B = \dfrac{(1 + \sqrt{3})(2 + \sqrt{3})}{(2 - \sqrt{3})(2 + \sqrt{3})}
+= \dfrac{2 + \sqrt{3} + 2\sqrt{3} + 3}{4 - 3}
+= \dfrac{5 + 3\sqrt{3}}{1}
+= 5 + 3\sqrt{3}\]</span> Le numérateur se développe normalement : seul le dénominateur doit être débarrassé de sa racine carrée.</li>
 </ol>
 </details>
 </div>
@@ -1044,12 +1098,12 @@ Afficher la correction :
 </summary>
 <p><em>Point clef : D’après la question précédente, chaque terme se simplifie : c’est une somme télescopique.</em></p>
 <p>D’après la question précédente, pour tout entier <span class="math inline">\(n \geqslant 0\)</span> : <span class="math display">\[\dfrac{1}{\sqrt{n+1} + \sqrt{n}} = \sqrt{n+1} - \sqrt{n}\]</span></p>
-<p>Donc, en appliquant ce résultat à chaque terme : <span class="math display">\[S = (\sqrt{2} - \sqrt{1})
-+ (\sqrt{3} - \sqrt{2})
-+ (\sqrt{4} - \sqrt{3})
+<p>Donc, en appliquant ce résultat à chaque terme : <span class="math display">\[S = (\cancel{\sqrt{2}} - \sqrt{1})
++ (\cancel{\sqrt{3}} - \cancel{\sqrt{2}})
++ (\cancel{\sqrt{4}} - \cancel{\sqrt{3}})
 + \cdots
-+ (\sqrt{100} - \sqrt{99})\]</span></p>
-<p>Les termes se simplifient deux à deux (<strong>somme télescopique</strong>) : tous les radicaux intermédiaires <span class="math inline">\(\sqrt{2}, \sqrt{3}, \ldots, \sqrt{99}\)</span> s’annulent, et il reste : <span class="math display">\[S = \sqrt{100} - \sqrt{1} = 10 - 1 = 9\]</span></p>
++ (\sqrt{100} - \cancel{\sqrt{99}})\]</span></p>
+<p>Les termes se simplifient deux à deux (<strong>somme télescopique</strong>) : chaque <span class="math inline">\(+\sqrt{k}\)</span> est annulé par le <span class="math inline">\(-\sqrt{k}\)</span> du terme suivant. Tous les radicaux intermédiaires <span class="math inline">\(\sqrt{2}, \sqrt{3}, \ldots, \sqrt{99}\)</span> s’annulent, et il reste le premier terme négatif et le dernier terme positif : <span class="math display">\[S = \sqrt{100} - \sqrt{1} = 10 - 1 = 9\]</span></p>
 </details>
 </div>
 

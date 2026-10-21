@@ -614,32 +614,59 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapitre 6 : Géométrie repérée</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/coordonnees_vecteur.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/coordonnees_vecteur.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coordonnées d’un vecteur</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/somme_produit_vecteurs.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/somme_produit_vecteurs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Somme de vecteurs et produit par un réel</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/vecteur_ab_norme.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/vecteur_ab_norme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coordonnées de AB, norme et distance</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/milieu_segment.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/milieu_segment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milieu d’un segment</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/colinearite_determinant.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/colinearite_determinant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Déterminant et colinéarité</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/aire_parallelogramme.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/aire_parallelogramme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aire d’un parallélogramme</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/distance_droite.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/distance_droite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projeté orthogonal et distance à une droite</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">seconde-maths/geometrie_repere/bilan.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../seconde-maths/geometrie_repere/bilan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bilan</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -1032,22 +1059,33 @@ Afficher la correction :
 = 8 \times \dfrac{\sqrt{3}}{2} = 4\sqrt{3}\]</span> <span class="math display">\[\sin 30^\circ = \dfrac{AC}{AB}
 \Longrightarrow AC = AB \sin 30^\circ
 = 8 \times \dfrac{1}{2} = 4\]</span></p>
-<p><strong>Vérification par Pythagore :</strong> <span class="math inline">\(BC^2 + AC^2 = (4\sqrt{3})^2 + 4^2 = 48 + 16 = 64 = 8^2 = AB^2\)</span>. ✓</p>
+<p><strong>Vérification par Pythagore :</strong> <span class="math inline">\(BC^2 + AC^2 = (4\sqrt{3})^2 + 4^2 = 48 + 16 = 64 = 8^2 = AB^2\)</span> : la relation de Pythagore est bien vérifiée.</p>
 </details>
 </div>
 <div class="bloc sfc">
 <div class="bloc-titre">
 Savoir-Faire :<span class="exemp-extra"> Calculer avec les valeurs remarquables — Calculer</span>
 </div>
-<p>Calculer en valeur exacte : <span class="math display">\[4\cos 60^\circ + 3\sin 30^\circ\]</span></p>
+<p>Calculer en valeur exacte, sans racine carrée au dénominateur : <span class="math display">\[A = \cos 30^\circ \times \tan 60^\circ + \sin 45^\circ \times \cos 45^\circ
+\qquad ; \qquad
+B = \dfrac{\cos 45^\circ}{1 - \sin 60^\circ}\]</span></p>
 <details class="bloc cor">
 <summary>
 Afficher la correction :
 </summary>
-<p><span class="math display">\[4\cos 60^\circ + 3\sin 30^\circ
-= 4 \times \dfrac{1}{2} + 3 \times \dfrac{1}{2}
-= 2 + \dfrac{3}{2}
-= \dfrac{7}{2}\]</span></p>
+<p><em>Point clef : on remplace chaque valeur remarquable par sa valeur exacte, puis on applique les règles de calcul sur les racines carrées (produit, rationalisation).</em></p>
+<ol type="1">
+<li><span class="math display">\[A = \dfrac{\sqrt{3}}{2} \times \sqrt{3} + \dfrac{\sqrt{2}}{2} \times \dfrac{\sqrt{2}}{2}
+= \dfrac{\left(\sqrt{3}\right)^2}{2} + \dfrac{\left(\sqrt{2}\right)^2}{4}
+= \dfrac{3}{2} + \dfrac{2}{4}
+= \dfrac{3}{2} + \dfrac{1}{2}
+= 2\]</span></li>
+<li>On commence par simplifier la fraction de fractions : <span class="math display">\[B = \dfrac{\dfrac{\sqrt{2}}{2}}{1 - \dfrac{\sqrt{3}}{2}}
+= \dfrac{\dfrac{\sqrt{2}}{2}}{\dfrac{2 - \sqrt{3}}{2}}
+= \dfrac{\sqrt{2}}{2 - \sqrt{3}}\]</span> puis on multiplie par le conjugué <span class="math inline">\(2 + \sqrt{3}\)</span> : <span class="math display">\[B = \dfrac{\sqrt{2}\,(2 + \sqrt{3})}{(2 - \sqrt{3})(2 + \sqrt{3})}
+= \dfrac{2\sqrt{2} + \sqrt{6}}{4 - 3}
+= 2\sqrt{2} + \sqrt{6}\]</span></li>
+</ol>
 </details>
 </div>
 <div class="bloc ex">
@@ -1094,7 +1132,10 @@ Afficher la correction :
 = 3\sqrt{3}\]</span></p>
 </details>
 <ol start="3" type="1">
-<li>La diagonale <span class="math inline">\([AC]\)</span> d’un losange <span class="math inline">\(ABCD\)</span> mesure <span class="math inline">\(\sqrt{6}\)</span> cm et <span class="math inline">\(\widehat{BAC} = 30^\circ\)</span>. Calculer le côté du losange en valeur exacte.</li>
+<li><p>La diagonale <span class="math inline">\([AC]\)</span> d’un losange <span class="math inline">\(ABCD\)</span> mesure <span class="math inline">\(\sqrt{6}\)</span> cm et <span class="math inline">\(\widehat{BAC} = 30^\circ\)</span>. Calculer le côté du losange en valeur exacte.</p>
+<div style="text-align: center;">
+<p><img src="../../image/seconde/Racine_carree_losange.png" style="width: 35%;"></p>
+</div></li>
 </ol>
 <details class="bloc cor">
 <summary>
